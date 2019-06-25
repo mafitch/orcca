@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- *********************************************************************-->
+<!-- Copyright 2016-2018                                                  -->
+<!-- Portland Community College                                           -->
+<!--                                                                      -->
+<!-- This file is part of Open Resources for Community College Algebra    -->
+<!-- (ORCCA).                                                             -->
+<!-- *********************************************************************-->
+
+<section xml:id="section-applications-of-systems-of-linear-equations">
+
+    <title>Applications of Systems of Linear Equations</title>
+
+    <introduction><p><xref ref="example-system-of-equations-elimination-intro">Example</xref> below is an example of how a system of linear equations can be used to solve an application problem. In this section, we will look at several types of application problems that can be solved using a system of linear equations, while giving you some strategies for solving these problems.</p></introduction>
+
+    <example xml:id="example-system-of-equations-elimination-intro">
+            <p>Alicia has <m>\$1000</m> to give to her two grandchildren for New Year's. She would like to give the older grandchild <m>\$120</m> more than the younger grandchild, because that is the cost of the older grandchild's college textbooks this term.  How much money should she give to each grandchild?</p>
+
+            <p>As always, we start solving a word problem by defining the variables, including their units. Let <m>A</m> be the dollar amount she gives to her older grandchild, and <m>B</m> be the dollar amount she gives to her younger grandchild. Since the total she has to give is <m>\$1000</m>, we can say that <m>A+B=1000</m>. Since she wants to give <m>\$120</m> more to the older grandchild, we can say that the difference between the amounts is <m>\$120</m>, or translated as a linear equation, <m>A-B=120</m>. This gives us two linear equations, which together makes a system of linear equations:<md>
+                <mrow>
+                    \left\{
+                        \begin{aligned}
+                            A+B \amp = 1000 \\
+                            A-B \amp = 120
+                        \end{aligned}
+                    \right.
+                </mrow>
+            </md></p>
+
+            <p>We can solve this system by either substitution as we learned in <xref ref="section-substitution">Section</xref> or by elimination as we learned in <xref ref="section-elimination">Section</xref>. Notice that if we add together the <em>left</em> sides from the two equations, the variable <m>B</m> will be eliminated quite easily:<md>
+                <mrow>\begin{aligned}A+B\\{}+A-B\end{aligned}\amp=\begin{aligned}1000\\{}+120\end{aligned}</mrow>
+                <intertext>So we have:</intertext>
+                <mrow>2A\amp=1120</mrow>
+            </md></p>
+
+            <p>Thus, the elimination method is an easy method to use and it doesn't take much to finish solving for <m>A</m>:<md>
+                <mrow>2A\amp=1120</mrow>
+                <!-- <mrow>\divideunder{2A}{2}\amp=\divideunder{1120}{2}</mrow> -->
+                <mrow>A\amp=560</mrow>
+            </md></p>
+
+            <p>To finish solving this system of equations, we need the value of <m>B</m>. For now, an easy way to find <m>B</m> is to substitute in our value of <m>A</m> into one of the original equations:<md>
+                <mrow>A+B\amp=1000</mrow>
+                <mrow>\substitute{560}+B\amp=1000</mrow>
+                <!-- <mrow>560+B\subtractright{560}\amp=1000\subtractright{560}</mrow> -->
+                <mrow>B\amp=440</mrow>
+            </md>To check our work, substitute <m>A=560</m> and <m>B=440</m> into the original equations:<md>
+                <mrow>A+B\amp=1000\amp A-B\amp=120</mrow>
+                <mrow>\substitute{560}+\substitute{440}\amp\stackrel{?}{=}1000\amp \substitute{560}-\substitute{440}\amp\stackrel{?}{=}120</mrow>
+                <mrow>1000\amp\stackrel{\checkmark}{=}1000\amp 120\amp\stackrel{\checkmark}{=}120</mrow>
+            </md></p>
+            <p>This confirms that our solution is correct. In summary, Alicia should give <m>\$560</m> to her older grandchild and <m>\$440</m> to her younger grandchild.</p>
+        </example>
+
+
+        <p>Below is a general problem solving strategy for solving application problems, using systems of linear equations:</p>
+
+        <list xml:id="list-solve-applications-using-linear-ystems"><idx><h>solving</h><h>applications</h><h>systems</h></idx>
+            <caption>A Problem Solving Strategy for Applications of Systems of Linear Equations</caption>
+            <dl>
+                <li><title>Step 1: Read</title><p><em>Read</em> the problem. Make sure all the words and ideas are understood.</p></li>
+                <li><title>Step 2: Identify</title><p><em>Identify</em> what you are looking for.</p></li>
+                <li><title>Step 3: Name</title><p><em>Name</em> what you are looking for by choosing variables to represent those quantities.</p></li>
+                <li><title>Step 4: Translate</title><p><em>Translate</em> into a system of equations by writing two linear equations that describe two separate linear relationships found in the problem.</p></li>
+                <li><title>Step 5: Solve</title><p><em>Solve</em> the system of equations using either substitution or elimination.</p></li>
+                <li><title>Step 6: Check</title><p><em>Check</em> the answers in the problem and make sure they makes sense.</p></li>
+                <li><title>Step 7: Answer</title><p><em>Answer</em> the question and be sure to include units on the answers.</p></li>
+            </dl>
+        </list>
+
+    <subsection><title>Translating to a System of Equations</title>
+        	<p>Many times the challenge of solving application problems is being able to translate the situations into algebraic equations. When trying to solve application problems using systems of equations, students often make the mistake of trying to combine the two separate relationships that are present in the situation. The key is to determine what the <em>two separate</em> relationships are and then to keep in mind that these <em>two</em> relationships will be the basis of the <em>two</em> equations that will make up your system.</p>
+
+        	<p>Let's look at a couple of examples, where we will simply translate each problem into a system of linear equations, using steps 1-4 from the list of strategies above. We will not worry about solving these problems.</p>
+
+    	<example><p>Translate to a system of equations:
+
+    		A married couple together earns $110,000 a year. The wife earns $16,000 less than twice what her husband earns. What does the husband earn? What does the wife earn?</p>
+
+    		<p>Here, we'll use steps 1-4 from the list of strategies given above.</p>
+    			<sbsgroup widths="28% 28% 38%">
+    			<sidebyside margins="0%">
+    				<p>Step 1: Read the problem. Make sure you understand all the words and ideas.</p>
+    				<p>This is a problem relating the annual salaries of two people.</p>
+    				<p>Together they make a total of $110,000 annually and the wife makes $16,000 less than two times the husband's salary.</p>
+				</sidebyside>
+				<sidebyside margins="0%">
+    				<p>Step 2: Identify what you are looking for.</p>
+    				<p>"What does the husband earn? What does the wife earn?"</p>
+    				<p>We need to find how much the husband earns and how much the wife earns, per year.</p>
+    			</sidebyside>
+    			<sidebyside margins="0%">
+    				<p>Step 3: Name what you are looking for by choosing variables to represent those quantities.</p>
+    				<p>We will use two variables, <m>h</m> and <m>w</m>.</p>
+    				<p>Let <m>h</m> represent the husband's annual salary and let <m>w</m> represent the wife's annual salary.</p>
+				</sidebyside>
+				<sidebyside margins="0%">
+    				<p>Step 4: Translate into a system of equations.</p>
+    				<p>We will write one equation for each sentence.</p>
+					<p>
+						<me>\underbrace{\text{Together their total annual salary }}_{h+w}\underbrace{\text{is}}_{=}\underbrace{\text{\$110,000}}_{110000}
+						</me>
+
+        				<me>\underbrace{\text{The wife's annual salary}}_{w}\underbrace{\text{is}}_{=}\underbrace{\text{\$16,000 less than 2 times the husband's salary}}_{2h-16000}</me>
+
+        				<me>\text{Here is our system of equations:}</me>
+
+                        <me>\left\{
+                            \begin{alignedat}{4}
+                            h {}+{}  w {}={} 110000 \\
+                            w {}={} 2h {}-{} 16000
+                            \end{alignedat}
+                        \right.</me>
+                    	</p>
+				</sidebyside>
+                </sbsgroup>
+			
+		</example>
+
+<example><statement><p>Translate to a system of equations:
+
+    		Randall has 125 feet of fencing to enclose the rectangular part of his backyard adjacent to his house. He will only need to fence around three sides because the fourth side will be the wall of his house. He wants the length of the fenced yard (parallel to the house wall) to be 5 feet more than four times as long as the width. Find the length and the width.</p></statement>
+
+    		<solution><p>Again, we'll use the same steps 1-4 from the list of strategies that we used in the last example.</p>
+    			<sbsgroup widths="25% 28% 44%" halighn="left">
+    			<sidebyside margins="0%">
+    				<p>Step 1: Read the problem. Make sure you understand all the words and ideas. Sometimes, it may help to make a drawing.</p>
+    				<p>This is a geometric problem involving the three sides of a rectangle - two widths and one length.</p>
+    				<p>It will take a total of 125 feet of fencing to fence two widths and one length of the rectangular yard. The length of the yard must be 5 feet more than four times the width.
+    					<figure><image source="images/CNX_ElemAlg_Figure_05_04_005a_img.jpg" width="80%"><description>A drawing of a house, from above, with a three-sided fence adjacent to the house.</description></image>
+						</figure>
+					</p>
+				</sidebyside>
+				<sidebyside margins="0%">
+    				<p>Step 2: Identify what you are looking for.</p>
+    				<p>"Find the length and the width."</p>
+    				<p>We need to find the length and the width of the rectangular yard, in feet.</p>
+    			</sidebyside>
+    			<sidebyside margins="0%">
+    				<p>Step 3: Name what you are looking for by choosing variables to represent those quantities.</p>
+    				<p>We will use two variables, <m>L</m> and <m>W</m>.</p>
+    				<p>Let <m>L</m> represent the length and let <m>W</m> represent the width.</p>
+				</sidebyside>
+				<sidebyside margins="0%">
+    				<p>Step 4: Translate into a system of equations.</p>
+    				<p>We will write one equation for each relationship described in Step 1.</p>
+    				<p>It will take a total of 125 feet of fencing to fence 
+    				two widths and one length of the rectangular yard.
+        				<me>125=2W+L</me>
+
+    				The length of the yard must be 5 feet 
+    				more than four times the width.
+        				<me>L=4W+5</me>
+
+    				Here is our system of equations:
+        				<me>
+        					\left\{
+        					\begin{alignedat}{4}
+
+        					125\amp {}={} \amp 2W\amp {}+{} \amp L \\
+        					L\amp {}={} \amp 4W \amp {}+{} \amp 5
+        					\end{alignedat}
+        					\right.
+        				</me>
+    				</p>
+				</sidebyside>
+                </sbsgroup>
+			</solution>
+		</example>
+
+        <p>Try a similar exercise.</p>
+        <exercise>
+  <webwork>
+    <pg-macros>
+      <macro-file>contextTypeset.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <pg-code>
+        Context("ImplicitPlane");
+        Context()->variables->are(a=>"Real",m=>"Real");
+        Context()->flags->set(reduceConstants=>0);
+        Context()->flags->set(showExtraParens=>0);
+        $ans[0] = Compute("a=400+75m");
+        $ans[1] = Compute("a=850+30m");
+        $system = MultiAnswer($ans[0], $ans[1])->with(
+          singleResult => 0,
+          checker => sub {
+            my ( $correct, $student, $self ) = @_;
+            my @eqstu = @{$student};
+            my @eqcor = @{$correct};
+            my $return = [0,0];
+            if (
+              ($eqcor[0] == $eqstu[0] and $eqcor[1] == $eqstu[1]) or
+              ($eqcor[0] == $eqstu[1] and $eqcor[1] == $eqstu[0])
+            ) {$return = [1,1];}
+            else {
+              if ($eqcor[0] == $eqstu[0] || $eqcor[1] == $eqstu[0]) {
+                $return =  [1,0];
+              } elsif ($eqcor[0] == $eqstu[1] || $eqcor[1] == $eqstu[1]) {
+                $return =  [0,1];
+              } else {
+                $return =  [0,0];
+              }
+            }
+            for my $i (0,1) {
+              $self->{cmp}->[$i]->{cmp_class} = "a linear equation",
+              $self->{cmp}->[$i]->{rh_ans}->{correct_ans}
+                = Parser::Formula(Context("Typeset") , $eqcor[$i])->string;
+              $self->{cmp}->[$i]->{rh_ans}->{correct_ans_latex_string}
+                = Parser::Formula(Context("Typeset") , $eqcor[$i])->TeX;
+              $eqstu[$i] = Parser::Formula(
+                Context("Typeset"),
+                $self->{cmp}->[$i]->{rh_ans}->{original_student_ans}
+              );
+              $self->{cmp}->[$i]->{rh_ans}->{preview_text_string}
+                = $eqstu[$i]->string;
+              $self->{cmp}->[$i]->{rh_ans}->{preview_latex_string}
+                = $eqstu[$i]->TeX;
+              $self->{cmp}->[$i]->{rh_ans}->{student_ans}
+                = $eqstu[$i]->string;
+            }
+          return $return;
+          }
+        );
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        Maritsa opened up a savings account and made an initial deposit of <m>\$400</m>. She then set up automatic deposits of <m>\$75</m> to be made every month. Darian also opened up a savings account, but he initially deposited <m>\$850</m> and set up automatic deposits of <m>\$30</m> to be made every month. How long will it take before Maritsa and Darian have the same amount of money in their savings accounts?
+        Let <m>m</m> represent the number of months that have passed since they opened their account and let <m>a</m> represent the amount of money in each person's savings account.
+        Write two equations to make up a system of equations that this situation suggests. (Do not solve the system.)
+      </p>
+      <p>
+        <var name="$system" width="20"/>
+      </p>
+      <p>
+        <var name="$system" width="20"/>
+      </p>
+    </statement>
+  </webwork>
+</exercise>
+
+	</subsection>
+
+    <subsection><title>Direct Translation Applications</title>
+        <introduction><p>In the previous examples, we learned how to translate application problems into systems of linear equations, but we didn't actually solve those problems. Now we'll translate a situation to a system of equations and then solve the system, using what we learned in <xref ref="section-substitution">Section</xref> and <xref ref="section-elimination">Section</xref>.</p></introduction>
+
+        <example><p>Translate to a system of equations and then solve: Devon is 26 years older than his son Cooper. The sum of their ages is 50. Find their ages.</p>
+
+        <p>Here we'll use our 7-step strategy for solving application problems using a system of linear equations:</p>
+
+        <sbsgroup widths="50% 45%" halighn="left">
+            <sidebyside margins="0%">
+                <p>Step 1. <em>Read</em> the problem.</p>
+                <p>Devon is 26 years older than his son Cooper. The sum of their ages is 50. Find their ages.</p>
+            </sidebyside>
+            <sidebyside margins="0%">
+                <p>Step 2. <em>Identify</em> what we are looking for.</p>
+                <p>We are looking for the ages of Devon and Cooper.</p>
+            </sidebyside>
+            <sidebyside margins="0%">
+                <p>Step 3. <em>Name</em> what we are looking for.</p>
+                <p>Let <m>d</m> represent Devon's age and <m>c</m> represent Cooper's age.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 4. <em>Translate</em> into a system of equations.</p>
+                <p>Devon is 26 years older than Cooper:
+                    <me>d=c+26</me>
+                    The sum of their ages is 50:
+                    <me>d+c=50</me></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Thus, the system is:</p>
+                <p><me>
+                            \left\{
+                            \begin{alignedat}{4}
+
+                            d\amp {}={} \amp c\amp {}+{} \amp 26 \\
+                            d\amp {}+{} \amp c \amp {}={} \amp 50
+                            \end{alignedat}
+                            \right.
+                        </me></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 5. <em>Solve</em> the system.</p>
+                <p>We'll use substitution since <m>d</m> is
+                isolated in the first equation.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Substitute <m>c+26</m> for <m>d</m> into the second equation.</p>
+                <p><me>(\substitute{c+26})+c=50</me></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Simplify and solve for <m>c</m>.</p>
+                <p><md><mrow>2c+26=50</mrow>
+                    <mrow>2c+24</mrow>
+                    <mrow>c=12</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Substitute <m>c=12</m> into the first equation and then solve for <m>d</m>.</p>
+                <p><md><mrow>d=\substitute{12}+26</mrow>
+                    <mrow>d=38</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 6. <em>Check</em> the answer in the problem.</p>
+                <p>Is Devon's age 26 more than Cooper's?
+                    Yes, 38 is 26 more than 12.
+                    Is the sum of their ages 50?
+                    Yes, 38 plus 12 is 50.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 7. <em>Answer</em> the question.</p>
+                <p>Devon is 38 and Cooper is 12 years old.</p>
+            </sidebyside>
+        </sbsgroup>
+
+        </example>
+
+        <example><statement><p>Translate to a system of equations and then solve: Abdul has <m>16</m> bills in his pocket. Some are <m>\$5</m> bills and some are <m>\$10</m> bills. He has a total of <m>\$135</m> in his pocket. How many of each type of bill does Abdul have in his pocket?</p></statement>
+            <solution><p>Here we'll use our 7-step strategy for solving application problems using a system of linear equations:</p>
+
+        <sbsgroup widths="50% 45%" halighn="left">
+            <sidebyside margins="0%">
+                <p>Step 1. <em>Read</em> the problem.</p>
+                <p>Abdul has <m>16</m> bills in his pocket. Some are <m>\$5</m> bills and some are <m>\$10</m> bills. He has a total of <m>\$135</m> in his pocket. How many of each type of bill does Abdul have in his pocket?</p>
+            </sidebyside>
+            <sidebyside margins="0%">
+                <p>Step 2. <em>Identify</em> what we are looking for.</p>
+                <p>We are looking for how many <m>\$5</m> bills and how many <m>\$10</m> bills Abdul has in his pocket.</p>
+            </sidebyside>
+            <sidebyside margins="0%">
+                <p>Step 3. <em>Name</em> what we are looking for.</p>
+                <p>Let <m>x</m> represent the number of <m>\$5</m> bills and <m>y</m> represent the number of <m>\$10</m> bills.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 4. <em>Translate</em> into a system of equations.</p>
+                <p>Abdul has <m>16</m> bills in his pocket:
+                    <me>x+y=16</me>
+                    He has a total of <m>\$135</m> in his pocket:
+                    <me>5x+10y=135</me>
+                </p>
+            </sidebyside>
+            <sidebyside>
+                <p>Thus, the system is:</p>
+                <p><me>
+                            \left\{
+                            \begin{alignedat}{4}
+
+                            x\amp {}+{} \amp y\amp {}={} \amp 16 \\
+                            5x\amp {}+{} \amp 10y \amp {}={} \amp 135
+                            \end{alignedat}
+                            \right.
+                        </me></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 5. <em>Solve</em> the system.</p>
+                <p>We'll use elimination since we can easily eliminate the <m>x</m>'s by multiplying each side of the first equation by <m>-5</m>.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Multiply each side of the first equation by <m>-5</m> and simplify.</p>
+                <p><md><mrow>-5(x+y)=-5(16)</mrow>
+                    <mrow>-5x-5y=-80</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Add the new first equation to the second equation. Then, solve for <m>y</m>.</p>
+                <p><md>
+                    <mrow>\begin{aligned}-5x-5y\\{}+5x+10y\end{aligned}\amp=\begin{aligned}-80\\{}+135\end{aligned}</mrow></md>
+                    So we have<md>
+                    <mrow>5y=55</mrow>
+                    <mrow>y=11</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Substitute <m>y=11</m> into the first equation and then solve for <m>x</m>.</p>
+                <p><md><mrow>x+\substitute{11}=16</mrow>
+                    <mrow>x=5</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 6. <em>Check</em> the answer in the problem.</p>
+                <p>Is the total number of bills 16?
+                    Yes, <m>11</m> plus <m>5</m> is <m>16</m>.
+                    Is the total value of the bills <m>\$135</m>?
+                    Yes, <m>5</m> times <m>\$5</m> gives us <m>\$25</m>, <m>11</m> times <m>\$10</m> equals <m>\$110</m>, and <m>\$25+\$110=\$135</m>.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 7. <em>Answer</em> the question.</p>
+                <p>Abdul has <m>5</m> <m>\$5</m> bills and <m>11</m> <m>\$10</m> bills in his pocket.</p>
+            </sidebyside>
+        </sbsgroup>
+
+            </solution>
+        </example>
+
+        <p>Try a similar exercise.</p>
+
+        <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication10.pg" seed="5" />
+        </exercise>
+    </subsection>
+
+    <subsection><title>Geometry Applications</title>
+
+        <introduction><p>For geometry applications, you will often use a geometry formula, which can be found in <xref ref="section-geometry-formulas">Section</xref>, to write at least one of the equations for your system. Here we will also use some new geometric concepts, which are not found in that section.</p></introduction>
+
+       <definition xml:id="definition-complementary-and-supplementary-angles">
+            <title>Complementary and Supplementary Angles</title>
+            
+            <statement><p>Two angles are <term>complementary</term><idx><h>complementary angles</h></idx> if the sum of the measures of their angles is <m>90</m> degrees.
+            Two angles are <term>supplementary</term><idx><h>supplementary angles</h></idx> if the sum of the measures of their angles is <m>180</m> degrees.
+
+            If two angles are complementary, we say that one angle is the complement of the other.
+            If two angles are supplementary, we say that one angle is the supplement of the other.</p>
+            </statement></definition>
+
+        <example><p>Translate to a system of equations and then solve: The difference of two complementary angles is <m>26</m> degrees. Find the measures of the angles.</p>
+
+            <p>Here we'll use our 7-step strategy for solving application problems using a system of linear equations:</p>
+
+             <sbsgroup widths="50% 45%" halighn="left">
+            <sidebyside margins="0%">
+                <p>Step 1. <em>Read</em> the problem.</p>
+                <p>The difference of two complementary angles is <m>26</m> degrees. Find the measures of the angles.</p>
+            </sidebyside>
+            <sidebyside margins="0%">
+                <p>Step 2. <em>Identify</em> what we are looking for.</p>
+                <p>We are looking for the measure of each of the two angles.</p>
+            </sidebyside>
+            <sidebyside margins="0%">
+                <p>Step 3. <em>Name</em> what we are looking for.</p>
+                <p>Assuming the angles have different measures, let <m>x</m> represent the measure of the larger angle and <m>y</m> represent the measure of the smaller angle.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 4. <em>Translate</em> into a system of equations.</p>
+                    <p>The two angles are complementary angles, which means the sum of the measures of their angles is <m>90</m> degrees:
+                    <me>x+y=90</me>
+                    The difference of the two angles is <m>26</m> degrees:
+                    <me>x-y=26</me>
+                </p>
+            </sidebyside>
+            <sidebyside>
+                <p>Thus, the system is:</p>
+                <p><me>
+                            \left\{
+                            \begin{alignedat}{4}
+
+                            x\amp {}+{} \amp y\amp {}={} \amp 90 \\
+                            x\amp {}-{} \amp y \amp {}={} \amp 26
+                            \end{alignedat}
+                            \right.
+                        </me></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 5. <em>Solve</em> the system.</p>
+                <p>We'll use elimination since we can see that adding these equations together, as they are, will eliminate the <m>y</m>'s.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Add the first equation to the second equation. Then, solve for <m>x</m>.</p>
+                <p><md>
+                    <mrow>\begin{aligned}x+y\\{}+x-y\end{aligned}\amp=\begin{aligned}90\\{}+26\end{aligned}</mrow></md>
+                    So we have<md>
+                    <mrow>2x=116</mrow>
+                    <mrow>x=58</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Substitute <m>x=58</m> into the first equation and then solve for <m>y</m>.</p>
+                <p><md><mrow>\substitute{58}+y=90</mrow>
+                    <mrow>y=32</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 6. <em>Check</em> the answer in the problem.</p>
+                <p>Do their measures add to <m>90</m> degrees?
+                    Yes, <m>58</m> plus <m>32</m> is <m>90</m>.
+                    Is their difference <m>26</m>?
+                    Yes, <m>58</m> minus <m>32</m> is <m>26</m>.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 7. <em>Answer</em> the question.</p>
+                <p>The measures of the two complementary angles are <m>58</m> degrees and <m>32</m> degrees.</p>
+            </sidebyside>
+        </sbsgroup>
+    </example>
+
+        <p>Try a similar exercise.</p>
+
+    <exercise>
+        <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer1=138;
+                        $answer2=42;
+                    </pg-code>
+                </setup>
+
+            <statement><p>Translate to a system of equations and then solve: Two angles are supplementary. The measure of the larger angle is <m>12</m> degrees more than three times the smaller angle. Find the measures of the angles.</p>
+
+            <p>The measure of the larger angle is <var name="$answer1" width="5"/> degrees and the measure of the smaller angle is <var name="$answer2" width="5"/> degrees.</p>
+            </statement>
+
+            <solution><p>We are looking for the measure of each of the two angles. So let <m>x</m> represent the measure of the larger angle and <m>y</m> represent the measure of the smaller angle.</p> 
+
+            <p>The two angles are supplementary angles, which means the sum of the measures of their angles is <m>180</m> degrees. This gives us one equation for our system:
+                    <me>x+y=180</me></p>
+
+            <p>The measure of the larger angle is <m>12</m> degrees more than three times the smaller angle. This translates into the following equation:
+                    <me>x=3y+12</me></p>
+
+            <p>Hence, our system is as follows:
+                <me>\begin{cases} x + y = 180 \\ x = 3y + 12 \end{cases}
+                    </me></p>
+
+            <p>This system can be easily solved by substitution since the second equation already has <m>x</m> isolated. Thus, the first step in solving this system is to substitute the expression <m>3y+12</m> in place of <m>x</m> in the first equation. This will give us:<md>
+                <mrow>(\substitute{3y+12})+y=180</mrow>
+                <mrow>4y+12=180</mrow>
+                <mrow>4y=168</mrow>
+                <mrow>y=42</mrow></md></p>
+
+            <p>Therefore, the smaller angle has a measure of <m>42</m> degrees.</p>
+
+            <p>To find the measure of the larger angle, we can substitute <m>42</m> in place of <m>y</m> in the second equation:<md>
+                <mrow>x=3(\substitute{42})+12</mrow>
+                <mrow>x=126+12</mrow>
+                <mrow>x=138</mrow></md></p>
+
+            <p>Thus, the measure of the larger angle is <m>138</m> degrees. The check is left to the reader.</p>
+
+            </solution>
+        </webwork>
+    </exercise>
+
+    <example><statement><p>Translate to a system of equations and then solve: Hyosun wants to fence a rectangular garden, using <m>260</m> feet of fencing. She'd like the length of the garden to be five feet less than twice the width. Find the dimensions of the garden.</p></statement>
+
+        <solution><p>Here we'll use our 7-step strategy for solving application problems using a system of linear equations:</p>
+
+             <sbsgroup widths="50% 45%" halighn="left">
+            <sidebyside margins="0%">
+                <p>Step 1. <em>Read</em> the problem.</p>
+                <p>Hyosun wants to fence a rectangular garden, using <m>260</m> feet of fencing. She'd like the length of the garden to be five feet less than twice the width. Find the dimensions of the garden.</p>
+            </sidebyside>
+            <sidebyside margins="0%">
+                <p>Step 2. <em>Identify</em> what we are looking for.</p>
+                <p>We are looking for the length and width of the rectangular garden.</p>
+            </sidebyside>
+            <sidebyside margins="0%">
+                <p>Step 3. <em>Name</em> what we are looking for.</p>
+                <p>Let <m>L</m> represent the length and <m>W</m> represent the width of the rectangular garden.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 4. <em>Translate</em> into a system of equations.</p>
+                    <p>She'd like the length of the garden to be five feet less than twice the width:
+                    <me>L=2W-5</me>
+                    She has a total of <m>260</m> feet of fencing to use to fence the rectangular garden. Since the fencing will be used to outline the perimeter of the garden, we need to use the perimeter formula for a rectangle, <m>P=2L+2W</m>, and plug in <m>260</m> for <m>P</m>. This gives us our second equation:
+                    <me>260=2L+2W</me>
+                </p>
+            </sidebyside>
+            <sidebyside>
+                <p>Thus, the system is:</p>
+                <p> <me>\begin{cases} L=2W-5 \\ 260=2L+2W \end{cases}
+                    </me></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 5. <em>Solve</em> the system.</p>
+                <p>We'll use substitution since the first equation is already solved for <m>L</m>.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Substitute the expression <m>2W-5</m> in place of <m>L</m> in the second equation. Then, solve for <m>W</m>.</p>
+                <p><md>
+                    <mrow>260=2(\substitute{2W-5})+2W</mrow></md>
+                    So we have<md>
+                    <mrow>260=4W-10+2W</mrow>
+                    <mrow>260=6W-10</mrow>
+                    <mrow>270=6W</mrow>
+                    <mrow>W=45</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Substitute <m>W=45</m> into the first equation and then solve for <m>L</m>.</p>
+                <p><md><mrow>L=2(\substitute{45})-5</mrow>
+                    <mrow>L=90-5</mrow>
+                    <mrow>L=85</mrow></md></p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 6. <em>Check</em> the answer in the problem.</p>
+                <p>Do the four sides add to <m>260</m> feet?
+                    Yes, <m>45+85+45+85=260</m>.
+                    Is the length five feet less than twice the width?
+                    Yes, twice <m>45</m> feet is <m>90</m> feet and <m>90</m> feet minus <m>5</m> feet is <m>85</m> feet.</p>
+            </sidebyside>
+            <sidebyside>
+                <p>Step 7. <em>Answer</em> the question.</p>
+                <p>The length of the rectangular garden is <m>85</m> feet and its width is <m>45</m> feet.</p>
+            </sidebyside>
+        </sbsgroup>
+        </solution>
+    </example>
+
+        <p> Try a similar exercise.</p>
+
+    <exercise>
+        <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer1=26;
+                        $answer2=8;
+                    </pg-code>
+                </setup>
+
+            <statement><p>Translate to a system of equations and then solve: A rectangular pool has a perimeter of 68 yards and its length is two yards longer than three times its width. Find the dimensions of the pool.</p>
+
+            <p>The length of the pool is <var name="$answer1" width="5"/> yards and the width is <var name="$answer2" width="5"/> yards.</p>
+            </statement>
+
+            <solution><p>We are looking for the length and width of the rectangular pool. So let <m>L</m> represent the length and <m>W</m> represent the width.</p> 
+
+            <p>The perimeter of the rectangular pool is <m>68</m> yards. Using the perimeter formula, this gives us one equation for our system:
+                    <me>68=2L+2W</me></p>
+
+            <p>The length of the pool is two yards longer than three times its width. This translates into the following equation:
+                    <me>L=3W+2</me></p>
+
+            <p>Hence, our system is as follows:
+                <me>\begin{cases} 68=2L+2W \\ L=3W+2 \end{cases}
+                    </me></p>
+
+            <p>This system can be easily solved by substitution since the second equation already has <m>L</m> isolated. Thus, the first step in solving this system is to substitute the expression <m>3W+2</m> in place of <m>L</m> in the first equation. Then, we solve for <m>W</m>. This will give us:<md>
+                <mrow>68=2(\substitute{3W+2})+2W</mrow>
+                <mrow>68=6W+4+2W</mrow>
+                <mrow>68=8W+4</mrow>
+                <mrow>64=8W</mrow>
+                <mrow>W=8</mrow></md></p>
+
+            <p>Therefore, the width of the pool is <m>8</m> yards.</p>
+
+            <p>To find the length of the pool, we can substitute <m>8</m> in place of <m>W</m> in the second equation:<md>
+                <mrow>L=3(\substitute{8})+2</mrow>
+                <mrow>L=24+2</mrow>
+                <mrow>L=26</mrow></md></p>
+
+            <p>Thus, length of the pool is <m>26</m> yards. The check is left to the reader.</p>
+
+            </solution>
+        </webwork>
+    </exercise>
+
+    </subsection>        
+
+    <subsection><title>Uniform Motion Applications</title><idx><h>uniform motion applications</h></idx>
+
+        <introduction><p>The basic equation we use in uniform motion problems is <m>d=rt</m> where <m>d</m> is the distance traveled, <m>r</m> is the rate or speed at which the person or object is traveling, and <m>t</m> is the time the person or object has travelled. For these problems, we will learn how to use a table to organize our information, which will help us to translate the situation into a system of equations.</p></introduction>
+
+        <example xml:id="example-catch-up-driving"><p>Translate to a system of equations and then solve: Joni left St. Louis on the interstate, driving west toward Denver at a speed of 65 miles per hour. Half an hour later, Kelly left St. Louis on the same route as Joni, driving 78 miles per hour. How long will it take Kelly to catch up to Joni?</p>
+
+            <p>A diagram is useful in helping us visualize the situation.
+
+            <figure><image source="images/CNX_ElemAlg_Figure_05_04_006_img.jpg" width="50%"><description>A diagram with "Denver" on the left and "St. Louis" on the right. Then, two arrows pointing from St. Louis to Denver, one Labeled with "Joni" and the other with "Kelly (1/2 hour later)" and speeds of 65 mph and 78 mph labeled on each arrow respectively.</description></image>
+            </figure></p>
+
+
+            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information. We know the rates of both Joni and Kelly, and so we enter them in the table. We don't know how long they have been driving at those rates, so we will let <m>j</m> represent Joni's time and let <m>k</m> represent Kelly's time, and enter that information into the table as well. Then, we can multiply the rates and times together to obtain an expression for each person's distance.</p>
+
+            <p><figure><image source="images/CNX_ElemAlg_Figure_05_04_013a_img.jpg" width="60%"><description>A table with column headings of type, rate, time, and distance. The types are Joni and Kelly. The rates are 65 and 78. The times are variables j and k. The distances are 65j and 78j.</description></image>
+            </figure></p>
+
+            <p><em>Translate</em> into a system of equations. To make the system of equations, we must recognize that Kelly and Joni will drive the same distance. So, <m>65j=78k</m>.</p>
+
+            <p>Also, since Kelly left later, her time will be <m>\frac{1}{2}</m> hour less than Joni's time. So, <m>k=j-\frac{1}{2}</m>. Now we have a system:
+            <md>
+                <mrow>
+                    \left\{
+                        \begin{alignedat}{4}
+                        65j\amp {}={} \amp 78j \\
+                        k\amp {}={} j \amp {}-{} \amp \frac{1}{2}
+                        \end{alignedat}
+                    \right.
+                </mrow></md>
+            </p>
+
+            <p><em>Solve</em> the system of equations, either by substitution or elimination. This system, lends itself easily to substitution since <m>k</m> is already isolated in the second equation. Thus, we can substitute the expression <m>j-\frac{1}{2}</m> in place of <m>k</m> in the first equation:
+            <md>
+                <mrow>65j=78\left(\substitute{j-\frac{1}{2}}\right)</mrow>
+                <mrow>65j=78j-39</mrow>
+                <mrow>-13j=-39</mrow>
+                <mrow>j=3</mrow>
+            </md></p>
+            <p>Substitute <m>3</m> for <m>j</m> in the second equation and solve for <m>k</m>:<md>
+                <mrow>k=\substitute{3}-\frac{1}{2}</mrow>
+                <mrow>k=2.5</mrow></md></p>
+            <p>Therefore, it will take Kelly <m>2.5</m> hours to catch up to Joni. The check is left to the reader.</p>
+
+        </example>
+
+        <p>Try a similar exercise.</p>
+
+        <exercise>
+            <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer=1;
+                    </pg-code>
+                </setup>
+            <statement><p>Translate to a system of equations and then solve: Charlie left his mother's house traveling at an average speed of 36 miles per hour. His sister Sally left 15 minutes (1/4 hour) later traveling the same route at an average speed of 48 miles per hour. How long will Charlie have been driving before Sally catches up to him?</p>
+
+            <p>Charlie will have been driving for <var name="$answer" width="5"/> hour(s) before Sally catches up to him.</p>
+            </statement>
+            <solution><p><em>Identify and name</em> what you are looking for. Make a table, similar to the one we used in <xref ref="example-catch-up-driving">Example</xref> to help you organize the information. We are given the rates of both Charlie and Sally, and so you can enter them into your table. We don't know how long they have been driving at those rates, so you can let <m>c</m> represent Charlie's time and let <m>s</m> represent Sally's time, and enter that information into the table as well. Then, you can multiply the rates and times together to obtain an expression for each person's distance. You should end up with <m>36c</m> for Charlie's distance and <m>48s</m> for Sally's distance.</p>
+
+            <p>Next you need to translate into a system of equations. To make the system of equations, you should recognize that Charlie and Sally will have driven the same distance once Sally has caught up to Charlie. So, <m>36c=48s</m>.</p>
+
+            <p>Also, since Sally left <m>\frac{1}{4}</m> hour later, her time will be <m>\frac{1}{4}</m> hour less than Charlie's time. So, <m>s=c-\frac{1}{4}</m>. Now we have a system:
+
+                <me>\begin{cases} 36c = 48s \\ s = c - \frac{1}{4} \end{cases}
+                </me>
+            </p>
+
+            <p>Now solve the system of equations, either by substitution or elimination. This system, lends itself easily to substitution since <m>s</m> is already isolated in the second equation. Thus, we can substitute the expression <m>c-\frac{1}{4}</m> in place of <m>s</m> in the first equation:
+            <md>
+                <mrow>36c=48(\substitute{c-\frac{1}{4}})</mrow>
+                <mrow>36c=48c-12</mrow>
+                <mrow>-12c=-12</mrow>
+                <mrow>c=1</mrow>
+            </md></p>
+            <p>Note that all we were asked to find is how long Charlie will have been driving before Sally catches up, so we don't need to go any further. We now know that Charlie had been driving for <m>1</m> hour before Sally caught up with him.</p>
+
+            </solution>
+            </webwork>
+        </exercise>
+
+        <p> Many real-world applications of uniform motion arise because of the effects of currents - of water or air - on the actual speed of a vehicle. For example, cross-country airplane flights in the United States generally take longer going west than going east because of the prevailing wind currents.</p>
+
+        <p>Let's take a look at a boat traveling on a river. Depending on which way the boat is going, the curent of the water is either slowing it down or speeding it up.</p>
+
+        <p><xref ref="figure-downstream">Figure</xref> and <xref ref="figure-upstream">Figure</xref> show how a river current affects the speed at which a boat is actually traveling. We'll call the speed of the boat in still water <m>b</m> and the speed of the river current <m>c</m>.</p>
+
+        <p>In <xref ref="figure-downstream">Figure</xref> the boat is going downstream, in the same direction as the river current. The current helps push the boat, so the boat's actual speed is faster than its speed in still water. The actual speed at which the boat is moving is <m>b+c</m>.</p>
+
+            <p><figure xml:id="figure-downstream"><image source="images/CNX_ElemAlg_Figure_05_04_007_img.jpg" width="60%"><description>A picture of a boat traveling downstream, with the current.</description></image>
+            </figure></p> 
+
+        <p>In <xref ref="figure-upstream">Figure</xref> the boat is going upstream, opposite the river current. The current is going against the boat, so the boat's actual speed is slower than its speed in still water. The actual speed of the boat is <m>b-c</m>.</p>
+
+             <p><figure xml:id="figure-upstream"><image source="images/CNX_ElemAlg_Figure_05_04_008_img.jpg" width="60%"><description>A picture of a boat traveling upstream, against the current.</description></image>
+            </figure></p> 
+
+        <p>We'll put some numbers to this situation in the next example.</p>
+
+        <example xml:id="example-river-cruise-ship"><p>Translate to a system of equations and then solve: A river cruise ship sailed <m>60</m> miles downstream for <m>4</m> hours and then took <m>5</m> hours sailing upstream to return to the dock. Find the speed of the ship in still water and the speed of the current.</p>
+
+        <p>A diagram is useful in helping us visualize the situation.
+
+            <figure><image source="images/CNX_ElemAlg_Figure_05_04_009_img.jpg" width="50%"><description>A diagram showing two arrows pointing in opposite directions, to represent a boat traveling one direction and then traveling back in the opposite direction the same distance. Then one blue arrow represents the direction of the current of the river.</description></image>
+            </figure></p>
+
+
+            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information, including the use of the formula <m>d=rt</m>. We know the times of both trips downstream and upstream, and so we enter those times in the table. We also know that the distance for both trips is <m>60</m> miles, so we can also enter that information into the table. We don't know the ship's speed in still water or the speed of the current, so we will let <m>s</m> represent the ship's speed in still water and let <m>c</m> represent the speed of the current.</p>
+
+            <p>As explained previously, when the ship is going downstream, the current will push the ship faster, so the rate at which the ship is traveling can be represented by <m>s+c</m>. When the ship is going upstream, the current will slow the ship down, so the rate at which the ship will be traveling can be represented by <m>s-c</m>. We can now enter that information into the table as well.</p>
+
+            <p><figure><image source="images/CNX_ElemAlg_Figure_05_04_010a_img.jpg" width="60%"><description>A table with column headings of rate, time, and distance, as well as row headings of downstream and upstream. The rates are s+c and s-c. The times are 4 and 5. The distances are both 60.</description></image>
+            </figure></p>
+
+            <p><em>Translate</em> into a system of equations. To make the system of equations, we use the fact that the product of the rate and the time is equal to the distance for each trip. This will give us our two equations: 
+
+                <me>\begin{cases}
+                        4(s+c)=60\\5(s-c)=60
+                        \end{cases}
+                </me></p>
+
+            <p><em>Solve</em> the system of equations, either by substitution or elimination. The first thing to do is simplify each equation by using the distributive property to get rid of the parentheses:
+            
+                <me>\begin{cases}
+                        4s+4c=60\\5s-5c=60
+                        \end{cases}
+                </me></p>
+
+            <p>Since all the variable terms have a coefficient (not equal to one), the best method to use to solve this system is the elimination method.</p>
+
+            <p>Notice that the <m>c</m> terms already have opposite signs, so we'll work to eliminate the variable <m>c</m>. The least common mutiple of <m>4</m> and <m>5</m> is <m>20</m>, so if we multiply both sides of the first equation by <m>5</m> and both sides of the second equation by <m>4</m>, then the new <m>c</m> terms will be <m>20c</m> and <m>-20c</m> respectively, which eliminate the <m>c</m> terms when the new equations are added together.</p>
+
+            <p>Multiply both sides of the first equation by <m>5</m> and both sides of the second equation by <m>4</m>:<md>
+
+                    <mrow>5(4s+4c)=5(60)</mrow>
+                    <mrow>4(5s-5c)=4(60)</mrow>
+                    </md></p>
+
+            <p>Now, our new system is:
+
+                <me>\begin{cases} 20s+20c=300\\20s-20c=240
+                \end{cases}</me></p>
+
+             <p>Add the first equation to the second equation. Then, solve for <m>s</m>.</p>
+                <p><md>
+                    <mrow>\begin{aligned}20s+20c\\{}+20s-20c\end{aligned}\amp=\begin{aligned}300\\{}+240\end{aligned}</mrow></md>
+                    So we have<md>
+                    <mrow>40s=540</mrow>
+                    <mrow>s=13.5</mrow></md></p>
+
+            <p>Substitute <m>13.5</m> for <m>s</m> in the first original equation and solve for <m>c</m>:<md>
+                <mrow>4(\substitute{13.5}+c)=60</mrow>
+                <mrow>54+4c=60</mrow>
+                <mrow>4c=6</mrow>
+                <mrow>c=1.5</mrow></md></p>
+            <p>Therefore, the ship's speed in still water is <m>13.5</m> miles per hour and the speed of the current is <m>1.5</m> miles per hour. The check is left to the reader.</p>
+
+        </example>
+
+        <p>Try a similar exercise</p>
+
+        <exercise>
+            <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer1=7;
+                        $answer2=1;
+                    </pg-code>
+                </setup>
+            <statement><p>Translate to a system of equations and then solve: Jorge paddled his canoe <m>24</m> miles upstream for <m>4</m> hours. It took him <m>3</m> hours to paddle back. Find the speed of the canoe in still water and the speed of the river current.</p>
+
+            <p>The speed of the canoe in still water is <var name="$answer1" width="5"/> miles per hour. The speed of the river current is <var name="$answer2" width="5"/> miles per hour.</p>
+            </statement>
+            <solution><p>It may help to draw a diagram and a table similar to those found in <xref ref="example-river-cruise-ship">Example</xref> to help visualize the problem and organize the information that is given.</p>
+
+            <p>We don't know the canoe's speed in still water or the speed of the current, so we will let <m>b</m> represent the canoe's speed in still water and let <m>c</m> represent the speed of the current. Thus, the rate at which the canoe is traveling upstream, against the current, will be represented by <m>b-c</m>, and the rate at which the canoe is traveling downstream, with the current, will be represented by <m>b+c</m>.</p>
+
+            <p><em>Translate</em> into a system of equations. To make the system of equations, we use the fact that the product of the rate and the time is equal to the distance for each trip. This will give us our two equations, making up our system: 
+
+                <me>\begin{cases}
+                        4(b-c)=24\\3(b+c)=24
+                        \end{cases}
+                </me></p>
+
+            <p><em>Solve</em> the system of equations, either by substitution or elimination. The first thing to do is simplify each equation by using the distributive property to get rid of the parentheses:
+            
+                <me>\begin{cases}
+                        4b-4c=24\\3b+3c=24
+                        \end{cases}
+                </me></p>
+
+            <p>Since all the variable terms have a coefficient (not equal to one), the best method to use to solve this system is the elimination method.</p>
+
+            <p>Notice that the <m>c</m> terms already have opposite signs, so we'll work to eliminate the variable <m>c</m>. The least common mutiple of <m>4</m> and <m>3</m> is <m>12</m>, so if we multiply both sides of the first equation by <m>3</m> and both sides of the second equation by <m>4</m>, then the new <m>c</m> terms will be <m>-12c</m> and <m>12c</m> respectively, which eliminate the <m>c</m> terms when we add the new equations together.</p>
+
+            <p>Multiply both sides of the first equation by <m>3</m> and both sides of the second equation by <m>4</m>:<md>
+
+                    <mrow>3(4b-4c)=3(24)</mrow>
+                    <mrow>4(3b+3c)=4(24)</mrow>
+                    </md></p>
+
+            <p>Now, our new system is:
+
+                <me>\begin{cases} 12b-12c=72\\12b+12c=96
+                \end{cases}</me></p>
+
+             <p>Add the first equation to the second equation. Then, solve for <m>b</m>.</p>
+                <p><md>
+                    <mrow>\begin{aligned}12b-12c\\{}+12b+12c\end{aligned}\amp=\begin{aligned}72\\{}+96\end{aligned}</mrow></md>
+                    So we have<md>
+                    <mrow>24b=168</mrow>
+                    <mrow>b=7</mrow></md></p>
+
+            <p>Substitute <m>7</m> for <m>b</m> in the first original equation and solve for <m>c</m>:<md>
+                <mrow>4(\substitute{7}-c)=24</mrow>
+                <mrow>28-4c=24</mrow>
+                <mrow>-4c=-4</mrow>
+                <mrow>c=1</mrow></md></p>
+            <p>Therefore, the canoe's speed in still water is <m>7</m> miles per hour and the speed of the current is <m>1</m> mile per hour. The check is left to the reader.</p>
+            </solution>
+        </webwork>
+        </exercise>
+
+        <example xml:id="example-private-jet"><statement><p>Translate to a system of equations and then solve: A private jet can fly <m>1095</m> miles in three hours with a tailwind, but only <m>987</m> miles into a headwind. Find the speed of the jet in still air and the speed of the wind.</p></statement>
+
+        <solution>
+
+        <p>A diagram is useful in helping us visualize the situation.
+
+            <figure><image source="images/CNX_ElemAlg_Figure_05_04_011_img.jpg" width="50%"><description>A diagram showing two arrows pointing in opposite directions, to represent a jet traveling one direction for a distance of 1095 miles and then traveling back in the opposite direction for a distance of 987 miles. Then one blue arrow represents the direction of the wind, with the time of 3 hours labeled on that arrow, representing the time traveled by the jet in both directions. There are also expressions of "j+w" labeling the arrow that represents the 1095-mile trip and "j-w" labeling the arrow that represents the 987-mile trip.</description></image>
+            </figure></p>
+
+
+            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information, including the use of the formula <m>d=rt</m>. The time of both trips is given to be three hours and so we enter that time in the table, in the appropriate spots. We also know the distances for each trip, which is <m>1095</m> miles with a tailwind and <m>987</m> miles into a headwind, so we can also enter that information into the table. We don't know the jet's speed in still air or the speed of the wind, so we will let <m>j</m> represent the jet's speed in still air and let <m>w</m> represent the speed of the wind.</p>
+
+            <p>Note that when the jet is flying with the tailwind, that means the wind will be pushing the jet faster than it would be going in still air, so we can represent its rate with the tailwind as <m>j+w</m>. In contrast, when the jet is flying into the tailwind, the wind will slow the jet down, making it go slower than it would be traveling in still air, so we can represent its rate into the tailwind as <m>j-w</m>. These expressions can then be entered into the table for each rate.</p>
+
+            <p><figure><image source="images/CNX_ElemAlg_Figure_05_04_012a_img.jpg" width="60%"><description>A table with column headings of rate, time, and distance, as well as row headings of tailwind and headwind. The rates are j+w and j-w. The times are both 3. The distances are 1095 for tailwind and 987 for headwind.</description></image>
+            </figure></p>
+
+            <p><em>Translate</em> into a system of equations. To make the system of equations, we use the fact that the product of the rate and the time is equal to the distance for each trip. This will give us our two equations, making up our system: 
+
+                <me>\begin{cases}
+                        3(j+w)=1095\\3(j-w)=987
+                        \end{cases}
+                </me></p>
+
+            <p><em>Solve</em> the system of equations, either by substitution or elimination. The first thing to do is simplify each equation by using the distributive property to get rid of the parentheses:
+            
+                <me>\begin{cases}
+                        3j+3w=1095\\3j-3w=987
+                        \end{cases}
+                </me></p>
+
+            <p>The best method to use to solve this system is the elimination method since the <m>w</m> terms of the two equations add to zero.</p>
+
+             <p>Add the first equation to the second equation. Then, solve for <m>j</m>.</p>
+                <p><md>
+                    <mrow>\begin{aligned}3j+3w\\{}+3j-3w\end{aligned}\amp=\begin{aligned}1095\\{}+987\end{aligned}</mrow></md>
+                    So we have<md>
+                    <mrow>6j=2082</mrow>
+                    <mrow>j=347</mrow></md></p>
+
+            <p>Substitute <m>347</m> for <m>j</m> in the first original equation and solve for <m>w</m>:<md>
+                <mrow>3(\substitute{347}+w)=1095</mrow>
+                <mrow>1041+3w=1095</mrow>
+                <mrow>3w=54</mrow>
+                <mrow>w=18</mrow></md></p>
+            <p>Therefore, the jet's speed in still air is <m>347</m> miles per hour and the speed of the wind is <m>18</m> miles per hour. The check is left to the reader.</p>
+        </solution>
+        </example>
+
+        <p>Try a similar exercise</p>
+
+        <exercise>
+            <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer1=408;
+                        $answer2=24;
+                    </pg-code>
+                </setup>
+            <statement><p>Translate to a system of equations and then solve: A commercial jet can fly <m>1728</m> miles with a tailwind for <m>4</m> hours, but only <m>1536</m> miles in <m>4</m> hours into a headwind. Find the speed of the jet in still air and the speed of the wind.</p>
+
+            <p>The speed of the jet in still air is <var name="$answer1" width="5"/> miles per hour. The speed of the wind is <var name="$answer2" width="5"/> miles per hour.</p>
+            </statement>
+            <solution><p>It may help to draw a diagram and a table similar to those found in <xref ref="example-private-jet">Example</xref> to help visualize the problem and organize the information that is given.</p>
+
+            <p>We don't know the jet's speed in still air or the speed of the wind, so we will let <m>j</m> represent the jet's speed in still air and let <m>w</m> represent the speed of the wind. Thus, the rate at which the jet is traveling with a tailwind will be represented by <m>j+w</m>, and the rate at which the jet is traveling into a headwind will be represented by <m>j-w</m>.</p>
+
+            <p><em>Translate</em> into a system of equations. To make the system of equations, we use the fact that the product of the rate and the time is equal to the distance for each trip, which are <m>1728</m> miles and <m>1536</m> miles, respectively. This will give us our two equations, making up our system: 
+
+                <me>\begin{cases}
+                        4(j+w)=1728\\4(j-w)=1536
+                        \end{cases}
+                </me></p>
+
+            <p><em>Solve</em> the system of equations, either by substitution or elimination. The first thing to do is simplify each equation by using the distributive property to get rid of the parentheses:
+            
+                <me>\begin{cases}
+                        4j+4w=1728\\4j-4w=1536
+                        \end{cases}
+                </me></p>
+
+            <p>The best method to use to solve this system is the elimination method since the <m>w</m> terms of the two equations add to zero.</p>
+
+             <p>Add the first equation to the second equation. Then, solve for <m>j</m>.</p>
+                <p><md>
+                    <mrow>\begin{aligned}4j+4w\\{}+4j-4w\end{aligned}\amp=\begin{aligned}1728\\{}+1536\end{aligned}</mrow></md>
+                    So we have<md>
+                    <mrow>8j=3264</mrow>
+                    <mrow>j=408</mrow></md></p>
+
+            <p>Substitute <m>408</m> for <m>j</m> in the first original equation and solve for <m>w</m>:<md>
+                <mrow>4(\substitute{408}+w)=1728</mrow>
+                <mrow>1632+4w=1728</mrow>
+                <mrow>4w=96</mrow>
+                <mrow>w=24</mrow></md></p>
+            <p>Therefore, the jet's speed in still air is <m>408</m> miles per hour and the speed of the wind is <m>24</m> miles per hour. The check is left to the reader.</p>
+        </solution>
+
+        </webwork>
+    </exercise>
+    </subsection>
+    <subsection><title>Mixture Applications</title>
+
+        <p>Some mixture applications involve combining foods or drinks. Example situations might include combining raisins and nuts to make a trail mix or using two types of coffee beans to make a blend.</p>
+
+    <example xml:id="example-solving-systems-of-equations-trail-mix-application">
+        <title>Combining Foods with Different Costs</title><idx><h>mixture problem</h></idx>
+
+            <statement><p>Translate to a system of equations and solve: Carson wants to make <m>20</m> pounds of trail mix using nuts and chocolate chips. His budget requires that the trail mix costs him <m>\$7.60</m> per pound. Nuts cost <m>\$9.00</m> per pound and chocolate chips cost <m>\$2.00</m> per pound. How many pounds of nuts and how many pounds of chocolate chips should he use?</p></statement>
+
+            <solution><p><em>Read</em> the problem. We will create a table to organize the information.</p>
+
+            <p><em>Identify</em> what we are looking for. We are looking for the number of pounds of nuts and the number of pounds of chocolate chips.</p>
+
+            <p><em>Name</em> what we are looking for. Let <m>n</m> represent the number of pounds of nuts he needs and <m>c</m> represent the number of pounds of chocolate chips he needs.</p>
+
+            <p>Carson will mix nuts and chocolate chips to get trail mix. Write in <m>n</m> and <m>c</m> in the table for the number of pounds of nuts and chocolate chips. There will be <m>20</m> pounds of trail mix.</p>
+
+            <p>Put the price per pound of each item in the Value column. Fill in the last column using <m>\text{Number of Pounds}\cdot\text{Value}=\text{Total Value}</m>:</p>
+
+                <p><figure><image source="images/CNX_ElemAlg_Figure_05_05_003a_img.jpg" width="60%"><description>A table with column headings type, number of pounds, value, and total value. The types are nuts, chocolate chips, and trail mix. The number of pounds are n, c, and 20. The values are 9.00, 2.00, and 7.60. The total values are 9n, 2c, and 7.60(20)=152.</description></image></figure></p>
+
+            <p><em>Translate</em> into a system of equations. We get the equations from the Number of Pounds and Total Value columns:
+                <me>\begin{cases}n+c=20\\9n+2c=152 \end{cases}</me></p>
+
+            <p><em>Solve</em> the system of equations. We will use elimination to solve the system.</p>
+
+            <p>Multiply the first equation by <m>-2</m> to eliminate <m>c</m>.<md>
+                    <mrow>-2(n+c)=-2(20)</mrow>
+                    <mrow>9n+2c=152</mrow></md></p>
+           
+            <p>Simplify and add. Then solve for n.<md>
+
+                    <mrow>\begin{aligned}-2n-2c\\{}+9n+2c\end{aligned}\amp=\begin{aligned}-40\\{}+152\end{aligned}</mrow></md>
+                    So we have<md>
+                    <mrow>7n=112</mrow>
+                    <mrow>n=16</mrow></md></p>
+
+            <p>To find the number of pounds of chocolate chips, substitute <m>n=16</m> into the first equation, then solve for <m>c</m>.<md>
+
+                    <mrow>n+c=20</mrow>
+                    <mrow>\substitute{16}+c=20</mrow>
+                    <mrow>c=4</mrow></md></p>
+
+            <p><em>Check</em> the answer in the problem.
+
+                <me>16+4=20\text{?  Yes!}</me></p>
+                    <p>
+                        <md>
+                            <mrow>9(16)+2(4)=152\text{?}</mrow>
+                            <mrow>144+8=152\text{?  Yes!}</mrow>
+                        </md>
+                    </p>
+
+            <p><em>Answer</em> the question. Carson should mix <m>16</m> pounds of nuts with <m>4</m> pounds of chocolate chips to create the trail mix.</p>
+        </solution>
+
+        </example>
+
+        <p>Try a similar exercise.</p>
+
+        <exercise> 
+            <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer1=3;
+                        $answer2=2;
+                    </pg-code>
+                </setup>
+            <statement><p>Translate to a system of equations and then solve: Greta wants to make <m>5</m> pounds of a nut mix using peanuts and cashews. Her budget requires the mixture to cost her <m>\$6</m> per pound. Peanuts are <m>$4</m> per pound and cashews are <m>\$9</m> per pound. How many pounds of peanuts and how many pounds of cashews should she use?</p>
+
+            <p>Greta should use <var name="$answer1" width="5"/> pounds of peanuts and <var name="$answer2" width="5"/> pounds of cashews to make her nut mix.</p>
+            </statement>
+
+            <solution><p><em>Read</em> the problem and <em>identify</em> what you are looking for.</p>
+
+            <p>You are looking for the number of pounds of peanuts and the number of pounds of cashews Greta needs to use to make her nut mix and stay within her budget constraints.</p>
+
+            <p><em>Name</em> what you are looking for.</p>
+
+            <p>Let <m>p</m> represent the number of pounds of peanuts and let <m>c</m> represent the number of pounds of cashews she needs to use.</p>
+
+            <p>It may help to use a table, similar to the one used in <xref ref="example-solving-systems-of-equations-trail-mix-application">Example</xref> to help organize your information. Then, place the <m>p</m> and <m>c</m> under the number of pounds for the types peanuts and cashews. For the type nut mix, place <m>5</m> since that is the total number of pounds of nut mix that she needs to make.</p>
+
+            <p>Also place the price per pound for each type, including the total allowed in her budget for the nut mix, in the Value column. Then, the values for the last column are obtained by multiplying the number of pounds times the value for each type.</p>
+
+            <p><em>Translate</em> into a system of equations. Your two equations will come from the Number of Pounds column and the Total Value column, giving you the following system:<md>
+
+                    <mrow>\begin{cases} p+c=5 \\ 4p+9c=30 \end{cases}</mrow></md></p>
+
+            <p><em>Solve</em> the system of equations. We will use elimination.</p>
+
+            <p>Multiply the first equation by <m>-4</m> to eliminate <m>p</m>.<md>
+                    <mrow>-4(p+c)=-4(5)</mrow>
+                    <mrow>4p+9c=30</mrow></md></p>
+           
+            <p>Simplify and add. Then solve for c.<md>
+
+                    <mrow>\begin{aligned}-4p-4c\\{}+4p+9c\end{aligned}\amp=\begin{aligned}-20\\{}+30\end{aligned}</mrow></md>
+                    So we have<md>
+                    <mrow>5c=10</mrow>
+                    <mrow>c=2</mrow></md></p>
+
+            <p>To find the number of pounds of poeanuts, substitute <m>c=2</m> into the first equation, then solve for <m>p</m>.<md>
+
+                    <mrow>p+c=5</mrow>
+                    <mrow>p+\substitute{2}=5</mrow>
+                    <mrow>p=3</mrow></md></p>
+
+            <p><em>Answer</em> the question. Greta should mix <m>3</m> pounds of peanuts with <m>2</m> pounds of cashews to create the nut mix. The check is left to the reader.</p>
+
+            </solution>
+            </webwork>
+        </exercise>
+
+    <example xml:id="example-solving-systems-of-equations-chemistry-solution-application">
+            <title>Mixing Solutions with Two Different Concentrations</title><idx><h>mixture problem</h></idx>
+
+                <p>Sasheena is a lab assistant at her community college. She needs to make <m>200</m> milliliters of a <m>40\%</m> solution of sulfuric acid for a lab experiment. The lab has only <m>25\%</m> and <m>50\%</m> solutions in the storeroom. How much should she mix of the <m>25\%</m> and the <m>50\%</m> solutions to make the <m>40\%</m> solution?</p>
+            
+            
+                <p><em>Read</em> the problem. A figure may help us visualize the situation, then we will create a table to organize the information.</p>
+
+                <p>Sasheena must mix some of the <m>25\%</m> solution and some of the <m>50\%</m> solution together to create <m>200</m> <quantity><unit prefix="milli" base="liter"/></quantity> of the <m>40\%</m> solution.</p>
+
+                <p><figure><image source="images/CNX_ElemAlg_Figure_05_05_004a_img.jpg" width="60%"><description>Diagram of a container marked with x and 25%, plus a container marked with y and 50%, both with arrows point down toward a third container marked with 40% and 200 ml.</description></image></figure></p>
+
+                <p><em>Name</em> what we are looking for.</p>
+
+
+                <p>The two unknowns are the amount of each type of solution being mixed together. Let <m>x</m> represent the amount of <m>25\%</m> solution (in <quantity><unit prefix="milli" base="liter"/></quantity>) and let <m>y</m> represent the amount of <m>50\%</m> solution (in <quantity><unit prefix="milli" base="liter"/></quantity>). One quantity given to us in the problem is <quantity><mag>200</mag><unit prefix="milli" base="liter"/></quantity>, which is the amount of the <m>40\%</m> solution that needs to be created.</p>
+
+                <p>These three amounts, as well as the concentrations for each type of solution, can be entered into the table and then the amount of sulfuric acid in each type of solution can be calculated by multiplying the number of milliters of solution times the concentration (in decimal form).</p>
+
+                <p><figure><image source="images/CNX_ElemAlg_Figure_05_05_004b_img.jpg" width="60%"><description>A table with column headings of type, number of units, concentration(\%), and amount. For the types, there are 25\%, 50\%, and 40\%. The number of units are x, y, and 200. The amounts are 0.25x, 0.50y, and 0.40(200).</description></image></figure></p>
+
+                <p><em>Translate</em> into a system of equations. Since <m>200</m> <quantity><unit prefix="milli" base="liter"/></quantity> is the total volume of the <m>40\%</m> solution, we must have for one of the equations in the system:
+                    <me>(x\,\text{mL})+(y\,\text{mL})=200\,\text{mL}</me>
+                Or without units:
+                    <me>x+y=200</me>
+                </p>
+
+                <p>To build the second equation, we have to think about the  <em>amount</em> (in <quantity><unit prefix="milli" base="liter"/></quantity>) of <em>sulfuric acid</em> being mixed. If we have <m>x</m> milliliters of solution that is <m>25\%</m> sulfuric acid, then <m>0.25x</m> is the actual <em>amount</em> (in <quantity><unit prefix="milli" base="liter"/></quantity>) of sulfuric acid in that solution. Similarly, <m>0.50y</m> is the amount of sulfuric acid in the <m>50\%</m> solution. The final solution is <quantity><mag>200</mag><unit prefix="milli" base="liter"/></quantity> of solution that is <m>40\%</m> sulfuric acid, so it has <m>0.40(200)=80</m> <quantity><unit prefix="milli" base="liter"/></quantity> of sulfuric acid. All of this together means:
+                    <me>0.25(x\,\text{mL})+0.50(y\,\text{mL})=80\,\text{mL}</me>
+                Or without units:
+                    <me>0.25x+0.50y=80</me>
+                </p>
+                <p>So our system is:
+                    <me>
+                        \left\{
+                            \begin{alignedat}{3}
+                            x\amp+{}\amp y\amp=200 \\
+                            0.25x\amp+{}\amp0.50y\amp=80
+                            \end{alignedat}
+                        \right.
+                    </me>
+                </p>
+                <p><em>Solve</em> the system of equations. To solve this system, we'll solve for <m>x</m> in the first equation:
+                    <md>
+                        <mrow>x+y\amp=200</mrow>
+                        <mrow>x\amp=200-y</mrow>
+                    </md>
+                And then substitute <m>x</m> in the second equation with <m>200-y</m>:
+                    <md>
+                        <mrow>0.25x+0.50y\amp=80</mrow>
+                        <mrow>0.25(\substitute{200-y})+0.50y\amp=80</mrow>
+                        <mrow>50-0.25y+0.50y\amp=80</mrow>
+                        <mrow>50+0.25y\amp=80</mrow>
+                        <mrow>0.25y\amp=30</mrow>
+                        <mrow>\divideunder{0.25y}{0.25}\amp=\divideunder{30}{0.25}</mrow>
+                        <mrow>y\amp=120</mrow>
+                    </md>
+                As a last step, we will determine <m>x</m> using the equation where we had isolated <m>x</m>:
+                    <md>
+                        <mrow>x\amp=200-y</mrow>
+                        <mrow>x\amp=200-\substitute{120}</mrow>
+                        <mrow>x\amp=80</mrow>
+                    </md>
+                </p>
+
+                <p><em>Check</em> the answer in the problem.
+                    <me>80+120=200\text{?  Yes!}</me></p>
+                <p>
+                    <md>
+                        <mrow>0.25(80)+0.50(120)=80\text{?}</mrow>
+                        <mrow>20+60=80\text{?  Yes!}</mrow>
+                    </md>
+                </p>
+
+                <p><em>Answer</em> the question. In summary, Sasheena needs to combine <quantity><mag>80</mag><unit prefix="milli" base="liter"/></quantity> of <m>25\%</m> sulfuric acid solution with <quantity><mag>120</mag><unit prefix="milli" base="liter"/></quantity> of <m>50\%</m> sulfuric acid solution to create <quantity><mag>200</mag><unit prefix="milli" base="liter"/></quantity> of solution that is <m>40\%</m> sulfuric acid by volume.</p>
+            
+        </example>
+
+        <p>Try a similar exercise.</p>
+
+        <exercise>
+            <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer1=100;
+                        $answer2=150;
+                    </pg-code>
+                </setup>
+            <statement><p>Translate to a system of equations and then solve: Anatole needs to make <m>250</m> <quantity><unit prefix="milli" base="liter"/></quantity> of a <m>25\%</m> solution of hydrochloric acid for a lab experiment, but the lab only has a <m>10\%</m> solution and a <m>35\%</m> solution. How much of the <m>10\%</m> solution and how much of the <m>35\%</m> solution should he mix to make the <m>25\%</m> hydrochloric acid solution</p>
+
+            <p>Anatole should mix <var name="$answer1" width="5"/> milliliters of the <m>10\%</m> hydrochloric acid solution with <var name="$answer2" width="5"/> milliters of the <m>35\%</m> hydrochloric acid solution to obtain <m>250</m> <quantity><unit prefix="milli" base="liter"/></quantity> of a <m>25\%</m> solution of hydrochloric acid for the lab experiment.</p>
+            </statement>  
+            <solution><p><em>Read</em> the problem. Drawing a figure similar to the one in <xref ref="example-solving-systems-of-equations-chemistry-solution-application">Example</xref> may help you visualize the situation. Then creating a table, similar to the table in that same example, can help you to organize the information.</p>
+
+                <p>Anatole must mix some of the <m>10\%</m> solution and some of the <m>35\%</m> solution together to create <m>250</m> <quantity><unit prefix="milli" base="liter"/></quantity> of the <m>25\%</m> solution.</p>
+
+                <p><em>Name</em> what we are looking for.</p>
+
+                <p>The two unknowns are the amount of each type of solution being mixed together. Let <m>x</m> represent the amount of <m>10\%</m> solution (in <quantity><unit prefix="milli" base="liter"/></quantity>) and let <m>y</m> represent the amount of <m>35\%</m> solution (in <quantity><unit prefix="milli" base="liter"/></quantity>). One quantity given to us in the problem is <quantity><mag>250</mag><unit prefix="milli" base="liter"/></quantity>, which is the amount of the <m>25\%</m> solution that needs to be created.</p>
+
+                <p>These three amounts, as well as the concentrations for each type of solution, can be entered into the table and then the amount of hydrochloric acid in each type of solution can be calculated by multiplying the number of milliters of solution times the concentration (in decimal form).</p>
+
+                <p><em>Translate</em> into a system of equations. Since <m>250</m> <quantity><unit prefix="milli" base="liter"/></quantity> is the total volume of the <m>25\%</m> solution, we must have for one of the equations in the system:
+                    <me>(x\,\text{mL})+(y\,\text{mL})=250\,\text{mL}</me>
+                Or without units:
+                    <me>x+y=250</me>
+                </p>
+
+                <p>To build the second equation, we have to think about the  <em>amount</em> (in <quantity><unit prefix="milli" base="liter"/></quantity>) of <em>hydrochloric acid</em> being mixed. If we have <m>x</m> milliliters of solution that is <m>10\%</m> hydrochloric acid, then <m>0.10x</m> is the actual <em>amount</em> (in <quantity><unit prefix="milli" base="liter"/></quantity>) of hydrochloric acid in that solution. Similarly, <m>0.35y</m> is the amount of hydrochloric acid in the <m>35\%</m> solution. The final solution is <quantity><mag>250</mag><unit prefix="milli" base="liter"/></quantity> of solution that is <m>25\%</m> hydrochloric acid, so it has <m>0.25(250)=62.5</m> <quantity><unit prefix="milli" base="liter"/></quantity> of hydrochloric acid. All of this together means:
+                    <me>0.10(x\,\text{mL})+0.35(y\,\text{mL})=62.5\,\text{mL}</me>
+                Or without units:
+                    <me>0.10x+0.35y=62.5</me>
+                </p>
+                <p>So our system is:
+                    <me>
+                        \left\{
+                            \begin{alignedat}{3}
+                            x\amp+{}\amp y\amp=250 \\
+                            0.10x\amp+{}\amp0.35y\amp=62.5
+                            \end{alignedat}
+                        \right.
+                    </me>
+                </p>
+                <p><em>Solve</em> the system of equations. To solve this system, we'll solve for <m>x</m> in the first equation:
+                    <md>
+                        <mrow>x+y\amp=250</mrow>
+                        <mrow>x\amp=250-y</mrow>
+                    </md>
+                And then substitute <m>x</m> in the second equation with <m>250-y</m>:
+                    <md>
+                        <mrow>0.10x+0.35y\amp=62.5</mrow>
+                        <mrow>0.10(\substitute{250-y})+0.35y\amp=62.5</mrow>
+                        <mrow>25-0.10y+0.35y\amp=62.5</mrow>
+                        <mrow>25+0.25y\amp=62.5</mrow>
+                        <mrow>0.25y\amp=37.5</mrow>
+                        <mrow>\divideunder{0.25y}{0.25}\amp=\divideunder{37.5}{0.25}</mrow>
+                        <mrow>y\amp=150</mrow>
+                    </md>
+                As a last step, we will determine <m>x</m> using the equation where we had isolated <m>x</m>:
+                    <md>
+                        <mrow>x\amp=250-y</mrow>
+                        <mrow>x\amp=250-\substitute{150}</mrow>
+                        <mrow>x\amp=100</mrow>
+                    </md>
+                </p>
+
+                <p><em>Answer</em> the question. In summary, Anatole needs to combine <quantity><mag>100</mag><unit prefix="milli" base="liter"/></quantity> of <m>10\%</m> hydrochloric acid solution with <quantity><mag>150</mag><unit prefix="milli" base="liter"/></quantity> of <m>35\%</m> hydrochloric acid solution to create <quantity><mag>250</mag><unit prefix="milli" base="liter"/></quantity> of solution that is <m>25\%</m> hydrochloric acid by volume. The check is left to the reader.</p>
+            </solution>
+
+            </webwork>
+            </exercise>      
+
+    </subsection>
+
+    <subsection><title>Interest Applications</title>
+
+        <introduction><p>The formula to model interest applications is <m>I=Prt</m>. Interest earned or owed, <m>I</m>, is the product of the principal, <m>P</m>, the rate, <m>r</m>, and the time (in years), <m>t</m>.</p>
+
+        <p>In these interest application problems, we'll use a table to organize the information, similar to uniform motion and mixture applications, as you'll see in <xref ref="example-solving-system-of-equations-interest-application">Example</xref>.</p></introduction>
+
+        <example xml:id="example-solving-system-of-equations-interest-application">
+            <title>Investing at Two Different Interest Rates</title>
+            <p>Adrian has <m>\$40{,}000</m> to invest and hopes to earn <m>7.1\%</m> interest per year. He will put some of the money into a stock fund that earns <m>8\%</m> per year and the rest into bonds that earns <m>3\%</m> per year. How much money should he put into each fund?</p>
+
+            <p><em>Read</em> the problem. A table will help us organize the information.</p>
+
+            <p><em>Identify</em> what we are looking for. We are looking for the amount to invest in each fund.</p>
+
+            <p><em>Name</em> what we are looking for. Let <m>s</m> represent the amount invested in a stock fund and let <m>b</m> represent the amount invested in bonds. Write these in the table under Principal for each account.</p>
+
+            <p>Write the interest rate as a decimal for each fund. We're interested in the amount of interest earned per year, so the time will be <m>1</m> year for both the stock fund and the bonds. Multiply: Principal <m>\cdot</m> Rate <m>\cdot</m> Time to get the Interest for each account as well as the total.</p>
+
+            <p><figure><image source="images/CNX_ElemAlg_Figure_05_05_005a_img.jpg" width="60%"><description>A table with column headings of Account, Principal, Rate, Time, and Interest, and row headings of Stock fund, Bonds, and Total. Under Principal are entries s, b, and 40,000. Under Rate are entries 0.08, 0.03, and 0.071. Under Time are entries 1 and 1 (the last cell is blank). Under Interest are entries 0.08s, 0.03b, and 0.071(40,000).</description></image></figure></p>
+
+            <p><em>Translate</em> into a system of equations. We get our system of equations from the Principal column and the Interest column, since the amounts invested in each account should add together to equal the total amount invested and the amounts of interest earned in each account added together should equal the total amount of interest earned, which calculates to <m>0.071(40,000)=2840</m>. So here is our system:<md>
+
+                    <mrow>\begin{cases} s+b=40{,}000 \\ 0.08s+0.03b=2840 \end{cases}</mrow></md></p>
+
+            <p><em>Solve</em> the system of equations. We'll solve this by substitution.</p>
+
+            <p>Solve the first equation for <m>b</m>: <m>b=40{,}000-s</m>.</p>
+
+            <p>Substitute <m>40{,}000-s</m> in for <m>b</m> in the second equation and solve for <m>s</m>: <md>
+
+                    <mrow>0.08s+0.03(\substitute{40{,}000-s})=2840</mrow>
+                    <mrow>0.08s+1200-0.03s=2840</mrow>
+                    <mrow>0.05s=1640</mrow>
+                    <mrow>s=32{,}800</mrow>
+                    </md></p>
+
+            <p>To find <m>b</m>, substitute <m>32{,}800</m> in for <m>s</m> in the first equation and solve for <m>b</m>:<md>
+
+                    <mrow>\substitute{32{,}800}+b=40{,}000</mrow>
+                    <mrow>b=7200</mrow>
+                    </md></p>
+
+
+            <p><em>Check</em> the answer in the problem. Do the two amounts invested add to <m>\$40{,}000</m>? Yes! Will he earn a total of <m>7.1\%</m> interest in one year? <md>
+
+                    <mrow>0.08(\substitute{32{,}800})+0.03(\substitute{7200})=0.071(40{,}000)\text{ ?}</mrow>
+                    <mrow>2624+216=2840\text{ ?  Yes!}</mrow>
+                    </md></p>
+
+            <p><em>Answer</em> the question. Adrian should invest <m>\$32{,}800</m> in the stock fund and <m>\$7200</m> in bonds.</p>
+        </example>
+
+
+
+        <example><title>Owing at Two Different Rates</title>
+            <statement>
+                <p>Notah made some large purchases with his two credit cards one month and took on a total of <m>\$8{,}400</m> in debt from the two cards. He didn't make any payments the first month, so the two credit card debts each started to accrue interest. That month, his Visa card charged <m>2\%</m> interest and his Mastercard charged <m>2.5\%</m> interest. Because of this, Notah's total debt grew by <m>\$178</m>. How much money did Notah charge to each card?</p>
+            </statement>
+            <solution>
+                <p>To start, we will define two variables based on our two unknowns. Let <m>v</m> be the amount charged to the Visa card (in dollars) and let <m>m</m> be the amount charged to the Mastercard (in dollars).</p>
+
+                <p>To determine our equations, notice that we are given two different totals. We will use these to form our two equations. The total amount charged is <m>\$8{,}400</m> so we have:
+                    <me>(v\,\text{dollars})+(m\,\text{dollars})=\$8400</me>
+                Or without units:
+                    <me>v+m=8400</me>
+                The other total we were given is the total amount of interest, <m>\$178</m>, which is also in dollars. The Visa had <m>v</m> dollars charged to it and accrues <m>2\%</m> interest. So <m>0.02v</m> is the dollar amount of interest that comes from using this card. Similarly, <m>0.025m</m> is the dollar amount of interest from using the Mastercard. Together:
+                    <me>0.02(v\,\text{dollars})+0.025(m\,\text{dollars})=\$178</me>
+                Or without units:
+                    <me>0.02v+0.025m=178</me>
+                As a system, we write:
+                    <me>
+                        \left\{
+                            \begin{alignedat}{3}
+                            v\amp+{}\amp m\amp={}8400 \\
+                            0.02v\amp+{}\amp 0.025m\amp{}=178 \\
+                            \end{alignedat}
+                        \right.
+                    </me>
+                </p>
+                <p>To solve this system by substitution, notice that it will be easier to solve for one of the variables in the first equation. We'll solve that equation for <m>v</m>:
+                    <md>
+                        <mrow>v+m\amp=8400</mrow>
+                        <!-- <mrow>v+m\subtractright{m}\amp=8400\subtractright{m}</mrow> -->
+                        <mrow>v\amp=8400-m</mrow>
+                    </md>
+                Now we will substitute <m>8400-m</m> for <m>v</m> in the second equation:
+                    <md>
+                        <mrow>0.02v+0.025m\amp=178</mrow>
+                        <mrow>0.02(\substitute{8400-m})+0.025m\amp=178</mrow>
+                        <mrow>168-0.02m+0.025m\amp=178</mrow>
+                        <mrow>168+0.005m\amp=178</mrow>
+                        <mrow>0.005m\amp=10</mrow>
+                        <mrow>\divideunder{0.005m}{0.005}\amp=\divideunder{10}{0.005}</mrow>
+                        <mrow>m\amp=2000</mrow>
+                    </md>
+                Lastly, we can determine the value of <m>v</m> by using the earlier equation where we isolated <m>v</m>:
+                    <md>
+                        <mrow>v\amp=8400-m</mrow>
+                        <mrow>v\amp=8400-\substitute{2000}</mrow>
+                        <mrow>v\amp=6400</mrow>
+                    </md>
+                </p>
+                <p>In summary, Notah charged <m>\$6400</m> to the Visa and <m>\$2000</m> to the Mastercard. We should check that these numbers work as solutions to our original system <em>and</em> that they make sense in context. (For instance, if one of these numbers were negative, or was something small like <m>\$0.50</m>, they wouldn't make sense as credit card debt.)</p>
+            </solution>
+        </example>
+
+        <p>Try a similar exercise</p>
+
+
+            <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution40.pg" />
+            </exercise>
+
+
+
+
+    </subsection>
+
+    <exercises>
+        <exercisegroup>
+            <exercise>
+                <webwork>
+                    <pg-macros>
+                        <macro-file>contextTypeset.pl</macro-file>
+                    </pg-macros>
+                        <setup>
+                            <pg-code>
+                                Context("ImplicitPlane");
+                                Context()->variables->are(p=>"Real",n=>"Real");
+                                Context()->flags->set(reduceConstants=>0);
+                                Context()->flags->set(showExtraParens=>0);
+                                $ans[0] = Compute("p+n=400");
+                                $ans[1] = Compute("0.01p+0.05n=12");
+                                $system = MultiAnswer($ans[0], $ans[1])->with(singleResult => 0,
+                                checker => sub {
+                                my ( $correct, $student, $self ) = @_;
+                                my @eqstu = @{$student};
+                                my @eqcor = @{$correct};
+                                my $return = [0,0];
+                                if (
+                                ($eqcor[0] == $eqstu[0] and $eqcor[1] == $eqstu[1]) or
+                                ($eqcor[0] == $eqstu[1] and $eqcor[1] == $eqstu[0])
+                                ) {$return = [1,1];}
+                                else {
+                                if ($eqcor[0] == $eqstu[0] || $eqcor[1] == $eqstu[0]) {
+                                $return = [1,0];
+                                } elsif ($eqcor[0] == $eqstu[1] || $eqcor[1] == $eqstu[1]) {
+                                $return = [0,1];
+                                } else {
+                                $return = [0,0];
+                                }
+                                }
+                                for my $i (0,1) {
+                                $self->{cmp}->[$i]->{cmp_class} = "a linear equation",
+                                $self->{cmp}->[$i]->{rh_ans}->{correct_ans}
+                                = Parser::Formula(Context("Typeset") , $eqcor[$i])->string;
+                                $self->{cmp}->[$i]->{rh_ans}->{correct_ans_latex_string}
+                                = Parser::Formula(Context("Typeset") , $eqcor[$i])->TeX;
+                                $eqstu[$i] = Parser::Formula(
+                                Context("Typeset"),
+                                $self->{cmp}->[$i]->{rh_ans}->{original_student_ans}
+                                );
+                                $self->{cmp}->[$i]->{rh_ans}->{preview_text_string}
+                                = $eqstu[$i]->string;
+                                $self->{cmp}->[$i]->{rh_ans}->{preview_latex_string}
+                                = $eqstu[$i]->TeX;
+                                $self->{cmp}->[$i]->{rh_ans}->{student_ans}
+                                = $eqstu[$i]->string;
+                                }
+                                return $return;
+                                }
+                                );
+                            </pg-code>
+                        </setup>
+                    <statement>
+                        <p>A jar of pennies and nickels has 400 coins.
+                        In total, the value of all this money is $12.00.
+                        If there are <m>p</m> pennies and <m>n</m> nickels,
+                        write two equations that this situation suggests.
+                        </p>
+                        <p>
+                        <var name="$system" width="20"/>
+                        </p>
+                        <p>
+                        <var name="$system" width="20"/>
+                        </p>
+                    </statement>
+                </webwork>
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution05.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution20.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication80.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication90.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution05.pg" seed="3"/>
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution10.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution60.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/Mizzou/Algebra/eqns_systems_apps/app_systems_02.pg" seed="2"/>
+            </exercise>
+            <exercise>
+                <webwork source="Library/PCC/BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication100.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem10.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/MixedCoffeeProblem20.pg" seed="2"/>
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem20.pg" />
+            </exercise>
+            <exercise>
+                <webwork>
+                    <pg-macros>
+                        <macro-file>contextNumeric.pl</macro-file>
+                    </pg-macros>
+                    <setup>
+                        <pg-code>
+                            Context("Numeric");
+                            $answer1=62;
+                            $answer2=28;
+                        </pg-code>
+                    </setup>
+
+                <statement><p>The measure of the larger angle is <m>6</m> degrees more than twice the smaller angle. Find the measures of the angles.</p>
+
+                <p>The measure of the larger angle is <var name="$answer1" width="5"/> degrees and the measure of the smaller angle is <var name="$answer2" width="5"/> degrees.</p>
+                </statement>
+                </webwork>
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem30.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem40.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/Mizzou/Algebra/eqns_systems_apps/app_systems_02.pg" seed="5"/>
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem50.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/MixedSolutionWordProblem20.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/MixedSolutionWordProblem20.pg" seed="2"/>
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/MixedCoffeeProblem20.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/MixedPopulationWordProblem10.pg" />
+            </exercise>
+            
+        </exercisegroup>
+    </exercises>
+
+    <conclusion>
+    <p>
+      This section is adapted from
+      <pubtitle>Solve Applications with Systems of Equations</pubtitle><fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:a81syPh0@1/Solve-Applications-with-Systems-of-Equations" /></fn>
+      and <pubtitle>Solve Mixture Applications with Systems of Equations</pubtitle><fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:jjvYxwLr@1/Solve-Mixture-Applications-with-Systems-of-Equations" /></fn>
+      by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn><url href="http://creativecommons.org/licenses/by/4.0" /></fn>
+    </p>
+  </conclusion>
+
+</section>
