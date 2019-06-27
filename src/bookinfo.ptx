@@ -93,7 +93,8 @@
 %
 %  subtractright (subtract to the right)
 %  Usage: x+1\subtractright{1}\amp=1\subtractright{1}
-\newcommand{\subtractright}[1]{{\color{blue}{{{}-#1}}}}
+\newcommand{\subtractright}[1]{{\color{blue}{\raise -1pc \hbox{${}-#1$}}}}
+<!-- \newcommand{\subtractright}[1]{{\color{blue}{{{}-#1}}}} -->
 
 %
 %
@@ -121,9 +122,29 @@
 \newcommand{\divideright}[1]{{\color{blue}{{{}\div#1}}}}
 %
 %
-%  cancelhighlight (draw attention to when a factor is canceled)
+%  cancelhighlight (draw attention (in blue) to when a factor is canceled)
 %  Usage: \frac{(x+1)\cancelhighlight{(x+2)}{\cancelhighlight{(x+2)}}}
 \newcommand{\cancelhighlight}[1]{{\color{blue}{{\cancel{#1}}}}}
+%
+%
+%  firstcancel (draw attention to when a factor is canceled
+%    using color and a slash style)
+%  Usage: \frac{(x+1)\firstcancel{(x+2)}{\firstcancel{(x+2)}}}
+\newcommand{\firstcancel}[1]{{\color{red}{{\cancel{#1}}}}}
+%  
+%  secondcancel (draw attention to when a factor is canceled
+%    using color and a slash style)
+%  Usage: \frac{(x+1)\secondcancel{(x+2)}{\secondcancel{(x+2)}}}
+\newcommand{\secondcancel}[1]{{\color{blue}{{\bcancel{#1}}}}}
+%
+%  thirdcancel (draw attention to when a factor is canceled
+%    using color and a slash style)
+%  Usage: \frac{(x+1)thirdcancel{(x+2)}{thirdcancel{(x+2)}}}
+\newcommand{thirdcancel}[1]{{\color{green}{{\xcancel{#1}}}}}
+
+%  cancelhighlightg (draw attention (in green) to when a factor is canceled)
+%  Usage: \frac{(x+1)\cancelhighlightg{(x+2)}{\cancelhighlightg{(x+2)}}}
+\newcommand{\cancelhighlightg}[1]{{\color{green}{{\cancel{#1}}}}}
 %
 %
 %Emoji characters
