@@ -56,12 +56,12 @@
 
         <p>Below is a general problem solving strategy for solving application problems, using systems of linear equations:</p>
 
-        <list xml:id="list-solve-applications-using-linear-ystems"><idx><h>solving</h><h>applications</h><h>systems</h></idx>
+        <list xml:id="list-solve-applications-using-linear-systems"><idx><h>solving</h><h>applications</h><h>systems</h></idx>
             <caption>A Problem Solving Strategy for Applications of Systems of Linear Equations</caption>
             <dl>
-                <li><title>Step 1: Read</title><p><em>Read</em> the problem. Make sure all the words and ideas are understood.</p></li>
+                <li><title>Step 1: Read</title><p><em>Read</em> the problem. Make sure all the words and ideas are understood. Draw a picture or diagram, if applicable.</p></li>
                 <li><title>Step 2: Identify</title><p><em>Identify</em> what you are looking for.</p></li>
-                <li><title>Step 3: Name</title><p><em>Name</em> what you are looking for by choosing variables to represent those quantities.</p></li>
+                <li><title>Step 3: Name</title><p><em>Name</em> what you are looking for by choosing variables to represent those quantities. Be specific about what the variables represent and include units.</p></li>
                 <li><title>Step 4: Translate</title><p><em>Translate</em> into a system of equations by writing two linear equations that describe two separate linear relationships found in the problem.</p></li>
                 <li><title>Step 5: Solve</title><p><em>Solve</em> the system of equations using either substitution or elimination.</p></li>
                 <li><title>Step 6: Check</title><p><em>Check</em> the answers in the problem and make sure they makes sense.</p></li>
@@ -93,7 +93,7 @@
     			<sidebyside margins="0%">
     				<p>Step 3: Name what you are looking for by choosing variables to represent those quantities.</p>
     				<p>We will use two variables, <m>h</m> and <m>w</m>.</p>
-    				<p>Let <m>h</m> represent the husband's annual salary and let <m>w</m> represent the wife's annual salary.</p>
+    				<p>Let <m>h</m> represent the husband's annual salary, in dollars, and let <m>w</m> represent the wife's annual salary, in dollars.</p>
 				</sidebyside>
 				<sidebyside margins="0%">
     				<p>Step 4: Translate into a system of equations.</p>
@@ -120,7 +120,7 @@
 
 <example><statement><p>Translate to a system of equations:
 
-    		Randall has 125 feet of fencing to enclose the rectangular part of his backyard adjacent to his house. He will only need to fence around three sides because the fourth side will be the wall of his house. He wants the length of the fenced yard (parallel to the house wall) to be 5 feet more than four times as long as the width. Find the length and the width.</p></statement>
+    		Randall has 125 feet of fencing to enclose a rectangular portion of his backyard adjacent to his house. He will only need to fence around three sides because the fourth side will be the wall of his house. He wants the length of the fenced yard (parallel to the house wall) to be 5 feet more than four times as long as the width. Find the length and the width.</p></statement>
 
     		<solution><p>Again, we'll use the same steps 1-4 from the list of strategies that we used in the last example.</p>
     			<sbsgroup widths="25% 28% 44%" halighn="left">
@@ -128,7 +128,7 @@
     				<p>Step 1: Read the problem. Make sure you understand all the words and ideas. Sometimes, it may help to make a drawing.</p>
     				<p>This is a geometric problem involving the three sides of a rectangle - two widths and one length.</p>
     				<p>It will take a total of 125 feet of fencing to fence two widths and one length of the rectangular yard. The length of the yard must be 5 feet more than four times the width.
-    					<figure><image source="images/CNX_ElemAlg_Figure_05_04_005a_img.jpg" width="80%"><description>A drawing of a house, from above, with a three-sided fence adjacent to the house.</description></image>
+    					<figure><image source="images/CNX_ElemAlg_Figure_05_04_005a_img.jpg" width="60%"><description>A drawing of a house, from above, with a three-sided fence adjacent to the house.</description></image>
 						</figure>
 					</p>
 				</sidebyside>
@@ -140,7 +140,7 @@
     			<sidebyside margins="0%">
     				<p>Step 3: Name what you are looking for by choosing variables to represent those quantities.</p>
     				<p>We will use two variables, <m>L</m> and <m>W</m>.</p>
-    				<p>Let <m>L</m> represent the length and let <m>W</m> represent the width.</p>
+    				<p>Let <m>L</m> represent the length of the rectangle, in feet, and let <m>W</m> represent its width, in feet.</p>
 				</sidebyside>
 				<sidebyside margins="0%">
     				<p>Step 4: Translate into a system of equations.</p>
@@ -178,11 +178,11 @@
     <setup>
       <pg-code>
         Context("ImplicitPlane");
-        Context()->variables->are(a=>"Real",m=>"Real");
+        Context()->variables->are(m=>"Real",e=>"Real");
         Context()->flags->set(reduceConstants=>0);
         Context()->flags->set(showExtraParens=>0);
-        $ans[0] = Compute("a=400+75m");
-        $ans[1] = Compute("a=850+30m");
+        $ans[0] = Compute("m+e=35");
+        $ans[1] = Compute("5m+10e=230");
         $system = MultiAnswer($ans[0], $ans[1])->with(
           singleResult => 0,
           checker => sub {
@@ -227,8 +227,8 @@
     </setup>
     <statement>
       <p>
-        Maritsa opened up a savings account and made an initial deposit of <m>\$400</m>. She then set up automatic deposits of <m>\$75</m> to be made every month. Darian also opened up a savings account, but he initially deposited <m>\$850</m> and set up automatic deposits of <m>\$30</m> to be made every month. How long will it take before Maritsa and Darian have the same amount of money in their savings accounts?
-        Let <m>m</m> represent the number of months that have passed since they opened their account and let <m>a</m> represent the amount of money in each person's savings account.
+        A test has <m>35</m> problems, which are worth a total of <m>230</m> points. There are two types of problems on the test. The multiple-choice problems are worth <m>5</m> points each and the essay questions are worth <m>10</m> points each.
+        Let <m>m</m> represent the number of multiple-choice problems there are on the test and let <m>e</m> represent the number of essay questions there are on the test.
         Write two equations to make up a system of equations that this situation suggests. (Do not solve the system.)
       </p>
       <p>
@@ -261,7 +261,7 @@
             </sidebyside>
             <sidebyside margins="0%">
                 <p>Step 3. <em>Name</em> what we are looking for.</p>
-                <p>Let <m>d</m> represent Devon's age and <m>c</m> represent Cooper's age.</p>
+                <p>Let <m>d</m> represent Devon's age, in years, and <m>c</m> represent Cooper's age, in years.</p>
             </sidebyside>
             <sidebyside>
                 <p>Step 4. <em>Translate</em> into a system of equations.</p>
@@ -427,7 +427,7 @@
             </sidebyside>
             <sidebyside margins="0%">
                 <p>Step 3. <em>Name</em> what we are looking for.</p>
-                <p>Assuming the angles have different measures, let <m>x</m> represent the measure of the larger angle and <m>y</m> represent the measure of the smaller angle.</p>
+                <p>Let <m>x</m> represent the measure of the larger angle, in degrees, and <m>y</m> represent the measure of the smaller angle, in degrees.</p>
             </sidebyside>
             <sidebyside>
                 <p>Step 4. <em>Translate</em> into a system of equations.</p>
@@ -537,8 +537,12 @@
 
              <sbsgroup widths="50% 45%" halighn="left">
             <sidebyside margins="0%">
-                <p>Step 1. <em>Read</em> the problem.</p>
-                <p>Hyosun wants to fence a rectangular garden, using <m>260</m> feet of fencing. She'd like the length of the garden to be five feet less than twice the width. Find the dimensions of the garden.</p>
+                <p>Step 1. <em>Read</em> the problem. Draw a picture or diagram, if applicable.</p>
+                <p>Hyosun wants to fence a rectangular garden, using <m>260</m> feet of fencing. She'd like the length of the garden to be five feet less than twice the width. Find the dimensions of the garden. Draw a diagram:
+
+                <figure><image source="images/diagram for geometry example in 5.4.png" width="60%"><description>A drawing of a rectangular garden, from above, with one short side marked as "width" and a long side marked as "length (five feet less than twice the width)".</description></image>
+                        </figure>
+                 </p>
             </sidebyside>
             <sidebyside margins="0%">
                 <p>Step 2. <em>Identify</em> what we are looking for.</p>
@@ -546,7 +550,7 @@
             </sidebyside>
             <sidebyside margins="0%">
                 <p>Step 3. <em>Name</em> what we are looking for.</p>
-                <p>Let <m>L</m> represent the length and <m>W</m> represent the width of the rectangular garden.</p>
+                <p>Let <m>L</m> represent the length, in feet, and <m>W</m> represent the width, in feet, of the rectangular garden.</p>
             </sidebyside>
             <sidebyside>
                 <p>Step 4. <em>Translate</em> into a system of equations.</p>
@@ -652,7 +656,7 @@
 
     <subsection><title>Uniform Motion Applications</title><idx><h>uniform motion applications</h></idx>
 
-        <introduction><p>The basic equation we use in uniform motion problems is <m>d=rt</m> where <m>d</m> is the distance traveled, <m>r</m> is the rate or speed at which the person or object is traveling, and <m>t</m> is the time the person or object has travelled. For these problems, we will learn how to use a table to organize our information, which will help us to translate the situation into a system of equations.</p></introduction>
+        <introduction><p>The basic equation we use in uniform motion problems is <m>d=rt</m> where <m>d</m> is the distance traveled, <m>r</m> is the rate or speed at which the person or object is traveling, and <m>t</m> is the time the person or object has traveled. For these problems, we will learn how to use a table to organize our information, which will help us to translate the situation into a system of equations.</p></introduction>
 
         <example xml:id="example-catch-up-driving"><p>Translate to a system of equations and then solve: Joni left St. Louis on the interstate, driving west toward Denver at a speed of 65 miles per hour. Half an hour later, Kelly left St. Louis on the same route as Joni, driving 78 miles per hour. How long will it take Kelly to catch up to Joni?</p>
 
@@ -662,7 +666,7 @@
             </figure></p>
 
 
-            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information. We know the rates of both Joni and Kelly, and so we enter them in the table. We don't know how long they have been driving at those rates, so we will let <m>j</m> represent Joni's time and let <m>k</m> represent Kelly's time, and enter that information into the table as well. Then, we can multiply the rates and times together to obtain an expression for each person's distance.</p>
+            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information. We know the rates of both Joni and Kelly, and so we enter them in the table. We don't know how long they have been driving at those rates, so we will let <m>j</m> represent Joni's time, in hours, and let <m>k</m> represent Kelly's time, in hours, and enter that information into the table as well. Then, we can multiply the rates and times together to obtain an expression for each person's distance.</p>
 
             <p><figure><image source="images/CNX_ElemAlg_Figure_05_04_013a_img.jpg" width="60%"><description>A table with column headings of type, rate, time, and distance. The types are Joni and Kelly. The rates are 65 and 78. The times are variables j and k. The distances are 65j and 78j.</description></image>
             </figure></p>
@@ -674,7 +678,7 @@
                 <mrow>
                     \left\{
                         \begin{alignedat}{4}
-                        65j\amp {}={} \amp 78j \\
+                        65j\amp {}={} \amp 78k \\
                         k\amp {}={} j \amp {}-{} \amp \frac{1}{2}
                         \end{alignedat}
                     \right.
@@ -712,7 +716,7 @@
 
             <p>Charlie will have been driving for <var name="$answer" width="5"/> hour(s) before Sally catches up to him.</p>
             </statement>
-            <solution><p><em>Identify and name</em> what you are looking for. Make a table, similar to the one we used in <xref ref="example-catch-up-driving">Example</xref> to help you organize the information. We are given the rates of both Charlie and Sally, and so you can enter them into your table. We don't know how long they have been driving at those rates, so you can let <m>c</m> represent Charlie's time and let <m>s</m> represent Sally's time, and enter that information into the table as well. Then, you can multiply the rates and times together to obtain an expression for each person's distance. You should end up with <m>36c</m> for Charlie's distance and <m>48s</m> for Sally's distance.</p>
+            <solution><p><em>Identify and name</em> what you are looking for. Make a table, similar to the one we used in <xref ref="example-catch-up-driving">Example</xref> to help you organize the information. We are given the rates of both Charlie and Sally, and so you can enter them into your table. We don't know how long they have been driving at those rates, so you can let <m>c</m> represent Charlie's time, in hours, and let <m>s</m> represent Sally's time, in hours, and enter that information into the table as well. Then, you can multiply the rates and times together to obtain an expression for each person's distance. You should end up with <m>36c</m> for Charlie's distance and <m>48s</m> for Sally's distance.</p>
 
             <p>Next you need to translate into a system of equations. To make the system of equations, you should recognize that Charlie and Sally will have driven the same distance once Sally has caught up to Charlie. So, <m>36c=48s</m>.</p>
 
@@ -761,7 +765,7 @@
             </figure></p>
 
 
-            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information, including the use of the formula <m>d=rt</m>. We know the times of both trips downstream and upstream, and so we enter those times in the table. We also know that the distance for both trips is <m>60</m> miles, so we can also enter that information into the table. We don't know the ship's speed in still water or the speed of the current, so we will let <m>s</m> represent the ship's speed in still water and let <m>c</m> represent the speed of the current.</p>
+            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information, including the use of the formula <m>d=rt</m>. We know the times of both trips downstream and upstream, and so we enter those times in the table. We also know that the distance for both trips is <m>60</m> miles, so we can also enter that information into the table. We don't know the ship's speed in still water or the speed of the current, so we will let <m>s</m> represent the ship's speed, in miles per hour, in still water and let <m>c</m> represent the speed of the current, in miles per hour.</p>
 
             <p>As explained previously, when the ship is going downstream, the current will push the ship faster, so the rate at which the ship is traveling can be represented by <m>s+c</m>. When the ship is going upstream, the current will slow the ship down, so the rate at which the ship will be traveling can be represented by <m>s-c</m>. We can now enter that information into the table as well.</p>
 
@@ -881,7 +885,7 @@
         </webwork>
         </exercise>
 
-        <example xml:id="example-private-jet"><statement><p>Translate to a system of equations and then solve: A private jet can fly <m>1095</m> miles in three hours with a tailwind, but only <m>987</m> miles into a headwind. Find the speed of the jet in still air and the speed of the wind.</p></statement>
+        <example xml:id="example-private-jet"><statement><p>Translate to a system of equations and then solve: A private jet can fly <m>1095</m> miles in three hours with a tailwind, but only <m>987</m> miles into a headwind in the same amount of time. Find the speed of the jet in still air and the speed of the wind.</p></statement>
 
         <solution>
 
@@ -891,7 +895,7 @@
             </figure></p>
 
 
-            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information, including the use of the formula <m>d=rt</m>. The time of both trips is given to be three hours and so we enter that time in the table, in the appropriate spots. We also know the distances for each trip, which is <m>1095</m> miles with a tailwind and <m>987</m> miles into a headwind, so we can also enter that information into the table. We don't know the jet's speed in still air or the speed of the wind, so we will let <m>j</m> represent the jet's speed in still air and let <m>w</m> represent the speed of the wind.</p>
+            <p><em>Identify and name</em> what we are looking for. A table will help us organize the information, including the use of the formula <m>d=rt</m>. The time of both trips is given to be three hours and so we enter that time in the table, in the appropriate spots. We also know the distances for each trip, which is <m>1095</m> miles with a tailwind and <m>987</m> miles into a headwind, so we can also enter that information into the table. We don't know the jet's speed in still air or the speed of the wind, so we will let <m>j</m> represent the jet's speed in still air and let <m>w</m> represent the speed of the wind, both in miles per hour.</p>
 
             <p>Note that when the jet is flying with the tailwind, that means the wind will be pushing the jet faster than it would be going in still air, so we can represent its rate with the tailwind as <m>j+w</m>. In contrast, when the jet is flying into the tailwind, the wind will slow the jet down, making it go slower than it would be traveling in still air, so we can represent its rate into the tailwind as <m>j-w</m>. These expressions can then be entered into the table for each rate.</p>
 
@@ -995,7 +999,7 @@
 
             <statement><p>Translate to a system of equations and solve: Carson wants to make <m>20</m> pounds of trail mix using nuts and chocolate chips. His budget requires that the trail mix costs him <m>\$7.60</m> per pound. Nuts cost <m>\$9.00</m> per pound and chocolate chips cost <m>\$2.00</m> per pound. How many pounds of nuts and how many pounds of chocolate chips should he use?</p></statement>
 
-            <solution><p><em>Read</em> the problem. We will create a table to organize the information.</p>
+            <solution><p><em>Read</em> the problem. We will create a table to organize the information. Note that with mixture problems, when mixing two ingredients, we will have one row for each ingredient and one total row for the final mixture, giving us three rows in our table.</p>
 
             <p><em>Identify</em> what we are looking for. We are looking for the number of pounds of nuts and the number of pounds of chocolate chips.</p>
 
@@ -1007,7 +1011,7 @@
 
                 <p><figure><image source="images/CNX_ElemAlg_Figure_05_05_003a_img.jpg" width="60%"><description>A table with column headings type, number of pounds, value, and total value. The types are nuts, chocolate chips, and trail mix. The number of pounds are n, c, and 20. The values are 9.00, 2.00, and 7.60. The total values are 9n, 2c, and 7.60(20)=152.</description></image></figure></p>
 
-            <p><em>Translate</em> into a system of equations. We get the equations from the Number of Pounds and Total Value columns:
+            <p><em>Translate</em> into a system of equations. Note that an advantage of setting up the table this way, in mixture problems, is that the first and last columns will always give us the two equations we need for our system, where the cells in the first two rows must always add to the last cell in the total row. So we get the two equations for our system from the Number of Pounds column and the Total Value column:
                 <me>\begin{cases}n+c=20\\9n+2c=152 \end{cases}</me></p>
 
             <p><em>Solve</em> the system of equations. We will use elimination to solve the system.</p>
@@ -1270,19 +1274,19 @@
 
         <example xml:id="example-solving-system-of-equations-interest-application">
             <title>Investing at Two Different Interest Rates</title>
-            <p>Adrian has <m>\$40{,}000</m> to invest and hopes to earn <m>7.1\%</m> interest per year. He will put some of the money into a stock fund that earns <m>8\%</m> per year and the rest into bonds that earns <m>3\%</m> per year. How much money should he put into each fund?</p>
+            <p>Adrian invested <m>\$40{,}000</m> last year. He put some of the money into a stock fund that earns <m>8\%</m> per year and the rest into bonds that earns <m>3\%</m> per year. If he earned a total of <m>\$2840</m> in interest that year, how much money did he put into each fund?</p>
 
             <p><em>Read</em> the problem. A table will help us organize the information.</p>
 
             <p><em>Identify</em> what we are looking for. We are looking for the amount to invest in each fund.</p>
 
-            <p><em>Name</em> what we are looking for. Let <m>s</m> represent the amount invested in a stock fund and let <m>b</m> represent the amount invested in bonds. Write these in the table under Principal for each account.</p>
+            <p><em>Name</em> what we are looking for. Let <m>s</m> represent the amount, in dollars, invested in a stock fund and let <m>b</m> represent the amount, in dollars, invested in bonds. Write these in the table under Principal for each account.</p>
 
-            <p>Write the interest rate as a decimal for each fund. We're interested in the amount of interest earned per year, so the time will be <m>1</m> year for both the stock fund and the bonds. Multiply: Principal <m>\cdot</m> Rate <m>\cdot</m> Time to get the Interest for each account as well as the total.</p>
+            <p>Write the interest rate (in decimal form) for each fund. We're interested in the amount of interest earned per year, so the time will be <m>1</m> year for both the stock fund and the bonds. Multiply: Principal <m>\cdot</m> Rate <m>\cdot</m> Time to get the Interest for each account as well as the total.</p>
 
-            <p><figure><image source="images/CNX_ElemAlg_Figure_05_05_005a_img.jpg" width="60%"><description>A table with column headings of Account, Principal, Rate, Time, and Interest, and row headings of Stock fund, Bonds, and Total. Under Principal are entries s, b, and 40,000. Under Rate are entries 0.08, 0.03, and 0.071. Under Time are entries 1 and 1 (the last cell is blank). Under Interest are entries 0.08s, 0.03b, and 0.071(40,000).</description></image></figure></p>
+            <p><figure><image source="images/CNX_ElemAlg_Figure_05_05_005a_img.png" width="75%"><description>A table with column headings of Account, Principal, Rate, Time, and Interest, and row headings of Stock fund, Bonds, and Total. Under Principal are entries s, b, and 40,000. Under Rate are entries 0.08 and 0.03 (the last cell is blank). Under Time are entries 1 and 1 (the last cell is blank). Under Interest are entries 0.08s, 0.03b, and 2840.</description></image></figure></p>
 
-            <p><em>Translate</em> into a system of equations. We get our system of equations from the Principal column and the Interest column, since the amounts invested in each account should add together to equal the total amount invested and the amounts of interest earned in each account added together should equal the total amount of interest earned, which calculates to <m>0.071(40,000)=2840</m>. So here is our system:<md>
+            <p><em>Translate</em> into a system of equations. We get our system of equations from the Principal column and the Interest column, since the amounts invested in each account should add together to equal the total amount invested and the amounts of interest earned in each account added together should equal the total amount of interest earned. So here is our system:<md>
 
                     <mrow>\begin{cases} s+b=40{,}000 \\ 0.08s+0.03b=2840 \end{cases}</mrow></md></p>
 
@@ -1311,7 +1315,7 @@
                     <mrow>2624+216=2840\text{ ?  Yes!}</mrow>
                     </md></p>
 
-            <p><em>Answer</em> the question. Adrian should invest <m>\$32{,}800</m> in the stock fund and <m>\$7200</m> in bonds.</p>
+            <p><em>Answer</em> the question. Adrian invested <m>\$32{,}800</m> in the stock fund and <m>\$7200</m> in bonds.</p>
         </example>
 
 
