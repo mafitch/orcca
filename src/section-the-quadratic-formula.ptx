@@ -124,6 +124,31 @@
             </solution>
         </example>
 
+        <p>Sometimes, it may not be immediately apparent that you will need to solve a quadratic equation when first attempting a problem, as will be demonstrated in the next example.</p>
+
+        <example xml:id="example-solve-rational-equation-drug-injection-algebraically">
+            <statement>
+                <p>Solve <m>C(t)=0.35</m>, where <m>C(t)=\frac{3t}{t^2+8}</m> gives a drug's concentration in milligrams per liter <m>t</m> hours since an injection. (This function was explored in the introduction of <xref ref="section-rational-functions">Section</xref>.)</p>
+            </statement>
+            <solution>
+                <p>To solve <m>C(t)=0.35</m>, we'll begin by setting up <m>\frac{3t}{t^2+8}=0.35</m>. We'll begin by identifying that the LCD is <m>t^2+8</m>, and multiply each side of the equation by this:
+                <md>
+                    <mrow>\frac{3t}{t^2+8}\amp=0.35</mrow>
+                    <mrow>\frac{3t}{\highlight{\cancel{t^2+8}}}\multiplyright{\highlight{\cancel{\left(t^2+8\right)}}}\amp=0.35\multiplyright{\left(t^2+8\right)}</mrow>
+                    <mrow>3t\amp=0.35\left(t^2+8\right)</mrow>
+                    <mrow>3t\amp=0.35t^2+2.8</mrow>
+                </md>
+                    This results in a quadratic equation so we will put it in standard form and use the quadratic formula:
+                <md>
+                    <mrow>0\amp=0.35t^2-3t+2.8</mrow>
+                    <mrow>t\amp=\frac{-(-3)\pm \sqrt{(-3)^2-4(0.35)(2.8)}}{2(0.35)}</mrow>
+                    <mrow>t\amp=\frac{3\pm \sqrt{5.08}}{0.7}</mrow>
+                    <mrow>t\amp\approx 1.066 \text{ or } t\approx 7.506</mrow>
+                </md>Each of these answers should be checked in the original equation; they both work. In context, this means that the drug concentration will reach <m>0.35</m> milligrams per liter about <m>1.066</m> hours after the injection was given, and again <m>7.506</m> hours after the injection was given.
+                </p>
+            </solution>
+        </example>
+
         <remark><p>The irrational solutions to quadratic equations can be checked, although doing so can sometimes involve a lot of simplification and is not shown throughout this section. As an example, to check the solution of <m>-5+\sqrt{22}</m> from <xref ref="example-solve-quadratic-equation-using-quadratic-formula">Example</xref>, we would replace <m>x</m> with <m>-5+\sqrt{22}</m> and check that the two sides of the equation are equal. This check is shown here:
         <md>
             <mrow>x^2\amp=-10x-3</mrow>
