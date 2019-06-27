@@ -19,50 +19,7 @@
     <subsection>
         <title>Solving Systems of Equations by Elimination</title><idx><h>solving</h><h>system of linear equations</h><h>elimination method</h></idx><idx>elimination method for solving systems of linear equations</idx><idx><h>addition method for solving systems of linear equations</h><see>elimination method for solving systems of linear equations</see></idx>
 
-        <example xml:id="example-system-of-equations-elimination-intro">
-            <p>Alicia has <m>\$1000</m> to give to her two grandchildren for New Year's. She would like to give the older grandchild <m>\$120</m> more than the younger grandchild, because that is the cost of the older grandchild's college textbooks this term.  How much money should she give to each grandchild?</p>
-
-            <solution><p>To answer this question, we will demonstrate a new technique. You may have a very good way for finding how much money Alicia should give to each grandchild, but right now we will try to see this new method.</p>
-
-            <p>Let <m>A</m> be the dollar amount she gives to her older grandchild, and <m>B</m> be the dollar amount she gives to her younger grandchild. (As always, we start solving a word problem like this by defining the variables, including their units.) Since the total she has to give is <m>\$1000</m>, we can say that <m>A+B=1000</m>. And since she wants to give <m>\$120</m> more to the older grandchild, we can say that <m>A-B=120</m>. So we have the system of equations:<md>
-                <mrow>
-                    \left\{
-                        \begin{aligned}
-                            A+B \amp = 1000 \\
-                            A-B \amp = 120
-                        \end{aligned}
-                    \right.
-                </mrow>
-            </md></p>
-
-            <p>We could solve this system by substitution as we learned in <xref ref="section-substitution">Section</xref>, but there is an easier method. If we add together the <em>left</em> sides from the two equations, it should equal the sum of the <em>right</em> sides:<md>
-                <mrow>\begin{aligned}A+B\\{}+A-B\end{aligned}\amp=\begin{aligned}1000\\{}+120\end{aligned}</mrow>
-                <intertext>So we have:</intertext>
-                <mrow>2A\amp=1120</mrow>
-            </md></p>
-
-            <p>Note that the variable <m>B</m> is eliminated. This happened because the <q><m>{}+B</m></q> and the <q><m>{}-B</m></q> were perfectly in shape to cancel each other out. With only one variable left, it doesn't take much to finish:<md>
-                <mrow>2A\amp=1120</mrow>
-                <!-- <mrow>\divideunder{2A}{2}\amp=\divideunder{1120}{2}</mrow> -->
-                <mrow>A\amp=560</mrow>
-            </md></p>
-
-            <p>To finish solving this system of equations, we need the value of <m>B</m>. For now, an easy way to find <m>B</m> is to substitute in our value of <m>A</m> into one of the original equations:<md>
-                <mrow>A+B\amp=1000</mrow>
-                <mrow>\substitute{560}+B\amp=1000</mrow>
-                <!-- <mrow>560+B\subtractright{560}\amp=1000\subtractright{560}</mrow> -->
-                <mrow>B\amp=440</mrow>
-            </md>To check our work, substitute <m>A=560</m> and <m>B=440</m> into the original equations:<md>
-                <mrow>A+B\amp=1000\amp A-B\amp=120</mrow>
-                <mrow>\substitute{560}+\substitute{440}\amp\stackrel{?}{=}1000\amp \substitute{560}-\substitute{440}\amp\stackrel{?}{=}120</mrow>
-                <mrow>1000\amp\stackrel{\checkmark}{=}1000\amp 120\amp\stackrel{\checkmark}{=}120</mrow>
-            </md></p>
-            <p>This confirms that our solution is correct. In summary, Alicia should give <m>\$560</m> to her older grandchild, and <m>\$440</m> to her younger grandchild.</p></solution>
-        </example>
-
-        <p>This method for solving the system of equations in <xref ref="example-system-of-equations-elimination-intro">Example</xref> worked because <m>B</m> and <m>-B</m> add to zero. Once the <m>B</m>-terms were eliminated we were able to solve for <m>A</m>. This method is called the <term>elimination method</term>. Some textbooks call it the <term>addition method</term>, because we added the corresponding sides from the two equations to eliminate a variable.</p>
-
-        <p>If neither variable can be immediately eliminated, we can still use this method, but it will require that we first adjust one or both of the equations. Let's look at an example where we need to adjust one of the equations.</p>
+        
 
         <example xml:id="example-system-of-equations-elimination-intro-scale-one-equation">
             <title>Scaling One Equation</title>
@@ -131,42 +88,33 @@
         <p>Try a similar exercise.</p>
 
         <exercise>
+            <webwork>
+                <setup>
+                    <pg-code>
+                        Context("Point");
+                    </pg-code>
+                </setup>
             <statement><p>Solve the system of equations using the elimination method.
-                    <md>
-                    <mrow>
-                        \left\{
-                            \begin{alignedat}{4}
-                            2x\amp {}-{} \amp 6y \amp {}={} \amp 54 \\
-                            3x\amp {}+{} \amp 2y \amp {}={} \amp -7
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    </md>
+                    <me>
+                        \begin{cases} 2x - 6y = 54 \\ 3x + 2y = -7 \end{cases}
+                    </me>
                 </p>
+                <p>The solution is the point <var name="'(3,-8)'" width="10" />.</p>
             </statement>
             <solution>
                 <p>To start, we want to see whether it will be easier to eliminate <m>x</m> or <m>y</m>. We see that the coefficients of <m>x</m> in each equation are <m>2</m> and <m>3</m>, and the coefficients of <m>y</m> are <m>-6</m> and <m>2</m>. Because <m>6</m> is a multiple of <m>2</m> and the coefficients already have opposite signs, the <m>y</m> variable will be easier to eliminate.</p>
 
                 <p>To eliminate the <m>y</m> terms, we will multiply each side of the second equation by <m>3</m> so that we will have <m>6y</m>. We can call this process <term>scaling</term> the second equation by <m>3</m>.<md>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            2x\amp {}-{} \amp 6y \amp {}={} \amp 54\\
-                            \multiplyleft{3}(3x\amp {}+{} \amp 2y) \amp {}={} \amp \multiplyleft{3}(-7)
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            2x\amp {}-{} \amp 6y \amp {}={} \amp 54\\
-                            9x\amp {}+{} \amp 6y \amp {}={} \amp -21
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                </md>We now have an equivalent system of equations where the <m>y</m>-terms can be eliminated:<md>
-                    <mrow>\begin{aligned}2x-6y\\{}+9x+6y\end{aligned}\amp=\begin{aligned}54\\{}+(-21)\end{aligned}</mrow>
-                    <intertext>So we have:</intertext>
+                            <mrow>2x-6y=54</mrow>
+                            <mrow>3\left({3x+2y}\right)=3\left({-7}\right)</mrow>
+                            </md>
+                Which gives us <md>
+                            <mrow>2x-6y=54</mrow>
+                            <mrow>9x+6y=-21</mrow>
+                            </md>
+                We now have an equivalent system of equations where the <m>y</m>-terms can be eliminated:<md>
+                    <mrow>\begin{aligned}2x-6y\\{}+9x+6y\end{aligned}\amp=\begin{aligned}54\\{}+(-21)\end{aligned}</mrow></md>
+                    So we have:<md>
                     <mrow>11x\amp=33</mrow>
                     <!-- <mrow>\divideunder{11x}{11}\amp=\divideunder{22}{11}</mrow> -->
                     <mrow>x\amp=3</mrow>
@@ -184,6 +132,7 @@
                 <p>Our solution is <m>x=3</m> and <m>y=-8</m>, or the point <m>(3,-8)</m>. The checking step is left up to the reader.
                 </p>
             </solution>
+        </webwork>
 
         </exercise>
 
@@ -194,16 +143,9 @@
             <title>Scaling Both Equations</title>
             <statement>
                 <p>Solve the system of equations using the elimination method.
-                    <md>
-                        <mrow>
-                            \left\{
-                                \begin{alignedat}{4}
-                                2x \amp {}+{} \amp  3y \amp {}={} \amp 10 \\
-                                -3x \amp {}+{} \amp  5y \amp {}={} \amp {-15}
-                                \end{alignedat}
-                            \right.
-                        </mrow>
-                    </md>
+                    <me>
+                        \begin{cases} 2x + 3y = 10 \\ -3x + 5y = -15 \end{cases}
+                    </me>
                 </p>
             </statement>
             <solution>
@@ -257,47 +199,37 @@
         <p>Try a similar exercise.</p>
 
         <exercise>
+            <webwork>
+                <setup>
+                    <pg-code>
+                        Context("Point");
+                    </pg-code>
+                </setup>
              <statement>
                 <p>Solve the system of equations using the elimination method.
-                    <md>
-                        <mrow>
-                            \left\{
-                                \begin{alignedat}{4}
-                                5x \amp {}+{} \amp  2y \amp {}={} \amp 16 \\
-                                3x \amp {}-{} \amp  5y \amp {}={} \amp 22
-                                \end{alignedat}
-                            \right.
-                        </mrow>
-                    </md>
+                    <me>
+                        \begin{cases} 5x + 2y = 16 \\ 3x - 5y = 22 \end{cases}
+                    </me>
                 </p>
+                <p>The solution is the point <var name="'(4,-2)'" width="10" />.</p>
             </statement>
             <solution>
                 <p>Considering the coefficients of <m>x</m> (<m>5</m> and <m>3</m>) and the coefficients of <m>y</m> (<m>2</m> and <m>-5</m>), we see that we cannot eliminate the <m>x</m> or the <m>y</m> variable by scaling a single equation. We will need to scale <em>both</em>.</p>
 
                 <p>The <m>y</m>-terms already have opposite signs, so we choose to eliminate <m>y</m>. The least common multiple of <m>2</m> and <m>5</m> is <m>10</m>. We can scale the first equation by <m>5</m> and the second equation by <m>2</m> so that the equations have terms <m>10y</m> and <m>-10y</m>, which will cancel when added.<md>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            \multiplyleft{5}(5x\amp {}+{} \amp 2y) \amp {}={}\amp \multiplyleft{5}(16) \\
-                            \multiplyleft{2}(3x\amp {}-{} \amp 5y) \amp {}={}\amp \multiplyleft{2}(22)
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            25x\amp {}+{} \amp 10y \amp {}={} \amp 80 \\
-                            6x\amp {}-{} \amp 10y \amp {}={} \amp {44}
-                            \end{alignedat}
-                        \right.
-                    </mrow>
+                    <mrow>5\left({5x+2y}\right)=5\left({16}\right)</mrow>
+                    <mrow>2\left({3x-5y}\right)=2\left({22}\right)</mrow>
+                    </md>
+                Which gives us <md>
+                    <mrow>25x+10y=80</mrow>
+                    <mrow>6x-10y=44</mrow>
                 </md></p>
                 <p>At this point we can add the corresponding sides from the two equations and solve for <m>x</m>:<md>
-                    <mrow>\begin{aligned}25x+10y\\{}6x-10y\end{aligned}\amp=\begin{aligned}80\\{}+44\end{aligned}</mrow>
-                    <intertext>So we have:</intertext>
-                    <mrow>31x\amp=124</mrow>
+                    <mrow>\begin{aligned}25x+10y\\{}6x-10y\end{aligned}\amp=\begin{aligned}80\\{}+44\end{aligned}</mrow></md>
+                So we have: <md>
+                    <mrow>31x=124</mrow>
                     <!-- <mrow>\divideunder{19y}{19}\amp=\divideunder{0}{19}</mrow> -->
-                    <mrow>x\amp=4</mrow>
+                    <mrow>x=4</mrow>
                 </md></p>
 
                 <p>To solve for <m>y</m>, we'll replace <m>x</m> with <m>4</m> in <m>5x+2y=16</m>:
@@ -313,20 +245,21 @@
                 <p>So the system's solution is <m>(4,-2)</m> and the solution set is <m>\{(4,-2)\}</m>. The check is left up to the reader.
                 </p>
             </solution>
+        </webwork>
         </exercise>
 
        <p>Here is another example where we need to scale both equations.</p>
         <example>
             <statement>
                 <p>Solve the system using elimination.
-                    <me>
+                    <md><mrow>
                         \left\{
                             \begin{alignedat}{4}
                             4x\amp {}-{} \amp 6y \amp {}={} \amp 13 \\
                             5x\amp {}+{} \amp 4y \amp {}={} \amp -1 \\
                             \end{alignedat}
                         \right.
-                    </me>
+                    </mrow></md>
                 </p>
             </statement>
             <solution>
