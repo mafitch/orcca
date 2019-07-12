@@ -93,8 +93,8 @@
 %
 %  subtractright (subtract to the right)
 %  Usage: x+1\subtractright{1}\amp=1\subtractright{1}
-\newcommand{\subtractright}[1]{{\color{blue}{\raise -1pc \hbox{${}-#1$}}}}
-<!-- \newcommand{\subtractright}[1]{{\color{blue}{{{}-#1}}}} -->
+<!-- \newcommand{\subtractright}[1]{{\color{blue}{\raise -1pc \hbox{${}-#1$}}}} -->
+\newcommand{\subtractright}[1]{{\color{blue}{{{}-#1}}}}
 
 %
 %
@@ -139,8 +139,8 @@
 %
 %  thirdcancel (draw attention to when a factor is canceled
 %    using color and a slash style)
-%  Usage: \frac{(x+1)thirdcancel{(x+2)}{thirdcancel{(x+2)}}}
-\newcommand{thirdcancel}[1]{{\color{green}{{\xcancel{#1}}}}}
+%  Usage: \frac{(x+1)\thirdcancel{(x+2)}{\thirdcancel{(x+2)}}}
+\newcommand{\thirdcancel}[1]{{\color{magenta}{{\xcancel{#1}}}}}
 
 %  cancelhighlightg (draw attention (in green) to when a factor is canceled)
 %  Usage: \frac{(x+1)\cancelhighlightg{(x+2)}{\cancelhighlightg{(x+2)}}}
