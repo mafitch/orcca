@@ -396,6 +396,124 @@
         <exercise>
                 <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication10.pg" seed="5" />
         </exercise>
+
+        <p>Let's look at a couple more examples</p>
+
+        <example xml:id="example-solving-system-of-equations-student-demographics">
+            <statement>
+                <p>A college used to have a north campus with <m>6000</m> students and a south campus with <m>15{,}000</m> students. The percentage of students at the north campus who self-identify as LGBTQ was three times the percentage at the south campus. After the merge, <m>5.5\%</m> of students identify as LGBTQ. What percentage of students on each campus identified as LGBTQ before the merge?</p>
+            </statement>
+            <solution>
+                <p>We will define <m>N</m> as the percentage (as a decimal) of students at the north campus and <m>S</m> as the percentage (as a decimal) of students at the south campus that identified as LGBTQ. Since the percentage of students at the north campus was three times the percentage at the south campus, we have:
+                    <me>N=3S</me>
+                For our second equation, we will count LGBTQ students at the various campuses. At the north campus, multiply the population, <m>6000</m>, by the percentage <m>N</m> to get <m>6000N</m>. This must be the actual number of LGBTQ students. Similarly, the south campus has <m>15000S</m> LGBTQ students, and the combined school has <m>21000(0.055)=1155</m>. When we combine the two campuses, we have:
+                    <me>6000N+15000S=1155</me>
+                We write the system as:
+                    <me>
+                        \left\{
+                            \begin{aligned}
+                            N\amp=3S \\
+                            6000N+15000S\amp=1155
+                            \end{aligned}
+                        \right.
+                    </me>
+                </p>
+                <p>Because the first equation is already solved for <m>N</m>, this is a good time to use the subsitution method. We can substitute <m>N</m> in our second equation with <m>3S</m> and solve for <m>S</m>:
+                    <md>
+                        <mrow>6000N+15000S\amp=1155</mrow>
+                        <mrow>6000(\substitute{3S})+15000S\amp=1155</mrow>
+                        <mrow>18000S+15000S\amp=1155</mrow>
+                        <mrow>33000S\amp=1155</mrow>
+                        <mrow>\divideunder{33000S}{33000}\amp=\divideunder{1155}{33000}</mrow>
+                        <mrow>S\amp=0.035</mrow>
+                    </md>
+                </p>
+                <p>We can determine <m>N</m> using the first equation:
+                    <md>
+                        <mrow>N\amp=3S</mrow>
+                        <mrow>N\amp=3(0.035)</mrow>
+                        <mrow>N\amp=0.105</mrow>
+                    </md>
+                </p>
+                <p>Before the merge, <m>10.5\%</m> of the north campus students self-identified as LGBTQ, and <m>3.5\%</m> of the south campus students self-identified as LGBTQ.</p>
+            </solution>
+        </example>
+
+        <example>
+            <title>Meal Planning</title>
+            <statement>
+                <p>Javed is on a meal plan and needs to consume <m>600</m> calories and <m>20</m> grams of fat for breakfast. A small avocado contains <m>300</m> calories and <m>30</m> grams of fat. He has bagels that contain <m>400</m> calories and <m>8</m> grams of fat. Write and solve a system of equations to determine how much bagel and avocado would combine to make his target calories and fat.</p>
+            </statement>
+            <solution>
+                <p>To write this system of equations, we first need to define our variables. Let <m>A</m> be the number of avocados consumed and let <m>B</m> be the number of bagels consumed. Both <m>A</m> and <m>B</m> might be fractions. For our first equation, we will count calories from the avocados and bagels:
+                    <me>\left(300\,\tfrac{\text{calories}}{\text{avocado}}\right)(A\,\text{avocados})+\left(400\,\tfrac{\text{calories}}{\text{bagel}}\right)(B\,\text{bagel})=600\,\text{calories}</me>
+                Or, without the units:
+                    <me>300A+400B=600</me>
+                Similarly, for our second equation, we will count the grams of fat:
+                    <me>\left(30\,\tfrac{\text{g fat}}{\text{avocado}}\right)(A\,\text{avocados})+\left(8\,\tfrac{\text{g fat}}{\text{bagel}}\right)(B\,\text{bagel})=20\,\text{g fat}</me>
+                Or, without the units:
+                    <me>30A+8B=20</me>
+                So the system of equations is:
+                    <md>
+                        <mrow>
+                            \left\{
+                                \begin{alignedat}{4}
+                                300A \amp {}+{} \amp  400B \amp {}={} \amp 600 \\
+                                30A \amp {}+{} \amp  8B \amp {}={} \amp 20
+                                \end{alignedat}
+                            \right.
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>Since none of the coefficients are equal to <m>1</m>, it will be easier to use the elimination method to solve this system. Looking at the terms <m>300A</m> and <m>30A</m>, we can eliminate the <m>A</m> variable if we multiply the second equation by <m>-10</m> to get <m>-300A</m>:<md>
+                    <mrow>
+                        \amp\left\{
+                            \begin{alignedat}{4}
+                            300A \amp {}+{} \amp 400B \amp {}={} 600 \\
+                            \multiplyleft{-10}(30A \amp {}+{} \amp 8B) \amp {}={} \multiplyleft{-10}(20)
+                            \end{alignedat}
+                        \right.
+                    </mrow>
+                    <mrow>
+                        \amp\left\{
+                            \begin{alignedat}{4}
+                            300A \amp {}+{} \amp 400B \amp {}={}\amp 600 \\
+                            -300A \amp {}+{} \amp (-80B) \amp {}={}\amp {-200}
+                            \end{alignedat}
+                        \right.
+                    </mrow>
+                </md>
+                When we add the corresponding sides from the two equations together we have:<md>
+                    <mrow>\begin{aligned}300A+400B\\{}-300A-80B\end{aligned}\amp=\begin{aligned}600\\{}-200\end{aligned}</mrow>
+                    <intertext>So we have:</intertext>
+                    <mrow>320B\amp=400</mrow>
+                    <mrow>\divideunder{320B}{320}\amp=\divideunder{400}{320}</mrow>
+                    <mrow>B\amp=\frac{5}{4}</mrow>
+                </md></p>
+
+                <p>We now know that Javed should eat <m>\frac{5}{4}</m> bagels (or one and one-quarter bagels). To determine the number of avocados, we will substitute <m>B</m> with <m>\frac{5}{4}</m> in either of our original equations.
+                    <md>
+                        <mrow>300A+400B\amp=600</mrow>
+                        <mrow>300A+400\left(\substitute{\frac{5}{4}}\right)\amp=600</mrow>
+                        <mrow>300A+500\amp=600</mrow>
+                        <!-- <mrow>300A+500\subtractright{500}\amp=600\subtractright{500}</mrow> -->
+                        <mrow>300A\amp=100</mrow>
+                        <mrow>\divideunder{300A}{300}\amp=\divideunder{100}{300}</mrow>
+                        <mrow>A\amp=\frac{1}{3}</mrow>
+                    </md>
+                </p>
+                <p>To check this result, try using <m>B=\frac{5}{4}</m> and <m>A=\frac{1}{3}</m> in each of the original equations:
+                    <md>
+                        <mrow>300A+400B\amp=600\amp 30A+8B\amp=20</mrow>
+                        <mrow>300\left(\substitute{\frac{1}{3}}\right)+400\left(\substitute{\frac{5}{4}}\right)\amp\stackrel{?}{=}600\amp30\left(\substitute{\frac{1}{3}}\right)+8\left(\substitute{\frac{5}{4}}\right)\amp\stackrel{?}{=}20</mrow>
+                        <mrow>100+500\amp\stackrel{\checkmark}{=}600\amp10+10\amp\stackrel{\checkmark}{=}20</mrow>
+                    </md>
+                </p>
+                <p>In summary, Javed can eat <m>\frac{5}{4}</m> of a bagel (so one and one-quarter bagel) and <m>\frac{1}{3}</m> of an avocado in order to consume exactly <m>600</m> calories and <m>20</m> grams of fat.</p>
+            </solution>
+        </example>
+
     </subsection>
 
     <subsection><title>Geometry Applications</title>
@@ -728,7 +846,7 @@
 
             <p>Now solve the system of equations, either by substitution or elimination. This system, lends itself easily to substitution since <m>s</m> is already isolated in the second equation. Thus, we can substitute the expression <m>c-\frac{1}{4}</m> in place of <m>s</m> in the first equation:
             <md>
-                <mrow>36c=48(\substitute{c-\frac{1}{4}})</mrow>
+                <mrow>36c=48\left(\substitute{c-\frac{1}{4}}\right)</mrow>
                 <mrow>36c=48c-12</mrow>
                 <mrow>-12c=-12</mrow>
                 <mrow>c=1</mrow>
@@ -859,8 +977,8 @@
 
             <p>Multiply both sides of the first equation by <m>3</m> and both sides of the second equation by <m>4</m>:<md>
 
-                    <mrow>3(4b-4c)=3(24)</mrow>
-                    <mrow>4(3b+3c)=4(24)</mrow>
+                    <mrow>\multiplyleft{3}(4b-4c)=\multiplyleft{3}(24)</mrow>
+                    <mrow>\multiplyleft{4}(3b+3c)=\multiplyleft{4}(24)</mrow>
                     </md></p>
 
             <p>Now, our new system is:
@@ -905,7 +1023,7 @@
             <p><em>Translate</em> into a system of equations. To make the system of equations, we use the fact that the product of the rate and the time is equal to the distance for each trip. This will give us our two equations, making up our system: 
 
                 <me>\begin{cases}
-                        3(j+w)=1095\\3(j-w)=987
+                        \multiplyleft{3}(j+w)=1095\\\multiplyleft{3}(j-w)=987
                         \end{cases}
                 </me></p>
 
@@ -959,7 +1077,7 @@
             <p><em>Translate</em> into a system of equations. To make the system of equations, we use the fact that the product of the rate and the time is equal to the distance for each trip, which are <m>1728</m> miles and <m>1536</m> miles, respectively. This will give us our two equations, making up our system: 
 
                 <me>\begin{cases}
-                        4(j+w)=1728\\4(j-w)=1536
+                        \multiplyleft{4}(j+w)=1728\\\multiplyleft{4}(j-w)=1536
                         \end{cases}
                 </me></p>
 
@@ -1017,7 +1135,7 @@
             <p><em>Solve</em> the system of equations. We will use elimination to solve the system.</p>
 
             <p>Multiply the first equation by <m>-2</m> to eliminate <m>c</m>.<md>
-                    <mrow>-2(n+c)=-2(20)</mrow>
+                    <mrow>\multiplyleft{-2}(n+c)=\multiplyleft{-2}(20)</mrow>
                     <mrow>9n+2c=152</mrow></md></p>
            
             <p>Simplify and add. Then solve for n.<md>
@@ -1086,7 +1204,7 @@
             <p><em>Solve</em> the system of equations. We will use elimination.</p>
 
             <p>Multiply the first equation by <m>-4</m> to eliminate <m>p</m>.<md>
-                    <mrow>-4(p+c)=-4(5)</mrow>
+                    <mrow>\multiplyleft{-4}(p+c)=\multiplyleft{-4}(5)</mrow>
                     <mrow>4p+9c=30</mrow></md></p>
            
             <p>Simplify and add. Then solve for c.<md>
@@ -1386,7 +1504,7 @@
 
     <exercises>
         <exercisegroup>
-            <exercise>
+           1 <exercise>
                 <webwork>
                     <pg-macros>
                         <macro-file>contextTypeset.pl</macro-file>
@@ -1455,43 +1573,48 @@
                     </statement>
                 </webwork>
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution05.pg" />
-            </exercise>
-            <exercise>
+
+            <!-- Direct translation -->
+           
+           3 <exercise>
                 <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution20.pg" />
             </exercise>
-            <exercise>
+           4 <exercise>
                 <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication80.pg" />
             </exercise>
-            <exercise>
+           5 <exercise>
                 <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication90.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution05.pg" seed="3"/>
-            </exercise>
-            <exercise>
+            7 <exercise>
                 <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution10.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution60.pg" />
+             25  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication10.pg" />
             </exercise>
-            <exercise>
-                <webwork source="Library/Mizzou/Algebra/eqns_systems_apps/app_systems_02.pg" seed="2"/>
+             28  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication60.pg" />
             </exercise>
-            <exercise>
-                <webwork source="Library/PCC/BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication100.pg" />
+          29  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication70.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem10.pg" />
+          30  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication80.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/MixedCoffeeProblem20.pg" seed="2"/>
+          31  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication90.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem20.pg" />
+            33  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/systemsWord0.pg" />
             </exercise>
-            <exercise>
+
+            <!-- Geometry applications -->
+            2 <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution05.pg" />
+            </exercise>
+           6 <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution05.pg" seed="3"/>
+            </exercise>
+            14 <exercise>
                 <webwork>
                     <pg-macros>
                         <macro-file>contextNumeric.pl</macro-file>
@@ -1504,43 +1627,98 @@
                         </pg-code>
                     </setup>
 
-                <statement><p>The measure of the larger angle is <m>6</m> degrees more than twice the smaller angle. Find the measures of the angles.</p>
+                <statement><p>Two angles are complementary. The measure of the larger angle is <m>6</m> degrees more than twice the smaller angle. Find the measures of the angles.</p>
 
                 <p>The measure of the larger angle is <var name="$answer1" width="5"/> degrees and the measure of the smaller angle is <var name="$answer2" width="5"/> degrees.</p>
                 </statement>
                 </webwork>
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem30.pg" />
+           15 <exercise>
+                <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem40.pg" />
+           16 <exercise>
+                <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg" />
             </exercise>
-            <exercise>
+          17  <exercise>
+                <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg" />
+            </exercise>
+
+            <!-- Uniform Motion -->
+           
+           9 <exercise>
+                <webwork source="Library/Mizzou/Algebra/eqns_systems_apps/app_systems_02.pg" seed="2"/>
+            </exercise>
+            10 <exercise>
+                <webwork source="Library/PCC/BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication100.pg" />
+            </exercise>
+            20  <exercise>
                 <webwork source="Library/Mizzou/Algebra/eqns_systems_apps/app_systems_02.pg" seed="5"/>
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem50.pg" />
+            32  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication100.pg" />
             </exercise>
-             <exercise>
+
+
+            <!-- Mixture -->
+
+            8 <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution60.pg" />
+            </exercise>
+            12 <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/MixedCoffeeProblem20.pg" seed="2"/>
+            </exercise>
+            22   <exercise>
                 <webwork source="BasicAlgebra/LinearEquationApplications/MixedSolutionWordProblem20.pg" />
             </exercise>
-            <exercise>
+          23  <exercise>
                 <webwork source="BasicAlgebra/LinearEquationApplications/MixedSolutionWordProblem20.pg" seed="2"/>
             </exercise>
-            <exercise>
+          24  <exercise>
                 <webwork source="BasicAlgebra/LinearEquationApplications/MixedCoffeeProblem20.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/MixedPopulationWordProblem10.pg" />
+            27  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication50.pg" />
             </exercise>
+           
+
+
+            <!-- Interest -->
+
+           11 <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem10.pg" />
+            </exercise>
+            13 <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem20.pg" />
+            </exercise>
+           
+           
+          18  <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem30.pg" />
+            </exercise>
+          19  <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem40.pg" />
+            </exercise>
+          
+          21  <exercise>
+                <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem50.pg" />
+            </exercise>
+         
+          26  <exercise>
+                <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication20.pg" />
+            </exercise>
+           
+            
+          
+         
+          
+          
             
         </exercisegroup>
     </exercises>
 
     <conclusion>
     <p>
-      This section is adapted from
+      Some of this section is adapted from
       <pubtitle>Solve Applications with Systems of Equations</pubtitle><fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:a81syPh0@1/Solve-Applications-with-Systems-of-Equations" /></fn>
       and <pubtitle>Solve Mixture Applications with Systems of Equations</pubtitle><fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:jjvYxwLr@1/Solve-Mixture-Applications-with-Systems-of-Equations" /></fn>
       by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn><url href="http://creativecommons.org/licenses/by/4.0" /></fn>
