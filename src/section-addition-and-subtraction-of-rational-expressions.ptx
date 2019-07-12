@@ -21,16 +21,16 @@
 
         <example xml:id="example-boat-river-rational-function">
 
-            <p>Julia is taking her family on a boat trip <m>12</m> miles down the river and back. The river flows at a speed of <m>2</m> miles per hour and she wants to drive the boat at a constant speed, <m>v</m> miles per hour downstream and back upstream. Due to the current of the river, the actual speed of travel is <m>v+2</m> miles per hour going downstream, and <m>v-2</m> miles per hour going upstream.</p>
+            <p>Julia is taking her family on a boat trip <m>12</m> miles down the river and back. The river flows at a speed of <m>2</m> miles per hour and she wants to drive the boat at a constant speed, <m>b</m> miles per hour downstream and back upstream. As explained in <xref ref="figure-downstream">Figure</xref> and <xref ref="figure-upstream">Figure</xref>, due to the current of the river, the actual speed of travel is <m>b+2</m> miles per hour going downstream, and <m>b-2</m> miles per hour going upstream.</p>
 
 <!-- TODO: Add xref  -->
-            <p>We need to review three forms of the formula for movement at a constant rate:<md>
-                <mrow>d\amp=vt\amp v\amp=\frac{d}{t}\amp t\amp=\frac{d}{v}</mrow>
+            <p>We need to review three forms of the formula for movement at a constant, or uniform, rate:<md>
+                <mrow>d\amp=rt\amp r\amp=\frac{d}{t}\amp t\amp=\frac{d}{r}</mrow>
 
-            </md>where <m>d</m> stands for distance, <m>v</m> represents speed, and <m>t</m> stands for time. According to the third form, the time it takes the boat to travel downstream is <m>\frac{12}{v+2}</m>.</p> 
+            </md>where <m>d</m> stands for distance, <m>r</m> represents speed, and <m>t</m> stands for time. According to the third form, the time it takes the boat to travel downstream is <m>\frac{12}{b+2}</m>, and the time it takes to get back upstream is <m>\frac{12}{b-2}</m>.</p> 
 
 
-        <p>The point of this section is to work with expressions like <m>\frac{12}{v-2}+\frac{12}{v+2}</m>, where two rational expressions are added (or subtracted). There are times when it is useful to combine them into a single fraction. We will learn that the expression <m>\frac{12}{v-2}+\frac{12}{v+2}</m> is equal to the expression <m>\frac{24v}{v^2-4}</m> and we will learn how to make that simplification.</p>
+        <p>The point of this section is to work with expressions like <m>\frac{12}{b-2}+\frac{12}{b+2}</m>, where two rational expressions are added (or subtracted). There are times when it is useful to combine them into a single fraction. We will learn that the expression <m>\frac{12}{b-2}+\frac{12}{b+2}</m> is equal to the expression <m>\frac{24b}{b^2-4}</m> and we will learn how to make that simplification.</p>
     </example>
 
 
@@ -211,18 +211,18 @@
         </example>
 
 
-        <p>Let's apply what we've learned so far to adding the two expressions with denominators that are <m>v-2</m> and <m>v+2</m> from <xref ref="example-boat-river-rational-function">Example</xref>.</p>
+        <p>Let's apply what we've learned so far to adding the two expressions with denominators that are <m>b-2</m> and <m>b+2</m> from <xref ref="example-boat-river-rational-function">Example</xref>.</p>
         <example>
             <statement>
-                <p>Add the rational expressions and fully simplify the function given by <m>t(v)=\frac{12}{v-2}+\frac{12}{v+2}</m>.</p>
+                <p>Add the rational expressions and fully simplify the function given by <m>t(b)=\frac{12}{b-2}+\frac{12}{b+2}</m>, where the function name, <m>t</m>, stands for time.</p>
             </statement>
-            <solution><p>Note that both denominators are factored completely and, when we follow the process of collecting factors to build the LCD, we obtain an LCD of <m>(v-2)(v+2)</m>. Next, we build each expression up to an equivalent rational expression that has the LCD as its denominator by multiplying both the numerator and denominator by the missing factor needed. Once we obtain common denominators, we are ready to add, as you can see below.</p>
+            <solution><p>Note that both denominators are factored completely and, when we follow the process of collecting factors to build the LCD, we obtain an LCD of <m>(b-2)(b+2)</m>. Next, we build each expression up to an equivalent rational expression that has the LCD as its denominator by multiplying both the numerator and denominator by the missing factor needed. Once we obtain common denominators, we are ready to add, as you can see below.</p>
                 <p><md>
-                    <mrow>t(v)\amp=\frac{12}{v-2}+\frac{12}{v+2}</mrow>
-                    <mrow>t(v)\amp=\frac{12}{v-2}\multiplyright{\frac{v+2}{v+2}}+\frac{12}{v+2}\multiplyright{\frac{v-2}{v-2}}</mrow>
-                    <mrow>t(v)\amp=\frac{12v+24}{(v-2)(v+2)}+\frac{12v-24}{(v+2)(v-2)}</mrow>
-                    <mrow>t(v)\amp=\frac{(12v+24)+(12v-24)}{(v+2)(v-2)}</mrow>
-                    <mrow>t(v)\amp=\frac{24v}{(v+2)(v-2)}</mrow>
+                    <mrow>t(b)\amp=\frac{12}{b-2}+\frac{12}{b+2}</mrow>
+                    <mrow>t(b)\amp=\frac{12}{b-2}\multiplyright{\frac{b+2}{b+2}}+\frac{12}{b+2}\multiplyright{\frac{b-2}{b-2}}</mrow>
+                    <mrow>t(b)\amp=\frac{12b+24}{(b-2)(b+2)}+\frac{12b-24}{(b+2)(b-2)}</mrow>
+                    <mrow>t(b)\amp=\frac{(12b+24)+(12b-24)}{(b+2)(b-2)}</mrow>
+                    <mrow>t(b)\amp=\frac{24b}{(b+2)(b-2)}</mrow>
                 </md></p>
             </solution>
         </example>
