@@ -14,293 +14,7 @@
   
   <introduction>
 
-        <p>In this section, we will explore quadratic functions and learn the vertex and factored forms of a parabola. We will also see how parabolas can be shifted horizontally and vertically.</p>
-
- 
-
-
-
-    
-
-<!--     <subsection>
-        <title>Exploring Quadratic Functions with Graphing Technology</title>
-
-        <p>Graphing technology is very important and useful for applications and for finding points quickly. Let's explore some quadratic functions with graphing technology.</p>
-
-        <example>
-            <statement>
-                <p>Use technology to graph and make a table of the quadratic function <m>f</m> defined by <m>f(x)=2x^2+4x-3</m> and find each of the key points or features.
-                <ol label="a." cols="2">
-                    <li><p>Find the vertex.</p></li>
-                    <li><p>Find the vertical intercept (<ie/><nbsp/><m>y</m>-intercept).</p></li>
-                    <li><p>Find the horizontal or (<ie/><nbsp/><m>x</m>-intercept(s)).</p></li>
-                    <li><p>Find <m>f(-2)</m>.</p></li>
-                    <li><p>Solve <m>f(x)=3</m> using the graph.</p></li>
-                    <li><p>Solve <m>f(x)\le 3</m> using the graph.</p></li>
-                    <! <li><p>Use technology to make a table of <m>y=f(x)</m> with <m>x</m>-values from <m>-4</m> to <m>1</m>, using an increment of <m>1</m>. Use the table to solve <m>f(x)=-3</m>.</p></li> -->
-                   <!--  <li><p>State the domain and range of the function.</p></li>
-                </ol></p>
-            </statement>
-            <solution>
-                <sidebyside widths="32% 15% 47%">
-                    <p>The specifics of how to use any one particular technology tool vary. Whether you use an app, a physical calculator, or something else, a table and graph should look like:</p>
-
-                    <tabular halign="right">
-                        <row bottom="medium">
-                            <cell><m>x</m></cell>
-                            <cell><m>f(x)</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>-2</m></cell>
-                            <cell><m>-3</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>-1</m></cell>
-                            <cell><m>-5</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>0</m></cell>
-                            <cell><m>-3</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>1</m></cell>
-                            <cell><m>3</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>2</m></cell>
-                            <cell><m>13</m></cell>
-                        </row>
-                    </tabular>
-                    <image>
-                        <description>the graph of the parabola f(x)=2x^2+4x-3, that opens upward, passing through the points listed in the table</description>
-                        <latex-image>
-                        <![CDATA[\begin{tikzpicture}
-                            \begin{axis}
-                                \addplot+[domain=-3.449:1.449] {2*x^2+4*x-3};
-                            \end{axis}
-                        \end{tikzpicture}
-                        ]]>
-                        </latex-image>
-                    </image>
-                </sidebyside>
-
-                <sidebyside widths="47% 47%" margins="0%">
-
-                    <p>Additional features of your technology tool can enhance the graph to help answer these questions. You may be able to make the graph appear like:</p>
-
-                    <image>
-                        <description>the previous graph with all of the key points labeled as described below</description>
-                        <latex-image>
-                        <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[clip=false]
-                                \addplot [domain=-3.449:1.449, primarycurve] {2*x^2+4*x-3} node[below right] {$y=f(x)$};
-                                \addplot [domain=-7:7, secondarycurve] {3} node[above left] {$y=3$};
-                                \addplot [soliddot, color=thirdcolor] coordinates {(-1,-5)} node[below left] {$(-1,-5)$};
-                                \addplot [soliddot, color=fourthcolor] coordinates {(1,3)} node[above right] {$(1,3)$};
-                                \addplot [soliddot, color=fourthcolor] coordinates {(0,-3)} node[below right] {$(0,-3)$};
-                                \addplot [soliddot, color=fourthcolor] coordinates {(-3,3)} node[above left] {$(-3,3)$};
-                                \addplot [soliddot, color=fifthcolor] coordinates {(-2.581,0)} node[above left] {$(-2.6,0)$};
-                                \addplot [soliddot, color=fifthcolor] coordinates {(0.581,0)} node[above right] {$(0.6,0)$};
-                            \end{axis}
-                        \end{tikzpicture}
-                        ]]>
-                        </latex-image>
-                    </image>
-                </sidebyside>
-
-                <p><ol label="a.">
-                    <li>
-                        <p>The vertex is <m>(-1,-5)</m>.</p>
-                    </li>
-                    <li>
-                        <p>The vertical intercept is <m>(0,-3)</m>.</p>
-                    </li>
-                    <li>
-                        <p>The horizontal intercepts are approximately <m>(-2.6,0)</m> and <m>(0.6,0)</m>.</p>
-                    </li>
-                    <li>
-                        <p>When <m>x=-2</m>, <m>y=-3</m>, so <m>f(-2)=-3</m>.</p>
-                    </li>
-                    <li>
-                        <p>The solutions to <m>f(x)=3</m> are the <m>x</m>-values where <m>y=3</m>. We graph the horizontal line <m>y=3</m> and find the <m>x</m>-values where the graphs intersect. The solution set is <m>\{-3,1\}</m>.</p>
-                    </li>
-                    <li>
-
-                        <p>The solutions are all <m>x</m>-values where the function below (or touching) the line <m>y=3</m>. The interval is <m>[-3,1]</m>.</p>
-                    </li> -->
-
-                    <!-- <li>
-                        <p>To solve <m>f(x)=-3</m> using the table, we look for where the <m>y</m>-values are equal to <m>-3</m>. There are two solutions, <m>-2</m> and <m>0</m>. The solution set is <m>\{-2,0\}</m>.
-                        </p>
-                        <sidebyside>
-                            <tabular halign="right">
-                                <col right="major"/>
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <row bottom="minor">
-                                    <cell><m>x</m></cell>
-                                    <cell><m>-4</m></cell>
-                                    <cell><m>-3</m></cell>
-                                    <cell><m>-2</m></cell>
-                                    <cell><m>-1</m></cell>
-                                    <cell><m>0</m></cell>
-                                    <cell><m>1</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>f(x)</m></cell>
-                                    <cell><m>13</m></cell>
-                                    <cell><m>3</m></cell>
-                                    <cell><m>-3</m></cell>
-                                    <cell><m>-5</m></cell>
-                                    <cell><m>-3</m></cell>
-                                    <cell><m>3</m></cell>
-                                </row>
-                            </tabular>
-                        </sidebyside>
-                    </li> -->
-        <!--             <li><p>The domain is <m>(-\infty,\infty)</m> and the range is <m>[-5,\infty)</m>.</p></li>
-                </ol></p>
-            </solution>
-        </example>
-
-         <p>Now we will look at an application with graphing technology and put the points of interest in context.</p>
-
-        <example>
-            <statement>
-                <p>A <url href="https://en.wikipedia.org/wiki/Reduced-gravity_aircraft">reduced-gravity aircraft</url><fn><url href="https://en.wikipedia.org/wiki/Reduced-gravity_aircraft">en.wikipedia.org/wiki/Reduced-gravity<underscore />aircraft</url></fn> is a fixed-wing airplane that astronauts use for training. The airplane flies up and then down in a parabolic path to simulate the feeling of weightlessness. In one training flight, the pilot will fly <m>40</m> to <m>60</m> parabolic maneuvers.</p>
-
-                <p>For the first parabolic maneuver, the altitude of the plane, in feet, at time <m>t</m>, in seconds since the maneuver began, is given by <m>H(t)=-16t^2+400t+30500</m>.
-                    <ol label="a.">
-                        <li><p>Determine the starting altitude of the plane for the first maneuver.</p></li>
-
-                        <li><p>What is the altitude of the plane <m>10</m> seconds into the maneuver?</p></li>
-
-                        <li><p>Determine the maximum altitude of the plane and how long it takes to reach that altitude.</p></li>
-
-                        <li><p>The zero-gravity effect is experienced when the plane begins the parabolic path until it gets back down to <m>30{,}500</m> feet. Write an inequality to express this and solve it using the graph. Write the times of the zero-gravity effect as an interval and determine how long the astronauts experience weightlessness during each cycle.</p></li>
-
-                        <li><p>Use technology to make a table for <m>H</m> with <m>t</m>-values from <m>0</m> to <m>25</m> seconds. Use an increment of <m>5</m> seconds and then use the table to solve <m>H(t)=32100</m>.</p></li>
-
-                        <li><p>State the domain and range for this context.</p></li>
-                    </ol>
-                </p>
-            </statement>
-            <solution>
-                <p>We can answer the questions based on the information in the graph.</p>
-
-                    <figure>
-                        <caption>Graph of <m>H(t)=-16t^2+400t+30500</m> with <m>y=30500</m></caption>
-                            <image width="60%">
-                                <description>a graph of the parabola y=-16t^2+400t+30500 and the horizontal line y=30500; the parabola opens downward and has a maximum at (12.5, 33000)</description>
-                                <latex-image>
-                                    <![CDATA[\begin{tikzpicture}
-                                    \begin{axis}[
-                                        ymin=270,
-                                        ymax=350,
-                                        xmin=-5,
-                                        xmax=30,
-                                        xtick={0,5,...,25},
-                                        minor xtick={-5,0,...,30},
-                                        ytick={280,290,300,310,320,330,340},
-                                        yticklabels={28000,29000,30000,31000,32000,33000,34000},
-                                        minor ytick=,
-                                        xlabel={$t$},
-                                        clip=false,
-                                        axis y discontinuity=crunch]
-                                            \addplot [primarycurve, domain=-5:30, dashed, thin] {(-16*x^2+400*x+30500)/100} node[pos=0.9, left] {$y=H(t)$};
-                                            \addplot [primarycurve, domain=0:25, -] {(-16*x^2+400*x+30500)/100};
-                                            \addplot [secondarycurve, domain=-5:30] {305} node[pos=0.5, above] {$y=30500$};
-                                            \addplot [soliddot, color=thirdcolor] coordinates {(0,305)} node[below right] {$(0,30500)$};
-                                            \addplot [soliddot, color=thirdcolor] coordinates {(25,305)} node[below left] {$(25,30500)$};
-                                            \addplot [soliddot, color=fourthcolor] coordinates {(10,329)} node[above left] {$(10,32900)$};
-                                            \addplot [soliddot, color=fifthcolor] coordinates {(12.5,330)} node[above right] {$(12.5,34000)$};
-                                        \end{axis}
-                                    \end{tikzpicture}
-                                    ]]>
-                                </latex-image>
-                            </image>
-                        </figure>
-
-
-                <p><ol label="a.">
-                        <li><p>The starting altitude can be read from the vertical intercept, which is <m>(0,30500)</m>. The feeling of weightlessness begins at <m>30{,}500</m> feet.</p></li>
-
-                        <li><p>After <m>10</m> seconds, the altitude of the plane is <m>32{,}900</m> feet.</p></li>
-
-
-                        <li><p>For the maximum altitude of the plane we look at the vertex, which is approximately <m>(12.5, 33000)</m>. This tells us that, after <m>12.5</m> seconds the plane will be at its maximum altitude of <m>33,000</m> feet.</p></li>
-
-                        <li><p>We can write an inequality to describe when the plane is at or above <m>30{,}500</m> feet and solve it graphically.
-
-
-                        <li><p>We can write an inequality to describe when the plane is at or above <m>30{,}500</m> feet and solve it graphically.<md>
-                            <mrow>H(t)\amp\geq30500</mrow>
-                            <mrow>-16t^2+400t+30500\amp\geq30500</mrow>
-                        </md>.
-
-                        We graph the line <m>y=30500</m> and find the points of intersection with the parabola. The astronauts experience weightlessness from <m>0</m> seconds to <m>25</m> seconds into the maneuver, or <m>[0,25]</m> seconds. They experience weightlessness for 25 seconds in each cycle.</p></li>
-
-                        <li><p>To solve <m>H(t)=32100</m> using the table, we look for where the <m>H</m>-values are equal to <m>32100</m>.</p>
-                        <sidebyside>
-                            <tabular halign="right">
-                                <col right="major"/>
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <row bottom="minor">
-                                    <cell><m>t</m></cell>
-                                    <cell><m>0</m></cell>
-                                    <cell><m>5</m></cell>
-                                    <cell><m>10</m></cell>
-                                    <cell><m>15</m></cell>
-                                    <cell><m>20</m></cell>
-                                    <cell><m>25</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>H(t)</m></cell>
-                                    <cell><m>30500</m></cell>
-                                    <cell><m>32100</m></cell>
-                                    <cell><m>32900</m></cell>
-                                    <cell><m>32900</m></cell>
-                                    <cell><m>32100</m></cell>
-                                    <cell><m>30500</m></cell>
-                                </row>
-                            </tabular>
-                        </sidebyside>
-                        <p>There are two solutions, <m>5</m> seconds and <m>20</m> seconds. The solution set is <m>\{5,20\}</m>.</p>
-                    </li>
-
-                        <li><p>When we use graphing technology we see the entire function, but in this context the plane is only on a parabolic path from <m>[0,25]</m> seconds, which is the domain, and the range of <m>[30500,33000]</m> feet.</p></li>
-                    </ol>
-                </p>
-
-            </solution>
-        </example>
-
-        <p>Let's look at the remote-controlled airplane dive from <xref ref="example-remote-control-airplane-quadratic-application">Example</xref>. This time we will use technology to answer the questions.</p>
-
-
-
-
-<! TODO: This one could be interactive. I didn't fix graph issues -->
-<!-- At some future time this should be made interactive with something more advanced, like GeoGebra. To make this graph in WeBWorK, it would be too crude. -->
+        <p>In this section, we will explore quadratic functions and, in particular, their vertex and factored forms.</p>
 
         <example>
             <statement>
@@ -372,7 +86,7 @@
         <title>The Vertex Form of a Parabola</title>
         <p>We have learned the standard form of a quadratic function's formula, which is <m>f(x)=ax^2+bx+c</m>. In this subsection, we will learn another form called the <term>vertex form</term>.</p>
 
-        <p>Using graphing technology, consider the graphs of <m>f(x)=x^2-6x+7</m> and <m>g(x)=(x-3)^2-2</m> on the same axes.</p>
+        <p>Consider the graphs of <m>f(x)=x^2-6x+7</m> and <m>g(x)=(x-3)^2-2</m> on the same axes, shown in <xref ref="figure-graphs-of-identical-functions">Figure</xref>.</p>
 
         <sidebyside widths="47% 47%" margins="0%">
             <p>We see only one parabola because these are two different forms of the same function. Indeed, if we convert <m>g(x)</m> into standard form:<md>
@@ -381,7 +95,7 @@
                 <mrow>g(x)\amp=x^2-6x+7</mrow>
             </md>it is clear that <m>f</m> and <m>g</m> are the same function.</p>
 
-            <figure>
+            <figure xml:id="figure-graphs-of-identical-functions">
                 <caption>Graph of <m>f(x)=x^2-6x+7</m> and <m>g(x)=(x-3)^2-2</m></caption>
                 <image width="47%">
                     <description>the graphs of the two parabolas overlap each other completely</description>
@@ -533,9 +247,16 @@
                 </ol></p>
             </solution>
         </example>
+    </subsection>
 
-        <sidebyside widths="47% 47%" margins="0%">
-            <p>Once we read the vertex we can also state the domain and range. All quadratic functions have a domain of <m>(-\infty,\infty)</m> because we can put in any value to a quadratic function. The range, however, depends on the <m>y</m>-value of the vertex and whether the parabola opens upward or downward. When we have a quadratic function in vertex form we can read the range from the formula. Let's look at the graph of <m>f</m>, where <m>f(x)=2(x-3)^2-5</m>, as an example.</p>
+        <subsection>
+            <title>The Domain and Range of a Quadratic Function</title>
+
+        <sidebyside widths="47% 47%" margins="0%" valign="bottom">
+            <stack>
+            <p>Once we read the vertex we can also state the domain and range. All quadratic functions have a domain of <m>(-\infty,\infty)</m> because we can put any value into a quadratic function and get a valid output.</p> 
+            <p>The range, however, depends on the <m>y</m>-value of the vertex and whether the parabola opens upward or downward. When we have a quadratic function in vertex form we can read the range from the formula. Let's look at the graph of <m>f</m>, where <m>f(x)=2(x-3)^2-5</m>, as an example.</p>
+            </stack>
 
             <figure xml:id="figure-domain-and-range-from-vertex-form">
                 <caption>The graph of <m>f(x)=2(x-3)^2-5</m></caption>
@@ -554,7 +275,7 @@
             </figure>
         </sidebyside>
 
-        <p>The domain is <m>(-\infty,\infty)</m>. The graph of <m>f</m> opens upward (which we know because <m>a=2\gt0</m>) so the vertex is the minimum point. The <m>y</m>-value of <m>-5</m> is the minimum. The range is <m>[-5,\infty)</m>.</p>
+        <p>The domain is <m>(-\infty,\infty)</m>. The graph of <m>f</m> opens upward (which we know because <m>a=2\gt0</m>) so the vertex is the minimum point. The <m>y</m>-value of <m>-5</m> is the minimum. Therefore, the range is <m>[-5,\infty)</m>.</p>
 
         <example>
             <statement>
@@ -578,7 +299,7 @@
                         </image>
                     </figure>
 
-                    <p>The domain is <m>(-\infty,\infty)</m>. The graph of <m>g</m> opens downward (which we know because <m>a=-3\lt0</m>) so the vertex is the maximum point. The <m>y</m>-value of <m>6</m> is the maximum. The range is <m>(-\infty,6]</m>.</p>
+                    <p>The domain is <m>(-\infty,\infty)</m>. The graph of <m>g</m> opens downward (which we know because <m>a=-3\lt0</m>) so the vertex is the maximum point. The <m>y</m>-value of <m>6</m> is the maximum. Therefore, the range is <m>(-\infty,6]</m>.</p>
                 </sidebyside>
             </solution>
         </example>
@@ -773,7 +494,7 @@
         </example>
     </subsection> -->
 
-    <subsection>
+    <!-- <subsection>
         <title>Horizontal and Vertical Shifts</title>
 
         <p>Let <m>f(x)=x^2</m> and <m>g(x)=(x-4)^2+1</m>. The graph of <m>y=f(x)</m> has its vertex at the point <m>(0,0)</m>. Now we will compare this with the graph of <m>y=g(x)</m> on the same axes.</p>
@@ -844,11 +565,11 @@
 
         <p>To summarize this, when a quadratic function is written in <xref ref="fact-vertex-form" text="title">vertex form</xref>, the <m>h</m>-value is the horizontal shift and the <m>k</m>-value is the vertical shift.</p>
 
-        <!-- <p>Now you can try identifying the horizontal and vertical shifts in each function.</p> -->
+        <!- <p>Now you can try identifying the horizontal and vertical shifts in each function.</p> -->
 
 <!-- TODO: This one could be interactive. -->
 <!-- Not really sure what the input forms would look like for that. -->
-        <example>
+        <!-- <example>
             <statement>
                 <p>Identify the horizontal and vertical shifts compared with <m>f(x)=x^2</m>.
                 <ol label="a." cols="2">
@@ -867,13 +588,13 @@
                 </ol></p>
             </solution>
         </example>
-    </subsection>
+    </subsection> --> 
 
     <subsection>
         <title>The Factored Form of a Parabola</title>
 
 
-        <p>There is another form of a quadratic function's formula, called <term>factored form</term>, which we will explore next. Let's consider the two functions <m>q(x)=-x^2+3x+4</m> and <m>s(x)=-(x-4)(x+1)</m>. Using graphing technology, we will graph <m>y=q(x)</m> and <m>y=s(x)</m> on the same axes.</p>
+        <p>There is another form of a quadratic function's formula, called <term>factored form</term>, which we will explore next. Let's consider the two functions <m>q(x)=-x^2+3x+4</m> and <m>s(x)=-(x-4)(x+1)</m>. We will graph <m>y=q(x)</m> and <m>y=s(x)</m> on the same axes, as shown in <xref ref="figure-graphs-of-same-functions">Figure</xref>.</p>
 
         <sidebyside widths="47% 47%" margins="0%">
             <p>These graphs coincide because the functions are actually the same. We can tell by multiplying out the formula for <m>g</m> to get back to the formula for <m>f</m>.<md>
@@ -883,7 +604,7 @@
             </md>Now we can see that <m>f</m> and <m>g</m> are really the same function.</p>
 
 
-            <figure>
+            <figure xml:id="figure-graphs-of-same-functions">
                 <caption>Graph of <m>q</m> and <m>s</m></caption>
                 <image width="47%">
                     <description>the graph of two identical parabolas that open downward and overlap each other completely</description>
@@ -1022,171 +743,7 @@
             </exercise>
         </exercisegroup> -->
         <exercisegroup cols="3">
-            <title>Technology and Tables</title>
-
-            <exercise>
-                <webwork>
-                    <setup>
-                        <pg-code>
-                            Context()->noreduce('(-x)+y', '(-x)-y');
-                            $f = RandomVariableName(type=>'function');
-                            do {
-                               do {
-                                  $b = non_zero_random(-4,4,1);
-                                  $c = non_zero_random(-3,3,1);
-                               } until (($b)**2-4*$c > 0);
-                            } until ((0 &lt; (-$b-sqrt(($b)**2-4*$c))/2  and  (-$b-sqrt(($b)**2-4*$c))/2 &lt; 4) or (0 &lt; (-$b+sqrt(($b)**2-4*$c))/2  and  (-$b+sqrt(($b)**2-4*$c))/2 &lt; 4));
-                            $formula = Compute("x^2+$b x+$c")->reduce;
-                            @defaultAnswers = ();
-                            for my $i (0..6) {
-                              $x[$i] = $i-2;
-                              $y[$i] = $formula->eval(x=>$x[$i]);
-                              push(@defaultAnswers,$x[$i]);
-                              push(@defaultAnswers,$y[$i]);
-                            }
-                            $multians = MultiAnswer(@defaultAnswers)->with(
-                                singleResult => 1,
-                                checker => sub {
-                                    my ( $correct, $student, $self ) = @_;
-                                    my @sxy = @{$student};
-                                    my @xs, @ys;
-                                   for my $k (0..6)
-                                     {$xs[$k] = $sxy[2*$k];
-                                      $ys[$k] = $sxy[2*$k+1];}
-                                   #
-                                   #  Loop though the student answers
-                                   ##
-                                   for ($i = 0; $i &lt;= 6; $i++) {
-                                     my $ith = Value::List->NameForNumber($i+1);
-                                     #
-                                     #  Check that the student's answers are Reals
-                                     #
-                                     Value->Error("Your $ith x-value is not a number") if ($xs[$i]->type ne "Number");
-                                     Value->Error("Your $ith y-value is not a number") if ($ys[$i]->type ne "Number");
-                                     #
-                                     #  Check that the point hasn't been given before
-                                     #
-                                     for ($j = 0, $used = 0; $j &lt; $i; $j++) {
-                                       my $jth = Value::List->NameForNumber($j+1);
-                                       if ($xs[$j] == $xs[$i] and $ys[$j] == $ys[$i]) {
-                                         Value->Error("Your $ith row in the table is the same as your $jth row") unless $ansHash->{isPreview};
-                                         $used = 1; last;
-                                       }
-                                     }
-                                     #
-                                     #  If not already used, check that it satisfies the equation
-                                     #    and increase the score if so.
-                                     #
-                                     if (!$used) {
-                                       Value->Error("Your $ith row is not correct") unless $ansHash->{isPreview} or $ys[$i] == $formula->eval(x=>$xs[$i]);
-                                         }
-                                       }
-                                     return 1;
-                                }
-                            );
-
-                            for my $i (0..6) {
-                            Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
-                            $rs[$i] = $formula->substitute(x=>$x[$i]);
-                            }
-                        </pg-code>
-                    </setup>
-                    <statement>
-                        <p>Let <m><var name="$f" />(x)=<var name="$formula" /></m>. Evaluate the function for several values of <m>x</m> to make a table of values <m><var name="$f" /></m>.</p>
-
-                        <sidebyside>
-                            <tabular halign="center">
-                                <row bottom="medium">
-                                    <cell><m>x</m></cell>
-                                    <cell><m><var name="$f" />(x)</m></cell>
-                                </row>
-                                <row>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                </row>
-                                <row>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                </row>
-                                <row>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                </row>
-                                <row>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                </row>
-                                <row>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                </row>
-                                <row>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                </row>
-                                <row>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                    <cell><var name="$multians" width="4" /></cell>
-                                </row>
-                            </tabular>
-                        </sidebyside>
-                    </statement>
-                    <solution>
-                        <p>This solution will use the <m>x</m>-values <m><var name="$x[0]" /></m>, <m><var name="$x[1]" /></m>, <m><var name="$x[2]" /></m>, <m><var name="$x[3]" /></m>, <m><var name="$x[4]" /></m>, <m><var name="$x[5]" /></m>, and <m><var name="$x[6]" /></m>. The choice to use these <m>x</m>-values is arbitrary. Since they are small numbers, they might make calculations easier. It's important to include some negative numbers.</p>
-
-                        <p>One at a time, we substitute these <m>x</m>-values into the formula <m><var name="$f" />(x)=<var name="$formula" /></m> and compute.</p>
-
-                        <p><md>
-                            <mrow><var name="$rs[0]" />\amp=<var name="$y[0]" /></mrow>
-                            <mrow><var name="$rs[1]" />\amp=<var name="$y[1]" /></mrow>
-                            <mrow><var name="$rs[2]" />\amp=<var name="$y[2]" /></mrow>
-                            <mrow><var name="$rs[3]" />\amp=<var name="$y[3]" /></mrow>
-                            <mrow><var name="$rs[4]" />\amp=<var name="$y[4]" /></mrow>
-                            <mrow><var name="$rs[5]" />\amp=<var name="$y[5]" /></mrow>
-                            <mrow><var name="$rs[6]" />\amp=<var name="$y[6]" /></mrow>
-                        </md></p>
-
-                        <p>So the table may be completed as:</p>
-
-                        <sidebyside>
-                            <tabular halign="center">
-                                <row bottom="medium">
-                                    <cell><m>x</m></cell>
-                                    <cell><m><var name="$f" />(x)</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m><var name="$x[0]" /></m></cell>
-                                    <cell><m><var name="$y[0]" /></m></cell>
-                                </row>
-                                <row>
-                                    <cell><m><var name="$x[1]" /></m></cell>
-                                    <cell><m><var name="$y[1]" /></m></cell>
-                                </row>
-                                <row>
-                                    <cell><m><var name="$x[2]" /></m></cell>
-                                    <cell><m><var name="$y[2]" /></m></cell>
-                                </row>
-                                <row>
-                                    <cell><m><var name="$x[3]" /></m></cell>
-                                    <cell><m><var name="$y[3]" /></m></cell>
-                                </row>
-                                <row>
-                                    <cell><m><var name="$x[4]" /></m></cell>
-                                    <cell><m><var name="$y[4]" /></m></cell>
-                                </row>
-                                <row>
-                                    <cell><m><var name="$x[5]" /></m></cell>
-                                    <cell><m><var name="$y[5]" /></m></cell>
-                                </row>
-                                <row>
-                                    <cell><m><var name="$x[6]" /></m></cell>
-                                    <cell><m><var name="$y[6]" /></m></cell>
-                                </row>
-                            </tabular>
-                        </sidebyside>
-                    </solution>
-                </webwork>
-            </exercise>
+            
             <exercise>
                 <webwork>
                     <setup>
@@ -3971,6 +3528,8 @@
             <exercise>
                 <webwork source="Math95/ParabolaVertex/ParabolaVertex4.pg" />
             </exercise>
+        </exercisegroup>
+        <exercisegroup cols="2">
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticFunctions/QuadraticVertexForm15.pg" />
             </exercise>
@@ -4453,7 +4012,7 @@
                 </webwork>
             </exercise>
 
-            <exercise>
+            <!-- <exercise>
                 <webwork>
                     <pg-macros>
                         <macro-file>PCCmacros.pl</macro-file>
@@ -4762,7 +4321,7 @@
                         <p>Since the vertex is <m>\left(<var name="$h"/>,<var name="$k"/>\right)</m>, the graph is the graph of <m>y=x^2</m> shifted <var name="$hshift" /> and <var name="$vshift"/>.</p>
                     </solution>
                 </webwork>
-            </exercise>
+            </exercise> -->
         </exercisegroup>
 
         <exercisegroup cols="2">
