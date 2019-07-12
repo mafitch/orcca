@@ -67,7 +67,7 @@
             </ul></p>
         </example>
 
-        <sidebyside widths="65% 29%" margins="0%" valign="bottom">
+        <sidebyside widths="65% 29%" margins="0%" valign="center">
 
             <p>The process of using <m>\sqrt{\phantom{x}}</m> to change numbers might feel more <q>mathematical</q> than these examples. Let's continue thinking about <m>\sqrt{\phantom{x}}</m> for now, since it's a formula-like symbol that we are familiar with. One concern with <m>\sqrt{\phantom{x}}</m> is that although we live in the modern age of computers, this symbol is not found on most keyboards. And yet computers still tend to be capable of producing square roots. Computer technicians write <m>\operatorname{sqrt}(\phantom{x})</m> when they want to compute a square root, as we see in <xref ref="table-sqrt-values">Table</xref>.</p>
 
@@ -97,6 +97,17 @@
         <p>Functions have their own names. We've seen a function named <m>\operatorname{sqrt}</m>, but any name you can imagine is allowable. In the sciences, it is common to name functions with whole words, like <m>\operatorname{weight}</m> or <m>\operatorname{health\_index}</m>. In mathematics, we often abbreviate such function names to <m>w</m> or <m>h</m>. And of course, since the word <q>function</q> itself starts with <q>f,</q> we will often name a function <m>f</m>.</p>
 
         <p>It's crucial to continue reminding ourselves that functions are <em>processes</em> for changing numbers; they are not numbers themselves. And that means that we have a potential for confusion that we need to stay aware of. In some contexts, the symbol <m>t</m> might represent a variable<mdash/>a number that is represented by a letter. But in other contexts, <m>t</m> might represent a function<mdash/>a process for changing numbers into other numbers. By staying conscious of the context of an investigation, we avoid confusion.</p>
+
+        <sidebyside widths="47% 47%" margins="0%" valign="center">
+            <p>Sometimes it's helpful to think of a function as a machine, as in <xref ref="figure-function-machine">Figure</xref>. This illustrates how complicated functions can be. A number is just a number. But a <em>function</em> has the capacity to take in all kinds of different numbers into it's hopper (feeding tray) as inputs and transform them into their outputs.</p>
+
+
+            <figure xml:id="figure-function-machine">
+                <caption>Imagining a function as a machine. (Image by Duane Nykamp using Mathematica.)</caption>
+                <image source="images/function_machine.png"/>
+                    <description>A box labeled function machine showing spheres as inputs going into the hopper; there is an output chute with cubes coming out</description>
+            </figure>
+        </sidebyside>
 
         <p>Next we need to discuss how we go about using a function's name.</p>
 
@@ -190,16 +201,7 @@
         </warning>
 
 
-        <sidebyside widths="47% 47%" margins="0%">
-            <p>Sometimes it's helpful to think of a function as a machine, as in <xref ref="figure-function-machine">Figure</xref>. This illustrates how complicated functions can be. A number is just a number. But a <em>function</em> has the capacity to take in all kinds of different numbers into it's hopper (feeding tray) as inputs and transform them into their outputs.</p>
-
-
-            <figure xml:id="figure-function-machine">
-                <caption>Imagining a function as a machine. (Image by Duane Nykamp using Mathematica.)</caption>
-                <image source="images/function_machine.png"/>
-                    <description>A box labeled function machine showing spheres as inputs going into the hopper; there is an output chute with cubes coming out</description>
-            </figure>
-        </sidebyside>
+        
     </subsection>
 
     <subsection>
@@ -278,7 +280,7 @@
             </sidebyside>
         </example>
 
-        <exercise>
+        <exercise xml:id="exercise-budget-deficit-table">
             <webwork>
                 <statement>
                     <p>According to <xref ref="table-budget-deficit">Table</xref>, what is the value of <m>\operatorname{BudgetDeficit}(2015)</m>?</p>
@@ -292,7 +294,7 @@
 
         <example xml:id="example-sqrt-table">
             <title>A Table for the Square Root Function</title>
-            <p>Let's return to our example of the function <m>\operatorname{sqrt}</m>. Tabulating some inputs and outputs reveals <xref ref="table-sqrt"/></p>
+            <p>Let's return to our example of the function <m>\operatorname{sqrt}</m>. Tabulating some inputs and outputs reveals <xref ref="table-sqrt">Table</xref></p>
 
             <sidebyside widths="38% 56%" margins="0%">
                 <table xml:id="table-sqrt">
@@ -552,7 +554,7 @@
 
         <p>While it is important to be able to make a graph of a function <m>f</m>, we also need to be capable of looking at a graph and reading it well. A graph of <m>f</m> provides us with helpful specific information about <m>f</m>; it tells us what <m>f</m> does to its input values. When we were making graphs, we plotted points of the form <me>(\text{input},\text{output})</me>Now given a graph of <m>f</m>, we interpret coordinates in the same way.</p>
 
-        <example>
+        <example xml:id="example-read-graph">
             <p>In <xref ref="figure-read-graph">Figure</xref> we have a graph of a function <m>f</m>. If we wish to find <m>f(1)</m>, we recognize that <m>1</m> is being used as an input. So we would want to find a point of the form <m>(1,\phantom{y})</m>. Seeking out <m>x</m>-coordinate <m>1</m> in <xref ref="figure-read-graph">Figure</xref>, we find that the only such point is <m>(1,2)</m>. Therefore, the output for <m>1</m> is <m>2</m>; in other words <m>f(1)=2</m>.</p>
 
             <figure xml:id="figure-read-graph">
@@ -652,7 +654,7 @@
 
             <p>If we use the table to establish that <m>u(2009)\approx9.25</m>, then we should be prepared to translate that into everyday-English using the context of the function: In 2009, unemployment in the <init>U.S.</init> was about <m>9.25\%</m>.</p>
 
-            <p>If we ask the question <q>when was unemployment at <m>5\%</m>,</q> we can read the graph and see that there were two such times: mid-2007 and about 2016. But there is again a more mathematical notation-heavy way to ask this question. Namely, since we are being told that the output of <m>u</m> is <m>5</m>, we are being asked to solve the equation <m>u(t)=5</m>. So the following communicate the same thing:</p>
+            <!-- <p>If we ask the question <q>when was unemployment at <m>5\%</m>,</q> we can read the graph and see that there were two such times: mid-2007 and about 2016. But there is again a more mathematical notation-heavy way to ask this question. Namely, since we are being told that the output of <m>u</m> is <m>5</m>, we are being asked to solve the equation <m>u(t)=5</m>. So the following communicate the same thing:</p>
 
             <sidebyside widths="47% 47%" margins="0%">
                 <p><q>When was unemployment at <m>5\%</m>?</q></p>
@@ -664,34 +666,22 @@
             <sidebyside widths="47% 47%" margins="0%">
                 <p><q>Unemployment was at <m>5\%</m> in mid-2007 and about 2016.</q></p>
                 <p><q><m>t\approx2007.5</m> or <m>t\approx2016</m>.</q></p>
-            </sidebyside>
+            </sidebyside> -->
         </example>
 
         <exercise>
             <webwork>
                 <statement>
-                    <p>Use the graph of <m>u</m> in <xref ref="figure-unemployment">Figure</xref> to answer the following.<ol label="a.">
-                        <li>
+                    <p>Use the graph of <m>u</m> in <xref ref="figure-unemployment">Figure</xref> to answer the following.</p>
+                        
                             <p>Find <m>u(2011)</m> and interpret it.</p>
                             <p><m>u(2011)\approx</m><var name="'9'" width="5"/></p>
                             <p>Interpretation: <var form="essay" /></p>
-                        </li>
-                        <li>
-                            <p>Solve the equation <m>u(t)=6</m> and interpret your solution(s).</p>
-                            <p><m>t\approx</m><var name="'2008'" width="5"/> or <m>t\approx</m><var name="'2014'" width="5"/></p>
-                            <p>Interpretation: <var form="essay" /></p>
-                        </li>
-                    </ol></p>
+                        
+                        
                 </statement>
                 <solution>
-                    <p><ol label="a.">
-                        <li>
-                            <p><m>u(2011)\approx9</m>; In 2011 the US unemployment rate was about <m>9\%</m>.</p>
-                        </li>
-                        <li>
-                            <p><m>t\approx2008</m> or <m>t\approx2014</m>; The points at which unemployment was <m>6\%</m> were in early 2008 and early 2014.</p>
-                        </li>
-                    </ol></p>
+                    <p><m>u(2011)\approx9</m>; In 2011 the US unemployment rate was about <m>9\%</m>.</p>
                 </solution>
             </webwork>
         </exercise>
@@ -895,6 +885,351 @@
         </example>
 </subsection>
 
+<subsection>
+        <title>Evaluating Functions and Solving Equations That Have Function Notation</title>
+
+        <p><em>Evaluating</em> a function and <em>solving</em> an equation that has function notation in it are two separate things. Students understandably mix up these two tasks, because they are two sides of the same coin. Evaluating a function means that you know an input (typically, an <m>x</m>-value) and then you calculate an output (typically, a <m>y</m>-value). Solving an equation that has function notation in it is the opposite process. You know an output (typically, a <m>y</m>-value) and then you determine all the inputs that could have led to that output (typically, <m>x</m>-values).</p>
+
+        <example xml:id="example-function-evaluation"><p>Evaluate the function <m>f</m>, for each of the given values, where <m>f(x)=9-5x</m>.<ol label="a." cols="3">
+                        <li>
+                            <p><m>f(-2)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(0)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(4)</m></p>
+                        </li>
+                    </ol></p>
+
+                    <p><ol label="a." >
+                        <li>
+                            <p>We find <m>f(-2)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>-2</m> and then simplifying the expression as much as possible.<md>
+
+                                <mrow>f(\substitute{-2}) \amp= 9-5(\substitute{-2})</mrow>
+                                <mrow>\amp= 9+10</mrow>
+                                <mrow>\amp= 19</mrow>
+                            </md>
+                            Therefore, <m>f(-2)=19</m></p>
+
+                       
+                        </li>
+                        <li>
+                            <p>We find <m>f(0)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>0</m> and then simplifying the expression as much as possible.<md>
+
+                                <mrow>f(\substitute{0}) \amp= 9-5(\substitute{0})</mrow>
+                                <mrow>\amp= 9-0</mrow>
+                                <mrow>\amp= 9</mrow>
+                            </md>
+                            Therefore, <m>f(0)=9</m></p>
+
+                      
+                        </li>
+                        <li>
+                             <p>We find <m>f(4)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>4</m> and then simplifying the expression as much as possible.<md>
+
+                                <mrow>f(\substitute{4}) \amp= 9-5(\substitute{4})</mrow>
+                                <mrow>\amp= 9-20</mrow>
+                                <mrow>\amp= -11</mrow>
+                            </md>
+                            Therefore, <m>f(4)=-11</m></p>
+                        </li>
+                    </ol></p>
+                </example>
+
+                 <exercise xml:id="exercise-function-evaluation">
+            <title>Evaluating a Function</title>
+            <webwork>
+                <setup>
+                    <pg-code>
+                        Context("LimitedNumeric");
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Find the given function values for a function <m>g</m> where <m>g(x)=3x+4</m>.<ol label="a." cols="3">
+                        <li>
+                            <p><m>g(3)=</m><var name="13" width="5" /></p>
+                        </li>
+                        <li>
+                            <p><m>g(0)=</m><var name="4" width="5" /></p>
+                        </li>
+                        <li>
+                            <p><m>g(-2)=</m><var name="-2" width="5" /></p>
+                        </li>
+                    </ol></p>
+                </statement>
+
+                <solution>
+                    <p><ol label="a.">
+                        <li>
+                            <p>We will substitute <m>x=3</m> into <m>g(x)</m>:<md>
+                                <mrow>g(\substitute{3}) \amp= 3(\substitute{3})+4</mrow>
+                                <mrow>\amp= 9+4</mrow>
+                                <mrow>\amp= 13</mrow>
+                            </md></p>
+                        </li>
+                        <li>
+                            <p>We will substitute <m>x=0</m> into <m>g(x)</m>:<md>
+                                <mrow>g(\substitute{0}) \amp= 3(\substitute{0})+4</mrow>
+                                <mrow>\amp= 0+4</mrow>
+                                <mrow>\amp= 4</mrow>
+                            </md></p>
+                        </li>
+                        <li>
+                            <p>We will substitute <m>x=-2</m> into <m>g(x)</m>. Especially when inputting negative numbers, be <em>certain</em> to put parentheses around the input values in the first step:<md>
+                                <mrow>g(\substitute{-2})\amp= 3(\substitute{-2})+4</mrow>
+                                <mrow>\amp= -6+4</mrow>
+                                <mrow>\amp= -2</mrow>
+                            </md></p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+
+
+                <p>In <xref ref="example-function-evaluation">Example</xref> and <xref ref="exercise-function-evaluation">Checkpoint</xref>, we found the output value of a function when given the input value. This process we refer to as <em>evaluating</em> a function. In contrast, to <term>solve</term> an equation that has function notation in it, we need to solve for the value of the variable that makes an equation true, just like in any other equation. Thus, we need to find the input value(s) that will result in the given output value when the function is applied. This process will be demonstrated in the following example.</p>
+            
+
+        <example xml:id="example-equation-solving-with-functions"> 
+            <statement>
+                    <p>Solve the equations below for a function <m>f</m> where <m>f(x)=8x-9</m>. Check each answer and state the solution set.<ol label="a." cols="3">
+                        <li>
+                            <p><m>f(x)=-1</m></p>
+                            
+                        </li>
+                        <li>
+                            <p><m>f(x)=0</m></p>
+                            
+                        </li>
+                        <li>
+                            <p><m>f(x)=15</m></p>
+                            
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a.">
+                        <li>
+                            <p>To solve for <m>x</m>, we will substitute <m>f(x)</m> with its formula, <m>8x-9</m>, and then solve for <m>x</m>:<md>
+                                <mrow>f(x) \amp= -1</mrow>
+                                <mrow>\substitute{8x-9} \amp= -1</mrow>
+                                <mrow>8x \amp= 8</mrow>
+                                <mrow>x \amp=1</mrow>
+                            </md>  To check, verify that <m>f(1)=-1</m>:<md>
+                                <mrow>f(1) \amp= 8(1)-9</mrow>
+                                <mrow>\amp= 8-9</mrow>
+                                <mrow>\amp\stackrel{\checkmark}{=} -1</mrow>
+                            </md>  The solution is <m>1</m>, and the solution set is <m>\{1\}</m>.</p>
+                        </li>
+
+                        <li>
+                            <p>To solve for <m>x</m>, we will substitute <m>f(x)</m> with its formula, and then solve for <m>x</m>:<md>
+                                <mrow>f(x) \amp= 0</mrow>
+                                <mrow>\substitute{8x-9} \amp= 0</mrow>
+                                <mrow>8x \amp= 9</mrow>
+                                <mrow>x \amp=\frac{9}{8}</mrow>
+                            </md> To check, we will verify that <m>f\mathopen{}\left(\frac{9}{8}\right)\mathclose{}=0</m>:<md>
+                                <mrow>f\mathopen{}\left(\frac{9}{8}\right)\mathclose{} \amp = 8\left(\frac{9}{8}\right)-9</mrow>
+                                <mrow>\amp= 9-9</mrow>
+                                <mrow>\amp\stackrel{\checkmark}{=} 0 </mrow>
+                            </md>  The solution is <m>\frac{9}{8}</m>, and the solution set is <m>\left\{\frac{9}{8}\right\}</m>.</p>
+                        </li>
+
+                        <li>
+                            <p>To solve for <m>x</m>, we will substitute <m>f(x)</m> with its formula, and then solve for <m>x</m>:<md>
+                                <mrow>f(x) \amp= 15</mrow>
+                                <mrow>\substitute{8x-9} \amp= 15</mrow>
+                                <mrow>8x \amp= 24</mrow>
+                                <mrow>x \amp= 3</mrow>
+                            </md>  To check, we will verify that <m>f(3)=15</m>:<md>
+                                <mrow>f(3) \amp= 8(3)-9</mrow>
+                                <mrow>\amp= 24-9</mrow>
+                                <mrow>\amp\stackrel{\checkmark}{=} 15</mrow>
+                            </md>  The solution is <m>3</m>, and the solution set is <m>\{3\}</m>.</p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </example>
+
+
+            <exercise>
+
+            <webwork>
+                <setup>
+                    <pg-code>
+                        Context("Interval");
+                        $a = Set(2);
+                        $b = Set(7/4);
+                        $c = Set(-1);
+                    </pg-code>
+                </setup>
+                <statement>
+                    <p>Solve the equations below for a function <m>h</m> where <m>h(x)=-4x+7</m>. Check each answer and state the solution set.<ol label="a." cols="3">
+                        <li>
+                            <p><m>h(x)=-1</m></p>
+                            <p>The solution set is <var name="$a" width="5" />.</p>
+                        </li>
+                        <li>
+                            <p><m>h(x)=0</m></p>
+                            <p>The solution set is <var name="$b" width="5" />.</p>
+                        </li>
+                        <li>
+                            <p><m>h(x)=11</m></p>
+                            <p>The solution set is <var name="$c" width="5" />.</p>
+                        </li>
+                    </ol></p>
+                </statement>
+                <solution>
+                    <p><ol label="a.">
+                        <li>
+                            <p>To solve for <m>x</m>, we will substitute <m>h(x)</m> with its formula, <m>-4x+7</m>:<md>
+                                <mrow>h(x) \amp= -1</mrow>
+                                <mrow>\substitute{-4x+7} \amp= -1</mrow>
+                                <mrow>-4x \amp= -8</mrow>
+                                <mrow>x \amp=2</mrow>
+                            </md>  To check, verify that <m>h(2)=-1</m>:<md>
+                                <mrow>h(2) \amp= -4(2)+7</mrow>
+                                <mrow>\amp= -8+7</mrow>
+                                <mrow>\amp\stackrel{\checkmark}{=} -1</mrow>
+                            </md>  The solution is <m>2</m>, and the solution set is <m>\{2\}</m>.</p>
+                        </li>
+
+                        <li>
+                            <p>To solve for <m>x</m>, we will substitute <m>h(x)</m> with its formula:<md>
+                                <mrow>h(x) \amp= 0</mrow>
+                                <mrow>\substitute{-4x+7} \amp= 0</mrow>
+                                <mrow>-4x \amp= -7</mrow>
+                                <mrow>x \amp=\frac{7}{4}</mrow>
+                            </md> To check, we will verify that <m>h\mathopen{}\left(\frac{7}{4}\right)\mathclose{}=0</m>:<md>
+                                <mrow>h\mathopen{}\left(\frac{7}{4}\right)\mathclose{} \amp = -4\left(\frac{7}{4}\right)+7</mrow>
+                                <mrow>\amp= -7+7</mrow>
+                                <mrow>\amp\stackrel{\checkmark}{=} 0 </mrow>
+                            </md>  The solution is <m>\frac{7}{4}</m>, and the solution set is <m>\left\{\frac{7}{4}\right\}</m>.</p>
+                        </li>
+
+                        <li>
+                            <p>To solve for <m>x</m>, we will substitute <m>h(x)</m> with its formula:<md>
+                                <mrow>h(x) \amp= 11</mrow>
+                                <mrow>\substitute{-4x+7} \amp= 11</mrow>
+                                <mrow>-4x \amp= 4</mrow>
+                                <mrow>x \amp=-1</mrow>
+                            </md>  To check, we will verify that <m>h(-1)=11</m>:<md>
+                                <mrow>h(-1) \amp= -4(-1)+7</mrow>
+                                <mrow>\amp= 4+7</mrow>
+                                <mrow>\amp\stackrel{\checkmark}{=} 11</mrow>
+                            </md>  The solution is <m>-1</m>, and the solution set is <m>\{-1\}</m>.</p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </webwork>
+        </exercise>
+    </subsection>
+
+        <subsection><title>Solving Equations Using Tables or Graphs</title>
+
+        <example>
+            
+
+            <statement>
+                <p>In <xref ref="exercise-budget-deficit-table">Checkpoint</xref>, we evaluated a function given in table form, using <xref ref="table-budget-deficit">Table</xref>. Let's use that same function to solve equations.<ol label="a.">
+                    <li>
+                        <p>Solve <m>\text{BudgetDeficit}(x)=0.48</m>. Explain what this solution set represents in context.</p>
+                    </li>
+                    <li>
+                        <p>Solve <m>\text{BudgetDeficit}(x)=1.3</m>. Explain what this solution set represents in context.</p>
+                    </li>
+                </ol></p>
+            </statement>
+            <solution>
+                <p><ol label="a.">
+                    <li>
+                        <p>To solve <m>\text{BudgetDeficit}(x)=0.48</m>, we need to find the value(s) of <m>x</m> that makes the equation true. Looking at the table, we look at the outputs and see that the output <m>0.48</m> occurs when <m>x=2014</m>. In abstract terms, the solution set is <m>\{2014\}</m>. In context, this means that the US federal budget deficit was <m>\$0.48</m> trillion (or <m>\$480</m> billion) in 2014.</p>
+                    </li>
+                    <li>
+                        <p>To solve <m>\text{BudgetDeficit}(x)=1.3</m>, we need to find the value(s) of <m>x</m> that makes the equation true. Looking at the table, we look at the outputs and see that the output <m>1.3</m> occurs when <m>x=2010</m> and again when <m>x=2011</m>. In abstract terms, the solution set is <m>\{2010,2011\}</m>. In context, this means that the US federal budget deficit was <m>\$1.3</m> trillion in 2010 and again in 2011.</p>
+                    </li>
+                </ol></p>
+            </solution>
+        </example>
+
+        <p>A function may be described using a graph, where the horizontal axis corresponds to possible input values (the domain), and the vertical axis corresponds to possible output values (the range).</p>
+
+
+        <example>
+
+            <statement>
+                <p>In <xref ref="example-read-graph">Example</xref>, we evaluated a function given in graphical form, using <xref ref="figure-read-graph">Figure</xref>. Now let's use that same function to solve some equations.<ol label="a.">
+                    <li>
+                        <p>Solve <m>f(x)=3</m>.</p>
+                    </li>
+                    <li>
+                        <p>Solve <m>f(x)=2</m>.</p>
+                    </li>
+                </ol></p>
+            </statement>
+            <solution>
+                <p><ol label="a.">
+                    <li>
+                        <p>To solve <m>f(x)=3</m>, we need to consider the number <m>3</m> as an output value, so it belongs on the vertical axis in <xref ref="figure-read-graph">Figure</xref>. Moving straight right or left, we find the points <m>(2,3)</m> and <m>(3,3)</m> are on the graph, and that tells us that <m>f(x)=3</m> when <m>x=2</m> and when <m>x=3</m>. Thus, the solution set is <m>\{2,3\}</m>.
+
+                        <figure>
+                <caption><m>y=f(x)</m></caption>
+                <image width="47%">
+                    <description>The graph of an irregular curve that goes through the points (-2,1), (0,1), (1,2), (2,3), (3,3), (3.5,2.5), (4,2) and (5,1.5); the points are conected with a solid line. The points (2,3) and (3,3) are labeled.</description>
+                    <latex-image>
+                        <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                    xmin=-1,xmax=5,
+                                    ymin=-1,ymax=4,
+                                    grid=both,
+                                    xtick={1,...,4},
+                                    minor xtick={-0.5,0,...,4.5},
+                                    ytick={1,...,3},
+                                    minor ytick={-0.5,0,...,3.5}
+                                    ]
+                                \addplot+[smooth] coordinates{ (-1,0.5) (0,0.5) (1,2) (2,3) (3,3) (4,2) (5,1.5)};
+                                
+                                \addplot[soliddot] coordinates {(2,3)} node[left]{$(2,3)$}; 
+                                \addplot[soliddot] coordinates {(3,3)} node[right]{$(3,3)$};
+                            \end{axis}
+                        \end{tikzpicture}]]>
+                    </latex-image>
+                </image>
+            </figure></p>
+                    </li>
+                    <li>
+                        <p>To solve <m>f(x)=2</m>, we need to consider the number <m>2</m> as an output value, so it belongs on the vertical axis in <xref ref="figure-read-graph">Figure</xref>. Moving straight right or left, we find the points <m>(1,2)</m> and <m>(4,2)</m> are on the graph, and that tells us that <m>f(x)=2</m> when <m>x=1</m> and when <m>x=4</m>. Thus, the solution set is <m>\{1,4\}</m>.
+                     <figure>
+                <caption><m>y=f(x)</m></caption>
+                <image width="47%">
+                    <description>The graph of an irregular curve that goes through the points (-2,1), (0,1), (1,2), (2,3), (3,3), (3.5,2.5), (4,2) and (5,1.5); the points are conected with a solid line. The points (1,2) and (4,2) are labeled.</description>
+                    <latex-image>
+                        <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                    xmin=-1,xmax=5,
+                                    ymin=-1,ymax=4,
+                                    grid=both,
+                                    xtick={1,...,4},
+                                    minor xtick={-0.5,0,...,4.5},
+                                    ytick={1,...,3},
+                                    minor ytick={-0.5,0,...,3.5}
+                                    ]
+                                \addplot+[smooth] coordinates{ (-1,0.5) (0,0.5) (1,2) (2,3) (3,3) (4,2) (5,1.5)};
+                                
+                                \addplot[soliddot] coordinates {(1,2)} node[left]{$(1,2)$}; 
+                                \addplot[soliddot] coordinates {(4,2)} node[right]{$(4,2)$};
+                            \end{axis}
+                        \end{tikzpicture}]]>
+                    </latex-image>
+                </image>
+            </figure></p>
+                    </li>
+                </ol></p>
+                
+            </solution>
+        </example>
+    </subsection>
 
 
 
@@ -1395,6 +1730,28 @@
         </exercisegroup>
 
         <exercisegroup cols="2">
+            <title>Solving Equations with Function Notation</title>
+            <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/FunctionEquation10.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/FunctionEquation10.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/FunctionEquation20.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/FunctionEquation20.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/FunctionEquation30.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/FunctionEquation30.pg" />
+            </exercise>
+        </exercisegroup>
+
+        <exercisegroup cols="2">
             <title>Functions and Points on a Graph</title>
             <exercise>
                 <webwork source="BasicAlgebra/FunctionBasics/Functions100.pg" />
@@ -1402,12 +1759,12 @@
             <exercise>
                 <webwork source="BasicAlgebra/FunctionBasics/Functions100.pg" />
             </exercise>
-            <exercise>
+           <!--  <exercise>
                 <webwork source="BasicAlgebra/FunctionBasics/Functions110.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/FunctionBasics/Functions110.pg" />
-            </exercise>
+            </exercise> -->
             <exercise>
                 <webwork source="BasicAlgebra/FunctionBasics/Functions120.pg" />
             </exercise>
@@ -1422,8 +1779,9 @@
             </exercise>
         </exercisegroup>
 
-        <exercisegroup cols="3">
+        <exercisegroup cols="2">
             <title>Function Graphs</title>
+            
             <exercise>
                 <webwork source="Math95/Functions/Functions12.pg" />
             </exercise>
@@ -1591,9 +1949,9 @@
 
         <exercisegroup>
             <title></title>
-            <exercise>
+            <!-- <exercise>
                 <webwork source="CollegeAlgebra/FunctionBasics/FunctionGraphs10.pg" />
-            </exercise>
+            </exercise> -->
 
             <exercise>
                 <webwork source="CollegeAlgebra/FunctionBasics/FunctionGraphs20.pg" />
