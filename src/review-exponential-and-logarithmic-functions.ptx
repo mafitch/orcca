@@ -439,9 +439,9 @@
 			        </answer>
 		        </exercise>
 
-		        <exercise>
+		        <!-- <exercise>
 		            <statement><p><m>g(x)=4^x</m></p></statement>
-		        </exercise>
+		        </exercise> -->
 
 		        <exercise>
 		            <statement><p><m>f(x)=(\frac{1}{2})^x</m></p></statement>
@@ -451,28 +451,26 @@
 		            </answer>
 		        </exercise>
 
-		        <exercise>
+		        <!-- <exercise>
 		            <statement><p><m>g(x)=(\frac{1}{4})^x</m></p></statement>
-		        </exercise>
+		        </exercise> -->
 
 			</exercisegroup>
 
-			<exercisegroup cols="2">
-		        <introduction><p>In the following exercises, graph each function in the same coordinate system.</p></introduction>
-
+			
 		        <exercise>
-		            <statement><p><m>f\left(x\right)={4}^{x}, g\left(x\right)={4}^{x-1}</m></p>
+		            <statement><p>Graph the functions on the same coordinate system: <m>f\left(x\right)={4}^{x} and g\left(x\right)={4}^{x-1}</m>.</p>
 		            </statement>
 		            <answer >
 		                <p><figure><image source="images/CNX_IntAlg_Figure_10_02_321_img.jpg" width="40%"></image></figure></p>
 		            </answer >
 		        </exercise>
 
-		        <exercise>
+		        <!-- <exercise>
 		            <statement><p><m>f\left(x\right)={5}^{x}, g\left(x\right)={5}^{x-2}</m></p>
 		            </statement>
-		        </exercise>
-	        </exercisegroup>
+		        </exercise> -->
+	        
 			
 			<exercisegroup>
 				<title>Compound Interest</title>
@@ -489,21 +487,60 @@
 				<title>Population Growth</title>
 
 				<exercise>
-		            <statement>
-                <p>In the last ten years, the population of Axtonia has grown at a rate of <m>2.3\%</m> per year to <m>57{,}768</m>. If this rate continues, what will be the population in <m>10</m> more years?</p>
-		            </statement>
-		            <answer><p><m>72{,}707</m></p>
-		            </answer>
-		        </exercise>
+        			<webwork>
+                    <pg-macros>
+                         <macro-file>contextNumeric.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Numeric");
+                             $answer=72707;
+                             
+                         </pg-code>
+                     </setup>
+        			<statement>
+        			<p>In the last ten years, the population of Axtonia has grown at a rate of <m>2.3\%</m> per year to <m>57{,}768</m>. If this rate continues, what will be the population in <m>10</m> more years?</p>
 
-		        <exercise>
-		            <statement>
-                <p>In the last twenty years, the population of Charizzo has grown at a rate of <m>0.4\%</m> per year to <m>673{,}426</m>. If this rate continues, what will be the population in <m>20</m> more years?</p>
-		            </statement>
-		        </exercise>
+        			<p>The population will be <var name="$answer" width="5" />.</p>
+        			</statement>
+
+        			<solution>
+        			<p>First, we identify the values of each variable: <m>A_{0}=57{,}768</m>, <m>r=0.023\text{/year}</m>, and <m>t=10\text{ years}</m>.</p>
+
+        			<p>Next, we substitute these values into the formula, <m>A=A_{0}e^{rt}</m>, and simplify: <md>
+                			<mrow>A\amp=A_{0}e^{rt}</mrow>
+                			<mrow>\amp=\substitute{57768}e^{\substitute{0.023}\cdot \substitute{10}}</mrow>
+                			<mrow>\amp\approx 72{,}707</mrow></md> 
+        			</p>
+
+        			</solution>
+        			</webwork>
+    			</exercise>
+
+    			<exercise>
+        			<webwork>
+                    <pg-macros>
+                         <macro-file>contextNumeric.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Numeric");
+                             $answer=729514;
+                             
+                         </pg-code>
+                     </setup>
+        			<statement>
+        			<p>In the last twenty years, the population of Charizzo has grown at a rate of <m>0.4\%</m> per year to <m>673{,}426</m>. If this rate continues, what will be the population in <m>20</m> more years?</p>
+
+        			<p>The population will be <var name="$answer" width="5" />.</p>
+        			</statement>
+        			</webwork>
+    			</exercise>
+				
 	        </exercisegroup>
 
-			<exercisegroup cols="4">
+			<exercisegroup cols="2">
+				<title>Logarithmic Functions</title>
 
 				<introduction><p>For the following exercises, rewrite each equation in exponential form.</p></introduction>
 
@@ -511,7 +548,7 @@
 					<statement>
 						<p><m>{\mathrm{log}}_{N}\left(75\right)=3</m></p>
 					</statement>
-					<answer><p><m>{13}^{2}=169</m></p>
+					<answer><p><m>{N}^{3}=75</m></p>
 					</answer>
 				</exercise>
 
@@ -519,6 +556,8 @@
 					<statement>
 						<p><m>{\mathrm{log}}_{9}\left(P\right)=Q</m></p>
 					</statement>
+					<answer><p><m>9^{Q}=P</m></p>
+					</answer>
 				</exercise>
 				
 				<exercise>
@@ -533,7 +572,17 @@
 					<statement>
 						<p><m>\mathrm{log}\left(200\right)=H</m></p>
 					</statement>
+					<answer><p><m>10^{H}=200</m></p>
+					</answer>
 				</exercise>
+
+				<!-- <exercise>
+					<webwork source="Library/Mizzou/Algebra/log_eqns_convert_to_and_from_exp/log_to_exp_03.pg" />
+				</exercise>
+				<exercise>
+					<webwork source="Library/Mizzou/Algebra/log_eqns_convert_to_and_from_exp/log_to_exp_04.pg" />
+				</exercise> -->
+				
 
 			</exercisegroup>
 
@@ -552,6 +601,8 @@
 					<statement>
 					<p><m>{6}^{b}=c</m></p>
 					</statement>
+					<answer><p><m>{\mathrm{log}}_{6}\left(c\right)=b</m></p>
+					</answer>
 				</exercise>
 
 				<exercise>
@@ -566,39 +617,116 @@
 					<statement>
 					<p><m>{e}^{\frac{1}{2}}=\sqrt{e}</m></p>
 					</statement>
+					<answer><p><m>\mathrm{ln}\left(\sqrt{e}\right)=\frac{1}{2}</m></p>
+					</answer>
 				</exercise>
 
 				
 			</exercisegroup>
 
-			<exercisegroup cols="4">
+			<exercisegroup cols="2">
 					<introduction><p>For the following exercises, evaluate the logarithmic expression without using a calculator.</p></introduction>
 
 				<exercise>
+					<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextLimitedFraction.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("LimitedFraction");
+		                     $answer=Fraction(1,5);
+		                 </pg-code>
+		             </setup>
 					<statement>
-						<p><m>{\mathrm{log}}_{27}\left(\sqrt[5]{27}\right)</m></p>
+						<p><m>{\mathrm{log}}_{27}\left(\sqrt[5]{27}\right)=</m><var name="$answer" width="5"/></p>
 					</statement>
-					<answer><p><m>\frac{1}{5}</m></p>
-					</answer>
+				</webwork>
 				</exercise>
 
 				<exercise>
+					<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=-2;
+		                 </pg-code>
+		             </setup>
 					<statement>
-						<p><m>{\mathrm{log}}_{3}\left(\frac{1}{9}\right)</m></p>
+						<p><m>{\mathrm{log}}_{3}\left(\frac{1}{9}\right)=</m><var name="$answer" width="5"/></p>
+					</statement>
+				</webwork>
+				</exercise>
+
+				<exercise>
+					<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextLimitedFraction.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("LimitedFraction");
+		                     $answer=Fraction(1,3);
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p><m>{\mathrm{log}}_{8}\left(2\right)=</m><var name="$answer" width="5"/></p>
+					</statement>
+				</webwork>
+				</exercise>
+
+				<exercise>
+					<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=-3;
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p><m>{\mathrm{log}}_{4}\left(\frac{1}{64}\right)=</m><var name="$answer" width="5"/></p>
+					</statement>
+				</webwork>
+				</exercise>
+	
+			</exercisegroup>
+
+			<exercisegroup cols="2">
+					<introduction><p>For the following exercises, evaluate each expression using a calculator. Round to the nearest thousandth.</p></introduction>
+
+				<exercise>
+					<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=9.644;
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p><m>\mathrm{ln}\left(15{,}425\right) \approx</m><var name="'9.644'" width="5"/></p>
 					</statement>
 				</exercise>
 
 				<exercise>
+					<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=-0.2487;
+		                 </pg-code>
+		             </setup>
 					<statement>
-						<p><m>{\mathrm{log}}_{8}\left(2\right)</m></p>
-					</statement>
-					<answer><p><m>\frac{1}{3}</m></p>
-					</answer>
-				</exercise>
-
-				<exercise>
-					<statement>
-						<p><m>{\mathrm{log}}_{4}\left(\frac{1}{64}\right)</m></p>
+						<p><m>\mathrm{log}\left(0.564\right) \approx</m><var name="'-0.2487'" width="5"/></p>
 					</statement>
 				</exercise>
 
@@ -606,56 +734,77 @@
 			</exercisegroup>
 
 			<exercisegroup cols="2">
-					<introduction><p>For the following exercises, evaluate each expression using a calculator. Round to the nearest thousandth.</p></introduction>
-
-				<exercise>
-					<statement>
-						<p><m>\mathrm{ln}\left(15{,}425\right)</m></p>
-					</statement>
-					<answer><p><m>9.644</m></p>
-					</answer>
-				</exercise>
-
-				<exercise>
-					<statement>
-						<p><m>\mathrm{log}\left(0.564\right)</m></p>
-					</statement>
-				</exercise>
-
-				
-			</exercisegroup>
-
-			<exercisegroup cols="4">
+				<title>Using Change-of-Base Formula</title>
 				      <introduction><p>In the following exercises, use the Change-of-Base Formula to approximate each logarithm, rounding to three decimal places.</p></introduction>
 
-		     <exercise>
-			        <statement>
-				          <p><m>\mathrm{log}_{4}914</m></p>
-			        </statement>
-			        <answer><p><m>4.918</m></p>
-			        </answer>
-		      </exercise>
+		       <exercise>
+		     <webwork>
+		       <pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=4.918;
+		                 </pg-code>
+		             </setup>
+		           <statement>
+		             <p><m>\mathrm{log}_{4}914 \approx</m><var name="$answer" width="5"/></p>
+		           </statement>
+		       </webwork>
+		       </exercise>
 
-		      <exercise>
-			        <statement>
-				          <p><m>\mathrm{log}_{6}470</m></p>
-			        </statement>
-		      </exercise>
+		       <exercise>
+		     <webwork>
+		       <pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=3.434;
+		                 </pg-code>
+		             </setup>
+		           <statement>
+		             <p><m>\mathrm{log}_{6}470 \approx</m><var name="$answer" width="5"/></p>
+		           </statement>
+		       </webwork>
+		       </exercise>
 
-		      <exercise>
-			        <statement>
-				          <p><m>\mathrm{log}_{5}0.25</m></p>
-			        </statement>
-			        <answer><p><m>-0.861</m></p>
-			        </answer>
-		      </exercise>
-
-
-		      <exercise>
-			        <statement>
-				          <p><m>\mathrm{log}_{15}0.24</m></p>
+		        <exercise>
+		      <webwork>
+		        <pg-macros>
+		                  <macro-file>contextNumeric.pl</macro-file>
+		              </pg-macros>
+		              <setup>
+		                  <pg-code>
+		                      Context("Numeric");
+		                      $answer=-0.861;
+		                  </pg-code>
+		              </setup>
+		            <statement>
+		              <p><m>\mathrm{log}_{5}0.25 \approx</m><var name="$answer" width="5"/></p>
 		            </statement>
-	          </exercise>
+		        </webwork>
+		        </exercise>
+
+		          <exercise>
+		        <webwork>
+		          <pg-macros>
+		                    <macro-file>contextNumeric.pl</macro-file>
+		                </pg-macros>
+		                <setup>
+		                    <pg-code>
+		                        Context("Numeric");
+		                        $answer=-0.527;
+		                    </pg-code>
+		                </setup>
+		              <statement>
+		                <p><m>\mathrm{log}_{15}0.24 \approx</m><var name="$answer" width="5"/></p>
+		              </statement>
+		          </webwork>
+		          </exercise>
+		   
           </exercisegroup>
 
 	</exercises>

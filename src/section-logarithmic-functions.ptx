@@ -123,6 +123,8 @@
 				</ol></p></solution>
 		</example>
 
+		
+
 		<exercise>
 			<statement>
 				<p>Write the following exponential equations in logarithmic form.</p>
@@ -172,13 +174,26 @@
 				<p>Well, we know <m>4^3=64</m>. Therefore, <m>\mathrm{log}_{4}\left(64\right)=3</m>, so <m>y=3</m>.</p></solution>
 		</example>
 
+		
 		<exercise>
-			<statement>
-				<p>Solve <m>y=\mathrm{log}_{121}\left(11\right)</m> without using a calculator.</p></statement>
-			
-			<solution>
+					<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextLimitedFraction.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("LimitedFraction");
+		                     $answer=Fraction(1,2);
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p>Solve <m>y=\mathrm{log}_{121}\left(11\right)</m> without using a calculator.</p>
+						<p><m>y=</m><var name="$answer" width="5"/></p>
+					</statement>
+					<solution>
 				<p>Since <m>\sqrt{121}=(121)^{1/2}=11</m>, <m>y=\mathrm{log}_{121}\left(11\right)=\frac{1}{2}</m>.</p></solution>
-		</exercise>
+				</webwork>
+				</exercise>
 
 
 		<example><title>Solving the Logarithm of a Reciprocal</title>
@@ -194,14 +209,26 @@
 				Therefore, <m>y=\mathrm{log}_{3}\left(\frac{1}{27}\right)=-3</m>.</p>
 			</solution></example>
 
-
 			<exercise>
-			<statement>
-				<p>Solve <m>y=\mathrm{log}_{2}\left(\frac{1}{32}\right)</m> without using a calculator.</p></statement>
+					<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=-5;
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p>Solve <m>y=\mathrm{log}_{2}\left(\frac{1}{32}\right)</m> without using a calculator.</p>
+						<p><m>y=</m><var name="$answer" width="5"/></p>
+					</statement>
+					<solution>
+				<p><m>\frac{1}{32}=\frac{1}{2^{5}}=2^{-5}</m>. So, <m>\mathrm{log}_{2}\left(\frac{1}{32}\right)=-5</m></p></solution>
+				</webwork>
+				</exercise>
 			
-			<solution>
-				<p><m>y=\mathrm{log}_{2}\left(\frac{1}{32}\right)=-5</m>. So, <m>y=-5</m></p></solution>
-		</exercise>
 </subsection>
 
 <subsection><title>Using Common Logarithms</title>
@@ -261,14 +288,26 @@
 	</solution>
 	</example>
 
-
-	<exercise>
-			<statement>
-				<p>Solve <m>y=\mathrm{log}\left(1,000,000\right)</m> without using a calculator.</p></statement>
-			
-			<solution>
-				<p><m>y=\mathrm{log}\left(1,000,000\right)=6</m>.</p></solution>
-		</exercise>
+			<exercise>
+				<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=6;
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p>Solve <m>y=\mathrm{log}\left(1,000,000\right)</m> without using a calculator.</p>
+						<p><m>y=</m><var name="$answer" width="5"/></p>
+					</statement>
+					<solution>
+				<p><m>1,000,000=10^6</m>. So, <m>\mathrm{log}\left(1,000,000\right)=6</m>.</p></solution>
+				</webwork>
+			</exercise>
+	
 
 	<list><caption>How To Evaluate a Common Logarithmc Expression Using a Calculator</caption><p>Given a common logarithmic expression with the form <m>\mathrm{log}\left(x\right)</m>, to evaluate it using the calculator do the following:</p>
 		<ol label="1.">
@@ -293,12 +332,25 @@
 	</solution></example>
 
 		<exercise>
-			<statement>
-				<p>Evaluate <m>\mathrm{log}\left(123\right)</m>, using a calculator, and round to four decimal places.</p></statement>
-			
-			<solution>
-				<p><m>\mathrm{log}\left(123\right)\approx 2.0899</m>.</p></solution>
-		</exercise>
+				<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=2.0899;
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p>Evaluate <m>\mathrm{log}\left(123\right)</m>, using a calculator, and round to four decimal places.</p>
+						<p><m>y=</m><var name="$answer" width="5"/></p>
+					</statement>
+
+					
+				</webwork>
+			</exercise>
+		
 
 		<example><title>Rewriting and Solving a Real-World Exponential Model</title>
 			<statement>
@@ -320,12 +372,26 @@
 			</solution></example>
 
 			<exercise>
-			<statement>
-				<p>The amount of energy released from one earthquake was <m>8,500</m> times greater than the amount of energy realeased from another. The equation <m>10^x=8500</m> represents this situation, where <m>x</m> represents the difference in magnitudes on the Richter Scale. To the nearest thousandth, what was the difference in magnitudes?</p></statement>
+				<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=3.929;
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p>The amount of energy released from one earthquake was <m>8,500</m> times greater than the amount of energy realeased from another. The equation <m>10^x=8500</m> represents this situation, where <m>x</m> represents the difference in magnitudes on the Richter Scale. To the nearest thousandth, what was the difference in magnitudes?</p>
+						<p>The difference in magnitudes was about <var name="$answer" width="5"/></p>
+					</statement>
+					<solution>
+						<p><m>\mathrm{log}\left(8500\right)\approx 3.929</m></p>
+					</solution>
+				</webwork>
+			</exercise>
 			
-			<solution>
-				<p>The difference in magnitudes was about <m>3.929</m>.</p></solution>
-		</exercise>
 
 </subsection>
 
@@ -388,12 +454,22 @@
 			</solution></example>
 
 			<exercise>
-			<statement>
-				<p>Evaluate <m>\mathrm{ln}\left(0.123\right)</m>, using a calculator, and round to four decimal places.</p></statement>
-			
-			<solution>
-				<p><m>\mathrm{ln}\left(0.123\right)\approx -2.0956</m>.</p></solution>
-		</exercise>
+				<webwork>
+		       		<pg-macros>
+		                 <macro-file>contextNumeric.pl</macro-file>
+		             </pg-macros>
+		             <setup>
+		                 <pg-code>
+		                     Context("Numeric");
+		                     $answer=-2.0956;
+		                 </pg-code>
+		             </setup>
+					<statement>
+						<p>Evaluate <m>\mathrm{ln}\left(0.123\right)</m>, using a calculator, and round to four decimal places.</p>
+						<p><m>\mathrm{ln}\left(0.123\right)\approx</m> <var name="$answer" width="10"/></p>
+					</statement>
+				</webwork>
+			</exercise>
 
 	</subsection>
 
@@ -600,6 +676,7 @@
 		</exercise>
 
 		<exercise>
+			
 			<statement>
 				<p><m>{\mathrm{log}}_{6}\left(\sqrt{6}\right)</m></p>
 			</statement>
@@ -769,6 +846,6 @@
 	</exercisegroup>
 </exercises>
 
-<conclusion><p>This section is adapted from "Logarithmic Functions"<fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:31HNEpLH@1/Logarithmic-Functions" /></fn> by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn><url href="http://creativecommons.org/licenses/by/4.0" /></fn>/ A derivative from the original work "Logarithmic Functions"<fn><url href="https://cnx.org/contents/dGtL5139@10/Logarithmic-Functions" /></fn> by OpenStax, OpenStax CNX.</p></conclusion>
+<conclusion><p>This section is adapted from <pubtitle>"Logarithmic Functions"</pubtitle><fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:31HNEpLH@1/Logarithmic-Functions" /></fn> by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn><url href="http://creativecommons.org/licenses/by/4.0" /></fn>/ A derivative from the original work <pubtitle>"Logarithmic Functions"</pubtitle><fn><url href="https://cnx.org/contents/dGtL5139@10/Logarithmic-Functions" /></fn> by OpenStax, OpenStax CNX.</p></conclusion>
 
 </section>

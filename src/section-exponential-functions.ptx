@@ -422,42 +422,112 @@ The number <m>e</m> is like the number <m>\pi </m> in that we use a symbol to re
         </solution></example>
 
     <exercise>
+        <webwork>
+                    <pg-macros>
+                         <macro-file>contextCurrency.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Currency");
+                             $answer1=Currency(22332.96);
+                             $answer2=Currency(22362.49);
+                             $answer3=Currency(22377.37);
+                         </pg-code>
+                     </setup>
         <statement>
-            <p>Angela invested <m>\$15{,}000</m> in a savings account. If the interest rate is <m>4\%</m>, how much will be in the account in <m>10</m> years by each method of compounding?</p>
+            <p>Angela invested <m>\$15{,}000</m> in a savings account. If the interest rate is <m>4\%</m>, how much will be in the account in <m>10</m> years by each method of compounding? Round each answer to the nearest cent.</p>
 
             <ol label="a.">
-                <li>compound quarterly</li>
-                <li>compound monthly</li>
-                <li>compound continuously</li></ol>
+                <li>compound quarterly: $<var name="$answer1" width="10" /></li>
+                <li>compound monthly: $<var name="$answer2" width="10" /></li>
+                <li>compound continuously: $<var name="$answer3" width="10" /></li></ol>
 
         </statement>
         <solution>
             <ol label="a.">
-                <li><p><m>\$22{,}332.96</m></p></li>
-                <li><p><m>\$22{,}362.49</m></p></li>
-                <li><p><m>\$22{,}377.37</m></p></li>
+                <li><p>For compounding quarterly, <m>n=4</m>. Plugging this and <m>P=\$15{,}000</m>, <m>r=0.04</m>, and <m>t=10</m> into the compound interest formula, we have:<md>
+
+                    <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                    <mrow>\amp=\substitute{15000}\left(1+\frac{\substitute{0.04}}{\substitute{4}}\right)^{(\substitute{4}\cdot \substitute{10})}</mrow>
+                    <mrow>\amp=15000\left(1+\frac{0.04}{4}\right)^{40}</mrow>
+                    <mrow>\amp\approx \$22333</mrow></md>
+
+            </p></li>
+
+                <li><p>For compounding monthly, <m>n=12</m>. Plugging this and <m>P=\$15{,}000</m>, <m>r=0.04</m>, and <m>t=10</m> into the compound interest formula, we have:<md>
+
+                    <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                    <mrow>\amp=\substitute{15000}\left(1+\frac{\substitute{0.04}}{\substitute{12}}\right)^{(\substitute{12}\cdot \substitute{10})}</mrow>
+                    <mrow>\amp=15000\left(1+\frac{0.04}{12}\right)^{120}</mrow>
+                    <mrow>\amp\approx \$22362</mrow></md>
+                </p></li>
+
+                <li><p>For compounding continuously, we use the formula <m>A=Pe^{rt}</m>, and plug in <m>P=\$15{,}000</m>, <m>r=0.04</m>, and <m>t=10</m>. This gives us:<md>
+
+                    <mrow>A\amp=Pe^{rt}</mrow>
+                    <mrow>\amp=\substitute{15000}e^{(\substitute{0.04}\cdot \substitute{10})}</mrow>
+                    <mrow>\amp\approx \$22377</mrow></md>
+
+            </p></li>
             </ol>
         </solution>
+    </webwork>
     </exercise>
 
     <exercise>
+        <webwork>
+                    <pg-macros>
+                         <macro-file>contextCurrency.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Currency");
+                             $a=Currency(21071.81);
+                             $b=Currency(21137.04);
+                             $c=Currency(21170.00);
+                         </pg-code>
+                     </setup>
         <statement>
-            <p>Allan invested <m>\$10{,}000</m> in a mutual fund. If the interest rate is <m>5\%</m>, how much will be in the account in <m>15</m> years by each method of compounding?</p>
+            <p>Allan invested <m>\$10{,}000</m> in a mutual fund. If the interest rate is <m>5\%</m>, how much will be in the account in <m>15</m> years by each method of compounding? Round each answer to the nearest cent.</p>
 
             <ol label="a.">
-                <li>compound quarterly</li>
-                <li>compound monthly</li>
-                <li>compound continuously</li></ol>
+                <li>compound quarterly: <var name="$a" width="10" /></li>
+                <li>compound monthly: <var name="$b" width="10" /></li>
+                <li>compound continuously: <var name="$c" width="10" /></li></ol>
 
         </statement>
         <solution>
             <ol label="a.">
-                <li><p><m>\$21{,}071.81</m></p></li>
-                <li><p><m>\$21{,}137.04</m></p></li>
-                <li><p><m>\$21{,}170.00</m></p></li>
+                <li><p>For compounding quarterly, <m>n=4</m>. Plugging this and <m>P=\$10{,}000</m>, <m>r=0.05</m>, and <m>t=15</m> into the compound interest formula, we have:<md>
+
+                    <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                    <mrow>\amp=\substitute{10000}\left(1+\frac{\substitute{0.05}}{\substitute{4}}\right)^{(\substitute{4}\cdot \substitute{15})}</mrow>
+                    <mrow>\amp=10000\left(1+\frac{0.05}{4}\right)^{60}</mrow>
+                    <mrow>\amp\approx \$21072</mrow></md>
+
+            </p></li>
+
+                <li><p>For compounding monthly, <m>n=12</m>. Plugging this and <m>P=\$10{,}000</m>, <m>r=0.05</m>, and <m>t=15</m> into the compound interest formula, we have:<md>
+
+                    <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                    <mrow>\amp=\substitute{10000}\left(1+\frac{\substitute{0.05}}{\substitute{12}}\right)^{(\substitute{12}\cdot \substitute{15})}</mrow>
+                    <mrow>\amp=10000\left(1+\frac{0.05}{12}\right)^{180}</mrow>
+                    <mrow>\amp\approx \$21137</mrow></md>
+                </p></li>
+
+                <li><p>For compounding continuously, we use the formula <m>A=Pe^{rt}</m>, and plug in <m>P=\$10{,}000</m>, <m>r=0.05</m>, and <m>t=15</m>. This gives us:<md>
+
+                    <mrow>A\amp=Pe^{rt}</mrow>
+                    <mrow>\amp=\substitute{10000}e^{(\substitute{0.05}\cdot \substitute{15})}</mrow>
+                    <mrow>\amp\approx \$21170</mrow></md>
+
+            </p></li>
             </ol>
         </solution>
+    </webwork>
     </exercise>
+
+    
 
 </paragraphs>
 
@@ -482,7 +552,7 @@ The number <m>e</m> is like the number <m>\pi </m> in that we use a symbol to re
             <table>
                 <tabular>
                     <row>
-                        <cell halign="left">Identify the values of each variable in the formulas.</cell>
+                        <cell halign="left">Identify the values of each variable in the formula.</cell>
                         <cell><m>A=\text{ ?}</m></cell>
                     </row>
                     <row>
@@ -523,26 +593,69 @@ The number <m>e</m> is like the number <m>\pi </m> in that we use a symbol to re
 
 </solution></example>
 
-<exercise>
-    <statement>
-        <p>Another researcher at the Center for Disease Control and Prevention, Lisa, is studying the growth of a bacteria. She starts his experiment with <m>50</m> of the bacteria that grows at a rate of <m>15\%</m> per hour. He will check on the bacteria every <m>8</m> hours. How many bacteria will he find in <m>8</m> hours?</p>
-    </statement>
+    <exercise>
+        <webwork>
+                    <pg-macros>
+                         <macro-file>contextNumeric.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Numeric");
+                             $answer=166;
+                             
+                         </pg-code>
+                     </setup>
+        <statement>
+        <p>Another researcher at the Center for Disease Control and Prevention, Lisa, is studying the growth of a bacteria. She starts his experiment with <m>50</m> of the bacteria that grows at a rate of <m>15\%</m> per hour. She will check on the bacteria every <m>8</m> hours. How many bacteria will she find in <m>8</m> hours?</p>
 
-    <solution>
-        <p>She will find <m>166</m> bacteria.</p>
+        <p>She will find <var name="$answer" width="5" /> bacteria.</p>
+        </statement>
 
-    </solution>
+        <solution>
+        <p>First, we identify the values of each variable: <m>A_{0}=50</m>, <m>r=0.15\text{/hour}</m>, and <m>t=8\text{ hours}</m>.</p>
 
-</exercise>
+        <p>Next, we substitute these values into the formula and simplify, <m>A=A_{0}e^{rt}</m>: <md>
+                <mrow>A\amp=A_{0}e^{rt}</mrow>
+                <mrow>\amp=\substitute{50}e^{\substitute{0.15}\cdot \substitute{8}}</mrow>
+                <mrow>\amp\approx 166\text{ bacteria}</mrow></md> 
+        </p>
 
-<exercise >
-    <statement>
+        </solution>
+        </webwork>
+    </exercise>
+
+    <exercise>
+        <webwork>
+                    <pg-macros>
+                         <macro-file>contextNumeric.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Numeric");
+                             $answer=1102;
+                             
+                         </pg-code>
+                     </setup>
+        <statement>
         <p>Maria, a biologist is observing the growth pattern of a virus. She starts with <m>100</m> of the virus that grows at a rate of <m>10\%</m> per hour. She will check on the virus in <m>24</m> hours. How many viruses will she find?</p>
-    </statement>
 
-    <solution>
-        <p>She will find <m>1,102</m> viruses.</p>
-    </solution></exercise>
+        <p>She will find <var name="$answer" width="5" /> viruses.</p>
+        </statement>
+
+        <solution>
+        <p>First, we identify the values of each variable: <m>A_{0}=100</m>, <m>r=0.10\text{/hour}</m>, and <m>t=24\text{ hours}</m>.</p>
+
+        <p>Next, we substitute these values into the formula and simplify, <m>A=A_{0}e^{rt}</m>: <md>
+                <mrow>A\amp=A_{0}e^{rt}</mrow>
+                <mrow>\amp=\substitute{100}e^{\substitute{0.10}\cdot \substitute{24}}</mrow>
+                <mrow>\amp\approx 1102\text{ viruses}</mrow></md> 
+        </p>
+
+        </solution>
+        </webwork>
+    </exercise>
+
+
 
 </paragraphs>
 
@@ -843,81 +956,179 @@ The number <m>e</m> is like the number <m>\pi </m> in that we use a symbol to re
         <introduction><p>In the following exercises, use an exponential model to solve.</p></introduction>
 
         <exercise>
-            <statement>
-                <p>Edgar accumulated <m>\$5,000</m> in credit card debt. If the interest rate is <m>20\%</m> per year, and he does not make any payments for 2 years, how much will he owe on this debt in 2 years by each method of compounding?
+                    <webwork>
+                    <pg-macros>
+                         <macro-file>contextCurrency.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Currency");
+                             $answer1=Currency(7387.28);
+                             $answer2=Currency(7434.57);
+                             $answer3=Currency(7459.12);
+
+                             
+                         </pg-code>
+                     </setup>
+                     <statement>
+                    <p>Edgar accumulated <m>\$5,000</m> in credit card debt. If the interest rate is <m>20\%</m> per year, and he does not make any payments for 2 years, how much will he owe on this debt in 2 years by each method of compounding?
                     <ol label="a.">
-                        <li><p>compound quarterly</p></li>
-                        <li><p>compound monthly</p></li>
-                        <li><p>compound continuously</p></li>
+                        <li><p>compound quarterly: <var name="$answer1" width="10" /></p></li>
+                        <li><p>compound monthly: <var name="$answer2" width="10" /></p></li>
+                        <li><p>compound continuously: <var name="$answer3" width="10" /></p></li>
                     </ol>
                 </p>
             </statement>
-            <answer>
-                <ol label="a.">
-                    <li><m>\$7,387.28</m></li>
-                    <li><m>\$7,434.57</m></li>
-                    <li><m>\$7,459.12</m></li>
-                </ol>
-            </answer>
-        </exercise>
+                    </webwork>
+                </exercise>
+
 
         <exercise>
+            <webwork>
+                    <pg-macros>
+                         <macro-file>contextCurrency.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Currency");
+                             $answer1=Currency(21768.22);
+                             $answer2=Currency(21832.76);
+                             $answer3=Currency(21865.43);
+
+                             
+                         </pg-code>
+                     </setup>
             <statement>
                 <p>Cynthia invested <m>\$12,000</m> in a savings account. If the interest rate is <m>6\%,</m> how much will be in the account in <m>10</m> years by each method of compounding?
                      <ol label="a.">
-                        <li><p>compound quarterly</p></li>
-                        <li><p>compound monthly</p></li>
-                        <li><p>compound continuously</p></li>
+                        <li><p>compound quarterly: <var name="$answer1" width="10" /></p></li>
+                        <li><p>compound monthly: <var name="$answer2" width="10" /></p></li>
+                        <li><p>compound continuously: <var name="$answer3" width="10" /></p></li>
                     </ol>
                 </p>
             </statement>
+        </webwork>
         </exercise>
 
         <exercise>
+            <webwork>
+                    <pg-macros>
+                         <macro-file>contextCurrency.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Currency");
+                             $answer1=Currency(36945.28);                      
+                         </pg-code>
+                     </setup>
             <statement>
                 <p>Rochelle deposits <m>\$5,000</m> in an IRA. What will be the value of her investment in <m>25</m> years if the investment is earning <m>8\%</m> per year and is compounded continuously?</p>
+                <p>The value of her investment will be <var name="$answer1" width="10" />.</p>
             </statement>
-            <answer><p><m>\$36,945.28</m></p>
-            </answer>
+        </webwork>
         </exercise>
 
         <exercise>
+            <webwork>
+                    <pg-macros>
+                         <macro-file>contextCurrency.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Currency");
+                             $answer1=Currency(14512.15);                      
+                         </pg-code>
+                     </setup>
             <statement>
                 <p>Nazerhy deposits <m>\$8,000</m> in a certificate of deposit. The annual interest rate is <m>6\%</m> and the interest will be compounded quarterly. How much will the certificate be worth in <m>10</m> years?</p>
+            <p>His certificate will be worth <var name="$answer1" width="10" />.</p>
             </statement>
+        </webwork>
         </exercise>
 
         <exercise>
-            <statement>
-                <p>A researcher at the Center for Disease Control and Prevention is studying the growth of a bacteria. He starts his experiment with <m>100</m> of the bacteria that grows at a rate of <m>6\%</m> per hour. He will check on the bacteria every <m>8</m> hours. How many bacteria will he find in <m>8</m> hours?</p>
-            </statement>
-            <answer><p><m>162</m> bacteria</p>
-            </answer>
-        </exercise>
+        <webwork>
+                    <pg-macros>
+                         <macro-file>contextNumeric.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Numeric");
+                             $answer=162;
+                             
+                         </pg-code>
+                     </setup>
+        <statement>
+        <p>A researcher at the Center for Disease Control and Prevention is studying the growth of a bacteria. He starts his experiment with <m>100</m> of the bacteria that grows at a rate of <m>6\%</m> per hour. He will check on the bacteria every <m>8</m> hours. How many bacteria will he find in <m>8</m> hours?</p>
+
+        <p>He will find <var name="$answer" width="10" /> bacteria.</p>
+        </statement>
+        </webwork>
+    </exercise>
 
         <exercise>
-            <statement>
-                <p>A biologist is observing the growth pattern of a virus. She starts with <m>50</m> of the virus that grows at a rate of <m>20\%</m> per hour. She will check on the virus in <m>24</m> hours. How many viruses will she find?</p>
-            </statement>
-        </exercise>
+        <webwork>
+                    <pg-macros>
+                         <macro-file>contextNumeric.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Numeric");
+                             $answer=6076;
+                             
+                         </pg-code>
+                     </setup>
+        <statement>
+        <p>A biologist is observing the growth pattern of a virus. She starts with <m>50</m> of the virus that grows at a rate of <m>20\%</m> per hour. She will check on the virus in <m>24</m> hours. How many viruses will she find?</p>
+
+        <p>She will find <var name="$answer" width="10" /> viruses.</p>
+        </statement>
+        </webwork>
+    </exercise>
+    
 
         <exercise>
+            <webwork>
+                    <pg-macros>
+                         <macro-file>contextNumeric.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Numeric");
+                             $answer=288929825;
+                             
+                         </pg-code>
+                     </setup>
             <statement>
                 <p>In the last ten years the population of Indonesia has grown at a rate of <m>1.12\%</m> per year to <m>258,316,051</m>. If this rate continues, what will be the population in <m>10</m> more years?</p>
+                <p>The population will be <var name="$answer" width="15" />.</p>
             </statement>
-            <answer><p><m>288,929,825</m></p>
-            </answer>
+            </webwork>
         </exercise>
 
         <exercise>
+            <webwork>
+                    <pg-macros>
+                         <macro-file>contextNumeric.pl</macro-file>
+                     </pg-macros>
+                     <setup>
+                         <pg-code>
+                             Context("Numeric");
+                             $answer=225206961;
+                             
+                         </pg-code>
+                     </setup>
             <statement>
                 <p>In the last ten years the population of Brazil has grown at a rate of <m>0.9\%</m> per year to <m>205,823,665</m>. If this rate continues, what will be the population in <m>10</m> more years?</p>
+
+            <p>The population will be <var name="$answer" width="15" />.</p>
             </statement>
+            </webwork>
         </exercise>
     </exercisegroup>
 
 </exercises>
 
-<conclusion><p>This section is adapted from "Evaluate and Graph Exponential Functions"<fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:o8YqDl8U@1/Evaluate-and-Graph-Exponential-Functions" /></fn> by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn><url href="http://creativecommons.org/licenses/by/4.0" /></fn>/ A derivative from the original work "Evaluate and Graph Exponential Functions"<fn><url href="https://cnx.org/contents/raRoCxSU@3/Evaluate-and-Graph-Exponential-Functions" /></fn> by OpenStax, OpenStax CNX.</p></conclusion>
+<conclusion><p>This section is adapted from <pubtitle>"Evaluate and Graph Exponential Functions"</pubtitle><fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:o8YqDl8U@1/Evaluate-and-Graph-Exponential-Functions" /></fn> by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn><url href="http://creativecommons.org/licenses/by/4.0" /></fn>/ A derivative from the original work <pubtitle>"Evaluate and Graph Exponential Functions"</pubtitle><fn><url href="https://cnx.org/contents/raRoCxSU@3/Evaluate-and-Graph-Exponential-Functions" /></fn> by OpenStax, OpenStax CNX.</p></conclusion>
 
 </section>
