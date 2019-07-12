@@ -112,10 +112,7 @@
       </p>
 
       <p>
-        So <m>7</m><nbsp/>inches is equal to <m>17.78</m><nbsp/>centimeters.
-        In practice, anyone talking about the rise of a stair might simply round to
-        <quantity><mag>18</mag><unit prefix="centi" base="meter"/></quantity>.
-      </p>
+        So <m>7</m><nbsp/>inches is equal to <m>17.78</m><nbsp/>centimeters.</p>
 
       <p>
         Note there was another unit ratio relating inches and centimeters, namely <m>\frac{1\,\text{in}}{2.54\,\text{cm}}</m>, but using that would not have been helpful,
@@ -156,7 +153,7 @@
 
       <p>
         <xref ref="appendix-unit-conversions">Appendix</xref> tells us that
-        <quantity><mag>1</mag><unit base="fluidounce"/></quantity> is (almost) equal to
+        <quantity><mag>1</mag><unit base="fluidounce"/></quantity> is (approximately) equal to
         <quantity><mag>29.57</mag><unit prefix="milli" base="liter"/></quantity>.
         Knowing that, we can build the unit ratios <m>\frac{1\,\text{fl}\,\text{oz}}{29.57\,\text{mL}}</m>
         and <m>\frac{29.57\,\text{mL}}{1\,\text{fl}\,\text{oz}}</m>. Each of these unit ratios are (almost) equivalent to <m>1</m>
@@ -196,7 +193,7 @@
       <statement>
         <p>
           It's <m>1760</m> feet (<quantity><mag>1760</mag><unit base="foot"/></quantity>) to walk from Jonah's house to where he works.
-          How many miles is that?
+          How many miles is that? (Note that, unlike the previous examples, this conversion stays strictly within the American or Imperial System.)
         </p>
       </statement>
       <solution>
@@ -391,7 +388,7 @@
           In <xref ref="appendix-unit-conversions">Appendix</xref>,
           there is not a conversion that relates yards to miles.
           But notice that we can convert yards to feet (using the fact that one yard is three feet)
-          and then we can convert feet to miles (using the fact that one mile is <m>5280</m> feet).
+          and then we can convert feet to miles (using the fact that there are <m>5280</m> feet in one mile).
           So we will use two unit ratios.
           The unit ratio <m>\frac{3\,\text{ft}}{1\,\text{yd}}</m> can be used
           to cancel the yards in <quantity><mag>350</mag><unit base="yard"/></quantity>.
@@ -589,7 +586,7 @@
           <mrow>\amp=\frac{153}{9}\,\text{yd}\cdot\text{yd}\amp\amp\text{Divide and simplify.}</mrow>
           <mrow>\amp=17\,\text{yd}^2</mrow>
         </md>
-        So Jin's bedroom has <m>17</m> square yards of area.
+        So Jin's bedroom has an area of <m>17</m> square yards.
       </p>
       <p>
         Alternatively, we can set up conversions with squared or cubed units this way:
@@ -797,7 +794,7 @@
     <title>Converting Rates</title>
 
     <p>
-      A rate unit has a numerator and a denominator. For example, speed is a rate, and speed can be measured in
+      A rate unit has a numerator and a denominator. For example, speed is a rate, and one way speed can be measured is in
       <quantity><unit base="mile"/><per base="hour"/></quantity>.
       The numerator unit is a mile and the denominator unit is an hour.
     </p>
@@ -2575,7 +2572,7 @@
                 $digits = list_random(2,3);
                 $decimals = random(0,$digits-1,1);
                 $a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
-                $numunitsin = list_random('acro','ft^2','mi^2','ha','m^2','km^2');
+                $numunitsin = list_random('acre','ft^2','mi^2','ha','m^2','km^2');
                 $numunitsout = list_random(lex_sort(keys %{$ORCCAconversions{$numunitsin}}));
                 $denunitsin = list_random('wk','d','h','min','s','ms','ns');
                 $denunitsout = list_random(lex_sort(keys %{$ORCCAconversions{$denunitsin}}));
@@ -2650,7 +2647,7 @@
                 $digits = list_random(2,3);
                 $decimals = random(0,$digits-1,1);
                 $a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
-                $numunitsin = list_random('acro','ft^2','mi^2','ha','m^2','km^2');
+                $numunitsin = list_random('acre','ft^2','mi^2','ha','m^2','km^2');
                 $numunitsout = list_random(lex_sort(keys %{$ORCCAconversions{$numunitsin}}));
                 $denunitsin = list_random('wk','d','h','min','s','ms','ns');
                 $denunitsout = list_random(lex_sort(keys %{$ORCCAconversions{$denunitsin}}));
@@ -3324,7 +3321,7 @@
       </exercise>
     </exercisegroup>
 
-    <exercisegroup cols="3">
+    <exercisegroup cols="2">
       <title>Applications</title>
       <!-- carpeting -->
       <exercise>
@@ -3714,7 +3711,7 @@
           <statement>
             <p>
               The algae in a pond is growing at a rate of <m><var name="$rateU"/></m>.
-              How much algae is in the poind after <m><var name="$weeks"/></m> weeks?
+              How much algae is in the pond after <m><var name="$weeks"/></m> weeks?
             </p>
             <p>
               <var name="$kilogramsU" width="20"/>
@@ -3743,7 +3740,7 @@
           <statement>
             <p>
               The algae in a pond is growing at a rate of <m><var name="$rateU"/></m>.
-              How much algae is in the poind after <m><var name="$weeks"/></m> weeks?
+              How much algae is in the pond after <m><var name="$weeks"/></m> weeks?
             </p>
             <p>
               <var name="$kilogramsU" width="20"/>
