@@ -20,9 +20,21 @@
         <definition xml:id="definition-rational-function">
             <title>Rational Function</title>
             <statement>
-                <p>A <term>rational function</term> <m>f</m> is a function in the form <me>f(x)=\frac{P(x)}{Q(x)}</me>where <m>P</m> and <m>Q</m> are polynomial functions, but <m>Q</m> is not the constant zero function.<idx><h>rational function</h><h></h></idx></p>
+                <p>A <term>rational function</term> <m>f</m> is a function in the form <me>f(x)=\frac{P(x)}{Q(x)}</me>where <m>P</m> and <m>Q</m> are <term>polynomial</term> functions, but <m>Q</m> is not the constant zero function.<idx><h>rational function</h><h></h></idx></p>
             </statement>
         </definition>
+
+        <example><p>The following functions are examples of rational functions.</p>
+
+            <sidebyside valign="bottom">
+                <p><me>f(x)=\frac{3x-5}{4x^2+7x-1}</me></p>
+                <p><me>g(x)=\frac{2}{x+5}</me></p>
+                <p><me>h(x)=\frac{5x^2-8x+9}{3x^3+2x^2-4x+10}</me></p>
+            </sidebyside>
+
+        <p>Notice that each of these functions is the result of dividing a polynomial expression, which can include a constant, by another polynomial expression (except for zero). This is what makes each of them a rational function.</p>
+        </example>
+
 
 <!--TODO: This isn't rendering properly-->
         <exercise>
@@ -61,13 +73,13 @@
                             <p><m>Q</m> defined by <m>Q(x)=\frac{5x^2+3\sqrt{x}}{2x}</m> is not a rational function because the numerator contains <m>\sqrt{x}</m> and is therefore not a polynomial.</p>
                         </li>
                         <li>
-                            <p><m>g</m> defined by <m>g(t)=\frac{t\sqrt{5} -t^3}{2t+1}</m> is a rational function as its formula is a polynomial divided by another polynomial.</p>
+                            <p><m>g</m> defined by <m>g(t)=\frac{t\sqrt{5} -t^3}{2t+1}</m> is a rational function as its formula is a polynomial divided by another polynomial. Note that <m>\sqrt{5}</m> is simply a real number coefficient, which is allowed in polynomial expressions.</p>
                         </li>
                         <li>
-                            <p><m>P</m> defined by <m>P(x)=\frac{5x+3}{\abs{2x+1}}</m> is not a rational function because the denominator contains the absolute value of an expression with variables in it.</p>
+                            <p><m>P</m> defined by <m>P(x)=\frac{5x+3}{\abs{2x+1}}</m> is not a rational function because the denominator contains the absolute value of an expression with variables in it, which is not a polynomial expression.</p>
                         </li>
                         <li>
-                            <p><m>h</m> defined by <m>h(x)=\frac{3^x+1}{x^2+1}</m> is not a rational function because the numerator contains <m>3^x</m>, which has a variable in the exponent.</p>
+                            <p><m>h</m> defined by <m>h(x)=\frac{3^x+1}{x^2+1}</m> is not a rational function because the numerator contains <m>3^x</m>, which has a variable in the exponent and thus cannot be a polynomial expression.</p>
                         </li>
                     </ol></p>
                 </solution>
@@ -77,14 +89,16 @@
 <subsection>
     <title>Finding the Domain of a Rational Function</title>
 
-        <p>Since a rational function is the quotient of two polynomials, there is a possibility that there will be division by zero, which will make the rational expression undefined. This will occur whenever the polynomial in the denominator is equal to zero. Thus, the domain of a rational function will be restricted to all real numbers except for any values of the variable which will make the denominator undefined.</p>
+        <p>Recall that the domain of a function is the collection of all <em>valid</em> input values for that function. Since a rational function is the quotient of two polynomials, there is a possibility that there will be division by zero, which will make the rational expression undefined. This will occur whenever the polynomial in the denominator is equal to zero.</p>
+
+        <p>Thus, the domain of a rational function will be restricted to all real numbers except for any values of the variable which will make the denominator equal to zero. Hence, to find the domain of a rational function we need only set the denominator equal to zero and then solve the resulting equation. That will tell us which values of the variable to eliminate from the set of real numbers, to give us the domain.</p>
 
         <example xml:id="example-introduction-to-rational-functions">
-            <statement>
+           
                 <p>Let <m>f</m> be a function where <m>f(x)=\frac{1}{x-2}</m>. Find the function's domain.</p>
-                </statement>
+                
 
-               <solution> <p>By setting the denominator, <m>x-2</m>, equal to zero and solving that equation, we obtain a solution of <m>x=2</m>. This tells us that <m>x=2</m> makes the denominator <m>0</m>, so the function will be undefined for <m>x=2</m>. Therefore, the domain of function <m>f</m> is all real numbers except <m>x=2</m>. In set-builder notation, the domain is <m>\left\{x \mid x\ne2\right\}</m>.</p></solution> 
+              <p>By setting the denominator, <m>x-2</m>, equal to zero and solving that equation, we obtain a solution of <m>x=2</m>. This tells us that <m>x=2</m> makes the denominator <m>0</m>, so the function will be undefined for <m>x=2</m>. Therefore, the domain of function <m>f</m> is all real numbers except <m>x=2</m>. In set-builder notation, the domain is <m>\left\{x \mid x\ne2\right\}</m>.</p>
 
           
           </example>     
@@ -92,20 +106,20 @@
                
  
         <example>
-            <statement>
+           
                 <p>Algebraically find the domain of <m>g(x)=\frac{3x^2}{x^2-2x-24}</m>.</p>
-            </statement>
-            <solution>
+            
+           
                 <p>To find a rational function's domain, we set the denominator equal to <m>0</m> and solve:<md>
                     <mrow>x^2-2x-24\amp=0</mrow>
                     <mrow>(x-6)(x+4)\amp=0</mrow></md><md>
                     <mrow>x-6\amp=0\amp\text{or}\amp\amp x+4\amp=0</mrow>
                     <mrow>x\amp=6\amp\text{or}\amp\amp x\amp=-4</mrow>
-                </md>Since <m>x=6</m> and <m>x=-4</m> will cause the denominator to be <m>0</m>, they are excluded from the domain. The function's domain is <m>\left\{x \mid x\ne6, x\ne-4\right\}</m>. </p>
-
-            </solution>
+                </md>Since <m>x=6</m> and <m>x=-4</m> will cause the denominator to be <m>0</m>, they are excluded from the domain. The function's domain is <m>\left\{x \mid x\ne6, x\ne-4\right\}</m>.</p>
+           
         </example>
-</subsection>
+
+ </subsection>
  <subsection>
         <title>Simplifying Rational Expressions</title>
 
@@ -128,7 +142,7 @@
                 </md></p>
             </sidebyside>
 
-        <remark><p>
+        <remark><title>Adding Domain Restrictions</title><p>
             The statement <q>for <m>x\neq -7</m></q> was added when the factor of <m>x+7</m> was canceled from both the numerator and denominator. This is because <m>\frac{(x+2)(x+7)}{(x+3)(x+7)}</m> was undefined where <m>x=-7</m>, so the simplified version must also be undefined for <m>x=-7</m>.
         </p></remark>
 
@@ -157,7 +171,7 @@
         </example>
 
         <warning><p>
-            When simplifying the function <m>Q</m> in <xref ref="example-simplify-rational-function-simple">Example</xref>, we cannot simply write <m>Q(x)=\frac{3}{x+5}</m>. The reason is that this would result in our simplified version of the function <m>Q</m> having a different domain than the original <m>Q</m>. More specifically, for our original function <m>Q</m> it held that <m>Q(4)</m> was undefined, and this still needs to be true for the simplified form of <m>Q</m>.
+            When simplifying the function <m>Q</m> in <xref ref="example-simplify-rational-function-simple">Example</xref>, we cannot simply write <m>Q(x)=\frac{3}{x+5}</m>. The reason is that this would result in our simplified version of the function <m>Q</m> having a different domain than the original <m>Q</m>. More specifically, for our original function <m>Q</m>, it held that <m>Q(4)</m> was undefined, and this still needs to be true for the simplified form of <m>Q</m>.
         </p></warning>
 
 
@@ -175,7 +189,7 @@
                     <mrow>\amp=-\frac{1}{y-1}, \text{ for }y\neq 0, y\neq -\frac{1}{2}</mrow>
                 </md>
             </p>
-            <p>The domain of this function will incorporate the explicit restrictions <m>y\neq 0, y\neq -\frac{1}{2}</m> that were stated when the factors of <m>y</m> and <m>2y+1</m> were canceled from both the numerator and denominator. Since the factor <m>y-1</m> is still in the denominator, we also need the restriction that <m>y\neq 1</m>. Therefore, the domain of <m>R</m> is <m>\left\{y\mid y\neq -\frac{1}{2},0,1\right\}</m>.</p>
+            <p>The domain of this function will incorporate the explicit restrictions <m>y\neq 0, y\neq -\frac{1}{2}</m> that were stated when the factors of <m>y</m> and <m>2y+1</m> were canceled from both the numerator and denominator. Since the factor <m>y-1</m> is still in the denominator, we also need the restriction that <m>y\neq 1</m>, but only when stating the domain of <m>R</m>. Therefore, the domain of <m>R</m> is <m>\left\{y\mid y\neq -\frac{1}{2},0,1\right\}</m>.</p>
             </solution>
         </example>
 
@@ -222,10 +236,10 @@
                 <p>To simplify this rational function, we'll first note that both the numerator and denominator have four terms. To factor them we'll need to use factoring by grouping. (Note that if this technique didn't work, very few other approaches would be possible.) Once we've used factoring by grouping, we'll cancel any factors common to both the numerator and denominator and state the associated restrictions.
                     <md>
                         <mrow>f(x)\amp=\frac{8x^3-12x^2+8x-12}{2x^3-3x^2+10x-15}</mrow>
-                        <mrow>f(x)\amp=\frac{4(2x^3-3x^2+2x-3)}{2x^3-3x^2+10x-15}</mrow>
-                        <mrow>f(x)\amp=\frac{4(x^2(2x-3)+(2x-3))}{x^2(2x-3)+5(2x-3)}</mrow>
-                        <mrow>f(x)\amp=\frac{4\cancelhighlight{(2x-3)}(x^2+1)}{\cancelhighlight{(2x-3)}(x^2+5)}</mrow>
-                        <mrow>f(x)\amp=\frac{4(x^2+1)}{x^2+5}, \text{ for }x\neq \frac{3}{2}</mrow>
+                        <mrow>\amp=\frac{4(2x^3-3x^2+2x-3)}{2x^3-3x^2+10x-15}</mrow>
+                        <mrow>\amp=\frac{4(x^2(2x-3)+(2x-3))}{x^2(2x-3)+5(2x-3)}</mrow>
+                        <mrow>\amp=\frac{4\cancelhighlight{(2x-3)}(x^2+1)}{\cancelhighlight{(2x-3)}(x^2+5)}</mrow>
+                        <mrow>\amp=\frac{4(x^2+1)}{x^2+5}, \text{ for }x\neq \frac{3}{2}</mrow>
                     </md>
                 </p>
                 <p>In determining the domain of this function, we'll need to account for any implicit and explicit restrictions. When the factor <m>2x-3</m> was canceled, the explicit statement of <m>x\neq \frac{3}{2}</m> was given. The denominator in the final simplified form of this function has <m>x^2+5</m>. There is no value of <m>x</m> for which <m>x^2+5=0</m>, so the only restriction is that <m>x\neq \frac{3}{2}</m>. Therefore, the domain is <m>\left\{ x\mid x\neq \frac{3}{2}\right\}</m>.</p>
@@ -234,13 +248,13 @@
 
         <example>
             <statement>
-                <p>Simplify the expression <m>\frac{3y-x}{x^2-xy-6y^2}</m>.</p>
+                <p>Simplify the expression <m>\frac{3y-x}{x^2-xy-6y^2}</m>. (In this example, there are two variables. It is still possible that in examples like this, there can be domain restrictions when simplifying rational expressions. However, since we are not studying functions of more than one variable, this textbook ignores domain restrictions with examples containing more than one variable like this one.)</p>
             </statement>
             <solution>
                 <p><md>
-                    <mrow>\frac{3y-x}{x^2-xy-6y^2}\amp=\frac{-\cancelhighlight{(x-3y)}}{\cancelhighlight{(x-3y)}(x+2y)}</mrow>
-                    <mrow>\amp=\frac{-1}{x+2y}, \text{ for } x\neq 3y</mrow>
-                    <mrow>\amp=-\frac{1}{x+2y}, \text{ for } x\neq 3y</mrow>
+                    <mrow>\frac{3y-x}{x^2-xy-6y^2}\amp=\frac{-1\cancelhighlight{(x-3y)}}{\cancelhighlight{(x-3y)}(x+2y)}</mrow>
+                    <mrow>\amp=\frac{-1}{x+2y}</mrow>
+                    <mrow>\amp=-\frac{1}{x+2y}</mrow>
                 </md></p>
                 <p> Note that the expressions <m>3y-x</m> and <m>x-3y</m> are opposites, since they differ by a factor of <m>-1</m>. Binomials that are opposites can be easily identified as being of the form <m>a-b</m> and <m>b-a</m>. By factoring out a factor of <m>-1</m>, this enables us to identify a common factor that can be cancelled, which is what we did in the first step.</p>
             </solution>
