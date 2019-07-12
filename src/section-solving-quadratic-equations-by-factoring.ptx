@@ -82,7 +82,7 @@
         <p>Now we'll look at an application that demonstrates the need and method for solving a quadratic equation by factoring.</p>
 
         <sidebyside widths="47% 47%" margins="0%">
-            <p>Nita is in a physics class that launches a tennis ball from a rooftop <m>80</m> feet above the ground. They fire it directly upward at a speed of <m>64</m> feet per second and measure the time it takes for the ball to hit the ground below. We can model the height of the tennis ball, <m>h</m>, in feet, with the quadratic equation <me>h=-16t^2+64t+80</me>, where <m>t</m> represents the time in seconds after the launch. Using the model we can predict when the ball will hit the ground.</p>
+            <p>Nita is in a physics class that launches a tennis ball from a rooftop <m>80</m> feet above the ground. They fire it upward, but at an angle, at a speed of <m>64</m> feet per second and measure the time it takes for the ball to hit the ground below. We can model the height of the tennis ball, <m>h</m>, in feet, with the quadratic equation <me>h=-16t^2+64t+80</me>, where <m>t</m> represents the time in seconds after the launch. Using the model we can predict when the ball will hit the ground.</p>
 
             <figure xml:id="figure-ball-thrown-diagram">
                 <caption>A Diagram of the Ball Thrown from the Roof</caption>
@@ -260,6 +260,13 @@
             </solution>
         </example>
 
+        <p>Try a similar exercise.</p>
+
+        <exercise>
+            <webwork source="Library/PCC/BasicAlgebra/Factoring/factoring210.pg" />
+                
+        </exercise>
+
         <p>So far the equations have been written in standard form, which is <me>ax^2+bx+c=0</me>If an equation is not given in standard form then we must rearrange it in order to use the <xref ref="fact-zero-product-property" text="title" />.</p>
 
         <example>
@@ -349,12 +356,29 @@
         </example>
     </subsection>
 
-    <subsection>
+    <subsection xml:id="applications-of-quadratics-and-factoring">
         <title>Applications</title>
+        <example><title>Throwing a Ball</title>
+                <p>A ball is thrown upward and follows a parabolic path modeled by the equation <m>h=-16t^2+80t+6</m>, where <m>h</m> represents the height of the ball, in feet, <m>t</m> seconds after it has been thrown. How long will it take for the ball to reach a height of <m>70</m> feet?</p>
+
+                <p>To solve this problem, we start by replacing the <m>h</m> in the equation with <m>70</m>:
+                                <me>70=-16t^2+80t+6</me>
+
+                This gives us a quadratic equation to solve. The first step to solve this equation is to get the equation into standard form by subtracting <m>70</m> from both sides to get zero on one side. Then, we can factor the other side and apply the zero product property.<md>
+
+                        <mrow>70\subtractright{70}\amp=-16t^2+80t+6\subtractright{70}</mrow>
+                        <mrow>0\amp=-16t^2+80t-64</mrow>
+                        <mrow>0\amp=-16\left(t^2-5t+4\right)</mrow>
+                        <mrow>0\amp=-16(t-4)(t-1)</mrow></md><md>
+                        <mrow>t\amp=4\amp\text{or}\amp\amp t\amp=1</mrow></md></p>
+
+                <p>Thus, there are two times at which the ball will reach a height of <m>70</m> feet. The ball will reach a height of <m>70</m> feet <m>1</m> second after it has been thrown and again <m>4</m> seconds after it has been thrown.</p>
+        </example>
+
         <example>
             <title>Kicking it on Mars</title>
             <statement>
-                <p>Some time in the recent past, Filip traveled to Mars for a vacation with his kids, Henrik and Karina, who wanted to kick a soccer ball around in the comparatively reduced gravity.<!-- Mars was lush and green after the terraforming, and the kids went out into a grassy field with their dad. --> Karina stood at point <m>K</m> and kicked the ball over her dad standing at point <m>F</m> to Henrik standing at point <m>H</m>. The height of the ball off the ground, <m>h</m> in feet, can be modeled by the equation <m>h=-0.01\left(x^2-70x-1800\right)</m>, where <m>x</m> is how far to the right the ball is from Filip. Note that distances to the left of Filip will be negative.</p>
+                <p>Some time in the recent past, Filip traveled to Mars for a vacation with his kids, Henrik and Karina, who wanted to kick a soccer ball around in the comparatively reduced gravity. Karina stood at point <m>K</m> and kicked the ball over her dad standing at point <m>F</m> to Henrik standing at point <m>H</m>. The height of the ball off the ground, <m>h</m> in feet, can be modeled by the equation <m>h=-0.01\left(x^2-70x-1800\right)</m>, where <m>x</m> is how far to the right the ball is from Filip. Note that distances to the left of Filip will be negative.</p>
 
                 <p><ol label="a.">
                     <li>
@@ -398,7 +422,7 @@
                         </md>It seems that the soccer ball was <m>18</m> feet above the ground when it flew over Filip.</p>
                     </li>
                     <li>
-                        <p>The distance from Karina to Henrik is the same as the distance from point <m>K</m> to point <m>H</m>. These are the horizontal intercepts of the graph of the given formula: <m>h=-0.01\left(x^2-70x-1800\right)</m>. To find the horizontal intercepts, set <m>h=0</m> and solve for <m>x</m>.<md>
+                        <p>The distance from Karina to Henrik is the same as the distance from point <m>K</m> to point <m>H</m>. Also, the distances from <m>K</m> to point <m>F</m> and from point <m>F</m> to point <m>H</m> are associated with the values of <m>x</m> in the given formula that will give a height of zero: <m>h=-0.01\left(x^2-70x-1800\right)</m>. So to find these values, set <m>h=0</m> and solve for <m>x</m>.<md>
                             <mrow>0=-0.01\left(x^2-70x-1800\right)</mrow>
                             <intertext>Note that we can divide by <m>-0.01</m> on both sides of the equation to simplify.</intertext>
                             <mrow>0\amp=x^2-70x-1800</mrow>
@@ -442,6 +466,117 @@
                 </sidebyside>
             </solution>
         </example>
+
+        <p>Next, we will look at an example involving right triangles. Right triangles have an important property called the <term>Pythagorean Theorem</term>.</p>
+
+        <theorem xml:id="theorem-pythagorean-theorem">
+            <title>The Pythagorean Theorem</title><idx><h>Pythagorean theorem</h></idx>
+            <p>For any right triangle, the lengths of the three sides have the following relationship: <m>a^2+b^2=c^2</m>. The sides <m>a</m> and <m>b</m> are called <term>legs</term> and the longest side <m>c</m> is called the <term>hypotenuse</term>.</p>
+
+            <figure>
+                <caption>In a right triangle, the length of its three sides satisfy the equation <m>a^2+b^2=c^2</m></caption>
+                <image width="25%">
+                    <description>a right triangle with sides labeled a, b, and c; side c is the hypotenuse</description>
+                    <latex-image>
+                        <![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+                            \draw (0,0) -- node[pos=0.5,below]{$a$} (3,0) --node[pos=0.5,right]{$b$} (3,4) --node[pos=0.5,above,sloped]{$c$} cycle;
+                            \draw (3,0.2) -- (2.8,0.2) -- (2.8,0);
+                        \end{tikzpicture}]]>
+                    </latex-image>
+                </image>
+            </figure>
+        </theorem>
+
+        <example>
+            <title>Pythagorean Theorem</title>
+            <statement><p>Justine wants to put a deck in the corner of her backyard in the shape of a right triangle, as shown below. The hypotenuse will be <m>17</m> feet long. The length of one side will be <m>7</m> feet shorter than the length of the other side. Find the lengths of the sides of the deck.
+
+            <figure>
+                
+                <image width="25%">
+                    <description>a right triangle with sides labeled x, x-7, and 17; side marked as 17 is the hypotenuse</description>
+                    <latex-image>
+                        <![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+                            \draw (0,0) -- node[pos=0.5,below]{$x-7$} (-3,0) --node[pos=0.5,left]{$x$} (-3,6) --node[pos=0.5,above,sloped]{$17$} cycle;
+                            \draw (-3,0.4) -- (-2.6,0.4) -- (-2.6,0);
+                        \end{tikzpicture}]]>
+                    </latex-image>
+                </image>
+            </figure></p></statement>
+
+            <!-- <figure><image source="images/CNX_ElemAlg_Figure_07_06_010_img.jpg" width="60%"><description>A right triangle with the hypotenuse labeled as 17 feet and the legs marked as x and x-7.</description></image></figure></p></statement> -->
+
+            <solution><p>Since her deck is a right triangle, we know the Pythagorean Theorem must hold. So, we can substitute <m>17</m> in for <m>c</m>, in the Pythagorean Theorem, and <m>x</m> and <m>x-7</m> in for the lengths of the two legs <m>a</m> and <m>b</m>. This will give us:
+
+                <me>(\substitute{x})^2+(\substitute{x-7})^2=(\substitute{17})^2</me>
+
+            Simplify both sides:<md>
+
+                <mrow>x^2+(x-7)(x-7)=289</mrow>
+                <mrow>x^2+x^2-7x-7x+49=289</mrow>
+                <mrow>2x^2-14x+49x=289</mrow>
+                </md></p>
+
+            <p>As you can see, this is a quadratic equation. So, we will solve this equation by factoring. First, we'll need to get it into standard form and then we can use the <xref ref="fact-zero-product-property" text="title" />.<md>
+
+                <mrow>2x^2-14x-240=0</mrow>
+                <mrow>2\left(x^2-7x-120\right)=0</mrow>
+                <mrow>2(x-15)(x+8)=0</mrow></md><md>
+                <mrow>x-15\amp=0\amp\amp\text{or}\amp x+8\amp=0</mrow>
+                <mrow>x\amp=15\amp\amp\text{or}\amp x\amp=-8</mrow>
+                </md></p>
+
+            <p>Of course, a negative length doesn't make sense, so we'll ignore the negative solution. Thus, one side should be <m>15</m> feet long and the other side, which needs to be <m>7</m> feet shorter than that, should be <m>8</m> feet long.</p>
+        </solution>
+    </example>
+
+    <p>Try a similar exercise.</p>
+
+    <exercise>
+        <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer1=17;
+                        $answer2=8;
+                    </pg-code>
+                </setup>
+
+            <statement><p>A meditation garden is in the shape of a right triangle, with one leg that is <m>15</m> feet long. The length of the hypotenuse is <m>1</m> foot longer than twice the length of the other leg. Write and solve a quadratic equation by factoring to find the lengths of the hypotenuse and the other leg.</p>
+
+            <p>The length of the hypotenuse is <var name="$answer1" width="5"/> feet and the length of the other leg is <var name="$answer2" width="5"/> feet.</p>
+            </statement>
+
+            <solution><p>It may help to draw a picture, like the one in the previous example. Since the garden is a right triangle, we know the Pythagorean Theorem must hold.  So, we can substitute <m>15</m> in for <m>a</m>, in the Pythagorean Theorem, and <m>x</m> for <m>b</m>, which represents the length of the other leg. Then, we can substitute <m>2x+1</m> in for <m>c</m>, which represents the length of the hypotenuse.</p>  
+
+            <p>Plugging these into the formula will give us:
+
+                <me>(\substitute{15})^2+(\substitute{x})^2=(\substitute{2x+1})^2</me>
+
+            Simplify both sides:<md>
+
+                <mrow>225+x^2=(2x+1)(2x+1)</mrow>
+                <mrow>225+x^2=4x^2+4x+1</mrow>
+                </md></p>
+
+            <p>As you can see, this is a quadratic equation. So, we will solve this equation by factoring. First, we'll need to get it into standard form and then we can use the <xref ref="fact-zero-product-property" text="title" />.<md>
+
+                <mrow>0=3x^2+4x-224=0</mrow>
+                <mrow>0=(3x+28)(x-8)</mrow></md><md>
+                <mrow>3x+28\amp=0\amp\amp\text{or}\amp x-8\amp=0</mrow>
+                <mrow>x\amp=-\frac{28}{3}\amp\amp\text{or}\amp x\amp=8</mrow>
+                </md></p>
+
+            <p>Of course, a negative length doesn't make sense, so we'll ignore the negative solution. Thus, the length of the other leg is <m>8</m> feet long, which means the hypotenuse is one foot more than <m>16</m> feet long. Therefore, the length of the hypothenuse is <m>17</m> feet.</p>
+            </solution>
+            </webwork>
+        </exercise>
+
+
+
 
 <!--
 todo:include this example as an exercise that is interleaved somewhere in the functions section.
@@ -618,6 +753,280 @@ todo:include this example as an exercise that is interleaved somewhere in the fu
                 <p>Since a length cannot be negative, we take <m>x=2</m> as the only applicable solution. Rajesh should make the deck <quantity><mag>2</mag><unit base="foot"/></quantity> wide on each side to fit under the roof.</p>
             </solution>
         </example>
+    </subsection>
+
+    <subsection><title>Graphing a Quadratic Equation</title>
+
+            <introduction><p>Yet another application of solving quadratic equations is to graph equations of the form <m>y=ax^2+bx+c</m>. In <xref ref="chapter-graphing-lines" >Chapter</xref>, we learned how to find the <m>x</m>- and <m>y</m>-intercepts of a line. Here, we will learn that finding the <m>x</m>- and <m>y</m>-intercepts of the graph of any equation in two variables involves the same first step, due to the definition of those key points. This can help us graph many equations, including quadratic equations, which we will begin to explore in this section.</p></introduction>
+
+            <p>The graph of a quadratic equation of the form <m>y=ax^2+bx+c</m> has the shape of a <term>parabola</term><idx><h>quadratic</h><h>graph</h></idx><idx><h>parabola</h></idx>, like the one shown below.</p> 
+
+            <p>Below is the graph of <m>y=x^2-3x+2</m>. This parabola opens upward, but some parabolas will open downward. Whether a parabola will open upward or downward depends on the sign of <m>a</m>, the coefficient of <m>x^2</m>. If <m>a>0</m>, then the parabola will open upward. On the other hand, if  <m>a&lt;0</m>, then the parabola will open downward.</p>
+
+            <figure xml:id="figure-basic-parabola">
+                <caption>The graph of <m>y=x^2-3x+2</m> opens upward</caption>
+                    <image>
+                        <description>a u-shaped graph opening upward</description>
+                        <latex-image>
+                            <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[]
+                                    \addplot+[domain=-1:4] {x^2-3*x+2};
+                                    \end{axis}
+                            \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                    </image>
+                </figure>
+
+            <p>To find the <m>x</m>- and <m>y</m>-intercepts of the graph of <m>y=ax^2+bx+c</m>, we follow the same steps as we do with linear equations. That is, to find the <m>y</m>-intercept, we plug in <m>0</m> for <m>x</m> and then solve for <m>y</m>, and to find the <m>x</m>-intercept(s), we plug in <m>0</m> for <m>y</m> and then solve for <m>x</m>. The latter will involve solving a quadratic equation, which will call for your newly acquired solving-by-factoring skills.</p>
+
+            <p>Another key point that will help us graph our parabola is the minimum point, if it's opening upward, or the maximum point, if it's opening downward. This key pont is called the <term>vertex</term><idx><h>vertex</h></idx> of the parabola.</p>
+                <fact xml:id="fact-vertex-1"><p>If we let <m>(h,k)</m> denote the coordinates of the vertex of a parabola whose equation is <m>y=ax^2+bx+c</m>, then <m>h=-\frac{b}{2a}</m>.<idx><h>quadratic</h><h>vertex</h></idx> and <m>k=ah^2+bh+c</m>. </p></fact>
+
+            <p>Note that the formula for finding <m>k</m> is simply the result of plugging the value you find for <m>h</m> into the equation for the parabola, <m>y=ax^2+bx+c</m>, to find the <m>y</m>-coordinate of the vertex, which is denoted as <m>k</m>. So, there is no need to memorize that formula.</p>
+
+            <p>We can find additional points, to get a more accurate sketch of our parabola, by plugging additional values in for <m>x</m> and solving for <m>y</m>, much the same as we did to graph lines.</p>
+
+            <example>
+                <title>Graphing a Parabola</title>
+                
+                <p>Graph the equation <m>y=x^2-4x-12</m> by finding the vertex, the <m>x</m>- and <m>y</m>-intercepts, and any additional points necessary to make a nice parabola.</p>
+
+                <p>First, notice that <m>a=1</m>, which is more than zero, so we know the parabola will be opening upward. Next, we can use the formula, given in <xref ref="fact-vertex-1">Fact</xref> to find the vertex, where <m>a=1</m> and <m>b=-4</m>:<md>
+
+                    <mrow>h=-\frac{b}{2a}</mrow>
+                    <mrow>h=-\frac{\substitute{-4}}{2(\substitute{1})}</mrow>
+                    <mrow>h=-\frac{-4}{2}</mrow>
+                    <mrow>h=-(-2)</mrow>
+                    <mrow>h=2</mrow></md>
+
+                Now, we can substitute <m>h=2</m> into the equation to find <m>k</m>:<md>
+
+                    <mrow>k=(\substitute{2})^2-4(\substitute{2})-12</mrow>
+                    <mrow>k=4-8-12</mrow>
+                    <mrow>k=-4-12</mrow>
+                    <mrow>k=-16</mrow></md></p>
+
+                <p>Thus, the vertex of the parabola is the point <m>(2,-16)</m>.</p>
+
+                <p>To find the <m>y</m>-intercept, we plug in <m>0</m> for <m>x</m> and solve for <m>y</m>:<md>
+
+                    <mrow>y=(\substitute{0})^2-4(\substitute{0})-12</mrow>
+                    <mrow>y=0+0-12</mrow>
+                    <mrow>y=-12</mrow></md>
+
+                Hence, the <m>y</m>-intercept of the parabola is the point <m>(0,-12)</m>.</p>
+
+                <p>To find the <m>x</m>-intercept(s), we plug in <m>0</m> for <m>y</m> and solve for <m>x</m>, which we will do by factoring:<md>
+
+                    <mrow>\substitute{0}=x^2-4x-12</mrow>
+                    <mrow>0=(x-6)(x+2)</mrow></md><md>
+                    <mrow>x-6\amp=0\amp\amp\text{or}\amp x+2\amp=0</mrow>
+                    <mrow>x\amp=6\amp\amp\text{or}\amp x\amp=-2</mrow>
+                </md></p>
+
+                <p>Therefore, there are two <m>x</m>-intercepts: <m>(6,0)</m> and <m>(-2,0)</m>.</p>
+
+                <p>So far, we have points with <m>x</m>-coordinates of <m>-2</m>, <m>0</m>, <m>2</m>, and <m>6</m>. To make a full graph, we can choose more values of <m>x</m> to plug into the equation and then solve for <m>y</m>. This will give us additional points to plot. It's helpful to organize this work in a table, like we did when we graphed lines.</p>
+
+                <tabular valign="top" bottom="minor">
+                        <col halign="right" right="minor"/>
+                        <col halign="right" right="minor"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell><m>x</m></cell>
+                            <cell halign="center"><m>y=x^2-4x-12</m></cell>
+                            <cell>Point</cell>
+                        </row>
+                        <row>
+                            <cell><m>1</m></cell>
+                            <cell><m>(1)^2-4(1)-12=-15</m></cell>
+                            <cell><m>(1,-15)</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>3</m></cell>
+                            <cell><m>(3)^2-4(3)-12=-15</m></cell>
+                            <cell><m>(3,-15)</m></cell>
+                        </row>
+                        <row bottom="none">
+                            <cell><m>4</m></cell>
+                            <cell><m>(4)^2-4(4)-12=-12</m></cell>
+                            <cell><m>(4,-12)</m></cell>
+                        </row>
+                    </tabular> 
+
+                <p>Plotting all the points we found and connecting them with a smooth curve gives us the following graph:
+
+                    <figure>
+                <caption>The graph of <m>y=x^2-4x-12</m> opens upward</caption>
+                    <image>
+                        <description>a u-shaped graph opening upward</description>
+                         <latex-image>
+                            <![CDATA[\begin{tikzpicture}
+                               \begin{axis}[xmin=-5,xmax=8,ymin=-20,ymax=5,
+                                        xtick={-4,...,7},
+                                        minor xtick={-4,...,7},
+                                        ytick={-20,-15,...,5},
+                                        minor ytick={-20,-15,...,5}]
+                                    \addplot+[domain=-2.5:6.5] {x^2-4*x-12};
+                                    \addplot[soliddot] coordinates {(-2,0)} node[left]{$(-2,0)$};
+                                    \addplot[soliddot] coordinates {(0,-12)} node[left]{$(0,-12)$};
+                                    \addplot[soliddot] coordinates {(2,-16)} node[below]{$(2,-16)$};
+                                    \addplot[soliddot] coordinates {(1,-15)} node[left]{$(1,-15)$};
+                                    \addplot[soliddot] coordinates {(3,-15)} node[right]{$(3,-15)$};
+                                    \addplot[soliddot] coordinates {(4,-12)} node[right]{$(4,-12)$};
+                                    \addplot[soliddot] coordinates {(6,0)} node[right]{$(6,0)$};
+                                    \end{axis}
+                            \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        
+                    </image>
+                </figure></p>
+
+            </example>
+
+            <example>
+                
+                <statement><p>Graph the equation <m>y=-2x^2+8x-6</m> by finding the vertex, the <m>x</m>- and <m>y</m>-intercepts, and any additional points necessary to make a nice parabola.</p></statement>
+
+                <solution><p>First, notice that <m>a=-2</m>, which is less than zero, so we know the parabola will be opening downward. Next, we can use the formula, given in <xref ref="fact-vertex-1">Fact</xref> to find the vertex, where <m>a=-2</m> and <m>b=8</m>:<md>
+
+                    <mrow>h=-\frac{b}{2a}</mrow>
+                    <mrow>h=-\frac{\substitute{8}}{2(\substitute{-2})}</mrow>
+                    <mrow>h=-\frac{8}{-4}</mrow>
+                    <mrow>h=-(-2)</mrow>
+                    <mrow>h=2</mrow></md>
+
+                Now, we can substitute <m>h=2</m> into the equation to find <m>k</m>:<md>
+
+                    <mrow>k=-2(\substitute{2})^2+8(\substitute{2})-6</mrow>
+                    <mrow>k=-2(4)+16-6</mrow>
+                    <mrow>k=8-6</mrow>
+                    <mrow>k=2</mrow></md></p>
+
+                <p>Thus, the vertex of the parabola is the point <m>(2,2)</m>.</p>
+
+                <p>To find the <m>y</m>-intercept, we plug in <m>0</m> for <m>x</m> and solve for <m>y</m>:<md>
+
+                    <mrow>y=-2(\substitute{0})^2+8(\substitute{0})-6</mrow>
+                    <mrow>y=0+0-6</mrow>
+                    <mrow>y=-6</mrow></md>
+
+                Hence, the <m>y</m>-intercept of the parabola is the point <m>(0,-6)</m>.</p>
+
+                <p>To find the <m>x</m>-intercept(s), we plug in <m>0</m> for <m>y</m> and solve for <m>x</m>, which we will do by factoring:<md>
+
+                    <mrow>\substitute{0}=-2x^2+8x-6</mrow>
+                    <mrow>0=-2\left(x^2-4x+3\right)</mrow>
+                    <mrow>0=-2(x-3)(x-1)</mrow></md><md>
+                    <mrow>x-3\amp=0\amp\amp\text{or}\amp x-1\amp=0</mrow>
+                    <mrow>x\amp=3\amp\amp\text{or}\amp x\amp=1</mrow>
+                </md></p>
+
+                <p>Therefore, there are two <m>x</m>-intercepts: <m>(3,0)</m> and <m>(1,0)</m>.</p>
+
+                <p>So far, we have points with <m>x</m>-coordinates of <m>0</m>, <m>1</m>, <m>2</m>, and <m>3</m>. To make a full graph, we can choose more values of <m>x</m> to plug into the equation and then solve for <m>y</m>. This will give us additional points to plot. It's helpful to organize this work in a table, like we did when we graphed lines.</p>
+
+                <tabular valign="top" bottom="minor">
+                        <col halign="right" right="minor"/>
+                        <col halign="right" right="minor"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell><m>x</m></cell>
+                            <cell halign="center"><m>y=-2x^2+8x-6</m></cell>
+                            <cell>Point</cell>
+                        </row>
+                        <row>
+                            <cell><m>-1</m></cell>
+                            <cell><m>-2(-1)^2+8(-1)-6=-16</m></cell>
+                            <cell><m>(-1,-16)</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>4</m></cell>
+                            <cell><m>-2(4)^2+8(4)-6=-6</m></cell>
+                            <cell><m>(4,-6)</m></cell>
+                        </row>
+                        <row bottom="none">
+                            <cell><m>5</m></cell>
+                            <cell><m>-2(5)^2+8(5)-6=-16</m></cell>
+                            <cell><m>(5,-16)</m></cell>
+                        </row>
+                    </tabular> 
+
+                <p>Plotting all the points we found and connecting them with a smooth curve gives us the following graph:
+
+                    <figure>
+                <caption>The graph of <m>y=-2x^2+8x-6</m> opens downward</caption>
+                    <image>
+                        <description>a u-shaped graph opening downward</description>
+                       <latex-image>
+                            <![CDATA[\begin{tikzpicture}
+                               \begin{axis}[xmin=-4,xmax=7.5,ymin=-20,ymax=5,
+                                        xtick={-4,...,7},
+                                        minor xtick={-3,...,7},
+                                        ytick={-20,-15,...,5},
+                                        minor ytick={-20,-15,...,5}]
+                                    \addplot+[domain=-1.2:5.2] {-2*x^2+8*x-6};
+                                    \addplot[soliddot] coordinates {(-1,-16)} node[left]{$(-1,-16)$};
+                                    \addplot[soliddot] coordinates {(0,-6)} node[left]{$(0,-6)$};
+                                    \addplot[soliddot] coordinates {(1,0)} node[left]{$(1,0)$};
+                                    \addplot[soliddot] coordinates {(2,2)} node[above]{$(2,2)$};
+                                    \addplot[soliddot] coordinates {(3,0)} node[right]{$(3,0)$};
+                                    \addplot[soliddot] coordinates {(4,-6)} node[right]{$(4,-6)$};
+                                    \addplot[soliddot] coordinates {(5,-16)} node[right]{$(5,-16)$};
+                                    \end{axis}
+                            \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                    </image>
+                </figure></p>
+            </solution>
+            </example>
+
+            <exercise>
+                <webwork source = "BasicAlgebra/GraphingQuadratics/ParabolaIntercepts70.pg" />
+            </exercise>
+
+            
+            <exercise>
+                <statement>
+                    <p>Graph the parabola with the equation <m>y=x^2-2x-15</m> by algebraically finding its vertex and intercepts and any other additional points that you may find helpful.</p>
+                </statement>
+                <solution><p>Here is the answer to check. The algebra steps, however, are left to the reader.</p>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(5,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,-15)</m>.</p>
+                    <p>The vertex is <m>(1,-16)</m>.</p>
+                    <p>An additional point that was found is <m>(2,-15)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-20,ymax=5,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={-20,-10,0},minor ytick={-20,-15,...,5}]
+                                        \addplot+[domain=-3.405:5.405] {x^2-2*x-15};
+                                        \addplot[soliddot] coordinates {(-3,0) (5,0) (0,-15) (1,-16) (2,-15)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </solution>
+            </exercise>
+
+
+
+
+
     </subsection>
 
     <exercises>
@@ -821,17 +1230,100 @@ todo:include this example as an exercise that is interleaved somewhere in the fu
         </exercisegroup>
         <exercisegroup cols="2">
             <title>Quadratic Equation Application Problems</title>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg" />
-            </exercise>
+            <introduction>For the following application problems, write and solve a quadratic equation, by factoring, to answer the questions.</introduction>
+            
+           
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication10.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication10.pg" />
+            </exercise>
+            
+           
+            <exercise>
+                <webwork>
+                        <pg-macros>
+                            <macro-file>contextNumeric.pl</macro-file>
+                        </pg-macros>
+                        <setup>
+                            <pg-code>
+                        Context("Numeric");
+                        $answer=6;
+                            </pg-code>
+                        </setup>
+
+                    <statement><p>A bomb exploded and the path of the debris from the explosion can be modeled by the equation <m>h=96t-16t^2</m>, where <m>h</m> represents the height, in feet, of the debris above the ground <m>t</m> seconds after the explosion. After how many seconds will the debris hit the ground?</p>
+
+                    <p>The debris will hit the ground after <var name="$answer" width="10"/> seconds.</p>
+                    </statement>
+                </webwork>
+            </exercise>
+            <exercise>
+                <webwork>
+                        <pg-macros>
+                            <macro-file>contextNumeric.pl</macro-file>
+                        </pg-macros>
+                        <setup>
+                            <pg-code>
+                        Context("Numeric");
+                        $answer=5;
+                            </pg-code>
+                        </setup>
+
+                    <statement><p>A bomb exploded and the path of the debris from the explosion can be modeled by the equation <m>h=80t-16t^2</m>, where <m>h</m> represents the height, in feet, of the debris above the ground <m>t</m> seconds after the explosion. After how many seconds will the debris hit the ground?</p>
+
+                    <p>The debris will hit the ground after <var name="$answer" width="10"/> seconds.</p>
+                    </statement>
+                </webwork>
+            </exercise>
+             <exercise>
+                <webwork>
+                        <pg-macros>
+                            <macro-file>contextNumeric.pl</macro-file>
+                        </pg-macros>
+                        <setup>
+                            <pg-code>
+                        Context("Numeric");
+                        $answer1=8;
+                        $answer2=6;
+                            </pg-code>
+                        </setup>
+
+                    <statement><p>A pennant is shaped like a right triangle, with a hypothenuse that is <m>10</m> inches long. The length of one side of the pennant is <m>2</m> inches longer than the length of the other leg. Find the lengths of the two legs.</p>
+
+                    <p>The length of the longer leg is <var name="$answer1" width="10"/> inches.</p>
+                    <p>The length of the shorter leg is <var name="$answer2" width="10"/> inches.</p>
+                    </statement>
+                </webwork>
+            </exercise>
+            <exercise>
+                <webwork>
+                        <pg-macros>
+                            <macro-file>contextNumeric.pl</macro-file>
+                        </pg-macros>
+                        <setup>
+                            <pg-code>
+                        Context("Numeric");
+                        $answer1=8;
+                        $answer2=15;
+                        $answer3=17;
+                            </pg-code>
+                        </setup>
+
+                    <statement><p>A reflecting pool is shaped like a right triangle, with one leg along the wall of a building. The hypotenuse is <m>9</m> feet longer than the side along the building. The third side is <m>7</m> feet longer than the side along the building. Find the lengths of all three sides.</p>
+
+                    <p>The length of the shorter leg is <var name="$answer1" width="10"/> feet.</p>
+                    <p>The length of the longer leg is <var name="$answer2" width="10"/> feet.</p> 
+                    <p>The length of the hypotenuse is <var name="$answer2" width="10"/> feet.</p>
+                    </statement>
+                </webwork>
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication30.pg" />
@@ -839,12 +1331,341 @@ todo:include this example as an exercise that is interleaved somewhere in the fu
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication30.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg" />
+
+             <exercise>
+                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg" />
             </exercise>
             <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg" />
+                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg" />
             </exercise>
+        </exercisegroup>
+        <exercisegroup cols="2" >
+            <title>Graphing Quadratic Equations</title>
+            <introduction>
+                <p>Graph each curve by algebraically determining its intercepts, vertex, and any other points necessary.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>y=-x^2-x+20</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens downward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(-5,0)</m> and <m>(4,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,20)</m>.</p>
+                    <p>The vertex is <m>(-0.5,20.25)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-5,ymax=25,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={0,5,10,15,20},minor ytick={-5,-4,...,25}]
+                                        \addplot+[domain=-5.525:4.525] {-x^2-x+20};
+                                        \addplot[soliddot] coordinates {(-5,0) (4,0) (0,20) (-0.5,20.25) (-1,20)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=-x^2+4x+21</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens downward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(7,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,21)</m>.</p>
+                    <p>The vertex is <m>(2,25)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-10,ymax=30,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={-5,0,...,25},minor ytick={-10,-9,...,30}]
+                                        \addplot+[domain=-3.916:7.916] {-x^2+4*x+21};
+                                        \addplot[soliddot] coordinates {(7,0) (-3,0) (0,21) (2,25)  (4,21)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=x^2+6x</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(-6,0)</m> and <m>(0,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,0)</m>.</p>
+                    <p>The vertex is <m>(-3,-9)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-10,ymax=10,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={-5,0,5},minor ytick={-10,-9,...,10}]
+                                        \addplot+[domain=-7.359:1.359] {x^2+6*x};
+                                        \addplot[soliddot] coordinates {(-6,0) (0,0) (-3,-9)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=x^2-8x</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(0,0)</m> and <m>(8,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,0)</m>.</p>
+                    <p>The vertex is <m>(4,-16)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-25,ymax=5,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={-20,-15,-10,-5,0},minor ytick={-25,-24,...,5}]
+                                        \addplot+[domain=-0.583:8.583] {x^2-8*x};
+                                        \addplot[soliddot] coordinates {(8,0) (0,0) (4,-16)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=x^2-8x+16</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercept is <m>(4,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,16)</m>.</p>
+                    <p>The vertex is <m>(4,0)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-5,ymax=20,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={0,5,10,15},minor ytick={-5,-4,...,19}]
+                                        \addplot+[domain=-0.472:8.472] {x^2-8*x+16};
+                                        \addplot[soliddot] coordinates {(4,0) (0,16) (8,16)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p><m>y=x^2+6x+9</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercept is <m>(-3,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,9)</m>.</p>
+                    <p>The vertex is <m>(-3,0)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-5,ymax=20,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={0,5,10,15},minor ytick={-5,-4,...,20}]
+                                        \addplot+[domain=-7.472:1.472] {x^2+6*x+9};
+                                        \addplot[soliddot] coordinates {(-3,0) (0,9)  (-6,9)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p><m>y=x^2-4</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(-2,0)</m> and <m>(2,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,-4)</m>.</p>
+                    <p>The vertex is <m>(0,-4)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[]
+                                        \addplot+[domain=-3.317:3.317] {x^2-4};
+                                        \addplot[soliddot] coordinates {(-2,0) (2,0) (0,-4) };
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p><m>y=x^2-9</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(3,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,-9)</m>.</p>
+                    <p>The vertex is <m>(0,-9)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-10,ymax=10,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={-5,0,5},minor ytick={-10,-9,...,10}]
+                                        \addplot+[domain=-4.359:4.359] {x^2-9};
+                                        \addplot[soliddot] coordinates {(-3,0) (3,0) (0,-9) };
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=2x^2-4x-30</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(5,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,-30)</m>.</p>
+                    <p>The vertex is <m>(1,-32)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                    \begin{axis}[xmin=-10,xmax=10,ymin=-40,ymax=10,
+                                        xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                        ytick={-35,-20,...,5},minor ytick={-40,-39,...,10}]
+                                        \addplot+[domain=-3.583:5.583] {2*x^2-4*x-30};
+                                        \addplot[soliddot] coordinates {(-3,0) (5,0) (0,-30) (1,-32) (2,-30)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=3x^2+21x+36</m></p>
+                </statement>
+                <answer>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                    <p>The parabola opens upward.</p>
+                    <p>The <m>x</m>-intercepts are <m>(-4,0)</m> and <m>(-3,0)</m>.</p>
+                    <p>The <m>y</m>-intercept is <m>(0,36)</m>.</p>
+                    <p>The vertex is <m>(-3.5,-0.75)</m>.</p>
+                    </stack>
+                    <figure>
+                        <caption></caption>
+                        <image>
+                        <latex-image>
+                            <![CDATA[
+                                \begin{tikzpicture}
+                                   \begin{axis}[xmin=-10,xmax=5,ymin=-10,ymax=40,
+                                        xtick={-5,0},minor xtick={-10,-9,...,5},
+                                        ytick={-5,0,...,35},minor ytick={-10,-9,...,40}]
+                                        \addplot+[domain=-7.186:0.186] {3*x^2+21*x+36};
+                                        \addplot[soliddot] coordinates {(-4,0) (-3,0) (0,36) (-3.5,-0.75) (-7,36)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                            ]]>
+                        </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                </answer>
+            </exercise>
+
         </exercisegroup>
 
         <exercisegroup>
@@ -916,5 +1737,12 @@ todo:include this example as an exercise that is interleaved somewhere in the fu
             </exercise>
         </exercisegroup>
     </exercises>
+
+    <conclusion>
+    <p>
+      Some of <xref ref="applications-of-quadratics-and-factoring">Subsection</xref> is adapted from <pubtitle>Quadratic Equations</pubtitle><fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:P3r26N1f@1/Quadratic-Equations" /></fn>
+      by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn><url href="http://creativecommons.org/licenses/by/4.0" /></fn>
+    </p>
+  </conclusion>
 
 </section>

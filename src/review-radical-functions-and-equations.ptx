@@ -29,7 +29,7 @@
                 </md>The function's domain is <m>\left[\frac{1}{3},\infty\right)</m> in interval notation.</p>
 
                 <sidebyside widths="47% 47%" margins="0%">
-                    <p>To find the function's range, we use technology to look at a graph of the function. The graph shows that the function's range is <m>[2,\infty)</m>. The graph also verifies the function's domain is indeed <m>\left[\frac{1}{3},\infty\right)</m>.</p>
+                    <p>To find the function's range, we look at a graph of the function. The graph shows that the function's range is <m>[2,\infty)</m>. The graph also verifies the function's domain is indeed <m>\left[\frac{1}{3},\infty\right)</m>.</p>
 
                     <figure>
                         <caption>Graph of <m>f(x)=\sqrt{3x-1}+2</m></caption>
@@ -79,7 +79,7 @@
             <solution>
                 <p>First note that the index of the function <m>g</m> for <m>g(x)=-2\sqrt[3]{x+6}-1</m> is odd. By <xref ref="fact-domain-of-radicals">Fact</xref>, the domain is <m>(-\infty,\infty)</m>.</p>
 
-                <p>To find the function's range, we use technology to graph the function. According to the graph, the function's range is also <m>(-\infty,\infty)</m>.</p>
+                <p>To find the function's range, we use the graph the function. According to the graph, the function's range is also <m>(-\infty,\infty)</m>.</p>
                         <figure>
                             <caption>Graph of <m>y=g(x)=-2\sqrt[3]{x+6}-1</m></caption>
                             <image width="47%">
@@ -110,7 +110,7 @@
                         <mrow>x\amp\le3</mrow>
                     </md>
                     So, the domain of <m>h</m> is <m>(-\infty,3]</m>.</p>
-                    <p>To find the function's range, we use technology to graph the function. By the graph, the function's range is <m>(-\infty,8]</m>.</p>
+                    <p>To find the function's range, we use the graph the function. By the graph, the function's range is <m>(-\infty,8]</m>.</p>
                         <figure>
                             <caption>Graph of <m>y=h(x)=8-\frac{5}{2}\sqrt[4]{6-2x}</m></caption>
                             <image width="47%">
@@ -522,7 +522,7 @@
                 <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg" />
             </exercise>
             <!-- Graphing with technology -->
-            <exercise>
+            <!-- <exercise>
               <webwork>
                 <pg-macros>
                     <macro-file>PCCgraphMacros.pl</macro-file>
@@ -583,14 +583,14 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>Use technology to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
+                    <p>Use the graph to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
 
                     <instruction>If you need to enter <m>\infty</m>, you can type  <c>inf</c> or <c>infinity</c>.  If you need to union two (or more) intervals, use the letter <c>U</c>. For example: <c>(-inf,5) \cup (5, inf)</c>.</instruction>
 
                     <p><var name="$range" width="10" /></p>
                 </statement>
                 <solution>
-                    <p>We use technology to graph the function <m><var name="$fname" />(x)=<var name="$func" /></m>:</p>
+                    <p>We use the graph the function <m><var name="$fname" />(x)=<var name="$func" /></m>:</p>
 
                     <sidebyside>
                       <image pg-name="$gr">
@@ -663,14 +663,14 @@
                     </pg-code>
                 </setup>
                 <statement>
-                    <p>Use technology to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
+                    <p>Use the graph to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
 
                     <instruction>If you need to enter <m>\infty</m>, you can type  <c>inf</c> or <c>infinity</c>.  If you need to union two (or more) intervals, use the letter <c>U</c>. For example: <c>(-inf,5) \cup (5, inf)</c>.</instruction>
 
                     <p><var name="$range" width="10" /></p>
                 </statement>
                 <solution>
-                    <p>We use technology to graph the function <m><var name="$fname" />(x)=<var name="$func" /></m>:</p>
+                    <p>We use the graph the function <m><var name="$fname" />(x)=<var name="$func" /></m>:</p>
 
                     <sidebyside>
                       <image pg-name="$gr">
@@ -682,7 +682,7 @@
                 </solution>
               </webwork>
             </exercise>
-
+ -->
             <!-- Applications -->
             <exercise>
                 <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg" />
@@ -818,7 +818,7 @@
                 <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
             </exercise>
             <!-- Solving with technology -->
-            <exercise>
+            <!-- <exercise>
               <webwork>
                 <pg-macros>
                     <macro-file>PCCgraphMacros.pl</macro-file>
@@ -878,14 +878,14 @@
 
                         $xShow = int($x*100)/100;
                         $gr->stamps( closed_circle($x, 0, 'red') );
-                        $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
+                        $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
 
                         <!-- todo: change this code to not subtract the right side onto the left before graphing. -->
 
-                    </pg-code>
+                    <!-- </pg-code>
                 </setup>
                 <statement>
-                    <p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
+                    <p>Solveolve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
 
                     <instruction>Round your answers to two decimal places if needed.</instruction>
 
@@ -969,11 +969,11 @@
 
                         $xShow = int($x*100)/100;
                         $gr->stamps( closed_circle($x, 0, 'red') );
-                        $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
+                        $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
 
                         <!-- todo: change this code to not subtract the right side onto the left before graphing. -->
 
-                    </pg-code>
+                    <!-- </pg-code>
                 </setup>
                 <statement>
                     <p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
@@ -999,7 +999,7 @@
                     <p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
                 </solution>
               </webwork>
-            </exercise>
+            </exercise> -->
             <exercise>
                 <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral90.pg" />
             </exercise>

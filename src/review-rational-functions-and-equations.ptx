@@ -13,28 +13,90 @@
     <title>Rational Functions and Equations Chapter Review</title>
 
     <subsection>
-        <title>Introduction to Rational Functions</title>
-        <p>In <xref ref="section-rational-functions">Section</xref> we learned about <xref ref="definition-rational-function" text="title">rational functions</xref> and explored them with tables and graphs.</p>
+        <title>Introduction to Functions</title>
+        <p>In <xref ref="section-introduction-to-functions">Section</xref> we learned about <xref ref="definition-relation" text="title">relations</xref>. In particular, we learned about a particular type of relation called a <xref ref="definition-function-informal-early" text="title">function</xref>. We learned an informal definition of a function, how to use function notation, how to evaluate a function, and how to find the domain and range of a function that is defined by a table or list of ordered pairs.</p>
 
         <example>
-            <title>Graphs of Rational Functions</title>
+            <title>Evaluating Functions</title>
+            <statement><p>Find the given function values for a function <m>f</m> where <m>f(x)=3x^2-4x-7</m>.<ol label="a." cols="3">
+                        <li>
+                            <p><m>f(-4)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(1)</m></p>
+                        </li>
+                        <li>
+                            <p><m>f(3)</m></p>
+                        </li>
+                    </ol></p>
+            </statement>
+            <solution>
+                    <p><ol label="a." >
+                        <li>
+                            <p>We find <m>f(-4)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>-4</m> and then, using the order of operations, simplifying the right side as much as possible.<md>
+
+                                <mrow>f(\substitute{-4}) \amp= 3(\substitute{-4})^2-4(\substitute{-4}-7</mrow>
+                                <mrow>\amp= 3(16)+16-7</mrow>
+                                <mrow>\amp= 57</mrow>
+                            </md></p>
+
+                        </li>
+                        <li>
+                            <p>We find <m>f(1)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>1</m> and then, using the order of operations, simplifying the right side as much as possible.<md>
+
+                                <mrow>f(\substitute{1}) \amp= 3(\substitute{1})^2-4(\substitute{1}-7</mrow>
+                                <mrow>\amp= 3(1)-4-7</mrow>
+                                <mrow>\amp= -8</mrow>
+                            </md></p>
+                        </li>
+                        <li>
+                             <p>We find <m>f(3)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>3</m> and then, using the order of operations, simplifying the right side as much as possible.<md>
+
+                                <mrow>f(\substitute{3}) \amp= 3(\substitute{3})^2-4(\substitute{3}-7</mrow>
+                                <mrow>\amp= 3(9)-12-7</mrow>
+                                <mrow>\amp= 8</mrow>
+                            </md></p>
+                        </li>
+                    </ol></p>
+                </solution>
+            </example>
+
+            <example>
+                <title>Domain and Range</title>
             <statement>
-                <p>In an apocalypse, a zombie infestation begins with <m>1</m> zombie and spreads rapidly. The population of zombies can be modeled by <m>Z(x)=\frac{200000x+100}{5x+100}</m>, where <m>x</m> is the number of days after the apocalypse began. Use technology to graph the function and answer these questions:<ol label="a.">
+                <p>The function <m>g</m> is defined by the ordered pairs <me>\{(0,2), (-13,-1), (15,2), (-9,-8), (-15,-16)\}</me>. Determine the domain and range of <m>g</m>.</p>
+            </statement>
+            <solution>
+                <p>The ordered pairs tell us that <m>g(0)=2</m>, <m>g(13)=-1</m>, etc. So the valid input values are <m>0</m>, <m>-13</m>, <m>15</m>, <m>-9</m>, and <m>-15</m>. This means the domain is the set <m>\{0,-13,15,-9,-15\}</m>.</p>
+
+                <p>Similarly, the ordered pairs tell us that <m>2</m>, <m>-1</m>, <m>-8</m>, and <m>-16</m> are possible output values. Notice that the output <m>2</m> happened twice, but it only needs to be listed in this collection once. The range of <m>g</m> is <m>\{2,-1,-8,-16\}</m>.</p>
+            </solution>
+        </example>
+
+    </subsection>
+
+    <subsection>
+        <title>Rational Functions</title>
+        <p>In <xref ref="section-rational-functions">Section</xref> we learned about <xref ref="definition-rational-function" text="title">rational functions</xref> and how to find the domain of a rational function. We also learned how to simplify a rational function and include any necessary explicit domain restrictions.</p>
+
+        <example>
+            <title>Exploring a Rational Function</title>
+            <statement>
+                <p>In an apocalypse, a zombie infestation begins with <m>1</m> zombie and spreads rapidly. The population of zombies can be modeled by <m>Z(x)=\frac{200000x+100}{5x+100}</m>, where <m>x</m> is the number of days after the apocalypse began. Use the function to answer these questions:<ol label="a.">
                     <li>
                         <p>How many zombies are there <m>2</m> days after the apocalypse began?</p>
                     </li>
                     <li>
-                        <p>After how many days will the zombie population be <m>20{,}000</m>?</p>
+                        <p>What is the domain of this function?</p>
                     </li>
                     <li>
-                        <p>As time goes on, the population will level off at about how many zombies?</p>
+                        <p>Can this function be simplified?</p>
                     </li>
                 </ol></p>
             </statement>
             <solution>
-                <p>We will graph the function with technology. After adjusting window settings, we have:</p>
 
-                <figure>
+                <!-- <figure>
                     <caption>Graph of <m>y=Z(x)=\frac{200000x+100}{5x+100}</m></caption>
                     <image width="47%">
                         <description></description>
@@ -59,26 +121,44 @@
                         ]]>
                         </latex-image>
                     </image>
-                </figure>
+                </figure> -->
                 <p><ol label="a.">
                     <li>
-                        <p>To find the number of zombies after <m>2</m> days, we locate the point <m>(2,3637.27)</m>. Since we can only have a whole number of zombies, we round to <m>3{,}637</m> zombies.</p>
+                        <p>To find the number of zombies after <m>2</m> days, we substitute <m>2</m> in place of <m>x</m> in the function and simplify.<md>
+
+                            <mrow>Z(\substitute{2})=\frac{200000(\substitute{2})+100}{5(\substitute{2})+100}</mrow>
+                            <mrow>\amp=\frac{400100}{110}</mrow>
+                            <mrow>\amp\approx3637</mrow></md> 
+
+                        Thus, after <m>2</m> days, there will be about <m>3637</m> zombies.
+                        </p>
                     </li>
                     <li>
-                        <p>To find the number of days it will take for the zombie population reach <m>20{,}000</m>, we locate the point <m>(19.999,20000)</m> so it will take about 20 days.</p>
+                        <p>To find the domain of this function, we need to find the values of <m>x</m> that will make the denominator equal to zero. Those value of <m>x</m> will make the rational function undefined and therefore, must be excluded from the domain.</p>
+
+                        <p>To find those values, we set the denominator equal to <m>0</m> and then solve that resulting equation.<md>
+
+                            <mrow>5x+100=0</mrow>
+                            <mrow>5x=-100</mrow>
+                            <mrow>x=-20</mrow></md>
+
+                        Thus, <m>x=-20</m> needs to be excluded from the domain. Therefore, the domain is all real numbers except <m>x=-20</m>. In set-builder notation, the domain is <m>\{x \mid x\ne-20\}</m>.</p>
+
+
                     </li>
                     <li>
-                        <p>When we look far to the right on the graph using technology we can see that the population will level off at about <m>40{,}000</m> zombies.</p>
+                        <p>To determine whether or not this function can be simplified, we must factor the numerator and denominator to see if there are any common factors that can be canceled.<md>
+
+                            <mrow>\frac{200000x+100}{5x+100}=\frac{100(200x+1)}{5(x+20)}</mrow>
+                            <mrow>\amp=\frac{\cancelhighlight{5}\cdot20(200x+1)}{\cancelhighlight{5}(x+20)}</mrow>
+                            <mrow>\amp=\frac{20(200x+1)}{x+20}</mrow></md>
+
+                        Thus, the function <m>Z</m> simplifies to <m>Z(x)=\frac{20(200x+1)}{x+20}</m>. Note that there are no explicit domain restrictions to include since the only factor that was canceled was a constant.</p>
+
                     </li>
                 </ol></p>
             </solution>
         </example>
-    </subsection>
-
-    <subsection>
-        <title>Multiplication and Division of Rational Expressions</title>
-        <p>In <xref ref="section-multiplication-and-division-of-rational-expressions">Section</xref> we covered how to simplify rational expressions. It is very important to list any domain restrictions from factors that are canceled. We also multiplied and divided rational expressions.</p>
-
         <example>
             <title>Simplifying Rational Expressions</title>
             <statement>
@@ -96,9 +176,29 @@
                 </md></p>
             </solution>
         </example>
+    </subsection>
 
+    <subsection>
+        <title>Multiplication and Division of Rational Expressions</title>
+        <p>In <xref ref="section-multiplication-and-division-of-rational-expressions">Section</xref> we learned how to multiply and divide rational expressions, and include any explicit domain restrictions necessary.</p>
+
+         <example>
+            <title>Multiplication of Rational Expressions in One Variable</title>
+            <statement>
+                <p>Multiply the rational expressions: <m>\frac{x^2-7x}{x^2-9}\cdot\frac{9-6x+x^2}{42+x-x^2}</m>.</p>
+            </statement>
+            <solution>
+                <p>Note that to factor the second rational expression, we'll want to re-write the terms in descending order for both the numerator and denominator. In the denominator, we'll first factor out <m>-1</m> as the leading term is <m>-x^2</m>.<md>
+                    <mrow>\frac{x^2-7x}{x^2-9}\cdot\frac{9-6x+x^2}{42+x-x^2}\amp=\frac{x^2-7x}{x^2-9}\cdot\frac{x^2-6x+9}{-x^2+x+42}</mrow>
+                    <mrow>\amp=\frac{x^2-7x}{x^2-9}\cdot\frac{x^2-6x+9}{-(x^2-x-42)}</mrow>
+                    <mrow>\amp=\frac{x\cancelhighlight{(x-7)}}{(x+3)\cancelhighlight{(x-3)}}  \cdot\frac{(x-3)\cancelhighlight{(x-3)}}{-(x+6)\cancelhighlight{(x-7)}}</mrow>
+                    <mrow>\amp=-\frac{x(x-3)}{(x+3)(x+6)}, \text{ for } x\neq3,x\neq 7</mrow>
+                </md></p>
+            </solution>
+        </example>
+        
         <example>
-            <title>Multiplication of Rational Functions and Expressions</title>
+            <title>Multiplication of Rational Expressions in Two Variables</title>
             <statement>
                 <p>Multiply the rational expressions: <m>\frac{r^3s}{4t}\cdot\frac{2t^2}{r^2s^3}</m>.</p>
             </statement>
@@ -113,7 +213,21 @@
         </example>
 
         <example>
-            <title>Division of Rational Functions and Expressions</title>
+            <title>Division of Rational Expressions in One Variable</title>
+             <statement>
+                <p>Divide the rational expressions: <m>\frac{y^2-2y-15}{y^2+4y+3}\div\frac{y-5}{y+8}</m>.</p>
+            </statement>
+            <solution>
+                <p><md>
+                    <mrow>\frac{y^2-2y-15}{y^2+4y+3}\div\frac{y-5}{y+8}\amp=\frac{y^2-2y-15}{y^2+4y+3}\cdot\frac{y+8}{y-5}, \text{ for }y\neq -8</mrow>
+                    <mrow>\amp=\frac{\cancelhighlight{(y-5)}\cancelhighlight{(y+3)}}{(y+1)\cancelhighlight{(y+3)}}\cdot\frac{y+8}{\cancelhighlight{y-5}}, \text{ for }y\neq -8</mrow>
+                    <mrow>\amp=\frac{y+8}{y+1}, \text{ for }y\neq -8, y\neq -3, y\neq 5</mrow>
+                </md></p>
+            </solution>
+        </example>
+
+        <example>
+            <title>Division of Rational Expressions in Two Variables</title>
             <statement>
                 <p>Divide the rational expressions: <m>\frac{2x^2+8xy}{x^2-4x+3}\div\frac{x^3+4x^2y}{x^2+4x-5}</m>.</p>
             </statement>
@@ -143,7 +257,7 @@
                     <mrow>\amp=\frac{5\cancelhighlight{(x+5)}}{\cancelhighlight{x+5}}</mrow>
                     <mrow>\amp=\frac{5}{1}, \text{ for } x\neq -5</mrow>
                     <mrow>\amp=5, \text{ for } x\neq -5</mrow>
-                </md>Note that we didn't stop at <m>\frac{5x+25}{x+5}</m>. If possible, we must simplify the numerator and denominator.</p>
+                </md>Note that we didn't stop at <m>\frac{5x+25}{x+5}</m>. If possible, we must simplify the expression by factoring the numerator and denominator and looking for common factors that can be canceled.</p>
             </solution>
         </example>
 
@@ -181,20 +295,20 @@
                 Next, we identify the common denominator of the three fractions, which is <m>(t+3)(t-3)</m>. We then multiply the main numerator and denominator by that expression:
                 <md>
                     <mrow>\frac{\frac{2t}{(t-3)(t+3)}+3}{\frac{6}{t+3}+\frac{1}{t-3}}\amp=\frac{\frac{2t}{(t-3)(t+3)}+3}{\frac{6}{t+3}+\frac{1}{t-3}}\multiplyright{\frac{(t-3)(t+3)}{(t-3)(t+3)}}</mrow>
-                    <mrow>\amp=\frac{\frac{2t}{\highlight{\xcancel{(t-3)(t+3)}}}\highlight{\xcancel{(t-3)(t+3)}}+3(t-3)(t+3)}{\frac{6}{\highlight{\cancel{t+3}}}(t-3)\highlight{\cancel{(t+3)}}+\frac{1}{\lighthigh{\bcancel{t-3}}}\lighthigh{\bcancel{(t-3)}(t+3)}}</mrow>
+                    <mrow>\amp=\frac{\frac{2t}{\highlight{\xcancel{(t-3)(t+3)}}}\highlight{\xcancel{(t-3)(t+3)}}+3(t-3)(t+3)}{\frac{6}{\highlight{\cancel{t+3}}}(t-3)\highlight{\cancel{(t+3)}}+\frac{1}{\lighthigh{\cancel{t-3}}}\lighthigh{\cancel{(t-3)}}(t+3)}</mrow>
                     <mrow>\amp=\frac{2t+3(t-3)(t+3)}{6(t-3)+1(t+3)} \text{ for }t\neq -3, t\neq 3</mrow>
                     <mrow>\amp=\frac{2t+3(t^2-9)}{6t-18+t+3} \text{ for }t\neq -3, t\neq 3</mrow>
                     <mrow>\amp=\frac{2t+3t^2-27}{7t-15} \text{ for }t\neq -3, t\neq 3</mrow>
                     <mrow>\amp=\frac{3t^2+2t-27}{7t-15} \text{ for }t\neq -3, t\neq 3</mrow>
                 </md>
-                Both the numerator and denominator are prime polynomials so this expression can neither factor nor simplify any further.</p>
+                Both the numerator and denominator are prime polynomials so this expression cannot simplify any further.</p>
             </solution>
         </example>
     </subsection>
 
     <subsection>
         <title>Solving Rational Equations</title>
-        <p>In <xref ref="section-solving-rational-equations">Section</xref> we covered how to solve rational equations. We looked at rate problems, solved for a specified variable and used technology to solve rational equations.</p>
+        <p>In <xref ref="section-solving-rational-equations">Section</xref> we covered how to solve rational equations, by first clearing the fractions, much the same as we learned in <xref ref="section-linear-equations-and-inequalities-with-fractions">Section</xref>. We also looked at application problems like uniform motion and shared work problems. Lastly, we solved rational equations for a specified variable.</p>
 
         <example>
             <title>Solving Rational Equations</title>
@@ -299,15 +413,156 @@
     </subsection>
 
     <exercises>
+
         <exercisegroup cols="2">
-            <title>Introduction to Rational Functions</title>
+            <title>Introduction to Functions</title>
+
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction10.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction20.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction30.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction40.pg" />
+            </exercise>
             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction50.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction60.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction70.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction80.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction100.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction110.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction120.pg" />
+            </exercise>
+             <exercise>
+                <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction130.pg" />
+            </exercise>
+
+            <exercise>
+                <webwork >
+                    <setup>
+                        <pg-code>
+                            Context("Interval");
+                            $set1=Set("{-13,-20,-6,-3,-7}");
+                            $set2=Set("{13,17,4,7,-5}");
+                            $setev1=$set1->cmp(cmp_class=>'a set');
+                            $setev2=$set2->cmp(cmp_class=>'a set');
+                            Context()->parens->set('('=>{type=>'Point'});
+                        </pg-code>
+                    </setup>
+                    <statement>
+                        <p>A function, <m>f</m> is defined by the ordered pairs <m>\{(-13,13),(-20,17),(-6,4),(-3,7),(-7,-5)\}</m>. Find the domain and range of <m>f</m>. </p>
+                        <p>The domain of <m>f</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
+                        <p>The range of <m>f</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
+                    </statement>
+                </webwork>
+            </exercise>
+            <exercise>
+                <webwork >
+                    <setup>
+                        <pg-code>
+                            Context("Interval");
+                            $set1=Set("{-17,-6,1,-1}");
+                            $set2=Set("{-13,3,10,3}");
+                            $setev1=$set1->cmp(cmp_class=>'a set');
+                            $setev2=$set2->cmp(cmp_class=>'a set');
+                            Context()->parens->set('('=>{type=>'Point'});
+                        </pg-code>
+                    </setup>
+                    <statement>
+                        <p>A function, <m>g</m> is defined by the ordered pairs <m>\{(-17,-13),(-6,3),(1,10),(-1,3)\}</m>. Find the domain and range of <m>g</m>. </p>
+                        <p>The domain of <m>g</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
+                        <p>The range of <m>g</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
+                    </statement>
+                </webwork>
+            </exercise>
+        </exercisegroup>
+
+
+        <exercisegroup cols="2">
+            <title>Rational Functions</title>
+
+            <!-- Evaluate and find domain -->
+
+            <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_01_MultDivRatExp.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_01_MultDivRatExp.pg" />
+            </exercise>
+
+              <!-- Find domain -->
+
+            <exercise>
+                <webwork source="Library/Mizzou/Algebra/rational_expressions_domain/domain_04.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/Mizzou/Algebra/rational_expressions_domain/domain_04.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/Mizzou/Algebra/rational_expressions_domain/domain_04.pg" />
+            </exercise>
+
+
+                <!-- Simplify -->
+
+             <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_07_MultDivRatExp.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_08_MultDivRatExp.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_09_MultDivRatExp.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_11_MultDivRatExp.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_12_MultDivRatExp.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_13_MultDivRatExp.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="Library/CollegeOfIdaho/setAlgebra_06_01_MultDivRationalExpressions/61IntAlg_14_MultDivRatExp.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions141.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions141.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/RationalFunctions/reduceRationalFunction30.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/RationalFunctions/reduceRationalFunction30.pg" />
+            </exercise>
+
+            <!-- <exercise>
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph50.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph50.pg" />
-            </exercise>
-            <exercise>
+            </exercise> -->
+            <!-- <exercise>
                 <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication10.pg" />
             </exercise>
             <exercise>
@@ -474,22 +729,16 @@
                     <p>The point with the maximum <m>y</m>-value is <m>(<var name="$tMaxR"/>,<var name="$fMaxR"/>)</m>. It implies the drug concentration in the blood stream will reach the maximum value of <m><var name="$fMaxR"/></m> milligrams per liter approximately <m><var name="$tMaxR"/></m> hours since injection.</p>
                 </solution>
               </webwork>
-            </exercise>
+            </exercise> -->
         </exercisegroup>
 
         <exercisegroup cols="2">
             <title>Multiplication and Division of Rational Expressions</title>
             <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions141.pg" />
+                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/multiplyRationalExpressions70.pg" />
             </exercise>
             <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions141.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalFunctions/reduceRationalFunction30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalFunctions/reduceRationalFunction30.pg" />
+                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/multiplyRationalExpressions80.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/multiplyRationalExpressions53.pg" />
@@ -642,17 +891,33 @@
             </exercise> -->
             <!-- Applications -->
             <exercise>
-                <webwork source="BasicAlgebra/RationalEquations/rationalEquationApplication25.pg" />
+                <webwork source="BasicAlgebra/RationalEquations/rationalEquationApplication10.pg" seed="3" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/RationalEquations/rationalEquationApplication25.pg" />
             </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalEquations/rationalEquationApplication40.pg" />
+           <exercise>
+                <webwork source="Library/Mizzou/Intermediate_Algebra/Equations_Rational/App_Biker_Walker.pg" />
             </exercise>
             <exercise>
-                <webwork source="BasicAlgebra/RationalEquations/rationalEquationApplication40.pg" />
+            <webwork>
+                <pg-macros>
+                    <macro-file>contextNumeric.pl</macro-file>
+                </pg-macros>
+                <setup>
+                    <pg-code>
+                        Context("Numeric");
+                        $answer=30;
+                    </pg-code>
+                </setup>
+
+            <statement><p>Jenn spent <m>2</m> hours exploring a mountain with a dirt bike. When she rode the <m>40</m> miles uphill, she went <m>5</m> miles per hour slower than when she reached the peak and rode for <m>12</m> miles along the summit. What was her speed along the summit?</p>
+
+            <p>Her speed along the summit was <var name="$answer" width="5"/> miles per hour.</p>
+            </statement>
+            </webwork>
             </exercise>
+            
         </exercisegroup>
     </exercises>
 </section>
