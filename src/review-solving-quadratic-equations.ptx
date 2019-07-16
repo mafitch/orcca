@@ -150,7 +150,7 @@
 
     <subsection>
         <title>Solving Quadratic Equations by Using a Square Root</title>
-        <p>In <xref ref="section-solving-quadratic-equations-by-using-a-square-root">Section</xref> we covered how to solve quadratic equations using the <xref ref="fact-square-root-property" text="title">square root property</xref> and how to use the <xref ref="theorem-pythagorean-theorem" text="title">Pythagorean Theorem</xref>.</p>
+        <p>In <xref ref="section-solving-quadratic-equations-by-using-a-square-root">Section</xref> we covered how to solve quadratic equations using the <xref ref="fact-square-root-property" text="title">square root property</xref> and how to use the <xref ref="theorem-pythagorean-theorem-revisited" text="title">Pythagorean Theorem</xref>.</p>
 
         <example>
             <title>Solving Quadratic Equations Using the Square Root Property</title>
@@ -551,10 +551,454 @@
             </solution>
         </example>
     </subsection>
+    <subsection>
+        <title>Properties of Quadratic Functions</title>
+        <p>In <xref ref="section-properties-of-quadratic-functions">Section</xref> we covered the definition of a <xref ref="definition-quadratic-function" text="title">quadratic function</xref>, and how to determine the direction, vertex, axis of symmetry, and vertical and horizontal intercepts. We then learned how to algebraically find the <xref ref="fact-vertex" text="title">vertex</xref>, how to graph a parabola using a table, and how to find the domain and range of quadratic functions.</p>
+
+        <!-- Perhaps the next example and the one after it are out of order, but this order makes the PDF page fitting much better. I don't think the order is critical here. -->
+
+        <example>
+            <title>Finding the Vertex and Axis of Symmetry</title>
+            <statement>
+                <p>Algebraically find the <xref ref="fact-vertex" text="title">vertex</xref> of the parabola described by the quadratic function <m>f(x)=3x^2+8x-7</m>.</p>
+            </statement>
+            <solution>
+                <p>To find the vertex of a parabola algebraically, we use the formula <m>h=-\frac{b}{2a}</m> to find the axis of symmetry first. For our equation, <m>\substitute{a=3}</m> and <m>\lighthigh{b=8}</m>, so:
+                    <md>
+                        <mrow>h\amp=-\frac{\lighthigh{8}}{2(\substitute{3})}<!--</mrow>
+                        <mrow>\amp-->=-\frac{4}{3}</mrow>
+                    </md>
+                Next, we evaluate <m>f\mathopen{}\left(\substitute{-\frac{4}{3}}\right)\mathclose{}</m> to find the <m>y</m>-coordinate of the vertex.
+                    <md>
+                        <mrow>f\mathopen{}\left(\substitute{-\frac{4}{3}}\right)\mathclose{}\amp=3\left(\substitute{-\frac{4}{3}}\right)^2+8\left(\substitute{-\frac{4}{3}}\right)-7</mrow>
+                        <mrow>\amp=3\left(\frac{16}{9}\right)-\frac{32}{3}-7</mrow>
+                        <mrow>\amp=\frac{16}{3}-\frac{32}{3}-\frac{21}{3}</mrow>
+                        <mrow>\amp=\frac{37}{3}</mrow>
+                    </md>
+                So, the parabola has its axis of symmetry at <m>x=-\frac{4}{3}</m> and has its vertex at the point <m>\left(-\frac{4}{3},-\frac{37}{3}\right)</m>.</p>
+            </solution>
+        </example>
+
+        <example>
+            <title>Properties of Quadratic Functions</title>
+            <statement>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <p>Identify the <xref ref="list-properties-of-quadratic-functions-visual" text="title">key features</xref> of the quadratic function <m>y=-2x^2-4x+6</m> shown in <xref ref="figure-quadratic-function-graph-properties-review">Figure</xref>.</p>
+
+                    <figure xml:id="figure-quadratic-function-graph-properties-review">
+                    <caption>Graph of <m>y=-2x^2-4x+6</m></caption>
+                        <image width="47%">
+                            <description>the graph of a parabola that opens downward, has a vertex at (-1,8), a y-intercept at (0,6) and x-intercepts at (-3,0) and (1,0)</description>
+                            <latex-image>
+                                <![CDATA[\begin{tikzpicture}
+                                    \begin{axis}[ymin=-12,ymax=10,xmin=-10,xmax=10,
+                                            ytick={-10,-8,...,8},
+                                            minor xtick={-10,-9,...,10},
+                                            xtick={-8,-6,...,8},
+                                            minor ytick={-12,-11,...,10}]
+                                        \addplot+[domain=-4.162:2.162] {-2*x^2-4*x+6};
+                                    \end{axis}
+                                \end{tikzpicture}
+                                ]]>
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </statement>
+            <solution>
+                <sidebyside widths="47% 47%" margins="0%">
+                    <stack>
+                        <p>First, we see that this parabola opens downward because the leading coefficient is negative.</p>
+
+                        <p>Then we locate the vertex which is the point <m>(-1,8)</m>. The axis of symmetry is the vertical line <m>x=-1</m>.</p>
+
+                        <p>The vertical intercept or <m>y</m>-intercept is the point <m>(0,6)</m>.</p>
+
+                        <p>The horizontal intercepts are the points <m>(-3,0)</m> and <m>(1,0)</m>.</p>
+                    </stack>
+
+                    <figure>
+                    <caption>Graph of <m>y=-2x^2-4x+6</m></caption>
+                        <image width="47%">
+                            <description>the graph of a parabola that opens downward, has a vertex at (-1,8), a y-intercept at (0,6) and x-intercepts at (-3,0) and (1,0)</description>
+                            <latex-image>
+                                <![CDATA[\begin{tikzpicture}
+                                    \begin{axis}[ymin=-12,ymax=10,xmin=-10,xmax=10,
+                                            ytick={-10,-8,...,8},
+                                            minor xtick={-10,-9,...,10},
+                                            xtick={-8,-6,...,8},
+                                            minor ytick={-12,-11,...,10}]
+                                        \addplot+[domain=-4.162:2.162] {-2*x^2-4*x+6};
+                                        \addplot[symmetryaxis] coordinates {(-1,-12) (-1,10)};
+                                        \addplot[soliddot] coordinates {(-1,8)};
+                                        \addplot[soliddot] coordinates {(-3,0)};
+                                        \addplot[soliddot] coordinates {(1,0)};
+                                        \addplot[soliddot] coordinates {(0,6)};
+                                    \end{axis}
+                                \end{tikzpicture}]]>
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </solution>
+        </example>
+
+        <example xml:id="example-graphing-parabola-with-table">
+            <title>Graphing Quadratic Functions by Making a Table</title>
+            <statement>
+                <p>Determine the vertex and axis of symmetry for the quadratic function <m>g(x)=2x^2+8x+2</m>. Then make a table of values and sketch the graph of the function.</p>
+            </statement>
+            <solution>
+                <p>To determine the vertex of <m>g(x)=2x^2+8x+2</m>, we want to find the <m>x</m>-value of the vertex first. We will use <m>h=-\frac{b}{2a}</m> for <m>\substitute{a=2}</m> and <m>\lighthigh{b=8}</m>:
+                    <md>
+                        <mrow>h\amp=-\frac{\lighthigh{b}}{2\substitute{a}}</mrow>
+                        <mrow>h\amp=-\frac{\lighthigh{8}}{2(\substitute{2})}</mrow>
+                        <mrow>h\amp=-2</mrow>
+                    </md>
+                To find the vertex, we evaluate <m>g(\substitute{-2})</m>.
+                    <md>
+                        <mrow>g(\substitute{-2})\amp=2(\substitute{-2})^2+8(\substitute{-2})+2</mrow>
+                        <mrow>\amp=2(4)-16+2</mrow>
+                        <mrow>\amp=8-16+2</mrow>
+                        <mrow>\amp=-6</mrow>
+                    </md>
+                Now we know that our axis of symmetry is the line <m>x=-2</m> and the vertex is the point <m>(-2,-6)</m>. We will set up our table with two values on each side of <m>x=-2</m>. We choose <m>x= -4, -3, \highlight{-2}, -1,</m> and <m>0</m>. Then, we'll determine the <m>y</m>-coordinates by replacing <m>x</m> with each value and we have the complete table as shown in <xref ref="table-quadratic-function-complete-review">Table</xref>. Notice that each pair of <m>y</m>-values on either side of the vertex match. This helps us to check that our vertex and <m>y</m>-values are correct.</p>
+
+                    <table xml:id="table-quadratic-function-complete-review">
+                    <caption>Function values and points for <m>g(x)=2x^2+8x+2</m></caption>
+                        <tabular valign="top" bottom="minor">
+                            <col halign="right" right="minor"/>
+                            <col halign="left" right="minor"/>
+                            <col halign="center"/>
+                            <row bottom="medium">
+                                <cell><m>x</m></cell>
+                                <cell halign="center"><m>g(x)=2x^2+8x+2</m></cell>
+                                <cell>Point</cell>
+                            </row>
+                            <row>
+                                <cell><m>-4</m></cell>
+                                <cell><m>g(\substitute{-4})=2(\substitute{-4})^2+8(\substitute{-4})+2=2</m></cell>
+                                <cell><m>(-4,2)</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-3</m></cell>
+                                <cell><m>g(\substitute{-3})=2(\substitute{-3})^2+8(\substitute{-3})+2=-4</m></cell>
+                                <cell><m>(-3,-4)</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-2</m></cell>
+                                <cell><m>g(\substitute{-2})=2(\substitute{-2})^2+8(\substitute{-2})+2=-6</m></cell>
+                                <cell><m>(-2,-6)</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-1</m></cell>
+                                <cell><m>g(\substitute{-1})=2(\substitute{-1})^2+8(\substitute{-1})+2=-4</m></cell>
+                                <cell><m>(-1,-4)</m></cell>
+                            </row>
+                            <row bottom="none">
+                                <cell><m>0</m></cell>
+                                <cell><m>g(\substitute{0})=2(\substitute{0})^2+8(\substitute{0})+2=2</m></cell>
+                                <cell><m>(0,2)</m></cell>
+                            </row>
+                        </tabular>
+                    </table>
+
+                <sidebyside widths="32% 32% 32%" margins="0%">
+
+                    <p>Now that we have our table, we will plot the points and draw in the axis of symmetry as shown in <xref ref="figure-quadratic-function-points-review">Figure</xref>. We complete the graph by drawing a smooth curve through the points and drawing an arrow on each end as shown in <xref ref="figure-quadratic-function-graph-using-vertex-and-table-review">Figure</xref></p>
+
+                    <figure xml:id="figure-quadratic-function-points-review">
+                    <caption>Plot of the points and axis of symmetry</caption>
+                        <image>
+                            <description>a coordinate plane with the points from the table plotted; the axis of symmetry is drawn as a vertical dotted line through the vertex</description>
+                            <latex-image>
+                                <![CDATA[\begin{tikzpicture}
+                                    \begin{axis}[]
+                                        \addplot[soliddot] coordinates {(-4,2) (-3,-4) (-2,-6) (-1,-4) (0,2)} ;
+                                        \addplot[symmetryaxis] coordinates {(-2,-7) (-2,7)};
+                                        \end{axis}
+                                \end{tikzpicture}
+                                ]]>
+                            </latex-image>
+                        </image>
+                    </figure>
+
+                    <figure xml:id="figure-quadratic-function-graph-using-vertex-and-table-review">
+                    <caption>Graph of <m>g(x)=2x^2+8x+2</m></caption>
+                        <image>
+                            <description>the points from the previous graph are connected to make a smooth u-shaped parabola opening downward</description>
+                            <latex-image>
+                                <![CDATA[\begin{tikzpicture}
+                                    \begin{axis}[]
+                                        \addplot+[domain=-4.55:0.55] {2*x^2+8*x+2};
+                                        \addplot[soliddot] coordinates {(-4,2) (-3,-4) (-2,-6) (-1,-4) (0,2)} ;
+                                        \addplot[symmetryaxis] coordinates {(-2,-7) (-2,7)};
+                                    \end{axis}
+                                \end{tikzpicture}
+                                ]]>
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </solution>
+        </example>
+    </subsection>
+    <subsection>
+        <title>Graphing Quadratic Functions</title>
+        <p>In <xref ref="section-graphing-quadratic-functions">Section</xref> we covered how to find the vertical and horizontal intercepts of a quadratic function algebraically, how to make a graph of a parabola using key features, applications of quadratic functions and what their real world domains and ranges mean, and how to tell a quadratic function from other types of functions.</p>
+
+        <example>
+            <title>Finding the Vertical and Horizontal Intercepts Algebraically</title>
+            <statement>
+                <p>
+                    <ol label="a.">
+                        <li><p>Algebraically determine the vertical and horizontal intercepts of the quadratic function <m>h(x)=6x^2-13x+6</m>.</p></li>
+                        <li><p>Algebraically determine the vertical and horizontal intercepts of the quadratic function <m>k(x)=2x^2-2x-5</m>.</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <ol label="a.">
+                        <li>
+                            <p>To find the vertical intercept, we evaluate the function when <m>x=0</m>.
+                                <md>
+                                    <mrow>h(\substitute{0})\amp=6(\substitute{0})^2-13(\substitute{0})+6</mrow>
+                                    <mrow>\amp=6</mrow>
+                                </md>
+                            So, the vertical intercept of <m>h</m> is <m>(0,6)</m>.</p>
+                            <p>Next, to find the horizontal intercepts, we set the function equal to zero. To solve that equation we will use <xref ref="list-methods-for-solving-quadratic-equations">Algorithm</xref>. For this particular example, we will practice factoring using the <xref ref="algorithm-the-ac-method" text="title">AC method</xref>. Here, <m>ac=36</m> and factor pairs that add up to <m>-13</m> are <m>-9</m> and <m>-4</m>, as you will see.
+                                <md>
+                                    <mrow>\substitute{h(x)}\amp=6x^2-13x+6</mrow>
+                                    <mrow>\substitute{0}\amp=6x^2\mathbin{\highlight{-}}\mathbin{\highlight{13x}}+6</mrow>
+                                    <mrow>0\amp=6x^2\mathbin{\highlight{-}}\mathbin{\highlight{9x}}\mathbin{\highlight{-}}\mathbin{\highlight{4x}}+6</mrow>
+                                    <mrow>0\amp=3x\highlight{(2x-3)}-2\highlight{(2x-3)}</mrow>
+                                    <mrow>0\amp=(3x-2)\highlight{(2x-3)}</mrow>
+                                </md>
+                                <md>
+                                    <mrow>0\amp=3x-2\amp\text{ or }\amp\amp0\amp=2x-3</mrow>
+                                    <mrow>x\amp=\frac{2}{3}\amp\text{ or }\amp\amp x\amp=\frac{3}{2}</mrow>
+                                </md>
+                            So, the horizontal intercepts are <m>\left(\frac{2}{3},0\right)</m> and <m>\left(\frac{3}{2},0\right)</m>.</p>
+                        </li>
+                        <li>
+                            <p>To find the vertical intercept, we have to evaluate the function when <m>x=0</m>.
+                                <md>
+                                    <mrow>k(\substitute{0})\amp=2(\substitute{0})^2-2(\substitute{0})-5</mrow>
+                                    <mrow>\amp=-5</mrow>
+                                </md>
+                            So, the vertical intercept of <m>k</m> is <m>(0,-5)</m>.</p>
+                            <p>Next, to find the horizontal intercepts, we set the function equal to zero. To solve that equation we will use <xref ref="list-methods-for-solving-quadratic-equations">Algorithm</xref>. For this particular example, we will use the <xref ref="fact-the-quadratic-formula" text="title">quadratic formula</xref> because the square root method will not work (because there is a linear term) and factoring fails.
+                                <md>
+                                    <mrow>\substitute{k(x)}\amp=2x^2-2x-5</mrow>
+                                    <mrow>\substitute{0}\amp=2x^2-2x-5</mrow>
+                                    <intertext>We identify that <m>\substitute{a=2}</m>, <m>\lighthigh{b=-2}</m>, and <m>c=-5</m></intertext>
+                                    <mrow>x\amp=\frac{-\lighthigh{b}\pm\sqrt{\lighthigh{b}^2-4\substitute{a}c}}{2\substitute{a}}</mrow>
+                                    <mrow>x\amp=\frac{-(\lighthigh{-2})\pm\sqrt{(\lighthigh{-2})^2-4(\substitute{2})(-5)}}{2(\substitute{2})}</mrow>
+                                    <mrow>x\amp=\frac{2\pm\sqrt{4+40}}{4}</mrow>
+                                    <mrow>x\amp=\frac{2\pm\sqrt{44}}{4}</mrow>
+                                    <mrow>x\amp=\frac{2\pm\sqrt{\highlight{4}\cdot11}}{4}</mrow>
+                                    <mrow>x\amp=\frac{2\pm\highlight{2}\sqrt{11}}{4}</mrow>
+                                    <mrow>x\amp=\frac{2}{4}\pm\frac{2\sqrt{11}}{4}</mrow>
+                                    <mrow>x\amp=\frac{1}{2}\pm\frac{\sqrt{11}}{2}</mrow>
+                                    <mrow>x\amp=\frac{1\pm\sqrt{11}}{2}</mrow>
+                                </md>
+                            So, the horizontal intercepts are <m>\left(\frac{1+\sqrt{11}}{2},0\right)</m> and <m>\left(\frac{1-\sqrt{11}}{2},0\right)</m>. If you wanted to graph these points, you would need to approximate them as <m>\left(2.16,0\right)</m> and <m>\left(-1.16,0\right)</m>.</p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </example>
+
+        <example>
+            <title>Graphing Quadratic Functions Using their Key Features</title>
+            <statement>
+                <p>Graph the function <m>j(x)=-2x^2+6x+8</m> by algebraically determining its key features.</p>
+            </statement>
+            <solution>
+                <p>To start, we'll note that this function will open downward, as the leading coefficient is negative.</p>
+
+                <p>To find the <m>y</m>-intercept, we'll evaluate <m>j(0)</m>:
+                    <md>
+                        <mrow>j(\substitute{0})\amp=-2(\substitute{0})^2+6(\substitute{0})+8</mrow>
+                        <mrow>\amp=8</mrow>
+                    </md>
+                The <m>y</m>-intercept is <m>(0,8)</m>.</p>
+
+                <p>Next, we'll find the horizontal intercepts by setting <m>j(x)=0</m> and solving for <m>x</m>:
+                    <md>
+                        <mrow>-2x^2+6x+8\amp=0</mrow>
+                        <mrow>-2(x^2-3x-4)\amp=0</mrow>
+                        <mrow>2(x-4)(x+1)\amp=0</mrow></md><md>
+                        <mrow>x-4\amp=0\amp \text{or}\amp\amp x+1\amp=0</mrow>
+                        <mrow>x\amp=4\amp \text{or}\amp\amp x\amp=-1</mrow>
+                    </md>
+                The <m>x</m>-intercepts are <m>(4,0)</m> and <m>(-1,0)</m>.</p>
+
+                <p>Lastly, we'll determine the vertex. Noting that <m>\substitute{a=-2}</m> and <m>\lighthigh{b=6}</m>, we have:
+                    <md>
+                        <mrow>x\amp=-\frac{\lighthigh{b}}{2\substitute{a}}</mrow>
+                        <mrow>x\amp=-\frac{\lighthigh{6}}{2(\substitute{-2})}</mrow>
+                        <mrow>\amp=1.5</mrow>
+                    </md>
+                Using the <m>x</m>-value <m>\substitute{1.5}</m> to find the <m>y</m>-coordinate, we have:
+                    <md>
+                        <mrow>j(\substitute{1.5})\amp=-2(\substitute{1.5})^2+6(\substitute{1.5})+8</mrow>
+                        <mrow>\amp=12.5</mrow>
+                    </md>
+                The vertex is the point <m>(1.5,12.5)</m>, and the axis of symmetry is the line <m>x=1.5</m>.</p>
+
+                <p>We're now ready to graph this function. We'll start by drawing and scaling the axes so all of our key features will be displayed as shown in <xref ref="figure-quadratic-function-key-features-grid-review">Figure</xref>. Next, we'll plot these key points as shown in <xref ref="figure-quadratic-function-key-features-initial-step-for-graphing-review">Figure</xref>. Finally, we'll note that this parabola opens downward and connect these points with a smooth curve, as shown in <xref ref="figure-quadratic-function-key-features-full-graph-review">Figure</xref>.
+                </p>
+
+                <sidebyside widths="32% 32% 32%" margins="0%">
+                    <figure xml:id="figure-quadratic-function-key-features-grid-review">
+                    <caption>Setting up the grid.</caption>
+                        <image>
+                            <description>a Cartesian graph with the x-axis labeled from -5 to 5 and the y-axis labeled from -10 to 10</description>
+                            <latex-image>
+                                <![CDATA[\begin{tikzpicture}
+                                    \begin{axis}[xmin=-5,xmax=7,
+                                            ymin=-16,ymax=16,
+                                            xtick={-4,-3,...,6},
+                                            minor xtick={-5,-4,...,7},
+                                            ytick={-12,-8,...,12},
+                                            minor ytick={-16,-14,...,16}]
+                                    \end{axis}
+                                \end{tikzpicture}]]>
+                            </latex-image>
+                        </image>
+                    </figure>
+
+                    <figure xml:id="figure-quadratic-function-key-features-initial-step-for-graphing-review">
+                    <caption>Marking key features.</caption>
+                        <image>
+                            <description>the same graph with the key points added; the vertex is at (-2.5,-4.5); the y-intercept is at (0,8); the x-intercepts are at (-4,0) and (-1,0); the axis of symmetry is drawn as a dotted vertical, x=-2.5, line passing through the vertex</description>
+                            <latex-image>
+                                <![CDATA[\begin{tikzpicture}
+                                    \begin{axis}[xmin=-5,xmax=7,
+                                            ymin=-16,ymax=16,
+                                            xtick={-4,-3,...,6},
+                                            minor xtick={-5,-4,...,7},
+                                            ytick={-12,-8,...,12},
+                                            minor ytick={-16,-14,...,16}]
+                                        \addplot[soliddot] coordinates {(4,0) (-1,0) (1.5,12.5) (0,8)};
+                                        \addplot[symmetryaxis] coordinates {(1.5,-16) (1.5,16)};
+                                    \end{axis}
+                                \end{tikzpicture}]]>
+                            </latex-image>
+                        </image>
+                    </figure>
+
+                    <figure xml:id="figure-quadratic-function-key-features-full-graph-review">
+                    <caption>Completing the graph.</caption>
+                        <image>
+                            <description>the key points are connected with a solid curve with arrows on both ends</description>
+                            <latex-image>
+                                <![CDATA[\begin{tikzpicture}
+                                    \begin{axis}[xmin=-5,xmax=7,
+                                            ymin=-16,ymax=16,
+                                            xtick={-4,-3,...,6},
+                                            minor xtick={-5,-4,...,7},
+                                            ytick={-12,-8,...,12},
+                                            minor ytick={-16,-14,...,16}]
+                                        \addplot[soliddot] coordinates {(4,0) (-1,0) (1.5,12.5) (0,8)};
+                                        \addplot[symmetryaxis] coordinates {(1.5,-16) (1.5,16)};
+                                        \addplot+[primarycurve,domain=-2.275:5.275] {-2*x^2+6*x+8} node[pos=0.35, left] {$y=j(x)$};
+                                    \end{axis}
+                                \end{tikzpicture}]]>
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </solution>
+        </example>
+
+        <example xml:id="example-FAST-telescope">
+            <title>Applications of Quadratic Functions</title>
+            <statement>
+                <p>The <url href="https://en.wikipedia.org/wiki/Five_hundred_meter_Aperture_Spherical_Telescope">Five-hundred-meter Aperture Spherical Telescope</url><fn><url href="https://en.wikipedia.org/wiki/Five_hundred_meter_Aperture_Spherical_Telescope">en.wikipedia.org/wiki/Five<underscore/>hundred<underscore/>meter<underscore/>Aperture<underscore/>Spherical<underscore/>Telescope</url></fn> (<acro>FAST</acro>) located in SW China is the worlds largest radio telescope. The name is actually incorrect because it is not spherical: it is parabolic! Parabolic telescopic dishes are very common because parabolas have the unique feature that they focus light coming in at a single point where a collecting instrument is placed.</p>
+                <p>If a scientist somehow managed to climb to the rim of the dish and roll a ball from the top down toward the center, her ball would travel along the parabola <m>h(x)=0.0018x^2-0.9x</m>, where <m>x</m> is the horizontal distance from the rim of the dish where the ball was released, in meters, and <m>h(x)</m> is the height of the ball above above the rim, in meters (so negative height would mean <em>below</em> the rim). Note that this is an approximation based on real data.
+                    <ol label="a.">
+                        <li><p>Find and interpret the vertical intercept of the graph.</p></li>
+                        <li><p>Find and interpret the horizontal intercepts of the graph.</p></li>
+                        <li><p>Find and interpret the vertex of the graph.</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <ol label="a.">
+                        <li>
+                            <p>The vertical intercept is found when <m>\substitute{x=0}</m>.
+                                <md>
+                                    <mrow>h(\substitute{x})\amp=0.0018\substitute{x}^2-0.9\substitute{x}</mrow>
+                                    <mrow>h(\substitute{0})\amp=0.0018(\substitute{0})^2-0.9(\substitute{0})</mrow>
+                                    <mrow>\amp=0</mrow>
+                                </md>
+                            So the vertical intercept is <m>(0,0)</m> which means that the ball was released <m>0</m> meters from the rim (on the rim) at a height of <m>0</m> meters above the rim (again, on the rim).</p>
+                        </li>
+                        <li>
+                            <p>The horizontal intercepts are found when <m>h(x)=0</m>. This will be a quadratic equation that we can solve using factoring.
+                                <md>
+                                    <mrow>h(x)\amp=0</mrow>
+                                    <mrow>0.0018x^2-0.9x\amp=0</mrow>
+                                    <mrow>x\left(0.0018x-0.9\right)\amp=0</mrow>
+                                </md>
+                                <md>
+                                    <mrow>x\amp=0\amp\text{ or }\amp\amp 0.0018x-0.9\amp=0</mrow>
+                                    <mrow>x\amp=0\amp\text{ or }\amp\amp 0.0018x\amp=0.9</mrow>
+                                    <mrow>x\amp=0\amp\text{ or }\amp\amp x\amp=500</mrow>
+                                </md>
+                            The horizontal intercepts are <m>(0,0)</m> and <m>(500,0)</m>. The interpretation of <m>(0,0)</m> is the same as before. The interpretation of <m>(500,0)</m> is that the other side of the rim of the dish is <m>500</m> meters away. If the ball were to somehow roll all the way down, and then back up the other side, it would pop up at the opposite rim exactly <m>500</m> meters horizontally away.</p>
+                        </li>
+                        <li>
+                            <p>The vertex is found when the <m>x</m>-value is at the axis of symmetry. To find that, we use the formula <m>x=-\frac{\lighthigh{b}}{2\substitute{a}}</m> where <m>\substitute{a=0.0018}</m> and <m>\lighthigh{b=-0.9}</m>
+                                <md>
+                                    <mrow>x\amp=-\frac{\lighthigh{b}}{2\substitute{a}}</mrow>
+                                    <mrow>x\amp=-\frac{\lighthigh{-0.9}}{2(\substitute{0.0018})}</mrow>
+                                    <mrow>\amp=250</mrow>
+                                </md>
+                            Then, to find the <m>y</m>-value, we substitute that <m>x</m>-value, <m>\substitute{250}</m> into the original function.
+                                <md>
+                                    <mrow>h(\substitute{x})\amp=0.0018\substitute{x}^2-0.9\substitute{x}</mrow>
+                                    <mrow>h(\substitute{250})\amp=0.0018(\substitute{250})^2-0.9(\substitute{250})</mrow>
+                                    <mrow>\amp=-112.5</mrow>
+                                </md>
+                            The vertex is the point <m>(250,-112.5)</m>. Since the vale of <m>a</m> is positive, we know that this parabola opens upward. This means that the vertex is the lowest point on the graph. So the lowest point of the telescope dish is <m>250</m> meters from the rim (horizontally) and <m>112.5</m> meters below the height of the rim. That is one big dish!</p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </example>
+        <example>
+            <title>Distinguishing Quadratic Functions from Other Functions and Relations</title>
+            <statement>
+                <p>Decide if the equations represent quadratic functions or something else.
+                    <ol cols="2" label="a.">
+                        <li><p><m>y-1=3(x-2)-5</m></p></li>
+                        <li><p><m>y=3(x-2)^2-5</m></p></li>
+                        <li><p><m>y=\sqrt{x-2}-5</m></p></li>
+                        <li><p><m>y^2=x^2-5</m></p></li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>Recall that <xref ref="definition-quadratic-function">Definition</xref> says that a quadratic function has the form <m>f(x)=ax^2+bx+c</m> where <m>a</m>, <m>b</m>, and <m>c</m> are real numbers, and <m>a \neq 0</m>.
+                    <ol label="a.">
+                        <li><p>The equation <m>y-1=3(x-2)-5</m> <em>is not</em> quadratic. It is in fact a linear equation.</p></li>
+                        <li><p>The equation <m>y=3(x-2)^2-5</m> <em>is</em> quadratic. We could simplify the right hand side and would have something of the form <m>y=ax^2+bx+c</m>.</p></li>
+                        <li><p>The equation <m>y=\sqrt{x-2}-5</m> <em>is not</em> quadratic. The <m>x</m> is inside a radical, not squared, so it cannot be converted into the form <m>y=ax^2+bx+c</m>.</p></li>
+                        <li><p>The equation <m>y^2=x^2-5</m> <em>is not</em> quadratic. It cannot be re-written in the form <m>y=ax^2+bx+c</m> (due to the <m>y^2</m> term).</p></li>
+                    </ol>
+                </p>
+            </solution>
+        </example>
+    </subsection>
 
     <exercises>
-        <exercisegroup cols="3">
-            <title>Solving Quadratic Equations by Factoring</title>
+        <!-- <exercisegroup cols="3">
+            <title>Solving Quadratic Equations by Factoring</title> -->
             <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad95.pg" />
             </exercise>
@@ -573,24 +1017,24 @@
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad240.pg" />
             </exercise> -->
-            <exercise>
+            <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad245.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad245.pg" />
-            </exercise>
+            </exercise> -->
             <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad250.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad250.pg" />
             </exercise> -->
-            <exercise>
+           <!--  <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad255.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad255.pg" />
-            </exercise>
+            </exercise> -->
             <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad260.pg" />
             </exercise>
@@ -603,12 +1047,12 @@
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad265.pg" />
             </exercise> -->
-            <exercise>
+           <!--  <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad270.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad270.pg" />
-            </exercise>
+            </exercise> -->
             <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad275.pg" />
             </exercise>
@@ -621,12 +1065,12 @@
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad280.pg" />
             </exercise> -->
-            <exercise>
+            <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad290.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad290.pg" />
-            </exercise>
+            </exercise> -->
             <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad295.pg" />
             </exercise>
@@ -639,12 +1083,12 @@
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad300.pg" />
             </exercise> -->
-            <exercise>
+            <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad305.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad305.pg" />
-            </exercise>
+            </exercise> -->
             <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad310.pg" />
             </exercise>
@@ -687,13 +1131,13 @@
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad340.pg" />
             </exercise> -->
-            <exercise>
+           <!--  <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad345.pg" />
             </exercise>
             <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad345.pg" />
             </exercise>
-        </exercisegroup>
+        </exercisegroup> -->
             <!-- <exercise>
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad350.pg" />
             </exercise>
@@ -1664,5 +2108,694 @@
                 <webwork source="BasicAlgebra/QuadraticEquations/solveQuad255.pg" />
             </exercise>
         </exercisegroup>
+
+        <exercisegroup cols="3">
+            <title>Properties of Quadratic Functions</title>
+            <!-- <title>Algebraically Determining the Vertex and Axis of Symmetry of Quadratic Functions</title> -->
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex50.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex50.pg" />
+            </exercise>
+            <!-- <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex60.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex60.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex70.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex70.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex80.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex80.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex90.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex90.pg" />
+            </exercise> -->
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex100.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex100.pg" />
+            </exercise>
+            <!-- <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex110.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex110.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex40.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex40.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex20.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex20.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex10.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex10.pg" />
+            </exercise> -->
+<!--             <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex30.pg" />
+            </exercise>
+ -->    <!--  </exercisegroup>
+
+    <exercisegroup>
+        <title>Graphing Quadratic Functions Using the Vertex and a Table</title> -->
+        <exercise>
+            <statement>
+                <p>For <m>y=4x^2-8x+5</m>, determine the vertex, create a table of ordered pairs, and then graph the function.</p>
+            </statement>
+            <answer>
+                <p>The vertex occurs at <m>(1,1)</m>.</p>
+            <sidebyside widths="47% 47%" margins="0%">
+                <table>
+                <caption></caption>
+                    <tabular valign="top" bottom="minor">
+                        <col halign="right" right="minor"/>
+                        <col halign="right"/>
+                        <row bottom="medium">
+                            <cell><m>x</m></cell>
+                            <cell halign="center"><m>y=4x^2-8x+5</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-1</m></cell>
+                            <cell><m>4(-1)^2-8(-1)+5=17</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0</m></cell>
+                            <cell><m>4(0)^2-8(0)+5=5</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>1</m></cell>
+                            <cell><m>4(1)^2-8(1)+5=1</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>2</m></cell>
+                            <cell><m>4(2)^2-8(2)+5=5</m></cell>
+                        </row>
+                        <row bottom="none">
+                            <cell><m>3</m></cell>
+                            <cell><m>4(3)^2-8(3)+5=17</m></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[ymin=-5,ymax=20,
+                                            ytick={-4,0,...,16},
+                                            minor ytick={-5,-4,...,20}]
+                                    \addplot+[domain=-1.179:3.179] {4*x^2-8*x+5};
+                                    \addplot[soliddot] coordinates { (-1,17) (0,5) (1,1) (2,5) (3,17)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                </image>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>For <m>y=2x^2+4x+7</m>, determine the vertex, create a table of ordered pairs, and then graph the function.</p>
+            </statement>
+            <answer>
+                <p>The vertex occurs at <m>(-1,5)</m>.</p>
+            <sidebyside widths="47% 47%" margins="0%">
+                <table>
+                <caption></caption>
+                    <tabular valign="top" bottom="minor">
+                        <col halign="right" right="minor"/>
+                        <col halign="right"/>
+                        <row bottom="medium">
+                            <cell><m>x</m></cell>
+                            <cell halign="center"><m>y=2x^2+4x+7</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-3</m></cell>
+                            <cell><m>2(-3)^2+4(-3)+7=13</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-2</m></cell>
+                            <cell><m>2(-2)^2+4(-2)+7=7</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-1</m></cell>
+                            <cell><m>2(-1)^2+4(-1)+7=5</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0</m></cell>
+                            <cell><m>2(0)^2+4(0)+7=7</m></cell>
+                        </row>
+                        <row bottom="none">
+                            <cell><m>1</m></cell>
+                            <cell><m>2(1)^2+4(1)+7=13</m></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[ymin=-5,ymax=20,
+                                            ytick={-4,0,...,16},
+                                            minor ytick={-5,-4,...,20}]
+                                    \addplot+[domain=-3.739:1.739] {2*x^2+4*x+7};
+                                    \addplot[soliddot] coordinates { (-3,13) (-2,7) (-1,5) (0,7) (1,13)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                </image>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>For <m>y=-x^2+4x+2</m>, determine the vertex, create a table of ordered pairs, and then graph the function.</p>
+            </statement>
+            <answer>
+                <p>The vertex occurs at <m>(2,6)</m>.</p>
+            <sidebyside widths="47% 47%" margins="0%">
+                <table>
+                <caption></caption>
+                    <tabular valign="top" bottom="minor">
+                        <col halign="right" right="minor"/>
+                        <col halign="right"/>
+                        <row bottom="medium">
+                            <cell><m>x</m></cell>
+                            <cell halign="center"><m>y=-x^2+4x+2</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-1</m></cell>
+                            <cell><m>-(-1)^2+4(-1)+2=-3</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0</m></cell>
+                            <cell><m>-(0)^2+4(0)+2=2</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>1</m></cell>
+                            <cell><m>-(1)^2+4(1)+2=5</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>2</m></cell>
+                            <cell><m>-(2)^2+4(2)+2=6</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>3</m></cell>
+                            <cell><m>-(3)^2+4(3)+2=5</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>4</m></cell>
+                            <cell><m>-(4)^2+4(4)+2=2</m></cell>
+                        </row>
+                        <row bottom="none">
+                            <cell><m>5</m></cell>
+                            <cell><m>-(5)^2+4(5)^2+2=-3</m></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[]
+                                    \addplot+[domain=-1.606:5.606] {-1*x^2+4*x+2};
+                                    \addplot[soliddot] coordinates { (-1,-3) (0,2) (1,5) (2,6) (3,5) (4,2) (5,-3)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                </image>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>For <m>y=-x^2+2x-5</m>, determine the vertex, create a table of ordered pairs, and then graph the function.</p>
+            </statement>
+            <answer>
+                <p>The vertex occurs at <m>(1,-4)</m>.</p>
+            <sidebyside widths="47% 47%" margins="0%">
+                <table>
+                <caption></caption>
+                    <tabular valign="top" bottom="minor">
+                        <col halign="right" right="minor"/>
+                        <col halign="right"/>
+                        <row bottom="medium">
+                            <cell><m>x</m></cell>
+                            <cell halign="center"><m>y=-x^2+2x-5</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-3</m></cell>
+                            <cell><m>-(-3)^2+2(-3)-5=-20</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-2</m></cell>
+                            <cell><m>-(-2)^2+2(-2)-5=-13</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-1</m></cell>
+                            <cell><m>-(-1)^2+2(-1)-5=-8</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0</m></cell>
+                            <cell><m>-(0)^2+2(0)-5=-5</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>1</m></cell>
+                            <cell><m>-(1)^2+2(1)-5=-4</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>2</m></cell>
+                            <cell><m>-(2)^2+2(2)-5=-5</m></cell>
+                        </row>
+                        <row bottom="none">
+                            <cell><m>3</m></cell>
+                            <cell><m>-(3)^2+2(3)-5=-8</m></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[ymin=-10,ymax=10,
+                                            ytick={-8,-6,...,8},
+                                            minor ytick={-10,-9,...,10}]
+                                    \addplot+[domain=-1.499:3.499] {-1*x^2+2*x-5};
+                                    \addplot[soliddot] coordinates { (-1,-8) (0,-5) (1,-4) (2,-5) (3,-8)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                </image>
+            </sidebyside>
+            </answer>
+        </exercise>
+        <exercise width="wide">
+            <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg" />
+        </exercise>
+        <exercise width="wide">
+            <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg" />
+        </exercise>
+        </exercisegroup>
+
+        <exercisegroup cols="3">
+            <title>Graphing Quadratic Functions</title>
+<!--
+            <title>Finding the Intercepts of Quadratic Functions Algebraically</title> -->
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/ParabolaIntercepts10.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/ParabolaIntercepts20.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/ParabolaIntercepts80.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/ParabolaIntercepts90.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/ParabolaIntercepts130.pg" />
+            </exercise>
+            <exercise>
+                <webwork source="BasicAlgebra/GraphingQuadratics/ParabolaIntercepts140.pg" />
+            </exercise>
+            </exercisegroup>
+        <exercisegroup cols="4">
+            <introduction>
+                <p>Graph each curve by algebraically determining its key features.</p>
+            </introduction>
+
+        <exercise>
+            <statement>
+                <p><m>y=x^2-7x+12</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens upward.</p>
+                <p>The <m>x</m>-intercepts are <m>(3,0)</m> and <m>(4,0)</m>.</p>
+                <p>The <m>y</m>-intercept is <m>(0,12)</m>.</p>
+                <p>The vertex is <m>(3.5,-0.25)</m> and the axis of symmetry is <m>x=3.5</m>.</p>
+                <p>Symmetry can be used to determine the point <m>(7,12)</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-5,ymax=15,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={0,5,10},minor ytick={-5,-4,...,15}]
+                                    \addplot+[domain=-0.405:7.405] {x^2-7*x+12};
+                                    \addplot[soliddot] coordinates {(3,0) (4,0) (0,12) (3.5,-0.25) (7,12)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p><m>y=x^2+5x-14</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens upward.</p>
+                <p>The <m>x</m>-intercepts are <m>(-7,0)</m> and <m>(2,0)</m>.</p>
+                <p>The <m>y</m>-intercept is <m>(0,-14)</m>.</p>
+                <p>The vertex is <m>(-2.5,-20.25)</m> and the axis of symmetry is <m>x=-2.5</m>.</p>
+                <p>Symmetry can be used to determine the point <m>(-5,-14)</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-25,ymax=5,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={-20,-15,-10,-5,0},minor ytick={-25,-24,...,5}]
+                                    \addplot+[domain=-7.525:2.525] {x^2+5*x-14};
+                                    \addplot[soliddot] coordinates {(-7,0) (2,0) (0,-14) (-2.5,-20.25) (-5,-14)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p><m>y=-x^2-x+20</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens downward.</p>
+                <p>The <m>x</m>-intercepts are <m>(-5,0)</m> and <m>(4,0)</m>.</p>
+                <p>The <m>y</m>-intercept is <m>(0,20)</m>.</p>
+                <p>The vertex is <m>(-0.5,20.25)</m> and the axis of symmetry is <m>x=-0.5</m>.</p>
+                <p>Symmetry can be used to determine the point <m>(-1,20)</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-5,ymax=25,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={0,5,10,15,20},minor ytick={-5,-4,...,25}]
+                                    \addplot+[domain=-5.525:4.525] {-x^2-x+20};
+                                    \addplot[soliddot] coordinates {(-5,0) (4,0) (0,20) (-0.5,20.25) (-1,20)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p><m>y=-x^2+4x+21</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens downward.</p>
+                <p>The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(7,0)</m>.</p>
+                <p>The <m>y</m>-intercept is <m>(0,21)</m>.</p>
+                <p>The vertex is <m>(2,25)</m> and the axis of symmetry is <m>x=2</m>.</p>
+                <p>Symmetry can be used to determine the point <m>(4,21)</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-10,ymax=30,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={-5,0,...,25},minor ytick={-10,-9,...,30}]
+                                    \addplot+[domain=-3.916:7.916] {-x^2+4*x+21};
+                                    \addplot[soliddot] coordinates {(7,0) (-3,0) (0,21) (2,25)  (4,21)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p><m>y=x^2+6x</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens upward.</p>
+                <p>The <m>x</m>-intercepts are <m>(-6,0)</m> and <m>(0,0)</m>.</p>
+                <p>The <m>y</m>-intercept is <m>(0,0)</m>.</p>
+                <p>The vertex is <m>(-3,-9)</m> and the axis of symmetry is <m>x=-3</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-10,ymax=10,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={-5,0,5},minor ytick={-10,-9,...,10}]
+                                    \addplot+[domain=-7.359:1.359] {x^2+6*x};
+                                    \addplot[soliddot] coordinates {(-6,0) (0,0) (-3,-9)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p><m>y=x^2-8x</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens upward.</p>
+                <p>The <m>x</m>-intercepts are <m>(0,0)</m> and <m>(8,0)</m>.</p>
+                <p>The <m>y</m>-intercept is <m>(0,0)</m>.</p>
+                <p>The vertex is <m>(4,-16)</m> and the axis of symmetry is <m>x=4</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-25,ymax=5,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={-20,-15,-10,-5,0},minor ytick={-25,-24,...,5}]
+                                    \addplot+[domain=-0.583:8.583] {x^2-8*x};
+                                    \addplot[soliddot] coordinates {(8,0) (0,0) (4,-16)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p><m>y=x^2+4x+7</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens upward.</p>
+                <p>There are no <m>x</m>-intercepts.</p>
+                <p>The <m>y</m>-intercept is <m>(0,7)</m>.</p>
+                <p>The vertex is <m>(-2,3)</m> and the axis of symmetry is <m>x=-2</m>.</p>
+                <p>Symmetry can be used to determine the point <m>(-4,7)</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-10,ymax=10,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={-5,0,5},minor ytick={-10,-9,...,10}]
+                                    \addplot+[domain=-4.646:0.646] {x^2+4*x+7};
+                                    \addplot[soliddot] coordinates { (0,7) (-2,3) (-4,7)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p><m>y=x^2-2x+6</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens upward.</p>
+                <p>There are no <m>x</m>-intercepts.</p>
+                <p>The <m>y</m>-intercept is <m>(0,6)</m>.</p>
+                <p>The vertex is <m>(1,5)</m> and the axis of symmetry is <m>x=1</m>.</p>
+                <p>Symmetry can be used to determine the point <m>(2,6)</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-10,ymax=10,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={-5,0,5},minor ytick={-10,-9,...,10}]
+                                    \addplot+[domain=-1.236:3.236] {x^2-2*x+6};
+                                    \addplot[soliddot] coordinates {(0,6) (1,5) (2,6)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p><m>y=2x^2-4x-30</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens upward.</p>
+                <p>The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(5,0)</m>.</p>
+                <p>The <m>y</m>-intercept is <m>(0,-30)</m>.</p>
+                <p>The vertex is <m>(1,-32)</m> and the axis of symmetry is <m>x=1</m>.</p>
+                <p>Symmetry can be used to determine the point <m>(2,-30)</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-40,ymax=10,
+                                    xtick={-5,0,5},minor xtick={-10,-9,...,10},
+                                    ytick={-35,-20,...,5},minor ytick={-40,-39,...,10}]
+                                    \addplot+[domain=-3.583:5.583] {2*x^2-4*x-30};
+                                    \addplot[soliddot] coordinates {(-3,0) (5,0) (0,-30) (1,-32) (2,-30)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p><m>y=3x^2+21x+36</m></p>
+            </statement>
+            <answer>
+            <sidebyside widths="47% 47%" margins="0%">
+                <stack>
+                <p>The parabola opens upward.</p>
+                <p>The <m>x</m>-intercepts are <m>(-4,0)</m> and <m>(-3,0)</m>.</p>
+                <p>The <m>y</m>-intercept is <m>(0,36)</m>.</p>
+                <p>The vertex is <m>(-3.5,-0.75)</m> and the axis of symmetry is <m>x=-3.5</m>.</p>
+                <p>Symmetry can be used to determine the point <m>(-7,36)</m>.</p>
+                </stack>
+                <figure>
+                    <caption></caption>
+                    <image>
+                    <latex-image>
+                        <![CDATA[
+                            \begin{tikzpicture}
+                               \begin{axis}[xmin=-10,xmax=5,ymin=-10,ymax=40,
+                                    xtick={-5,0},minor xtick={-10,-9,...,5},
+                                    ytick={-5,0,...,35},minor ytick={-10,-9,...,40}]
+                                    \addplot+[domain=-7.186:0.186] {3*x^2+21*x+36};
+                                    \addplot[soliddot] coordinates {(-4,0) (-3,0) (0,36) (-3.5,-0.75) (-7,36)};
+                                \end{axis}
+                            \end{tikzpicture}
+                        ]]>
+                    </latex-image>
+                    </image>
+                </figure>
+            </sidebyside>
+            </answer>
+        </exercise>
+    </exercisegroup>
+    <exercisegroup>
+            <title>Applications of Quadratic Functions</title>
+             <exercise width="wide">
+                <webwork source="BasicAlgebra/QuadraticApplications/FlyingObjectApp20.pg" />
+            </exercise>
+            <exercise width="wide">
+                <webwork source="BasicAlgebra/QuadraticApplications/FlyingObjectApp20.pg" />
+            </exercise>
+        </exercisegroup>
+
     </exercises>
 </section>
