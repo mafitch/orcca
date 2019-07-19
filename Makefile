@@ -117,7 +117,7 @@ lanepdf:
 	cp -a $(WWOUT)/*.png $(PDFOUT)/images || :
 	cp -a $(IMAGESSRC) $(PDFOUT) || :
 	cd $(PDFOUT); \
-	xsltproc -xinclude --stringparam toc.level 3 --stringparam watermark.text "DRAFT 2nd ED" --stringparam latex.print 'yes' --stringparam latex.pageref 'no' --stringparam latex.sides 'two' --stringparam latex.geometry 'total={6.5in,8in}' --stringparam latex.fillin.style box --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(PRJXSL)/orcca-latex.xsl $(OUTPUT)/merge.xml > orcca.tex; \
+	xsltproc -xinclude --stringparam toc.level 2 --stringparam watermark.text "DRAFT" --stringparam latex.print 'yes' --stringparam latex.pageref 'no' --stringparam latex.sides 'two' --stringparam latex.geometry 'total={6.5in,8in}'  --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(PRJXSL)/orcca-latex.xsl $(OUTPUT)/merge.xml > orcca.tex; \
 	echo 'GLOBAL SPACING'; \
 	echo 'Next line removes \leavevmode when it comes right before an enumerate'; \
 	perl -p0i -e 's/\\leavevmode%\n(\\begin{enumerate})/\1/g' orcca.tex; \
