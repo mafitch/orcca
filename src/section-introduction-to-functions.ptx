@@ -8,137 +8,137 @@
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
 
-<section xml:id="section-introduction-to-functions">
+<section xml:id="section-introduction-to-functions" permid="wlf">
 
     <title>Introduction to Functions</title>
 
-    <introduction>
-        <p>In mathematics, we use functions to model real-life data. In this section, we will learn the definition of a function and related concepts.</p>
+    <introduction permid="Zcj">
+        <p permid="ZqE">In mathematics, we use functions to model real-life data. In this section, we will learn the definition of a function and related concepts.</p>
     </introduction>
 
-    <subsection>
+    <subsection permid="cso">
         <title>Introduction to Functions</title>
 
-        <p>When working with two variables, we are interested in the relationship between those two variables. For example, consider the two variables of hare population and lynx population in a Canadian forest. If we know the value of one variable, are we able to determine the value of the second variable? If we know that one variable is increasing over time, do we know if the other is increasing or decreasing?</p>
+        <p permid="TBs">When working with two variables, we are interested in the relationship between those two variables. For example, consider the two variables of hare population and lynx population in a Canadian forest. If we know the value of one variable, are we able to determine the value of the second variable? If we know that one variable is increasing over time, do we know if the other is increasing or decreasing?</p>
 
-        <figure>
+        <figure permid="LWT">
             <caption>In a relation, some knowledge of one variable implies some knowledge about the other</caption>
-            <image width="100%">
+            <image width="100%" permid="XfS">
                 <description>a diagram with a circle for the first variable on the right and a circle for the second variable on the right; there are arrows going each way indicating that information passes back and forth, but possibly imperfectly</description>
-                <latex-image>
-                    <![CDATA[\begin{tikzpicture}[
-                        variables/.style={draw, text width=5em, text centered, minimum height=2.5em,drop shadow, circle},
-                        info/.style={text width=12em, text centered},
-                        connex/.style={{Kite}-{Kite}, ultra thick,color=thirdcolor,line width=0.5em}]
+            <latex-image>
+                <![CDATA[\begin{tikzpicture}[
+                    variables/.style={draw, text width=5em, text centered, minimum height=2.5em,drop shadow, circle},
+                    info/.style={text width=12em, text centered},
+                    connex/.style={{Kite}-{Kite}, ultra thick,color=thirdcolor,line width=0.5em}]
 
-                        % Draw diagram elements
-                        \node (firstvar) [variables,fill=firstcolor!30]  {First Variable};
-                        \node (information) [info,right=of firstvar]  {In a relation, information passes back and forth, possibly imperfectly};
-                        \node (secondvar) [variables,fill=secondcolor!30,right=of information]  {Second Variable};
+                    % Draw diagram elements
+                    \node (firstvar) [variables,fill=firstcolor!30]  {First Variable};
+                    \node (information) [info,right=of firstvar]  {In a relation, information passes back and forth, possibly imperfectly};
+                    \node (secondvar) [variables,fill=secondcolor!30,right=of information]  {Second Variable};
 
-                        % Draw arrows between elements
-                        \draw[connex] (firstvar) to[out=45,in=135] (secondvar);
-                        \draw[connex] (firstvar) to[out=-45,in=-135] (secondvar);
+                    % Draw arrows between elements
+                    \draw[connex] (firstvar) to[out=45,in=135] (secondvar);
+                    \draw[connex] (firstvar) to[out=-45,in=-135] (secondvar);
 
-                    \end{tikzpicture}]]>
-                </latex-image>
+                \end{tikzpicture}]]>
+            </latex-image>
             </image>
         </figure>
 
-        <definition xml:id="definition-relation">
+        <definition xml:id="definition-relation" permid="KYE">
             <title>Relation</title>
             <statement>
-                <p>A <term>relation</term><idx><h>relation</h></idx> is a very general situation between two variables, where having a little bit of information about one variable could tell you something about the other variable. For example, if you know the hare population is high this year, you can say the lynx population is probably increasing. So <q>hare population</q> and <q>lynx population</q> make a relation. If one of the variables is identified as the <q>first</q> variable, the relation's <term>domain</term><idx><h>relation</h><h>domain</h></idx> is the set of all values that variable can take. Likewise, the relation's <term>range</term><idx><h>relation</h><h>range</h></idx> is the set of all values that the second variable can take.</p>
+                <p permid="SRy">A <term>relation</term><idx><h>relation</h></idx> is a very general situation between two variables, where having a little bit of information about one variable could tell you something about the other variable. For example, if you know the hare population is high this year, you can say the lynx population is probably increasing. So <q>hare population</q> and <q>lynx population</q> make a relation. If one of the variables is identified as the <q>first</q> variable, the relation's <term>domain</term><idx><h>relation</h><h>domain</h></idx> is the set of all values that variable can take. Likewise, the relation's <term>range</term><idx><h>relation</h><h>range</h></idx> is the set of all values that the second variable can take.</p>
             </statement>
         </definition>
 
-        <p>We are not so much concerned with relations in this book. But we are interested in a special type of relation called a function. Informally, a <term>function</term><idx><h>function</h><h>informal definition</h></idx> is a device that takes input values for one variable one by one, thinks about them, and gives respective output values one by one for the other variable.</p>
+        <p permid="zIB">We are not so much concerned with relations in this book. But we are interested in a special type of relation called a function. Informally, a <term>function</term><idx><h>function</h><h>informal definition</h></idx> is a device that takes input values for one variable one by one, thinks about them, and gives respective output values one by one for the other variable.</p>
 
-        <example xml:id="example-function-chicken-to-egg-color">
-            <p>Mariana has <m>5</m> chickens: Hazel, Yvonne, Georgia, Isabella, and Emma. For the relation <q>Chicken to Egg Color,</q> the first variable (the input) is a chicken's name and the second variable (the output) is the color of that chicken's eggs. The relation's domain is the set of all of Mariana's chicken's names, and its range is the set of colors of her chicken's eggs. <xref ref="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color">Figure</xref> shows two inputs and their corresponding outputs.</p>
+        <example xml:id="example-function-chicken-to-egg-color" permid="XmW">
+            <p permid="LmZ">Mariana has <m>5</m> chickens: Hazel, Yvonne, Georgia, Isabella, and Emma. For the relation <q>Chicken to Egg Color,</q> the first variable (the input) is a chicken's name and the second variable (the output) is the color of that chicken's eggs. The relation's domain is the set of all of Mariana's chicken's names, and its range is the set of colors of her chicken's eggs. <xref ref="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color">Figure</xref> shows two inputs and their corresponding outputs.</p>
 
-            <figure xml:id="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color">
+            <figure xml:id="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color" permid="DIA">
                 <caption>Two Pairs of Inputs and Outputs of the Relation <q>Chicken to Egg Color</q></caption>
-                <image width="100%">
+                <image width="100%" permid="Dnb">
                     <description>two diagrams representing the chicken-to-egg color relation; the relation is represented with a rectangle with a polygon for the input and a circle for the output; in the first diagram, the input is the chicken named Hazel and the output is the egg color Tan; in the second diagram the input is Yvonne and the output is the egg color Brown</description>
-                    <latex-image>
-                        <![CDATA[\begin{tikzpicture}[
-                            input/.style={draw,font=\footnotesize, text centered, drop shadow, regular polygon,regular polygon sides=7, fill=firstcolor!30},
-                            output/.style={draw, font=\footnotesize, text centered,drop shadow, circle, fill=secondcolor!30},
-                            f/.style={draw, text width=3em, font=\footnotesize, text centered,fill=thirdcolor!60, minimum height=8em, drop shadow},
-                            connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
+            <latex-image>
+                <![CDATA[\begin{tikzpicture}[
+                    input/.style={draw,font=\footnotesize, text centered, drop shadow, regular polygon,regular polygon sides=7, fill=firstcolor!30},
+                    output/.style={draw, font=\footnotesize, text centered,drop shadow, circle, fill=secondcolor!30},
+                    f/.style={draw, text width=3em, font=\footnotesize, text centered,fill=thirdcolor!60, minimum height=8em, drop shadow},
+                    connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
 
-                            % Draw diagram elements
-                            \node (hazel) [input]  {Hazel};
-                            \node (f) [f,right=of hazel]  {Chicken to Egg Color};
-                            \node (tan) [output,right=of f]  {Tan};
-                            \node (yvonne) [input, right=of tan]  {Yvonne};
-                            \node (g) [f,right=of yvonne]  {Chicken to Egg Color};
-                            \node (brown) [output,right=of g]  {Brown};
+                    % Draw diagram elements
+                    \node (hazel) [input]  {Hazel};
+                    \node (f) [f,right=of hazel]  {Chicken to Egg Color};
+                    \node (tan) [output,right=of f]  {Tan};
+                    \node (yvonne) [input, right=of tan]  {Yvonne};
+                    \node (g) [f,right=of yvonne]  {Chicken to Egg Color};
+                    \node (brown) [output,right=of g]  {Brown};
 
-                            % Draw arrows between elements
-                            \draw[connex] (hazel) -- (f);
-                            \draw[connex] (f) -- (tan);
-                            \draw[connex] (yvonne) -- (g);
-                            \draw[connex] (g) -- (brown);
-                        \end{tikzpicture}]]>
-                    </latex-image>
+                    % Draw arrows between elements
+                    \draw[connex] (hazel) -- (f);
+                    \draw[connex] (f) -- (tan);
+                    \draw[connex] (yvonne) -- (g);
+                    \draw[connex] (g) -- (brown);
+                \end{tikzpicture}]]>
+            </latex-image>
                 </image>
             </figure>
 
-            <sidebyside widths="47% 47%" margins="0%">
+            <sidebyside widths="47% 47%" margins="0%" permid="Duf">
 
-                <p>It would not be convenient to make diagrams like the ones in <xref ref="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color">Figure</xref> for all five chickens. There are too many inputs. Instead, <xref ref="figure-chicken-to-egg-color">Figure</xref> represents the function graphically in a more concise way. The function's input variable is <q>chicken name,</q> and its output variable is <q>egg color.</q> Note that we are using the word <q>variable,</q> because the chicken names and egg colors vary depending on which individual chicken you choose.</p>
+                <p permid="rui">It would not be convenient to make diagrams like the ones in <xref ref="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color">Figure</xref> for all five chickens. There are too many inputs. Instead, <xref ref="figure-chicken-to-egg-color">Figure</xref> represents the function graphically in a more concise way. The function's input variable is <q>chicken name,</q> and its output variable is <q>egg color.</q> Note that we are using the word <q>variable,</q> because the chicken names and egg colors vary depending on which individual chicken you choose.</p>
 
-                <figure xml:id="figure-chicken-to-egg-color">
+                <figure xml:id="figure-chicken-to-egg-color" permid="jPJ">
                     <caption>Diagram for the function <q>Chicken to Egg Color</q></caption>
-                    <image width="47%">
+                    <image width="47%" permid="juk">
                         <description>a diagram with two rectangles, one for the inputs and one for the outputs; each chicken is mapped to their egg color. There is an arrow from Hazel to Tan, Yvonne to Brown, Georgia to Brown, Isabella to White and Emma to Green</description>
-                        <latex-image>
-                            <![CDATA[\begin{tikzpicture}[
-                                input/.style={font=\footnotesize, text centered},
-                                dom/.style={draw, fill=firstcolor,  opacity=0.3},
-                                ran/.style={draw, fill=secondcolor, opacity=0.3},
-                                output/.style={font=\footnotesize, text centered},
-                                connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
+            <latex-image>
+                <![CDATA[\begin{tikzpicture}[
+                    input/.style={font=\footnotesize, text centered},
+                    dom/.style={draw, fill=firstcolor,  opacity=0.3},
+                    ran/.style={draw, fill=secondcolor, opacity=0.3},
+                    output/.style={font=\footnotesize, text centered},
+                    connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
 
-                                % Draw diagram elements
-                                \node (hazel) [input]  {Hazel};
-                                \node (yvonne) [input, below=1em of hazel]  {Yvonne};
-                                \node (georgia) [input, below=1em of yvonne]  {Georgia};
-                                \node (isabella) [input, below=1em of georgia]  {Isabella};
-                                \node (emma) [input, below=1em of isabella]  {Emma};
-                                \node[dom,fit=(hazel) (emma)] {};
+                    % Draw diagram elements
+                    \node (hazel) [input]  {Hazel};
+                    \node (yvonne) [input, below=1em of hazel]  {Yvonne};
+                    \node (georgia) [input, below=1em of yvonne]  {Georgia};
+                    \node (isabella) [input, below=1em of georgia]  {Isabella};
+                    \node (emma) [input, below=1em of isabella]  {Emma};
+                    \node[dom,fit=(hazel) (emma)] {};
 
-                                \node (tan) [output, right=10em of yvonne]  {Tan};
-                                \node (brown) [output, below=1em of tan]  {Brown};
-                                \node (white) [output, below=1em of brown]  {White};
-                                \node (green) [output, below=1em of white]  {Green};
-                                \node[ran,fit=(tan) (green)] {};
+                    \node (tan) [output, right=10em of yvonne]  {Tan};
+                    \node (brown) [output, below=1em of tan]  {Brown};
+                    \node (white) [output, below=1em of brown]  {White};
+                    \node (green) [output, below=1em of white]  {Green};
+                    \node[ran,fit=(tan) (green)] {};
 
-                                \draw[connex] (hazel) -- (tan);
-                                \draw[connex] (yvonne) -- (brown);
-                                \draw[connex] (georgia) -- (brown);
-                                \draw[connex] (isabella) -- (white);
-                                \draw[connex] (emma) -- (green);
-                            \end{tikzpicture}]]>
-                        </latex-image>
+                    \draw[connex] (hazel) -- (tan);
+                    \draw[connex] (yvonne) -- (brown);
+                    \draw[connex] (georgia) -- (brown);
+                    \draw[connex] (isabella) -- (white);
+                    \draw[connex] (emma) -- (green);
+                \end{tikzpicture}]]>
+            </latex-image>
                     </image>
                 </figure>
             </sidebyside>
 
-            <p>We can also use a set of ordered pairs to represent this function:<me>\{(\text{Hazel}, \text{Tan}), (\text{Yvonne}, \text{Brown}), (\text{Georgia}, \text{Brown}), (\text{Isabella}, \text{White}), (\text{Emma}, \text{Green})\}</me> where you read the ordered pair left to right, with the first value as an input and the second value as its output.</p>
+            <p permid="XBr">We can also use a set of ordered pairs to represent this function:<me permid="BxO">\{(\text{Hazel}, \text{Tan}), (\text{Yvonne}, \text{Brown}), (\text{Georgia}, \text{Brown}), (\text{Isabella}, \text{White}), (\text{Emma}, \text{Green})\}</me> where you read the ordered pair left to right, with the first value as an input and the second value as its output.</p>
         </example>
 
-        <definition xml:id="definition-function-informal-early">
+        <definition xml:id="definition-function-informal-early" permid="rfN">
             <title>Function</title>
             <idx><h>function</h></idx>
             <statement>
-                <p>In mathematics, a function is a relation between a set of inputs and a set of outputs with the property that each input is related to exactly one output.</p>
+                <p permid="yYH">In mathematics, a function is a relation between a set of inputs and a set of outputs with the property that each input is related to exactly one output.</p>
             </statement>
         </definition>
 
-        <p>In <xref ref="figure-chicken-to-egg-color">Figure</xref>, we can see each chicken's name (input) is related to exactly one output, so the relation <q>Chicken to Egg Color</q> qualifies as a function. Note that it is irrelevant that multiple inputs might be related to the same output, like in <m>(\text{Yvonne}, \text{brown})</m> and <m>(\text{Georgia}, \text{brown})</m>. The point is that whichever chicken you are thinking about, you know exactly which color egg it lays.</p>
+        <p permid="fPK">In <xref ref="figure-chicken-to-egg-color">Figure</xref>, we can see each chicken's name (input) is related to exactly one output, so the relation <q>Chicken to Egg Color</q> qualifies as a function. Note that it is irrelevant that multiple inputs might be related to the same output, like in <m>(\text{Yvonne}, \text{brown})</m> and <m>(\text{Georgia}, \text{brown})</m>. The point is that whichever chicken you are thinking about, you know exactly which color egg it lays.</p>
 
 
         <!-- <example>
@@ -275,83 +275,83 @@
         </exercise>
     </subsection> -->
 
-    <subsection>
+    <subsection permid="Izx">
         <title>Algebraic Functions and Function Notation</title>
 
-        <p>Many functions have specific algebraic formulas to turn an input number into an output number. For example, we know that the equation <m>y=5x+3</m> represents <m>y</m> as a function of <m>x</m>, because for each <m>x</m>-value (input), there is only one <m>y</m>-value (output). If we want to determine the value of the output when the input is <m>2</m>, we'd replace <m>x</m> with <m>2</m> and find the value of <m>y</m>:<md>
+        <p permid="sec">Many functions have specific algebraic formulas to turn an input number into an output number. For example, we know that the equation <m>y=5x+3</m> represents <m>y</m> as a function of <m>x</m>, because for each <m>x</m>-value (input), there is only one <m>y</m>-value (output). If we want to determine the value of the output when the input is <m>2</m>, we'd replace <m>x</m> with <m>2</m> and find the value of <m>y</m>:<md permid="aay">
             <mrow>y\amp= 5(\substitute{2})+3</mrow>
             <mrow>\amp= 10+3</mrow>
             <mrow>\amp=13</mrow>
         </md>Our end result is that <m>y=13</m>. Well, <m>y</m> <em>is</em> <m>13</m>, but only in the situation when <m>x</m> is <m>2</m>. In general, for other inputs, <m>y</m> is not going to be <m>13</m>.  So the equation <m>y=13</m> is lacking in the sense that it is not communicating everything we might want to say. It does not communicate the value of <m>x</m> that we used. <term>Function notation</term><idx><h>function</h><h>notation</h></idx> will allow us to communicate <em>both</em> the input <em>and</em> the output at the same time. It will also allow us to give each function a name, which is helpful when we have multiple functions.</p>
 
-        <p>Functions can have names just like variables. The most common function name is <m>f</m>, since <q>f</q> stands for <q>function.</q> A letter like <m>f</m> doesn't stand for a single number though. Instead, it represents an input-output relation like we've been discussing in this section.</p>
+        <p permid="Yll">Functions can have names just like variables. The most common function name is <m>f</m>, since <q>f</q> stands for <q>function.</q> A letter like <m>f</m> doesn't stand for a single number though. Instead, it represents an input-output relation like we've been discussing in this section.</p>
 
-        <p>We will write equations like <m>y=f(x)</m>, and what we mean is:<ul>
-            <li>
-                <p><q>y equals f <em>of</em> x</q></p>
+        <p permid="Esu">We will write equations like <m>y=f(x)</m>, and what we mean is:<ul permid="aRw">
+            <li permid="GYF">
+                <p permid="evW"><q>y equals f <em>of</em> x</q></p>
             </li>
-            <li>
-                <p>the function's name is <m>f</m></p>
+            <li permid="nfO">
+                <p permid="KDf">the function's name is <m>f</m></p>
             </li>
-            <li>
-                <p>the input variable is <m>x</m></p>
+            <li permid="TmX">
+                <p permid="qKo">the input variable is <m>x</m></p>
             </li>
-            <li>
-                <p>the parentheses following the <m>f</m> surround the input; they do <em>not</em> indicate multiplication</p>
+            <li permid="zug">
+                <p permid="WRx">the parentheses following the <m>f</m> surround the input; they do <em>not</em> indicate multiplication</p>
             </li>
-            <li>
-                <p>the output variable is <m>y</m></p>
+            <li permid="fBp">
+                <p permid="CYG">the output variable is <m>y</m></p>
             </li>
         </ul></p>
 
-        <remark>
-            <p>Parentheses have a lot of uses in mathematics. Their use with functions is very specific, and it's important to note that <m>f</m> is <em>not</em> being multiplied by anything when we write <m>f(x)</m>. With function notation, the parentheses specifically are just meant to indicate the input by surrounding the input.</p>
+        <remark permid="PIx">
+            <p permid="Ncm">Parentheses have a lot of uses in mathematics. Their use with functions is very specific, and it's important to note that <m>f</m> is <em>not</em> being multiplied by anything when we write <m>f(x)</m>. With function notation, the parentheses specifically are just meant to indicate the input by surrounding the input.</p>
         </remark>
 
-        <example>
-            <p>The expression <m>f(x)</m> is read as <q><m>f</m> of <m>x</m>,</q> and the expression <m>f(2)</m> is read as <q><m>f</m> of <m>2</m>.</q> Be sure to practice saying this correctly while reading.</p>
+        <example permid="jBo">
+            <p permid="PWS">The expression <m>f(x)</m> is read as <q><m>f</m> of <m>x</m>,</q> and the expression <m>f(2)</m> is read as <q><m>f</m> of <m>2</m>.</q> Be sure to practice saying this correctly while reading.</p>
 
-            <p>The expression <m>f(2)</m> means that <m>2</m> is being treated as an input, and the function <m>f</m> is turning it into an output. And then <m>f(2)</m> represents that actual output number.</p>
+            <p permid="web">The expression <m>f(2)</m> means that <m>2</m> is being treated as an input, and the function <m>f</m> is turning it into an output. And then <m>f(2)</m> represents that actual output number.</p>
         </example>
 
-        <remark>
-            <p>The most common letters used to represent functions are <m>f,g,</m> and <m>h</m>. The most common variables we use are <m>x</m>, <m>y</m>, and <m>z</m>. But we can use any function name and any input and output variable. When dealing with functions in context, it often makes sense to use meaningful function names and variables. For example, if we are modeling temperature of a cup of coffee as a function of time with a function <m>C</m>, we could use <m>T=C(t)</m>, where <m>T</m> is the temperature (in degrees Fahrenheit) after <m>t</m> minutes.</p>
+        <remark permid="vPG">
+            <p permid="tjv">The most common letters used to represent functions are <m>f,g,</m> and <m>h</m>. The most common variables we use are <m>x</m>, <m>y</m>, and <m>z</m>. But we can use any function name and any input and output variable. When dealing with functions in context, it often makes sense to use meaningful function names and variables. For example, if we are modeling temperature of a cup of coffee as a function of time with a function <m>C</m>, we could use <m>T=C(t)</m>, where <m>T</m> is the temperature (in degrees Fahrenheit) after <m>t</m> minutes.</p>
         </remark>
 
     </subsection>
 
 
-    <subsection>
+    <subsection permid="oGG">
         <title>Evaluating Functions</title>
 
-        <p>When we determine a function's value for a specific input, this is known as <em>evaluating a function</em>. To do so, we replace the input with the numerical value given and determine the associated output.</p>
+        <p permid="kzD">When we determine a function's value for a specific input, this is known as <em>evaluating a function</em>. To do so, we replace the input with the numerical value given and determine the associated output.</p>
 
-        <p>When using function notation, instead of writing <m>5x+3</m> or <m>y=5x+3</m>, we often write something like <m>f(x)=5x+3</m>. We are saying that the rule for function <m>f</m> is to use the expression <m>5x+3</m>. To find <m>f(2)</m>, wherever you see <m>x</m> in the formula <m>f(x)=5x+3</m>, substitute in <m>2</m>:<md>
+        <p permid="QGM">When using function notation, instead of writing <m>5x+3</m> or <m>y=5x+3</m>, we often write something like <m>f(x)=5x+3</m>. We are saying that the rule for function <m>f</m> is to use the expression <m>5x+3</m>. To find <m>f(2)</m>, wherever you see <m>x</m> in the formula <m>f(x)=5x+3</m>, substitute in <m>2</m>:<md permid="GhH">
             <mrow>f(\highlight{x})\amp=5\highlight{x}+3</mrow>
             <mrow>f(\substitute{2})\amp=5(\substitute{2})+3</mrow>
             <mrow>\amp=10+3</mrow>
             <mrow>\amp=13</mrow>
         </md>Our end result is that <m>f(2)=13</m>, which tells us that <m>f</m> turns <m>2</m> into <m>13</m>. In other words, when the input is <m>2</m>, the output will be <m>13</m>.</p>
 
-        <p>Let's look at a few more examples.</p>
+        <p permid="wNV">Let's look at a few more examples.</p>
 
-        <example xml:id="example-introductory-function-evaluation">
+        <example xml:id="example-introductory-function-evaluation" permid="bWP">
             <title>Evaluating Functions with Algebraic Formulas</title>
-            <p>Find the given function values for a function <m>f</m> where <m>f(x)=2x^2-5x+9</m>.<ol label="a." cols="3">
-                        <li>
-                            <p><m>f(-2)</m></p>
+            <p permid="clk">Find the given function values for a function <m>f</m> where <m>f(x)=2x^2-5x+9</m>.<ol label="a." cols="3" permid="WhD">
+                        <li permid="LIy">
+                            <p permid="jfP"><m>f(-2)</m></p>
                         </li>
-                        <li>
-                            <p><m>f(0)</m></p>
+                        <li permid="rPH">
+                            <p permid="PmY"><m>f(0)</m></p>
                         </li>
-                        <li>
-                            <p><m>f(4)</m></p>
+                        <li permid="XWQ">
+                            <p permid="vuh"><m>f(4)</m></p>
                         </li>
                     </ol></p>
 
-                    <p><ol label="a." >
-                        <li>
-                            <p>We find <m>f(-2)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>-2</m> and then, using the order of operations, simplifying the right side as much as possible.<md>
+                    <p permid="Ist"><ol label="a."  permid="CoM">
+                        <li permid="EdZ">
+                            <p permid="bBq">We find <m>f(-2)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>-2</m> and then, using the order of operations, simplifying the right side as much as possible.<md permid="moQ">
 
                                 <mrow>f(\substitute{-2}) \amp= 2(\substitute{-2})^2-5(\substitute{-2})+9</mrow>
                                 <mrow>\amp= 2(4)+10+9</mrow>
@@ -360,8 +360,8 @@
 
                        
                         </li>
-                        <li>
-                            <p>We find <m>f(0)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>0</m> and then, using the order of operations, simplifying the right side as much as possible.<md>
+                        <li permid="kli">
+                            <p permid="HIz">We find <m>f(0)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>0</m> and then, using the order of operations, simplifying the right side as much as possible.<md permid="SvZ">
 
                                 <mrow>f(\substitute{0}) \amp= 2(\substitute{0})^2-5(\substitute{0})+9</mrow>
                                 <mrow>\amp= 2(0)-0+9</mrow>
@@ -370,8 +370,8 @@
 
                       
                         </li>
-                        <li>
-                             <p>We find <m>f(4)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>4</m> and then, using the order of operations, simplifying the right side as much as possible.<md>
+                        <li permid="Qsr">
+                             <p permid="nPI">We find <m>f(4)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>4</m> and then, using the order of operations, simplifying the right side as much as possible.<md permid="yDi">
 
                                 <mrow>f(\substitute{4}) \amp= 2(\substitute{4})^2-5(\substitute{4})+9</mrow>
                                 <mrow>\amp= 2(16)-20+9</mrow>
@@ -381,48 +381,48 @@
                     </ol></p>
                 </example>
 
-            <p>Try a similar exercise.</p>
+            <p permid="cVe">Try a similar exercise.</p>
 
-        <exercise xml:id="exercise-introductory-function-evaluation">
+        <exercise xml:id="exercise-introductory-function-evaluation" permid="olh">
             <title>Evaluating a Function</title>
             <webwork>
                 <setup>
-                    <pg-code>
-                        Context("LimitedNumeric");
-                    </pg-code>
+            <pg-code>
+                Context("LimitedNumeric");
+            </pg-code>
                 </setup>
                 <statement>
-                    <p>Find the given function values for a function <m>g</m> where <m>g(x)=5x^2-3x+4</m>.<ol label="a." cols="3">
-                        <li>
-                            <p><m>g(3)=</m><var name="40" width="5" /></p>
+                    <p permid="FxN">Find the given function values for a function <m>g</m> where <m>g(x)=5x^2-3x+4</m>.<ol label="a." cols="3" permid="uKn">
+                        <li permid="wzA">
+                            <p permid="TWR"><m>g(3)=</m><var name="40" width="5" /></p>
                         </li>
-                        <li>
-                            <p><m>g(0)=</m><var name="4" width="5" /></p>
+                        <li permid="cGJ">
+                            <p permid="Aea"><m>g(0)=</m><var name="4" width="5" /></p>
                         </li>
-                        <li>
-                            <p><m>g(-2)=</m><var name="30" width="5" /></p>
+                        <li permid="INS">
+                            <p permid="glj"><m>g(-2)=</m><var name="30" width="5" /></p>
                         </li>
                     </ol></p>
                 </statement>
 
-                <solution>
-                    <p><ol label="a.">
-                        <li>
-                            <p>We will substitute <m>x=3</m> into <m>g(x)</m>:<md>
+                <solution permid="xET">
+                    <p permid="OhF"><ol label="a." permid="dMc">
+                        <li permid="oVb">
+                            <p permid="Mss">We will substitute <m>x=3</m> into <m>g(x)</m>:<md permid="eKr">
                                 <mrow>g(\substitute{3}) \amp= 5(\substitute{3})^2-3(\substitute{3})+4</mrow>
                                 <mrow>\amp= 5(9)-9+4</mrow>
                                 <mrow>\amp= 40</mrow>
                             </md></p>
                         </li>
-                        <li>
-                            <p>We will substitute <m>x=0</m> into <m>g(x)</m>:<md>
+                        <li permid="Vck">
+                            <p permid="szB">We will substitute <m>x=0</m> into <m>g(x)</m>:<md permid="KRA">
                                 <mrow>g(\substitute{0}) \amp= 5(\substitute{0})^2-3(\substitute{0})+4</mrow>
                                 <mrow>\amp= 5(0)+0+4</mrow>
                                 <mrow>\amp= 4</mrow>
                             </md></p>
                         </li>
-                        <li>
-                            <p>We will substitute <m>x=-2</m> into <m>g(x)</m>. Especially when inputting negative numbers, be <em>certain</em> to put parentheses around the input values in the first step:<md>
+                        <li permid="Bjt">
+                            <p permid="YGK">We will substitute <m>x=-2</m> into <m>g(x)</m>. Especially when inputting negative numbers, be <em>certain</em> to put parentheses around the input values in the first step:<md permid="qYJ">
                                 <mrow>g(\substitute{-2})\amp= 5(\substitute{-2})^2-3(\substitute{-2})+4</mrow>
                                 <mrow>\amp= 5(4)+6+4</mrow>
                                 <mrow>\amp= 30</mrow>
@@ -433,16 +433,16 @@
             </webwork>
         </exercise>
 
-        <p>A function may also be described by explicitly listing many inputs and their corresponding outputs in a table.</p>
+        <p permid="Jcn">A function may also be described by explicitly listing many inputs and their corresponding outputs in a table.</p>
 
-        <example xml:id="example-evaluate-table-function">
+        <example xml:id="example-evaluate-table-function" permid="IdY">
             <title>Functions given in Table Form</title>
             <statement>
-                <p>Temperature readings for Portland, OR, on a given day are recorded in <xref ref="table-temperature">Table</xref> . Let <m>f(x)</m> be the temperature in degrees Fahrenheit <m>x</m> hours after midnight.</p>
+                <p permid="ozC">Temperature readings for Portland, OR, on a given day are recorded in <xref ref="table-temperature">Table</xref> . Let <m>f(x)</m> be the temperature in degrees Fahrenheit <m>x</m> hours after midnight.</p>
 
-                <table xml:id="table-temperature">
+                <table xml:id="table-temperature" permid="PBt">
                     <caption>Recorded Temperatures in Portland, OR, on a certain day</caption>
-                    <tabular valign="top" bottom="medium" top="medium" left="medium" right="minor" halign="center">
+                    <tabular valign="top" bottom="medium" top="medium" left="medium" right="minor" halign="center" permid="HWU">
                         <col />
                         <col />
                         <col />
@@ -487,23 +487,23 @@
                     </tabular>
                 </table>
 
-                <p><ol label="a.">
-                    <li>
-                        <p>What was the temperature at midnight?</p>
+                <p permid="UGL"><ol label="a." permid="ivV">
+                    <li permid="hqC">
+                        <p permid="ENT">What was the temperature at midnight?</p>
                     </li>
-                    <li>
-                        <p>Find <m>f(9)</m>. Explain what this function value represents in the context of the problem.</p>
+                    <li permid="NxL">
+                        <p permid="kVc">Find <m>f(9)</m>. Explain what this function value represents in the context of the problem.</p>
                     </li>
                 </ol></p>
             </statement>
 
-            <solution>
-                <p><ol label="a.">
-                    <li>
-                        <p>To determine the temperature at midnight, we look in the table where <m>x=0</m> and see that the output is <m>45</m>. Using function notation, we would write:<me>f(0) = 45</me>. Thus, at midnight the temperature was <quantity><mag>45</mag><unit base="fahrenheit" /></quantity>.</p>
+            <solution permid="Fjs">
+                <p permid="uoO"><ol label="a." permid="JTl">
+                    <li permid="tEU">
+                        <p permid="Rcl">To determine the temperature at midnight, we look in the table where <m>x=0</m> and see that the output is <m>45</m>. Using function notation, we would write:<me permid="hEX">f(0) = 45</me>. Thus, at midnight the temperature was <quantity><mag>45</mag><unit base="fahrenheit" /></quantity>.</p>
                     </li>
-                    <li>
-                        <p>To determine the value of <m>f(9)</m>, we look in the table where <m>x=9</m> and read the output:<me>f(9) = 50</me>. In context, this means that at 9AM the temperature was <quantity><mag>50</mag><unit base="fahrenheit" /></quantity>.</p>
+                    <li permid="ZMd">
+                        <p permid="xju">To determine the value of <m>f(9)</m>, we look in the table where <m>x=9</m> and read the output:<me permid="NMg">f(9) = 50</me>. In context, this means that at 9AM the temperature was <quantity><mag>50</mag><unit base="fahrenheit" /></quantity>.</p>
                     </li>
                 </ol></p>
             </solution>
@@ -517,40 +517,40 @@
     
 
 
-    <subsection>
+    <subsection permid="UNP">
         <title>Domain and Range</title>
 
-        <p>Earlier we defined the domain and range of a relation. We repeat those definitions more formally here, specifically for functions.</p>
+        <p permid="pjw">Earlier we defined the domain and range of a relation. We repeat those definitions more formally here, specifically for functions.</p>
 
-        <definition xml:id="definition-domain-and-range">
+        <definition xml:id="definition-domain-and-range" permid="Usq">
             <title>Domain and Range</title>
             <statement>
-                <p>Given a function <m>f</m>, the <term>domain</term> of <m>f</m> is the collection of all valid input values for <m>f</m>. The <term>range</term> of <m>f</m> is the collection of all possible output values of <m>f</m>.<idx><h>function</h><h>domain</h></idx><idx><h>function</h><h>range</h></idx></p>
+                <p permid="ffQ">Given a function <m>f</m>, the <term>domain</term> of <m>f</m> is the collection of all valid input values for <m>f</m>. The <term>range</term> of <m>f</m> is the collection of all possible output values of <m>f</m>.<idx><h>function</h><h>domain</h></idx><idx><h>function</h><h>range</h></idx></p>
             </statement>
         </definition>
 
-        <p>When working with functions, a common necessary task is to determine the function's domain and range. Also, the ability to identify domain and range is strong evidence that a person really understands the <em>concepts</em> of domain and range.</p>
+        <p permid="VqF">When working with functions, a common necessary task is to determine the function's domain and range. Also, the ability to identify domain and range is strong evidence that a person really understands the <em>concepts</em> of domain and range.</p>
 
-        <example xml:id="example-function-yes-no-ordered-pairs">
+        <example xml:id="example-function-yes-no-ordered-pairs" permid="Azz">
             <title>Functions Defined by Ordered Pairs</title>
             <statement>
-                <p>The function <m>f</m> is defined by the ordered pairs <me>\{(1,2), (3,-2), (5,2), (7,-4), (9,6)\}</me>. Determine the domain and range of <m>f</m>.</p>
+                <p permid="ANU">The function <m>f</m> is defined by the ordered pairs <me permid="tTp">\{(1,2), (3,-2), (5,2), (7,-4), (9,6)\}</me>. Determine the domain and range of <m>f</m>.</p>
             </statement>
-            <solution>
-                <p>The ordered pairs tell us that <m>f(1)=2</m>, <m>f(3)=-2</m>, etc. So the valid input values are <m>1</m>, <m>3</m>, <m>5</m>, <m>7</m>, and <m>9</m>. This means the domain is the set <m>\{1,3,5,7,9\}</m>.</p>
+            <solution permid="lqB">
+                <p permid="avX">The ordered pairs tell us that <m>f(1)=2</m>, <m>f(3)=-2</m>, etc. So the valid input values are <m>1</m>, <m>3</m>, <m>5</m>, <m>7</m>, and <m>9</m>. This means the domain is the set <m>\{1,3,5,7,9\}</m>.</p>
 
-                <p>Similarly, the ordered pairs tell us that <m>2</m>, <m>-2</m>, <m>-4</m>, and <m>6</m> are possible output values. Notice that the output <m>2</m> happened twice, but it only needs to be listed in this collection once. The range of <m>f</m> is <m>\{2,-2,-4,6\}</m>.</p>
+                <p permid="GDg">Similarly, the ordered pairs tell us that <m>2</m>, <m>-2</m>, <m>-4</m>, and <m>6</m> are possible output values. Notice that the output <m>2</m> happened twice, but it only needs to be listed in this collection once. The range of <m>f</m> is <m>\{2,-2,-4,6\}</m>.</p>
             </solution>
         </example>
 
-        <example>
+        <example permid="gGI">
             <title>Functions in Table Form</title>
             <statement>
-                <p>For each function defined using a table, state the domain and range.<ol label="a.">
-                    <li>
-                        <p>The function <m>g</m> is defined by:</p>
-                        <sidebyside>
-                            <tabular halign="right" valign="top" bottom="medium" top="medium" left="medium" right="minor">
+                <p permid="gVd">For each function defined using a table, state the domain and range.<ol label="a." permid="ODe">
+                    <li permid="FTm">
+                        <p permid="dqD">The function <m>g</m> is defined by:</p>
+                        <sidebyside permid="MNR">
+                            <tabular halign="right" valign="top" bottom="medium" top="medium" left="medium" right="minor" permid="oed">
                                 <col />
                                 <col />
                                 <col />
@@ -576,10 +576,10 @@
                             </tabular>
                         </sidebyside>
                     </li>
-                    <li>
-                        <p>The function <m>h</m> is defined by:</p>
-                        <sidebyside>
-                            <tabular halign="right" valign="top" bottom="medium" top="medium" left="medium" right="minor">
+                    <li permid="mav">
+                        <p permid="JxM">The function <m>h</m> is defined by:</p>
+                        <sidebyside permid="sVa">
+                            <tabular halign="right" valign="top" bottom="medium" top="medium" left="medium" right="minor" permid="Ulm">
                                 <col />
                                 <col />
                                 <col />
@@ -607,15 +607,15 @@
                     </li>
                 </ol></p>
             </statement>
-            <solution>
-                <p><ol label="a.">
-                    <li>
-                        <p>The table tells us that <m>g(-2)=5</m>, <m>g(-1)=5</m>, etc. So the valid input values are <m>-2</m>, <m>-1</m>, <m>0</m>, <m>1</m>, and <m>2</m>. This means the domain of <m>g</m> is the set <m>\{-2,-1,0,1,2\}</m>.</p>
-                        <p>The only output evident from this table is <m>5</m>, so the range of <m>g</m> is the set <m>\{5\}</m>.</p>
+            <solution permid="RxK">
+                <p permid="mKp"><ol label="a." permid="qau">
+                    <li permid="ShE">
+                        <p permid="pEV">The table tells us that <m>g(-2)=5</m>, <m>g(-1)=5</m>, etc. So the valid input values are <m>-2</m>, <m>-1</m>, <m>0</m>, <m>1</m>, and <m>2</m>. This means the domain of <m>g</m> is the set <m>\{-2,-1,0,1,2\}</m>.</p>
+                        <p permid="VMe">The only output evident from this table is <m>5</m>, so the range of <m>g</m> is the set <m>\{5\}</m>.</p>
                     </li>
-                    <li>
-                        <p>The table tells us that <m>h(0)=8</m>, <m>h(1)=6</m>, etc. So the valid input values are <m>0</m>, <m>1</m>, <m>2</m>, <m>3</m>, and <m>4</m>. This means the domain of <m>h</m> is the set <m>\{0,1,2,3,4\}</m>.</p>
-                        <p>Similarly, the table shows us that the possible outputs are <m>8</m>, <m>6</m>, <m>4</m>, <m>2</m>, and <m>0</m>. So the range of <m>h</m> is the set <m>\{8,6,4,2,0\}</m>.</p>
+                    <li permid="yoN">
+                        <p permid="BTn">The table tells us that <m>h(0)=8</m>, <m>h(1)=6</m>, etc. So the valid input values are <m>0</m>, <m>1</m>, <m>2</m>, <m>3</m>, and <m>4</m>. This means the domain of <m>h</m> is the set <m>\{0,1,2,3,4\}</m>.</p>
+                        <p permid="iaw">Similarly, the table shows us that the possible outputs are <m>8</m>, <m>6</m>, <m>4</m>, <m>2</m>, and <m>0</m>. So the range of <m>h</m> is the set <m>\{8,6,4,2,0\}</m>.</p>
                     </li>
                 </ol></p>
             </solution>
@@ -754,7 +754,7 @@
     
 
 
-    <exercises>
+    <exercises permid="AUY">
         <!-- <exercisegroup cols="2">
              -->
 
@@ -1095,84 +1095,84 @@
             </exercise>
         </exercisegroup> -->
 
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" permid="hch">
             <title>Evaluating Functions Algebraically</title>
-            <exercise>
+            <exercise permid="ZxI">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction10.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="FER">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction10.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="lMa">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction20.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="RTj">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction20.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="yas">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction30.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="ehB">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction30.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="KoK">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction40.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="qvT">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction40.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="WDc">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction50.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="CKl">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction50.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="iRu">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction60.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="OYD">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction60.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="vfM">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction70.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="bmV">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction70.pg" />
             </exercise>
-            <exercise >
+            <exercise  permid="Hue">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction80.pg" />
             </exercise>
-            <exercise >
+            <exercise  permid="nBn">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction80.pg" />
             </exercise>
-            <exercise >
+            <exercise  permid="TIw">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg" />
             </exercise>
-            <exercise >
+            <exercise  permid="zPF">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="fWO">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction100.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="MdX">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction100.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="slg">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction110.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="Ysp">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction110.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="Ezy">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction120.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="kGH">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction120.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="QNQ">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction130.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="wUZ">
                 <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction130.pg" />
             </exercise>
         </exercisegroup>
@@ -1231,62 +1231,62 @@
                 <webwork source="BasicAlgebra/FunctionBasics/Functions120.pg" />
             </exercise>
         </exercisegroup> -->
-        <exercisegroup>
+        <exercisegroup permid="Njq">
             <title>Domain and Range</title>
-            <exercise>
+            <exercise permid="dci">
                 <webwork >
                     <setup>
-                        <pg-code>
-                            Context("Interval");
-                            $set1=Set("{-2,0,1,3}");
-                            $set2=Set("{5,7,9}");
-                            $setev1=$set1->cmp(cmp_class=>'a set');
-                            $setev2=$set2->cmp(cmp_class=>'a set');
-                            Context()->parens->set('('=>{type=>'Point'});
-                        </pg-code>
+            <pg-code>
+                Context("Interval");
+                $set1=Set("{-2,0,1,3}");
+                $set2=Set("{5,7,9}");
+                $setev1=$set1->cmp(cmp_class=>'a set');
+                $setev2=$set2->cmp(cmp_class=>'a set');
+                Context()->parens->set('('=>{type=>'Point'});
+            </pg-code>
                     </setup>
                     <statement>
-                        <p>A function, <m>f</m> is defined by the ordered pairs <m>\{(-2,5),(0,7),(1,7),(3,9)\}</m>. Find the domain and range of <m>f</m>. </p>
-                        <p>The domain of <m>f</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
-                        <p>The range of <m>f</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
+                        <p permid="lEW">A function, <m>f</m> is defined by the ordered pairs <m>\{(-2,5),(0,7),(1,7),(3,9)\}</m>. Find the domain and range of <m>f</m>. </p>
+                        <p permid="RMf">The domain of <m>f</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
+                        <p permid="xTo">The range of <m>f</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
                     </statement>
                 </webwork>
             </exercise>
-            <exercise>
+            <exercise permid="Jjr">
                 <webwork >
                     <setup>
-                        <pg-code>
-                            Context("Interval");
-                            $set1=Set("{15,20,25,30}");
-                            $set2=Set("{-3,-4,-5,-6}");
-                            $setev1=$set1->cmp(cmp_class=>'a set');
-                            $setev2=$set2->cmp(cmp_class=>'a set');
-                            Context()->parens->set('('=>{type=>'Point'});
-                        </pg-code>
+            <pg-code>
+                Context("Interval");
+                $set1=Set("{15,20,25,30}");
+                $set2=Set("{-3,-4,-5,-6}");
+                $setev1=$set1->cmp(cmp_class=>'a set');
+                $setev2=$set2->cmp(cmp_class=>'a set');
+                Context()->parens->set('('=>{type=>'Point'});
+            </pg-code>
                     </setup>
                     <statement>
-                        <p>A function, <m>g</m> is defined by the ordered pairs <m>\{(15,-3),(20,-4),(25,-5),(30,-6)\}</m>. Find the domain and range of <m>g</m>. </p>
-                        <p>The domain of <m>g</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
-                        <p>The range of <m>g</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
+                        <p permid="eax">A function, <m>g</m> is defined by the ordered pairs <m>\{(15,-3),(20,-4),(25,-5),(30,-6)\}</m>. Find the domain and range of <m>g</m>. </p>
+                        <p permid="KhG">The domain of <m>g</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
+                        <p permid="qoP">The range of <m>g</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
                     </statement>
                 </webwork>
             </exercise>
 
-            <exercise>
+            <exercise permid="pqA">
                 <webwork >
                     <setup>
-                        <pg-code>
-                            Context("Interval");
-                            $set1=Set("{-2,-1,0,1,2}");
-                            $set2=Set("{0,2,5,3,1}");
-                            $setev1=$set1->cmp(cmp_class=>'a set');
-                            $setev2=$set2->cmp(cmp_class=>'a set');
-                            Context()->parens->set('('=>{type=>'Point'});
-                        </pg-code>
+            <pg-code>
+                Context("Interval");
+                $set1=Set("{-2,-1,0,1,2}");
+                $set2=Set("{0,2,5,3,1}");
+                $setev1=$set1->cmp(cmp_class=>'a set');
+                $setev2=$set2->cmp(cmp_class=>'a set');
+                Context()->parens->set('('=>{type=>'Point'});
+            </pg-code>
                     </setup>
-                    <statement><p>The function <m>F</m> is defined by the following table:</p>
-                            <table>
-                                <tabular halighn="center" top="medium">
+                    <statement><p permid="WvY">The function <m>F</m> is defined by the following table:</p>
+                            <table permid="vIC">
+                                <tabular halighn="center" top="medium" permid="Asv">
                                     <row bottom="medium">
                                         <cell left="medium" right="medium">
                                             x
@@ -1337,28 +1337,28 @@
                                     </row>
                                 </tabular>
                             </table>
-                        <p>Find the domain and range of <m>F</m>. </p>
-                        <p>The domain of <m>F</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
-                        <p>The range of <m>F</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
+                        <p permid="CDh">Find the domain and range of <m>F</m>. </p>
+                        <p permid="iKq">The domain of <m>F</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
+                        <p permid="ORz">The range of <m>F</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
                     </statement>
                 </webwork>
             </exercise>
-            <exercise>
+            <exercise permid="VxJ">
                 <webwork >
                     <setup>
-                        <pg-code>
-                            Context("Interval");
-                            $set1=Set("{1,-10,-3,-6,-9}");
-                            $set2=Set("{2,-8,1,8,5}");
-                            $setev1=$set1->cmp(cmp_class=>'a set');
-                            $setev2=$set2->cmp(cmp_class=>'a set');
-                            Context()->parens->set('('=>{type=>'Point'});
-                        </pg-code>
+            <pg-code>
+                Context("Interval");
+                $set1=Set("{1,-10,-3,-6,-9}");
+                $set2=Set("{2,-8,1,8,5}");
+                $setev1=$set1->cmp(cmp_class=>'a set');
+                $setev2=$set2->cmp(cmp_class=>'a set');
+                Context()->parens->set('('=>{type=>'Point'});
+            </pg-code>
                     </setup>
-                    <statement><p>The function <m>G</m> is defined by the following table:
+                    <statement><p permid="uYI">The function <m>G</m> is defined by the following table:
 
-                        <table>
-                            <tabular halign="center" top="medium">
+                        <table permid="bPL">
+                            <tabular halign="center" top="medium" permid="gzE">
                                 <row bottom="medium">
                                 <cell left="medium" right="medium">
                                     x
@@ -1412,45 +1412,45 @@
                             </p>
                             
                         
-                        <p>Find the domain and range of <m>G</m>. </p>
-                        <p>The domain of <m>G</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
-                        <p>The range of <m>G</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
+                        <p permid="bfR">Find the domain and range of <m>G</m>. </p>
+                        <p permid="Hna">The domain of <m>G</m> is <var name="$set1" evaluator="$setev1" width="30" />.</p>
+                        <p permid="nuj">The range of <m>G</m> is <var name="$set2" evaluator="$setev2" width="30" />.</p>
                     </statement>
                 </webwork>
             </exercise>
         </exercisegroup>
 
 
-        <exercisegroup>
+        <exercisegroup permid="tqz">
             <title>Function Notation in Context</title>
-            <exercise>
+            <exercise permid="BES">
                 <webwork source="BasicAlgebra/FunctionBasics/Functions150.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="hMb">
                 <webwork source="BasicAlgebra/FunctionBasics/Functions160.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="NTk">
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext10.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="uat">
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext10.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="ahC">
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext20.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="GoL">
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext20.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="mvU">
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext30.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="SDd">
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext30.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="yKm">
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg" />
             </exercise>
-            <exercise>
+            <exercise permid="eRv">
                 <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg" />
             </exercise>
         </exercisegroup>
