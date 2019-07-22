@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,836 +6,911 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
 <section xml:id="section-solving-radical-equations" permid="lhT">
-
+  <title>Solving Radical Equations</title>
+  <introduction permid="vVt">
+    <p permid="Bpg">
+      In this section,
+      we will learn how to solve equations involving radicals.
+    </p>
+  </introduction>
+  <subsection permid="Rpc">
     <title>Solving Radical Equations</title>
-
-    <introduction permid="vVt">
-        <p permid="Bpg">In this section, we will learn how to solve equations involving radicals.</p>
-    </introduction>
-
-    <subsection permid="Rpc">
-        <title>Solving Radical Equations</title><idx><h>solving</h><h>radical equations</h></idx>
-
-        <p permid="FYZ">One common application of radicals is the Pythagorean Theorem. We already saw some examples in earlier sections. We will look at some other applications of radicals in this section.</p>
-
-        <p permid="mgi">The formula <m>T=2\pi\sqrt{\frac{L}{g}}</m> is used to calculate the period of a pendulum and is attributed to the scientist <url href="https://en.wikipedia.org/wiki/Christiaan_Huygens#Pendulums">Christiaan Huygens</url><fn><url href="https://en.wikipedia.org/wiki/Christiaan_Huygens#Pendulums">en.wikipedia.org/wiki/Christiaan<underscore />Huygens<hash />Pendulums</url></fn>. In the formula, <m>T</m> stands for the pendulum's period (how long one back-and-forth oscillation takes) in seconds, <m>L</m> stands for the pendulum's length in meters, and <m>g</m> is approximately <quantity><mag>9.8</mag><unit base="meter"/><per base="second" exp="2"/></quantity>, which is the gravitational acceleration constant on Earth.</p>
-
-        <p permid="Snr">An engineer is designing a pendulum. Its period must be <m>10</m> seconds. How long should the pendulum's length be?</p>
-
-        <p permid="yuA">We will substitute <m>\substitute{10}</m> into the formula for <m>T</m> and also the value of <m>g</m>, and then solve for <m>L</m>:
-            <md permid="jlC">
-                <mrow>T\amp=2\pi\sqrt{\frac{L}{g}}</mrow>
-                <mrow>\substitute{10}\amp=2\pi\sqrt{\frac{L}{\substitute{9.8}}}</mrow>
-                <mrow>\multiplyleft{\frac{1}{2\pi}}10\amp=\multiplyleft{\frac{1}{2\pi}}2\pi\sqrt{\frac{L}{9.8}}</mrow>
-                <mrow>\frac{5}{\pi}\amp=\sqrt{\frac{L}{9.8}}</mrow>
-                <mrow>\left(\frac{5}{\pi}\right)^\highlight{2}\amp=\left(\sqrt{\frac{L}{9.8}}\right)^\highlight{2}\amp\text{canceling square root by squaring both sides}</mrow>
-                <mrow>\frac{25}{\pi^2}\amp=\frac{L}{9.8}</mrow>
-                <mrow>\multiplyleft{9.8}\frac{25}{\pi^2}\amp=\multiplyleft{9.8}\frac{L}{9.8}</mrow>
-                <mrow>24.82\amp\approx L</mrow>
-            </md>
-        To build a pendulum with a period of <m>10</m> seconds, the pendulum's length should be approximately <m>24.82</m> meters.</p>
-
-        <remark permid="DzS"><p permid="cMw">The basic strategy to solve radical equations, where the radical is a square root, is to isolate the radical on one side of the equation and then square both sides to cancel the radical.</p></remark>
-
-        <remark permid="jHb"><p permid="ITF">Squaring both sides of an equation is <q>dangerous,</q> as it could create <term>extraneous solutions</term><idx><h>extraneous solutions</h></idx>, which will not make the equation true. For example, if we square both sides of <m>1=-1</m>, we have:
-            <md permid="PsL">
-                <mrow>1\amp=-1\amp\text{false}</mrow>
-                <mrow>(1)^2\amp=(-1)^2</mrow>
-                <mrow>1\amp=1\amp\text{true}</mrow>
-            </md>
-        By squaring both sides of an equation, we turned a false equation into a true one. This is why we <em>must check solutions</em> when we square both sides of an equation.</p></remark>
-
-        <example permid="mBH">
+    <idx><h>solving</h><h>radical equations</h></idx>
+    <p permid="FYZ">
+      One common application of radicals is the Pythagorean Theorem.
+      We already saw some examples in earlier sections.
+      We will look at some other applications of radicals in this section.
+    </p>
+    <p permid="mgi">
+      The formula <m>T=2\pi\sqrt{\frac{L}{g}}</m> is used to calculate the period of a pendulum and is attributed to the scientist
+      <url href="https://en.wikipedia.org/wiki/Christiaan_Huygens#Pendulums">Christiaan Huygens</url><fn>
+      <url href="https://en.wikipedia.org/wiki/Christiaan_Huygens#Pendulums">en.wikipedia.org/wiki/Christiaan<underscore />Huygens<hash />Pendulums</url>
+      </fn>.
+      In the formula, <m>T</m> stands for the pendulum's period
+      (how long one back-and-forth oscillation takes)
+      in seconds, <m>L</m> stands for the pendulum's length in meters,
+      and <m>g</m> is approximately
+      <quantity>
+        <mag>9.8</mag><unit base="meter"/><per base="second" exp="2"/>
+      </quantity>, which is the gravitational acceleration constant on Earth.
+    </p>
+    <p permid="Snr">
+      An engineer is designing a pendulum.
+      Its period must be <m>10</m> seconds.
+      How long should the pendulum's length be?
+    </p>
+    <p permid="yuA">
+      We will substitute <m>\substitute{10}</m> into the formula for <m>T</m> and also the value of <m>g</m>,
+      and then solve for <m>L</m>:
+      <md permid="jlC">
+        <mrow>T\amp=2\pi\sqrt{\frac{L}{g}}</mrow>
+        <mrow>\substitute{10}\amp=2\pi\sqrt{\frac{L}{\substitute{9.8}}}</mrow>
+        <mrow>\multiplyleft{\frac{1}{2\pi}}10\amp=\multiplyleft{\frac{1}{2\pi}}2\pi\sqrt{\frac{L}{9.8}}</mrow>
+        <mrow>\frac{5}{\pi}\amp=\sqrt{\frac{L}{9.8}}</mrow>
+        <mrow>\left(\frac{5}{\pi}\right)^\highlight{2}\amp=\left(\sqrt{\frac{L}{9.8}}\right)^\highlight{2}\amp\text{canceling square root by squaring both sides}</mrow>
+        <mrow>\frac{25}{\pi^2}\amp=\frac{L}{9.8}</mrow>
+        <mrow>\multiplyleft{9.8}\frac{25}{\pi^2}\amp=\multiplyleft{9.8}\frac{L}{9.8}</mrow>
+        <mrow>24.82\amp\approx L</mrow>
+      </md>
+      To build a pendulum with a period of <m>10</m> seconds,
+      the pendulum's length should be approximately <m>24.82</m> meters.
+    </p>
+    <remark permid="DzS">
+      <p permid="cMw">
+        The basic strategy to solve radical equations,
+        where the radical is a square root,
+        is to isolate the radical on one side of the equation and then square both sides to cancel the radical.
+      </p>
+    </remark>
+    <remark permid="jHb">
+      <p permid="ITF">
+        Squaring both sides of an equation is
+        <q>dangerous,</q>
+        as it could create <term>extraneous solutions</term>,
+            <idx><h>extraneous solutions</h></idx>
+        which will not make the equation true.
+        For example, if we square both sides of <m>1=-1</m>, we have:
+        <md permid="PsL">
+          <mrow>1\amp=-1\amp\text{false}</mrow>
+          <mrow>(1)^2\amp=(-1)^2</mrow>
+          <mrow>1\amp=1\amp\text{true}</mrow>
+        </md>
+        By squaring both sides of an equation,
+        we turned a false equation into a true one.
+        This is why we <em>must check solutions</em>
+        when we square both sides of an equation.
+      </p>
+    </remark>
+    <example permid="mBH">
+      <statement>
+        <p permid="fHc">
+          Solve the equation <m>1+\sqrt{y-1}=4</m> for <m>y</m>.
+        </p>
+      </statement>
+      <solution permid="ccC">
+        <p permid="Fpf">
+          We will isolate the radical first and then square both sides.
+          <md permid="vzU">
+            <mrow>1+\sqrt{y-1}\amp=4</mrow>
+            <mrow>\sqrt{y-1}\amp=3</mrow>
+            <mrow>\left(\sqrt{y-1}\right)^\highlight{2}\amp=(3)^\highlight{2}</mrow>
+            <mrow>y-1\amp=9</mrow>
+            <mrow>y\amp=10</mrow>
+          </md>
+          Because we squared both sides of an equation,
+          we must check the solution.
+          Substitute <m>\substitute{10}</m> into <m>1+\sqrt{y-1}=4</m>,
+          and we have:
+          <md permid="bHd">
+            <mrow>1+\sqrt{y-1}\amp=4</mrow>
+            <mrow>1+\sqrt{\substitute{10}-1}\amp\stackrel{?}{=}4</mrow>
+            <mrow>1+\sqrt{9}\amp\stackrel{?}{=}4</mrow>
+            <mrow>1+3\amp\stackrel{?}{=}4</mrow>
+            <mrow>4\amp\stackrel{\checkmark}{=}4</mrow>
+          </md>
+          So, <m>10</m> is the solution to the equation <m>1+\sqrt{y-1}=4</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="SIQ">
+      <statement>
+        <p permid="rVu">
+          Solve the equation <m>5+\sqrt{q}=3</m> for <m>q</m>.
+        </p>
+      </statement>
+      <solution permid="IjL">
+        <p permid="lwo">
+          First, isolate the radical and square both sides.
+          <md permid="HOm">
+            <mrow>5+\sqrt{q}\amp=3</mrow>
+            <mrow>\sqrt{q}\amp=-2</mrow>
+            <mrow>\left(\sqrt{q}\right)^\highlight{2}\amp=(-2)^\highlight{2}</mrow>
+            <mrow>q\amp=4</mrow>
+          </md>
+          Because we squared both sides of an equation,
+          we must check the solution.
+          Substitute <m>\substitute{4}</m> into <m>5+\sqrt{q}=3</m>,
+          and we have:
+          <md permid="nVv">
+            <mrow>5+\sqrt{q}\amp=3</mrow>
+            <mrow>5+\sqrt{\substitute{4}}\amp\stackrel{?}{=}3</mrow>
+            <mrow>5+2\amp\stackrel{?}{=}3</mrow>
+            <mrow>7\amp\stackrel{\text{no}}{=} 3</mrow>
+          </md>
+          Thus, the potential solution <m>-2</m> is actually extraneous and we have no real solutions to the equation <m>5+\sqrt{q}=3</m>.
+          The solution set is the empty set, <m>\emptyset</m>.
+        </p>
+      </solution>
+    </example>
+    <remark permid="POk">
+      <p permid="paO">
+        In the previous example,
+        it would be legitimate to observe earlier stages that there are no solutions.
+        From the very beginning,
+        how could <m>5</m> plus a positive quantity result in <m>3</m>?
+        Or at the second step, since square roots are non-negative,
+        how could a square root equal <m>-2</m>?
+      </p>
+      <p permid="VhX">
+        You do not have to be able to make these observations.
+        If you follow the general steps for solving radical equations <em>and</em>
+        you remember to check the possible solutions you find,
+        then that will be enough.
+      </p>
+    </remark>
+    <example permid="yPZ">
+      <statement>
+        <p permid="YcD">
+          Solve for <m>z</m> in <m>\sqrt{z}+2=z</m>.
+        </p>
+      </statement>
+      <solution permid="oqU">
+        <p permid="RDx">
+          We will isolate the radical first,
+          and then square both sides.
+          <md permid="UcE">
+            <mrow>\sqrt{z}+2\amp=z</mrow>
+            <mrow>\sqrt{z}\amp=z-2</mrow>
+            <mrow>\left(\sqrt{z}\right)^{\highlight{2}}\amp=(z-2)^{\highlight{2}}</mrow>
+            <mrow>z\amp=z^2-4z+4</mrow>
+            <mrow>0\amp=z^2-5z+4</mrow>
+            <mrow>0\amp=(z-1)(z-4)</mrow>
+            <mrow>z-1=0\amp\text{ or }z-4=0</mrow>
+            <mrow>z=1\amp\text{ or }z=4</mrow>
+          </md>
+          Because we squared both sides of an equation,
+          we must check both solutions.
+        </p>
+        <p permid="xKG">
+          Substitute <m>\substitute{1}</m> into <m>\sqrt{z}+2=z</m>,
+          and we have:
+          <md permid="AjN">
+            <mrow>\sqrt{z}+2\amp=z</mrow>
+            <mrow>\sqrt{\substitute{1}}+2\amp\stackrel{?}{=}1</mrow>
+            <mrow>1+2\amp\stackrel{?}{=}1</mrow>
+            <mrow>3\amp\stackrel{\text{no}}{=}1</mrow>
+          </md>
+          It turned out <m>1</m> is an extraneous solution.
+        </p>
+        <p permid="dRP">
+          Next, we substitute <m>\substitute{4}</m> into <m>\sqrt{z}+2=z</m>:
+          <md permid="gqW">
+            <mrow>\sqrt{z}+2\amp=z</mrow>
+            <mrow>\sqrt{\substitute{4}}+2\amp\stackrel{?}{=}4</mrow>
+            <mrow>2+2\amp\stackrel{?}{=}4</mrow>
+            <mrow>4\amp\stackrel{\checkmark}{=}4</mrow>
+          </md>
+          So, <m>4</m> is the solution.
+        </p>
+        <p permid="JYY">
+          The equation has one solution: <m>4</m>.
+          The solution set is <m>\{4\}</m>.
+        </p>
+      </solution>
+    </example>
+    <p permid="eBJ">
+      Sometimes, we need to square both sides of an equation <em>twice</em>
+      before finding the solutions, like in the next example.
+    </p>
+    <example permid="eXi">
+      <statement>
+        <p permid="EjM">
+          Solve the equation <m>\sqrt{p-5}=5-\sqrt{p}</m> for <m>p</m>.
+        </p>
+      </statement>
+      <solution permid="Uyd">
+        <p permid="qgh">
+          We cannot isolate two radicals,
+          so we will simply square both sides,
+          and later try to isolate the remaining radical.
+          <md permid="Myf">
+            <mrow>\sqrt{p-5}\amp=5-\sqrt{p}</mrow>
+            <mrow>\left(\sqrt{p-5}\right)^\highlight{2}\amp=\left(5-\sqrt{p}\right)^\highlight{2}</mrow>
+            <mrow>p-5\amp=25-10\sqrt{p}+p \amp\text{ after expanding the binomial squared}</mrow>
+            <mrow>-5\amp=25-10\sqrt{p}</mrow>
+            <mrow>-30\amp=-10\sqrt{p}</mrow>
+            <mrow>\frac{-30}{-10}\amp=\frac{-10\sqrt{p}}{-10}</mrow>
+            <mrow>3\amp=\sqrt{p}</mrow>
+            <mrow>(3)^\highlight{2}\amp=\left(\sqrt{p}\right)^\highlight{2}</mrow>
+            <mrow>9\amp=p</mrow>
+          </md>
+          Because we squared both sides of an equation,
+          we must check the solution by substituting
+          <m>\substitute{9}</m> into <m>\sqrt{p-5}=5-\sqrt{p}</m>,
+          and we have:
+          <md permid="sFo">
+            <mrow>\sqrt{p-5}\amp=5-\sqrt{p}</mrow>
+            <mrow>\sqrt{\substitute{9}-5}\amp\stackrel{?}{=}5-\sqrt{9}</mrow>
+            <mrow>\sqrt{4}\amp\stackrel{?}{=}5-3</mrow>
+            <mrow>2\amp\stackrel{\checkmark}{=}2</mrow>
+          </md>
+          So <m>9</m> is the solution.
+          The solution set is <m>\{9\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="Ler">
+      <statement>
+        <p permid="kqV">
+          Solve the equation <m>\sqrt{2n-6}=1+\sqrt{n-2}</m> for <m>n</m>.
+        </p>
+      </statement>
+      <solution permid="AFm">
+        <p permid="Wnq">
+          We cannot isolate two radicals,
+          so we will simply square both sides,
+          and later try to isolate the remaining radical.
+          <md permid="YMx">
+            <mrow>\sqrt{2n-6}\amp=1+\sqrt{n-2}</mrow>
+            <mrow>\left(\sqrt{2n-6}\right)^\highlight{2}\amp=\left(1+\sqrt{n-2}\right)^\highlight{2}</mrow>
+            <mrow>2n-6\amp=\left(1+\sqrt{n-2}\right)\left(1+\sqrt{n-2}\right)</mrow>
+            <mrow>2n-6\amp=1+\sqrt{n-2}+\sqrt{n-2}+n-2</mrow>
+            <mrow>2n-6\amp=2\sqrt{n-2}+n-1 \text{ by combining like terms}</mrow>
+            <mrow>n-5\amp=2\sqrt{n-2}</mrow>
+            <intertext>Note here that we can leave the coefficient <m>2</m> next to the radical in the squaring process. We will square the <m>2</m> also.</intertext>
+            <mrow>(n-5)^\highlight{2}\amp=\left(2\sqrt{n-2}\right)^\highlight{2}</mrow>
+            <mrow>n^2-10n+25\amp=4(n-2)</mrow>
+            <mrow>n^2-10n+25\amp=4n-8</mrow>
+            <mrow>n^2-14n+33\amp=0</mrow>
+            <mrow>(n-11)(n-3)\amp=0</mrow>
+            <mrow>n-11=0\amp\text{ or }n-3=0</mrow>
+            <mrow>n=11\amp\text{ or } n=3</mrow>
+          </md>
+          So our two potential solutions are <m>11</m> and <m>3</m>.
+          We should now verify that they truly are solutions.
+        </p>
+        <p permid="Cuz">
+          Substitute <m>\substitute{11}</m> into <m>\sqrt{2n-6}=1+\sqrt{n-2}</m>,
+          and we have:
+          <md permid="ETG">
+            <mrow>\sqrt{2n-6}\amp=1+\sqrt{n-2}</mrow>
+            <mrow>\sqrt{2(\substitute{11})-6}\amp\stackrel{?}{=}1+\sqrt{\substitute{11}-2}</mrow>
+            <mrow>\sqrt{16}\amp\stackrel{?}{=}1+\sqrt{9}</mrow>
+            <mrow>4\amp\stackrel{?}{=}1+3</mrow>
+            <mrow>4\amp\stackrel{\checkmark}{=}4</mrow>
+          </md>
+          So, <m>11</m> is the solution.
+        </p>
+        <p permid="iBI">
+          Next, we substitute <m>\substitute{3}</m> into <m>\sqrt{2n-6}=1+\sqrt{n-2} </m>,
+          and we have:
+          <md permid="laP">
+            <mrow>\sqrt{2n-6}\amp=1+\sqrt{n-2}</mrow>
+            <mrow>\sqrt{2(\substitute{3})-6}\amp\stackrel{?}{=}1+\sqrt{\substitute{3}-2}</mrow>
+            <mrow>\sqrt{0}\amp\stackrel{?}{=}1+\sqrt{1}</mrow>
+            <mrow>0\amp\stackrel{\text{no}}{=}2</mrow>
+          </md>
+          So, <m>3</m> is not a solution.
+        </p>
+        <p permid="OIR">
+          So <m>11</m> is the solution.
+          The solution set is <m>\{11\}</m>.
+        </p>
+      </solution>
+    </example>
+    <p permid="KIS">
+      We also need the ability to solve radical equations with multiple variables,
+      like in the next example that comes from physics.
+      The strategy is the same: isolating the radical,
+      and then raise both sides to a certain power to cancel the radical.
+    </p>
+    <example permid="rlA">
+      <statement>
+        <p permid="Qye">
+          The study of black holes has resulted in some interesting science.
+          One fundamental concept about black holes is that there is a distance close enough to the black hole that not even light can escape,
+          called the
+          <url href="https://en.wikipedia.org/wiki/Schwarzschild_radius">Schwarzschild radius</url><fn>
+          <url href="https://en.wikipedia.org/wiki/Schwarzschild_radius">en.wikipedia.org/wiki/Schwarzschild<underscore/>radius</url>
+          </fn> or the event horizon radius.
+          To find the Schwarzschild radius, <m>R_s</m>,
+          we set the formula for the escape velocity equal to the speed of light,
+          <m>c</m>,
+          and we get <m>c=\sqrt{\frac{2GM}{R_s}}</m>,
+          which we need to solve for <m>R_s</m>.
+          Note that <m>G</m> is a constant,
+          and <m>M</m> is the mass of the black hole.
+        </p>
+      </statement>
+      <solution permid="gMv">
+        <p permid="uQa">
+          We will start by taking the equation
+          <m>c=\sqrt{\frac{2GM}{R_s}}</m> and applying our standard radical-equation-solving techniques.
+          Isolate the radical and square both sides:
+          <md permid="RhY">
+            <mrow>c\amp=\sqrt{\frac{2GM}{R_s}}</mrow>
+            <mrow>c^\highlight{2}\amp=\left(\sqrt{\frac{2GM}{R_s}}\right)^\highlight{2}</mrow>
+            <mrow>c^2\amp=\frac{2GM}{R_s}</mrow>
+            <mrow>\multiplyleft{R_s}c^2\amp=\frac{2GM}{R_s}\multiplyright{R_s}</mrow>
+            <mrow>R_s c^2\amp=2GM</mrow>
+            <mrow>\divideunder{R_s c^2}{c^2}\amp=\divideunder{2GM}{c^2}</mrow>
+            <mrow>R_s\amp=\frac{2GM}{c^2}</mrow>
+          </md>
+          So, the Schwarzschild radius can be found using the formula <m>R_s=\frac{2GM}{c^2}</m>.
+        </p>
+      </solution>
+    </example>
+<!--  <example>
+<statement>
+<p>The term <url href="https://en.wikipedia.org/wiki/Redshift">redshift</url><fn><url href="https://en.wikipedia.org/wiki/Redshift">en.wikipedia.org/wiki/Redshift</url></fn> refers to <url href="https://en.wikipedia.org/wiki/Doppler_effect">the Doppler effect</url><fn><url href="https://en.wikipedia.org/wiki/Doppler_effect">en.wikipedia.org/wiki/Doppler<underscore/>effect</url></fn> for light. When an object (like a star) is moving away from Earth at very fast speeds, the wavelength of the light emitted by the star is increased due to the distance between the planets increasing (and the constant speed of light). Increased wavelength makes light <q>redder.</q> The opposite phenomenon is called <url href="https://en.wikipedia.org/wiki/Blueshift">blueshift</url><fn><url href="https://en.wikipedia.org/wiki/Blueshift">https://en.wikipedia.org/wiki/Blueshift</url></fn>. It turns out that the formula to calculate the redshift for a star moving away from the Earth uses square roots: <me>f_r=f_s\cdot\sqrt{\frac{c-v}{c+v}}</me> where <m>c</m> stands for the constant speed of light in a vacuum, <m>f_r</m> represents the frequency of the light that the receiver on Earth sees, <m>f_s</m> represents the frequency of light that the source star emits, and <m>v</m> is the velocity that the star moving away from Earth. Solve this equation for <m>v</m>.</p>
+</statement>
+<solution>
+<p>We will take the original equation <m>f_r=f_s\cdot\sqrt{\frac{c-v}{c+v}}</m> and follow the steps to solving a radical equation. We could isolate the radical and then square both sides, but in this case isolating the radical is not necessary. If we begin by squaring both sides, that too will eliminate the radical. <md> <mrow>f_r\amp=f_s\cdot\sqrt{\frac{c-v}{c+v}}</mrow> <mrow>\left(f_r\right)^\highlight{2}\amp=\left(f_s\cdot\sqrt{\frac{c-v}{c+v}}\right)^\highlight{2}</mrow> <mrow>f_r^2\amp=f_s^2\cdot\frac{c-v}{c+v}</mrow> <mrow>f_r^2\multiplyright{(c+v)}\amp=f_s^2\cdot\frac{c-v}{c+v}\multiplyright{(c+v)}</mrow> <mrow>f_r^2(c+v)\amp=f_s^2(c-v)</mrow> <mrow>f_r^2c+f_r^2v\amp=f_s^2c-f_s^2v</mrow> <mrow>f_r^2v\addright{f_s^2v}\amp=f_s^2c\subtractright{f_r^2c}</mrow> <mrow>\left(f_s^2+f_r^2\right)v\amp=\left(f_s^2-f_r^2\right)c</mrow> <mrow>v\amp=\frac{f_s^2-f_r^2}{f_s^2+f_r^2}c</mrow> </md> This formula will tell us the velocity of the star away from Earth if we can know the respective frequencies of the starlight. This formula is used to demonstrate that <url href="https://en.wikipedia.org/wiki/Metric_expansion_of_space">the universe is expanding</url><fn><url href="https://en.wikipedia.org/wiki/Metric_expansion_of_space">en.wikipedia.org/wiki/Metric<underscore/>expansion<underscore/>of<underscore/>space</url></fn>.</p>
+</solution>
+</example> -->
+<!-- <example>
+<statement>
+<p>Solve for <m>L</m> in the formula <m>T=2\pi\sqrt{\frac{L}{g}}</m>.</p>
+</statement>
+<solution>
+<p><md> <mrow>T\amp=2\pi\sqrt{\frac{L}{g}}</mrow> <mrow>\multiplyleft{\frac{1}{2\pi}}T\amp=\multiplyleft{\frac{1}{2\pi}}2\pi\sqrt{\frac{L}{g}}</mrow> <mrow>\frac{T}{2\pi}\amp=\sqrt{\frac{L}{g}}</mrow> <mrow>\left(\frac{T}{2\pi}\right)^2\amp=\left(\sqrt{\frac{L}{g}}\right)^2</mrow> <mrow>\frac{T^2}{4\pi^2}\amp=\frac{L}{g}</mrow> <mrow>\multiplyleft{g}\frac{T^2}{4\pi^2}\amp=\multiplyleft{g}\frac{L}{g}</mrow> <mrow>\frac{T^2g}{4\pi^2}\amp=L</mrow> </md></p>
+</solution>
+</example> -->
+    <p permid="qQb">
+      Let's look at an example of solving an equation with a cube root.
+      There is very little difference between solving a cube-root equation and solving a square-root equation.
+      Instead of <em>squaring</em> both sides,
+      you <em>cube</em> both sides.
+    </p>
+    <example permid="XsJ">
+      <statement>
+        <p permid="wFn">
+          Solve for <m>q</m> in <m>\sqrt[3]{2-q}+2=5</m>.
+        </p>
+      </statement>
+      <solution permid="MTE">
+        <p permid="aXj">
+          <md permid="xph">
+            <mrow>\sqrt[3]{2-q}+2\amp=5</mrow>
+            <mrow>\sqrt[3]{2-q}\amp=3</mrow>
+            <mrow>\left(\sqrt[3]{2-q}\right)^\highlight{3}\amp=(3)^\highlight{3}</mrow>
+            <mrow>2-q\amp=27</mrow>
+            <mrow>-q\amp=25</mrow>
+            <mrow>q\amp=-25</mrow>
+          </md>
+          Unlike squaring both sides of an equation,
+          raising both sides of an equation to the 3rd power will not create extraneous solutions.
+          It's still good practice to check solution, though.
+          This part is left as exercise.
+        </p>
+      </solution>
+    </example>
+<!--  <p>We can use technology to solve equations by finding where two graphs intersect.</p>
+<example>
+<statement>
+<p>Solve the equation <m>1-x=\sqrt{x+5}</m> with technology.</p>
+</statement>
+<solution>
+<sidebyside widths="47% 47%" margins="0%">
+<p>We define <m>f(x)=1-x</m> and <m>g(x)=\sqrt{x+5}</m>, and then look for the intersection(s) of the graphs. Since the two functions intersect at <m>(-1,2)</m>, the solution to <m>1-x=\sqrt{x+5}</m> is <m>-1</m>. The solution set is <m>\{-1\}</m>.</p>
+<figure xml:id="figure-solving-radical-equation">
+<caption>Graph of <m>f(x)=1-x</m> and <m>g(x)=\sqrt{x+5}</m></caption>
+<image>
+<description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[]
+\addplot [primarycurve, -{Kite}, variable=\t, domain=0:3.464] ({t^2-5},{t}) node[above, pos=0.75, sloped] {$g(x)=\sqrt{x+5}$};
+\addplot [soliddot, color=firstcolor] coordinates {(-5,0)};
+\addplot [secondarycurve, domain=-6:7] {1-x} node[below, sloped, pos=0.17] {$f(x)=1-x$};
+\addplot [soliddot, color=fourthcolor] coordinates {(-1,2)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+</image>
+</figure>
+</sidebyside>
+<p>Before we finish with this example, we would like to illustrate why there are sometimes extraneous solutions to radical equations. It has to do with the squaring-both-sides step of the solving process.</p>
+<p>A graph of a radical, for example <m>y=\sqrt{x+5}</m>, actually graphs as <em>half</em> of a sideways parabola, as you can see in <xref ref="figure-solving-radical-equation">Figure</xref>. When we square both sides of that equation, we get <m>y^2=x+5</m>, which actually graphs as a <em>complete</em> sideways parabola.</p>
+<sidebyside widths="47% 47%" margins="0%">
+<figure xml:id="figure-solving-radical-equation-both-halves">
+<caption>Graph of <m>f(x)=1-x</m> and <m>y^2=x+5</m></caption>
+<image>
+<description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[]
+\addplot [primarycurve, variable=\t, domain=-3.464:3.464] ({t^2-5},{t}) node[above, pos=0.9, sloped] {$y^2=x+5$};
+\addplot [secondarycurve, domain=-6:7] {1-x} node[below, sloped, pos=0.17] {$f(x)=1-x$};
+\addplot [soliddot, color=fourthcolor] coordinates {(-1,2)};
+\addplot [soliddot, color=fourthcolor] coordinates {(4,-3)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+</image>
+</figure>
+<p>The curve and the line now intersect <em>twice</em>! This second solution (which is <m>4</m>, by the way) is the extraneous solution that we would have found had we solved <m>1-x=\sqrt{x+5}</m> algebraically.</p>
+</sidebyside>
+</solution>
+</example>
+<example>
+<statement>
+<p>Solve the equation <m>3+\sqrt{x+4}=x-\sqrt{x-4}</m> graphically using technology.</p>
+</statement>
+<solution>
+<sidebyside widths="47% 47%" margins="0%">
+<p>To solve the equation graphically, first we will assign the left side of the equation the label <m>m(x)=3+\sqrt{x+4}</m> and the right side <m>n(x)=x-\sqrt{x-4}</m>. Next we will make graphs of both <m>m</m> and <m>n</m> on the same grid and look for their intersection point(s). Since the two functions intersect at about <m>(8.75,6.571)</m>, the solution to <m>3+\sqrt{x+4}=x-\sqrt{x-4}</m> is <m>8.75</m>. The solution set is <m>\{8.75\}</m>.</p>
+<figure>
+<caption>Graph of <m>m(x)=3+\sqrt{x+4}</m> and <m>n(x)=x-\sqrt{x-4}</m></caption>
+<image>
+<description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-6, ymin=-1, xmax=16, ymax=9, xtick={-4,-2,...,14}, minor xtick=, ytick={1,2,...,8}, minor ytick=]
+\addplot [primarycurve, -{Kite}, variable=\t, domain=3:7.472] ({t^2-6*t+5},{t}) node[above, pos=0.45, sloped] {$y=m(x)$};
+\addplot [soliddot, color=firstcolor] coordinates {(-4,3)};
+\addplot [secondarycurve, -{Kite}, variable=\t, domain=3.75:9] ({0.5*(2*t+1+sqrt((2*t+1)^2-4*(t^2+4)))},{t}) node[below, pos=0.15, sloped] {$y=n(x)$};
+\addplot [secondarycurve, -, variable=\t, domain=3.75:4] ({0.5*(2*t+1-sqrt((2*t+1)^2-4*(t^2+4)))},{t});
+\addplot [soliddot, color=secondcolor] coordinates {(4,4)};
+\addplot [soliddot, color=fourthcolor] coordinates {(8.75,6.571)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+</image>
+</figure>
+</sidebyside>
+</solution>
+</example> -->
+  </subsection>
+  <exercises permid="xwl">
+    <exercisegroup cols="2" permid="dDu">
+      <title>Review and Warmup</title>
+      <exercise permid="inn">
+        <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps120.pg" />
+      </exercise>
+      <exercise permid="Ouw">
+        <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps120.pg" />
+      </exercise>
+      <exercise permid="uBF">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses80.pg" />
+      </exercise>
+      <exercise permid="aIO">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses80.pg" />
+      </exercise>
+      <exercise permid="GPX">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses120.pg" />
+      </exercise>
+      <exercise permid="mXg">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses120.pg" />
+      </exercise>
+      <exercise permid="Tep">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
+      </exercise>
+      <exercise permid="zly">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
+      </exercise>
+      <exercise permid="fsH">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad100.pg" />
+      </exercise>
+      <exercise permid="LzQ">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad100.pg" />
+      </exercise>
+      <exercise permid="rGZ">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad105.pg" />
+      </exercise>
+      <exercise permid="XOi">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad105.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="JKD">
+      <title>Solving Radical Equations</title>
+      <exercise permid="DVr">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation10.pg" />
+      </exercise>
+      <exercise permid="kcA">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation10.pg" />
+      </exercise>
+      <exercise permid="QjJ">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation20.pg" />
+      </exercise>
+      <exercise permid="wqS">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation20.pg" />
+      </exercise>
+      <exercise permid="cyb">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation30.pg" />
+      </exercise>
+      <exercise permid="IFk">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation30.pg" />
+      </exercise>
+      <exercise permid="oMt">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation40.pg" />
+      </exercise>
+      <exercise permid="UTC">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation40.pg" />
+      </exercise>
+      <exercise permid="BaL">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation50.pg" />
+      </exercise>
+      <exercise permid="hhU">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation50.pg" />
+      </exercise>
+      <exercise permid="Npd">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation60.pg" />
+      </exercise>
+      <exercise permid="twm">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation60.pg" />
+      </exercise>
+      <exercise permid="ZDv">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation70.pg" />
+      </exercise>
+      <exercise permid="FKE">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation70.pg" />
+      </exercise>
+      <exercise permid="lRN">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation80.pg" />
+      </exercise>
+      <exercise permid="RYW">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation80.pg" />
+      </exercise>
+      <exercise permid="ygf">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation90.pg" />
+      </exercise>
+      <exercise permid="eno">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation90.pg" />
+      </exercise>
+      <exercise permid="Kux">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation100.pg" />
+      </exercise>
+      <exercise permid="qBG">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation100.pg" />
+      </exercise>
+      <exercise permid="WIP">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations1.pg" />
+      </exercise>
+      <exercise permid="CPY">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations1.pg" />
+      </exercise>
+      <exercise permid="iXh">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations2.pg" />
+      </exercise>
+      <exercise permid="Peq">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations2.pg" />
+      </exercise>
+      <exercise permid="vlz">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations3.pg" />
+      </exercise>
+      <exercise permid="bsI">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations3.pg" />
+      </exercise>
+      <exercise permid="HzR">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations4.pg" />
+      </exercise>
+      <exercise permid="nHa">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations4.pg" />
+      </exercise>
+      <exercise permid="TOj">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations5.pg" />
+      </exercise>
+      <exercise permid="zVs">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations5.pg" />
+      </exercise>
+      <exercise permid="gcB">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations6.pg" />
+      </exercise>
+      <exercise permid="MjK">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations6.pg" />
+      </exercise>
+      <exercise permid="sqT">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
+      </exercise>
+      <exercise permid="Yyc">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
+      </exercise>
+<!-- Code for this problem is a mess -->
+<!-- <exercise>
+<webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations8.pg" />
+</exercise> -->
+    </exercisegroup>
+<!--  <exercisegroup cols="2">
+<title>Solving Radical Equations Using Technology</title>
+<exercise>
+<webwork>
+<pg-macros>
+<macro-file>PCCgraphMacros.pl</macro-file>
+</pg-macros>
+<setup>
+<pg-code>
+Context("FiniteSolutionSets");
+Context()->flags->remove("NumberCheck");
+Context()->flags->set(
+tolerance => 0.005,
+tolType => "absolute",
+);
+do{
+$a = non_zero_random(-5,5,0.1);
+$b = non_zero_random(-5,5,0.1);
+$root = ($a-($b)**2)/(2*$b);
+$x = $root**2;
+} until ( $root > 0 );
+$solutions = Formula("{$x}");
+$left = Formula("sqrt(x+$a)")->reduce;
+$right = Formula("sqrt(x)+$b")->reduce;
+$funcNew = Compute("$left-sqrt(x)-$b")->reduce;
+$alt="This picture shows the graph of the function $f(x)=$funcNew. The points ($x,0) is labeled.";
+($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$x],[-2,2]);
+@xticks = @$xticks_ref;
+@yticks = @$yticks_ref;
+$gr = init_graph($min[0],$min[1],$max[0],$max[1],
+axes=>[0,0],
+grid=>[$ticknum[0],$ticknum[1]],
+size=>[xPixels(),yPixels()]
+);
+$gr->lb('reset');
+for my $j (@xticks) {
+if (abs($j) &lt; 10**(-10)) {next;}
+$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+}
+$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
+$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
+for my $j (@yticks) {
+if (Real($j) == 0) {next;}
+$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+}
+add_functions($gr, "$funcNew for x in &lt; $min[0],$max[0] > using color:red and weight:1");
+$hx = ($x+$max[0])/2;
+$hy = $funcNew->eval(x=>$hx);
+$gr->lb( new Label($hx, $hy+$marksep[1]/4, "f(x)",'red','center','middle'));
+$xShow = int($x*100)/100;
+$gr->stamps( closed_circle($x, 0, 'red') );
+$gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
+<! todo: change this code to not subtract the right side onto the left before graphing. -->
+<!-- </pg-code>
+</setup> -->
+<!--  <statement>
+<p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
+<instruction>Round your answers to two decimal places if needed.</instruction>
+<p><var name="$solutions" width="10" /></p>
+</statement> -->
+<!--  <solution>
+<p>First, we move all terms to one side of the equals sign:<md> <mrow><var name="$left" />\amp=<var name="$right" /></mrow> <mrow><var name="$funcNew" />\amp=0</mrow> </md></p>
+<p>Next, we use technology to graph the function <m>f(x)=<var name="$funcNew" /></m>:</p>
+<sidebyside>
+<image pg-name="$gr">
+<description><var name="$alt" /></description>
+</image>
+</sidebyside>
+<p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
+</solution> -->
+<!-- </webwork>
+</exercise> -->
+<!--  <exercise>
+<webwork>
+<pg-macros>
+<macro-file>PCCgraphMacros.pl</macro-file>
+</pg-macros>
+<setup>
+<pg-code>
+Context("FiniteSolutionSets");
+Context()->flags->remove("NumberCheck");
+Context()->flags->set(
+tolerance => 0.005,
+tolType => "absolute",
+);
+do{
+$a = non_zero_random(-5,5,0.1);
+$b = non_zero_random(-5,5,0.1);
+$root = ($a-($b)**2)/(2*$b);
+$x = $root**2;
+} until ( $root > 0 );
+$solutions = Formula("{$x}");
+$left = Formula("sqrt(x+$a)")->reduce;
+$right = Formula("sqrt(x)+$b")->reduce;
+$funcNew = Compute("$left-sqrt(x)-$b")->reduce;
+$alt="This picture shows the graph of the function $f(x)=$funcNew. The points ($x,0) is labeled.";
+($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$x],[-2,2]);
+@xticks = @$xticks_ref;
+@yticks = @$yticks_ref;
+$gr = init_graph($min[0],$min[1],$max[0],$max[1],
+axes=>[0,0],
+grid=>[$ticknum[0],$ticknum[1]],
+size=>[xPixels(),yPixels()]
+);
+$gr->lb('reset');
+for my $j (@xticks) {
+if (abs($j) &lt; 10**(-10)) {next;}
+$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+}
+$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
+$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
+for my $j (@yticks) {
+if (Real($j) == 0) {next;}
+$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+}
+add_functions($gr, "$funcNew for x in &lt; $min[0],$max[0] > using color:red and weight:1");
+$hx = ($x+$max[0])/2;
+$hy = $funcNew->eval(x=>$hx);
+$gr->lb( new Label($hx, $hy+$marksep[1]/4, "f(x)",'red','center','middle'));
+$xShow = int($x*100)/100;
+$gr->stamps( closed_circle($x, 0, 'red') );
+$gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
+</pg-code>
+</setup>
+<statement>
+<p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
+<instruction>Round your answers to two decimal places if needed.</instruction>
+<p><var name="$solutions" width="10" /></p>
+</statement>
+<solution>
+<p>First, we move all terms to one side of the equals sign:<md> <mrow><var name="$left" />\amp=<var name="$right" /></mrow> <mrow><var name="$funcNew" />\amp=0</mrow> </md></p>
+<p>Next, we use technology to graph the function <m>f(x)=<var name="$funcNew" /></m>:</p>
+<sidebyside>
+<image pg-name="$gr">
+<description><var name="$alt" /></description>
+</image>
+</sidebyside>
+<p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
+</solution>
+</webwork>
+</exercise>
+</exercisegroup> -->
+    <exercisegroup cols="2" permid="pRM">
+      <title>Solving Radical Equations with Variables</title>
+      <exercise permid="EFl">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations9.pg" />
+      </exercise>
+      <exercise permid="kMu">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral90.pg" />
+      </exercise>
+      <exercise permid="QTD">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral100.pg" />
+      </exercise>
+      <exercise permid="xaM">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral110.pg" />
+      </exercise>
+      <exercise permid="dhV">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral112.pg" />
+      </exercise>
+      <exercise permid="Jpe">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral120.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="VYV">
+      <title>Radical Equation Applications</title>
+      <exercise permid="pwn">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication92.pg" />
+      </exercise>
+      <exercise permid="VDw">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication92.pg" />
+      </exercise>
+      <exercise permid="BKF">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication102.pg" />
+      </exercise>
+      <exercise permid="hRO">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication102.pg" />
+      </exercise>
+      <exercise permid="NYX">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication122.pg" />
+      </exercise>
+      <exercise permid="ugg">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication122.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="Cge">
+      <exercise permid="anp">
+<!-- Kara's challenge problem -->
+        <webwork>
+            <setup>
+<pg-code>
+Context("FiniteSolutionSets");
+$sqrtx = list_random(2,3,5,6,7,8);
+$x = $sqrtx**2;
+$xans = Formula("1/$x");
+$answer = Formula("{1/$x}");
+</pg-code>
+            </setup>
             <statement>
-                <p permid="fHc">Solve the equation <m>1+\sqrt{y-1}=4</m> for <m>y</m>.</p>
+              <p permid="hwp">
+                Solve for <m>x</m>.
+                <me permid="WXk">
+                  \sqrt{1+\sqrt{<var name="$sqrtx"/>}}=\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}
+                </me>
+              </p>
+              <p permid="NDy">
+                <var name="$answer" width="10"/>
+              </p>
             </statement>
-            <solution permid="ccC">
-                <p permid="Fpf">We will isolate the radical first and then square both sides.
-                    <md permid="vzU">
-                        <mrow>1+\sqrt{y-1}\amp=4</mrow>
-                        <mrow>\sqrt{y-1}\amp=3</mrow>
-                        <mrow>\left(\sqrt{y-1}\right)^\highlight{2}\amp=(3)^\highlight{2}</mrow>
-                        <mrow>y-1\amp=9</mrow>
-                        <mrow>y\amp=10</mrow>
-                    </md>
-                Because we squared both sides of an equation, we must check the solution. Substitute <m>\substitute{10}</m> into <m>1+\sqrt{y-1}=4</m>, and we have:
-                    <md permid="bHd">
-                        <mrow>1+\sqrt{y-1}\amp=4</mrow>
-                        <mrow>1+\sqrt{\substitute{10}-1}\amp\stackrel{?}{=}4</mrow>
-                        <mrow>1+\sqrt{9}\amp\stackrel{?}{=}4</mrow>
-                        <mrow>1+3\amp\stackrel{?}{=}4</mrow>
-                        <mrow>4\amp\stackrel{\checkmark}{=}4</mrow>
-                    </md>
-                    So, <m>10</m> is the solution to the equation <m>1+\sqrt{y-1}=4</m>.</p>
+            <solution permid="taN">
+              <p permid="Hes">
+                <md permid="dwq">
+                  <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp=\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}</mrow>
+                  <mrow>\left(\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\right)^{2}\amp=\left(\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}\right)^{2}</mrow>
+                  <mrow>1+\sqrt{<var name="$sqrtx"/>}\amp=2+\sqrt{\frac{1}{\sqrt{x}}}-1</mrow>
+                  <mrow>1+\sqrt{<var name="$sqrtx"/>}\amp=1+\sqrt{\frac{1}{\sqrt{x}}}</mrow>
+                  <mrow>\sqrt{<var name="$sqrtx"/>}\amp=\sqrt{\frac{1}{\sqrt{x}}}</mrow>
+                  <mrow>\left(\sqrt{<var name="$sqrtx"/>}\right)^{2}\amp=\left(\sqrt{\frac{1}{\sqrt{x}}}\right)^{2}</mrow>
+                  <mrow><var name="$sqrtx"/>\amp=\frac{1}{\sqrt{x}}</mrow>
+                  <mrow><var name="$sqrtx"/>^{2}\amp=\left(\frac{1}{\sqrt{x}}\right)^{2}</mrow>
+                  <mrow><var name="$x"/>\amp=\frac{1}{x}</mrow>
+                  <mrow><var name="$x"/>x\amp=1</mrow>
+                  <mrow>x \amp= <var name="$xans"/></mrow>
+                </md>
+              </p>
+              <p permid="nlB">
+                To check the proposed solution,
+                we will replace <m>x</m> with <m><var name="$xans"/></m>:
+                <md permid="JDz">
+                  <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{?}{=}\sqrt{2+\sqrt{\frac{1}{\sqrt{<var name="$xans"/>}}}-1}</mrow>
+                  <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{?}{=}\sqrt{1+\sqrt{\frac{1}{\frac{1}{<var name="$sqrtx"/>}}}}</mrow>
+                  <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{\checkmark}{=}\sqrt{1+\sqrt{<var name="$sqrtx"/>}}</mrow>
+                </md>
+              </p>
             </solution>
-        </example>
-
-        <example permid="SIQ">
-            <statement>
-                <p permid="rVu">Solve the equation <m>5+\sqrt{q}=3</m> for <m>q</m>.</p>
-            </statement>
-            <solution permid="IjL">
-                <p permid="lwo">First, isolate the radical and square both sides.
-                    <md permid="HOm">
-                        <mrow>5+\sqrt{q}\amp=3</mrow>
-                        <mrow>\sqrt{q}\amp=-2</mrow>
-                        <mrow>\left(\sqrt{q}\right)^\highlight{2}\amp=(-2)^\highlight{2}</mrow>
-                        <mrow>q\amp=4</mrow>
-                    </md>
-                Because we squared both sides of an equation, we must check the solution. Substitute <m>\substitute{4}</m> into <m>5+\sqrt{q}=3</m>, and we have:
-                    <md permid="nVv">
-                        <mrow>5+\sqrt{q}\amp=3</mrow>
-                        <mrow>5+\sqrt{\substitute{4}}\amp\stackrel{?}{=}3</mrow>
-                        <mrow>5+2\amp\stackrel{?}{=}3</mrow>
-                        <mrow>7\amp\stackrel{\text{no}}{=} 3</mrow>
-                    </md>
-                Thus, the potential solution <m>-2</m> is actually extraneous and we have no real solutions to the equation <m>5+\sqrt{q}=3</m>. The solution set is the empty set, <m>\emptyset</m>.</p>
-            </solution>
-        </example>
-
-        <remark permid="POk">
-            <p permid="paO">In the previous example, it would be legitimate to observe earlier stages that there are no solutions. From the very beginning, how could <m>5</m> plus a positive quantity result in <m>3</m>? Or at the second step, since square roots are non-negative, how could a square root equal <m>-2</m>?</p>
-
-            <p permid="VhX">You do not have to be able to make these observations. If you follow the general steps for solving radical equations <em>and</em> you remember to check the possible solutions you find, then that will be enough.</p>
-        </remark>
-
-        <example permid="yPZ">
-            <statement>
-                <p permid="YcD">Solve for <m>z</m> in <m>\sqrt{z}+2=z</m>.</p>
-            </statement>
-            <solution permid="oqU">
-                <p permid="RDx">We will isolate the radical first, and then square both sides.
-                    <md permid="UcE">
-                        <mrow>\sqrt{z}+2\amp=z</mrow>
-                        <mrow>\sqrt{z}\amp=z-2</mrow>
-                        <mrow>\left(\sqrt{z}\right)^{\highlight{2}}\amp=(z-2)^{\highlight{2}}</mrow>
-                        <mrow>z\amp=z^2-4z+4</mrow>
-                        <mrow>0\amp=z^2-5z+4</mrow>
-                        <mrow>0\amp=(z-1)(z-4)</mrow>
-                        <mrow>z-1=0\amp\text{ or }z-4=0</mrow>
-                        <mrow>z=1\amp\text{ or }z=4</mrow>
-                    </md>
-                Because we squared both sides of an equation, we must check both solutions.</p>
-                <p permid="xKG">Substitute <m>\substitute{1}</m> into <m>\sqrt{z}+2=z</m>, and we have:
-                    <md permid="AjN">
-                        <mrow>\sqrt{z}+2\amp=z</mrow>
-                        <mrow>\sqrt{\substitute{1}}+2\amp\stackrel{?}{=}1</mrow>
-                        <mrow>1+2\amp\stackrel{?}{=}1</mrow>
-                        <mrow>3\amp\stackrel{\text{no}}{=}1</mrow>
-                    </md>
-                It turned out <m>1</m> is an extraneous solution.</p>
-                <p permid="dRP">Next, we substitute <m>\substitute{4}</m> into <m>\sqrt{z}+2=z</m>:
-                    <md permid="gqW">
-                        <mrow>\sqrt{z}+2\amp=z</mrow>
-                        <mrow>\sqrt{\substitute{4}}+2\amp\stackrel{?}{=}4</mrow>
-                        <mrow>2+2\amp\stackrel{?}{=}4</mrow>
-                        <mrow>4\amp\stackrel{\checkmark}{=}4</mrow>
-                    </md>
-                So, <m>4</m> is the solution.</p>
-                <p permid="JYY">The equation has one solution: <m>4</m>. The solution set is <m>\{4\}</m>.</p>
-            </solution>
-        </example>
-
-        <p permid="eBJ">Sometimes, we need to square both sides of an equation <em>twice</em> before finding the solutions, like in the next example.</p>
-
-        <example permid="eXi">
-            <statement>
-                <p permid="EjM">Solve the equation <m>\sqrt{p-5}=5-\sqrt{p}</m> for <m>p</m>.</p>
-            </statement>
-            <solution permid="Uyd">
-                <p permid="qgh">We cannot isolate two radicals, so we will simply square both sides, and later try to isolate the remaining radical.
-                    <md permid="Myf">
-                        <mrow>\sqrt{p-5}\amp=5-\sqrt{p}</mrow>
-                        <mrow>\left(\sqrt{p-5}\right)^\highlight{2}\amp=\left(5-\sqrt{p}\right)^\highlight{2}</mrow>
-                        <mrow>p-5\amp=25-10\sqrt{p}+p \amp\text{ after expanding the binomial squared}</mrow>
-                        <mrow>-5\amp=25-10\sqrt{p}</mrow>
-                        <mrow>-30\amp=-10\sqrt{p}</mrow>
-                        <mrow>\frac{-30}{-10}\amp=\frac{-10\sqrt{p}}{-10}</mrow>
-                        <mrow>3\amp=\sqrt{p}</mrow>
-                        <mrow>(3)^\highlight{2}\amp=\left(\sqrt{p}\right)^\highlight{2}</mrow>
-                        <mrow>9\amp=p</mrow>
-                    </md>
-                Because we squared both sides of an equation, we must check the solution by substituting <m>\substitute{9}</m> into <m>\sqrt{p-5}=5-\sqrt{p}</m>, and we have:
-                    <md permid="sFo">
-                        <mrow>\sqrt{p-5}\amp=5-\sqrt{p}</mrow>
-                        <mrow>\sqrt{\substitute{9}-5}\amp\stackrel{?}{=}5-\sqrt{9}</mrow>
-                        <mrow>\sqrt{4}\amp\stackrel{?}{=}5-3</mrow>
-                        <mrow>2\amp\stackrel{\checkmark}{=}2</mrow>
-                    </md>
-                So <m>9</m> is the solution. The solution set is <m>\{9\}</m>.</p>
-            </solution>
-        </example>
-        <example permid="Ler">
-            <statement>
-                <p permid="kqV">Solve the equation <m>\sqrt{2n-6}=1+\sqrt{n-2}</m> for <m>n</m>.</p>
-            </statement>
-            <solution permid="AFm">
-                <p permid="Wnq">We cannot isolate two radicals, so we will simply square both sides, and later try to isolate the remaining radical.
-                    <md permid="YMx">
-                        <mrow>\sqrt{2n-6}\amp=1+\sqrt{n-2}</mrow>
-                        <mrow>\left(\sqrt{2n-6}\right)^\highlight{2}\amp=\left(1+\sqrt{n-2}\right)^\highlight{2}</mrow>
-                        <mrow>2n-6\amp=\left(1+\sqrt{n-2}\right)\left(1+\sqrt{n-2}\right)</mrow>
-                        <mrow>2n-6\amp=1+\sqrt{n-2}+\sqrt{n-2}+n-2</mrow>
-                        <mrow>2n-6\amp=2\sqrt{n-2}+n-1 \text{ by combining like terms}</mrow>
-                        <mrow>n-5\amp=2\sqrt{n-2}</mrow>
-                        <intertext>Note here that we can leave the coefficient <m>2</m> next to the radical in the squaring process. We will square the <m>2</m> also.</intertext>
-                        <mrow>(n-5)^\highlight{2}\amp=\left(2\sqrt{n-2}\right)^\highlight{2}</mrow>
-                        <mrow>n^2-10n+25\amp=4(n-2)</mrow>
-                        <mrow>n^2-10n+25\amp=4n-8</mrow>
-                        <mrow>n^2-14n+33\amp=0</mrow>
-                        <mrow>(n-11)(n-3)\amp=0</mrow>
-                        <mrow>n-11=0\amp\text{ or }n-3=0</mrow>
-                        <mrow>n=11\amp\text{ or } n=3</mrow>
-                    </md>
-                So our two potential solutions are <m>11</m> and <m>3</m>. We should now verify that they truly are solutions.</p>
-                <p permid="Cuz">Substitute <m>\substitute{11}</m> into <m>\sqrt{2n-6}=1+\sqrt{n-2}</m>, and we have:
-                    <md permid="ETG">
-                        <mrow>\sqrt{2n-6}\amp=1+\sqrt{n-2}</mrow>
-                        <mrow>\sqrt{2(\substitute{11})-6}\amp\stackrel{?}{=}1+\sqrt{\substitute{11}-2}</mrow>
-                        <mrow>\sqrt{16}\amp\stackrel{?}{=}1+\sqrt{9}</mrow>
-                        <mrow>4\amp\stackrel{?}{=}1+3</mrow>
-                        <mrow>4\amp\stackrel{\checkmark}{=}4</mrow>
-                    </md>
-                So, <m>11</m> is the solution.</p>
-                <p permid="iBI">Next, we substitute <m>\substitute{3}</m> into <m>\sqrt{2n-6}=1+\sqrt{n-2} </m>, and we have:
-                    <md permid="laP">
-                        <mrow>\sqrt{2n-6}\amp=1+\sqrt{n-2}</mrow>
-                        <mrow>\sqrt{2(\substitute{3})-6}\amp\stackrel{?}{=}1+\sqrt{\substitute{3}-2}</mrow>
-                        <mrow>\sqrt{0}\amp\stackrel{?}{=}1+\sqrt{1}</mrow>
-                        <mrow>0\amp\stackrel{\text{no}}{=}2</mrow>
-                    </md>
-                So, <m>3</m> is not a solution.</p>
-                <p permid="OIR">So <m>11</m> is the solution. The solution set is <m>\{11\}</m>.</p>
-            </solution>
-        </example>
-
-        <p permid="KIS">We also need the ability to solve radical equations with multiple variables, like in the next example that comes from physics. The strategy is the same: isolating the radical, and then raise both sides to a certain power to cancel the radical.</p>
-
-        <example permid="rlA">
-            <statement>
-                <p permid="Qye">The study of black holes has resulted in some interesting science. One fundamental concept about black holes is that there is a distance close enough to the black hole that not even light can escape, called the <url href="https://en.wikipedia.org/wiki/Schwarzschild_radius">Schwarzschild radius</url><fn><url href="https://en.wikipedia.org/wiki/Schwarzschild_radius">en.wikipedia.org/wiki/Schwarzschild<underscore/>radius</url></fn> or the event horizon radius. To find the Schwarzschild radius, <m>R_s</m>, we set the formula for the escape velocity equal to the speed of light, <m>c</m>, and we get <m>c=\sqrt{\frac{2GM}{R_s}}</m>, which we need to solve for <m>R_s</m>. Note that <m>G</m> is a constant, and <m>M</m> is the mass of the black hole.</p>
-            </statement>
-            <solution permid="gMv">
-                <p permid="uQa">We will start by taking the equation <m>c=\sqrt{\frac{2GM}{R_s}}</m> and applying our standard radical-equation-solving techniques. Isolate the radical and square both sides:
-                    <md permid="RhY">
-                        <mrow>c\amp=\sqrt{\frac{2GM}{R_s}}</mrow>
-                        <mrow>c^\highlight{2}\amp=\left(\sqrt{\frac{2GM}{R_s}}\right)^\highlight{2}</mrow>
-                        <mrow>c^2\amp=\frac{2GM}{R_s}</mrow>
-                        <mrow>\multiplyleft{R_s}c^2\amp=\frac{2GM}{R_s}\multiplyright{R_s}</mrow>
-                        <mrow>R_s c^2\amp=2GM</mrow>
-                        <mrow>\divideunder{R_s c^2}{c^2}\amp=\divideunder{2GM}{c^2}</mrow>
-                        <mrow>R_s\amp=\frac{2GM}{c^2}</mrow>
-                    </md>
-                So, the Schwarzschild radius can be found using the formula <m>R_s=\frac{2GM}{c^2}</m>.</p>
-            </solution>
-        </example>
-       <!--  <example>
-            <statement>
-                <p>The term <url href="https://en.wikipedia.org/wiki/Redshift">redshift</url><fn><url href="https://en.wikipedia.org/wiki/Redshift">en.wikipedia.org/wiki/Redshift</url></fn> refers to <url href="https://en.wikipedia.org/wiki/Doppler_effect">the Doppler effect</url><fn><url href="https://en.wikipedia.org/wiki/Doppler_effect">en.wikipedia.org/wiki/Doppler<underscore/>effect</url></fn> for light. When an object (like a star) is moving away from Earth at very fast speeds, the wavelength of the light emitted by the star is increased due to the distance between the planets increasing (and the constant speed of light). Increased wavelength makes light <q>redder.</q> The opposite phenomenon is called <url href="https://en.wikipedia.org/wiki/Blueshift">blueshift</url><fn><url href="https://en.wikipedia.org/wiki/Blueshift">https://en.wikipedia.org/wiki/Blueshift</url></fn>. It turns out that the formula to calculate the redshift for a star moving away from the Earth uses square roots: <me>f_r=f_s\cdot\sqrt{\frac{c-v}{c+v}}</me> where <m>c</m> stands for the constant speed of light in a vacuum, <m>f_r</m> represents the frequency of the light that the receiver on Earth sees, <m>f_s</m> represents the frequency of light that the source star emits, and <m>v</m> is the velocity that the star moving away from Earth. Solve this equation for <m>v</m>.</p>
-            </statement>
-            <solution>
-                <p>We will take the original equation <m>f_r=f_s\cdot\sqrt{\frac{c-v}{c+v}}</m> and follow the steps to solving a radical equation. We could isolate the radical and then square both sides, but in this case isolating the radical is not necessary. If we begin by squaring both sides, that too will eliminate the radical.
-                    <md>
-                        <mrow>f_r\amp=f_s\cdot\sqrt{\frac{c-v}{c+v}}</mrow>
-                        <mrow>\left(f_r\right)^\highlight{2}\amp=\left(f_s\cdot\sqrt{\frac{c-v}{c+v}}\right)^\highlight{2}</mrow>
-                        <mrow>f_r^2\amp=f_s^2\cdot\frac{c-v}{c+v}</mrow>
-                        <mrow>f_r^2\multiplyright{(c+v)}\amp=f_s^2\cdot\frac{c-v}{c+v}\multiplyright{(c+v)}</mrow>
-                        <mrow>f_r^2(c+v)\amp=f_s^2(c-v)</mrow>
-                        <mrow>f_r^2c+f_r^2v\amp=f_s^2c-f_s^2v</mrow>
-                        <mrow>f_r^2v\addright{f_s^2v}\amp=f_s^2c\subtractright{f_r^2c}</mrow>
-                        <mrow>\left(f_s^2+f_r^2\right)v\amp=\left(f_s^2-f_r^2\right)c</mrow>
-                        <mrow>v\amp=\frac{f_s^2-f_r^2}{f_s^2+f_r^2}c</mrow>
-                    </md>
-                This formula will tell us the velocity of the star away from Earth if we can know the respective frequencies of the starlight. This formula is used to demonstrate that <url href="https://en.wikipedia.org/wiki/Metric_expansion_of_space">the universe is expanding</url><fn><url href="https://en.wikipedia.org/wiki/Metric_expansion_of_space">en.wikipedia.org/wiki/Metric<underscore/>expansion<underscore/>of<underscore/>space</url></fn>.</p>
-            </solution>
-        </example> -->
-        <!-- <example>
-            <statement>
-                <p>Solve for <m>L</m> in the formula <m>T=2\pi\sqrt{\frac{L}{g}}</m>.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>T\amp=2\pi\sqrt{\frac{L}{g}}</mrow>
-                    <mrow>\multiplyleft{\frac{1}{2\pi}}T\amp=\multiplyleft{\frac{1}{2\pi}}2\pi\sqrt{\frac{L}{g}}</mrow>
-                    <mrow>\frac{T}{2\pi}\amp=\sqrt{\frac{L}{g}}</mrow>
-                    <mrow>\left(\frac{T}{2\pi}\right)^2\amp=\left(\sqrt{\frac{L}{g}}\right)^2</mrow>
-                    <mrow>\frac{T^2}{4\pi^2}\amp=\frac{L}{g}</mrow>
-                    <mrow>\multiplyleft{g}\frac{T^2}{4\pi^2}\amp=\multiplyleft{g}\frac{L}{g}</mrow>
-                    <mrow>\frac{T^2g}{4\pi^2}\amp=L</mrow>
-                </md></p>
-            </solution>
-        </example> -->
-
-        <p permid="qQb">Let's look at an example of solving an equation with a cube root. There is very little difference between solving a cube-root equation and solving a square-root equation. Instead of <em>squaring</em> both sides, you <em>cube</em> both sides.</p>
-
-        <example permid="XsJ">
-            <statement>
-                <p permid="wFn">Solve for <m>q</m> in <m>\sqrt[3]{2-q}+2=5</m>.</p>
-            </statement>
-            <solution permid="MTE">
-                <p permid="aXj"><md permid="xph">
-                    <mrow>\sqrt[3]{2-q}+2\amp=5</mrow>
-                    <mrow>\sqrt[3]{2-q}\amp=3</mrow>
-                    <mrow>\left(\sqrt[3]{2-q}\right)^\highlight{3}\amp=(3)^\highlight{3}</mrow>
-                    <mrow>2-q\amp=27</mrow>
-                    <mrow>-q\amp=25</mrow>
-                    <mrow>q\amp=-25</mrow>
-                </md>Unlike squaring both sides of an equation, raising both sides of an equation to the 3rd power will not create extraneous solutions. It's still good practice to check solution, though. This part is left as exercise.</p>
-            </solution>
-        </example>
-
-       <!--  <p>We can use technology to solve equations by finding where two graphs intersect.</p>
-
-        <example>
-            <statement>
-                <p>Solve the equation <m>1-x=\sqrt{x+5}</m> with technology.</p>
-            </statement>
-            <solution>
-                <sidebyside widths="47% 47%" margins="0%">
-                    <p>We define <m>f(x)=1-x</m> and <m>g(x)=\sqrt{x+5}</m>, and then look for the intersection(s) of the graphs. Since the two functions intersect at <m>(-1,2)</m>, the solution to <m>1-x=\sqrt{x+5}</m> is <m>-1</m>. The solution set is <m>\{-1\}</m>.</p>
-
-                    <figure xml:id="figure-solving-radical-equation">
-                        <caption>Graph of <m>f(x)=1-x</m> and <m>g(x)=\sqrt{x+5}</m></caption>
-                        <image>
-                            <description></description>
-                            <latex-image>
-                            <![CDATA[\begin{tikzpicture}
-                                \begin{axis}[]
-                                    \addplot [primarycurve, -{Kite}, variable=\t, domain=0:3.464] ({t^2-5},{t}) node[above, pos=0.75, sloped] {$g(x)=\sqrt{x+5}$};
-                                    \addplot [soliddot, color=firstcolor] coordinates {(-5,0)};
-                                    \addplot [secondarycurve, domain=-6:7] {1-x} node[below, sloped, pos=0.17] {$f(x)=1-x$};
-                                    \addplot [soliddot, color=fourthcolor] coordinates {(-1,2)};
-                                \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image>
-                        </image>
-                    </figure>
-                </sidebyside>
-
-                <p>Before we finish with this example, we would like to illustrate why there are sometimes extraneous solutions to radical equations. It has to do with the squaring-both-sides step of the solving process.</p>
-                <p>A graph of a radical, for example <m>y=\sqrt{x+5}</m>, actually graphs as <em>half</em> of a sideways parabola, as you can see in <xref ref="figure-solving-radical-equation">Figure</xref>. When we square both sides of that equation, we get <m>y^2=x+5</m>, which actually graphs as a <em>complete</em> sideways parabola.</p>
-
-                <sidebyside widths="47% 47%" margins="0%">
-                    <figure xml:id="figure-solving-radical-equation-both-halves">
-                        <caption>Graph of <m>f(x)=1-x</m> and <m>y^2=x+5</m></caption>
-                        <image>
-                            <description></description>
-                            <latex-image>
-                            <![CDATA[\begin{tikzpicture}
-                                \begin{axis}[]
-                                    \addplot [primarycurve, variable=\t, domain=-3.464:3.464] ({t^2-5},{t}) node[above, pos=0.9, sloped] {$y^2=x+5$};
-                                    \addplot [secondarycurve, domain=-6:7] {1-x} node[below, sloped, pos=0.17] {$f(x)=1-x$};
-                                    \addplot [soliddot, color=fourthcolor] coordinates {(-1,2)};
-                                    \addplot [soliddot, color=fourthcolor] coordinates {(4,-3)};
-                                \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image>
-                        </image>
-                    </figure>
-
-                    <p>The curve and the line now intersect <em>twice</em>! This second solution (which is <m>4</m>, by the way) is the extraneous solution that we would have found had we solved <m>1-x=\sqrt{x+5}</m> algebraically.</p>
-                </sidebyside>
-            </solution>
-        </example>
-        <example>
-            <statement>
-                <p>Solve the equation <m>3+\sqrt{x+4}=x-\sqrt{x-4}</m> graphically using technology.</p>
-            </statement>
-            <solution>
-                <sidebyside widths="47% 47%" margins="0%">
-                    <p>To solve the equation graphically, first we will assign the left side of the equation the label <m>m(x)=3+\sqrt{x+4}</m> and the right side <m>n(x)=x-\sqrt{x-4}</m>. Next we will make graphs of both <m>m</m> and <m>n</m> on the same grid and look for their intersection point(s). Since the two functions intersect at about <m>(8.75,6.571)</m>, the solution to <m>3+\sqrt{x+4}=x-\sqrt{x-4}</m> is <m>8.75</m>. The solution set is <m>\{8.75\}</m>.</p>
-                    <figure>
-                        <caption>Graph of <m>m(x)=3+\sqrt{x+4}</m> and <m>n(x)=x-\sqrt{x-4}</m></caption>
-                        <image>
-                            <description></description>
-                            <latex-image>
-                            <![CDATA[\begin{tikzpicture}
-                                \begin{axis}[xmin=-6, ymin=-1, xmax=16, ymax=9, xtick={-4,-2,...,14}, minor xtick=, ytick={1,2,...,8}, minor ytick=]
-                                    \addplot [primarycurve, -{Kite}, variable=\t, domain=3:7.472] ({t^2-6*t+5},{t}) node[above, pos=0.45, sloped] {$y=m(x)$};
-                                    \addplot [soliddot, color=firstcolor] coordinates {(-4,3)};
-                                    \addplot [secondarycurve, -{Kite}, variable=\t, domain=3.75:9] ({0.5*(2*t+1+sqrt((2*t+1)^2-4*(t^2+4)))},{t}) node[below, pos=0.15, sloped] {$y=n(x)$};
-                                    \addplot [secondarycurve, -, variable=\t, domain=3.75:4] ({0.5*(2*t+1-sqrt((2*t+1)^2-4*(t^2+4)))},{t});
-                                    \addplot [soliddot, color=secondcolor] coordinates {(4,4)};
-                                    \addplot [soliddot, color=fourthcolor] coordinates {(8.75,6.571)};
-                                \end{axis}
-                                \end{tikzpicture}]]>
-                            </latex-image>
-                        </image>
-                    </figure>
-                </sidebyside>
-            </solution>
-        </example> -->
-    </subsection>
-
-
-    <exercises permid="xwl">
-        <exercisegroup cols="2" permid="dDu">
-            <title>Review and Warmup</title>
-            <exercise permid="inn">
-                <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps120.pg" />
-            </exercise>
-            <exercise permid="Ouw">
-                <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps120.pg" />
-            </exercise>
-            <exercise permid="uBF">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses80.pg" />
-            </exercise>
-            <exercise permid="aIO">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses80.pg" />
-            </exercise>
-            <exercise permid="GPX">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses120.pg" />
-            </exercise>
-            <exercise permid="mXg">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses120.pg" />
-            </exercise>
-            <exercise permid="Tep">
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
-            </exercise>
-            <exercise permid="zly">
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
-            </exercise>
-            <exercise permid="fsH">
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad100.pg" />
-            </exercise>
-            <exercise permid="LzQ">
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad100.pg" />
-            </exercise>
-            <exercise permid="rGZ">
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad105.pg" />
-            </exercise>
-            <exercise permid="XOi">
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad105.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="JKD">
-            <title>Solving Radical Equations</title>
-            <exercise permid="DVr">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation10.pg" />
-            </exercise>
-            <exercise permid="kcA">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation10.pg" />
-            </exercise>
-            <exercise permid="QjJ">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation20.pg" />
-            </exercise>
-            <exercise permid="wqS">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation20.pg" />
-            </exercise>
-            <exercise permid="cyb">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation30.pg" />
-            </exercise>
-            <exercise permid="IFk">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation30.pg" />
-            </exercise>
-            <exercise permid="oMt">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation40.pg" />
-            </exercise>
-            <exercise permid="UTC">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation40.pg" />
-            </exercise>
-            <exercise permid="BaL">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation50.pg" />
-            </exercise>
-            <exercise permid="hhU">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation50.pg" />
-            </exercise>
-            <exercise permid="Npd">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation60.pg" />
-            </exercise>
-            <exercise permid="twm">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation60.pg" />
-            </exercise>
-            <exercise permid="ZDv">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation70.pg" />
-            </exercise>
-            <exercise permid="FKE">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation70.pg" />
-            </exercise>
-            <exercise permid="lRN">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation80.pg" />
-            </exercise>
-            <exercise permid="RYW">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation80.pg" />
-            </exercise>
-            <exercise permid="ygf">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation90.pg" />
-            </exercise>
-            <exercise permid="eno">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation90.pg" />
-            </exercise>
-            <exercise permid="Kux">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation100.pg" />
-            </exercise>
-            <exercise permid="qBG">
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation100.pg" />
-            </exercise>
-            <exercise permid="WIP">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations1.pg" />
-            </exercise>
-            <exercise permid="CPY">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations1.pg" />
-            </exercise>
-            <exercise permid="iXh">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations2.pg" />
-            </exercise>
-            <exercise permid="Peq">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations2.pg" />
-            </exercise>
-            <exercise permid="vlz">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations3.pg" />
-            </exercise>
-            <exercise permid="bsI">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations3.pg" />
-            </exercise>
-            <exercise permid="HzR">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations4.pg" />
-            </exercise>
-            <exercise permid="nHa">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations4.pg" />
-            </exercise>
-            <exercise permid="TOj">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations5.pg" />
-            </exercise>
-            <exercise permid="zVs">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations5.pg" />
-            </exercise>
-            <exercise permid="gcB">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations6.pg" />
-            </exercise>
-            <exercise permid="MjK">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations6.pg" />
-            </exercise>
-            <exercise permid="sqT">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
-            </exercise>
-            <exercise permid="Yyc">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
-            </exercise>
-            <!-- Code for this problem is a mess -->
-            <!-- <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations8.pg" />
-            </exercise> -->
-        </exercisegroup>
-       <!--  <exercisegroup cols="2">
-            <title>Solving Radical Equations Using Technology</title>
-            <exercise>
-              <webwork>
-                <pg-macros>
-                    <macro-file>PCCgraphMacros.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <pg-code>
-                        Context("FiniteSolutionSets");
-                        Context()->flags->remove("NumberCheck");
-                        Context()->flags->set(
-                          tolerance => 0.005,
-                          tolType => "absolute",
-                        );
-
-                        do{
-                            $a = non_zero_random(-5,5,0.1);
-                            $b = non_zero_random(-5,5,0.1);
-                            $root = ($a-($b)**2)/(2*$b);
-                            $x = $root**2;
-                        } until ( $root > 0 );
-
-                        $solutions = Formula("{$x}");
-
-                        $left = Formula("sqrt(x+$a)")->reduce;
-                        $right = Formula("sqrt(x)+$b")->reduce;
-                        $funcNew = Compute("$left-sqrt(x)-$b")->reduce;
-
-                        $alt="This picture shows the graph of the function $f(x)=$funcNew. The points ($x,0) is labeled.";
-
-                        ($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$x],[-2,2]);
-
-                        @xticks = @$xticks_ref;
-                        @yticks = @$yticks_ref;
-
-                        $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-                           axes=>[0,0],
-                           grid=>[$ticknum[0],$ticknum[1]],
-                           size=>[xPixels(),yPixels()]
-                        );
-                        $gr->lb('reset');
-                        for my $j (@xticks) {
-                            if (abs($j) &lt; 10**(-10)) {next;}
-                            $gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
-                        }
-                        $gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
-                        $gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
-
-                        for my $j (@yticks) {
-                            if (Real($j) == 0) {next;}
-                            $gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
-                        }
-
-                        add_functions($gr, "$funcNew for x in &lt; $min[0],$max[0] > using color:red and weight:1");
-
-                        $hx = ($x+$max[0])/2;
-                        $hy = $funcNew->eval(x=>$hx);
-                        $gr->lb( new Label($hx, $hy+$marksep[1]/4, "f(x)",'red','center','middle'));
-
-                        $xShow = int($x*100)/100;
-                        $gr->stamps( closed_circle($x, 0, 'red') );
-                        $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
-
-                        <! todo: change this code to not subtract the right side onto the left before graphing. -->
-
-                <!-- </pg-code>
-            </setup> -->
-            <!--  <statement>
-                 <p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
-
-                 <instruction>Round your answers to two decimal places if needed.</instruction>
-
-                 <p><var name="$solutions" width="10" /></p>
-             </statement> -->
-            <!--  <solution>
-                 <p>First, we move all terms to one side of the equals sign:<md>
-                     <mrow><var name="$left" />\amp=<var name="$right" /></mrow>
-                     <mrow><var name="$funcNew" />\amp=0</mrow>
-                 </md></p>
-
-                 <p>Next, we use technology to graph the function <m>f(x)=<var name="$funcNew" /></m>:</p>
-
-                 <sidebyside>
-                   <image pg-name="$gr">
-                       <description><var name="$alt" /></description>
-                   </image>
-                 </sidebyside>
-
-                 <p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
-             </solution> -->
-              <!-- </webwork>
-            </exercise> -->
-           <!--  <exercise>
-              <webwork>
-                <pg-macros>
-                    <macro-file>PCCgraphMacros.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <pg-code>
-                        Context("FiniteSolutionSets");
-                        Context()->flags->remove("NumberCheck");
-                        Context()->flags->set(
-                          tolerance => 0.005,
-                          tolType => "absolute",
-                        );
-
-                        do{
-                            $a = non_zero_random(-5,5,0.1);
-                            $b = non_zero_random(-5,5,0.1);
-                            $root = ($a-($b)**2)/(2*$b);
-                            $x = $root**2;
-                        } until ( $root > 0 );
-
-                        $solutions = Formula("{$x}");
-
-                        $left = Formula("sqrt(x+$a)")->reduce;
-                        $right = Formula("sqrt(x)+$b")->reduce;
-                        $funcNew = Compute("$left-sqrt(x)-$b")->reduce;
-
-                        $alt="This picture shows the graph of the function $f(x)=$funcNew. The points ($x,0) is labeled.";
-
-                        ($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$x],[-2,2]);
-
-                        @xticks = @$xticks_ref;
-                        @yticks = @$yticks_ref;
-
-                        $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-                           axes=>[0,0],
-                           grid=>[$ticknum[0],$ticknum[1]],
-                           size=>[xPixels(),yPixels()]
-                        );
-                        $gr->lb('reset');
-                        for my $j (@xticks) {
-                            if (abs($j) &lt; 10**(-10)) {next;}
-                            $gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
-                        }
-                        $gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
-                        $gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
-
-                        for my $j (@yticks) {
-                            if (Real($j) == 0) {next;}
-                            $gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
-                        }
-
-                        add_functions($gr, "$funcNew for x in &lt; $min[0],$max[0] > using color:red and weight:1");
-
-                        $hx = ($x+$max[0])/2;
-                        $hy = $funcNew->eval(x=>$hx);
-                        $gr->lb( new Label($hx, $hy+$marksep[1]/4, "f(x)",'red','center','middle'));
-
-                        $xShow = int($x*100)/100;
-                        $gr->stamps( closed_circle($x, 0, 'red') );
-                        $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
-
-                        
-
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
-
-                    <instruction>Round your answers to two decimal places if needed.</instruction>
-
-                    <p><var name="$solutions" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>First, we move all terms to one side of the equals sign:<md>
-                        <mrow><var name="$left" />\amp=<var name="$right" /></mrow>
-                        <mrow><var name="$funcNew" />\amp=0</mrow>
-                    </md></p>
-
-                    <p>Next, we use technology to graph the function <m>f(x)=<var name="$funcNew" /></m>:</p>
-
-                    <sidebyside>
-                      <image pg-name="$gr">
-                          <description><var name="$alt" /></description>
-                      </image>
-                    </sidebyside>
-
-                    <p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
-                </solution>
-              </webwork>
-            </exercise>
-        </exercisegroup> -->
-
-        
-
-        <exercisegroup cols="2" permid="pRM">
-            <title>Solving Radical Equations with Variables</title>
-            <exercise permid="EFl">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations9.pg" />
-            </exercise>
-            <exercise permid="kMu">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral90.pg" />
-            </exercise>
-            <exercise permid="QTD">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral100.pg" />
-            </exercise>
-            <exercise permid="xaM">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral110.pg" />
-            </exercise>
-            <exercise permid="dhV">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral112.pg" />
-            </exercise>
-            <exercise permid="Jpe">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral120.pg" />
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2" permid="VYV">
-            <title>Radical Equation Applications</title>
-
-           
-            <exercise permid="pwn">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication92.pg" />
-            </exercise>
-            <exercise permid="VDw">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication92.pg" />
-            </exercise>
-            <exercise permid="BKF">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication102.pg" />
-            </exercise>
-            <exercise permid="hRO">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication102.pg" />
-            </exercise>
-            <exercise permid="NYX">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication122.pg" />
-            </exercise>
-            <exercise permid="ugg">
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication122.pg" />
-            </exercise>
-        </exercisegroup>
-
-            <exercisegroup cols="2" permid="Cge">
-            <exercise permid="anp"><!-- Kara's challenge problem -->
-                <webwork>
-                    <setup>
-             <pg-code>
-                 Context("FiniteSolutionSets");
-                 $sqrtx = list_random(2,3,5,6,7,8);
-                 $x = $sqrtx**2;
-                 $xans = Formula("1/$x");
-                 $answer = Formula("{1/$x}");
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="hwp"> Solve for <m>x</m>.  <me permid="WXk">\sqrt{1+\sqrt{<var name="$sqrtx"/>}}=\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}</me>
-                        </p>
-                        <p permid="NDy"><var name="$answer" width="10"/></p>
-                    </statement>
-                    <solution permid="taN">
-                        <p permid="Hes"><md permid="dwq">
-                            <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp=\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}</mrow>
-                            <mrow>\left(\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\right)^{2}\amp=\left(\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}\right)^{2}</mrow>
-                            <mrow>1+\sqrt{<var name="$sqrtx"/>}\amp=2+\sqrt{\frac{1}{\sqrt{x}}}-1</mrow>
-                            <mrow>1+\sqrt{<var name="$sqrtx"/>}\amp=1+\sqrt{\frac{1}{\sqrt{x}}}</mrow>
-                            <mrow>\sqrt{<var name="$sqrtx"/>}\amp=\sqrt{\frac{1}{\sqrt{x}}}</mrow>
-                            <mrow>\left(\sqrt{<var name="$sqrtx"/>}\right)^{2}\amp=\left(\sqrt{\frac{1}{\sqrt{x}}}\right)^{2}</mrow>
-                            <mrow><var name="$sqrtx"/>\amp=\frac{1}{\sqrt{x}}</mrow>
-                            <mrow><var name="$sqrtx"/>^{2}\amp=\left(\frac{1}{\sqrt{x}}\right)^{2}</mrow>
-                            <mrow><var name="$x"/>\amp=\frac{1}{x}</mrow>
-                            <mrow><var name="$x"/>x\amp=1</mrow>
-                            <mrow>x \amp= <var name="$xans"/></mrow>
-                        </md></p>
-                        <p permid="nlB">To check the proposed solution, we will replace <m>x</m> with <m><var name="$xans"/></m>:
-                        <md permid="JDz">
-                            <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{?}{=}\sqrt{2+\sqrt{\frac{1}{\sqrt{<var name="$xans"/>}}}-1}</mrow>
-                            <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{?}{=}\sqrt{1+\sqrt{\frac{1}{\frac{1}{<var name="$sqrtx"/>}}}}</mrow>
-                            <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{\checkmark}{=}\sqrt{1+\sqrt{<var name="$sqrtx"/>}}</mrow>
-                        </md>
-                        </p>
-                    </solution>
-                </webwork>
-            </exercise>
+        </webwork>
+      </exercise>
 <!--TODO: fix this randomness-->
-            <exercise permid="Guy"><!-- Kara's challenge problem, second iteration -->
-                <webwork>
-                    <setup>
-             <pg-code>
-                 Context("FiniteSolutionSets");
-                 $sqrtx = list_random(2,3,5,6,7,8);
-                 $x = $sqrtx**2;
-                 $xans = Formula("1/$x");
-                 $answer = Formula("{1/$x}");
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="tKH"> Solve for <m>x</m>.  <me permid="Det">\sqrt{1+\sqrt{<var name="$sqrtx"/>}}=\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}</me>
-                        </p>
-                        <p permid="ZRQ"><var name="$answer" width="10"/></p>
-                    </statement>
-                    <solution permid="ZhW">
-                        <p permid="TsK"><md permid="pKI">
-                            <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp=\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}</mrow>
-                            <mrow>\left(\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\right)^{2}\amp=\left(\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}\right)^{2}</mrow>
-                            <mrow>1+\sqrt{<var name="$sqrtx"/>}\amp=2+\sqrt{\frac{1}{\sqrt{x}}}-1</mrow>
-                            <mrow>1+\sqrt{<var name="$sqrtx"/>}\amp=1+\sqrt{\frac{1}{\sqrt{x}}}</mrow>
-                            <mrow>\sqrt{<var name="$sqrtx"/>}\amp=\sqrt{\frac{1}{\sqrt{x}}}</mrow>
-                            <mrow>\left(\sqrt{<var name="$sqrtx"/>}\right)^{2}\amp=\left(\sqrt{\frac{1}{\sqrt{x}}}\right)^{2}</mrow>
-                            <mrow><var name="$sqrtx"/>\amp=\frac{1}{\sqrt{x}}</mrow>
-                            <mrow><var name="$sqrtx"/>^{2}\amp=\left(\frac{1}{\sqrt{x}}\right)^{2}</mrow>
-                            <mrow><var name="$x"/>\amp=\frac{1}{x}</mrow>
-                            <mrow><var name="$x"/>x\amp=1</mrow>
-                            <mrow>x \amp= <var name="$xans"/></mrow>
-                        </md></p>
-                        <p permid="zzT">To check the proposed solution, we will replace <m>x</m> with <m><var name="$xans"/></m>:
-                        <md permid="VRR">
-                            <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{?}{=}\sqrt{2+\sqrt{\frac{1}{\sqrt{<var name="$xans"/>}}}-1}</mrow>
-                            <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{?}{=}\sqrt{1+\sqrt{\frac{1}{\frac{1}{<var name="$sqrtx"/>}}}}</mrow>
-                            <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{\checkmark}{=}\sqrt{1+\sqrt{<var name="$sqrtx"/>}}</mrow>
-                        </md>
-                        </p>
-                    </solution>
-                </webwork>
-            </exercise>
-        </exercisegroup>
-        <!-- todo: add a few solving graphically examples -->
-    </exercises>
+      <exercise permid="Guy">
+<!-- Kara's challenge problem, second iteration -->
+        <webwork>
+            <setup>
+<pg-code>
+Context("FiniteSolutionSets");
+$sqrtx = list_random(2,3,5,6,7,8);
+$x = $sqrtx**2;
+$xans = Formula("1/$x");
+$answer = Formula("{1/$x}");
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="tKH">
+                Solve for <m>x</m>.
+                <me permid="Det">
+                  \sqrt{1+\sqrt{<var name="$sqrtx"/>}}=\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}
+                </me>
+              </p>
+              <p permid="ZRQ">
+                <var name="$answer" width="10"/>
+              </p>
+            </statement>
+            <solution permid="ZhW">
+              <p permid="TsK">
+                <md permid="pKI">
+                  <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp=\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}</mrow>
+                  <mrow>\left(\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\right)^{2}\amp=\left(\sqrt{2+\sqrt{\frac{1}{\sqrt{x}}}-1}\right)^{2}</mrow>
+                  <mrow>1+\sqrt{<var name="$sqrtx"/>}\amp=2+\sqrt{\frac{1}{\sqrt{x}}}-1</mrow>
+                  <mrow>1+\sqrt{<var name="$sqrtx"/>}\amp=1+\sqrt{\frac{1}{\sqrt{x}}}</mrow>
+                  <mrow>\sqrt{<var name="$sqrtx"/>}\amp=\sqrt{\frac{1}{\sqrt{x}}}</mrow>
+                  <mrow>\left(\sqrt{<var name="$sqrtx"/>}\right)^{2}\amp=\left(\sqrt{\frac{1}{\sqrt{x}}}\right)^{2}</mrow>
+                  <mrow><var name="$sqrtx"/>\amp=\frac{1}{\sqrt{x}}</mrow>
+                  <mrow><var name="$sqrtx"/>^{2}\amp=\left(\frac{1}{\sqrt{x}}\right)^{2}</mrow>
+                  <mrow><var name="$x"/>\amp=\frac{1}{x}</mrow>
+                  <mrow><var name="$x"/>x\amp=1</mrow>
+                  <mrow>x \amp= <var name="$xans"/></mrow>
+                </md>
+              </p>
+              <p permid="zzT">
+                To check the proposed solution,
+                we will replace <m>x</m> with <m><var name="$xans"/></m>:
+                <md permid="VRR">
+                  <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{?}{=}\sqrt{2+\sqrt{\frac{1}{\sqrt{<var name="$xans"/>}}}-1}</mrow>
+                  <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{?}{=}\sqrt{1+\sqrt{\frac{1}{\frac{1}{<var name="$sqrtx"/>}}}}</mrow>
+                  <mrow>\sqrt{1+\sqrt{<var name="$sqrtx"/>}}\amp\stackrel{\checkmark}{=}\sqrt{1+\sqrt{<var name="$sqrtx"/>}}</mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+    </exercisegroup>
+<!-- todo: add a few solving graphically examples -->
+  </exercises>
 </section>

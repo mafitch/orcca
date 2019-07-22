@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,744 +6,763 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
 <section xml:id="section-elimination" permid="zLs">
-
-    <title>Elimination</title>
-
-    <introduction permid="LEl">
-        <p permid="Xxe">We learned how to solve a system of linear equations using substitution in <xref ref="section-substitution">Section</xref>. In this section, we will learn a second symbolic method for solving systems of linear equations.</p>
-    </introduction>
-
-    <subsection permid="fSB">
-        <title>Solving Systems of Equations by Elimination</title><idx><h>solving</h><h>system of linear equations</h><h>elimination method</h></idx><idx>elimination method for solving systems of linear equations</idx><idx><h>addition method for solving systems of linear equations</h><see>elimination method for solving systems of linear equations</see></idx>
-
-        
-
-        <example xml:id="example-system-of-equations-elimination-intro-scale-one-equation" permid="Ckz">
-            <title>Scaling One Equation</title>
-            <statement>
-                <p permid="arK">Solve the system of equations using the elimination method.
-                    <md permid="CyU">
-                    <mrow>
-                        \left\{
-                            \begin{alignedat}{4}
-                            3x\amp {}-{} \amp 4y \amp {}={} \amp 2 \\
-                            5x\amp {}+{} \amp 8y \amp {}={} \amp 18
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    </md>
-                </p>
-            </statement>
-            <solution permid="rLu">
-                <p permid="hmp">To start, we want to see whether it will be easier to eliminate <m>x</m> or <m>y</m>. We see that the coefficients of <m>x</m> in each equation are <m>3</m> and <m>5</m>, and the coefficients of <m>y</m> are <m>-4</m> and <m>8</m>. Because <m>8</m> is a multiple of <m>4</m> and the coefficients already have opposite signs, the <m>y</m> variable will be easier to eliminate.</p>
-
-                <p permid="Nty">To eliminate the <m>y</m> terms, we will multiply each side of the first equation by <m>2</m> so that we will have <m>-8y</m>. We can call this process <term>scaling</term> the first equation by <m>2</m>.<md permid="iGd">
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            \multiplyleft{2}(3x\amp {}-{} \amp 4y) \amp {}={} \amp \multiplyleft{2}(2) \\
-                            5x\amp {}+{} \amp 8y \amp {}={} \amp 18
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            6x\amp {}-{} \amp 8y \amp {}={} \amp 4 \\
-                            5x\amp {}+{} \amp 8y \amp {}={} \amp 18
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                </md>We now have an equivalent system of equations where the <m>y</m>-terms can be eliminated:<md permid="ONm">
-                    <mrow>\begin{aligned}6x-8y\\{}+5x+8y\end{aligned}\amp=\begin{aligned}4\\{}+18\end{aligned}</mrow>
-                    <intertext>So we have:</intertext>
-                    <mrow>11x\amp=22</mrow>
-            <!-- <mrow>\divideunder{11x}{11}\amp=\divideunder{22}{11}</mrow> -->
-                    <mrow>x\amp=2</mrow>
-                </md></p>
-
-                <p permid="tAH">To solve for <m>y</m>, we will substitute <m>2</m> for <m>x</m> into either of the original equations or the new one. We will use the original first equation, <m>3x-4y=2</m>:
-                    <md permid="uUv">
-                        <mrow>3x-4y\amp=2</mrow>
-                        <mrow>3(\substitute{2})-4y\amp=2</mrow>
-                        <mrow>6-4y\amp=2</mrow>
-                        <mrow>-4y\amp=-4</mrow>
-                        <mrow>y\amp=1</mrow>
-                    </md></p>
-
-                <p permid="ZHQ">Our solution is <m>x=2</m> and <m>y=1</m>. We will check this in both of the original equations:
-                    <md permid="bbE">
-                        <mrow>5x+8y\amp=18\amp 3x-4y\amp=2</mrow>
-                        <mrow>5(\substitute{2})+8(\substitute{1})\amp\stackrel{?}{=}18\amp 3(\substitute{2})-4(\substitute{1})\amp\stackrel{?}{=}2</mrow>
-                        <mrow>10+8\amp\stackrel{\checkmark}{=}18\amp 6-4\amp\stackrel{\checkmark}{=}2</mrow>
-                    </md>
-                    The solution to this system is <m>(2,1)</m> and the solution set is <m>\{(2,1)\}</m>.
-                </p>
-            </solution>
-        </example>
-
-        <p permid="ovp">Try a similar exercise.</p>
-
-        <exercise permid="uGa">
-            <webwork>
-                <setup>
-            <pg-code>
-                Context("Point");
-            </pg-code>
-                </setup>
-            <statement><p permid="DEn">Solve the system of equations using the elimination method.
-                    <me permid="lAJ">
-                        \begin{cases} 2x - 6y = 54 \\ 3x + 2y = -7 \end{cases}
-                    </me>
-                </p>
-                <p permid="jLw">The solution is the point <var name="'(3,-8)'" width="10" />.</p>
-            </statement>
-            <solution permid="oQO">
-                <p permid="FOZ">To start, we want to see whether it will be easier to eliminate <m>x</m> or <m>y</m>. We see that the coefficients of <m>x</m> in each equation are <m>2</m> and <m>3</m>, and the coefficients of <m>y</m> are <m>-6</m> and <m>2</m>. Because <m>6</m> is a multiple of <m>2</m> and the coefficients already have opposite signs, the <m>y</m> variable will be easier to eliminate.</p>
-
-                <p permid="lWi">To eliminate the <m>y</m> terms, we will multiply each side of the second equation by <m>3</m> so that we will have <m>6y</m>. We can call this process <term>scaling</term> the second equation by <m>3</m>.<md permid="HiN">
-                            <mrow>2x-6y=54</mrow>
-                            <mrow>3\left({3x+2y}\right)=3\left({-7}\right)</mrow>
-                            </md>
-                Which gives us <md permid="npW">
-                            <mrow>2x-6y=54</mrow>
-                            <mrow>9x+6y=-21</mrow>
-                            </md>
-                We now have an equivalent system of equations where the <m>y</m>-terms can be eliminated:<md permid="Txf">
-                    <mrow>\begin{aligned}2x-6y\\{}+9x+6y\end{aligned}\amp=\begin{aligned}54\\{}+(-21)\end{aligned}</mrow></md>
-                    So we have:<md permid="zEo">
-                    <mrow>11x\amp=33</mrow>
-            <!-- <mrow>\divideunder{11x}{11}\amp=\divideunder{22}{11}</mrow> -->
-                    <mrow>x\amp=3</mrow>
-                </md></p>
-
-                <p permid="Sdr">To solve for <m>y</m>, we will substitute <m>3</m> for <m>x</m> into either of the original equations or the new one. We will use the original first equation, <m>3x-4y=2</m>:
-                    <md permid="fLx">
-                        <mrow>2x-6y\amp=54</mrow>
-                        <mrow>2(\substitute{3})-6y\amp=54</mrow>
-                        <mrow>6-6y\amp=54</mrow>
-                        <mrow>-6y\amp=48</mrow>
-                        <mrow>y\amp=-8</mrow>
-                    </md></p>
-
-                <p permid="ykA">Our solution is <m>x=3</m> and <m>y=-8</m>, or the point <m>(3,-8)</m>. The checking step is left up to the reader.
-                </p>
-            </solution>
-        </webwork>
-
-        </exercise>
-
-
-        <p permid="UCy">Here's an example where we have to scale both equations.</p>
-
-        <example permid="irI">
-            <title>Scaling Both Equations</title>
-            <statement>
-                <p permid="GyT">Solve the system of equations using the elimination method.
-                    <me permid="RHS">
-                        \begin{cases} 2x + 3y = 10 \\ -3x + 5y = -15 \end{cases}
-                    </me>
-                </p>
-            </statement>
-            <solution permid="XSD">
-                <p permid="erJ">Considering the coefficients of <m>x</m> (<m>2</m> and <m>-3</m>) and the coefficients of <m>y</m> (<m>3</m> and <m>5</m>), we see that we cannot eliminate the <m>x</m> or the <m>y</m> variable by scaling a single equation. We will need to scale <em>both</em>.</p>
-
-                <p permid="KyS">The <m>x</m>-terms already have opposite signs, so we choose to eliminate <m>x</m>. The least common multiple of <m>2</m> and <m>3</m> is <m>6</m>. We can scale the first equation by <m>3</m> and the second equation by <m>2</m> so that the equations have terms <m>6x</m> and <m>-6x</m>, which will cancel when added.<md permid="LSG">
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            \multiplyleft{3}(2x\amp {}+{} \amp 3y) \amp {}={}\amp \multiplyleft{3}(10) \\
-                            \multiplyleft{2}(-3x\amp {}+{} \amp 5y) \amp {}={}\amp \multiplyleft{2}(-15)
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            6x\amp {}+{} \amp 9y \amp {}={} \amp 30 \\
-                            -6x\amp {}+{} \amp 10y \amp {}={} \amp {-30}
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                </md></p>
-                <p permid="qGb">At this point we can add the corresponding sides from the two equations and solve for <m>y</m>:<md permid="rZP">
-                    <mrow>\begin{aligned}6x+9y\\{}-6x+10y\end{aligned}\amp=\begin{aligned}30\\{}-30\end{aligned}</mrow>
-                    <intertext>So we have:</intertext>
-                    <mrow>19y\amp=0</mrow>
-            <!-- <mrow>\divideunder{19y}{19}\amp=\divideunder{0}{19}</mrow> -->
-                    <mrow>y\amp=0</mrow>
-                </md></p>
-
-                <p permid="WNk">To solve for <m>x</m>, we'll replace <m>y</m> with <m>0</m> in <m>2x+3y=10</m>:
-                    <md permid="YgY">
-                        <mrow>2x+3y\amp=10</mrow>
-                        <mrow>2x+3(\substitute{0})\amp=10</mrow>
-                        <mrow>2x\amp=10</mrow>
-                        <mrow>x\amp=5</mrow>
-                    </md>
-                </p>
-                <p permid="CUt">We'll check the system using <m>x=5</m> and <m>y=0</m> in each of the original equations:
-                    <md permid="Eoh">
-                        <mrow>2x+3y\amp=10  \amp  -3x+5y\amp=-15</mrow>
-                        <mrow>2(\substitute{5})+3(\substitute{0})\amp\stackrel{?}{=}10  \amp  -3(\substitute{5})+5(\substitute{0})\amp\stackrel{?}{=}-15</mrow>
-                        <mrow>10+0\amp\stackrel{\checkmark}{=}10  \amp  -15+0\amp\stackrel{\checkmark}{=}-15</mrow>
-                    </md>
-                So the system's solution is <m>(5,0)</m> and the solution set is <m>\{(5,0)\}</m>.
-                </p>
-            </solution>
-        </example>
-
-        <p permid="AJH">Try a similar exercise.</p>
-
-        <exercise permid="aNj">
-            <webwork>
-                <setup>
-            <pg-code>
-                Context("Point");
-            </pg-code>
-                </setup>
-             <statement>
-                <p permid="PSF">Solve the system of equations using the elimination method.
-                    <me permid="xPb">
-                        \begin{cases} 5x + 2y = 16 \\ 3x - 5y = 22 \end{cases}
-                    </me>
-                </p>
-                <p permid="vZO">The solution is the point <var name="'(4,-2)'" width="10" />.</p>
-            </statement>
-            <solution permid="UXX">
-                <p permid="jbC">Considering the coefficients of <m>x</m> (<m>5</m> and <m>3</m>) and the coefficients of <m>y</m> (<m>2</m> and <m>-5</m>), we see that we cannot eliminate the <m>x</m> or the <m>y</m> variable by scaling a single equation. We will need to scale <em>both</em>.</p>
-
-                <p permid="PiL">The <m>y</m>-terms already have opposite signs, so we choose to eliminate <m>y</m>. The least common multiple of <m>2</m> and <m>5</m> is <m>10</m>. We can scale the first equation by <m>5</m> and the second equation by <m>2</m> so that the equations have terms <m>10y</m> and <m>-10y</m>, which will cancel when added.<md permid="kvq">
-                    <mrow>5\left({5x+2y}\right)=5\left({16}\right)</mrow>
-                    <mrow>2\left({3x-5y}\right)=2\left({22}\right)</mrow>
-                    </md>
-                Which gives us <md permid="QCz">
-                    <mrow>25x+10y=80</mrow>
-                    <mrow>6x-10y=44</mrow>
-                </md></p>
-                <p permid="vpU">At this point we can add the corresponding sides from the two equations and solve for <m>x</m>:<md permid="wJI">
-                    <mrow>\begin{aligned}25x+10y\\{}6x-10y\end{aligned}\amp=\begin{aligned}80\\{}+44\end{aligned}</mrow></md>
-                So we have: <md permid="cQR">
-                    <mrow>31x=124</mrow>
-            <!-- <mrow>\divideunder{19y}{19}\amp=\divideunder{0}{19}</mrow> -->
-                    <mrow>x=4</mrow>
-                </md></p>
-
-                <p permid="bxd">To solve for <m>y</m>, we'll replace <m>x</m> with <m>4</m> in <m>5x+2y=16</m>:
-                    <md permid="IYa">
-                        <mrow>5x+2y\amp=16</mrow>
-                        <mrow>5(\substitute{4})+2y\amp=16</mrow>
-                        <mrow>20+2y\amp=16</mrow>
-                        <mrow>2y\amp=-4</mrow>
-                        <mrow>y\amp=-2</mrow>
-                    </md>
-                </p>
-                
-                <p permid="HEm">So the system's solution is <m>(4,-2)</m> and the solution set is <m>\{(4,-2)\}</m>. The check is left up to the reader.
-                </p>
-            </solution>
-        </webwork>
-        </exercise>
-
-       <p permid="gQQ">Here is another example where we need to scale both equations.</p>
-        <example permid="OyR">
-            <statement>
-                <p permid="mGc">Solve the system using elimination.
-                    <md permid="pfj"><mrow>
-                        \left\{
-                            \begin{alignedat}{4}
-                            4x\amp {}-{} \amp 6y \amp {}={} \amp 13 \\
-                            5x\amp {}+{} \amp 4y \amp {}={} \amp -1 \\
-                            \end{alignedat}
-                        \right.
-                    </mrow></md>
-                </p>
-            </statement>
-            <solution permid="DZM">
-                <p permid="nLv">To solve the system using elimination, we first need to scale one or both of the equations so that one variable has equal but opposite coefficients in the system. In this case, we will choose to make <m>y</m> have opposite coefficients because the signs are already opposite for that variable in the system.</p>
-                <p permid="TSE">To determine how to scale each equation, we first find the least common multiple of the coefficients of <m>y</m>. The least common multiple of <m>6</m> and <m>4</m> is <m>12</m>. So, this is the coefficient we want on each <m>y</m>, but with opposite signs of course. Thus, we need to multiply the first equation by <m>2</m> and the second equation by <m>3</m>.
-                    <md permid="Vms">
-                        <mrow>
-                            \left\{
-                                \begin{alignedat}{4}
-                                4x\amp {}-{} \amp 6y \amp {}={} \amp 13 \\
-                                5x\amp {}+{} \amp 4y \amp {}={} \amp -1 \\
-                                \end{alignedat}
-                            \right.
-                        </mrow>
-                        <mrow>
-                            \left\{
-                                \begin{alignedat}{4}
-                                \multiplyleft{2}(4x\amp {}-{} \amp 6y) \amp {}={} \amp \multiplyleft{2}(13) \\
-                                \multiplyleft{3}(5x\amp {}+{} \amp 4y) \amp {}={} \amp \multiplyleft{3}(-1) \\
-                                \end{alignedat}
-                            \right.
-                        </mrow>
-                        <mrow>
-                            \left\{
-                                \begin{alignedat}{4}
-                                8x\amp {}-{} \amp 12y \amp {}={} \amp  26\\
-                                15x\amp {}+{} \amp 12y \amp {}={} \amp -3 \\
-                                \end{alignedat}
-                            \right.
-                        </mrow>
-                    </md>
-                We now have an equivalent system of equations where the <m>y</m>-terms can be eliminated:
-                    <md permid="BtB">
-                        <mrow>
-                            \begin{aligned}
-                                8x-12y\\
-                                {}+15x+12y
-                            \end{aligned}
-                            \amp=
-                            \begin{aligned}
-                                26\\
-                                {}+(-3)
-                            \end{aligned}
-                        </mrow>
-                        <intertext>So we have:</intertext>
-                        <mrow>23x\amp=23</mrow>
-                        <mrow>\divideunder{23x}{23}\amp=\divideunder{23}{23}</mrow>
-                        <mrow>x\amp=1</mrow>
-                    </md>
-                To solve for <m>y</m>, we will substitute <m>\substitute{1}</m> for <m>\substitute{x}</m> into either of the original equations. We will use the first equation, <m>4x-6y=13</m>:
-                    <md permid="hAK">
-                        <mrow>4\substitute{x}-6y\amp=13</mrow>
-                        <mrow>4(\substitute{1})-6y\amp=13</mrow>
-                        <mrow>4-6y\amp=13</mrow>
-                        <mrow>4-6y\subtractright{4}\amp=13\subtractright{4}</mrow>
-                        <mrow>-6y\amp=9</mrow>
-                        <mrow>\divideunder{-6y}{-6}\amp=\divideunder{9}{-6}</mrow>
-                        <mrow>y\amp=-\frac{3}{2}</mrow>
-                    </md>
-                To verify this, we substitute the <m>x</m> and <m>y</m> values into both of the original equations.
-                    <md permid="NHT">
-                        <mrow>4x-6y\amp=13\amp 5x+4y\amp=-1</mrow>
-                        <mrow>4(\substitute{1})-6\left(\substitute{-\frac{3}{2}}\right)\amp\stackrel{?}{=}13\amp 5(\substitute{1})+4\left(\substitute{-\frac{3}{2}}\right)\amp\stackrel{?}{=}-1</mrow>
-                        <mrow>4+9\amp\stackrel{\checkmark}{=}13\amp 5-6\amp\stackrel{\checkmark}{=}-1</mrow>
-                    </md>
-                So the solution is the point <m>\left(1, -\frac{3}{2}\right)</m> and the solution set is <m>\left\{\left(1,-\frac{3}{2}\right)\right\}</m>. </p>
-            </solution>
-        </example>
-
-        
-    </subsection>
-
-    <subsection permid="LZK">
-        <title>Solving Special Systems of Equations with Elimination</title>
-
-        <p permid="MXZ">Remember the two special cases we encountered when solving by graphing and substitution? Sometimes a system of equations has no solutions at all, and sometimes the solution set is infinite with all of the points on one line satisfying the equations. Let's see what happens when we use the elimination method on each of the special cases.</p>
-
-        <example permid="GUs">
-            <title>A System with Infinitely Many Solutions</title><idx><h>solving</h><h>system of linear equations</h><h>with infinitely many solutions</h></idx>
-            <statement>
-                <p permid="SNl">Solve the system of equations using the elimination method.
-                    <md permid="tPc">
-                    <mrow>
-                        \left\{
-                            \begin{alignedat}{4}
-                            3x \amp {}+{} \amp  4y \amp {}={} \amp 5 \\
-                            6x \amp {}+{} \amp  8y \amp {}={} \amp 10
-                            \end{alignedat}
-                        \right.
-                    </mrow></md></p>
-            </statement>
-            <solution permid="kgV">
-                <p permid="zZN">To eliminate the <m>x</m>-terms, we multiply each term in the first equation by <m>-2</m>, and we have:<md permid="ZWl">
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            \multiplyleft{-2}(3x \amp {}+{} \amp  4y) \amp {}={} \amp \multiplyleft{-2}5 \\
-                            6x \amp {}+{} \amp  8y \amp {}={} \amp 10
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            -6x \amp {}+{} \amp -8y \amp {}={}\amp -10 \\
-                            6x \amp {}+{} \amp  8y \amp {}={} \amp 10
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                </md>
-            </p>
-            <p permid="ggW">We might notice that the equations look very similar. Adding the respective sides of the equation, we have:
-                <me permid="dWk">0=0</me>
-            </p>
-            <p permid="Mof">Both of the variables have been eliminated. Since the statement <m>0=0</m> is true no matter what <m>x</m> and <m>y</m> are, the solution set is infinite. Specifically, you just need any <m>(x,y)</m> satisfying <em>one</em> of the two equations, since the two equations represent the same line. We can write the solution set as <m>\{(x,y)\mid 3x+4y=5\}</m>.</p>
-            </solution>
-        </example>
-
-        <example permid="nbB">
-            <title>A System with No Solution</title><idx><h>solving</h><h>system of linear equations</h><h>with no solution</h></idx>
-            <statement>
-                <p permid="yUu">Solve the system of equations using the elimination method.
-                    <md permid="Gdu">
-                    <mrow>
-                        \left\{
-                            \begin{alignedat}{4}
-                            10x \amp {}+{} \amp  6y \amp {}={} \amp 9 \\
-                            25x \amp {}+{} \amp  15y \amp {}={} \amp 4
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    </md>
-                </p>
-            </statement>
-            <solution permid="Qoe">
-                <p permid="svo">To eliminate the <m>x</m>-terms, we will scale the first equation by <m>-5</m> and the second by <m>2</m>:<md permid="mkD">
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            \multiplyleft{-5}(10x\amp {}+{} \amp 6y) \amp {}={}\amp \multiplyleft{-5}(9) \\
-                            \multiplyleft{2}(25x\amp {}+{} \amp 15y) \amp {}={}\amp \multiplyleft{2}(4)
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            -50x\amp {}+{} \amp (-30y) \amp {}={} \amp {-45} \\
-                            50x\amp {}+{} \amp 30y \amp {}={} \amp 8
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                </md></p>
-                <p permid="YCx">Adding the respective sides of the equation, we have:
-                    <me permid="Kdt">0=-37</me>
-                Both of the variables have been eliminated. In this case, the statement <m>0=-37</m> is just false, no matter what <m>x</m> and <m>y</m> are. So the system has no solution.</p>
-            </solution>
-        </example>
-    </subsection>
-
-    <subsection permid="sgT">
-        <title>Deciding to Use Substitution versus Elimination</title>
-
-            <p permid="tfi">In every example so far from this section, both equations were in standard form, <m>Ax+By=C</m> and all of the coefficients were integers. If none of the coefficients are equal to <m>1</m> then it is usually easier to use the elimination method, because otherwise you will probably have some fraction arithmetic to do in the middle of the substitution method. If there <em>is</em> a coefficient of <m>1</m>, then it is a matter of preference.</p>
-
-            <example permid="TiK">
-                <statement><p permid="fbD">Solve the system of equations using the method of your choice.
-                    <md permid="SrM">
-                    <mrow>
-                    \left\{
-                        \begin{aligned}
-                        x\amp = 3y-8 \\
-                        5x-4y\amp = 15
-                        \end{aligned}
-                    \right.
-                    </mrow>
-                    </md>
-                </p>
-            </statement>
-            <solution permid="wvn"><p permid="EJG">Since the variable <m>x</m> is already isolated here, it is set up nicely to use the substitution method. So that is the method we will use here.</p>
-
-            <p permid="kQP">We start by substituting the expression <m>3y-8</m> in place of <m>x</m> in the second equation and then solve for <m>y</m>:<md permid="yyV">
-
-                <mrow>5(\substitute{3y-8})-4y\amp=15</mrow>
-                <mrow>15y-40-4y\amp=15</mrow>
-                <mrow>11y-40\amp=15</mrow>
-                <mrow>11y-40\addright{40}\amp=15\addright{40}</mrow>
-                <mrow>11y\amp=55</mrow>
-                <mrow>y\amp=5</mrow></md></p>
-
-            <p permid="QXY">Next, we can find the value of <m>x</m> by substituting <m>5</m> in place of <m>y</m> in the first equation:<md permid="eGe">
-
-                <mrow>x\amp=3(\substitute{5})-8</mrow>
-                <mrow>x\amp=15-8</mrow>
-                <mrow>x\amp=7</mrow></md></p>
-
-            <p permid="xfh">Therefore, the solution to the system is <m>(7,5)</m>.</p>
-        </solution>
+  <title>Elimination</title>
+  <introduction permid="LEl">
+    <p permid="Xxe">
+      We learned how to solve a system of linear equations using substitution in <xref ref="section-substitution">Section</xref>.
+      In this section,
+      we will learn a second symbolic method for solving systems of linear equations.
+    </p>
+  </introduction>
+  <subsection permid="fSB">
+    <title>Solving Systems of Equations by Elimination</title>
+    <idx><h>solving</h><h>system of linear equations</h><h>elimination method</h></idx>
+    <idx>elimination method for solving systems of linear equations</idx>
+    <idx><h>addition method for solving systems of linear equations</h><see>elimination method for solving systems of linear equations</see></idx>
+    <example xml:id="example-system-of-equations-elimination-intro-scale-one-equation" permid="Ckz">
+      <title>Scaling One Equation</title>
+      <statement>
+        <p permid="arK">
+          Solve the system of equations using the elimination method.
+          <md permid="CyU">
+            <mrow>\left\{ \begin{alignedat}{4} 3x\amp {}-{} \amp 4y \amp {}={} \amp 2 \\ 5x\amp {}+{} \amp 8y \amp {}={} \amp 18 \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution permid="rLu">
+        <p permid="hmp">
+          To start, we want to see whether it will be easier to eliminate <m>x</m> or <m>y</m>.
+          We see that the coefficients of <m>x</m> in each equation are <m>3</m> and <m>5</m>,
+          and the coefficients of <m>y</m> are <m>-4</m> and <m>8</m>.
+          Because <m>8</m> is a multiple of <m>4</m> and the coefficients already have opposite signs,
+          the <m>y</m> variable will be easier to eliminate.
+        </p>
+        <p permid="Nty">
+          To eliminate the <m>y</m> terms,
+          we will multiply each side of the first equation by <m>2</m> so that we will have <m>-8y</m>.
+          We can call this process <term>scaling</term>
+          the first equation by <m>2</m>.
+          <md permid="iGd">
+            <mrow>\amp\left\{ \begin{alignedat}{4} \multiplyleft{2}(3x\amp {}-{} \amp 4y) \amp {}={} \amp \multiplyleft{2}(2) \\ 5x\amp {}+{} \amp 8y \amp {}={} \amp 18 \end{alignedat} \right.</mrow>
+            <mrow>\amp\left\{ \begin{alignedat}{4} 6x\amp {}-{} \amp 8y \amp {}={} \amp 4 \\ 5x\amp {}+{} \amp 8y \amp {}={} \amp 18 \end{alignedat} \right.</mrow>
+          </md>
+          We now have an equivalent system of equations where the <m>y</m>-terms can be eliminated:
+          <md permid="ONm">
+            <mrow>\begin{aligned}6x-8y\\{}+5x+8y\end{aligned}\amp=\begin{aligned}4\\{}+18\end{aligned}</mrow>
+            <intertext>So we have:</intertext>
+            <mrow>11x\amp=22</mrow>
+ <!-- <mrow>\divideunder{11x}{11}\amp=\divideunder{22}{11}</mrow> -->
+            <mrow>x\amp=2</mrow>
+          </md>
+        </p>
+        <p permid="tAH">
+          To solve for <m>y</m>,
+          we will substitute <m>2</m> for <m>x</m> into either of the original equations or the new one.
+          We will use the original first equation, <m>3x-4y=2</m>:
+          <md permid="uUv">
+            <mrow>3x-4y\amp=2</mrow>
+            <mrow>3(\substitute{2})-4y\amp=2</mrow>
+            <mrow>6-4y\amp=2</mrow>
+            <mrow>-4y\amp=-4</mrow>
+            <mrow>y\amp=1</mrow>
+          </md>
+        </p>
+        <p permid="ZHQ">
+          Our solution is <m>x=2</m> and <m>y=1</m>.
+          We will check this in both of the original equations:
+          <md permid="bbE">
+            <mrow>5x+8y\amp=18\amp 3x-4y\amp=2</mrow>
+            <mrow>5(\substitute{2})+8(\substitute{1})\amp\stackrel{?}{=}18\amp 3(\substitute{2})-4(\substitute{1})\amp\stackrel{?}{=}2</mrow>
+            <mrow>10+8\amp\stackrel{\checkmark}{=}18\amp 6-4\amp\stackrel{\checkmark}{=}2</mrow>
+          </md>
+          The solution to this system is <m>(2,1)</m> and the solution set is <m>\{(2,1)\}</m>.
+        </p>
+      </solution>
     </example>
-    
-
-        <p permid="Zmr">If you need to solve a system, and one of the equations is not in standard form, substitution may be easier, as we saw in the last example. But you also may find it easier to convert the equations into standard form and use elimination. Additionally, if the system's coefficients are fractions or decimals, you may take an additional step to scale the equations so that they only have integer coefficients.</p>
-
-        <example permid="zpT">
+    <p permid="ovp">
+      Try a similar exercise.
+    </p>
+    <exercise permid="uGa">
+      <webwork>
+          <setup>
+<pg-code>
+Context("Point");
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="DEn">
+              Solve the system of equations using the elimination method.
+              <me permid="lAJ">
+                \begin{cases} 2x - 6y = 54 \\ 3x + 2y = -7 \end{cases}
+              </me>
+            </p>
+            <p permid="jLw">
+              The solution is the point <var name="'(3,-8)'" width="10" />.
+            </p>
+          </statement>
+          <solution permid="oQO">
+            <p permid="FOZ">
+              To start, we want to see whether it will be easier to eliminate <m>x</m> or <m>y</m>.
+              We see that the coefficients of <m>x</m> in each equation are <m>2</m> and <m>3</m>,
+              and the coefficients of <m>y</m> are <m>-6</m> and <m>2</m>.
+              Because <m>6</m> is a multiple of <m>2</m> and the coefficients already have opposite signs,
+              the <m>y</m> variable will be easier to eliminate.
+            </p>
+            <p permid="lWi">
+              To eliminate the <m>y</m> terms,
+              we will multiply each side of the second equation by <m>3</m> so that we will have <m>6y</m>.
+              We can call this process <term>scaling</term>
+              the second equation by <m>3</m>.
+              <md permid="HiN">
+                <mrow>2x-6y=54</mrow>
+                <mrow>3\left({3x+2y}\right)=3\left({-7}\right)</mrow>
+              </md>
+              Which gives us
+              <md permid="npW">
+                <mrow>2x-6y=54</mrow>
+                <mrow>9x+6y=-21</mrow>
+              </md>
+              We now have an equivalent system of equations where the <m>y</m>-terms can be eliminated:
+              <md permid="Txf">
+                <mrow>\begin{aligned}2x-6y\\{}+9x+6y\end{aligned}\amp=\begin{aligned}54\\{}+(-21)\end{aligned}</mrow>
+              </md>
+              So we have:
+              <md permid="zEo">
+                <mrow>11x\amp=33</mrow>
+ <!-- <mrow>\divideunder{11x}{11}\amp=\divideunder{22}{11}</mrow> -->
+                <mrow>x\amp=3</mrow>
+              </md>
+            </p>
+            <p permid="Sdr">
+              To solve for <m>y</m>,
+              we will substitute <m>3</m> for <m>x</m> into either of the original equations or the new one.
+              We will use the original first equation, <m>3x-4y=2</m>:
+              <md permid="fLx">
+                <mrow>2x-6y\amp=54</mrow>
+                <mrow>2(\substitute{3})-6y\amp=54</mrow>
+                <mrow>6-6y\amp=54</mrow>
+                <mrow>-6y\amp=48</mrow>
+                <mrow>y\amp=-8</mrow>
+              </md>
+            </p>
+            <p permid="ykA">
+              Our solution is <m>x=3</m> and <m>y=-8</m>,
+              or the point <m>(3,-8)</m>.
+              The checking step is left up to the reader.
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+    <p permid="UCy">
+      Here's an example where we have to scale both equations.
+    </p>
+    <example permid="irI">
+      <title>Scaling Both Equations</title>
+      <statement>
+        <p permid="GyT">
+          Solve the system of equations using the elimination method.
+          <me permid="RHS">
+            \begin{cases} 2x + 3y = 10 \\ -3x + 5y = -15 \end{cases}
+          </me>
+        </p>
+      </statement>
+      <solution permid="XSD">
+        <p permid="erJ">
+          Considering the coefficients of <m>x</m> (<m>2</m> and <m>-3</m>) and the coefficients of <m>y</m> (<m>3</m> and <m>5</m>),
+          we see that we cannot eliminate the <m>x</m> or the <m>y</m> variable by scaling a single equation.
+          We will need to scale <em>both</em>.
+        </p>
+        <p permid="KyS">
+          The <m>x</m>-terms already have opposite signs,
+          so we choose to eliminate <m>x</m>.
+          The least common multiple of <m>2</m> and <m>3</m> is <m>6</m>.
+          We can scale the first equation by <m>3</m> and the second equation by <m>2</m> so that the equations have terms <m>6x</m> and <m>-6x</m>,
+          which will cancel when added.
+          <md permid="LSG">
+            <mrow>\amp\left\{ \begin{alignedat}{4} \multiplyleft{3}(2x\amp {}+{} \amp 3y) \amp {}={}\amp \multiplyleft{3}(10) \\ \multiplyleft{2}(-3x\amp {}+{} \amp 5y) \amp {}={}\amp \multiplyleft{2}(-15) \end{alignedat} \right.</mrow>
+            <mrow>\amp\left\{ \begin{alignedat}{4} 6x\amp {}+{} \amp 9y \amp {}={} \amp 30 \\ -6x\amp {}+{} \amp 10y \amp {}={} \amp {-30} \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+        <p permid="qGb">
+          At this point we can add the corresponding sides from the two equations and solve for <m>y</m>:
+          <md permid="rZP">
+            <mrow>\begin{aligned}6x+9y\\{}-6x+10y\end{aligned}\amp=\begin{aligned}30\\{}-30\end{aligned}</mrow>
+            <intertext>So we have:</intertext>
+            <mrow>19y\amp=0</mrow>
+ <!-- <mrow>\divideunder{19y}{19}\amp=\divideunder{0}{19}</mrow> -->
+            <mrow>y\amp=0</mrow>
+          </md>
+        </p>
+        <p permid="WNk">
+          To solve for <m>x</m>,
+          we'll replace <m>y</m> with <m>0</m> in <m>2x+3y=10</m>:
+          <md permid="YgY">
+            <mrow>2x+3y\amp=10</mrow>
+            <mrow>2x+3(\substitute{0})\amp=10</mrow>
+            <mrow>2x\amp=10</mrow>
+            <mrow>x\amp=5</mrow>
+          </md>
+        </p>
+        <p permid="CUt">
+          We'll check the system using <m>x=5</m> and <m>y=0</m> in each of the original equations:
+          <md permid="Eoh">
+            <mrow>2x+3y\amp=10  \amp  -3x+5y\amp=-15</mrow>
+            <mrow>2(\substitute{5})+3(\substitute{0})\amp\stackrel{?}{=}10  \amp  -3(\substitute{5})+5(\substitute{0})\amp\stackrel{?}{=}-15</mrow>
+            <mrow>10+0\amp\stackrel{\checkmark}{=}10  \amp  -15+0\amp\stackrel{\checkmark}{=}-15</mrow>
+          </md>
+          So the system's solution is <m>(5,0)</m> and the solution set is <m>\{(5,0)\}</m>.
+        </p>
+      </solution>
+    </example>
+    <p permid="AJH">
+      Try a similar exercise.
+    </p>
+    <exercise permid="aNj">
+      <webwork>
+          <setup>
+<pg-code>
+Context("Point");
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="PSF">
+              Solve the system of equations using the elimination method.
+              <me permid="xPb">
+                \begin{cases} 5x + 2y = 16 \\ 3x - 5y = 22 \end{cases}
+              </me>
+            </p>
+            <p permid="vZO">
+              The solution is the point <var name="'(4,-2)'" width="10" />.
+            </p>
+          </statement>
+          <solution permid="UXX">
+            <p permid="jbC">
+              Considering the coefficients of <m>x</m> (<m>5</m> and <m>3</m>) and the coefficients of <m>y</m> (<m>2</m> and <m>-5</m>),
+              we see that we cannot eliminate the <m>x</m> or the <m>y</m> variable by scaling a single equation.
+              We will need to scale <em>both</em>.
+            </p>
+            <p permid="PiL">
+              The <m>y</m>-terms already have opposite signs,
+              so we choose to eliminate <m>y</m>.
+              The least common multiple of <m>2</m> and <m>5</m> is <m>10</m>.
+              We can scale the first equation by <m>5</m> and the second equation by <m>2</m> so that the equations have terms <m>10y</m> and <m>-10y</m>,
+              which will cancel when added.
+              <md permid="kvq">
+                <mrow>5\left({5x+2y}\right)=5\left({16}\right)</mrow>
+                <mrow>2\left({3x-5y}\right)=2\left({22}\right)</mrow>
+              </md>
+              Which gives us
+              <md permid="QCz">
+                <mrow>25x+10y=80</mrow>
+                <mrow>6x-10y=44</mrow>
+              </md>
+            </p>
+            <p permid="vpU">
+              At this point we can add the corresponding sides from the two equations and solve for <m>x</m>:
+              <md permid="wJI">
+                <mrow>\begin{aligned}25x+10y\\{}6x-10y\end{aligned}\amp=\begin{aligned}80\\{}+44\end{aligned}</mrow>
+              </md>
+              So we have:
+              <md permid="cQR">
+                <mrow>31x=124</mrow>
+ <!-- <mrow>\divideunder{19y}{19}\amp=\divideunder{0}{19}</mrow> -->
+                <mrow>x=4</mrow>
+              </md>
+            </p>
+            <p permid="bxd">
+              To solve for <m>y</m>,
+              we'll replace <m>x</m> with <m>4</m> in <m>5x+2y=16</m>:
+              <md permid="IYa">
+                <mrow>5x+2y\amp=16</mrow>
+                <mrow>5(\substitute{4})+2y\amp=16</mrow>
+                <mrow>20+2y\amp=16</mrow>
+                <mrow>2y\amp=-4</mrow>
+                <mrow>y\amp=-2</mrow>
+              </md>
+            </p>
+            <p permid="HEm">
+              So the system's solution is <m>(4,-2)</m> and the solution set is <m>\{(4,-2)\}</m>.
+              The check is left up to the reader.
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+    <p permid="gQQ">
+      Here is another example where we need to scale both equations.
+    </p>
+    <example permid="OyR">
+      <statement>
+        <p permid="mGc">
+          Solve the system using elimination.
+          <md permid="pfj">
+            <mrow>\left\{ \begin{alignedat}{4} 4x\amp {}-{} \amp 6y \amp {}={} \amp 13 \\ 5x\amp {}+{} \amp 4y \amp {}={} \amp -1 \\ \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution permid="DZM">
+        <p permid="nLv">
+          To solve the system using elimination,
+          we first need to scale one or both of the equations so that one variable has equal but opposite coefficients in the system.
+          In this case,
+          we will choose to make <m>y</m> have opposite coefficients because the signs are already opposite for that variable in the system.
+        </p>
+        <p permid="TSE">
+          To determine how to scale each equation,
+          we first find the least common multiple of the coefficients of <m>y</m>.
+          The least common multiple of <m>6</m> and <m>4</m> is <m>12</m>.
+          So, this is the coefficient we want on each <m>y</m>,
+          but with opposite signs of course.
+          Thus, we need to multiply the first equation by <m>2</m> and the second equation by <m>3</m>.
+          <md permid="Vms">
+            <mrow>\left\{ \begin{alignedat}{4} 4x\amp {}-{} \amp 6y \amp {}={} \amp 13 \\ 5x\amp {}+{} \amp 4y \amp {}={} \amp -1 \\ \end{alignedat} \right.</mrow>
+            <mrow>\left\{ \begin{alignedat}{4} \multiplyleft{2}(4x\amp {}-{} \amp 6y) \amp {}={} \amp \multiplyleft{2}(13) \\ \multiplyleft{3}(5x\amp {}+{} \amp 4y) \amp {}={} \amp \multiplyleft{3}(-1) \\ \end{alignedat} \right.</mrow>
+            <mrow>\left\{ \begin{alignedat}{4} 8x\amp {}-{} \amp 12y \amp {}={} \amp  26\\ 15x\amp {}+{} \amp 12y \amp {}={} \amp -3 \\ \end{alignedat} \right.</mrow>
+          </md>
+          We now have an equivalent system of equations where the <m>y</m>-terms can be eliminated:
+          <md permid="BtB">
+            <mrow>\begin{aligned} 8x-12y\\ {}+15x+12y \end{aligned} \amp= \begin{aligned} 26\\ {}+(-3) \end{aligned}</mrow>
+            <intertext>So we have:</intertext>
+            <mrow>23x\amp=23</mrow>
+            <mrow>\divideunder{23x}{23}\amp=\divideunder{23}{23}</mrow>
+            <mrow>x\amp=1</mrow>
+          </md>
+          To solve for <m>y</m>, we will substitute <m>\substitute{1}</m> for
+          <m>\substitute{x}</m> into either of the original equations.
+          We will use the first equation, <m>4x-6y=13</m>:
+          <md permid="hAK">
+            <mrow>4\substitute{x}-6y\amp=13</mrow>
+            <mrow>4(\substitute{1})-6y\amp=13</mrow>
+            <mrow>4-6y\amp=13</mrow>
+            <mrow>4-6y\subtractright{4}\amp=13\subtractright{4}</mrow>
+            <mrow>-6y\amp=9</mrow>
+            <mrow>\divideunder{-6y}{-6}\amp=\divideunder{9}{-6}</mrow>
+            <mrow>y\amp=-\frac{3}{2}</mrow>
+          </md>
+          To verify this,
+          we substitute the <m>x</m> and <m>y</m> values into both of the original equations.
+          <md permid="NHT">
+            <mrow>4x-6y\amp=13\amp 5x+4y\amp=-1</mrow>
+            <mrow>4(\substitute{1})-6\left(\substitute{-\frac{3}{2}}\right)\amp\stackrel{?}{=}13\amp 5(\substitute{1})+4\left(\substitute{-\frac{3}{2}}\right)\amp\stackrel{?}{=}-1</mrow>
+            <mrow>4+9\amp\stackrel{\checkmark}{=}13\amp 5-6\amp\stackrel{\checkmark}{=}-1</mrow>
+          </md>
+          So the solution is the point
+          <m>\left(1, -\frac{3}{2}\right)</m> and the solution set is <m>\left\{\left(1,-\frac{3}{2}\right)\right\}</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="LZK">
+    <title>Solving Special Systems of Equations with Elimination</title>
+    <p permid="MXZ">
+      Remember the two special cases we encountered when solving by graphing and substitution?
+      Sometimes a system of equations has no solutions at all,
+      and sometimes the solution set is infinite with all of the points on one line satisfying the equations.
+      Let's see what happens when we use the elimination method on each of the special cases.
+    </p>
+    <example permid="GUs">
+      <title>A System with Infinitely Many Solutions</title>
+      <idx><h>solving</h><h>system of linear equations</h><h>with infinitely many solutions</h></idx>
+      <statement>
+        <p permid="SNl">
+          Solve the system of equations using the elimination method.
+          <md permid="tPc">
+            <mrow>\left\{ \begin{alignedat}{4} 3x \amp {}+{} \amp  4y \amp {}={} \amp 5 \\ 6x \amp {}+{} \amp  8y \amp {}={} \amp 10 \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution permid="kgV">
+        <p permid="zZN">
+          To eliminate the <m>x</m>-terms,
+          we multiply each term in the first equation by <m>-2</m>,
+          and we have:
+          <md permid="ZWl">
+            <mrow>\amp\left\{ \begin{alignedat}{4} \multiplyleft{-2}(3x \amp {}+{} \amp  4y) \amp {}={} \amp \multiplyleft{-2}5 \\ 6x \amp {}+{} \amp  8y \amp {}={} \amp 10 \end{alignedat} \right.</mrow>
+            <mrow>\amp\left\{ \begin{alignedat}{4} -6x \amp {}+{} \amp -8y \amp {}={}\amp -10 \\ 6x \amp {}+{} \amp  8y \amp {}={} \amp 10 \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+        <p permid="ggW">
+          We might notice that the equations look very similar.
+          Adding the respective sides of the equation, we have:
+          <me permid="dWk">
+            0=0
+          </me>
+        </p>
+        <p permid="Mof">
+          Both of the variables have been eliminated.
+          Since the statement <m>0=0</m> is true no matter what <m>x</m> and <m>y</m> are,
+          the solution set is infinite.
+          Specifically, you just need any <m>(x,y)</m> satisfying
+          <em>one</em> of the two equations,
+          since the two equations represent the same line.
+          We can write the solution set as <m>\{(x,y)\mid 3x+4y=5\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="nbB">
+      <title>A System with No Solution</title>
+      <idx><h>solving</h><h>system of linear equations</h><h>with no solution</h></idx>
+      <statement>
+        <p permid="yUu">
+          Solve the system of equations using the elimination method.
+          <md permid="Gdu">
+            <mrow>\left\{ \begin{alignedat}{4} 10x \amp {}+{} \amp  6y \amp {}={} \amp 9 \\ 25x \amp {}+{} \amp  15y \amp {}={} \amp 4 \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution permid="Qoe">
+        <p permid="svo">
+          To eliminate the <m>x</m>-terms,
+          we will scale the first equation by <m>-5</m> and the second by <m>2</m>:
+          <md permid="mkD">
+            <mrow>\amp\left\{ \begin{alignedat}{4} \multiplyleft{-5}(10x\amp {}+{} \amp 6y) \amp {}={}\amp \multiplyleft{-5}(9) \\ \multiplyleft{2}(25x\amp {}+{} \amp 15y) \amp {}={}\amp \multiplyleft{2}(4) \end{alignedat} \right.</mrow>
+            <mrow>\amp\left\{ \begin{alignedat}{4} -50x\amp {}+{} \amp (-30y) \amp {}={} \amp {-45} \\ 50x\amp {}+{} \amp 30y \amp {}={} \amp 8 \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+        <p permid="YCx">
+          Adding the respective sides of the equation, we have:
+          <me permid="Kdt">
+            0=-37
+          </me>
+          Both of the variables have been eliminated.
+          In this case, the statement <m>0=-37</m> is just false,
+          no matter what <m>x</m> and <m>y</m> are.
+          So the system has no solution.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="sgT">
+    <title>Deciding to Use Substitution versus Elimination</title>
+    <p permid="tfi">
+      In every example so far from this section,
+      both equations were in standard form,
+      <m>Ax+By=C</m> and all of the coefficients were integers.
+      If none of the coefficients are equal to <m>1</m> then it is usually easier to use the elimination method,
+      because otherwise you will probably have some fraction arithmetic to do in the middle of the substitution method.
+      If there <em>is</em> a coefficient of <m>1</m>,
+      then it is a matter of preference.
+    </p>
+    <example permid="TiK">
+      <statement>
+        <p permid="fbD">
+          Solve the system of equations using the method of your choice.
+          <md permid="SrM">
+            <mrow>\left\{ \begin{aligned} x\amp = 3y-8 \\ 5x-4y\amp = 15 \end{aligned} \right.</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution permid="wvn">
+        <p permid="EJG">
+          Since the variable <m>x</m> is already isolated here,
+          it is set up nicely to use the substitution method.
+          So that is the method we will use here.
+        </p>
+        <p permid="kQP">
+          We start by substituting the expression <m>3y-8</m> in place of <m>x</m> in the second equation and then solve for <m>y</m>:
+          <md permid="yyV">
+            <mrow>5(\substitute{3y-8})-4y\amp=15</mrow>
+            <mrow>15y-40-4y\amp=15</mrow>
+            <mrow>11y-40\amp=15</mrow>
+            <mrow>11y-40\addright{40}\amp=15\addright{40}</mrow>
+            <mrow>11y\amp=55</mrow>
+            <mrow>y\amp=5</mrow>
+          </md>
+        </p>
+        <p permid="QXY">
+          Next, we can find the value of <m>x</m> by substituting <m>5</m> in place of <m>y</m> in the first equation:
+          <md permid="eGe">
+            <mrow>x\amp=3(\substitute{5})-8</mrow>
+            <mrow>x\amp=15-8</mrow>
+            <mrow>x\amp=7</mrow>
+          </md>
+        </p>
+        <p permid="xfh">
+          Therefore, the solution to the system is <m>(7,5)</m>.
+        </p>
+      </solution>
+    </example>
+    <p permid="Zmr">
+      If you need to solve a system,
+      and one of the equations is not in standard form,
+      substitution may be easier, as we saw in the last example.
+      But you also may find it easier to convert the equations into standard form and use elimination.
+      Additionally,
+      if the system's coefficients are fractions or decimals,
+      you may take an additional step to scale the equations so that they only have integer coefficients.
+    </p>
+    <example permid="zpT">
+      <statement>
+        <p permid="LiM">
+          Solve the system of equations using the method of your choice.
+          <md permid="KNn">
+            <mrow>\left\{ \begin{aligned} -\frac{1}{3}y\amp = \frac{1}{15}x + \frac{1}{5} \\ \frac{5}{2}x-y\amp = 6 \end{aligned} \right.</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution permid="cCw">
+        <p permid="dmq">
+          First, we can cancel the fractions by using the least common multiple of the denominators in each equation,
+          similarly to the topic of <xref ref="section-linear-equations-and-inequalities-with-fractions">Section</xref>.
+          We have:
+          <md permid="qUw">
+            <mrow>\amp\left\{ \begin{aligned} \multiplyleft{15}{-\frac{1}{3}y} \amp = \multiplyleft{15}\left(\frac{1}{15}x + \frac{1}{5}\right) \\ \multiplyleft{2}\left(\frac{5}{2}x-y\right) \amp = \multiplyleft{2}(6) \end{aligned} \right.</mrow>
+            <mrow>\amp\left\{ \begin{aligned} -5y \amp = x+3 \\ 5x-2y \amp = 12 \end{aligned} \right.</mrow>
+          </md>
+        </p>
+        <p permid="Jtz">
+          We could put convert the first equation into standard form by subtracting <m>x</m> from both sides,
+          and then use elimination.
+          However, the <m>x</m>-variable in the first equation has a coefficient of <m>1</m>,
+          so the substitution method may be faster.
+          Solving for <m>x</m> in the first equation we have:
+          <md permid="XbF">
+            <mrow>-5y\amp=x+3</mrow>
+            <mrow>-5y\subtractright{3}\amp=x+3\subtractright{3}</mrow>
+            <mrow>-5y-3\amp=x</mrow>
+            <intertext>Substituting <m>-5y-3</m> for <m>x</m> in the second equation we have:</intertext>
+            <mrow>5(\substitute{-5y-3})-2y\amp=12</mrow>
+            <mrow>-25y-15-2y\amp=12</mrow>
+            <mrow>-27y-15\amp=12</mrow>
+            <mrow>-27y\amp=27</mrow>
+            <mrow>y\amp=-1</mrow>
+          </md>
+          Using the equation where we isolated <m>x</m> and substituting <m>-1</m> for <m>y</m>, we have:
+          <md permid="DiO">
+            <mrow>-5(\substitute{-1})-3\amp=x</mrow>
+            <mrow>5-3\amp=x</mrow>
+            <mrow>2\amp=x</mrow>
+          </md>
+          The solution is <m>(2,-1)</m>.
+          Checking the solution is left as an exercise.
+        </p>
+      </solution>
+    </example>
+    <example permid="fxc">
+      <statement>
+        <p permid="rpV">
+          Solve the system of equations using the method of your choice.
+          <md permid="jpX">
+            <mrow>\left\{ \begin{alignedat}{4} x \amp {}+{} \amp y \amp {}={} \amp0.35 \\ 9x \amp {}+{} \amp 7.1y \amp {}={} \amp2.96 \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution permid="IJF">
+        <p permid="pAI">
+          Since the coefficient of <m>x</m>
+          (or <m>y</m>)
+          in the first equation is <m>1</m>,
+          we could solve for one of these variables and use substitution to complete the problem.
+          However, some decimal arithmetic would be required.
+          Alternatively,
+          we can scale the equations by the right power of <m>10</m> to make all the coefficients and constants integers:
+          <md permid="Pxg">
+            <mrow>\amp\left\{ \begin{alignedat}{4} \multiplyleft{100}(x \amp {}+{} \amp y) \amp {}={} \amp\multiplyleft{100}(0.35) \\ \multiplyleft{100}(9x \amp {}+{} \amp 7.1y) \amp {}={} \amp\multiplyleft{100}(2.96) \end{alignedat} \right.</mrow>
+            <mrow>\amp\left\{ \begin{alignedat}{4} 100x \amp {}+{} 100y \amp {}={} \amp 35\\ 900x \amp {}+{} 710y \amp {}={} \amp 296 \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+        <p permid="VHR">
+          Now to set up elimination, scale each equation again to eliminate <m>x</m>:
+          <md permid="vEp">
+            <mrow>\amp\left\{ \begin{alignedat}{4} \multiplyleft{9}(100x \amp {}+{} \amp 100y) \amp {}={} \amp\multiplyleft{9}(35) \\ \multiplyleft{-1}(900x \amp {}+{} \amp 710y) \amp {}={} \amp\multiplyleft{-1}(296) \end{alignedat} \right.</mrow>
+            <mrow>\amp\left\{ \begin{alignedat}{4} 900x \amp {}+{} 900y \amp {}={} \amp 315\\ -900x \amp {}-{} 710y \amp {}={} \amp {-296} \end{alignedat} \right.</mrow>
+          </md>
+        </p>
+        <p permid="BPa">
+          Adding the corresponding sides from the two equations gives
+          <me permid="qkC">
+            190y=19
+          </me>,
+          from which we find <m>y=0.1</m>.
+        </p>
+        <p permid="hWj">
+          To solve for <m>x</m>, we can use one of the original equations:
+          <md permid="bLy">
+            <mrow>x+y\amp=0.35</mrow>
+            <mrow>x+\substitute{0.1}\amp=0.35</mrow>
+            <mrow>x\amp=0.25</mrow>
+          </md>
+        </p>
+        <p permid="Ods">
+          Therefore, the solution to the system is <m>(0.25,0.1)</m>.
+        </p>
+      </solution>
+    </example>
+    <p permid="FtA">
+      To summarize,
+      if a variable is already isolated or has a coefficient of <m>1</m>,
+      consider using the substitution method.
+      If both equations are in standard form or none of the coefficients are equal to <m>1</m>,
+      we suggest using the elimination method.
+      Either way, if you have fraction or decimal coefficients,
+      it may help to scale your equations so that only integer coefficients remain.
+    </p>
+  </subsection>
+  <exercises permid="Yoc">
+    <exercisegroup cols="3" permid="Evl">
+      <title>Review and Warmup</title>
+      <exercise permid="wQM">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg" />
+      </exercise>
+      <exercise permid="cXV">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg" />
+      </exercise>
+      <exercise permid="Jfe">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg" />
+      </exercise>
+      <exercise permid="pmn">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg" />
+      </exercise>
+      <exercise permid="Vtw">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction110.pg" />
+      </exercise>
+      <exercise permid="BAF">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction110.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="kCu">
+      <title>Solving System of Equations by Elimination</title>
+      <exercise permid="hHO">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation10.pg" />
+      </exercise>
+      <exercise permid="NOX">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation10.pg" />
+      </exercise>
+      <exercise permid="tWg">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation20.pg" />
+      </exercise>
+      <exercise permid="adp">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation20.pg" />
+      </exercise>
+      <exercise permid="Gky">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation30.pg" />
+      </exercise>
+      <exercise permid="mrH">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation30.pg" />
+      </exercise>
+      <exercise permid="SyQ">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation40.pg" />
+      </exercise>
+      <exercise permid="yFZ">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation40.pg" />
+      </exercise>
+      <exercise permid="eNi">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation50.pg" />
+      </exercise>
+      <exercise permid="KUr">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation50.pg" />
+      </exercise>
+      <exercise permid="rbA">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation60.pg" />
+      </exercise>
+      <exercise permid="XiJ">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation60.pg" />
+      </exercise>
+      <exercise permid="DpS">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations15.pg" />
+      </exercise>
+      <exercise permid="jxb">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations15.pg" />
+      </exercise>
+      <exercise permid="PEk">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations17.pg" />
+      </exercise>
+      <exercise permid="vLt">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations17.pg" />
+      </exercise>
+      <exercise permid="bSC">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations20.pg" />
+      </exercise>
+      <exercise permid="HZL">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations20.pg" />
+      </exercise>
+      <exercise permid="ogU">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations30.pg" />
+      </exercise>
+      <exercise permid="Uod">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations30.pg" />
+      </exercise>
+      <exercise permid="Avm">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations35.pg" />
+      </exercise>
+      <exercise permid="gCv">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations35.pg" />
+      </exercise>
+      <exercise permid="MJE">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations50.pg" />
+      </exercise>
+      <exercise permid="sQN">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations50.pg" />
+      </exercise>
+      <exercise permid="YXW">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations55.pg" />
+      </exercise>
+      <exercise permid="Fff">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations55.pg" />
+      </exercise>
+      <exercise permid="lmo">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations60.pg" />
+      </exercise>
+      <exercise permid="Rtx">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations60.pg" />
+      </exercise>
+      <exercise permid="xAG">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations70.pg" />
+      </exercise>
+      <exercise permid="dHP">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations70.pg" />
+      </exercise>
+      <exercise permid="JOY">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations80.pg" />
+      </exercise>
+      <exercise permid="pWh">
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations80.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup permid="QJD">
+      <title>Challenge</title>
+      <exercise permid="Wdq">
+<!-- Kara's challenge problem -->
+        <webwork>
+            <setup>
+<pg-code>
+$p2 = random(2,6,2);
+$q2 = random(-7,-3,2);
+$r2 = non_zero_random(-5,5,1);
+$factor = non_zero_random(-5,-2,1);
+$p = $p2*$factor;
+$q = $q2*$factor;
+$r = $r2*$factor;
+Context()->variables->are(x=>'Real',y=>'Real',b=>'Real');
+Context()->noreduce('(-x)+y', '(-x)-y');
+$exp1 = Formula("$p x + $q y")->reduce;
+$exp2 = Formula("$p2 x - b y")->reduce;
+$answer = Formula("-$q2");
+</pg-code>
+            </setup>
             <statement>
-                <p permid="LiM">Solve the system of equations using the method of your choice.
-                    <md permid="KNn">
-                    <mrow>
-                    \left\{
-                        \begin{aligned}
-                        -\frac{1}{3}y\amp = \frac{1}{15}x + \frac{1}{5} \\
-                        \frac{5}{2}x-y\amp = 6
-                        \end{aligned}
-                    \right.
-                    </mrow>
-                    </md>
-                </p>
+              <p permid="cgX">
+                Find the value of <m>b</m> so that the system of equations has an infinite number of solutions.
+                <me permid="WrL">
+                  \left\{\begin{aligned} <var name="$exp1" /> \amp = <var name="$r"/>\\ <var name="$exp2" /> \amp = <var name="$r2"/> \end{aligned}\right.
+                </me>
+              </p>
+              <p permid="Iog">
+                <var name="$answer" width="10"/>
+              </p>
             </statement>
-            <solution permid="cCw">
-                <p permid="dmq">First, we can cancel the fractions by using the least common multiple of the denominators in each equation, similarly to the topic of <xref ref="section-linear-equations-and-inequalities-with-fractions">Section</xref>. We have:<md permid="qUw">
-                    <mrow>
-                        \amp\left\{
-                            \begin{aligned}
-                            \multiplyleft{15}{-\frac{1}{3}y} \amp = \multiplyleft{15}\left(\frac{1}{15}x + \frac{1}{5}\right) \\
-                            \multiplyleft{2}\left(\frac{5}{2}x-y\right) \amp = \multiplyleft{2}(6)
-                            \end{aligned}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{aligned}
-                            -5y \amp = x+3 \\
-                            5x-2y \amp = 12
-                            \end{aligned}
-                        \right.
-                    </mrow>
-                </md></p>
-
-                <p permid="Jtz">We could put convert the first equation into standard form by subtracting <m>x</m> from both sides, and then use elimination. However, the <m>x</m>-variable in the first equation has a coefficient of <m>1</m>, so the substitution method may be faster. Solving for <m>x</m> in the first equation we have:
-                    <md permid="XbF">
-                        <mrow>-5y\amp=x+3</mrow>
-                        <mrow>-5y\subtractright{3}\amp=x+3\subtractright{3}</mrow>
-                        <mrow>-5y-3\amp=x</mrow>
-                        <intertext>Substituting <m>-5y-3</m> for <m>x</m> in the second equation we have:</intertext>
-                        <mrow>5(\substitute{-5y-3})-2y\amp=12</mrow>
-                        <mrow>-25y-15-2y\amp=12</mrow>
-                        <mrow>-27y-15\amp=12</mrow>
-                        <mrow>-27y\amp=27</mrow>
-                        <mrow>y\amp=-1</mrow>
-                    </md>
-                Using the equation where we isolated <m>x</m> and substituting <m>-1</m> for <m>y</m>, we have:
-                    <md permid="DiO">
-                        <mrow>-5(\substitute{-1})-3\amp=x</mrow>
-                        <mrow>5-3\amp=x</mrow>
-                        <mrow>2\amp=x</mrow>
-                    </md>
-                The solution is <m>(2,-1)</m>. Checking the solution is left as an exercise.</p>
+            <solution permid="Bfg">
+              <p permid="ukB">
+                To have an infinite numbers of solutions,
+                the two equations must coincide as the same line.
+                Thus, the second equation comes from multiplying or dividing the first equation by a certain factor.
+                In this case,
+                if you divide the first equation by <var name="$factor"/>, the result is the second equation.
+                Thus, <m>b</m> must equal <m> <var name="$answer"/></m>.
+              </p>
             </solution>
-        </example>
-
-        <example permid="fxc">
-            <statement>
-                <p permid="rpV">Solve the system of equations using the method of your choice.<md permid="jpX">
-                    <mrow>
-                    \left\{
-                        \begin{alignedat}{4}
-                        x \amp {}+{} \amp y \amp {}={} \amp0.35 \\
-                        9x \amp {}+{} \amp 7.1y \amp {}={} \amp2.96
-                        \end{alignedat}
-                    \right.
-                    </mrow>
-                </md></p>
-
-
-            </statement>
-            <solution permid="IJF"><p permid="pAI">Since the coefficient of <m>x</m> (or <m>y</m>) in the first equation is <m>1</m>, we could solve for one of these variables and use substitution to complete the problem. However, some decimal arithmetic would be required. Alternatively, we can scale the equations by the right power of <m>10</m> to make all the coefficients and constants integers:<md permid="Pxg">
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            \multiplyleft{100}(x \amp {}+{} \amp y) \amp {}={} \amp\multiplyleft{100}(0.35) \\
-                            \multiplyleft{100}(9x \amp {}+{} \amp 7.1y) \amp {}={} \amp\multiplyleft{100}(2.96)
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            100x \amp {}+{} 100y \amp {}={} \amp 35\\
-                            900x \amp {}+{} 710y \amp {}={} \amp 296
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                </md></p>
-
-                <p permid="VHR">Now to set up elimination, scale each equation again to eliminate <m>x</m>:<md permid="vEp">
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            \multiplyleft{9}(100x \amp {}+{} \amp 100y) \amp {}={} \amp\multiplyleft{9}(35) \\
-                            \multiplyleft{-1}(900x \amp {}+{} \amp 710y) \amp {}={} \amp\multiplyleft{-1}(296)
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                    <mrow>
-                        \amp\left\{
-                            \begin{alignedat}{4}
-                            900x \amp {}+{} 900y \amp {}={} \amp 315\\
-                            -900x \amp {}-{} 710y \amp {}={} \amp {-296}
-                            \end{alignedat}
-                        \right.
-                    </mrow>
-                </md></p>
-
-                <p permid="BPa">Adding the corresponding sides from the two equations gives <me permid="qkC">190y=19</me>, from which we find <m>y=0.1</m>.</p>
-
-                <p permid="hWj">To solve for <m>x</m>, we can use one of the original equations:<md permid="bLy">
-                    <mrow>x+y\amp=0.35</mrow>
-                    <mrow>x+\substitute{0.1}\amp=0.35</mrow>
-                    <mrow>x\amp=0.25</mrow>
-                </md></p>
-
-                <p permid="Ods">Therefore, the solution to the system is <m>(0.25,0.1)</m>.</p>
-            </solution>
-        </example>
-
-        <p permid="FtA">To summarize, if a variable is already isolated or has a coefficient of <m>1</m>, consider using the substitution method. If both equations are in standard form or none of the coefficients are equal to <m>1</m>, we suggest using the elimination method. Either way, if you have fraction or decimal coefficients, it may help to scale your equations so that only integer coefficients remain.</p>
-
-    </subsection>
-
-
-
-    <exercises permid="Yoc">
-        <exercisegroup cols="3" permid="Evl">
-            <title>Review and Warmup</title>
-            <exercise permid="wQM">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg" />
-            </exercise>
-            <exercise permid="cXV">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg" />
-            </exercise>
-            <exercise permid="Jfe">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg" />
-            </exercise>
-            <exercise permid="pmn">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg" />
-            </exercise>
-            <exercise permid="Vtw">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction110.pg" />
-            </exercise>
-            <exercise permid="BAF">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction110.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="3" permid="kCu">
-            <title>Solving System of Equations by Elimination</title>
-            <exercise permid="hHO">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation10.pg" />
-            </exercise>
-            <exercise permid="NOX">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation10.pg" />
-            </exercise>
-            <exercise permid="tWg">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation20.pg" />
-            </exercise>
-            <exercise permid="adp">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation20.pg" />
-            </exercise>
-            <exercise permid="Gky">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation30.pg" />
-            </exercise>
-            <exercise permid="mrH">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation30.pg" />
-            </exercise>
-            <exercise permid="SyQ">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation40.pg" />
-            </exercise>
-            <exercise permid="yFZ">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation40.pg" />
-            </exercise>
-            <exercise permid="eNi">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation50.pg" />
-            </exercise>
-            <exercise permid="KUr">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation50.pg" />
-            </exercise>
-            <exercise permid="rbA">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation60.pg" />
-            </exercise>
-            <exercise permid="XiJ">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemEquation60.pg" />
-            </exercise>
-            <exercise permid="DpS">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations15.pg" />
-            </exercise>
-            <exercise permid="jxb">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations15.pg" />
-            </exercise>
-            <exercise permid="PEk">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations17.pg" />
-            </exercise>
-            <exercise permid="vLt">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations17.pg" />
-            </exercise>
-            <exercise permid="bSC">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations20.pg" />
-            </exercise>
-            <exercise permid="HZL">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations20.pg" />
-            </exercise>
-            <exercise permid="ogU">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations30.pg" />
-            </exercise>
-            <exercise permid="Uod">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations30.pg" />
-            </exercise>
-            <exercise permid="Avm">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations35.pg" />
-            </exercise>
-            <exercise permid="gCv">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations35.pg" />
-            </exercise>
-            <exercise permid="MJE">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations50.pg" />
-            </exercise>
-            <exercise permid="sQN">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations50.pg" />
-            </exercise>
-            <exercise permid="YXW">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations55.pg" />
-            </exercise>
-            <exercise permid="Fff">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations55.pg" />
-            </exercise>
-            <exercise permid="lmo">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations60.pg" />
-            </exercise>
-            <exercise permid="Rtx">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations60.pg" />
-            </exercise>
-            <exercise permid="xAG">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations70.pg" />
-            </exercise>
-            <exercise permid="dHP">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations70.pg" />
-            </exercise>
-            <exercise permid="JOY">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations80.pg" />
-            </exercise>
-            <exercise permid="pWh">
-                <webwork source="BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations80.pg" />
-            </exercise>
-        </exercisegroup>
-        
-        <exercisegroup permid="QJD">
-            <title>Challenge</title>
-            <exercise permid="Wdq"><!-- Kara's challenge problem -->
-                <webwork>
-                    <setup>
-            <pg-code>
-                $p2 = random(2,6,2);
-                $q2 = random(-7,-3,2);
-                $r2 = non_zero_random(-5,5,1);
-                $factor = non_zero_random(-5,-2,1);
-                $p = $p2*$factor;
-                $q = $q2*$factor;
-                $r = $r2*$factor;
-                Context()->variables->are(x=>'Real',y=>'Real',b=>'Real');
-                Context()->noreduce('(-x)+y', '(-x)-y');
-                $exp1 = Formula("$p x + $q y")->reduce;
-                $exp2 = Formula("$p2 x - b y")->reduce;
-                $answer = Formula("-$q2");
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="cgX">Find the value of <m>b</m> so that the system of equations has an infinite number of solutions.<me permid="WrL">
-                            \left\{\begin{aligned} <var name="$exp1" /> \amp = <var name="$r"/>\\
-                                                   <var name="$exp2" /> \amp = <var name="$r2"/> \end{aligned}\right.</me>
-                        </p>
-                        <p permid="Iog"><var name="$answer" width="10"/></p>
-                    </statement>
-                    <solution permid="Bfg">
-                        <p permid="ukB">To have an infinite numbers of solutions, the two equations must coincide as the same line.  Thus, the second equation comes from multiplying or dividing the first equation by a certain factor.  In this case, if you divide the first equation by <var name="$factor"/>, the result is the second equation.  Thus, <m>b</m> must equal <m> <var name="$answer"/></m>.</p>
-                    </solution>
-                </webwork>
-            </exercise>
-        </exercisegroup>
-    </exercises>
+        </webwork>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

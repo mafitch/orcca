@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,1746 +6,2160 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
 <section xml:id="section-fractions-and-fraction-arithmetic" permid="ryZ">
-
-    <title>Fractions and Fraction Arithmetic</title>
-
-    <introduction permid="HkN">
-
-        <p permid="BYr">The word <q>fraction</q> comes from the Latin word <foreign>fractio</foreign>, which means <q>break into pieces.</q> For thousands of years, cultures from all over the world have used fractions to understand parts of a whole.</p>
-    </introduction>
-
-    <subsection permid="XGi">
-        <title>Visualizing Fractions</title>
-
-        <paragraphs permid="oEt">
-            <title>Parts of a Whole</title>
-
-            <p permid="RRj">One approach to understanding fractions is to think of them as parts of a whole.</p>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="umB">
-                <p permid="Aje">In <xref ref="figure-fraction">Figure</xref>, we see <m>1</m> whole divided into <m>7</m> parts. Since <m>3</m> parts are shaded, we have an illustration of the fraction <m>\frac{3}{7}</m>. The <term>denominator</term> <m>7</m> tells us how many parts to cut up the whole; since we have <m>7</m> parts, they're called <q>sevenths.</q> The <term>numerator</term> <m>3</m> tells us how many sevenths to consider. <idx><h>fraction</h><h>numerator</h></idx><idx><h>fraction</h><h>denominator</h></idx><idx><h>numerator</h></idx><idx><h>denominator</h></idx></p>
-
-                <figure xml:id="figure-fraction" permid="gqn">
-                    <caption>Representing <m>\frac{3}{7}</m> as parts of a whole.</caption>
-                    <image permid="KWE">
-                        <description>a rectangle that is seven times as wide as it is tall; the entire rectangle is shaded; there is a 1 in the center of the rectangle; to its right, it is labeled 'one whole'; another rectangle of the same size is aligned directly below the first rectangle; it is subdivided equally into seven squares; the first three squares are shaded; there is a 1/7 in the center of each of the first three squares; to its right, it is labeled 'three sevenths'</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \draw[fill=red!20] (0,1.5) rectangle (7,2.5);
-                    \node at (3.5,2) {1};
-                    \node[right] at (7,2) {one whole};
-                    \draw (0,0) rectangle (7,1);
-                    \draw[fill=red!20] (0,0) rectangle (3,1);
-                    \draw (1,0)--(1,1);
-                    \draw (2,0)--(2,1);
-                    \draw (3,0)--(3,1);
-                    \draw (4,0)--(4,1);
-                    \draw (5,0)--(5,1);
-                    \draw (6,0)--(6,1);
-                    \node at (0.5,0.5) {$\frac{1}{7}$};
-                    \node at (1.5,0.5) {$\frac{1}{7}$};
-                    \node at (2.5,0.5) {$\frac{1}{7}$};
-                    \node[right] at (7,0.5) {three sevenths};
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-
-            <exercise permid="mIc">
-                <title>A Fraction as Parts of a Whole</title>
-                <webwork>
-                    <statement>
-                        <p permid="OmJ">To visualize the fraction <m>\frac{14}{35}</m>, you might cut a rectangle into <var name="35" width="2" /> equal parts, and then count up <var name="14" width="2" /> of them.</p>
-                    </statement>
-                    <solution permid="zGo">
-                        <p permid="gLM">You could cut a rectangle into <m>35</m> equal pieces, and then <m>14</m> of them would represent <m>\frac{14}{35}</m>.</p>
-                    </solution>
-                </webwork>
-            </exercise>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="atK">
-                <p permid="Mxw">We can also locate fractions on number lines. When ticks are equally spread apart, as in <xref ref="figure-fraction-number-line">Figure</xref>, each tick represents a fraction.</p>
-
-                <figure xml:id="figure-fraction-number-line" permid="sEF">
-                    <caption>Representing <m>\frac{3}{7}</m> on a number line.</caption>
-                    <image width="47%" permid="rdN">
-                        <description>a number line with a curved arrow emanating from 0 and landing to the right at 1/7, then again from 1/7 to 2/7, and again from 2/7 to 3/7</description>
-            <latex-image>
-            <![CDATA[\begin{tikzpicture}
-                \begin{axis}[numberline,
-                            xmin=0,xmax=1,
-                            xtick={0,1},
-                            minor xtick={-2,-1.8571428,...,2},
-                            extra x ticks={0.42857},
-                            extra x tick labels={$\frac{3}{7}$},
-                            xlabel={},
-                            ]
-                    \addplot[primarycurve, -, smooth] coordinates {(0,0) (0.071428,1) (0.142857,0)};
-                    \addplot[primarycurve, -, smooth] coordinates {(0.142857,0) (0.214228,1) (0.285714,0)};
-                    \addplot[primarycurve,->, smooth] coordinates {(0.285714,0) (0.35714,1) (0.42857,0)};
-                \end{axis}
-            \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-
-            <exercise permid="SPl">
-                <title>A Fraction on a Number Line</title>
-                <webwork>
-                    <setup>
-            <pg-code>
-                $numberline=init_graph(-1.5,-0.15,1.5,0.06,size=>[240,34]);
-                $numberline->moveTo(-1.5,0);
-                $numberline->lineTo(1.5,0,'black');
-                for my$i(-12..12){$numberline->moveTo($i/8,-0.02);$numberline->lineTo($i/8,0.02,'black');};
-                for my$i(-8,0,8){$numberline->moveTo($i/8,-0.05);$numberline->lineTo($i/8,0.05,'black');};
-                $numberline->lb(new Label(0,-0.05,"0",'black','center','top','large'));
-                $numberline->lb(new Label(1,-0.05,"1",'black','center','top','large'));
-                $numberline->lb(new Label(-1,-0.05,"-1",'black','center','top','large'));
-                $numberline->stamps(closed_circle(5/8,0,'blue'));
-                Context("LimitedFraction");
-                $ans=Fraction(5,8);
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="utS">In the given number line, what fraction is marked?</p>
-                        <sidebyside margins="0%" widths="40%" permid="GAT">
-                            <image pg-name="$numberline" permid="XkW">
-                                <description>a number line with -1, 0, and 1 marked; there are evenly spaced ticks, with eight ticks between -1 and 0, eight between 0 and 1, and so on; there is a dot marked at the fifth tick to the right from 0</description>
-                            </image>
-                        </sidebyside>
-                        <p permid="aBb"><var name="$ans" width="5" /></p>
-                    </statement>
-                    <solution permid="fNx">
-                        <p permid="MSV">There are <m>8</m> subdivisions between <m>0</m> and <m>1</m>, and the mark is at the fifth subdivision. So the mark is <m>\frac{5}{8}</m> of the way from <m>0</m> to <m>1</m> and therefore represents the fraction <m>\frac{5}{8}</m>.</p>
-                    </solution>
-                </webwork>
-            </exercise>
-        </paragraphs>
-
-        <paragraphs permid="ULC">
-            <title>Division</title>
-
-            <p permid="xYs">Fractions can also be understood through division.</p>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="yWu">
-                <p permid="YLO">For example, we can view the fraction <m>\frac{3}{7}</m> as <m>3</m> divided into <m>7</m> equal parts, as in <xref ref="figure-fraction-division">Figure</xref>. Just one of those parts represents <m>\frac{3}{7}</m>.</p>
-
-                <figure xml:id="figure-fraction-division" permid="ESX">
-                    <caption>Representing <m>\frac{3}{7}</m> on a number line.</caption>
-                    <image width="47%" permid="Dsf">
-                        <description>a number line with a ruler superimposed over the segment from 0 to 3; the ruler is subdivided into seven pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 3/7</description>
-            <latex-image>
-            <![CDATA[\begin{tikzpicture}
-                \begin{axis}[numberline,
-                            xmin=-1,xmax=4,
-                            xtick={-1,0,...,4},
-                            minor xtick={{}},
-                            extra x ticks={0.42},
-                            extra x tick labels={$\frac{3}{7}$},
-                            xlabel={},
-                            ]
-                    \addplot[guideline] coordinates {(0,0) (0,1) (3,1) (3,0)};
-                    \addplot[guideline,<-] coordinates {(0.428571,0) (0.428571,1)} node[above] {$3$ divided by $7$};
-                    \addplot[guideline] coordinates {(0.857142,0.8) (0.857142,1)};
-                    \addplot[guideline] coordinates {(1.285714,0.8) (1.285714,1)};
-                    \addplot[guideline] coordinates {(1.71428,0.8) (1.71428,1)};
-                    \addplot[guideline] coordinates {(2.142857,0.8) (2.1428575,1)};
-                    \addplot[guideline] coordinates {(2.571428,0.8) (2.5714282,1)};
-                \end{axis}
-            \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-
-            <exercise permid="fdD">
-                <title>Seeing a Fraction as Division Arithmetic</title>
-                <webwork>
-                    <statement>
-                        <p permid="GIk">The fraction <m>\frac{21}{40}</m> can be thought of as dividing the whole number <var name="21" width="5" /> into <var name="40" width="5" /> equal-sized parts.</p>
-                    </statement>
-                    <solution permid="LUG">
-                        <p permid="tae">Since <m>\frac{21}{40}</m> means the same as <m>21\div40</m>, it can be thought of as dividing <m>21</m> into <m>40</m> equal parts.</p>
-                    </solution>
-                </webwork>
-            </exercise>
-        </paragraphs>
-    </subsection>
-
-    <subsection permid="DNr">
-        <title>Equivalent Fractions</title>
-        <p permid="WBc">It's common to have two fractions that represent the same amount. Consider <m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> represented in various ways in <xref first="figure-equivalent-fractions-parts" last="figure-equivalent-fractions-division">Figures</xref>.</p>
-
-        <sidebyside widths="32% 32% 32%" margins="0%" valign="bottom" permid="wbO">
-
-            <figure xml:id="figure-equivalent-fractions-parts" permid="lag">
-                <caption><m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> as equal parts of a whole</caption>
-                <image width="47%" permid="jzo">
-                    <description>one rectangle that is five times as wide as it is tall; the entire rectangle is shaded; there is a 1 in the center of the rectangle; a second rectangle that is also five times as wide as it is tall; it is subdivided equally into five squares; the first two squares are shaded; there is a 1/5 in the center of each of the first two squares; a third rectangle that is also five times as wide as it is tall; it is subdivided equally into fifteen adjacent rectangles; the first six of these smaller rectangles are shaded; there is a 1/15 in the center of each of the first six smaller rectangles</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    %\draw[fill=red!20] (0,1.5) rectangle (5,2.5);
-                    %\node at (2.5,2) {1};
-
-                    \draw (0,0) rectangle (5,1);
-                    \draw[fill=red!20] (0,0) rectangle (2,1);
-                    \draw (1,0)--(1,1);
-                    \draw (2,0)--(2,1);
-                    \draw (3,0)--(3,1);
-                    \draw (4,0)--(4,1);
-                    \node at (0.5,0.5) {$\frac{1}{5}$};
-                    \node at (1.5,0.5) {$\frac{1}{5}$};
-
-                    \draw (0,-1.5) rectangle (5,-0.5);
-                    \draw[fill=red!20] (0,-1.5) rectangle (2,-0.5);
-                    \draw (0.3333,-1.5)--(0.3333,-0.5);
-                    \draw (0.6667,-1.5)--(0.6667,-0.5);
-                    \draw (1,-1.5)--(1,-0.5);
-                    \draw (1.3333,-1.5)--(1.3333,-0.5);
-                    \draw (1.6667,-1.5)--(1.6667,-0.5);
-                    \draw (2,-1.5)--(2,-0.5);
-                    \draw (2.3333,-1.5)--(2.3333,-0.5);
-                    \draw (2.6667,-1.5)--(2.6667,-0.5);
-                    \draw (3,-1.5)--(3,-0.5);
-                    \draw (3.3333,-1.5)--(3.3333,-0.5);
-                    \draw (3.6667,-1.5)--(3.6667,-0.5);
-                    \draw (4,-1.5)--(4,-0.5);
-                    \draw (4.3333,-1.5)--(4.3333,-0.5);
-                    \draw (4.6667,-1.5)--(4.6667,-0.5);
-                    \node at (0.1667,-1) {$\frac{1}{15}$};
-                    \node at (0.5,-1) {$\frac{1}{15}$};
-                    \node at (0.8333,-1) {$\frac{1}{15}$};
-                    \node at (1.1667,-1) {$\frac{1}{15}$};
-                    \node at (1.5,-1) {$\frac{1}{15}$};
-                    \node at (1.8333,-1) {$\frac{1}{15}$};
-                \end{tikzpicture}]]>
-            </latex-image>
-                </image>
-            </figure>
-
-            <figure xml:id="figure-equivalent-fractions-number-line" permid="Rhp">
-                <caption><m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> as equal on a number line</caption>
-                <image width="47%" permid="PGx">
-                    <description>a number line with a curved arrow emanating from 0 and landing to the right at 1/5, then again from 1/5 to 2/5; there is a number line with a curved arrow emanating from 0 and landing to the right at 1/15, then again from 1/15 to 2/15, then again from 2/15 to 3/15, then again from 3/15 to 4/15, then again from 4/15 to 5/15, and then again from 5/15 to 6/15</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[numberline,
-                                xmin=0,xmax=1,
-                                xtick={0,1},
-                                minor xtick={-1,-0.8,...,1},
-                                extra x ticks={0.4},
-                                extra x tick labels={$\frac{2}{5}$},
-                                xlabel={},
-                                ]
-                        \addplot[primarycurve, -, smooth] coordinates {(0,0) (0.1,1) (0.2,0)};
-                        \addplot[primarycurve, ->, smooth] coordinates {(0.2,0) (0.3,1) (0.4,0)};
-                    \end{axis}
-                    \begin{axis}[numberline,
-                                at={(0,-2cm)},
-                                xmin=0,xmax=1,
-                                xtick={0,1},
-                                minor xtick={-1,-0.8,...,1},
-                                extra x ticks={0.4},
-                                extra x tick labels={$\frac{6}{15}$},
-                                xlabel={},
-                                ]
-                        \addplot[primarycurve, -, smooth] coordinates {(0,0) (0.0333333,1) (0.0666667,0)};
-                        \addplot[primarycurve, -, smooth] coordinates {(0.0666666,0) (0.1,1) (0.1333333,0)};
-                        \addplot[primarycurve, -, smooth] coordinates {(0.1333333,0) (0.1666667,1) (0.2,0)};
-                        \addplot[primarycurve, -, smooth] coordinates {(0.2,0) (0.2333333,1) (0.2666667,0)};
-                        \addplot[primarycurve, -, smooth] coordinates {(0.2666666,0) (0.3,1) (0.3333333,0)};
-                        \addplot[primarycurve,->, smooth] coordinates {(0.3333333,0) (0.3666667,1) (0.4,0)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                </image>
-            </figure>
-
-            <figure xml:id="figure-equivalent-fractions-division" permid="xoy">
-                <caption><m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> as equal results from division</caption>
-                <image width="47%" permid="vNG">
-                    <description>a number line with a ruler superimposed over the segment from 0 to 2; the ruler is subdivided into five pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 2/5; there is a second number line with a ruler superimposed over the segment from 0 to 6; the ruler is subdivided into fifteen pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 6/15</description>
-            <latex-image>
-            <![CDATA[\begin{tikzpicture}
-                \begin{axis}[numberline,
-                            xmin=0,xmax=6,
-                            xtick={0,1,...,6},
-                            minor xtick={{}},
-                            extra x ticks={0.4},
-                            extra x tick labels={$\frac{2}{5}$},
-                            xlabel={},
-                            x=0.8cm,
-                            ]
-                    \addplot[guideline] coordinates {(0,0) (0,1) (2,1) (2,0)};
-                    \addplot[guideline,<-] coordinates {(0.4,0) (0.4,1)} node[above] {$2$ divided by $5$};
-                    \addplot[guideline] coordinates {(0.8,0.8) (0.8,1)};
-                    \addplot[guideline] coordinates {(1.2,0.8) (1.2,1)};
-                    \addplot[guideline] coordinates {(1.6,0.8) (1.6,1)};
-                \end{axis}
-                \begin{axis}[numberline,
-                            at={(0,-2cm)},
-                            xmin=0,xmax=6,
-                            xtick={0,1,...,6},
-                            minor xtick={{}},
-                            extra x ticks={0.4},
-                            extra x tick labels={$\frac{6}{15}$},
-                            xlabel={},
-                            x=0.8cm,
-                            ]
-                    \addplot[guideline] coordinates {(0,0) (0,1) (6,1) (6,0)};
-                    \addplot[guideline,<-] coordinates {(0.4,0) (0.4,1)} node[above] {$6$ divided by $15$};
-                    \addplot[guideline] coordinates {(0.8,0.8) (0.8,1)};
-                    \addplot[guideline] coordinates {(1.2,0.8) (1.2,1)};
-                    \addplot[guideline] coordinates {(1.6,0.8) (1.6,1)};
-                    \addplot[guideline] coordinates {(2,0.8) (2,1)};
-                    \addplot[guideline] coordinates {(2.4,0.8) (2.4,1)};
-                    \addplot[guideline] coordinates {(2.8,0.8) (2.8,1)};
-                    \addplot[guideline] coordinates {(3.2,0.8) (3.2,1)};
-                    \addplot[guideline] coordinates {(3.6,0.8) (3.6,1)};
-                    \addplot[guideline] coordinates {(4,0.8) (4,1)};
-                    \addplot[guideline] coordinates {(4.4,0.8) (4.4,1)};
-                    \addplot[guideline] coordinates {(4.8,0.8) (4.8,1)};
-                    \addplot[guideline] coordinates {(5.2,0.8) (5.2,1)};
-                    \addplot[guideline] coordinates {(5.6,0.8) (5.6,1)};
-                \end{axis}
-            \end{tikzpicture}]]>
-            </latex-image>
-                </image>
-            </figure>
-        </sidebyside>
-
-        <p permid="CIl">Those two fractions, <m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> are equal, as those figures demonstrate. Also, because they each equal <m>0.4</m> as a decimal. If we must work with this number, the fraction that uses smaller numbers, <m>\frac{2}{5}</m>, is preferable. Working with smaller numbers decreases the likelihood of making a human arithmetic error. And it also increases the chances that you might make useful observations about the nature of that number.</p>
-
-        <sidebyside widths="65% 29%" margins="0%" permid="ciX">
-            <p permid="dvH">So if you are handed a fraction like <m>\frac{6}{15}</m>, it is important to try to <term>reduce</term> it to <q>lowest terms.</q><idx><h>reduced fraction</h></idx><idx><h>fraction</h><h>reduction</h></idx> The most important skill you can have to help you do this is to know the multiplication table well. If you know it well, you know that <m>6=2\cdot3</m> and <m>15=3\cdot5</m>, so you can break down the numerator and denominator that way. Both the numerator and denominator are divisible by <m>3</m>, so they can be <q>factored out</q> and then as factors, cancel out.</p>
-
-            <p permid="JCQ"><md permid="poA">
-                <mrow>\frac{6}{15}\amp=\frac{2\cdot3}{3\cdot5}</mrow>
-                <mrow>\amp=\frac{2\cdot\cancelhighlight{3}}{\cancelhighlight{3}\cdot5}</mrow>
-                <mrow>\amp=\frac{2\cdot1}{1\cdot5}</mrow>
-                <mrow>\amp=\frac{2}{5}</mrow>
-            </md></p>
-        </sidebyside>
-
-        <exercise permid="Iqg">
-            <webwork>
-                <setup>
-            <pg-code>
-                Context("LimitedFraction");
-                @f=(Fraction(1,3),Fraction(4,15),Fraction(7,9));
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="mPt">Reduce these fractions into lowest terms.<ol label="a." cols="3" permid="yAV">
-                        <li permid="bNy">
-                            <p permid="yfw"><m>\dfrac{14}{42}=</m><var name="$f[0]" width="5" /></p>
-                        </li>
-                        <li permid="HUH">
-                            <p permid="emF"><m>\dfrac{8}{30}=</m><var name="$f[1]" width="5" /></p>
-                        </li>
-                        <li permid="obQ">
-                            <p permid="KtO"><m>\dfrac{70}{90}=</m><var name="$f[2]" width="5" /></p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution permid="sbP">
-                    <p permid="Zhn"><ol cols="2" permid="hCK">
-                        <li permid="UiZ">
-                            <p permid="qAX">With <m>\frac{14}{42}</m>, we have <m>\frac{2\cdot7}{2\cdot3\cdot7}</m>, which reduces to <m>\frac{1}{3}</m>.</p>
-                        </li>
-                        <li permid="Aqi">
-                            <p permid="WIg">With <m>\frac{8}{30}</m>, we have <m>\frac{2\cdot2\cdot2}{2\cdot3\cdot5}</m>, which reduces to <m>\frac{4}{15}</m>.</p>
-                        </li>
-                        <li permid="gxr">
-                            <p permid="CPp">With <m>\frac{70}{90}</m>, we have <m>\frac{7\cdot10}{9\cdot10}</m>, which reduces to <m>\frac{7}{9}</m>.</p>
-                        </li>
-                    </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
-
-        <p permid="iPu">Sometimes it is useful to do the opposite of reducing a fraction, and <term>build up</term> the fraction to use larger numbers.</p>
-
-        <exercise permid="oxp">
-            <webwork>
-                <setup>
-            <pg-code>
-                Context("LimitedRadical");
-                $p=Formula("84/100");
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="SWC">Sayid scored <m>\frac{21}{25}</m> on a recent exam. Build up this fraction so that the denominator is <m>100</m>, so that Sayid can understand what percent score he earned.</p>
-                    <p permid="zdL"><var name="$p" width="10" /></p>
-                </statement>
-                <solution permid="YiY">
-                    <p permid="Fow">To change the denominator from <m>25</m> to <m>100</m>, it needs to be multiplied by <m>4</m>. So we calculate<md permid="VvJ">
-                        <mrow>\frac{21}{25}\amp=\frac{21\cdot4}{25\cdot4}</mrow>
-                        <mrow>\amp=\frac{84}{100}</mrow>
-                    </md></p>
-                    <p permid="lvF">So the fraction <m>\frac{21}{25}</m> is equivalent to <m>\frac{84}{100}</m>. (This means Sayid scored an <m>84\%</m>.)</p>
-                </solution>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <subsection permid="jUA">
-        <title>Multiplying with Fractions</title>
-
-        <example permid="UEy">
-            <p permid="NCP">Suppose a recipe calls for <m>\frac{2}{3}</m> cup of milk, but we’d like to quadruple the recipe (make it four times as big). We'll need four times as much milk, and one way to measure this out is to fill a measuring cup to <m>\frac{2}{3}</m> full, four times:</p>
-
-            <sidebyside widths="47%" permid="thi">
-                <image permid="bUP">
-                    <description>four measuring cups, each filled two-thirds with liquid</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \foreach \x in {0,4,8,12} {
-                        \fill[color=blue!20] (\x,0) rectangle (2+\x,2.157);
-                        \draw (\x,0) rectangle (2+\x,3.236);
-                        \draw (\x,1.079) -- (2+\x,1.079);
-                        \draw (\x,2.157) -- (2+\x,2.157);
-                        \draw (\x,3.236) -- (\x-0.5,3.236) -- (\x,2.5);
-                        \draw (2+\x,3.236) --+ (1,0) --+ (1.5,-2) --+ (1.3,-2.2) --+ (0.8,-0.2) --+ (0,-0.2);
-                    }
-                \end{tikzpicture}]]>
-            </latex-image>
-                </image>
-            </sidebyside>
-
-            <p permid="tJY">When you count up the shaded thirds, there are eight of them. So multiplying <m>\frac{2}{3}</m> by the whole number <m>4</m>, the result is <m>\frac{8}{3}</m>. Mathematically:<md permid="BCS">
-                <mrow>4\cdot\frac{2}{3}\amp=\frac{4\cdot2}{3}</mrow>
-                <mrow>\amp=\frac{8}{3}</mrow>
-            </md></p>
-        </example>
-
-        <fact permid="gSQ">
-            <title>Multiplying a Fraction and a Whole Number</title>
-            <p permid="Psc">When you multiply a whole number by a fraction, you may just multiply the whole number by the numerator and leave the denominator alone. In other words, as long as <m>d</m> is not <m>0</m>, then a whole number and a fraction multiply this way:<me permid="Yqp">a \cdot \frac{c}{d} = \frac{a\cdot c}{d}</me></p>
-        </fact>
-
-        <example permid="ALH">
-            <p permid="ZRh">We could also use multiplication to decrease amounts. Suppose we needed to cut the recipe down to just one fifth. Instead of <em>four</em> of the <m>\frac{2}{3}</m> cup milk, we need <em>one fifth</em> of the <m>\frac{2}{3}</m> cup milk. So instead of multiplying by <m>4</m>, we multiply by <m>\frac{1}{5}</m>. But how much is <m>\frac{1}{5}</m> of <m>\frac{2}{3}</m> cup?</p>
-
-            <sidebyside widths="77% 16%" margins="0%" permid="Zor">
-
-                <p permid="FYq">If we cut the measuring cup into five equal vertical strips along with the three equal horizontal strips, then in total there are <m>3\cdot5=15</m> subdivisions of the cup. Two of those sections represent <m>\frac{1}{5}</m> of the <m>\frac{2}{3}</m> cup.</p>
-
-                <image permid="IbY">
-                    <description>a measuring cup divided evenly into three horizontal sections, but also evenly into five vertical sections; in total, there are fifteen sections; the two that correspond to the lower two-thirds and leftmost one-fifth are shaded</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \fill[color=blue!20] (0,0) rectangle (0.4,2.157);
-                    \fill[color=blue!05] (0.40,0) rectangle (2,2.157);
-                    \draw (0,0) rectangle (2,3.236);
-                    \draw (0,1.079) -- (2,1.079);
-                    \draw (0,2.157) -- (2,2.157);
-                    \draw (0,3.236) -- (-0.5,3.236) -- (0,2.5);
-                    \draw (2,3.236) --+ (1,0) --+ (1.5,-2) --+ (1.3,-2.2) --+ (0.8,-0.2) --+ (0,-0.2);
-                    \foreach \x in {0.4,0.8,1.2,1.6} \draw[dashed] (\x,0) -- (\x,3.236);
-                \end{tikzpicture}]]>
-            </latex-image>
-                </image>
-            </sidebyside>
-
-            <sidebyside widths="65% 29%" margins="0%" permid="FvA">
-                <p permid="mfz">In the end, we have <m>\frac{2}{15}</m> of a cup. The denominator <m>15</m> came from multiplying <m>5</m> and <m>3</m>, the denominators of the fractions we had to multiply. The numerator <m>2</m> came from multiplying <m>1</m> and <m>2</m>, the numerators of the fractions we had to multiply.</p>
-
-                <p permid="SmI"><md permid="hKb">
-                    <mrow>\frac{1}{5}\cdot\frac{2}{3}\amp=\frac{1\cdot2}{5\cdot3}</mrow>
-                    <mrow>\amp=\frac{2}{15}</mrow>
-                </md></p>
-            </sidebyside>
-        </example>
-
-        <fact xml:id="fact-multiplication-of-fractions" permid="MZZ">
-            <title>Multiplication with Fractions</title>
-            <idx><h>Multiplication</h><h>of fractions</h></idx>
-            <statement>
-                <p permid="vzl">As long as <m>b</m> and <m>d</m> are not <m>0</m>, then fractions multiply this way:<me permid="Exy">\frac{a}{b} \cdot \frac{c}{d} = \frac{a\cdot c}{b \cdot d}</me></p>
-            </statement>
-        </fact>
-
-        <exercise permid="lCJ">
-            <webwork>
-                <title>Fraction Multiplication Practice</title>
-                <setup>
-            <pg-code>
-                Context("LimitedFraction");
-                @f=(Fraction(10,21),Fraction(20,1),Fraction(-28,15),Fraction(-14,9));
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="fkU">Simplify these fraction products.<ol label="a." cols="2" permid="eIe">
-                        <li permid="MEA">
-                            <p permid="iWy"><m>\dfrac{1}{3}\cdot\dfrac{10}{7}=</m><var name="$f[0]" width="10" /></p>
-                        </li>
-                        <li permid="sLJ">
-                            <p permid="PdH"><m>\dfrac{12}{3}\cdot\dfrac{15}{3}=</m><var name="$f[1]" width="10" /></p>
-                        </li>
-                        <li permid="YSS">
-                            <p permid="vkQ"><m>-\dfrac{14}{5}\cdot\dfrac{2}{3}=</m><var name="$f[2]" width="10" /></p>
-                        </li>
-                        <li permid="Fab">
-                            <p permid="brZ"><m>\dfrac{70}{27}\cdot\dfrac{12}{-20}=</m><var name="$f[3]" width="10" /></p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution permid="Eqh">
-                    <p permid="RCO"><ol permid="NJT">
-                        <li permid="lhk">
-                            <p permid="Hzi">Multiplying numerators gives <m>10</m>, and multiplying denominators gives <m>21</m>. The answer is <m>\frac{10}{21}</m>.</p>
-                        </li>
-                        <li permid="Rot">
-                            <p permid="nGr">Before we multiply fractions, note that <m>\frac{12}{3}</m> reduces to <m>4</m>, and <m>\frac{15}{3}</m> reduces to <m>5</m>. So we just have <m>4\cdot5=20</m>.</p>
-                        </li>
-                        <li permid="xvC">
-                            <p permid="TNA">Multiplying numerators gives <m>28</m>, multiplying denominators gives <m>15</m>, and multiplying a negative times a positive results in a negative. The answer is <m>-\frac{28}{15}</m>.</p>
-                        </li>
-                        <li permid="dCL">
-                            <p permid="zUJ">Before we multiply fractions, note that <m>\frac{12}{-20}</m> reduces to <m>\frac{-3}{5}</m>. So we have <m>\frac{70}{27}\cdot\frac{-3}{5}</m>. Both the numerator of the first fraction and denominator of the second fraction are divisible by <m>5</m>, so it helps to reduce both fractions accordingly and get <m>\frac{14}{27}\cdot\frac{-3}{1}</m>. Both the denominator of the first fraction and numerator of the second fraction are divisible by <m>3</m>, so it helps to reduce both fractions accordingly and get <m>\frac{14}{9}\cdot\frac{-1}{1}</m>. Now we are just multiplying <m>\frac{14}{9}</m> by <m>-1</m>, so the result is <m>-\frac{14}{9}</m>.</p>
-                        </li>
-                    </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
-
-    </subsection>
-
-    <subsection permid="QbJ">
-        <title>Division with Fractions</title>
-
-        <p permid="OWD">How does division with fractions work? Are we able to compute/simplify each of these examples?<ol label="a." cols="4" permid="jrX">
-            <li permid="JJU">
-                <p permid="gbS"><m>3\div\frac{2}{7}</m></p>
-            </li>
-            <li permid="pRd">
-                <p permid="Mjb"><m>\frac{18}{19}\div5</m></p>
-            </li>
-            <li permid="VYm">
-                <p permid="sqk"><m>\frac{14}{3}\div\frac{8}{9}</m></p>
-            </li>
-            <li permid="Cfv">
-                <p permid="Yxt"><m>\frac{\ \frac{2}{5}\ }{\frac{5}{2}}</m></p>
-            </li>
-        </ol></p>
-
-        <p permid="vdM">We know that when we divide something by <m>2</m>, this is the same as multiplying it by <m>\frac{1}{2}</m>. Conversely, dividing a number or expression by <m>\frac{1}{2}</m> is the same as multiplying by <m>\frac{2}{1}</m>, or just <m>2</m>. The more general property is that when we divide a number or expression by <m>\frac{a}{b}</m>, this is equivalent to multiplying by the reciprocal <m>\frac{b}{a}</m>.</p>
-
-        <fact xml:id="fact-division-of-fractions" permid="xRb">
-            <title>Division with Fractions</title>
-            <statement>
-                <p permid="bGu">As long as <m>b</m>, <m>c</m> and <m>d</m> are not <m>0</m>, then division with fractions works this way:<me permid="kEH">\frac{a}{b} \div \frac{c}{d} = \frac{a}{b}\cdot\frac{d}{c}</me></p>
-            </statement>
-        </fact>
-
-        <example permid="RJS">
-            <p permid="ytR">With our examples from the beginning of this subsection:<ol label="a." cols="2" permid="Gfu">
-            <!-- empty rows here to balance vertical load for multicolumn alignment -->
-                <li permid="imE">
-                    <p permid="EEC"><m>\begin{aligned}[t]
-                        3\div\frac{2}{7}\amp=3\multiplyright{\frac{7}{2}}\\
-                        \amp=\divideunder{3}{1}\cdot\frac{7}{2}\\
-                        \amp=\frac{21}{2}\\
-                        \ 
-                        \end{aligned}
-                    </m></p>
-                </li>
-                <li permid="OtN">
-                    <p permid="kLL"><m>\begin{aligned}[t]
-                        \frac{18}{19}\div5\amp=\frac{18}{19}\div\divideunder{5}{1}\\
-                        \amp=\frac{18}{19}\multiplyright{\frac{1}{5}}\\
-                        \amp=\frac{18}{95}\\
-                        \ 
-                        \end{aligned}
-                    </m></p>
-                </li>
-                <li permid="uAW">
-                    <p permid="QSU"><m>\begin{aligned}[t]
-                        \frac{14}{3}\div\frac{8}{9}\amp=\frac{14}{3}\multiplyright{\frac{9}{8}}\\
-                        \amp=\frac{14}{\highlight{1}}\cdot\frac{\highlight{3}}{8}\\
-                        \amp=\frac{\highlight{7}}{1}\cdot\frac{3}{\highlight{4}}\\
-                        \amp=\frac{21}{4}
-                        \end{aligned}
-                    </m></p>
-                </li>
-                <li permid="aIf">
-                    <p permid="xad"><m>\begin{aligned}[t]
-                        \frac{\ \frac{2}{5}\ }{\frac{5}{2}}\amp=\frac{2}{5}\highlight{{}\div{}}\frac{5}{2}\\
-                        \amp=\frac{2}{5}\multiplyright{\frac{2}{5}}\\
-                        \amp=\frac{4}{25}\\
-                        \ 
-                        \end{aligned}
-                    </m></p>
-                </li>
-            </ol></p>
-        </example>
-
-        <exercise permid="dYk">
-            <webwork>
-                <title>Fraction Division Practice</title>
-                <setup>
-            <pg-code>
-                Context("LimitedFraction");
-                @f=(Fraction(7,30),Fraction(12,25),Fraction(-28,3),Fraction(-1400,99));
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="rzm">Simplify these fraction division expressions.<ol label="a." cols="4" permid="KPn">
-                        <li permid="GPo">
-                            <p permid="dhm"><m>\dfrac{1}{3}\div\dfrac{10}{7}=</m><var name="$f[0]" width="10" /></p>
-                        </li>
-                        <li permid="mWx">
-                            <p permid="Jov"><m>\dfrac{12}{5}\div5=</m><var name="$f[1]" width="10" /></p>
-                        </li>
-                        <li permid="TdG">
-                            <p permid="pvE"><m>-14\div\dfrac{3}{2}=</m><var name="$f[2]" width="10" /></p>
-                        </li>
-                        <li permid="zkP">
-                            <p permid="VCN"><m>\dfrac{70}{9}\div\dfrac{11}{-20}=</m><var name="$f[3]" width="10" /></p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution permid="kxq">
-                    <p permid="xJX"><ol cols="2" permid="tRc">
-            <!-- empty rows here to balance vertical load for multicolumn alignment -->
-                        <li permid="frY">
-                            <p permid="BJW"><m>
-                                \begin{aligned}[t]
-                                \frac{1}{3}\div\frac{10}{7}\amp=\frac{1}{3}\cdot\frac{7}{10}\\
-                                \amp=\frac{7}{30}\\
-                                \ 
-                                \end{aligned}
-                            </m></p>
-                        </li>
-                        <li permid="Lzh">
-                            <p permid="hRf"><m>
-                                \begin{aligned}[t]
-                                \frac{12}{5}\div5\amp=\frac{12}{5}\cdot\frac{1}{5}\\
-                                \amp=\frac{12}{25}\\
-                                \ 
-                                \end{aligned}
-                            </m></p>
-                        </li>
-                        <li permid="rGq">
-                            <p permid="NYo"><m>
-                                \begin{aligned}[t]
-                                -14\div\frac{3}{2}\amp=-\frac{14}{1}\cdot\frac{2}{3}\\
-                                \amp=-\frac{28}{3}\\
-                                \end{aligned}
-                            </m></p>
-                        </li>
-                        <li permid="XNz">
-                            <p permid="ufx"><m>
-                                \begin{aligned}[t]
-                                \frac{70}{9}\div\frac{11}{-20}\amp=-\frac{70}{9}\cdot\frac{20}{11}\\
-                                \amp=-\frac{1400}{99}\\
-                                \ 
-                                \end{aligned}
-                            </m></p>
-                        </li>
-                    </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
-
-    </subsection>
-
-    <subsection permid="wiS">
-        <title>Adding and Subtracting Fractions</title>
-
-        <p permid="bkV">In this section, we will review how to add and subtract numerical fractions, both in the case of having the same denominator and in the case of having different denominators.</p>
-
-        <p permid="Hse">With whole numbers and integers, operations of addition and subtraction are relatively straightforward. The situation is almost as straightforward with fractions <em>if the two fractions have the same denominator</em>. Consider
-            <me permid="QLQ">\frac{7}{2} + \frac{3}{2} = 7\text{ halves}+3\text{ halves}</me>
-        In the same way that <m>7</m> tacos and <m>3</m> tacos make <m>10</m> tacos, we have:
-        <me permid="wSZ">
-            \begin{array}{ccccc}
-                7\text{ halves}{}\amp+{}\amp 3\text{ halves}\amp=\amp 10\text{ halves} \\
-                \frac{7}{2}{}\amp+{}\amp\frac{3}{2}\amp=\amp\frac{10}{2} \\
-                \amp \amp \amp=\amp5 \\
-            \end{array}
-        </me>
+  <title>Fractions and Fraction Arithmetic</title>
+  <introduction permid="HkN">
+    <p permid="BYr">
+      The word
+      <q>fraction</q>
+      comes from the Latin word <foreign>fractio</foreign>, which means
+      <q>break into pieces.</q>
+      For thousands of years,
+      cultures from all over the world have used fractions to understand parts of a whole.
+    </p>
+  </introduction>
+  <subsection permid="XGi">
+    <title>Visualizing Fractions</title>
+    <paragraphs permid="oEt">
+      <title>Parts of a Whole</title>
+      <p permid="RRj">
+        One approach to understanding fractions is to think of them as parts of a whole.
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="umB">
+        <p permid="Aje">
+          In <xref ref="figure-fraction">Figure</xref>,
+          we see <m>1</m> whole divided into <m>7</m> parts.
+          Since <m>3</m> parts are shaded,
+          we have an illustration of the fraction <m>\frac{3}{7}</m>.
+          The <term>denominator</term> <m>7</m> tells us how many parts to cut up the whole;
+          since we have <m>7</m> parts, they're called
+          <q>sevenths.</q>
+          The <term>numerator</term> <m>3</m> tells us how many sevenths to consider.
+              <idx><h>fraction</h><h>numerator</h></idx>
+              <idx><h>fraction</h><h>denominator</h></idx>
+              <idx><h>numerator</h></idx>
+              <idx><h>denominator</h></idx>
         </p>
-
-        <fact xml:id="fact-add-fractions-with-same-denominator" permid="WtL">
-            <title>Adding/Subtracting with Fractions Having the Same Denominator</title>
-            <idx><h>Addition</h><h>of fractions with the same denominator</h></idx>
+        <figure xml:id="figure-fraction" permid="gqn">
+          <caption>Representing <m>\frac{3}{7}</m> as parts of a whole.</caption>
+          <image permid="KWE">
+            <description>a rectangle that is seven times as wide as it is tall; the entire rectangle is shaded; there is a 1 in the center of the rectangle; to its right, it is labeled 'one whole'; another rectangle of the same size is aligned directly below the first rectangle; it is subdivided equally into seven squares; the first three squares are shaded; there is a 1/7 in the center of each of the first three squares; to its right, it is labeled 'three sevenths'</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\draw[fill=red!20] (0,1.5) rectangle (7,2.5);
+\node at (3.5,2) {1};
+\node[right] at (7,2) {one whole};
+\draw (0,0) rectangle (7,1);
+\draw[fill=red!20] (0,0) rectangle (3,1);
+\draw (1,0)--(1,1);
+\draw (2,0)--(2,1);
+\draw (3,0)--(3,1);
+\draw (4,0)--(4,1);
+\draw (5,0)--(5,1);
+\draw (6,0)--(6,1);
+\node at (0.5,0.5) {$\frac{1}{7}$};
+\node at (1.5,0.5) {$\frac{1}{7}$};
+\node at (2.5,0.5) {$\frac{1}{7}$};
+\node[right] at (7,0.5) {three sevenths};
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      <exercise permid="mIc">
+        <title>A Fraction as Parts of a Whole</title>
+        <webwork>
             <statement>
-                <p permid="HND">To add or subtract two fractions having the same denominator, <em>keep</em> that denominator, and add or subtract the numerators.<md permid="NRk">
-                    <mrow>\frac{a}{b}+\frac{c}{b}\amp=\frac{a+c}{b}\amp\frac{a}{b}-\frac{c}{b}\amp=\frac{a-c}{b}</mrow>
-                </md>If it's possible, useful, or required of you, simplify the result by reducing to lowest terms.</p>
+              <p permid="OmJ">
+                To visualize the fraction <m>\frac{14}{35}</m>,
+                you might cut a rectangle into <var name="35" width="2" /> equal parts,
+                and then count up <var name="14" width="2" /> of them.
+              </p>
             </statement>
-        </fact>
-
-        <exercise permid="iId">
-            <webwork>
-                <title>Fraction Addition/Subtraction Practice</title>
-                <setup>
-            <pg-code>
-                Context("LimitedFraction");
-                @f=(Fraction(11,3),Fraction(4,3));
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="XGv">Add or subtract these fractions.<ol label="a." cols="2" permid="qWw">
-                        <li permid="DUI">
-                            <p permid="amG"><m>\frac{1}{3}+\frac{10}{3}=</m><var name="$f[0]" width="10" /></p>
-                        </li>
-                        <li permid="kbR">
-                            <p permid="GtP"><m>\frac{13}{6}-\frac{5}{6}=</m><var name="$f[1]" width="10" /></p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution permid="QEz">
-                    <p permid="dRg"><ol label="a." permid="ZYl">
-                        <li permid="Qja">
-                            <p permid="mAY">Since the denominators are both <m>3</m>, we can add the numerators: <m>1+10=11</m>. The answer is <m>\frac{11}{3}</m>.</p>
-                        </li>
-                        <li permid="wqj">
-                            <p permid="SIh">Since the denominators are both <m>6</m>, we can subtract the numerators: <m>13-5=8</m>. The answer is <m>\frac{8}{6}</m>, but that reduces to <m>\frac{4}{3}</m>.</p>
-                        </li>
-                    </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
-
-        <p permid="nzn">Whenever we'd like to combine fractional amounts that don't represent the same number of parts of a whole (that is, when the denominators are different), finding sums and differences is more complicated.</p>
-
-        <example xml:id="example-Quarters-and-Dimes" permid="Kft">
-            <title>Quarters and Dimes</title>
-            <p permid="eBa">Find the sum <m>\frac{3}{4}+\frac{2}{10}</m>. Does this seem intimidating? Consider this:<ul permid="mmD">
-                <li permid="Pzg">
-                    <p permid="yPq"><m>\frac{1}{4}</m> of a dollar is a quarter, and so <m>\frac{3}{4}</m> of a dollar is <m>75</m> cents.</p>
-                </li>
-                <li permid="vGp">
-                    <p permid="eWz"><m>\frac{1}{10}</m> of a dollar is a dime, and so <m>\frac{2}{10}</m> of a dollar is <m>20</m> cents.</p>
-                </li>
-            </ul></p>
-            <p permid="KIj">So if you know what to look for, the expression <m>\frac{3}{4}+\frac{2}{10}</m> is like adding <m>75</m> cents and <m>20</m> cents, which gives you <m>95</m> cents. As a fraction of one dollar, that is <m>\frac{95}{100}</m>. So we can report <me permid="dai">\frac{3}{4}+\frac{2}{10}=\frac{95}{100}</me>. (Although we should probably reduce that last fraction to <m>\frac{19}{20}</m>.)</p>
-        </example>
-
-        <p permid="TGw">This example was not something you can apply to other fraction addition situations, because the denominators here worked especially well with money amounts. But there is something we can learn here. The fraction <m>\frac{3}{4}</m> was equivalent to <m>\frac{75}{100}</m>, and the other fraction <m>\frac{2}{10}</m> was equivalent to <m>\frac{20}{100}</m>. These <em>equivalent</em> fractions have the same denominator and are therefore <q>easy</q> to add. What we saw happen was:<md permid="tYt">
-            <mrow>\frac{3}{4}+\frac{2}{10}\amp=\frac{75}{100}+\frac{20}{100}</mrow>
-            <mrow>\amp=\frac{95}{100}</mrow>
-        </md></p>
-
-        <p permid="zNF">This realization gives us a strategy for adding (or subtracting) fractions. However, first let's review how to find the least common denominator.</p>
-
-        <paragraphs permid="ASL">
-            <title>Finding the Least Common Denominator</title>
-
-        <introduction permid="PUF"><p permid="ifA">When adding or subtracting fractions with different denominators, it is necessary to first find a common denominator. Usually, we want to find the least common denominator (LCD), which is the smallest common multiple of each denominator.</p></introduction>
-        
-        <p permid="efB">It is common to refer to the process of finding the LCD as "building" the LCD. The reason for this is that a common method for finding the LCD, which will be the most useful method to use when we get to more complicated fractions later in the course, is to use the <em>prime factors</em> of each denominator as building blocks to build the LCD. These building blocks will eventually be multiplied together to form the LCD.</p>
-
-        <definition xml:id="definition-prime-factor" permid="LkM">
-            <title>Prime Factor</title>
+            <solution permid="zGo">
+              <p permid="gLM">
+                You could cut a rectangle into <m>35</m> equal pieces,
+                and then <m>14</m> of them would represent <m>\frac{14}{35}</m>.
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+      <sidebyside widths="47% 47%" margins="0%" permid="atK">
+        <p permid="Mxw">
+          We can also locate fractions on number lines.
+          When ticks are equally spread apart,
+          as in <xref ref="figure-fraction-number-line">Figure</xref>,
+          each tick represents a fraction.
+        </p>
+        <figure xml:id="figure-fraction-number-line" permid="sEF">
+          <caption>Representing <m>\frac{3}{7}</m> on a number line.</caption>
+          <image width="47%" permid="rdN">
+            <description>a number line with a curved arrow emanating from 0 and landing to the right at 1/7, then again from 1/7 to 2/7, and again from 2/7 to 3/7</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[numberline,
+xmin=0,xmax=1,
+xtick={0,1},
+minor xtick={-2,-1.8571428,...,2},
+extra x ticks={0.42857},
+extra x tick labels={$\frac{3}{7}$},
+xlabel={},
+]
+\addplot[primarycurve, -, smooth] coordinates {(0,0) (0.071428,1) (0.142857,0)};
+\addplot[primarycurve, -, smooth] coordinates {(0.142857,0) (0.214228,1) (0.285714,0)};
+\addplot[primarycurve,->, smooth] coordinates {(0.285714,0) (0.35714,1) (0.42857,0)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      <exercise permid="SPl">
+        <title>A Fraction on a Number Line</title>
+        <webwork>
+            <setup>
+<pg-code>
+$numberline=init_graph(-1.5,-0.15,1.5,0.06,size=>[240,34]);
+$numberline->moveTo(-1.5,0);
+$numberline->lineTo(1.5,0,'black');
+for my$i(-12..12){$numberline->moveTo($i/8,-0.02);$numberline->lineTo($i/8,0.02,'black');};
+for my$i(-8,0,8){$numberline->moveTo($i/8,-0.05);$numberline->lineTo($i/8,0.05,'black');};
+$numberline->lb(new Label(0,-0.05,"0",'black','center','top','large'));
+$numberline->lb(new Label(1,-0.05,"1",'black','center','top','large'));
+$numberline->lb(new Label(-1,-0.05,"-1",'black','center','top','large'));
+$numberline->stamps(closed_circle(5/8,0,'blue'));
+Context("LimitedFraction");
+$ans=Fraction(5,8);
+</pg-code>
+            </setup>
             <statement>
-                <p permid="hvG">A <term>prime factor</term> of a number is a prime number that divides into that number evenly. To be a prime number means that, when the number is factored using only positive integers, it can only be factored into 1 times itself.</p>
+              <p permid="utS">
+                In the given number line, what fraction is marked?
+              </p>
+              <sidebyside margins="0%" widths="40%" permid="GAT">
+                <image pg-name="$numberline" permid="XkW">
+                  <description>a number line with -1, 0, and 1 marked; there are evenly spaced ticks, with eight ticks between -1 and 0, eight between 0 and 1, and so on; there is a dot marked at the fifth tick to the right from 0</description>
+                </image>
+              </sidebyside>
+              <p permid="aBb">
+                <var name="$ans" width="5" />
+              </p>
             </statement>
-        </definition>
-
-        <example xml:id="example-finding-the-LCD" permid="rrV">
-            <statement>
-                <p permid="qPs">Consider the previous example <xref ref="example-Quarters-and-Dimes">Example</xref>, in which we added the fractions <m>\frac{3}{4}</m> and <m>\frac{2}{10}</m>. Notice that the common denominator used in that example was <m>100</m>. However, that is not the <em>least</em> common denominator. Find the least common denominator (LCD) of these fractions, using the prime factors to build the LCD.</p>
-            </statement>
-            
-            <solution permid="nrW"><p permid="JYp">To find the least common denominator with this method, we must first find the prime factors of each denominator, <m>4</m> and <m>10</m>. This can be done by first factoring each number into any two factors. Then, if any of those factors are not prime (we call them composite in that case), split each of those composite factors into two factors. Keep going with this process until all factors are prime.</p>
-
-            <p permid="qfy">We can factor <m>4</m> into the factors <m>2</m> and <m>2</m>. Notice that both of these factors are prime, so <m>4</m> factors into <m>2\cdot2</m>, when we write it as a product of its prime factors. Note that we call this the <term>prime factorization</term> of <m>4</m>.</p>
-
-            <p permid="WmH">We can factor <m>10</m> into the factors <m>2</m> and <m>5</m>. Notice that both of these factors are prime, so <m>10</m> factors into <m>2\cdot5</m>, when we write it as a product of its prime factors.</p>
-
-            <p permid="CtQ">Now we have the building blocks we need to build the LCD of the fractions <m>\frac{3}{4}</m> and <m>\frac{2}{10}</m>. One way to do this is to first include all the prime factors of the first denominator, which in this case will be <m>2</m> and <m>2</m>, and then take only those prime factors of the second denominator that we don't already have as a result of the previous step.</p>
-
-            <p permid="iAZ">Thus, we would only need to take the factor of <m>5</m> from <m>10</m>, since we already have a factor of <m>2</m> from the first denominator. The last step is to multiply all of those prime factors together.</p>
-
-            <p permid="OIi">Therefore, the LCD of the fractions <m>\frac{3}{4}</m> and <m>\frac{2}{10}</m> is <m>2\cdot2\cdot5=20</m>. Notice that this is smaller than the common denominator of <m>100</m> that was used previously.</p>
-        </solution>
-    </example>
-
-    <p permid="KmK">Let's look at another example of finding the LCD.</p>
-
-    <example permid="Xze">
-        <statement>
-            <p permid="WWB">Find the LCD of the fractions <m>\frac{7}{18}</m> and <m>\frac{1}{54}</m>.</p>
-        </statement>
-
-        <solution permid="Tzf"><p permid="uPr">To find the LCD, we must first find the prime factors of <m>18</m> and <m>54</m>. For <m>18</m>, we can first factor it as <m>3\cdot6</m>. Notice that <m>3</m> is prime, but <m>6</m> is not. So, we need to factor <m>6</m> further. We can factor <m>6</m> into <m>2\cdot3</m> and both of these factors are prime. Thus, the prime factorization of <m>18</m> is <m>2\cdot3\cdot3</m>.</p>
-
-        <p permid="aWA">We can factor <m>54</m> into <m>6\cdot9</m> and neither <m>6</m> nor <m>9</m> are prime. We can factor <m>6</m> into <m>2\cdot3</m> and <m>9</m> into <m>3\cdot3</m>; all of these factors are prime. Thus, the prime factorization of <m>54</m> is <m>2\cdot3\cdot3\cdot3</m>.</p>
-
-        <p permid="HdJ">Note that you could have started each factorization differently, like using <m>2\cdot27</m> for <m>54</m>, but you will eventually end up with the same prime factors in the end.</p>
-
-        <p permid="nkS">Now we have the prime factors we need to build our LCD. Using the method mentioned before, we will first take all of the factors from our first denominator of <m>18</m>, which gives us factors of <m>2</m>, <m>3</m>, and <m>3</m>. Next, we take only the factors of <m>54</m> that we don't already have from our previous step. Notice that we already have the <m>2</m> and two of the three <m>3</m>'s. Thus, we need only take one more factor of <m>3</m> to ensure that all the prime factors of <m>54</m> are represented in the LCD.</p>
-
-        <p permid="Tsb">Therefore, the LCD of <m>\frac{7}{18}</m> and <m>\frac{1}{54}</m> is <m>2\cdot3\cdot3\cdot3=54</m>.</p>
-    </solution>
-</example>
-
-        <remark permid="DGn"><p permid="UbV">You probably noticed in the last example that the LCD turned out to be one of the original denominators. This will always be the case whenever one denominator is a multiple of the other. So, you can save yourself some time if you notice this relationship (or check for it) beforehand.</p></remark>
-
-<p permid="qtT">In summary, here are the steps for finding the LCD of two fractions:<list xml:id="list-finding-the-LCD" permid="jNw">
-
-    <ol label="1." permid="StM">
-        <li permid="cxs"><p permid="LdI">Factor each denominator into its prime factors.</p></li>
-
-            <li permid="IEB"><p permid="rkR">Take all prime factors from the first denominator.</p></li>
-
-            <li permid="oLK"><p permid="Xsa">Take only the prime factors from the second denominator that haven't already been taken from the first denominator.</p></li>
-
-            <li permid="UST"><p permid="Dzj">Multiply together all the prime factors which were taken in the last two steps. The result will be the LCD of the two fractions.</p></li>
-        </ol></list></p>
+            <solution permid="fNx">
+              <p permid="MSV">
+                There are <m>8</m> subdivisions between <m>0</m> and <m>1</m>,
+                and the mark is at the fifth subdivision.
+                So the mark is <m>\frac{5}{8}</m> of the way from <m>0</m> to <m>1</m> and therefore represents the fraction <m>\frac{5}{8}</m>.
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
     </paragraphs>
-<p permid="fUO">Now let's use this skill as we review how to add or subtract fractions with different denominators.</p>
-        <fact permid="CAU">
-            <title>Adding/Subtracting Fractions with Different Denominators</title>
-            <idx><h>Addition</h><h>of fractions with different denominators</h></idx>
-            <statement>
-                <p permid="nUM">To add (or subtract) fractions, use their denominators to find a <term>common denominator</term><idx><h>fraction</h><h>common denominator</h></idx><idx><h>common denominator</h></idx>; usually the least common denominator is preferred. Then, rewrite the fractions as <em>equivalent</em> fractions that use this common denominator. Write the result <em>keeping</em> that denominator and adding (or subtracting) the numerators. Reduce the fraction, if that is useful or required.</p>
-            </statement>
-        </fact>
-
-        <example permid="qmC">
-            <p permid="DdK">Let's add <m>\frac{2}{3}+\frac{2}{5}</m>. The denominators are <m>3</m> and <m>5</m>, so the number <m>15</m> would be a good common denominator. In fact, since both denominators are prime, their product is the LCD.<md permid="afC">
-                <mrow>\frac{2}{3}+\frac{2}{5}\amp=\frac{2\multiplyright{5}}{3\multiplyright{5}}+\frac{2\multiplyright{3}}{5\multiplyright{3}}</mrow>
-                <mrow>\amp=\frac{10}{15}+\frac{6}{15}</mrow>
-                <mrow>\amp=\frac{16}{15}</mrow>
-            </md>
+    <paragraphs permid="ULC">
+      <title>Division</title>
+      <p permid="xYs">
+        Fractions can also be understood through division.
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="yWu">
+        <p permid="YLO">
+          For example, we can view the fraction
+          <m>\frac{3}{7}</m> as <m>3</m> divided into <m>7</m> equal parts,
+          as in <xref ref="figure-fraction-division">Figure</xref>.
+          Just one of those parts represents <m>\frac{3}{7}</m>.
         </p>
-        <p permid="jkT">Notice how we found equivalent fractions. Both fractions needed to have a denominator of <m>15</m>, so we multiplied the numerator and denominator of each fraction by whatever factor was necessary for the resulting denominator to be <m>15</m>.</p> 
-        </example>
-
-        <exercise permid="OPm">
-            <webwork>
-                <title>Using Some Flour</title>
-                <setup>
-            <pg-code>
-                Context()->flags->set(reduceConstants=>0);
-                $flour=NumberWithUnits("13/24",'cup');
-                $ev=$flour->cmp(correct_ans_latex_string => "\frac{13}{24}\text{ cup}");
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="DNE">A chef had <m>\frac{2}{3}</m> cups of flour and needed to use <m>\frac{1}{8}</m> cup to thicken a sauce. How much flour is left? <var name="$flour" evaluator="$ev" width="15" /></p>
-                </statement>
-                <solution permid="wLI">
-                    <p permid="zzk">We need to compute <m>\frac{2}{3} - \frac{1}{8}</m>. The denominators are <m>3</m> and <m>8</m>. Notice that the denominator of <m>3</m> is prime. So we can use that prime factor, as well as the prime factorization of <m>8</m>, which is <m>2\cdot2\cdot2</m>, to build our LCD. Thus, the least common denominator is <m>2\cdot2\cdot2\cdot3=24</m>.</p>
-
-                    <p permid="fGt">So we need to rewrite each fraction using <m>24</m> as the denominator:<md permid="GmL">
-                        <mrow>\frac{2}{3} - \frac{1}{8}\amp=\frac{2\cdot8}{3\cdot8} - \frac{1\cdot3}{8\cdot3}</mrow>
-                        <mrow>\amp=\frac{16}{24}-\frac{3}{24}</mrow>
-                        <mrow>\amp=\frac{13}{24}</mrow>
-                    </md></p>
-                    <p permid="LNC">The numerical result is <m>\frac{13}{24}</m>, but in order for this answer to make sense in the context of the problem being solved, we need to use the appropriate units. The amount of flour remaining is <m>\frac{13}{24}</m> <em>cups</em>.</p>
-                </solution>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <subsection permid="cqb">
-        <title>Mixed Numbers and Improper Fractions</title>
-        <p permid="MbX">A simple recipe for bread contains only a few ingredients:</p>
-
-        <sidebyside permid="uWv">
-            <tabular permid="loB">
-                <row>
-                    <cell><m>1\,\sfrac{1}{2}</m></cell>
-                    <cell>tablespoons yeast</cell>
-                </row>
-                <row>
-                    <cell><m>1\,\sfrac{1}{2}</m></cell>
-                    <cell>tablespoons kosher salt</cell>
-                </row>
-                <row>
-                    <cell><m>6\,\sfrac{1}{2}</m></cell>
-                    <cell>cups unbleached, all-purpose flour (more for dusting)</cell>
-                </row>
-            </tabular>
-        </sidebyside>
-
-        <p permid="sjg">Each ingredient is listed as a <term>mixed number</term><idx><h>fraction</h><h>mixed number</h></idx><idx><h>mixed number</h></idx> that quickly communicates how many whole amounts and how many parts are needed. It's useful for quickly communicating a practical amount of something you are cooking with, measuring on a ruler, purchasing at the grocery store, etc. But it causes trouble in an algebra class. The number <m>1\,\sfrac{1}{2}</m> means <q>one <alert>and</alert> one half.</q> So really,
-        <me permid="Jhr">1\,\frac{1}{2}=1+\frac{1}{2}</me>
-        The trouble is that with <m>1\,\sfrac{1}{2}</m>, you have two numbers written right next to each other. Normally with two math expressions written right next to each other, they should be <em>multiplied</em>, not <em>added</em>. But with a mixed number, they <em>should</em> be added.</p>
-
-        <sidebyside widths="65% 29%" permid="bdE">
-            <stack>
-                <p permid="pJZ">Fortunately we just reviewed how to add fractions. If we need to do any arithmetic with a mixed number like <m>1\,\sfrac{1}{2}</m>, we can treat it as <m>1+\frac{1}{2}</m> and simplify to get a <q>nice</q> fraction instead: <m>\frac{3}{2}</m>. A fraction like <m>\frac{3}{2}</m> is called an <term>improper fraction</term><idx><h>fraction</h><h>improper</h></idx><idx><h>improper fraction</h></idx> because it's actually larger than <m>1</m>. A <term>proper</term><idx><h>fraction</h><h>proper</h></idx><idx><h>proper fraction</h></idx> fraction represents a number that is smaller than one, so its numerator is smaller than its denominator.</p>
-            </stack>
-
-            <p permid="VRi"><md permid="mtU">
-                <mrow>1\,\frac{1}{2}\amp=1+\frac{1}{2}</mrow>
-                <mrow>\amp=\frac{1}{1}+\frac{1}{2}</mrow>
-                <mrow>\amp=\frac{2}{2}+\frac{1}{2}</mrow>
-                <mrow>\amp=\frac{3}{2}</mrow>
-            </md></p>
-        </sidebyside>
-    </subsection>
-
-    <exercises permid="Ixk">
-         <exercisegroup cols="2" permid="gZU">
-            <title>Review and Warmup</title>
-            <exercise permid="qtG">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Fraction");
-                $a=Fraction(random(-33,-13,4),4);
-                $xmin = -max(int(Real($a)*1.6), 10);
-                $gr = init_graph($xmin,-1,-$xmin,1,
-                    axes=>[100,0],
-                    size=>[240,34]
-                );
-                @ticks;
-                for my $j (($xmin)..(-$xmin)) {push(@ticks,$j);};
-                $gr->h_ticks(0,"black",@ticks);
-                $gr->lb( new Label(0,-0.1,0,'black','center','top','large'));
-                $gr->lb( new Label(1,-0.1,1,'black','center','top','large'));
-                $j=0;
-                @decoys = (Real($a), int(Real($a)/2), Real(-$a-2), -Real($a), );
-                for $i (@decoys) {
-                    $gr->moveTo($i,-1);$gr->lineTo($i,0,'black',1);
-                    $gr->lb( new Label($i,0.05,$ALPHABET[$j],'black','center','bottom','large'));
-                    $j++;
-                }
-                $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'A');
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="jUN">Which letter is [`[$a]`] on the number line?</p>
-                        <sidebyside widths="40%" margins="0%" permid="efo">
-                            <image permid="ojh" pg-name="$gr" />
-                        </sidebyside>
-                        <p permid="QbW"><var name="$popup" form="popup" /></p>
-                    </statement>
-                </webwork>
-            </exercise>
-            <exercise permid="WAP">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Fraction");
-                $a=Fraction(random(15,31,4),4);
-                $xmin = -max(int(Real($a)*1.6), 10);
-                $gr = init_graph($xmin,-1,-$xmin,1,
-                    axes=>[100,0],
-                    size=>[240,34]
-                );
-                @ticks;
-                for my $j (($xmin)..(-$xmin)) {push(@ticks,$j);};
-                $gr->h_ticks(0,"black",@ticks);
-                $gr->lb( new Label(0,-0.1,0,'black','center','top','large'));
-                $gr->lb( new Label(1,-0.1,1,'black','center','top','large'));
-                $j=0;
-                @decoys = (Real(-$a-2), -Real($a), int(Real($a)/2), Real($a), );
-                for $i (@decoys) {
-                    $gr->moveTo($i,-1);$gr->lineTo($i,0,'black',1);
-                    $gr->lb( new Label($i,0.05,$ALPHABET[$j],'black','center','bottom','large'));
-                    $j++;
-                }
-                $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="wjf">Which letter is [`[$a]`] on the number line?</p>
-                        <sidebyside widths="40%" margins="0%" permid="Kmx">
-                            <image pg-name="$gr"/>
-                        </sidebyside>
-                        <p permid="cqo"><var name="$popup" form="popup" /></p>
-                    </statement>
-                </webwork>
-            </exercise>
-            <exercise permid="CHY">
-                <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine10.pg"  />
-            </exercise>
-            <exercise permid="iPh">
-                <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine20.pg"  />
-            </exercise>
-            <exercise permid="OWq">
-                <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine30.pg"  />
-            </exercise>
-            <exercise permid="vdz">
-                <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine40.pg"  />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="3" permid="Nhd">
-            <title>Reducing Fractions</title>
-            <exercise permid="bkI">
-                <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction05.pg"  />
-            </exercise>
-            <exercise permid="HrR">
-                <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction10.pg"  />
-            </exercise>
-            <exercise permid="nza">
-                <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction20.pg"  />
-            </exercise>
-            <exercise permid="TGj">
-                <webwork          source="BasicMath/FractionsCalculation/ReduceFraction25.pg"  />
-            </exercise>
-            <exercise permid="zNs">
-                <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction30.pg"  />
-            </exercise>
-            <exercise permid="fUB">
-                <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction40.pg"  />
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2" permid="tom">
-            <title>Building Fractions</title>
-            <exercise permid="MbK">
-                <webwork source="BasicMath/FractionsCalculation/EquivalentFraction10.pg"  />
-            </exercise>
-            <exercise permid="siT">
-                <webwork source="BasicMath/FractionsCalculation/EquivalentFraction10.pg"  />
-            </exercise>
-            <exercise permid="Yqc">
-                <webwork source="BasicMath/FractionsCalculation/EquivalentFraction20.pg"  />
-            </exercise>
-            <exercise permid="Exl">
-                <webwork source="BasicMath/FractionsCalculation/EquivalentFraction20.pg"  />
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="3" permid="Zvv">
-            <title>Multiplying/Dividing Fractions</title>
-            <exercise permid="kEu">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions10.pg"  />
-            </exercise>
-            <exercise permid="QLD">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions10.pg"  />
-            </exercise>
-            <exercise permid="wSM">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions20.pg"  />
-            </exercise>
-            <exercise permid="cZV">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions20.pg"  />
-            </exercise>
-            <exercise permid="Jhe">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
-            </exercise>
-            <exercise permid="pon">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
-            </exercise>
-            <exercise permid="Vvw">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions40.pg"  />
-            </exercise>
-            <exercise permid="BCF">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions40.pg"  />
-            </exercise>
-            <exercise permid="hJO">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
-            </exercise>
-            <exercise permid="NQX">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
-            </exercise>
+        <figure xml:id="figure-fraction-division" permid="ESX">
+          <caption>Representing <m>\frac{3}{7}</m> on a number line.</caption>
+          <image width="47%" permid="Dsf">
+            <description>a number line with a ruler superimposed over the segment from 0 to 3; the ruler is subdivided into seven pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 3/7</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[numberline,
+xmin=-1,xmax=4,
+xtick={-1,0,...,4},
+minor xtick={{}},
+extra x ticks={0.42},
+extra x tick labels={$\frac{3}{7}$},
+xlabel={},
+]
+\addplot[guideline] coordinates {(0,0) (0,1) (3,1) (3,0)};
+\addplot[guideline,<-] coordinates {(0.428571,0) (0.428571,1)} node[above] {$3$ divided by $7$};
+\addplot[guideline] coordinates {(0.857142,0.8) (0.857142,1)};
+\addplot[guideline] coordinates {(1.285714,0.8) (1.285714,1)};
+\addplot[guideline] coordinates {(1.71428,0.8) (1.71428,1)};
+\addplot[guideline] coordinates {(2.142857,0.8) (2.1428575,1)};
+\addplot[guideline] coordinates {(2.571428,0.8) (2.5714282,1)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      <exercise permid="fdD">
+        <title>Seeing a Fraction as Division Arithmetic</title>
+        <webwork>
+            <statement>
+              <p permid="GIk">
+                The fraction <m>\frac{21}{40}</m> can be thought of as dividing the whole number <var name="21" width="5" /> into <var name="40" width="5" /> equal-sized parts.
+              </p>
+            </statement>
+            <solution permid="LUG">
+              <p permid="tae">
+                Since <m>\frac{21}{40}</m> means the same as <m>21\div40</m>,
+                it can be thought of as dividing <m>21</m> into <m>40</m> equal parts.
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+    </paragraphs>
+  </subsection>
+  <subsection permid="DNr">
+    <title>Equivalent Fractions</title>
+    <p permid="WBc">
+      It's common to have two fractions that represent the same amount.
+      Consider <m>\frac{2}{5}</m> and
+      <m>\frac{6}{15}</m> represented in various ways in <xref first="figure-equivalent-fractions-parts" last="figure-equivalent-fractions-division">Figures</xref>.
+    </p>
+    <sidebyside widths="32% 32% 32%" margins="0%" valign="bottom" permid="wbO">
+      <figure xml:id="figure-equivalent-fractions-parts" permid="lag">
+        <caption><m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> as equal parts of a whole</caption>
+        <image width="47%" permid="jzo">
+          <description>one rectangle that is five times as wide as it is tall; the entire rectangle is shaded; there is a 1 in the center of the rectangle; a second rectangle that is also five times as wide as it is tall; it is subdivided equally into five squares; the first two squares are shaded; there is a 1/5 in the center of each of the first two squares; a third rectangle that is also five times as wide as it is tall; it is subdivided equally into fifteen adjacent rectangles; the first six of these smaller rectangles are shaded; there is a 1/15 in the center of each of the first six smaller rectangles</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+%\draw[fill=red!20] (0,1.5) rectangle (5,2.5);
+%\node at (2.5,2) {1};
+\draw (0,0) rectangle (5,1);
+\draw[fill=red!20] (0,0) rectangle (2,1);
+\draw (1,0)--(1,1);
+\draw (2,0)--(2,1);
+\draw (3,0)--(3,1);
+\draw (4,0)--(4,1);
+\node at (0.5,0.5) {$\frac{1}{5}$};
+\node at (1.5,0.5) {$\frac{1}{5}$};
+\draw (0,-1.5) rectangle (5,-0.5);
+\draw[fill=red!20] (0,-1.5) rectangle (2,-0.5);
+\draw (0.3333,-1.5)--(0.3333,-0.5);
+\draw (0.6667,-1.5)--(0.6667,-0.5);
+\draw (1,-1.5)--(1,-0.5);
+\draw (1.3333,-1.5)--(1.3333,-0.5);
+\draw (1.6667,-1.5)--(1.6667,-0.5);
+\draw (2,-1.5)--(2,-0.5);
+\draw (2.3333,-1.5)--(2.3333,-0.5);
+\draw (2.6667,-1.5)--(2.6667,-0.5);
+\draw (3,-1.5)--(3,-0.5);
+\draw (3.3333,-1.5)--(3.3333,-0.5);
+\draw (3.6667,-1.5)--(3.6667,-0.5);
+\draw (4,-1.5)--(4,-0.5);
+\draw (4.3333,-1.5)--(4.3333,-0.5);
+\draw (4.6667,-1.5)--(4.6667,-0.5);
+\node at (0.1667,-1) {$\frac{1}{15}$};
+\node at (0.5,-1) {$\frac{1}{15}$};
+\node at (0.8333,-1) {$\frac{1}{15}$};
+\node at (1.1667,-1) {$\frac{1}{15}$};
+\node at (1.5,-1) {$\frac{1}{15}$};
+\node at (1.8333,-1) {$\frac{1}{15}$};
+\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </figure>
+      <figure xml:id="figure-equivalent-fractions-number-line" permid="Rhp">
+        <caption><m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> as equal on a number line</caption>
+        <image width="47%" permid="PGx">
+          <description>a number line with a curved arrow emanating from 0 and landing to the right at 1/5, then again from 1/5 to 2/5; there is a number line with a curved arrow emanating from 0 and landing to the right at 1/15, then again from 1/15 to 2/15, then again from 2/15 to 3/15, then again from 3/15 to 4/15, then again from 4/15 to 5/15, and then again from 5/15 to 6/15</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[numberline,
+xmin=0,xmax=1,
+xtick={0,1},
+minor xtick={-1,-0.8,...,1},
+extra x ticks={0.4},
+extra x tick labels={$\frac{2}{5}$},
+xlabel={},
+]
+\addplot[primarycurve, -, smooth] coordinates {(0,0) (0.1,1) (0.2,0)};
+\addplot[primarycurve, ->, smooth] coordinates {(0.2,0) (0.3,1) (0.4,0)};
+\end{axis}
+\begin{axis}[numberline,
+at={(0,-2cm)},
+xmin=0,xmax=1,
+xtick={0,1},
+minor xtick={-1,-0.8,...,1},
+extra x ticks={0.4},
+extra x tick labels={$\frac{6}{15}$},
+xlabel={},
+]
+\addplot[primarycurve, -, smooth] coordinates {(0,0) (0.0333333,1) (0.0666667,0)};
+\addplot[primarycurve, -, smooth] coordinates {(0.0666666,0) (0.1,1) (0.1333333,0)};
+\addplot[primarycurve, -, smooth] coordinates {(0.1333333,0) (0.1666667,1) (0.2,0)};
+\addplot[primarycurve, -, smooth] coordinates {(0.2,0) (0.2333333,1) (0.2666667,0)};
+\addplot[primarycurve, -, smooth] coordinates {(0.2666666,0) (0.3,1) (0.3333333,0)};
+\addplot[primarycurve,->, smooth] coordinates {(0.3333333,0) (0.3666667,1) (0.4,0)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </figure>
+      <figure xml:id="figure-equivalent-fractions-division" permid="xoy">
+        <caption><m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> as equal results from division</caption>
+        <image width="47%" permid="vNG">
+          <description>a number line with a ruler superimposed over the segment from 0 to 2; the ruler is subdivided into five pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 2/5; there is a second number line with a ruler superimposed over the segment from 0 to 6; the ruler is subdivided into fifteen pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 6/15</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[numberline,
+xmin=0,xmax=6,
+xtick={0,1,...,6},
+minor xtick={{}},
+extra x ticks={0.4},
+extra x tick labels={$\frac{2}{5}$},
+xlabel={},
+x=0.8cm,
+]
+\addplot[guideline] coordinates {(0,0) (0,1) (2,1) (2,0)};
+\addplot[guideline,<-] coordinates {(0.4,0) (0.4,1)} node[above] {$2$ divided by $5$};
+\addplot[guideline] coordinates {(0.8,0.8) (0.8,1)};
+\addplot[guideline] coordinates {(1.2,0.8) (1.2,1)};
+\addplot[guideline] coordinates {(1.6,0.8) (1.6,1)};
+\end{axis}
+\begin{axis}[numberline,
+at={(0,-2cm)},
+xmin=0,xmax=6,
+xtick={0,1,...,6},
+minor xtick={{}},
+extra x ticks={0.4},
+extra x tick labels={$\frac{6}{15}$},
+xlabel={},
+x=0.8cm,
+]
+\addplot[guideline] coordinates {(0,0) (0,1) (6,1) (6,0)};
+\addplot[guideline,<-] coordinates {(0.4,0) (0.4,1)} node[above] {$6$ divided by $15$};
+\addplot[guideline] coordinates {(0.8,0.8) (0.8,1)};
+\addplot[guideline] coordinates {(1.2,0.8) (1.2,1)};
+\addplot[guideline] coordinates {(1.6,0.8) (1.6,1)};
+\addplot[guideline] coordinates {(2,0.8) (2,1)};
+\addplot[guideline] coordinates {(2.4,0.8) (2.4,1)};
+\addplot[guideline] coordinates {(2.8,0.8) (2.8,1)};
+\addplot[guideline] coordinates {(3.2,0.8) (3.2,1)};
+\addplot[guideline] coordinates {(3.6,0.8) (3.6,1)};
+\addplot[guideline] coordinates {(4,0.8) (4,1)};
+\addplot[guideline] coordinates {(4.4,0.8) (4.4,1)};
+\addplot[guideline] coordinates {(4.8,0.8) (4.8,1)};
+\addplot[guideline] coordinates {(5.2,0.8) (5.2,1)};
+\addplot[guideline] coordinates {(5.6,0.8) (5.6,1)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </figure>
+    </sidebyside>
+    <p permid="CIl">
+      Those two fractions,
+      <m>\frac{2}{5}</m> and <m>\frac{6}{15}</m> are equal,
+      as those figures demonstrate.
+      Also, because they each equal <m>0.4</m> as a decimal.
+      If we must work with this number,
+      the fraction that uses smaller numbers,
+      <m>\frac{2}{5}</m>, is preferable.
+      Working with smaller numbers decreases the likelihood of making a human arithmetic error.
+      And it also increases the chances that you might make useful observations about the nature of that number.
+    </p>
+    <sidebyside widths="65% 29%" margins="0%" permid="ciX">
+      <p permid="dvH">
+        So if you are handed a fraction like <m>\frac{6}{15}</m>,
+        it is important to try to <term>reduce</term> it to
+        <q>lowest terms.</q>
+            <idx><h>reduced fraction</h></idx>
+            <idx><h>fraction</h><h>reduction</h></idx>
+        The most important skill you can have to help you do this is to know the multiplication table well.
+        If you know it well, you know that
+        <m>6=2\cdot3</m> and <m>15=3\cdot5</m>,
+        so you can break down the numerator and denominator that way.
+        Both the numerator and denominator are divisible by <m>3</m>,
+        so they can be
+        <q>factored out</q>
+        and then as factors, cancel out.
+      </p>
+      <p permid="JCQ">
+        <md permid="poA">
+          <mrow>\frac{6}{15}\amp=\frac{2\cdot3}{3\cdot5}</mrow>
+          <mrow>\amp=\frac{2\cdot\cancelhighlight{3}}{\cancelhighlight{3}\cdot5}</mrow>
+          <mrow>\amp=\frac{2\cdot1}{1\cdot5}</mrow>
+          <mrow>\amp=\frac{2}{5}</mrow>
+        </md>
+      </p>
+    </sidebyside>
+    <exercise permid="Iqg">
+      <webwork>
+          <setup>
+<pg-code>
+Context("LimitedFraction");
+@f=(Fraction(1,3),Fraction(4,15),Fraction(7,9));
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="mPt">
+              Reduce these fractions into lowest terms.
+              <ol label="a." cols="3" permid="yAV">
+                <li permid="bNy">
+                  <p permid="yfw">
+                    <m>\dfrac{14}{42}=</m><var name="$f[0]" width="5" />
+                  </p>
+                </li>
+                <li permid="HUH">
+                  <p permid="emF">
+                    <m>\dfrac{8}{30}=</m><var name="$f[1]" width="5" />
+                  </p>
+                </li>
+                <li permid="obQ">
+                  <p permid="KtO">
+                    <m>\dfrac{70}{90}=</m><var name="$f[2]" width="5" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution permid="sbP">
+            <p permid="Zhn">
+              <ol cols="2" permid="hCK">
+                <li permid="UiZ">
+                  <p permid="qAX">
+                    With <m>\frac{14}{42}</m>,
+                    we have <m>\frac{2\cdot7}{2\cdot3\cdot7}</m>,
+                    which reduces to <m>\frac{1}{3}</m>.
+                  </p>
+                </li>
+                <li permid="Aqi">
+                  <p permid="WIg">
+                    With <m>\frac{8}{30}</m>,
+                    we have <m>\frac{2\cdot2\cdot2}{2\cdot3\cdot5}</m>,
+                    which reduces to <m>\frac{4}{15}</m>.
+                  </p>
+                </li>
+                <li permid="gxr">
+                  <p permid="CPp">
+                    With <m>\frac{70}{90}</m>,
+                    we have <m>\frac{7\cdot10}{9\cdot10}</m>,
+                    which reduces to <m>\frac{7}{9}</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+    <p permid="iPu">
+      Sometimes it is useful to do the opposite of reducing a fraction,
+      and <term>build up</term> the fraction to use larger numbers.
+    </p>
+    <exercise permid="oxp">
+      <webwork>
+          <setup>
+<pg-code>
+Context("LimitedRadical");
+$p=Formula("84/100");
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="SWC">
+              Sayid scored <m>\frac{21}{25}</m> on a recent exam.
+              Build up this fraction so that the denominator is <m>100</m>,
+              so that Sayid can understand what percent score he earned.
+            </p>
+            <p permid="zdL">
+              <var name="$p" width="10" />
+            </p>
+          </statement>
+          <solution permid="YiY">
+            <p permid="Fow">
+              To change the denominator from <m>25</m> to <m>100</m>,
+              it needs to be multiplied by <m>4</m>.
+              So we calculate
+              <md permid="VvJ">
+                <mrow>\frac{21}{25}\amp=\frac{21\cdot4}{25\cdot4}</mrow>
+                <mrow>\amp=\frac{84}{100}</mrow>
+              </md>
+            </p>
+            <p permid="lvF">
+              So the fraction <m>\frac{21}{25}</m> is equivalent to <m>\frac{84}{100}</m>.
+              (This means Sayid scored an <m>84\%</m>.)
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <subsection permid="jUA">
+    <title>Multiplying with Fractions</title>
+    <example permid="UEy">
+      <p permid="NCP">
+        Suppose a recipe calls for <m>\frac{2}{3}</m> cup of milk,
+        but we’d like to quadruple the recipe
+        (make it four times as big).
+        We'll need four times as much milk,
+        and one way to measure this out is to fill a measuring cup to <m>\frac{2}{3}</m> full,
+        four times:
+      </p>
+      <sidebyside widths="47%" permid="thi">
+        <image permid="bUP">
+          <description>four measuring cups, each filled two-thirds with liquid</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\foreach \x in {0,4,8,12} {
+\fill[color=blue!20] (\x,0) rectangle (2+\x,2.157);
+\draw (\x,0) rectangle (2+\x,3.236);
+\draw (\x,1.079) -- (2+\x,1.079);
+\draw (\x,2.157) -- (2+\x,2.157);
+\draw (\x,3.236) -- (\x-0.5,3.236) -- (\x,2.5);
+\draw (2+\x,3.236) --+ (1,0) --+ (1.5,-2) --+ (1.3,-2.2) --+ (0.8,-0.2) --+ (0,-0.2);
+}
+\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </sidebyside>
+      <p permid="tJY">
+        When you count up the shaded thirds, there are eight of them.
+        So multiplying <m>\frac{2}{3}</m> by the whole number <m>4</m>,
+        the result is <m>\frac{8}{3}</m>.
+        Mathematically:
+        <md permid="BCS">
+          <mrow>4\cdot\frac{2}{3}\amp=\frac{4\cdot2}{3}</mrow>
+          <mrow>\amp=\frac{8}{3}</mrow>
+        </md>
+      </p>
+    </example>
+    <fact permid="gSQ">
+      <title>Multiplying a Fraction and a Whole Number</title>
+      <p permid="Psc">
+        When you multiply a whole number by a fraction,
+        you may just multiply the whole number by the numerator and leave the denominator alone.
+        In other words, as long as <m>d</m> is not <m>0</m>,
+        then a whole number and a fraction multiply this way:
+        <me permid="Yqp">
+          a \cdot \frac{c}{d} = \frac{a\cdot c}{d}
+        </me>
+      </p>
+    </fact>
+    <example permid="ALH">
+      <p permid="ZRh">
+        We could also use multiplication to decrease amounts.
+        Suppose we needed to cut the recipe down to just one fifth.
+        Instead of <em>four</em> of the <m>\frac{2}{3}</m> cup milk,
+        we need <em>one fifth</em> of the <m>\frac{2}{3}</m> cup milk.
+        So instead of multiplying by <m>4</m>,
+        we multiply by <m>\frac{1}{5}</m>.
+        But how much is <m>\frac{1}{5}</m> of <m>\frac{2}{3}</m> cup?
+      </p>
+      <sidebyside widths="77% 16%" margins="0%" permid="Zor">
+        <p permid="FYq">
+          If we cut the measuring cup into five equal vertical strips along with the three equal horizontal strips,
+          then in total there are <m>3\cdot5=15</m> subdivisions of the cup.
+          Two of those sections represent
+          <m>\frac{1}{5}</m> of the <m>\frac{2}{3}</m> cup.
+        </p>
+        <image permid="IbY">
+          <description>a measuring cup divided evenly into three horizontal sections, but also evenly into five vertical sections; in total, there are fifteen sections; the two that correspond to the lower two-thirds and leftmost one-fifth are shaded</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\fill[color=blue!20] (0,0) rectangle (0.4,2.157);
+\fill[color=blue!05] (0.40,0) rectangle (2,2.157);
+\draw (0,0) rectangle (2,3.236);
+\draw (0,1.079) -- (2,1.079);
+\draw (0,2.157) -- (2,2.157);
+\draw (0,3.236) -- (-0.5,3.236) -- (0,2.5);
+\draw (2,3.236) --+ (1,0) --+ (1.5,-2) --+ (1.3,-2.2) --+ (0.8,-0.2) --+ (0,-0.2);
+\foreach \x in {0.4,0.8,1.2,1.6} \draw[dashed] (\x,0) -- (\x,3.236);
+\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </sidebyside>
+      <sidebyside widths="65% 29%" margins="0%" permid="FvA">
+        <p permid="mfz">
+          In the end, we have <m>\frac{2}{15}</m> of a cup.
+          The denominator <m>15</m> came from multiplying <m>5</m> and <m>3</m>,
+          the denominators of the fractions we had to multiply.
+          The numerator <m>2</m> came from multiplying <m>1</m> and <m>2</m>,
+          the numerators of the fractions we had to multiply.
+        </p>
+        <p permid="SmI">
+          <md permid="hKb">
+            <mrow>\frac{1}{5}\cdot\frac{2}{3}\amp=\frac{1\cdot2}{5\cdot3}</mrow>
+            <mrow>\amp=\frac{2}{15}</mrow>
+          </md>
+        </p>
+      </sidebyside>
+    </example>
+    <fact xml:id="fact-multiplication-of-fractions" permid="MZZ">
+      <title>Multiplication with Fractions</title>
+      <idx><h>Multiplication</h><h>of fractions</h></idx>
+      <statement>
+        <p permid="vzl">
+          As long as <m>b</m> and <m>d</m> are not <m>0</m>,
+          then fractions multiply this way:
+          <me permid="Exy">
+            \frac{a}{b} \cdot \frac{c}{d} = \frac{a\cdot c}{b \cdot d}
+          </me>
+        </p>
+      </statement>
+    </fact>
+    <exercise permid="lCJ">
+      <webwork>
+          <title>Fraction Multiplication Practice</title>
+          <setup>
+<pg-code>
+Context("LimitedFraction");
+@f=(Fraction(10,21),Fraction(20,1),Fraction(-28,15),Fraction(-14,9));
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="fkU">
+              Simplify these fraction products.
+              <ol label="a." cols="2" permid="eIe">
+                <li permid="MEA">
+                  <p permid="iWy">
+                    <m>\dfrac{1}{3}\cdot\dfrac{10}{7}=</m><var name="$f[0]" width="10" />
+                  </p>
+                </li>
+                <li permid="sLJ">
+                  <p permid="PdH">
+                    <m>\dfrac{12}{3}\cdot\dfrac{15}{3}=</m><var name="$f[1]" width="10" />
+                  </p>
+                </li>
+                <li permid="YSS">
+                  <p permid="vkQ">
+                    <m>-\dfrac{14}{5}\cdot\dfrac{2}{3}=</m><var name="$f[2]" width="10" />
+                  </p>
+                </li>
+                <li permid="Fab">
+                  <p permid="brZ">
+                    <m>\dfrac{70}{27}\cdot\dfrac{12}{-20}=</m><var name="$f[3]" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution permid="Eqh">
+            <p permid="RCO">
+              <ol permid="NJT">
+                <li permid="lhk">
+                  <p permid="Hzi">
+                    Multiplying numerators gives <m>10</m>,
+                    and multiplying denominators gives <m>21</m>.
+                    The answer is <m>\frac{10}{21}</m>.
+                  </p>
+                </li>
+                <li permid="Rot">
+                  <p permid="nGr">
+                    Before we multiply fractions,
+                    note that <m>\frac{12}{3}</m> reduces to <m>4</m>,
+                    and <m>\frac{15}{3}</m> reduces to <m>5</m>.
+                    So we just have <m>4\cdot5=20</m>.
+                  </p>
+                </li>
+                <li permid="xvC">
+                  <p permid="TNA">
+                    Multiplying numerators gives <m>28</m>,
+                    multiplying denominators gives <m>15</m>,
+                    and multiplying a negative times a positive results in a negative.
+                    The answer is <m>-\frac{28}{15}</m>.
+                  </p>
+                </li>
+                <li permid="dCL">
+                  <p permid="zUJ">
+                    Before we multiply fractions,
+                    note that <m>\frac{12}{-20}</m> reduces to <m>\frac{-3}{5}</m>.
+                    So we have <m>\frac{70}{27}\cdot\frac{-3}{5}</m>.
+                    Both the numerator of the first fraction and denominator of the second fraction are divisible by <m>5</m>,
+                    so it helps to reduce both fractions accordingly and get <m>\frac{14}{27}\cdot\frac{-3}{1}</m>.
+                    Both the denominator of the first fraction and numerator of the second fraction are divisible by <m>3</m>,
+                    so it helps to reduce both fractions accordingly and get <m>\frac{14}{9}\cdot\frac{-1}{1}</m>.
+                    Now we are just multiplying <m>\frac{14}{9}</m> by <m>-1</m>,
+                    so the result is <m>-\frac{14}{9}</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <subsection permid="QbJ">
+    <title>Division with Fractions</title>
+    <p permid="OWD">
+      How does division with fractions work?
+      Are we able to compute/simplify each of these examples?
+      <ol label="a." cols="4" permid="jrX">
+        <li permid="JJU">
+          <p permid="gbS">
+            <m>3\div\frac{2}{7}</m>
+          </p>
+        </li>
+        <li permid="pRd">
+          <p permid="Mjb">
+            <m>\frac{18}{19}\div5</m>
+          </p>
+        </li>
+        <li permid="VYm">
+          <p permid="sqk">
+            <m>\frac{14}{3}\div\frac{8}{9}</m>
+          </p>
+        </li>
+        <li permid="Cfv">
+          <p permid="Yxt">
+            <m>\frac{\ \frac{2}{5}\ }{\frac{5}{2}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p permid="vdM">
+      We know that when we divide something by <m>2</m>,
+      this is the same as multiplying it by <m>\frac{1}{2}</m>.
+      Conversely, dividing a number or expression by
+      <m>\frac{1}{2}</m> is the same as multiplying by <m>\frac{2}{1}</m>,
+      or just <m>2</m>.
+      The more general property is that when we divide a number or expression by <m>\frac{a}{b}</m>,
+      this is equivalent to multiplying by the reciprocal <m>\frac{b}{a}</m>.
+    </p>
+    <fact xml:id="fact-division-of-fractions" permid="xRb">
+      <title>Division with Fractions</title>
+      <statement>
+        <p permid="bGu">
+          As long as <m>b</m>, <m>c</m> and <m>d</m> are not <m>0</m>,
+          then division with fractions works this way:
+          <me permid="kEH">
+            \frac{a}{b} \div \frac{c}{d} = \frac{a}{b}\cdot\frac{d}{c}
+          </me>
+        </p>
+      </statement>
+    </fact>
+    <example permid="RJS">
+      <p permid="ytR">
+        With our examples from the beginning of this subsection:
+        <ol label="a." cols="2" permid="Gfu">
+ <!-- empty rows here to balance vertical load for multicolumn alignment -->
+          <li permid="imE">
+            <p permid="EEC">
+              <m>\begin{aligned}[t] 3\div\frac{2}{7}\amp=3\multiplyright{\frac{7}{2}}\\ \amp=\divideunder{3}{1}\cdot\frac{7}{2}\\ \amp=\frac{21}{2}\\ \ \end{aligned} </m>
+            </p>
+          </li>
+          <li permid="OtN">
+            <p permid="kLL">
+              <m>\begin{aligned}[t] \frac{18}{19}\div5\amp=\frac{18}{19}\div\divideunder{5}{1}\\ \amp=\frac{18}{19}\multiplyright{\frac{1}{5}}\\ \amp=\frac{18}{95}\\ \ \end{aligned} </m>
+            </p>
+          </li>
+          <li permid="uAW">
+            <p permid="QSU">
+              <m>\begin{aligned}[t] \frac{14}{3}\div\frac{8}{9}\amp=\frac{14}{3}\multiplyright{\frac{9}{8}}\\ \amp=\frac{14}{\highlight{1}}\cdot\frac{\highlight{3}}{8}\\ \amp=\frac{\highlight{7}}{1}\cdot\frac{3}{\highlight{4}}\\ \amp=\frac{21}{4} \end{aligned} </m>
+            </p>
+          </li>
+          <li permid="aIf">
+            <p permid="xad">
+              <m>\begin{aligned}[t] \frac{\ \frac{2}{5}\ }{\frac{5}{2}}\amp=\frac{2}{5}\highlight{{}\div{}}\frac{5}{2}\\ \amp=\frac{2}{5}\multiplyright{\frac{2}{5}}\\ \amp=\frac{4}{25}\\ \ \end{aligned} </m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </example>
+    <exercise permid="dYk">
+      <webwork>
+          <title>Fraction Division Practice</title>
+          <setup>
+<pg-code>
+Context("LimitedFraction");
+@f=(Fraction(7,30),Fraction(12,25),Fraction(-28,3),Fraction(-1400,99));
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="rzm">
+              Simplify these fraction division expressions.
+              <ol label="a." cols="4" permid="KPn">
+                <li permid="GPo">
+                  <p permid="dhm">
+                    <m>\dfrac{1}{3}\div\dfrac{10}{7}=</m><var name="$f[0]" width="10" />
+                  </p>
+                </li>
+                <li permid="mWx">
+                  <p permid="Jov">
+                    <m>\dfrac{12}{5}\div5=</m><var name="$f[1]" width="10" />
+                  </p>
+                </li>
+                <li permid="TdG">
+                  <p permid="pvE">
+                    <m>-14\div\dfrac{3}{2}=</m><var name="$f[2]" width="10" />
+                  </p>
+                </li>
+                <li permid="zkP">
+                  <p permid="VCN">
+                    <m>\dfrac{70}{9}\div\dfrac{11}{-20}=</m><var name="$f[3]" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution permid="kxq">
+            <p permid="xJX">
+              <ol cols="2" permid="tRc">
+ <!-- empty rows here to balance vertical load for multicolumn alignment -->
+                <li permid="frY">
+                  <p permid="BJW">
+                    <m> \begin{aligned}[t] \frac{1}{3}\div\frac{10}{7}\amp=\frac{1}{3}\cdot\frac{7}{10}\\ \amp=\frac{7}{30}\\ \ \end{aligned} </m>
+                  </p>
+                </li>
+                <li permid="Lzh">
+                  <p permid="hRf">
+                    <m> \begin{aligned}[t] \frac{12}{5}\div5\amp=\frac{12}{5}\cdot\frac{1}{5}\\ \amp=\frac{12}{25}\\ \ \end{aligned} </m>
+                  </p>
+                </li>
+                <li permid="rGq">
+                  <p permid="NYo">
+                    <m> \begin{aligned}[t] -14\div\frac{3}{2}\amp=-\frac{14}{1}\cdot\frac{2}{3}\\ \amp=-\frac{28}{3}\\ \end{aligned} </m>
+                  </p>
+                </li>
+                <li permid="XNz">
+                  <p permid="ufx">
+                    <m> \begin{aligned}[t] \frac{70}{9}\div\frac{11}{-20}\amp=-\frac{70}{9}\cdot\frac{20}{11}\\ \amp=-\frac{1400}{99}\\ \ \end{aligned} </m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <subsection permid="wiS">
+    <title>Adding and Subtracting Fractions</title>
+    <p permid="bkV">
+      In this section,
+      we will review how to add and subtract numerical fractions,
+      both in the case of having the same denominator and in the case of having different denominators.
+    </p>
+    <p permid="Hse">
+      With whole numbers and integers,
+      operations of addition and subtraction are relatively straightforward.
+      The situation is almost as straightforward with fractions
+      <em>if the two fractions have the same denominator</em>.
+      Consider
+      <me permid="QLQ">
+        \frac{7}{2} + \frac{3}{2} = 7\text{ halves}+3\text{ halves}
+      </me>
+      In the same way that <m>7</m> tacos and <m>3</m> tacos make <m>10</m> tacos, we have:
+      <me permid="wSZ">
+        \begin{array}{ccccc} 7\text{ halves}{}\amp+{}\amp 3\text{ halves}\amp=\amp 10\text{ halves} \\ \frac{7}{2}{}\amp+{}\amp\frac{3}{2}\amp=\amp\frac{10}{2} \\ \amp \amp \amp=\amp5 \\ \end{array}
+      </me>
+    </p>
+    <fact xml:id="fact-add-fractions-with-same-denominator" permid="WtL">
+      <title>Adding/Subtracting with Fractions Having the Same Denominator</title>
+      <idx><h>Addition</h><h>of fractions with the same denominator</h></idx>
+      <statement>
+        <p permid="HND">
+          To add or subtract two fractions having the same denominator,
+          <em>keep</em> that denominator,
+          and add or subtract the numerators.
+          <md permid="NRk">
+            <mrow>\frac{a}{b}+\frac{c}{b}\amp=\frac{a+c}{b}\amp\frac{a}{b}-\frac{c}{b}\amp=\frac{a-c}{b}</mrow>
+          </md>
+          If it's possible, useful,
+          or required of you, simplify the result by reducing to lowest terms.
+        </p>
+      </statement>
+    </fact>
+    <exercise permid="iId">
+      <webwork>
+          <title>Fraction Addition/Subtraction Practice</title>
+          <setup>
+<pg-code>
+Context("LimitedFraction");
+@f=(Fraction(11,3),Fraction(4,3));
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="XGv">
+              Add or subtract these fractions.
+              <ol label="a." cols="2" permid="qWw">
+                <li permid="DUI">
+                  <p permid="amG">
+                    <m>\frac{1}{3}+\frac{10}{3}=</m><var name="$f[0]" width="10" />
+                  </p>
+                </li>
+                <li permid="kbR">
+                  <p permid="GtP">
+                    <m>\frac{13}{6}-\frac{5}{6}=</m><var name="$f[1]" width="10" />
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution permid="QEz">
+            <p permid="dRg">
+              <ol label="a." permid="ZYl">
+                <li permid="Qja">
+                  <p permid="mAY">
+                    Since the denominators are both <m>3</m>,
+                    we can add the numerators: <m>1+10=11</m>.
+                    The answer is <m>\frac{11}{3}</m>.
+                  </p>
+                </li>
+                <li permid="wqj">
+                  <p permid="SIh">
+                    Since the denominators are both <m>6</m>,
+                    we can subtract the numerators: <m>13-5=8</m>.
+                    The answer is <m>\frac{8}{6}</m>,
+                    but that reduces to <m>\frac{4}{3}</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+    <p permid="nzn">
+      Whenever we'd like to combine fractional amounts that don't represent the same number of parts of a whole
+      (that is, when the denominators are different),
+      finding sums and differences is more complicated.
+    </p>
+    <example xml:id="example-Quarters-and-Dimes" permid="Kft">
+      <title>Quarters and Dimes</title>
+      <p permid="eBa">
+        Find the sum <m>\frac{3}{4}+\frac{2}{10}</m>.
+        Does this seem intimidating?
+        Consider this:
+        <ul permid="mmD">
+          <li permid="Pzg">
+            <p permid="yPq">
+              <m>\frac{1}{4}</m> of a dollar is a quarter,
+              and so <m>\frac{3}{4}</m> of a dollar is <m>75</m> cents.
+            </p>
+          </li>
+          <li permid="vGp">
+            <p permid="eWz">
+              <m>\frac{1}{10}</m> of a dollar is a dime,
+              and so <m>\frac{2}{10}</m> of a dollar is <m>20</m> cents.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p permid="KIj">
+        So if you know what to look for,
+        the expression <m>\frac{3}{4}+\frac{2}{10}</m> is like adding <m>75</m> cents and <m>20</m> cents,
+        which gives you <m>95</m> cents.
+        As a fraction of one dollar, that is <m>\frac{95}{100}</m>.
+        So we can report
+        <me permid="dai">
+          \frac{3}{4}+\frac{2}{10}=\frac{95}{100}
+        </me>.
+        (Although we should probably reduce that last fraction to <m>\frac{19}{20}</m>.)
+      </p>
+    </example>
+    <p permid="TGw">
+      This example was not something you can apply to other fraction addition situations,
+      because the denominators here worked especially well with money amounts.
+      But there is something we can learn here.
+      The fraction <m>\frac{3}{4}</m> was equivalent to <m>\frac{75}{100}</m>,
+      and the other fraction <m>\frac{2}{10}</m> was equivalent to <m>\frac{20}{100}</m>.
+      These <em>equivalent</em> fractions have the same denominator and are therefore
+      <q>easy</q>
+      to add.
+      What we saw happen was:
+      <md permid="tYt">
+        <mrow>\frac{3}{4}+\frac{2}{10}\amp=\frac{75}{100}+\frac{20}{100}</mrow>
+        <mrow>\amp=\frac{95}{100}</mrow>
+      </md>
+    </p>
+    <p permid="zNF">
+      This realization gives us a strategy for adding
+      (or subtracting)
+      fractions.
+      However, first let's review how to find the least common denominator.
+    </p>
+    <paragraphs permid="ASL">
+      <title>Finding the Least Common Denominator</title>
+      <introduction permid="PUF">
+        <p permid="ifA">
+          When adding or subtracting fractions with different denominators,
+          it is necessary to first find a common denominator.
+          Usually, we want to find the least common denominator (LCD), which is the smallest common multiple of each denominator.
+        </p>
+      </introduction>
+      <p permid="efB">
+        It is common to refer to the process of finding the LCD as "building" the LCD. The reason for this is that a common method for finding the LCD, which will be the most useful method to use when we get to more complicated fractions later in the course,
+        is to use the <em>prime factors</em>
+        of each denominator as building blocks to build the LCD. These building blocks will eventually be multiplied together to form the LCD.
+      </p>
+      <definition xml:id="definition-prime-factor" permid="LkM">
+        <title>Prime Factor</title>
+        <statement>
+          <p permid="hvG">
+            A <term>prime factor</term> of a number is a prime number that divides into that number evenly.
+            To be a prime number means that,
+            when the number is factored using only positive integers,
+            it can only be factored into 1 times itself.
+          </p>
+        </statement>
+      </definition>
+      <example xml:id="example-finding-the-LCD" permid="rrV">
+        <statement>
+          <p permid="qPs">
+            Consider the previous example <xref ref="example-Quarters-and-Dimes">Example</xref>,
+            in which we added the fractions
+            <m>\frac{3}{4}</m> and <m>\frac{2}{10}</m>.
+            Notice that the common denominator used in that example was <m>100</m>.
+            However, that is not the <em>least</em> common denominator.
+            Find the least common denominator (LCD) of these fractions,
+            using the prime factors to build the LCD.
+          </p>
+        </statement>
+        <solution permid="nrW">
+          <p permid="JYp">
+            To find the least common denominator with this method,
+            we must first find the prime factors of each denominator,
+            <m>4</m> and <m>10</m>.
+            This can be done by first factoring each number into any two factors.
+            Then, if any of those factors are not prime
+            (we call them composite in that case),
+            split each of those composite factors into two factors.
+            Keep going with this process until all factors are prime.
+          </p>
+          <p permid="qfy">
+            We can factor <m>4</m> into the factors <m>2</m> and <m>2</m>.
+            Notice that both of these factors are prime,
+            so <m>4</m> factors into <m>2\cdot2</m>,
+            when we write it as a product of its prime factors.
+            Note that we call this the <term>prime factorization</term> of <m>4</m>.
+          </p>
+          <p permid="WmH">
+            We can factor <m>10</m> into the factors <m>2</m> and <m>5</m>.
+            Notice that both of these factors are prime,
+            so <m>10</m> factors into <m>2\cdot5</m>,
+            when we write it as a product of its prime factors.
+          </p>
+          <p permid="CtQ">
+            Now we have the building blocks we need to build the LCD of the fractions
+            <m>\frac{3}{4}</m> and <m>\frac{2}{10}</m>.
+            One way to do this is to first include all the prime factors of the first denominator,
+            which in this case will be <m>2</m> and <m>2</m>,
+            and then take only those prime factors of the second denominator that we don't already have as a result of the previous step.
+          </p>
+          <p permid="iAZ">
+            Thus, we would only need to take the factor of <m>5</m> from <m>10</m>,
+            since we already have a factor of <m>2</m> from the first denominator.
+            The last step is to multiply all of those prime factors together.
+          </p>
+          <p permid="OIi">
+            Therefore, the LCD of the fractions <m>\frac{3}{4}</m> and
+            <m>\frac{2}{10}</m> is <m>2\cdot2\cdot5=20</m>.
+            Notice that this is smaller than the common denominator of <m>100</m> that was used previously.
+          </p>
+        </solution>
+      </example>
+      <p permid="KmK">
+        Let's look at another example of finding the LCD.
+      </p>
+      <example permid="Xze">
+        <statement>
+          <p permid="WWB">
+            Find the LCD of the fractions
+            <m>\frac{7}{18}</m> and <m>\frac{1}{54}</m>.
+          </p>
+        </statement>
+        <solution permid="Tzf">
+          <p permid="uPr">
+            To find the LCD, we must first find the prime factors of <m>18</m> and <m>54</m>.
+            For <m>18</m>, we can first factor it as <m>3\cdot6</m>.
+            Notice that <m>3</m> is prime, but <m>6</m> is not.
+            So, we need to factor <m>6</m> further.
+            We can factor <m>6</m> into <m>2\cdot3</m> and both of these factors are prime.
+            Thus, the prime factorization of <m>18</m> is <m>2\cdot3\cdot3</m>.
+          </p>
+          <p permid="aWA">
+            We can factor <m>54</m> into <m>6\cdot9</m> and neither <m>6</m> nor <m>9</m> are prime.
+            We can factor <m>6</m> into <m>2\cdot3</m> and <m>9</m> into <m>3\cdot3</m>;
+            all of these factors are prime.
+            Thus, the prime factorization of <m>54</m> is <m>2\cdot3\cdot3\cdot3</m>.
+          </p>
+          <p permid="HdJ">
+            Note that you could have started each factorization differently,
+            like using <m>2\cdot27</m> for <m>54</m>,
+            but you will eventually end up with the same prime factors in the end.
+          </p>
+          <p permid="nkS">
+            Now we have the prime factors we need to build our LCD. Using the method mentioned before,
+            we will first take all of the factors from our first denominator of <m>18</m>,
+            which gives us factors of <m>2</m>, <m>3</m>, and <m>3</m>.
+            Next, we take only the factors of <m>54</m> that we don't already have from our previous step.
+            Notice that we already have the <m>2</m> and two of the three <m>3</m>'s.
+            Thus, we need only take one more factor of <m>3</m> to ensure that all the prime factors of <m>54</m> are represented in the LCD.
+          </p>
+          <p permid="Tsb">
+            Therefore, the LCD of <m>\frac{7}{18}</m> and
+            <m>\frac{1}{54}</m> is <m>2\cdot3\cdot3\cdot3=54</m>.
+          </p>
+        </solution>
+      </example>
+      <remark permid="DGn">
+        <p permid="UbV">
+          You probably noticed in the last example that the LCD turned out to be one of the original denominators.
+          This will always be the case whenever one denominator is a multiple of the other.
+          So, you can save yourself some time if you notice this relationship
+          (or check for it)
+          beforehand.
+        </p>
+      </remark>
+      <p permid="qtT">
+        In summary, here are the steps for finding the LCD of two fractions:
+        <list xml:id="list-finding-the-LCD" permid="jNw">
+          <ol label="1." permid="StM">
+            <li permid="cxs">
+              <p permid="LdI">
+                Factor each denominator into its prime factors.
+              </p>
+            </li>
+            <li permid="IEB">
+              <p permid="rkR">
+                Take all prime factors from the first denominator.
+              </p>
+            </li>
+            <li permid="oLK">
+              <p permid="Xsa">
+                Take only the prime factors from the second denominator that haven't already been taken from the first denominator.
+              </p>
+            </li>
+            <li permid="UST">
+              <p permid="Dzj">
+                Multiply together all the prime factors which were taken in the last two steps.
+                The result will be the LCD of the two fractions.
+              </p>
+            </li>
+          </ol>
+        </list>
+      </p>
+    </paragraphs>
+    <p permid="fUO">
+      Now let's use this skill as we review how to add or subtract fractions with different denominators.
+    </p>
+    <fact permid="CAU">
+      <title>Adding/Subtracting Fractions with Different Denominators</title>
+      <idx><h>Addition</h><h>of fractions with different denominators</h></idx>
+      <statement>
+        <p permid="nUM">
+          To add (or subtract) fractions,
+          use their denominators to find a
+          <term>common denominator</term>;
+              <idx><h>fraction</h><h>common denominator</h></idx>
+              <idx><h>common denominator</h></idx>
+          usually the least common denominator is preferred.
+          Then, rewrite the fractions as <em>equivalent</em>
+          fractions that use this common denominator.
+          Write the result <em>keeping</em>
+          that denominator and adding
+          (or subtracting)
+          the numerators.
+          Reduce the fraction, if that is useful or required.
+        </p>
+      </statement>
+    </fact>
+    <example permid="qmC">
+      <p permid="DdK">
+        Let's add <m>\frac{2}{3}+\frac{2}{5}</m>.
+        The denominators are <m>3</m> and <m>5</m>,
+        so the number <m>15</m> would be a good common denominator.
+        In fact, since both denominators are prime, their product is the LCD.
+        <md permid="afC">
+          <mrow>\frac{2}{3}+\frac{2}{5}\amp=\frac{2\multiplyright{5}}{3\multiplyright{5}}+\frac{2\multiplyright{3}}{5\multiplyright{3}}</mrow>
+          <mrow>\amp=\frac{10}{15}+\frac{6}{15}</mrow>
+          <mrow>\amp=\frac{16}{15}</mrow>
+        </md>
+      </p>
+      <p permid="jkT">
+        Notice how we found equivalent fractions.
+        Both fractions needed to have a denominator of <m>15</m>,
+        so we multiplied the numerator and denominator of each fraction by whatever factor was necessary for the resulting denominator to be <m>15</m>.
+      </p>
+    </example>
+    <exercise permid="OPm">
+      <webwork>
+          <title>Using Some Flour</title>
+          <setup>
+<pg-code>
+Context()->flags->set(reduceConstants=>0);
+$flour=NumberWithUnits("13/24",'cup');
+$ev=$flour->cmp(correct_ans_latex_string => "\frac{13}{24}\text{ cup}");
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="DNE">
+              A chef had <m>\frac{2}{3}</m> cups of flour and needed to use
+              <m>\frac{1}{8}</m> cup to thicken a sauce.
+              How much flour is left?
+              <var name="$flour" evaluator="$ev" width="15" />
+            </p>
+          </statement>
+          <solution permid="wLI">
+            <p permid="zzk">
+              We need to compute <m>\frac{2}{3} - \frac{1}{8}</m>.
+              The denominators are <m>3</m> and <m>8</m>.
+              Notice that the denominator of <m>3</m> is prime.
+              So we can use that prime factor,
+              as well as the prime factorization of <m>8</m>,
+              which is <m>2\cdot2\cdot2</m>, to build our LCD. Thus,
+              the least common denominator is <m>2\cdot2\cdot2\cdot3=24</m>.
+            </p>
+            <p permid="fGt">
+              So we need to rewrite each fraction using <m>24</m> as the denominator:
+              <md permid="GmL">
+                <mrow>\frac{2}{3} - \frac{1}{8}\amp=\frac{2\cdot8}{3\cdot8} - \frac{1\cdot3}{8\cdot3}</mrow>
+                <mrow>\amp=\frac{16}{24}-\frac{3}{24}</mrow>
+                <mrow>\amp=\frac{13}{24}</mrow>
+              </md>
+            </p>
+            <p permid="LNC">
+              The numerical result is <m>\frac{13}{24}</m>,
+              but in order for this answer to make sense in the context of the problem being solved,
+              we need to use the appropriate units.
+              The amount of flour remaining is <m>\frac{13}{24}</m> <em>cups</em>.
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <subsection permid="cqb">
+    <title>Mixed Numbers and Improper Fractions</title>
+    <p permid="MbX">
+      A simple recipe for bread contains only a few ingredients:
+    </p>
+    <sidebyside permid="uWv">
+      <tabular permid="loB">
+        <row>
+          <cell><m>1\,\sfrac{1}{2}</m></cell>
+          <cell>tablespoons yeast</cell>
+        </row>
+        <row>
+          <cell><m>1\,\sfrac{1}{2}</m></cell>
+          <cell>tablespoons kosher salt</cell>
+        </row>
+        <row>
+          <cell><m>6\,\sfrac{1}{2}</m></cell>
+          <cell>cups unbleached, all-purpose flour (more for dusting)</cell>
+        </row>
+      </tabular>
+    </sidebyside>
+    <p permid="sjg">
+      Each ingredient is listed as a <term>mixed number</term><idx><h>fraction</h><h>mixed number</h></idx>
+          <idx><h>mixed number</h></idx>
+      that quickly communicates how many whole amounts and how many parts are needed.
+      It's useful for quickly communicating a practical amount of something you are cooking with,
+      measuring on a ruler, purchasing at the grocery store, etc.
+      But it causes trouble in an algebra class.
+      The number <m>1\,\sfrac{1}{2}</m> means
+      <q>one
+      <alert>and</alert>
+      one half.</q>
+      So really,
+      <me permid="Jhr">
+        1\,\frac{1}{2}=1+\frac{1}{2}
+      </me>
+      The trouble is that with <m>1\,\sfrac{1}{2}</m>,
+      you have two numbers written right next to each other.
+      Normally with two math expressions written right next to each other,
+      they should be <em>multiplied</em>, not <em>added</em>.
+      But with a mixed number, they <em>should</em> be added.
+    </p>
+    <sidebyside widths="65% 29%" permid="bdE">
+      <stack>
+        <p permid="pJZ">
+          Fortunately we just reviewed how to add fractions.
+          If we need to do any arithmetic with a mixed number like <m>1\,\sfrac{1}{2}</m>,
+          we can treat it as <m>1+\frac{1}{2}</m> and simplify to get a
+          <q>nice</q>
+          fraction instead: <m>\frac{3}{2}</m>.
+          A fraction like <m>\frac{3}{2}</m> is called an
+          <term>improper fraction</term>
+              <idx><h>fraction</h><h>improper</h></idx>
+              <idx><h>improper fraction</h></idx>
+          because it's actually larger than <m>1</m>.
+          A <term>proper</term>
+              <idx><h>fraction</h><h>proper</h></idx>
+              <idx><h>proper fraction</h></idx>
+          fraction represents a number that is smaller than one,
+          so its numerator is smaller than its denominator.
+        </p>
+      </stack>
+      <p permid="VRi">
+        <md permid="mtU">
+          <mrow>1\,\frac{1}{2}\amp=1+\frac{1}{2}</mrow>
+          <mrow>\amp=\frac{1}{1}+\frac{1}{2}</mrow>
+          <mrow>\amp=\frac{2}{2}+\frac{1}{2}</mrow>
+          <mrow>\amp=\frac{3}{2}</mrow>
+        </md>
+      </p>
+    </sidebyside>
+  </subsection>
+  <exercises permid="Ixk">
+    <exercisegroup cols="2" permid="gZU">
+      <title>Review and Warmup</title>
+      <exercise permid="qtG">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Fraction");
+$a=Fraction(random(-33,-13,4),4);
+$xmin = -max(int(Real($a)*1.6), 10);
+$gr = init_graph($xmin,-1,-$xmin,1,
+axes=>[100,0],
+size=>[240,34]
+);
+@ticks;
+for my $j (($xmin)..(-$xmin)) {push(@ticks,$j);};
+$gr->h_ticks(0,"black",@ticks);
+$gr->lb( new Label(0,-0.1,0,'black','center','top','large'));
+$gr->lb( new Label(1,-0.1,1,'black','center','top','large'));
+$j=0;
+@decoys = (Real($a), int(Real($a)/2), Real(-$a-2), -Real($a), );
+for $i (@decoys) {
+$gr->moveTo($i,-1);$gr->lineTo($i,0,'black',1);
+$gr->lb( new Label($i,0.05,$ALPHABET[$j],'black','center','bottom','large'));
+$j++;
+}
+$popup=PopUp(['?', 'A', 'B', 'C', 'D'],'A');
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="jUN">
+                Which letter is [`[$a]`] on the number line?
+              </p>
+              <sidebyside widths="40%" margins="0%" permid="efo">
+                <image permid="ojh" pg-name="$gr" />
+              </sidebyside>
+              <p permid="QbW">
+                <var name="$popup" form="popup" />
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+      <exercise permid="WAP">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Fraction");
+$a=Fraction(random(15,31,4),4);
+$xmin = -max(int(Real($a)*1.6), 10);
+$gr = init_graph($xmin,-1,-$xmin,1,
+axes=>[100,0],
+size=>[240,34]
+);
+@ticks;
+for my $j (($xmin)..(-$xmin)) {push(@ticks,$j);};
+$gr->h_ticks(0,"black",@ticks);
+$gr->lb( new Label(0,-0.1,0,'black','center','top','large'));
+$gr->lb( new Label(1,-0.1,1,'black','center','top','large'));
+$j=0;
+@decoys = (Real(-$a-2), -Real($a), int(Real($a)/2), Real($a), );
+for $i (@decoys) {
+$gr->moveTo($i,-1);$gr->lineTo($i,0,'black',1);
+$gr->lb( new Label($i,0.05,$ALPHABET[$j],'black','center','bottom','large'));
+$j++;
+}
+$popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="wjf">
+                Which letter is [`[$a]`] on the number line?
+              </p>
+              <sidebyside widths="40%" margins="0%" permid="Kmx">
+                <image pg-name="$gr"/>
+              </sidebyside>
+              <p permid="cqo">
+                <var name="$popup" form="popup" />
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+      <exercise permid="CHY">
+        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine10.pg"  />
+      </exercise>
+      <exercise permid="iPh">
+        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine20.pg"  />
+      </exercise>
+      <exercise permid="OWq">
+        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine30.pg"  />
+      </exercise>
+      <exercise permid="vdz">
+        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine40.pg"  />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="Nhd">
+      <title>Reducing Fractions</title>
+      <exercise permid="bkI">
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction05.pg"  />
+      </exercise>
+      <exercise permid="HrR">
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction10.pg"  />
+      </exercise>
+      <exercise permid="nza">
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction20.pg"  />
+      </exercise>
+      <exercise permid="TGj">
+        <webwork          source="BasicMath/FractionsCalculation/ReduceFraction25.pg"  />
+      </exercise>
+      <exercise permid="zNs">
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction30.pg"  />
+      </exercise>
+      <exercise permid="fUB">
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction40.pg"  />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="tom">
+      <title>Building Fractions</title>
+      <exercise permid="MbK">
+        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction10.pg"  />
+      </exercise>
+      <exercise permid="siT">
+        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction10.pg"  />
+      </exercise>
+      <exercise permid="Yqc">
+        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction20.pg"  />
+      </exercise>
+      <exercise permid="Exl">
+        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction20.pg"  />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="Zvv">
+      <title>Multiplying/Dividing Fractions</title>
+      <exercise permid="kEu">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions10.pg"  />
+      </exercise>
+      <exercise permid="QLD">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions10.pg"  />
+      </exercise>
+      <exercise permid="wSM">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions20.pg"  />
+      </exercise>
+      <exercise permid="cZV">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions20.pg"  />
+      </exercise>
+      <exercise permid="Jhe">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
+      </exercise>
+      <exercise permid="pon">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
+      </exercise>
+      <exercise permid="Vvw">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions40.pg"  />
+      </exercise>
+      <exercise permid="BCF">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions40.pg"  />
+      </exercise>
+      <exercise permid="hJO">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
+      </exercise>
+      <exercise permid="NQX">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions60.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions70.pg"  />
-            </exercise> -->
+<webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions60.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions70.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg"  />
-            </exercise>
- -->
-            <exercise permid="tYg">
-                <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions10.pg"  />
-            </exercise>
-            <exercise permid="afp">
-                <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions10.pg"  />
-            </exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg"  />
+</exercise>
+-->
+      <exercise permid="tYg">
+        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions10.pg"  />
+      </exercise>
+      <exercise permid="afp">
+        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions10.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions20.pg"  />
-            </exercise> -->
-            <exercise permid="Gmy">
-                <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions30.pg"  />
-            </exercise>
-            <exercise permid="mtH">
-                <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions30.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions20.pg"  />
+</exercise> -->
+      <exercise permid="Gmy">
+        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions30.pg"  />
+      </exercise>
+      <exercise permid="mtH">
+        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions30.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions40.pg"  />
-            </exercise>
- -->
-            <exercise permid="SAQ">
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions10.pg"  />
-            </exercise>
-            <exercise permid="yHZ">
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions10.pg"  />
-            </exercise>
-
-            <exercise permid="ePi">
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions20.pg"  />
-            </exercise>
-            <exercise permid="KWr">
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions20.pg"  />
-            </exercise>
-
+<webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions40.pg"  />
+</exercise>
+-->
+      <exercise permid="SAQ">
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions10.pg"  />
+      </exercise>
+      <exercise permid="yHZ">
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions10.pg"  />
+      </exercise>
+      <exercise permid="ePi">
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions20.pg"  />
+      </exercise>
+      <exercise permid="KWr">
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions20.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions30.pg"  />
-            </exercise> -->
-
-            <exercise permid="rdA">
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions40.pg"  />
-            </exercise>
-            <exercise permid="XkJ">
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions40.pg"  />
-            </exercise>
-
-            <exercise permid="DrS">
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions50.pg"  />
-            </exercise>
-            <exercise permid="jzb">
-                <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions50.pg"  />
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/DivideFractions30.pg"  />
+</exercise> -->
+      <exercise permid="rdA">
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions40.pg"  />
+      </exercise>
+      <exercise permid="XkJ">
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions40.pg"  />
+      </exercise>
+      <exercise permid="DrS">
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions50.pg"  />
+      </exercise>
+      <exercise permid="jzb">
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions50.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionsCalculation/DivideFractions11.pg"  />
-            </exercise> -->
-
+<webwork source="BasicMath/FractionsCalculation/DivideFractions11.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicMath/FractionsCalculation/DivideFractions12.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/DivideFractions32.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/DivideFractions42.pg"  />
-            </exercise> -->
-
-            <exercise permid="PGk">
-                <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberMultiplication10.pg"  />
-            </exercise>
-            <exercise permid="vNt">
-                <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberMultiplication10.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionsCalculation/DivideFractions12.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/DivideFractions32.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/DivideFractions42.pg"  />
+</exercise> -->
+      <exercise permid="PGk">
+        <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberMultiplication10.pg"  />
+      </exercise>
+      <exercise permid="vNt">
+        <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberMultiplication10.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberDivision10.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberDivision10.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberDivision10.pg"  />
-            </exercise> -->
-        </exercisegroup>
-
-        <exercisegroup cols="3" permid="FCE">
-            <title>Adding/Subtracting Fractions</title>
+<webwork source="BasicAlgebra/FractionArithmetic/MixedNumberDivision10.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/MixedNumberDivision10.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/MixedNumberDivision10.pg"  />
+</exercise> -->
+    </exercisegroup>
+    <exercisegroup cols="3" permid="FCE">
+      <title>Adding/Subtracting Fractions</title>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions02.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions04.pg"  />
-            </exercise> -->
+<webwork source="BasicAlgebra/FractionArithmetic/AddFractions02.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/AddFractions04.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions06.pg"  />
-            </exercise> -->
-            <exercise permid="bUC">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions08.pg"  />
-            </exercise>
-            <exercise permid="IbL">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions08.pg"  />
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/AddFractions06.pg"  />
+</exercise> -->
+      <exercise permid="bUC">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions08.pg"  />
+      </exercise>
+      <exercise permid="IbL">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions08.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions09.pg"  />
-            </exercise> -->
-
-            <exercise permid="oiU">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions10.pg"  />
-            </exercise>
-            <exercise permid="Uqd">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions10.pg"  />
-            </exercise>
-            <exercise permid="Axm">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions12.pg"  />
-            </exercise>
-            <exercise permid="gEv">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions12.pg"  />
-            </exercise>
-
-            <exercise permid="MLE">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions20.pg"  />
-            </exercise>
-            <exercise permid="sSN">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions20.pg"  />
-            </exercise>
-
-
+<webwork source="BasicAlgebra/FractionArithmetic/AddFractions09.pg"  />
+</exercise> -->
+      <exercise permid="oiU">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions10.pg"  />
+      </exercise>
+      <exercise permid="Uqd">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions10.pg"  />
+      </exercise>
+      <exercise permid="Axm">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions12.pg"  />
+      </exercise>
+      <exercise permid="gEv">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions12.pg"  />
+      </exercise>
+      <exercise permid="MLE">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions20.pg"  />
+      </exercise>
+      <exercise permid="sSN">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions20.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions22.pg"  />
-            </exercise> -->
-
-            <!-- seeds set so that problems are dissimilar -->
-            <exercise permid="YZW">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions24.pg" seed="14" />
-            </exercise>
-            <exercise permid="Fhf">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions24.pg" seed="15"/>
-            </exercise>
-
-            <exercise permid="loo">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" seed="16"/>
-            </exercise>
-            <exercise permid="Rvx">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" seed="17"/>
-            </exercise>
-
-            <exercise permid="xCG">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions30.pg"  />
-            </exercise>
-            <exercise permid="dJP">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions30.pg"  />
-            </exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/AddFractions22.pg"  />
+</exercise> -->
+<!-- seeds set so that problems are dissimilar -->
+      <exercise permid="YZW">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions24.pg" seed="14" />
+      </exercise>
+      <exercise permid="Fhf">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions24.pg" seed="15"/>
+      </exercise>
+      <exercise permid="loo">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" seed="16"/>
+      </exercise>
+      <exercise permid="Rvx">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" seed="17"/>
+      </exercise>
+      <exercise permid="xCG">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions30.pg"  />
+      </exercise>
+      <exercise permid="dJP">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions30.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions40.pg"  />
-            </exercise> -->
-
-            <exercise permid="JQY">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions50.pg"  />
-            </exercise>
-            <exercise permid="pYh">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions50.pg"  />
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/AddFractions40.pg"  />
+</exercise> -->
+      <exercise permid="JQY">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions50.pg"  />
+      </exercise>
+      <exercise permid="pYh">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions50.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions60.pg"  />
-            </exercise> -->
-
-            <exercise permid="Wfq">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions70.pg"  />
-            </exercise>
-            <exercise permid="Cmz">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions70.pg"  />
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/AddFractions60.pg"  />
+</exercise> -->
+      <exercise permid="Wfq">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions70.pg"  />
+      </exercise>
+      <exercise permid="Cmz">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions70.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions80.pg"  />
-            </exercise> -->
-
-            <exercise permid="itI">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions90.pg"  />
-            </exercise>
-            <exercise permid="OAR">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions90.pg"  />
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/AddFractions80.pg"  />
+</exercise> -->
+      <exercise permid="itI">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions90.pg"  />
+      </exercise>
+      <exercise permid="OAR">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions90.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionsCalculation/AddThreeFractions10.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/AddThreeFractions20.pg"  />
-            </exercise> -->
-
-            <exercise permid="uIa">
-                <webwork source="BasicMath/FractionsCalculation/AddThreeFractions30.pg"  />
-            </exercise>
-            <exercise permid="aPj">
-                <webwork source="BasicMath/FractionsCalculation/AddThreeFractions30.pg"  />
-            </exercise>
-            <exercise permid="GWs">
-                <webwork source="BasicMath/FractionsCalculation/AddThreeFractions40.pg"  />
-            </exercise>
-            <exercise permid="ndB">
-                <webwork source="BasicMath/FractionsCalculation/AddThreeFractions40.pg"  />
-            </exercise>
-
-
+<webwork source="BasicMath/FractionsCalculation/AddThreeFractions10.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/AddThreeFractions20.pg"  />
+</exercise> -->
+      <exercise permid="uIa">
+        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions30.pg"  />
+      </exercise>
+      <exercise permid="aPj">
+        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions30.pg"  />
+      </exercise>
+      <exercise permid="GWs">
+        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions40.pg"  />
+      </exercise>
+      <exercise permid="ndB">
+        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions40.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions01.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions02.pg"  />
-            </exercise> -->
-
-            <exercise permid="TkK">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg"  />
-            </exercise>
-            <exercise permid="zrT">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg"  />
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions01.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions02.pg"  />
+</exercise> -->
+      <exercise permid="TkK">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg"  />
+      </exercise>
+      <exercise permid="zrT">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions06.pg"  />
-            </exercise> -->
-
-            <exercise permid="fzc">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg"  />
-            </exercise>
-            <exercise permid="LGl">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg"  />
-            </exercise>
-            <exercise permid="rNu">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions30.pg"  />
-            </exercise>
-            <exercise permid="XUD">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions30.pg"  />
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions06.pg"  />
+</exercise> -->
+      <exercise permid="fzc">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg"  />
+      </exercise>
+      <exercise permid="LGl">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg"  />
+      </exercise>
+      <exercise permid="rNu">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions30.pg"  />
+      </exercise>
+      <exercise permid="XUD">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions30.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions20.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions40.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions50.pg"  />
-            </exercise> -->
-
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions20.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions40.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions50.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions60.pg"  />
-            </exercise> -->
-
-            <exercise permid="EbM">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions70.pg"  />
-            </exercise>
-            <exercise permid="kiV">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions70.pg"  />
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions60.pg"  />
+</exercise> -->
+      <exercise permid="EbM">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions70.pg"  />
+      </exercise>
+      <exercise permid="kiV">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions70.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions80.pg"  />
-            </exercise> -->
-
-            <!-- seeds set so that problems are dissimilar -->
-            <exercise permid="Qqe">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions90.pg" seed="18"/>
-            </exercise>
-            <exercise permid="wxn">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions90.pg" seed="19"/>
-            </exercise>
-
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions80.pg"  />
+</exercise> -->
+<!-- seeds set so that problems are dissimilar -->
+      <exercise permid="Qqe">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions90.pg" seed="18"/>
+      </exercise>
+      <exercise permid="wxn">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions90.pg" seed="19"/>
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions100.pg"  />
-            </exercise> -->
-
-            <exercise permid="cEw">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions110.pg"  />
-            </exercise>
-            <exercise permid="ILF">
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions110.pg"  />
-            </exercise>
-        </exercisegroup>
-
-
+<webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions100.pg"  />
+</exercise> -->
+      <exercise permid="cEw">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions110.pg"  />
+      </exercise>
+      <exercise permid="ILF">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions110.pg"  />
+      </exercise>
+    </exercisegroup>
 <!--         <exercisegroup>
-            <introduction>
-                <p>Fraction Operations by Estimation</p>
-            </introduction>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/FractionAdditionEstimation10.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/FractionAdditionEstimation20.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/FractionAdditionEstimation30.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/FractionAdditionEstimation40.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/FractionSubtractionEstimation10.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/FractionSubtractionEstimation20.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionsCalculation/FractionSubtractionEstimation30.pg"  />
-            </exercise>
-        </exercisegroup> -->
-
-        <exercisegroup permid="lJN">
-            <title>Applications</title>
-            <exercise permid="oSO">
-                <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems10.pg"  />
-            </exercise>
-            <exercise permid="UZX">
-                <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems10.pg"  />
-            </exercise>
-            <exercise permid="Bhg">
-                <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems20.pg"  />
-            </exercise>
+<introduction>
+<p>Fraction Operations by Estimation</p>
+</introduction>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/FractionAdditionEstimation10.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/FractionAdditionEstimation20.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/FractionAdditionEstimation30.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/FractionAdditionEstimation40.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/FractionSubtractionEstimation10.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/FractionSubtractionEstimation20.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionsCalculation/FractionSubtractionEstimation30.pg"  />
+</exercise>
+</exercisegroup> -->
+    <exercisegroup permid="lJN">
+      <title>Applications</title>
+      <exercise permid="oSO">
+        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems10.pg"  />
+      </exercise>
+      <exercise permid="UZX">
+        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems10.pg"  />
+      </exercise>
+      <exercise permid="Bhg">
+        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems20.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems30.pg"  />
-            </exercise> -->
+<webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems30.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems40.pg"  />
-            </exercise> -->
-            <exercise permid="hop">
-                <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems60.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems40.pg"  />
+</exercise> -->
+      <exercise permid="hop">
+        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems60.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems70.pg"  />
-            </exercise> -->
-            <exercise permid="Nvy">
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems10.pg"  />
-            </exercise>
-            <exercise permid="tCH">
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems10.pg"  />
-            </exercise>
-            <exercise permid="ZJQ">
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems20.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems70.pg"  />
+</exercise> -->
+      <exercise permid="Nvy">
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems10.pg"  />
+      </exercise>
+      <exercise permid="tCH">
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems10.pg"  />
+      </exercise>
+      <exercise permid="ZJQ">
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems20.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems30.pg"  />
-            </exercise>
- --><exercise permid="FQZ">
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems30.pg"  />
-            </exercise>
-            <exercise permid="lYi">
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems70.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems30.pg"  />
+</exercise>
+-->
+      <exercise permid="FQZ">
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems30.pg"  />
+      </exercise>
+      <exercise permid="lYi">
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems70.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems40.pg"  />
-            </exercise> -->
-            <exercise permid="Sfr">
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems50.pg"  />
-            </exercise>
-            <exercise permid="ymA">
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems50.pg"  />
-            </exercise>
-            <exercise permid="etJ">
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems60.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems40.pg"  />
+</exercise> -->
+      <exercise permid="Sfr">
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems50.pg"  />
+      </exercise>
+      <exercise permid="ymA">
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems50.pg"  />
+      </exercise>
+      <exercise permid="etJ">
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems60.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems75.pg"  />
-            </exercise> -->
+<webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems75.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems80.pg"  />
-            </exercise> -->
-            <exercise permid="KAS">
-                <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems10.pg"  />
-            </exercise>
-            <exercise permid="qIb">
-                <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems10.pg"  />
-            </exercise>
-            <exercise permid="WPk">
-                <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems20.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems80.pg"  />
+</exercise> -->
+      <exercise permid="KAS">
+        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems10.pg"  />
+      </exercise>
+      <exercise permid="qIb">
+        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems10.pg"  />
+      </exercise>
+      <exercise permid="WPk">
+        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems20.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems30.pg"  />
-            </exercise> -->
-            <exercise permid="CWt">
-                <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems40.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems30.pg"  />
+</exercise> -->
+      <exercise permid="CWt">
+        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems40.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems50.pg"  />
-            </exercise> -->
+<webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems50.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems70.pg"  />
-            </exercise> -->
+<webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems70.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems10.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems20.pg"  />
-            </exercise> -->
-            <exercise permid="jdC">
-                <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems30.pg"  />
-            </exercise>
-            <exercise permid="PkL">
-                <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems40.pg"  />
-            </exercise>
-            <exercise permid="vrU">
-                <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems50.pg"  />
-            </exercise>
-            <exercise permid="bzd">
-                <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems60.pg"  />
-            </exercise>
-
-            <exercise permid="HGm">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddingFractionsOfInches10.pg"  />
-            </exercise>
-            <exercise permid="nNv">
-                <webwork source="BasicAlgebra/FractionArithmetic/AddingFractionsOfInches10.pg"  />
-            </exercise>
-
-            <exercise permid="TUE">
-                <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems10.pg"  />
-            </exercise>
-             <exercise permid="AbN">
-                <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems20.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems10.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems20.pg"  />
+</exercise> -->
+      <exercise permid="jdC">
+        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems30.pg"  />
+      </exercise>
+      <exercise permid="PkL">
+        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems40.pg"  />
+      </exercise>
+      <exercise permid="vrU">
+        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems50.pg"  />
+      </exercise>
+      <exercise permid="bzd">
+        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems60.pg"  />
+      </exercise>
+      <exercise permid="HGm">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddingFractionsOfInches10.pg"  />
+      </exercise>
+      <exercise permid="nNv">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddingFractionsOfInches10.pg"  />
+      </exercise>
+      <exercise permid="TUE">
+        <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems10.pg"  />
+      </exercise>
+      <exercise permid="AbN">
+        <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems20.pg"  />
+      </exercise>
 <!--            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems20.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems30.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems40.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems40.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems50.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems60.pg"  />
-            </exercise>
- -->
+<webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems20.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems30.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems40.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems40.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems50.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems60.pg"  />
+</exercise>
+-->
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems10.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems20.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems30.pg"  />
-            </exercise> -->
-            <exercise permid="giW">
-                <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems40.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems10.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems20.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems30.pg"  />
+</exercise> -->
+      <exercise permid="giW">
+        <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems40.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems50.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems60.pg"  />
-            </exercise> -->
-
+<webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems50.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems60.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems10.pg"  />
-            </exercise> -->
-            <exercise permid="Mqf">
-                <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems20.pg"  />
-            </exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems10.pg"  />
+</exercise> -->
+      <exercise permid="Mqf">
+        <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems20.pg"  />
+      </exercise>
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems30.pg"  />
-            </exercise> -->
+<webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems30.pg"  />
+</exercise> -->
 <!--             <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems50.pg"  />
-            </exercise>
-            <exercise>
-                <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems60.pg"  />
-            </exercise> -->
-
-        </exercisegroup>
-
-        <exercisegroup permid="RQW">
-            <title>Sketching Fractions</title>
+<webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems50.pg"  />
+</exercise>
+<exercise>
+<webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems60.pg"  />
+</exercise> -->
+    </exercisegroup>
+    <exercisegroup permid="RQW">
+      <title>Sketching Fractions</title>
 <!--TODO: These next four need answers/solutions -->
-            <exercise permid="doq">
-                <statement>
-                    <p permid="Ixx">Sketch a number line showing each fraction. (Be sure to carefully indicate the correct number of equal parts of the whole.)<ol cols="4" permid="XdF">
-                        <li permid="Bac">
-                            <p permid="jGs"><m>\dfrac{2}{3}</m></p>
-                        </li>
-                        <li permid="hhl">
-                            <p permid="PNB"><m>\dfrac{6}{8}</m></p>
-                        </li>
-                        <li permid="Nou">
-                            <p permid="vUK"><m>\dfrac{5}{4}</m></p>
-                        </li>
-                        <li permid="tvD">
-                            <p permid="cbT"><m>-\dfrac{4}{5}</m></p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <answer permid="cSR">
-                <sbsgroup permid="sxo">
-                <sidebyside widths="47% 47%" permid="ELG">
-                    <figure permid="kqm">
-                        <image source="images/two_thirds_on_numberline.png">
-                        <description>a number line with tick marks, and labels at 0, 2/3, and 1</description>
-                        </image>
-                    </figure>
-                    <figure permid="Qxv">
-                        <image source="images/six_eighths_on_numberline.png" permid="Uqq">
-                        <description>a number line with tick marks, and labels at 0, 6/8, and 1</description>
-                        </image>
-                    </figure>
-                </sidebyside>
-                <sidebyside widths="47% 47%" permid="kSP">
-                    <figure permid="wEE">
-                        <image source="images/five_fourths_on_numberline.png" permid="Axz">
-                        <description>a number line with tick marks, and labels at 0, 1, and 5/4</description>
-                        </image>
-                    </figure>
-                    <figure permid="cLN">
-                        <image source="images/negative_four_fifths_on_numberline.png" permid="gEI">
-                        <description>a number line with tick marks, and labels at -4/5, 0, and 1</description>
-                        </image>
-                    </figure>
-                </sidebyside>
-                </sbsgroup>
-            </answer>
-            </exercise>
-
-            <exercise permid="Jvz">
-                <statement>
-                    <p permid="oEG">Sketch a number line showing each fraction. (Be sure to carefully indicate the correct number of equal parts of the whole.)<ol cols="4" permid="DkO">
-                        <li permid="ZCM">
-                            <p permid="Ijc"><m>\dfrac{1}{6}</m></p>
-                        </li>
-                        <li permid="FJV">
-                            <p permid="oql"><m>\dfrac{3}{9}</m></p>
-                        </li>
-                        <li permid="lRe">
-                            <p permid="Uxu"><m>\dfrac{7}{6}</m></p>
-                        </li>
-                        <li permid="RYn">
-                            <p permid="AED"><m>-\dfrac{8}{5}</m></p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <answer permid="Jaa">
-                <sbsgroup permid="YEx">
-                <sidebyside widths="47% 47%" permid="QZY">
-                    <figure permid="ISW">
-                        <image source="images/one_sixth_on_numberline.png" permid="MLR">
-                        <description>a number line with tick marks, and labels at 0, 1/6, and 1</description>
-                        </image>
-                    </figure>
-                    <figure permid="paf">
-                        <image source="images/three_ninths_on_numberline.png" permid="sTa">
-                        <description>a number line with tick marks, and labels at 0, 3/9, and 1</description>
-                        </image>
-                    </figure>
-                </sidebyside>
-                <sidebyside widths="47% 47%" permid="xhh">
-                    <figure permid="Vho">
-                        <image source="images/seven_sixths_on_numberline.png" permid="Zaj">
-                        <description>a number line with tick marks, and labels at 0, 1, and 7/6</description>
-                        </image>
-                    </figure>
-                    <figure permid="Box">
-                        <image source="images/eight_fifths_on_numberline.png" permid="Fhs">
-                        <description>a number line with tick marks, and labels at 0, 1, and 8/5</description>
-                        </image>
-                    </figure>
-                </sidebyside>
-                </sbsgroup>
-            </answer>
-            </exercise>
-
-            <exercise permid="pCI">
-                <statement>
-                    <p permid="ULP">Sketch a picture of the product <m>\frac{3}{5} \cdot \frac{1}{2}</m>, using a number line or rectangles.</p>
-                </statement>
-            </exercise>
-
-            <exercise permid="VJR">
-                <statement>
-                    <p permid="ASY">Sketch a picture of the sum <m>\frac{2}{3} + \frac{1}{8}</m>, using a number line or rectangles.</p>
-                </statement>
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup permid="xYf">
-            <title>Challenge</title>
-            <exercise permid="BRa"><!-- Kara's challenge problem -->
-                <webwork>
-                    <pg-macros>
-                        <macro-file>contextRationalFunction.pl</macro-file>
-                    </pg-macros>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->variables->are(a=>'Real');
-                $p = random(1,9,1);
-                $q = random(1,9,1);
-                $numerator = $p+$q;
-                $left = Formula("$p/a");
-                $right = Formula("$q/a");
-                $expression = $left + $right;
-                Context("RationalFunction-Strict");
-                Context()->variables->are(a=>'Real');
-                $answer = Formula("$numerator/a");
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="hah">Given that <m>a\neq0</m>, simplify <m>\displaystyle{}<var name="$expression"/></m>.</p>
-                        <p permid="Nhq"><var name="$answer" width="10" /></p>
-                    </statement>
-                    <solution permid="phj">
-                        <p permid="rUL">Since the fractions have the same denominator, we can just add numerators and keep that denominator.<md permid="SBd">
-                            <mrow><var name="$expression"/> \amp= \frac{<var name="$p"/>+<var name="$q"/>}{a}</mrow>
-                            <mrow>                          \amp = <var name="$answer" /></mrow>
-                        </md></p>
-                    </solution>
-                </webwork>
-            </exercise>
-
-            <exercise permid="hYj"><!-- Kara's challenge problem -->
-                <webwork>
-                    <pg-macros>
-                        <macro-file>contextRationalFunction.pl</macro-file>
-                    </pg-macros>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->variables->are(a=>'Real');
-                $p = random(1,9,1);
-                $q = random(1,9,2);
-                $p2 = 2*$p;
-                $num = (2*$p+$q);
-                $left = Formula("$p/a");
-                $right = Formula("$q/(2a)");
-                $expression = $left + $right;
-                Context("RationalFunction-Strict");
-                Context()->variables->are(a=>'Real');
-                $answer = Formula("$num/(2a)");
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="toz">Given that <m>a\neq0</m>, simplify <m>\displaystyle{}<var name="$expression"/></m>.</p>
-                        <p permid="ZvI"><var name="$answer" width="10" /></p>
-                    </statement>
-                    <solution permid="Vos">
-                        <p permid="YbU">Since the fractions don't have the same denominator, we have to make them have like denominators.  Multiply the first fraction by <m>\frac{2}{2}</m>.
-                        <md permid="yIm">
-                            <mrow><var name="$expression"/> \amp = <var name="$left"/>\cdot \frac{2}{2} + <var name="$right"/></mrow>
-                            <mrow>                          \amp = \frac{<var name="$p2"/>}{2a} + <var name="$right"/></mrow>
-                            <mrow>                          \amp = <var name="$answer" /></mrow>
-                        </md></p>
-                    </solution>
-                </webwork>
-            </exercise>
-
-            <exercise permid="Ofs"><!-- Kara's challenge problem -->
-                <webwork>
-                    <pg-macros>
-                        <macro-file>contextRationalFunction.pl</macro-file>
-                    </pg-macros>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->variables->are(a=>'Real');
-                $p = random(1,9,1);
-                $q = list_random(1..4,6..9);
-                $numerator = (5*$p-$q);
-                $left = Formula("$p/a");
-                $right = Formula("$q/(5a)");
-                $expression = $left - $right;
-                $p5 = 5*$p;
-                Context("RationalFunction-Strict");
-                Context()->variables->are(a=>'Real');
-                $answer = Formula("$numerator/(5a)");
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="FCR">Given that <m>a\neq0</m>, simplify <m>\displaystyle{}<var name="$expression"/></m>.</p>
-                        <p permid="lKa"><var name="$answer" width="10" /></p>
-                    </statement>
-                    <solution permid="BvB">
-                        <p permid="Ejd">Since the fractions don't have the same denominator, we have to make them have like denominators. Multiply the first fraction by <m>\frac{5}{5}</m>.
-                        <md permid="ePv">
-                            <mrow><var name="$expression"/> \amp = <var name="$left"/>\cdot \frac{5}{5} - <var name="$right"/></mrow>
-                            <mrow>                          \amp = \frac{<var name="$p5"/>}{5a} - <var name="$right"/></mrow>
-                            <mrow>                          \amp = <var name="$answer" /></mrow>
-                        </md></p>
-                    </solution>
-                </webwork>
-            </exercise>
-        </exercisegroup>
-    </exercises>
+      <exercise permid="doq">
+        <statement>
+          <p permid="Ixx">
+            Sketch a number line showing each fraction.
+            (Be sure to carefully indicate the correct number of equal parts of the whole.)
+            <ol cols="4" permid="XdF">
+              <li permid="Bac">
+                <p permid="jGs">
+                  <m>\dfrac{2}{3}</m>
+                </p>
+              </li>
+              <li permid="hhl">
+                <p permid="PNB">
+                  <m>\dfrac{6}{8}</m>
+                </p>
+              </li>
+              <li permid="Nou">
+                <p permid="vUK">
+                  <m>\dfrac{5}{4}</m>
+                </p>
+              </li>
+              <li permid="tvD">
+                <p permid="cbT">
+                  <m>-\dfrac{4}{5}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer permid="cSR">
+          <sbsgroup permid="sxo">
+            <sidebyside widths="47% 47%" permid="ELG">
+              <figure permid="kqm">
+                <image source="images/two_thirds_on_numberline.png">
+                  <description>a number line with tick marks, and labels at 0, 2/3, and 1</description>
+                </image>
+              </figure>
+              <figure permid="Qxv">
+                <image source="images/six_eighths_on_numberline.png" permid="Uqq">
+                  <description>a number line with tick marks, and labels at 0, 6/8, and 1</description>
+                </image>
+              </figure>
+            </sidebyside>
+            <sidebyside widths="47% 47%" permid="kSP">
+              <figure permid="wEE">
+                <image source="images/five_fourths_on_numberline.png" permid="Axz">
+                  <description>a number line with tick marks, and labels at 0, 1, and 5/4</description>
+                </image>
+              </figure>
+              <figure permid="cLN">
+                <image source="images/negative_four_fifths_on_numberline.png" permid="gEI">
+                  <description>a number line with tick marks, and labels at -4/5, 0, and 1</description>
+                </image>
+              </figure>
+            </sidebyside>
+          </sbsgroup>
+        </answer>
+      </exercise>
+      <exercise permid="Jvz">
+        <statement>
+          <p permid="oEG">
+            Sketch a number line showing each fraction.
+            (Be sure to carefully indicate the correct number of equal parts of the whole.)
+            <ol cols="4" permid="DkO">
+              <li permid="ZCM">
+                <p permid="Ijc">
+                  <m>\dfrac{1}{6}</m>
+                </p>
+              </li>
+              <li permid="FJV">
+                <p permid="oql">
+                  <m>\dfrac{3}{9}</m>
+                </p>
+              </li>
+              <li permid="lRe">
+                <p permid="Uxu">
+                  <m>\dfrac{7}{6}</m>
+                </p>
+              </li>
+              <li permid="RYn">
+                <p permid="AED">
+                  <m>-\dfrac{8}{5}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer permid="Jaa">
+          <sbsgroup permid="YEx">
+            <sidebyside widths="47% 47%" permid="QZY">
+              <figure permid="ISW">
+                <image source="images/one_sixth_on_numberline.png" permid="MLR">
+                  <description>a number line with tick marks, and labels at 0, 1/6, and 1</description>
+                </image>
+              </figure>
+              <figure permid="paf">
+                <image source="images/three_ninths_on_numberline.png" permid="sTa">
+                  <description>a number line with tick marks, and labels at 0, 3/9, and 1</description>
+                </image>
+              </figure>
+            </sidebyside>
+            <sidebyside widths="47% 47%" permid="xhh">
+              <figure permid="Vho">
+                <image source="images/seven_sixths_on_numberline.png" permid="Zaj">
+                  <description>a number line with tick marks, and labels at 0, 1, and 7/6</description>
+                </image>
+              </figure>
+              <figure permid="Box">
+                <image source="images/eight_fifths_on_numberline.png" permid="Fhs">
+                  <description>a number line with tick marks, and labels at 0, 1, and 8/5</description>
+                </image>
+              </figure>
+            </sidebyside>
+          </sbsgroup>
+        </answer>
+      </exercise>
+      <exercise permid="pCI">
+        <statement>
+          <p permid="ULP">
+            Sketch a picture of the product <m>\frac{3}{5} \cdot \frac{1}{2}</m>,
+            using a number line or rectangles.
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="VJR">
+        <statement>
+          <p permid="ASY">
+            Sketch a picture of the sum <m>\frac{2}{3} + \frac{1}{8}</m>,
+            using a number line or rectangles.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup permid="xYf">
+      <title>Challenge</title>
+      <exercise permid="BRa">
+<!-- Kara's challenge problem -->
+        <webwork>
+            <pg-macros><macro-file>contextRationalFunction.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->variables->are(a=>'Real');
+$p = random(1,9,1);
+$q = random(1,9,1);
+$numerator = $p+$q;
+$left = Formula("$p/a");
+$right = Formula("$q/a");
+$expression = $left + $right;
+Context("RationalFunction-Strict");
+Context()->variables->are(a=>'Real');
+$answer = Formula("$numerator/a");
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="hah">
+                Given that <m>a\neq0</m>,
+                simplify <m>\displaystyle{}<var name="$expression"/></m>.
+              </p>
+              <p permid="Nhq">
+                <var name="$answer" width="10" />
+              </p>
+            </statement>
+            <solution permid="phj">
+              <p permid="rUL">
+                Since the fractions have the same denominator,
+                we can just add numerators and keep that denominator.
+                <md permid="SBd">
+                  <mrow><var name="$expression"/> \amp= \frac{<var name="$p"/>+<var name="$q"/>}{a}</mrow>
+                  <mrow>\amp = <var name="$answer" /></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+      <exercise permid="hYj">
+<!-- Kara's challenge problem -->
+        <webwork>
+            <pg-macros><macro-file>contextRationalFunction.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->variables->are(a=>'Real');
+$p = random(1,9,1);
+$q = random(1,9,2);
+$p2 = 2*$p;
+$num = (2*$p+$q);
+$left = Formula("$p/a");
+$right = Formula("$q/(2a)");
+$expression = $left + $right;
+Context("RationalFunction-Strict");
+Context()->variables->are(a=>'Real');
+$answer = Formula("$num/(2a)");
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="toz">
+                Given that <m>a\neq0</m>,
+                simplify <m>\displaystyle{}<var name="$expression"/></m>.
+              </p>
+              <p permid="ZvI">
+                <var name="$answer" width="10" />
+              </p>
+            </statement>
+            <solution permid="Vos">
+              <p permid="YbU">
+                Since the fractions don't have the same denominator,
+                we have to make them have like denominators.
+                Multiply the first fraction by <m>\frac{2}{2}</m>.
+                <md permid="yIm">
+                  <mrow><var name="$expression"/> \amp = <var name="$left"/>\cdot \frac{2}{2} + <var name="$right"/></mrow>
+                  <mrow>\amp = \frac{<var name="$p2"/>}{2a} + <var name="$right"/></mrow>
+                  <mrow>\amp = <var name="$answer" /></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+      <exercise permid="Ofs">
+<!-- Kara's challenge problem -->
+        <webwork>
+            <pg-macros><macro-file>contextRationalFunction.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->variables->are(a=>'Real');
+$p = random(1,9,1);
+$q = list_random(1..4,6..9);
+$numerator = (5*$p-$q);
+$left = Formula("$p/a");
+$right = Formula("$q/(5a)");
+$expression = $left - $right;
+$p5 = 5*$p;
+Context("RationalFunction-Strict");
+Context()->variables->are(a=>'Real');
+$answer = Formula("$numerator/(5a)");
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="FCR">
+                Given that <m>a\neq0</m>,
+                simplify <m>\displaystyle{}<var name="$expression"/></m>.
+              </p>
+              <p permid="lKa">
+                <var name="$answer" width="10" />
+              </p>
+            </statement>
+            <solution permid="BvB">
+              <p permid="Ejd">
+                Since the fractions don't have the same denominator,
+                we have to make them have like denominators.
+                Multiply the first fraction by <m>\frac{5}{5}</m>.
+                <md permid="ePv">
+                  <mrow><var name="$expression"/> \amp = <var name="$left"/>\cdot \frac{5}{5} - <var name="$right"/></mrow>
+                  <mrow>\amp = \frac{<var name="$p5"/>}{5a} - <var name="$right"/></mrow>
+                  <mrow>\amp = <var name="$answer" /></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

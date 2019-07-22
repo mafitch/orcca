@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,1244 +6,1457 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
 <section xml:id="section-summary-of-graphing-lines" permid="AUU">
-
-    <title>Summary of Graphing Lines</title>
-
-    <introduction permid="yoJ">
-        <p permid="HWQ">The previous several sections have demonstrated several methods for plotting a graph of a linear equation. In this section, we review these methods.</p>
-
-
-
-        <sidebyside widths="31% 31% 31%" margins="0%" valig="top" permid="ShA">
-
-        <p permid="PBp">We have learned three forms to write a linear equation:<ul permid="rue">
-            <li permid="PWO"><p permid="qoL">slope-intercept form</p><p permid="WvU"><m>y=mx+b</m></p></li>
-            <li permid="wdX"><p permid="CDd">standard form</p><p permid="iKm"><m>Ax+By=C</m></p></li>
-            <li permid="clg"><p permid="ORv">point-slope form</p><p permid="uYE"><m>y=m\left(x-x_0\right)+y_0</m></p></li>
-        </ul></p>
-
-        <p permid="vIy">We have studied two special types of line:<ul permid="XBn">
-            <li permid="Isp"><p permid="bfN">horizontal line: <m>y=k</m></p></li>
-            <li permid="ozy"><p permid="HmW">vertical line: <m>x=h</m></p></li>
-        </ul></p>
-
-        <p permid="bPH">We have practiced three ways to graph a line:<ul permid="DIw">
-            <li permid="UGH"><p permid="nuf">building a table of <m>x</m>- and <m>y</m>-values</p></li>
-            <li permid="ANQ"><p permid="TBo">plotting <em>one</em> point (often the <m>y</m>-intercept) and drawing slope triangles</p></li>
-            <li permid="gUZ"><p permid="zIx">plotting its <m>x</m>-intercept and <m>y</m>-intercept</p></li>
-        </ul></p>
-        </sidebyside>
-    </introduction>
-
-    <subsection permid="hcd">
-        <title>Graphing Lines in Slope-Intercept Form</title>
-
-        <p permid="oNT">In the following examples we will graph <m>y=-2x+1</m>, which is in <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>, with different methods and compare them.</p>
-
-        <example permid="XWM">
-            <title>Building a Table of <m>x</m>- and <m>y</m>-values</title>
-
-            <p permid="LWP">First, we will graph <m>y=-2x+1</m> by building a table of values. In theory this method can be used for any type of equation, linear or not. Every student must feel comfortable with building a table of values based on an equation.</p>
-
-            <sidebyside widths="50% 44%" margins="0%" permid="Qsn">
-                <table permid="MVe">
-                    <caption>Table for <m>y=-2x+1</m></caption>
-                    <tabular permid="lxO">
-                        <col halign="center"/>
-                        <col halign="left"/>
-                        <col halign="center"/>
-                        <row bottom="medium">
-                            <cell><m>x</m>-value</cell>
-                            <cell halign="center"><m>y</m>-value</cell>
-                            <cell>Point</cell>
-                        </row>
-                        <row>
-                            <cell><m>\highlight{-2}</m></cell>
-                            <cell><m>y=-2(\substitute{-2})+1=5</m></cell>
-                            <cell><m>(-2,5)</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>\highlight{-1}</m></cell>
-                            <cell><m>y=-2(\substitute{-1})+1=3</m></cell>
-                            <cell><m>(-1,3)</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>\highlight{0}</m></cell>
-                            <cell><m>y=-2(\substitute{0})+1=1</m></cell>
-                            <cell><m>(0,1)</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>\highlight{1}</m></cell>
-                            <cell><m>y=-2(\substitute{1})+1=-1</m></cell>
-                            <cell><m>(1,-1)</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>\highlight{2}</m></cell>
-                            <cell><m>y=-2(\substitute{2})+1=-3</m></cell>
-                            <cell><m>(2,-3)</m></cell>
-                        </row>
-                    </tabular>
-                </table>
-
-                <figure permid="sdY">
-                    <caption>Graphing <m>y=-2x+1</m> by Building a Table of Values</caption>
-                    <image permid="iYH">
-                        <description>This is a graph of the line y=-2x+1. The following points on the line are plotted: (-2,5),(-1,3),(0,1),(1,-1),(2,-3).</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-3,xmax=3,
-                                ymin=-6,ymax=6]
-                        \addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
-                        \addplot[soliddot] coordinates {(-2, 5) (-1, 3) (0, 1) (1, -1) (2, -3)};
-                    \end{axis}
-                \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                </figure>
-
-            </sidebyside>
-        </example>
-
-        <example permid="EdV">
-            <title>Using Slope Triangles</title>
-
-            <p permid="Ylh">Although making a table is straightforward, the slope triangle method is both faster and reinforces the true meaning of slope. In the slope triangle method, we first identify some point on the line. With a line in <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>, we know the <m>y</m>-intercept, which is <m>(0,1)</m>. Then, we can draw slope triangles in both directions to find more points.</p>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="wzw">
-                <figure permid="kzz">
-                    <caption>Marking a point and some slope triangles</caption>
-                    <image permid="PfQ">
-                        <description></description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-3,xmax=3,
-                                ymin=-6,ymax=6]
-                        \addplot[soliddot] coordinates {(0, 1)} node[below left] {$(0,1)$};
-                        \addplot[soliddot] coordinates {(-2, 5) (-1, 3) (1, -1) (2, -3)};
-                        \addplot[guideline] coordinates {(0,1) (1,1)} node[pos=0.5,above] {$1$};
-                        \addplot[guideline,->] coordinates {(1,1) (1,-1)} node[pos=0.5,right] {$2$};
-                        \addplot[guideline,->] coordinates {(1,-1) (2,-1) (2,-3)};
-                        \addplot[guideline,->] coordinates {(0,1) (-1,1) (-1,3)};
-                        \addplot[guideline,->] coordinates {(-1,3) (-2,3) (-2,5)};
-                    \end{axis}
-                \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                </figure>
-
-                <figure permid="QGI">
-                    <caption>Graphing <m>y=-2x+1</m> by slope triangles</caption>
-                    <image permid="vmZ">
-                        <description>This is a graph of the line y=-2x+1. The following points on the line are plotted: (-2,5),(-1,3),( 0,1),(1,-1),(2,-3). There are a few slope triangles. One starts at (-2,5), passes (-1,5), and ends at (-1,3). One    starts at (-1,3), passes (0,3), and ends at (0,1). One starts at (0,1), passes (1,1), and ends at (1,-1). One starts   at (1,-1), passes (2,-1), and ends at (2,-3).</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-3,xmax=3,
-                                ymin=-6,ymax=6]
-                        \addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
-                        \addplot[soliddot] coordinates {(-2, 5) (-1, 3) (0, 1) (1, -1) (2, -3)};
-                        \addplot[guideline,->] coordinates {(0,1) (1,1) (1,-1)};
-                        \addplot[guideline,->] coordinates {(1,-1) (2,-1) (2,-3)};
-                        \addplot[guideline,->] coordinates {(0,1) (-1,1) (-1,3)};
-                        \addplot[guideline,->] coordinates {(-1,3) (-2,3) (-2,5)};
-                    \end{axis}
-                \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-
-            <p permid="Esq">Compared to the table method, the slope triangle method:<ul permid="ffM">
-                <li permid="Nci">is less straightforward</li>
-                <li permid="tjr">doesn't take the time and space to make a table</li>
-                <li permid="ZqA">doesn't involve lots of calculations where you might make a human error</li>
-                <li permid="FxJ">shows slope triangles, which reinforces the meaning of slope</li>
-            </ul></p>
-        </example>
-
-        <example permid="kle">
-            <title>Using intercepts</title>
-
-            <p permid="wNR">If we use the <m>x</m>- and <m>y</m>-intercepts to plot <m>y=-2x+1</m>, we have some calculation to do. While it is apparent that the <m>y</m>-intercept is at <m>(0,1)</m>, where is the <m>x</m>-intercept? Here are two methods to find it.</p>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="cGF">
-                <stack>
-                    <p permid="cVa">Set <m>y=0</m>.<md permid="yhF">
-                        <mrow>y\amp=-2x+1</mrow>
-                        <mrow>\substitute{0}\amp=-2x+1</mrow>
-                        <mrow>0\subtractright{1}\amp=-2x</mrow>
-                        <mrow>-1\amp=-2x</mrow>
-                        <mrow>\divideunder{-1}{-2}\amp=x</mrow>
-                        <mrow>\frac{1}{2}\amp=x</mrow>
-                    </md></p>
-                </stack>
-                <stack>
-                    <p permid="Jcj">Factor out the coefficient of <m>x</m>.<md permid="eoO">
-                        <mrow>y\amp=-2x+1</mrow>
-                        <mrow>y\amp=-2x+(\highlight{-2})\left(\highlight{-\frac{1}{2}}\right)1</mrow>
-                        <mrow>y\amp=-2\left(x+\left(-\frac{1}{2}\right)1\right)</mrow>
-                        <mrow>y\amp=-2\left(\highlight{x}-\frac{1}{2}\right)</mrow>
-                    </md>And now it is easy to see that substituting <m>x=\frac{1}{2}</m> would make <m>y=0</m>.</p>
-                </stack>
-            </sidebyside>
-
-
-            <p permid="pjs">So the <m>x</m>-intercept is at <m>\left(\frac{1}{2},0\right)</m>. Plotting both intercepts:</p>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="INO">
-                <figure permid="BxK">
-                    <caption>Marking intercepts</caption>
-                    <image permid="bui">
-                        <description></description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-3,xmax=3,
-                                ymin=-6,ymax=6]
-                        \addplot[soliddot] coordinates {(0, 1)} node[above right] {$(0,1)$};
-                        \addplot[soliddot] coordinates {(0.5, 0)} node[above right] {$\left(\frac{1}{2},0\right)$};
-                    \end{axis}
-                \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                </figure>
-
-                <figure permid="hET">
-                    <caption>Using slope triangles</caption>
-                    <image permid="HBr">
-                        <description></description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-3,xmax=3,
-                                ymin=-6,ymax=6]
-                        \addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
-                        \addplot[soliddot] coordinates {(0, 1)} node[below left] {$(0,1)$};
-                        \addplot[soliddot] coordinates {(0.5, 0)} node[above right] {$\left(\frac{1}{2},0\right)$};
-                    \end{axis}
-                \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-
-            <p permid="VqB">This worked, but here are some observations about why this method is not the greatest.<ul permid="LmV">
-                <li permid="lES">We had to plot a point with fractional coordinates.</li>
-                <li permid="RMb">We only plotted two points and they turned out very close to each other, so even the slightest inaccuracy in our drawing skills could result in a line that is way off.</li>
-            </ul></p>
-        </example>
-
-        <p permid="UVc">When a line is presented in <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>, our opinion is that the slope triangle method is the best choice for making its graph.</p>
-    </subsection>
-
-    <subsection permid="Njm">
-        <title>Graphing Lines in Standard Form</title>
-
-        <p permid="Bcl">In the following examples we will graph <m>3x+4y=12</m>, which is in <xref ref="equation-standard-form" text="title">standard form</xref>, with different methods and compare them.</p>
-
-        <example permid="oUX">
-            <title>Building a Table of <m>x</m>- and <m>y</m>-values</title>
-
-            <p permid="NMc">To make a table, we could substitute <m>x</m> for various numbers and use algebra to find the corresponding <m>y</m>-values. Let's start with <m>x=-2</m>, planning to move on to <m>x=-1,0,1,2</m>.</p>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="hqy">
-
-                <p permid="tTl"><md permid="KvX">
-                    <mrow>3x+4y\amp=12</mrow>
-                    <mrow>3(\substitute{-2})+4y\amp=12</mrow>
-                    <mrow>-6+4y\amp=12</mrow>
-                    <mrow>4y\amp=18</mrow>
-                    <mrow>y\amp=\divideunder{18}{4}=\frac{9}{2}</mrow>
-                </md></p>
-
-                <p permid="aau">The first point we found is <m>\left(-2,\frac{9}{2}\right)</m>. This has been a lot of calculation, and we ended up with a fraction we will have to plot. <em>And</em> we have to repeat this process a few more times to get more points for the table. The table method is generally not a preferred way to graph a line in <xref ref="equation-standard-form">standard form</xref>. Let's look at other options.</p>
-
-            </sidebyside>
-        </example>
-
-        <example permid="Vcg">
-            <title>Using intercepts</title>
-
-            <p permid="GhD">Next, we will try graphing <m>3x+4y=12</m> using intercepts. We set up a small table to record the two intercepts:</p>
-
-            <sidebyside permid="NxH">
-                <tabular permid="REX">
-                    <col halign="left"/>
-                    <col halign="center"/>
-                    <col halign="center"/>
-                    <col halign="center"/>
-                    <row bottom="medium">
-                        <cell/>
-                        <cell><m>x</m>-value</cell>
-                        <cell><m>y</m>-value</cell>
-                        <cell>Intercept</cell>
-                    </row>
-                    <row>
-                        <cell><m>x</m>-intercept</cell>
-                        <cell/>
-                        <cell><m>0</m></cell>
-                        <cell/>
-                    </row>
-                    <row>
-                        <cell><m>y</m>-intercept</cell>
-                        <cell><m>0</m></cell>
-                        <cell/>
-                        <cell/>
-                    </row>
-                </tabular>
-            </sidebyside>
-
-            <sidebyside valign="top" widths="47% 47%" permid="tEQ">
-                <p permid="moM">We have to calculate the line's <m>x</m>-intercept by substituting <m>y=0</m> into the equation:<md permid="qDg">
-                    <mrow>3x+4y\amp=12</mrow>
-                    <mrow>3x+4(\substitute{0})\amp=12</mrow>
-                    <mrow>3x\amp=12</mrow>
-                    <mrow>x\amp=\divideunder{12}{3}</mrow>
-                    <mrow>x\amp=4</mrow>
-                </md></p>
-
-                <p permid="SvV">And similarly for the <m>y</m>-intercept:<md permid="WKp">
-                    <mrow>3x+4y\amp=12</mrow>
-                    <mrow>3(\substitute{0})+4y\amp=12</mrow>
-                    <mrow>4y\amp=12</mrow>
-                    <mrow>y\amp=\divideunder{12}{4}</mrow>
-                    <mrow>y\amp=3</mrow>
-                </md></p>
-            </sidebyside>
-
-            <p permid="yDe">So the line's <m>x</m>-intercept is at <m>(4,0)</m> and its <m>y</m>-intercept is at <m>(0,3)</m>. Now we can complete the table and then graph the line:</p>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="ZLZ">
-
-                <table permid="tcn">
-                    <caption>Intercepts of <m>3x+4y=12</m></caption>
-                    <tabular permid="xMg">
-                        <col halign="left"/>
-                        <col halign="center"/>
-                        <col halign="center"/>
-                        <col halign="center"/>
-                        <row bottom="medium">
-                            <cell/>
-                            <cell><m>x</m>-value</cell>
-                            <cell><m>y</m>-value</cell>
-                            <cell>Intercepts</cell>
-                        </row>
-                        <row>
-                            <cell><m>x</m>-intercept</cell>
-                            <cell><m>4</m></cell>
-                            <cell><m>0</m></cell>
-                            <cell><m>(4,0)</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>y</m>-intercept</cell>
-                            <cell><m>0</m></cell>
-                            <cell><m>3</m></cell>
-                            <cell><m>(0,3)</m></cell>
-                        </row>
-                    </tabular>
-                </table>
-
-                <figure permid="eKn">
-                    <caption>Graph of <m>3x+4y=12</m></caption>
-                    <image permid="nIA">
-                        <description>This is a grid with the graph of line 3x+4y=12. The following points are plotted: (0,3), (4,0).</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-1,xmax=6,
-                                ymin=-1,ymax=4]
-                        \addplot+[domain = -1:5.3333]{-3/4*x+3} node[pos=0.5,above,sloped] {$3x+4y=12$};
-                        \addplot[soliddot] coordinates {(0, 3)} node[color=red, above right] {$(0,3)$};
-                        \addplot[soliddot] coordinates {(4, 0)} node[color=red, above right] {$(4,0)$};
-                    \end{axis}
-                \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-        </example>
-
-        <example permid="Bjp">
-            <title>With Slope Triangles</title>
-            <sidebyside widths="47% 47%" margins="0%" permid="FTi">
-            <p permid="KRw">We can always rearrange <m>3x+4y=12</m> into <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>, and then graph it with the slope triangle method:</p>
-
-            <p permid="qYF"><md permid="CRy">
-                <mrow>3x+4y\amp=12</mrow>
-                <mrow>4y\amp=12\subtractright{3x}</mrow>
-                <mrow>4y\amp=-3x+12</mrow>
-                <mrow>y\amp=\divideunder{-3x+12}{4}</mrow>
-                <mrow>y\amp=-\frac{3}{4}x+3</mrow>
-            </md></p>
-            </sidebyside>
-
-            <p permid="XfO">With the <m>y</m>-intercept at <m>(0,3)</m> and slope <m>-\frac{3}{4}</m>, we can graph the line using slope triangles:</p>
-
-            <figure permid="jug">
-                <caption>Graphing <m>3x+4y=12</m> using slope triangles</caption>
-                <image width="47%" permid="TPJ">
-                    <description>This is a graph of the line 3x+4y=12. The following points on the line are plotted: (-4,6),(0,3),(4,0). There  are  two slope triangles. One starts at (-4,6), passes (0,6), and ends at (0,3). One starts at (0,3), passes (4,3), and  ends at   (4,0).</description>
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-5,xmax=5,
-                                ymin=-2,ymax=7]
-                        \addplot+[domain = -5:5]{-3/4*x+3} node[pos=0.25,sloped,above] {$3x+4y=12$};
-                        \addplot[soliddot] coordinates {(-4, 6) (4, 0)};
-                        \addplot[soliddot] coordinates {(0,3)} node[above right] {$(0,3)$};
-                        \addplot[guideline,->] coordinates {(0,3) (-4,3) (-4,6)};
-                        \addplot[guideline,-] coordinates {(0,3) (4,3)} node[above] {$4$};
-                        \addplot[guideline,->] coordinates {(4,3) (4,0)} node[right] {$-3$};
-                    \end{axis}
-                \end{tikzpicture}
-                ]]>
-            </latex-image>
-                </image>
-            </figure>
-
-            <p permid="DmX">Compared with the intercepts method, the slope triangle method takes more time, but shows more points with slope triangles, and thus a more accurate graph. Also sometimes (as with <xref ref="example-graph-standard-c-zero">Example</xref>) when we graph a standard form equation like <m>2x-3y=0\text{,}</m> the intercepts method doesn't work because both intercepts are actually at the same point, and we have to resort to something else like slope triangles anyway.</p>
-        </example>
-
-        <p permid="hju">Here are some observations about graphing a line equation that is in <xref ref="equation-standard-form">standard form</xref>:<ul permid="jPF">
-            <li permid="xTk">The intercepts method might be the quickest approach.</li>
-            <li permid="eat">The intercepts method only tells us two intercepts of the line. When we need to know more information, like the line's slope, and get a more accurate graph, we should spend more time and use the slope triangle method.</li>
-            <li permid="KhC">When <m>C=0</m> in a <xref ref="equation-standard-form">standard form equation</xref> we have to use something else like slope triangles anyway.</li>
-        </ul></p>
-
-    </subsection>
-
-    <subsection permid="tqv">
-        <title>Graphing Lines in Point-Slope Form</title>
-
-        <p permid="NqD">When we graph a line in <xref ref="equation-point-slope-form">point-slope form</xref> like <m>y=\frac{2}{3}(x+1)+3</m>, the slope triangle method is the obvious choice. We can see a point on the line, <m>(-1,3)\text{,}</m> and the slope is apparent: <m>\frac{2}{3}</m>. Here is the graph:</p>
-
-        <figure permid="ZEV">
-            <caption>Graphing <m>y-3=\frac{2}{3}(x+1)</m> using slope triangles</caption>
-            <image width="47%" permid="zWS">
-                <description>This is a graph of the line y-3=2/3(x+1). The following points on the line are plotted: (-4,1),(-1,3),(2,5). There are two slope triangles. One starts at (-4,1), passes (-1,1), and ends at (-1,3). One starts at (-1,3), passes (2,3), and ends at (2,5).</description>
-            <latex-image>
-            <![CDATA[\begin{tikzpicture}
-                \begin{axis}[xmin=-5,xmax=3,
-                            ymin=-1,ymax=6]
-                    \addplot+[domain = -5:3]{2/3*(x+1)+3} node[pos=0.25,sloped,below] {$y=\frac{2}{3}(x+1)+3$};
-                    \addplot[soliddot] coordinates {(-4, 1) (2, 5)};
-                    \addplot[soliddot] coordinates {(-1, 3)} node[above left] {$(-1,3)$};
-                    \addplot[guideline,->] coordinates {(-1,3) (-4,3) (-4,1)};
-                    \addplot[guideline] coordinates {(-1,3) (2,3)} node[pos=0.5,above] {$3$};
-                    \addplot[guideline,->] coordinates {(2,3) (2,5)} node[pos=0.5,right] {$2$};
-                \end{axis}
-            \end{tikzpicture}
-            ]]>
-            </latex-image>
-            </image>
+  <title>Summary of Graphing Lines</title>
+  <introduction permid="yoJ">
+    <p permid="HWQ">
+      The previous several sections have demonstrated several methods for plotting a graph of a linear equation.
+      In this section, we review these methods.
+    </p>
+    <sidebyside widths="31% 31% 31%" margins="0%" valig="top" permid="ShA">
+      <p permid="PBp">
+        We have learned three forms to write a linear equation:
+        <ul permid="rue">
+          <li permid="PWO">
+            <p permid="qoL">
+              slope-intercept form
+            </p>
+            <p permid="WvU">
+              <m>y=mx+b</m>
+            </p>
+          </li>
+          <li permid="wdX">
+            <p permid="CDd">
+              standard form
+            </p>
+            <p permid="iKm">
+              <m>Ax+By=C</m>
+            </p>
+          </li>
+          <li permid="clg">
+            <p permid="ORv">
+              point-slope form
+            </p>
+            <p permid="uYE">
+              <m>y=m\left(x-x_0\right)+y_0</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p permid="vIy">
+        We have studied two special types of line:
+        <ul permid="XBn">
+          <li permid="Isp">
+            <p permid="bfN">
+              horizontal line: <m>y=k</m>
+            </p>
+          </li>
+          <li permid="ozy">
+            <p permid="HmW">
+              vertical line: <m>x=h</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p permid="bPH">
+        We have practiced three ways to graph a line:
+        <ul permid="DIw">
+          <li permid="UGH">
+            <p permid="nuf">
+              building a table of <m>x</m>- and <m>y</m>-values
+            </p>
+          </li>
+          <li permid="ANQ">
+            <p permid="TBo">
+              plotting <em>one</em> point
+              (often the <m>y</m>-intercept)
+              and drawing slope triangles
+            </p>
+          </li>
+          <li permid="gUZ">
+            <p permid="zIx">
+              plotting its <m>x</m>-intercept and <m>y</m>-intercept
+            </p>
+          </li>
+        </ul>
+      </p>
+    </sidebyside>
+  </introduction>
+  <subsection permid="hcd">
+    <title>Graphing Lines in Slope-Intercept Form</title>
+    <p permid="oNT">
+      In the following examples we will graph <m>y=-2x+1</m>,
+      which is in <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>,
+      with different methods and compare them.
+    </p>
+    <example permid="XWM">
+      <title>Building a Table of <m>x</m>- and <m>y</m>-values</title>
+      <p permid="LWP">
+        First, we will graph <m>y=-2x+1</m> by building a table of values.
+        In theory this method can be used for any type of equation,
+        linear or not.
+        Every student must feel comfortable with building a table of values based on an equation.
+      </p>
+      <sidebyside widths="50% 44%" margins="0%" permid="Qsn">
+        <table permid="MVe">
+          <caption>Table for <m>y=-2x+1</m></caption>
+          <tabular permid="lxO">
+            <col halign="center"/>
+            <col halign="left"/>
+            <col halign="center"/>
+            <row bottom="medium">
+              <cell><m>x</m>-value</cell>
+              <cell halign="center"><m>y</m>-value</cell>
+              <cell>Point</cell>
+            </row>
+            <row>
+              <cell><m>\highlight{-2}</m></cell>
+              <cell><m>y=-2(\substitute{-2})+1=5</m></cell>
+              <cell><m>(-2,5)</m></cell>
+            </row>
+            <row>
+              <cell><m>\highlight{-1}</m></cell>
+              <cell><m>y=-2(\substitute{-1})+1=3</m></cell>
+              <cell><m>(-1,3)</m></cell>
+            </row>
+            <row>
+              <cell><m>\highlight{0}</m></cell>
+              <cell><m>y=-2(\substitute{0})+1=1</m></cell>
+              <cell><m>(0,1)</m></cell>
+            </row>
+            <row>
+              <cell><m>\highlight{1}</m></cell>
+              <cell><m>y=-2(\substitute{1})+1=-1</m></cell>
+              <cell><m>(1,-1)</m></cell>
+            </row>
+            <row>
+              <cell><m>\highlight{2}</m></cell>
+              <cell><m>y=-2(\substitute{2})+1=-3</m></cell>
+              <cell><m>(2,-3)</m></cell>
+            </row>
+          </tabular>
+        </table>
+        <figure permid="sdY">
+          <caption>Graphing <m>y=-2x+1</m> by Building a Table of Values</caption>
+          <image permid="iYH">
+            <description>This is a graph of the line y=-2x+1. The following points on the line are plotted: (-2,5),(-1,3),(0,1),(1,-1),(2,-3).</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,
+ymin=-6,ymax=6]
+\addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
+\addplot[soliddot] coordinates {(-2, 5) (-1, 3) (0, 1) (1, -1) (2, -3)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+          </image>
         </figure>
-
-        <p permid="txM">Other graphing methods would take more work and miss the purpose of <xref ref="equation-point-slope-form">point-slope form</xref>. To graph a line in <xref ref="equation-point-slope-form">point-slope form</xref>, we recommend always using slope triangles.</p>
-    </subsection>
-
-    <subsection permid="ZxE">
-        <title>Graphing Horizontal and Vertical Lines</title>
-
-        <p permid="FMe">We learned in <xref ref="section-horizontal-vertical-parallel-and-perpendicular-lines">Section</xref> that equations in the form <m>x=h</m> and <m>y=k</m> make vertical and horizontal lines. But perhaps you will one day find yourself not remembering which is which. Making a table and plotting points can quickly remind you which type of equation makes which type of line. Let's build a table for <m>y=2</m> and another one for <m>x=-3</m>:</p>
-
-        <sidebyside margins="0%" permid="mar">
-            <table permid="Zjw">
-                <caption>Table of Data for <m>y=2</m></caption>
-                <tabular permid="dTp">
-                    <col halign="center"/>
-                    <col halign="center"/>
-                    <col halign="center"/>
-                    <row bottom="medium">
-                        <cell><m>x</m>-value</cell>
-                        <cell><m>y</m>-value</cell>
-                        <cell>Point</cell>
-                    </row>
-                    <row>
-                        <cell><m>0</m></cell>
-                        <cell><m>2</m></cell>
-                        <cell><m>(0,2)</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>1</m></cell>
-                        <cell><m>2</m></cell>
-                        <cell><m>(1,2)</m></cell>
-                    </row>
-                </tabular>
-            </table>
-
-            <table permid="FqF">
-                <caption>Table of Data for <m>x=-3</m></caption>
-                <tabular permid="Kay">
-                    <col halign="center"/>
-                    <col halign="center"/>
-                    <col halign="center"/>
-                    <row bottom="medium">
-                        <cell><m>x</m>-value</cell>
-                        <cell><m>y</m>-value</cell>
-                        <cell>Point</cell>
-                    </row>
-                    <row>
-                        <cell><m>-3</m></cell>
-                        <cell><m>0</m></cell>
-                        <cell><m>(-3,0)</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>-3</m></cell>
-                        <cell><m>1</m></cell>
-                        <cell><m>(-3,1)</m></cell>
-                    </row>
-                </tabular>
-            </table>
-        </sidebyside>
-
-        <p permid="lTn">With two points on each line, we can graph them:</p>
-
-        <figure permid="Saw">
-            <caption>Graphing <m>y=2</m> and <m>x=-3</m></caption>
-            <image width="47%" permid="geb">
-                <description>This is a graph of y=2 and x=-3. For y=2, the points (0,2) and (1,2) are plotted. For x=-3, the points (-3,0) and (-3,1) are plotted.</description>
-                <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-4,xmax=4,
-                                ymin=-3,ymax=3]
-                        \addplot+[] coordinates {(-4,2) (4,2)} node[pos=0.5,above] {$y=2$};
-                        \addplot+[] coordinates {(-3,-3) (-3,3)} node[pos=0.5,sloped,above] {$x=-3$};
-                        \addplot[soliddot] coordinates {(0, 2)} node[below left] {$(0,2)$};
-                        \addplot[soliddot] coordinates {(1, 2)} node[below right] {$(1,2)$};
-                        \addplot[soliddot, color=secondcolor] coordinates {(-3, 0)} node[above right] {$(-3,0)$};
-                        \addplot[soliddot, color=secondcolor] coordinates {(-3, 1)} node[above right] {$(-3,1)$};
-                    \end{axis}
-            \end{tikzpicture}
-            ]]>
-            </latex-image>
-            </image>
+      </sidebyside>
+    </example>
+    <example permid="EdV">
+      <title>Using Slope Triangles</title>
+      <p permid="Ylh">
+        Although making a table is straightforward,
+        the slope triangle method is both faster and reinforces the true meaning of slope.
+        In the slope triangle method,
+        we first identify some point on the line.
+        With a line in <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>,
+        we know the <m>y</m>-intercept, which is <m>(0,1)</m>.
+        Then, we can draw slope triangles in both directions to find more points.
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="wzw">
+        <figure permid="kzz">
+          <caption>Marking a point and some slope triangles</caption>
+          <image permid="PfQ">
+            <description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,
+ymin=-6,ymax=6]
+\addplot[soliddot] coordinates {(0, 1)} node[below left] {$(0,1)$};
+\addplot[soliddot] coordinates {(-2, 5) (-1, 3) (1, -1) (2, -3)};
+\addplot[guideline] coordinates {(0,1) (1,1)} node[pos=0.5,above] {$1$};
+\addplot[guideline,->] coordinates {(1,1) (1,-1)} node[pos=0.5,right] {$2$};
+\addplot[guideline,->] coordinates {(1,-1) (2,-1) (2,-3)};
+\addplot[guideline,->] coordinates {(0,1) (-1,1) (-1,3)};
+\addplot[guideline,->] coordinates {(-1,3) (-2,3) (-2,5)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+          </image>
         </figure>
-    </subsection>
+        <figure permid="QGI">
+          <caption>Graphing <m>y=-2x+1</m> by slope triangles</caption>
+          <image permid="vmZ">
+            <description>This is a graph of the line y=-2x+1. The following points on the line are plotted: (-2,5),(-1,3),( 0,1),(1,-1),(2,-3). There are a few slope triangles. One starts at (-2,5), passes (-1,5), and ends at (-1,3). One    starts at (-1,3), passes (0,3), and ends at (0,1). One starts at (0,1), passes (1,1), and ends at (1,-1). One starts   at (1,-1), passes (2,-1), and ends at (2,-3).</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,
+ymin=-6,ymax=6]
+\addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
+\addplot[soliddot] coordinates {(-2, 5) (-1, 3) (0, 1) (1, -1) (2, -3)};
+\addplot[guideline,->] coordinates {(0,1) (1,1) (1,-1)};
+\addplot[guideline,->] coordinates {(1,-1) (2,-1) (2,-3)};
+\addplot[guideline,->] coordinates {(0,1) (-1,1) (-1,3)};
+\addplot[guideline,->] coordinates {(-1,3) (-2,3) (-2,5)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      <p permid="Esq">
+        Compared to the table method,
+        the slope triangle method:
+        <ul permid="ffM">
+          <li permid="Nci">
+            is less straightforward
+          </li>
+          <li permid="tjr">
+            doesn't take the time and space to make a table
+          </li>
+          <li permid="ZqA">
+            doesn't involve lots of calculations where you might make a human error
+          </li>
+          <li permid="FxJ">
+            shows slope triangles, which reinforces the meaning of slope
+          </li>
+        </ul>
+      </p>
+    </example>
+    <example permid="kle">
+      <title>Using intercepts</title>
+      <p permid="wNR">
+        If we use the <m>x</m>- and <m>y</m>-intercepts to plot <m>y=-2x+1</m>,
+        we have some calculation to do.
+        While it is apparent that the <m>y</m>-intercept is at <m>(0,1)</m>,
+        where is the <m>x</m>-intercept?
+        Here are two methods to find it.
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="cGF">
+        <stack>
+          <p permid="cVa">
+            Set <m>y=0</m>.
+            <md permid="yhF">
+              <mrow>y\amp=-2x+1</mrow>
+              <mrow>\substitute{0}\amp=-2x+1</mrow>
+              <mrow>0\subtractright{1}\amp=-2x</mrow>
+              <mrow>-1\amp=-2x</mrow>
+              <mrow>\divideunder{-1}{-2}\amp=x</mrow>
+              <mrow>\frac{1}{2}\amp=x</mrow>
+            </md>
+          </p>
+        </stack>
+        <stack>
+          <p permid="Jcj">
+            Factor out the coefficient of <m>x</m>.
+            <md permid="eoO">
+              <mrow>y\amp=-2x+1</mrow>
+              <mrow>y\amp=-2x+(\highlight{-2})\left(\highlight{-\frac{1}{2}}\right)1</mrow>
+              <mrow>y\amp=-2\left(x+\left(-\frac{1}{2}\right)1\right)</mrow>
+              <mrow>y\amp=-2\left(\highlight{x}-\frac{1}{2}\right)</mrow>
+            </md>
+            And now it is easy to see that substituting
+            <m>x=\frac{1}{2}</m> would make <m>y=0</m>.
+          </p>
+        </stack>
+      </sidebyside>
+      <p permid="pjs">
+        So the <m>x</m>-intercept is at <m>\left(\frac{1}{2},0\right)</m>.
+        Plotting both intercepts:
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="INO">
+        <figure permid="BxK">
+          <caption>Marking intercepts</caption>
+          <image permid="bui">
+            <description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,
+ymin=-6,ymax=6]
+\addplot[soliddot] coordinates {(0, 1)} node[above right] {$(0,1)$};
+\addplot[soliddot] coordinates {(0.5, 0)} node[above right] {$\left(\frac{1}{2},0\right)$};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+          </image>
+        </figure>
+        <figure permid="hET">
+          <caption>Using slope triangles</caption>
+          <image permid="HBr">
+            <description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,
+ymin=-6,ymax=6]
+\addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
+\addplot[soliddot] coordinates {(0, 1)} node[below left] {$(0,1)$};
+\addplot[soliddot] coordinates {(0.5, 0)} node[above right] {$\left(\frac{1}{2},0\right)$};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      <p permid="VqB">
+        This worked,
+        but here are some observations about why this method is not the greatest.
+        <ul permid="LmV">
+          <li permid="lES">
+            We had to plot a point with fractional coordinates.
+          </li>
+          <li permid="RMb">
+            We only plotted two points and they turned out very close to each other,
+            so even the slightest inaccuracy in our drawing skills could result in a line that is way off.
+          </li>
+        </ul>
+      </p>
+    </example>
+    <p permid="UVc">
+      When a line is presented in <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>,
+      our opinion is that the slope triangle method is the best choice for making its graph.
+    </p>
+  </subsection>
+  <subsection permid="Njm">
+    <title>Graphing Lines in Standard Form</title>
+    <p permid="Bcl">
+      In the following examples we will graph <m>3x+4y=12</m>,
+      which is in <xref ref="equation-standard-form" text="title">standard form</xref>,
+      with different methods and compare them.
+    </p>
+    <example permid="oUX">
+      <title>Building a Table of <m>x</m>- and <m>y</m>-values</title>
+      <p permid="NMc">
+        To make a table,
+        we could substitute <m>x</m> for various numbers and use algebra to find the corresponding <m>y</m>-values.
+        Let's start with <m>x=-2</m>,
+        planning to move on to <m>x=-1,0,1,2</m>.
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="hqy">
+        <p permid="tTl">
+          <md permid="KvX">
+            <mrow>3x+4y\amp=12</mrow>
+            <mrow>3(\substitute{-2})+4y\amp=12</mrow>
+            <mrow>-6+4y\amp=12</mrow>
+            <mrow>4y\amp=18</mrow>
+            <mrow>y\amp=\divideunder{18}{4}=\frac{9}{2}</mrow>
+          </md>
+        </p>
+        <p permid="aau">
+          The first point we found is <m>\left(-2,\frac{9}{2}\right)</m>.
+          This has been a lot of calculation,
+          and we ended up with a fraction we will have to plot.
+          <em>And</em> we have to repeat this process a few more times to get more points for the table.
+          The table method is generally not a preferred way to graph a line in <xref ref="equation-standard-form">standard form</xref>.
+          Let's look at other options.
+        </p>
+      </sidebyside>
+    </example>
+    <example permid="Vcg">
+      <title>Using intercepts</title>
+      <p permid="GhD">
+        Next, we will try graphing <m>3x+4y=12</m> using intercepts.
+        We set up a small table to record the two intercepts:
+      </p>
+      <sidebyside permid="NxH">
+        <tabular permid="REX">
+          <col halign="left"/>
+          <col halign="center"/>
+          <col halign="center"/>
+          <col halign="center"/>
+          <row bottom="medium">
+            <cell/>
+            <cell><m>x</m>-value</cell>
+            <cell><m>y</m>-value</cell>
+            <cell>Intercept</cell>
+          </row>
+          <row>
+            <cell><m>x</m>-intercept</cell>
+            <cell/>
+            <cell><m>0</m></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell><m>y</m>-intercept</cell>
+            <cell><m>0</m></cell>
+            <cell/>
+            <cell/>
+          </row>
+        </tabular>
+      </sidebyside>
+      <sidebyside valign="top" widths="47% 47%" permid="tEQ">
+        <p permid="moM">
+          We have to calculate the line's <m>x</m>-intercept by substituting <m>y=0</m> into the equation:
+          <md permid="qDg">
+            <mrow>3x+4y\amp=12</mrow>
+            <mrow>3x+4(\substitute{0})\amp=12</mrow>
+            <mrow>3x\amp=12</mrow>
+            <mrow>x\amp=\divideunder{12}{3}</mrow>
+            <mrow>x\amp=4</mrow>
+          </md>
+        </p>
+        <p permid="SvV">
+          And similarly for the <m>y</m>-intercept:
+          <md permid="WKp">
+            <mrow>3x+4y\amp=12</mrow>
+            <mrow>3(\substitute{0})+4y\amp=12</mrow>
+            <mrow>4y\amp=12</mrow>
+            <mrow>y\amp=\divideunder{12}{4}</mrow>
+            <mrow>y\amp=3</mrow>
+          </md>
+        </p>
+      </sidebyside>
+      <p permid="yDe">
+        So the line's <m>x</m>-intercept is at <m>(4,0)</m> and its <m>y</m>-intercept is at <m>(0,3)</m>.
+        Now we can complete the table and then graph the line:
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="ZLZ">
+        <table permid="tcn">
+          <caption>Intercepts of <m>3x+4y=12</m></caption>
+          <tabular permid="xMg">
+            <col halign="left"/>
+            <col halign="center"/>
+            <col halign="center"/>
+            <col halign="center"/>
+            <row bottom="medium">
+              <cell/>
+              <cell><m>x</m>-value</cell>
+              <cell><m>y</m>-value</cell>
+              <cell>Intercepts</cell>
+            </row>
+            <row>
+              <cell><m>x</m>-intercept</cell>
+              <cell><m>4</m></cell>
+              <cell><m>0</m></cell>
+              <cell><m>(4,0)</m></cell>
+            </row>
+            <row>
+              <cell><m>y</m>-intercept</cell>
+              <cell><m>0</m></cell>
+              <cell><m>3</m></cell>
+              <cell><m>(0,3)</m></cell>
+            </row>
+          </tabular>
+        </table>
+        <figure permid="eKn">
+          <caption>Graph of <m>3x+4y=12</m></caption>
+          <image permid="nIA">
+            <description>This is a grid with the graph of line 3x+4y=12. The following points are plotted: (0,3), (4,0).</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-1,xmax=6,
+ymin=-1,ymax=4]
+\addplot+[domain = -1:5.3333]{-3/4*x+3} node[pos=0.5,above,sloped] {$3x+4y=12$};
+\addplot[soliddot] coordinates {(0, 3)} node[color=red, above right] {$(0,3)$};
+\addplot[soliddot] coordinates {(4, 0)} node[color=red, above right] {$(4,0)$};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+    </example>
+    <example permid="Bjp">
+      <title>With Slope Triangles</title>
+      <sidebyside widths="47% 47%" margins="0%" permid="FTi">
+        <p permid="KRw">
+          We can always rearrange <m>3x+4y=12</m> into <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>,
+          and then graph it with the slope triangle method:
+        </p>
+        <p permid="qYF">
+          <md permid="CRy">
+            <mrow>3x+4y\amp=12</mrow>
+            <mrow>4y\amp=12\subtractright{3x}</mrow>
+            <mrow>4y\amp=-3x+12</mrow>
+            <mrow>y\amp=\divideunder{-3x+12}{4}</mrow>
+            <mrow>y\amp=-\frac{3}{4}x+3</mrow>
+          </md>
+        </p>
+      </sidebyside>
+      <p permid="XfO">
+        With the <m>y</m>-intercept at <m>(0,3)</m> and slope <m>-\frac{3}{4}</m>,
+        we can graph the line using slope triangles:
+      </p>
+      <figure permid="jug">
+        <caption>Graphing <m>3x+4y=12</m> using slope triangles</caption>
+        <image width="47%" permid="TPJ">
+          <description>This is a graph of the line 3x+4y=12. The following points on the line are plotted: (-4,6),(0,3),(4,0). There  are  two slope triangles. One starts at (-4,6), passes (0,6), and ends at (0,3). One starts at (0,3), passes (4,3), and  ends at   (4,0).</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-5,xmax=5,
+ymin=-2,ymax=7]
+\addplot+[domain = -5:5]{-3/4*x+3} node[pos=0.25,sloped,above] {$3x+4y=12$};
+\addplot[soliddot] coordinates {(-4, 6) (4, 0)};
+\addplot[soliddot] coordinates {(0,3)} node[above right] {$(0,3)$};
+\addplot[guideline,->] coordinates {(0,3) (-4,3) (-4,6)};
+\addplot[guideline,-] coordinates {(0,3) (4,3)} node[above] {$4$};
+\addplot[guideline,->] coordinates {(4,3) (4,0)} node[right] {$-3$};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+        </image>
+      </figure>
+      <p permid="DmX">
+        Compared with the intercepts method,
+        the slope triangle method takes more time,
+        but shows more points with slope triangles,
+        and thus a more accurate graph.
+        Also sometimes
+        (as with <xref ref="example-graph-standard-c-zero">Example</xref>)
+        when we graph a standard form equation like
+        <m>2x-3y=0\text{,}</m> the intercepts method doesn't work because both intercepts are actually at the same point,
+        and we have to resort to something else like slope triangles anyway.
+      </p>
+    </example>
+    <p permid="hju">
+      Here are some observations about graphing a line equation that is in <xref ref="equation-standard-form">standard form</xref>:
+      <ul permid="jPF">
+        <li permid="xTk">
+          The intercepts method might be the quickest approach.
+        </li>
+        <li permid="eat">
+          The intercepts method only tells us two intercepts of the line.
+          When we need to know more information,
+          like the line's slope, and get a more accurate graph,
+          we should spend more time and use the slope triangle method.
+        </li>
+        <li permid="KhC">
+          When <m>C=0</m> in a <xref ref="equation-standard-form">standard form equation</xref>
+          we have to use something else like slope triangles anyway.
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection permid="tqv">
+    <title>Graphing Lines in Point-Slope Form</title>
+    <p permid="NqD">
+      When we graph a line in <xref ref="equation-point-slope-form">point-slope form</xref>
+      like <m>y=\frac{2}{3}(x+1)+3</m>,
+      the slope triangle method is the obvious choice.
+      We can see a point on the line,
+      <m>(-1,3)\text{,}</m> and the slope is apparent: <m>\frac{2}{3}</m>.
+      Here is the graph:
+    </p>
+    <figure permid="ZEV">
+      <caption>Graphing <m>y-3=\frac{2}{3}(x+1)</m> using slope triangles</caption>
+      <image width="47%" permid="zWS">
+        <description>This is a graph of the line y-3=2/3(x+1). The following points on the line are plotted: (-4,1),(-1,3),(2,5). There are two slope triangles. One starts at (-4,1), passes (-1,1), and ends at (-1,3). One starts at (-1,3), passes (2,3), and ends at (2,5).</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-5,xmax=3,
+ymin=-1,ymax=6]
+\addplot+[domain = -5:3]{2/3*(x+1)+3} node[pos=0.25,sloped,below] {$y=\frac{2}{3}(x+1)+3$};
+\addplot[soliddot] coordinates {(-4, 1) (2, 5)};
+\addplot[soliddot] coordinates {(-1, 3)} node[above left] {$(-1,3)$};
+\addplot[guideline,->] coordinates {(-1,3) (-4,3) (-4,1)};
+\addplot[guideline] coordinates {(-1,3) (2,3)} node[pos=0.5,above] {$3$};
+\addplot[guideline,->] coordinates {(2,3) (2,5)} node[pos=0.5,right] {$2$};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+      </image>
+    </figure>
+    <p permid="txM">
+      Other graphing methods would take more work and miss the purpose of <xref ref="equation-point-slope-form">point-slope form</xref>.
+      To graph a line in <xref ref="equation-point-slope-form">point-slope form</xref>,
+      we recommend always using slope triangles.
+    </p>
+  </subsection>
+  <subsection permid="ZxE">
+    <title>Graphing Horizontal and Vertical Lines</title>
+    <p permid="FMe">
+      We learned in <xref ref="section-horizontal-vertical-parallel-and-perpendicular-lines">Section</xref>
+      that equations in the form <m>x=h</m> and <m>y=k</m> make vertical and horizontal lines.
+      But perhaps you will one day find yourself not remembering which is which.
+      Making a table and plotting points can quickly remind you which type of equation makes which type of line.
+      Let's build a table for <m>y=2</m> and another one for <m>x=-3</m>:
+    </p>
+    <sidebyside margins="0%" permid="mar">
+      <table permid="Zjw">
+        <caption>Table of Data for <m>y=2</m></caption>
+        <tabular permid="dTp">
+          <col halign="center"/>
+          <col halign="center"/>
+          <col halign="center"/>
+          <row bottom="medium">
+            <cell><m>x</m>-value</cell>
+            <cell><m>y</m>-value</cell>
+            <cell>Point</cell>
+          </row>
+          <row>
+            <cell><m>0</m></cell>
+            <cell><m>2</m></cell>
+            <cell><m>(0,2)</m></cell>
+          </row>
+          <row>
+            <cell><m>1</m></cell>
+            <cell><m>2</m></cell>
+            <cell><m>(1,2)</m></cell>
+          </row>
+        </tabular>
+      </table>
+      <table permid="FqF">
+        <caption>Table of Data for <m>x=-3</m></caption>
+        <tabular permid="Kay">
+          <col halign="center"/>
+          <col halign="center"/>
+          <col halign="center"/>
+          <row bottom="medium">
+            <cell><m>x</m>-value</cell>
+            <cell><m>y</m>-value</cell>
+            <cell>Point</cell>
+          </row>
+          <row>
+            <cell><m>-3</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>(-3,0)</m></cell>
+          </row>
+          <row>
+            <cell><m>-3</m></cell>
+            <cell><m>1</m></cell>
+            <cell><m>(-3,1)</m></cell>
+          </row>
+        </tabular>
+      </table>
+    </sidebyside>
+    <p permid="lTn">
+      With two points on each line, we can graph them:
+    </p>
+    <figure permid="Saw">
+      <caption>Graphing <m>y=2</m> and <m>x=-3</m></caption>
+      <image width="47%" permid="geb">
+        <description>This is a graph of y=2 and x=-3. For y=2, the points (0,2) and (1,2) are plotted. For x=-3, the points (-3,0) and (-3,1) are plotted.</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-4,xmax=4,
+ymin=-3,ymax=3]
+\addplot+[] coordinates {(-4,2) (4,2)} node[pos=0.5,above] {$y=2$};
+\addplot+[] coordinates {(-3,-3) (-3,3)} node[pos=0.5,sloped,above] {$x=-3$};
+\addplot[soliddot] coordinates {(0, 2)} node[below left] {$(0,2)$};
+\addplot[soliddot] coordinates {(1, 2)} node[below right] {$(1,2)$};
+\addplot[soliddot, color=secondcolor] coordinates {(-3, 0)} node[above right] {$(-3,0)$};
+\addplot[soliddot, color=secondcolor] coordinates {(-3, 1)} node[above right] {$(-3,1)$};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+      </image>
+    </figure>
+  </subsection>
 <!--Review and Warmup omitted-->
-    <exercises permid="FEN">
-        <exercisegroup cols="2" permid="lLW">
-            <title>Graphing by Table</title>
-            <exercise permid="OYz">
-                <statement>
-                    <p permid="odZ">Use a table to make a plot of <m>y=4x+3</m>.</p>
-                </statement>
-                <answer permid="evS">
-                    <sidebyside permid="qvP">
-                    <image permid="Mlk">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {4*x+3};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="vfI">
-                <statement>
-                    <p permid="Uli">Use a table to make a plot of <m>y=-5x-1</m>.</p>
-                </statement>
-                <answer permid="KDb">
-                    <sidebyside permid="WCY">
-                    <image permid="sst">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-5*x-1};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="bmR">
-                <statement>
-                    <p permid="Asr">Use a table to make a plot of <m>y=-\frac{3}{4}x-1</m>.</p>
-                </statement>
-                <answer permid="qKk">
-                    <sidebyside permid="CKh">
-                    <image permid="YzC">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-3/4*x-1};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="Hua">
-                <statement>
-                    <p permid="gzA">Use a table to make a plot of <m>y=\frac{5}{3}x+3</m>.</p>
-                </statement>
-                <answer permid="WRt">
-                    <sidebyside permid="iRq">
-                    <image permid="EGL">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {5/3*x+3};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="RTf">
-            <title>Graphing Standard Form Equations</title>
-            <exercise permid="kGD">
-                <statement>
-                    <p permid="MGJ">First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>6x+5y=-90</m>. Then find one other point on the line. Use your results to graph the line.</p>
-                </statement>
-                <answer permid="CYC">
-                    <sidebyside permid="nBj">
-                    <image permid="kNU">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-20:5] {-4/5*x-1};
-                            \addplot[soliddot] coordinates {(0,-18) (-15,0)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="QNM">
-                <statement>
-                    <p permid="sNS">First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>2x-3y=-6</m>. Then find one other point on the line. Use your results to graph the line.</p>
-                </statement>
-                <answer permid="jfL">
-                    <sidebyside permid="TIs">
-                    <figure permid="fPG">
-                        <caption>Graph of <m>2x-3y=-6</m></caption>
-                        <image permid="QVd">
-                        <description>a coordinate grid with the graph of line 2x-3y=-6; the x-intercept is (-3,0) and the y-intercept is (0,2)</description>
-            <latex-image>
-            <![CDATA[\begin{tikzpicture}
-                    \begin{axis}[xmin=-5,xmax=2,
-                                ymin=-1,ymax=4,
-                                minor xtick=,
-                                minor ytick=,
-                                xtick={-4,-3,...,1},
-                                ytick={1,2,3}]
-                        \addplot+[domain=-4.5:2]{2/3*x+2};
-                        \addplot[soliddot] coordinates {(0, 2)} node[above left] {$(0,2)$};
-                        \addplot[soliddot] coordinates {(-3, 0)} node[above left] {$(-3,0)$};
-                        \addplot[soliddot] coordinates {(-1, 1.33333)} node[above left] {$(-1,\frac{4}{3})$};
-                    \end{axis}
-            \end{tikzpicture}
-            ]]>
-            </latex-image>
-                        </image>
-                    </figure>
-
-               </sidebyside>
-
-            </answer>
-            </exercise>
-            <exercise permid="wUV">
-                <statement>
-                    <p permid="YVb">First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>3x+y=-9</m>. Then find one other point on the line. Use your results to graph the line.</p>
-                </statement>
-                <answer permid="PmU">
-                    <sidebyside permid="zPB">
-                    <image permid="xcm">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-10.66:2.66] {-3*x-9};
-                            \addplot[soliddot] coordinates {(0,-9) (-3,0)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="dce">
-                <statement>
-                    <p permid="Fck">First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>-15x+3y=-3</m>. Then find one other point on the line. Use your results to graph the line.</p>
-                </statement>
-                <answer permid="vud">
-                    <sidebyside permid="fWK">
-                    <image permid="djv">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {5*x-1};
-                            \addplot[soliddot] coordinates {(0,-1) (1/5,0)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="Jjn">
-                <statement>
-                    <p permid="ljt">First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>4x+3y=-3</m>. Then find one other point on the line. Use your results to graph the line.</p>
-                </statement>
-                <answer permid="bBm">
-                    <sidebyside permid="MdT">
-                    <image permid="JqE">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-4/3*x-1};
-                            \addplot[soliddot] coordinates {(0,-1) (-3/4,0)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="pqw">
-                <statement>
-                    <p permid="RqC">First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>-4x-5y=5</m>. Then find one other point on the line. Use your results to graph the line.</p>
-                </statement>
-                <answer permid="HIv">
-                    <sidebyside permid="slc">
-                    <image permid="pxN">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-4/5*x-1};
-                            \addplot[soliddot] coordinates {(0,-1) (-5/4,0)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="VxF">
-                <statement>
-                    <p permid="xxL">First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>5x-3y=0</m>. Then find one other point on the line. Use your results to graph the line.</p>
-                </statement>
-                <answer permid="nPE">
-                    <sidebyside permid="Ysl">
-                    <image permid="VEW">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {5/3*x};
-                            \addplot[soliddot] coordinates {(0,0)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="BEO">
-                <statement>
-                    <p permid="dEU">First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>2x+9y=0</m>. Then find one other point on the line. Use your results to graph the line.</p>
-                </statement>
-                <answer permid="TWN">
-                    <sidebyside permid="Ezu">
-                    <image permid="BMf">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-2/9*x};
-                            \addplot[soliddot] coordinates {(0,0)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="yao">
-            <title>Graphing Slope-Intercept Equations</title>
-            <exercise permid="GoH">
-                <statement>
-                    <p permid="JMd">Use the slope and <m>y</m>-intercept from the line <m>y=-5x</m> to plot the line. Use slope triangles.</p>
-                </statement>
-                <answer permid="AdW">
-                    <sidebyside permid="hLX">
-                    <image permid="hTo">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-5*x};
-                            \addplot[soliddot] coordinates {(0,0)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="mvQ">
-                <statement>
-                    <p permid="pTm">Use the slope and <m>y</m>-intercept from the line <m>y=3x-6</m> to plot the line. Use slope triangles.</p>
-                </statement>
-                <answer permid="glf">
-                    <sidebyside permid="NTg">
-                    <image permid="Oax">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {3*x-6};
-                            \addplot[soliddot] coordinates {(0,-6)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="SCZ">
-                <statement>
-                    <p permid="Wav">Use the slope and <m>y</m>-intercept from the line <m>y=-\frac{2}{5}x+2</m> to plot the line. Use slope triangles.</p>
-                </statement>
-                <answer permid="Mso">
-                    <sidebyside permid="uap">
-                    <image permid="uhG">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-7.66:3.66] {2/5*x+2};
-                            \addplot[soliddot] coordinates {(0,2)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="yKi">
-                <statement>
-                    <p permid="ChE">Use the slope and <m>y</m>-intercept from the line <m>y=\frac{10}{3}x-3</m> to plot the line. Use slope triangles.</p>
-                </statement>
-                <answer permid="szx">
-                    <sidebyside permid="ahy">
-                    <image permid="aoP">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-7.66:3.66] {10/3*x-3};
-                            \addplot[soliddot] coordinates {(0,-3)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2" permid="ehx">
-            <title>Graphing Horizontal and Vertical Lines</title>
-            <exercise permid="Dub">
-                <statement>
-                    <p permid="ioN">Plot the line <m>y=1</m>.</p>
-                </statement>
-                 <answer permid="YGG">
-                    <sidebyside permid="eRr">
-                    <image permid="GvY">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-7:7] {1};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="jBk">
-                <statement>
-                    <p permid="OvW">Plot the line <m>y=-4</m>.</p>
-                </statement>
-                <answer permid="ENP">
-                    <sidebyside permid="KYA">
-                    <image permid="mDh">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-7:7] {-4};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="PIt">
-                <statement>
-                    <p permid="uDf">Plot the line <m>x=-8</m>.</p>
-                </statement>
-                 <answer permid="kUY">
-                    <sidebyside permid="rfJ">
-                    <image permid="SKq">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[primarycurve] coordinates {(-8,-7) (8,7)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="vPC">
-                <statement>
-                    <p permid="aKo">Plot the line <m>x=5</m>.</p>
-                </statement>
-                 <answer permid="Rch">
-                    <sidebyside permid="XmS">
-                    <image permid="yRz">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[primarycurve] coordinates {(5,-7) (5,7)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2" permid="KoG">
-            <title>Choosing the Best Method to Graph Lines</title>
-            <exercise permid="JTh">
-                <statement>
-                    <p permid="GRx">Use whatever method you think best to plot <m>y=2x+2</m>.</p>
-                </statement>
-                <answer permid="xjq">
-                    <sidebyside permid="bWL">
-                    <image permid="eYI">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {2*x+2};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="qaq">
-                <statement>
-                    <p permid="mYG">Use whatever method you think best to plot <m>y=-3x+6</m>.</p>
-                </statement>
-                <answer permid="dqz">
-                    <sidebyside permid="IdU">
-                    <image permid="LfR">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-3*x+6};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="Whz">
-                <statement>
-                    <p permid="TfP">Use whatever method you think best to plot <m>y=-\frac{3}{4}x-1</m>.</p>
-                </statement>
-                <answer permid="JxI">
-                    <sidebyside permid="old">
-                    <image permid="rna">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-3/4*x-1};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="CoI">
-                <statement>
-                    <p permid="zmY">Use whatever method you think best to plot <m>y=\frac{5}{3}x-3</m>.</p>
-                </statement>
-                <answer permid="pER">
-                    <sidebyside permid="Usm">
-                    <image permid="Xuj">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {5/3*x-3};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="ivR">
-                <statement>
-                    <p permid="fuh">Use whatever method you think best to plot <m>y=-\frac{3}{4}(x-5)+2</m>.</p>
-                </statement>
-                <answer permid="VMa">
-                    <sidebyside permid="Azv">
-                    <image permid="DBs">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-9.66:2.66] {-3/4*x+23/4};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="ODa">
-                <statement>
-                    <p permid="LBq">Use whatever method you think best to plot <m>y=\frac{2}{5}(x+1)-3</m>.</p>
-                </statement>
-                <answer permid="BTj">
-                    <sidebyside permid="gGE">
-                    <image permid="jIB">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-2.66:9.66] {2/5*x-13/5};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="uKj">
-                <statement>
-                    <p permid="rIz">Use whatever method you think best to plot <m>3x+2y=6</m>.</p>
-                </statement>
-                 <answer permid="ias">
-                    <sidebyside permid="MNN">
-                    <image permid="PPK">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-6.66:4.66] {3/2*x+3};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="GYB">
-                <statement>
-                    <p permid="XPI">Use whatever method you think best to plot <m>5x-4y=8</m>.</p>
-                </statement>
-                <answer permid="OhB">
-                    <sidebyside permid="sUW">
-                    <image permid="vWT">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:7.66] {5/4*x-2};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="nfK">
-                <statement>
-                    <p permid="DWR">Use whatever method you think best to plot <m>3x-4y=0</m>.</p>
-                </statement>
-                <answer permid="uoK">
-                    <sidebyside permid="Zcf">
-                    <image permid="cec">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {3/4*x};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="TmT">
-                <statement>
-                    <p permid="kea">Use whatever method you think best to plot <m>9x+6y=0</m>.</p>
-                </statement>
-                 <answer permid="avT">
-                    <sidebyside permid="Fjo">
-                    <image permid="Ill">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-3.66:3.66] {-3/2*x};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="zuc">
-                <statement>
-                    <p permid="Qlj">Use whatever method you think best to plot <m>x=-3</m>.</p>
-                </statement>
-                <answer permid="GDc">
-                    <sidebyside permid="lqx">
-                    <image permid="osu">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[primarycurve] coordinates {(-3,-7) (3,7)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="fBl">
-                <statement>
-                    <p permid="wss">Use whatever method you think best to plot <m>x=2</m>.</p>
-                </statement>
-                 <answer permid="mKl">
-                    <sidebyside permid="RxG">
-                    <image permid="UzD">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[primarycurve] coordinates {(2,-7) (2,7)};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="LIu">
-                <statement>
-                    <p permid="czB">Use whatever method you think best to plot <m>y=-7</m>.</p>
-                </statement>
-                <answer permid="SRu">
-                    <sidebyside permid="xEP">
-                    <image permid="AGM">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-7:7] {-7};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-            <exercise permid="rPD">
-                <statement>
-                    <p permid="IGK">Use whatever method you think best to plot <m>y=5</m>.</p>
-                </statement>
-                <answer permid="yYD">
-                    <sidebyside permid="dLY">
-                    <image permid="gNV">
-            <latex-image>
-                <![CDATA[
-                    \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[domain=-7:7] {5};
-                        \end{axis}
-                    \end{tikzpicture}
-                ]]>
-            </latex-image>
-                    </image>
-                    </sidebyside>
-                </answer>
-            </exercise>
-        </exercisegroup>
-    </exercises>
+  <exercises permid="FEN">
+    <exercisegroup cols="2" permid="lLW">
+      <title>Graphing by Table</title>
+      <exercise permid="OYz">
+        <statement>
+          <p permid="odZ">
+            Use a table to make a plot of <m>y=4x+3</m>.
+          </p>
+        </statement>
+        <answer permid="evS">
+          <sidebyside permid="qvP">
+            <image permid="Mlk">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {4*x+3};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="vfI">
+        <statement>
+          <p permid="Uli">
+            Use a table to make a plot of <m>y=-5x-1</m>.
+          </p>
+        </statement>
+        <answer permid="KDb">
+          <sidebyside permid="WCY">
+            <image permid="sst">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-5*x-1};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="bmR">
+        <statement>
+          <p permid="Asr">
+            Use a table to make a plot of <m>y=-\frac{3}{4}x-1</m>.
+          </p>
+        </statement>
+        <answer permid="qKk">
+          <sidebyside permid="CKh">
+            <image permid="YzC">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-3/4*x-1};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="Hua">
+        <statement>
+          <p permid="gzA">
+            Use a table to make a plot of <m>y=\frac{5}{3}x+3</m>.
+          </p>
+        </statement>
+        <answer permid="WRt">
+          <sidebyside permid="iRq">
+            <image permid="EGL">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {5/3*x+3};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="RTf">
+      <title>Graphing Standard Form Equations</title>
+      <exercise permid="kGD">
+        <statement>
+          <p permid="MGJ">
+            First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>6x+5y=-90</m>.
+            Then find one other point on the line.
+            Use your results to graph the line.
+          </p>
+        </statement>
+        <answer permid="CYC">
+          <sidebyside permid="nBj">
+            <image permid="kNU">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-20:5] {-4/5*x-1};
+\addplot[soliddot] coordinates {(0,-18) (-15,0)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="QNM">
+        <statement>
+          <p permid="sNS">
+            First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>2x-3y=-6</m>.
+            Then find one other point on the line.
+            Use your results to graph the line.
+          </p>
+        </statement>
+        <answer permid="jfL">
+          <sidebyside permid="TIs">
+            <figure permid="fPG">
+              <caption>Graph of <m>2x-3y=-6</m></caption>
+              <image permid="QVd">
+                <description>a coordinate grid with the graph of line 2x-3y=-6; the x-intercept is (-3,0) and the y-intercept is (0,2)</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[xmin=-5,xmax=2,
+ymin=-1,ymax=4,
+minor xtick=,
+minor ytick=,
+xtick={-4,-3,...,1},
+ytick={1,2,3}]
+\addplot+[domain=-4.5:2]{2/3*x+2};
+\addplot[soliddot] coordinates {(0, 2)} node[above left] {$(0,2)$};
+\addplot[soliddot] coordinates {(-3, 0)} node[above left] {$(-3,0)$};
+\addplot[soliddot] coordinates {(-1, 1.33333)} node[above left] {$(-1,\frac{4}{3})$};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+              </image>
+            </figure>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="wUV">
+        <statement>
+          <p permid="YVb">
+            First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>3x+y=-9</m>.
+            Then find one other point on the line.
+            Use your results to graph the line.
+          </p>
+        </statement>
+        <answer permid="PmU">
+          <sidebyside permid="zPB">
+            <image permid="xcm">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-10.66:2.66] {-3*x-9};
+\addplot[soliddot] coordinates {(0,-9) (-3,0)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="dce">
+        <statement>
+          <p permid="Fck">
+            First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>-15x+3y=-3</m>.
+            Then find one other point on the line.
+            Use your results to graph the line.
+          </p>
+        </statement>
+        <answer permid="vud">
+          <sidebyside permid="fWK">
+            <image permid="djv">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {5*x-1};
+\addplot[soliddot] coordinates {(0,-1) (1/5,0)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="Jjn">
+        <statement>
+          <p permid="ljt">
+            First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>4x+3y=-3</m>.
+            Then find one other point on the line.
+            Use your results to graph the line.
+          </p>
+        </statement>
+        <answer permid="bBm">
+          <sidebyside permid="MdT">
+            <image permid="JqE">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-4/3*x-1};
+\addplot[soliddot] coordinates {(0,-1) (-3/4,0)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="pqw">
+        <statement>
+          <p permid="RqC">
+            First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>-4x-5y=5</m>.
+            Then find one other point on the line.
+            Use your results to graph the line.
+          </p>
+        </statement>
+        <answer permid="HIv">
+          <sidebyside permid="slc">
+            <image permid="pxN">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-4/5*x-1};
+\addplot[soliddot] coordinates {(0,-1) (-5/4,0)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="VxF">
+        <statement>
+          <p permid="xxL">
+            First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>5x-3y=0</m>.
+            Then find one other point on the line.
+            Use your results to graph the line.
+          </p>
+        </statement>
+        <answer permid="nPE">
+          <sidebyside permid="Ysl">
+            <image permid="VEW">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {5/3*x};
+\addplot[soliddot] coordinates {(0,0)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="BEO">
+        <statement>
+          <p permid="dEU">
+            First, find the <m>x</m>- and <m>y</m>-intercepts of the line with equation <m>2x+9y=0</m>.
+            Then find one other point on the line.
+            Use your results to graph the line.
+          </p>
+        </statement>
+        <answer permid="TWN">
+          <sidebyside permid="Ezu">
+            <image permid="BMf">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-2/9*x};
+\addplot[soliddot] coordinates {(0,0)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="yao">
+      <title>Graphing Slope-Intercept Equations</title>
+      <exercise permid="GoH">
+        <statement>
+          <p permid="JMd">
+            Use the slope and <m>y</m>-intercept from the line <m>y=-5x</m> to plot the line.
+            Use slope triangles.
+          </p>
+        </statement>
+        <answer permid="AdW">
+          <sidebyside permid="hLX">
+            <image permid="hTo">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-5*x};
+\addplot[soliddot] coordinates {(0,0)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="mvQ">
+        <statement>
+          <p permid="pTm">
+            Use the slope and <m>y</m>-intercept from the line <m>y=3x-6</m> to plot the line.
+            Use slope triangles.
+          </p>
+        </statement>
+        <answer permid="glf">
+          <sidebyside permid="NTg">
+            <image permid="Oax">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {3*x-6};
+\addplot[soliddot] coordinates {(0,-6)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="SCZ">
+        <statement>
+          <p permid="Wav">
+            Use the slope and <m>y</m>-intercept from the line <m>y=-\frac{2}{5}x+2</m> to plot the line.
+            Use slope triangles.
+          </p>
+        </statement>
+        <answer permid="Mso">
+          <sidebyside permid="uap">
+            <image permid="uhG">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-7.66:3.66] {2/5*x+2};
+\addplot[soliddot] coordinates {(0,2)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="yKi">
+        <statement>
+          <p permid="ChE">
+            Use the slope and <m>y</m>-intercept from the line <m>y=\frac{10}{3}x-3</m> to plot the line.
+            Use slope triangles.
+          </p>
+        </statement>
+        <answer permid="szx">
+          <sidebyside permid="ahy">
+            <image permid="aoP">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-7.66:3.66] {10/3*x-3};
+\addplot[soliddot] coordinates {(0,-3)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="ehx">
+      <title>Graphing Horizontal and Vertical Lines</title>
+      <exercise permid="Dub">
+        <statement>
+          <p permid="ioN">
+            Plot the line <m>y=1</m>.
+          </p>
+        </statement>
+        <answer permid="YGG">
+          <sidebyside permid="eRr">
+            <image permid="GvY">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-7:7] {1};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="jBk">
+        <statement>
+          <p permid="OvW">
+            Plot the line <m>y=-4</m>.
+          </p>
+        </statement>
+        <answer permid="ENP">
+          <sidebyside permid="KYA">
+            <image permid="mDh">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-7:7] {-4};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="PIt">
+        <statement>
+          <p permid="uDf">
+            Plot the line <m>x=-8</m>.
+          </p>
+        </statement>
+        <answer permid="kUY">
+          <sidebyside permid="rfJ">
+            <image permid="SKq">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot[primarycurve] coordinates {(-8,-7) (8,7)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="vPC">
+        <statement>
+          <p permid="aKo">
+            Plot the line <m>x=5</m>.
+          </p>
+        </statement>
+        <answer permid="Rch">
+          <sidebyside permid="XmS">
+            <image permid="yRz">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot[primarycurve] coordinates {(5,-7) (5,7)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="KoG">
+      <title>Choosing the Best Method to Graph Lines</title>
+      <exercise permid="JTh">
+        <statement>
+          <p permid="GRx">
+            Use whatever method you think best to plot <m>y=2x+2</m>.
+          </p>
+        </statement>
+        <answer permid="xjq">
+          <sidebyside permid="bWL">
+            <image permid="eYI">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {2*x+2};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="qaq">
+        <statement>
+          <p permid="mYG">
+            Use whatever method you think best to plot <m>y=-3x+6</m>.
+          </p>
+        </statement>
+        <answer permid="dqz">
+          <sidebyside permid="IdU">
+            <image permid="LfR">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-3*x+6};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="Whz">
+        <statement>
+          <p permid="TfP">
+            Use whatever method you think best to plot <m>y=-\frac{3}{4}x-1</m>.
+          </p>
+        </statement>
+        <answer permid="JxI">
+          <sidebyside permid="old">
+            <image permid="rna">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-3/4*x-1};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="CoI">
+        <statement>
+          <p permid="zmY">
+            Use whatever method you think best to plot <m>y=\frac{5}{3}x-3</m>.
+          </p>
+        </statement>
+        <answer permid="pER">
+          <sidebyside permid="Usm">
+            <image permid="Xuj">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {5/3*x-3};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="ivR">
+        <statement>
+          <p permid="fuh">
+            Use whatever method you think best to plot <m>y=-\frac{3}{4}(x-5)+2</m>.
+          </p>
+        </statement>
+        <answer permid="VMa">
+          <sidebyside permid="Azv">
+            <image permid="DBs">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-9.66:2.66] {-3/4*x+23/4};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="ODa">
+        <statement>
+          <p permid="LBq">
+            Use whatever method you think best to plot <m>y=\frac{2}{5}(x+1)-3</m>.
+          </p>
+        </statement>
+        <answer permid="BTj">
+          <sidebyside permid="gGE">
+            <image permid="jIB">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-2.66:9.66] {2/5*x-13/5};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="uKj">
+        <statement>
+          <p permid="rIz">
+            Use whatever method you think best to plot <m>3x+2y=6</m>.
+          </p>
+        </statement>
+        <answer permid="ias">
+          <sidebyside permid="MNN">
+            <image permid="PPK">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-6.66:4.66] {3/2*x+3};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="GYB">
+        <statement>
+          <p permid="XPI">
+            Use whatever method you think best to plot <m>5x-4y=8</m>.
+          </p>
+        </statement>
+        <answer permid="OhB">
+          <sidebyside permid="sUW">
+            <image permid="vWT">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:7.66] {5/4*x-2};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="nfK">
+        <statement>
+          <p permid="DWR">
+            Use whatever method you think best to plot <m>3x-4y=0</m>.
+          </p>
+        </statement>
+        <answer permid="uoK">
+          <sidebyside permid="Zcf">
+            <image permid="cec">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {3/4*x};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="TmT">
+        <statement>
+          <p permid="kea">
+            Use whatever method you think best to plot <m>9x+6y=0</m>.
+          </p>
+        </statement>
+        <answer permid="avT">
+          <sidebyside permid="Fjo">
+            <image permid="Ill">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-3.66:3.66] {-3/2*x};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="zuc">
+        <statement>
+          <p permid="Qlj">
+            Use whatever method you think best to plot <m>x=-3</m>.
+          </p>
+        </statement>
+        <answer permid="GDc">
+          <sidebyside permid="lqx">
+            <image permid="osu">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot[primarycurve] coordinates {(-3,-7) (3,7)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="fBl">
+        <statement>
+          <p permid="wss">
+            Use whatever method you think best to plot <m>x=2</m>.
+          </p>
+        </statement>
+        <answer permid="mKl">
+          <sidebyside permid="RxG">
+            <image permid="UzD">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot[primarycurve] coordinates {(2,-7) (2,7)};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="LIu">
+        <statement>
+          <p permid="czB">
+            Use whatever method you think best to plot <m>y=-7</m>.
+          </p>
+        </statement>
+        <answer permid="SRu">
+          <sidebyside permid="xEP">
+            <image permid="AGM">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-7:7] {-7};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+      <exercise permid="rPD">
+        <statement>
+          <p permid="IGK">
+            Use whatever method you think best to plot <m>y=5</m>.
+          </p>
+        </statement>
+        <answer permid="yYD">
+          <sidebyside permid="dLY">
+            <image permid="gNV">
+<latex-image>
+<![CDATA[
+\begin{tikzpicture}
+\begin{axis}[]
+\addplot+[domain=-7:7] {5};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </sidebyside>
+        </answer>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

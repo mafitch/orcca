@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,1280 +6,1767 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
 <section xml:id="section-adding-and-subtracting-polynomials" permid="BMa">
-
+  <title>Adding and Subtracting Polynomials</title>
+  <introduction permid="zPJ">
+    <p permid="tcv">
+      A polynomial is a particular type of algebraic expression used for things all around us.
+      <ul permid="ahG">
+        <li permid="Iec">
+          <p permid="PWW">
+            A company's sales, <m>s</m>
+            (in millions of dollars),
+            can be modeled by <m>2.2t+5.8</m>,
+            where <m>t</m> stands for the number of years since <m>2010</m>.
+          </p>
+        </li>
+        <li permid="oll">
+          <p permid="wef">
+            The height of an object from the ground, <m>h</m>
+            (in feet),
+            launched upward from the top of a building can be modeled by <m>-16t^2+32t+300</m>,
+            where <m>t</m> represents the amount of time
+            (in seconds)
+            since the launch.
+          </p>
+        </li>
+        <li permid="Usu">
+          <p permid="clo">
+            The volume of an open-top box with a square base, <m>V</m>
+            (in cubic inches),
+            can be calculated by <m>30s^2-\frac{1}{2}s^2</m>,
+            where <m>s</m> stands for the length of the square base and the box sides have to be cut from a certain square piece of metal.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p permid="ZjE">
+      All of the expressions above are <term>polynomials</term>.
+      In this section,
+      we will learn some basic vocabulary relating to polynomials and we'll then learn how to add and subtract polynomials.
+    </p>
+  </introduction>
+  <subsection permid="hTj">
+    <title>Polynomial Vocabulary</title>
+    <definition xml:id="definition-polynomial" permid="oGK">
+      <idx><h>polynomial</h></idx>
+      <statement>
+        <p permid="OaF">
+          A <term>polynomial</term> is an expression that consists of terms summed together.
+          Each term must be the product of a number and one or more variables raised to whole number powers.
+          Since <m>0</m> is a whole number,
+          a term can just be a number.
+          A polynomial may have just one term.
+          The expression <m>0</m> is also considered a polynomial,
+          with zero terms.
+        </p>
+      </statement>
+    </definition>
+    <p permid="Hga">
+      Some examples of polynomials in one variable are:
+      <me permid="pcw">
+        x^2-5x+2\qquad t^3-1\qquad 7y
+      </me>.
+      The expression <m>3x^4y^3+7xy^2-12xy</m> is an example of a polynomial in several variables.
+    </p>
+    <definition xml:id="definition-term-polynomial" permid="UNT">
+      <idx><h>polynomial</h><h>terms of</h></idx>
+      <statement>
+        <p permid="uhO">
+          A <term>term</term>
+              <idx><h>term</h></idx>
+          of a polynomial is the product of a numerical coefficient and one or more variables raised to whole number powers.
+          Since <m>0</m> is a whole number,
+          a term can just be a number.
+        </p>
+      </statement>
+    </definition>
+    <p permid="nnj">
+      For example:
+      <ul permid="jBs">
+        <li permid="AzD">
+          <p permid="Isx">
+            the polynomial <m>x^2-5x+3</m> has three terms:
+            <m>x^2</m>, <m>-5x</m>, and <m>3</m>;
+          </p>
+        </li>
+        <li permid="gGM">
+          <p permid="ozG">
+            the polynomial <m> 3x^4+7xy^2-12xy</m> also has three terms;
+          </p>
+        </li>
+        <li permid="MNV">
+          <p permid="UGP">
+            the polynomial <m>t^3-1</m> has two terms.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <definition xml:id="definition-coefficient" permid="AVc">
+      <idx><h>polynomial</h><h>coefficients of</h></idx>
+      <idx>coefficient</idx>
+      <statement>
+        <p permid="aoX">
+          The <term>coefficient</term>
+          (or numerical coefficient)
+          of a term is the numerical factor in the term.
+        </p>
+      </statement>
+    </definition>
+    <p permid="Tus">
+      For example:
+      <ul permid="PIB">
+        <li permid="sVe">
+          <p permid="ANY">
+            the coefficient of the term
+            <m>\frac{4}{3}x^6</m> is <m>\frac{4}{3}</m>;
+          </p>
+        </li>
+        <li permid="Zcn">
+          <p permid="gVh">
+            the coefficient of the second term of the polynomial <m>x^2-5x+3</m> is <m>-5</m>;
+          </p>
+        </li>
+        <li permid="Fjw">
+          <p permid="Ncq">
+            the coefficient of the term
+            <m>\frac{y^7}{4}</m> is <m>\frac{1}{4}</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <remark permid="lMe">
+      <p permid="osC">
+        Because variables in polynomials must have whole number exponents,
+        a polynomial will never have a variable in the denominator of a fraction or under a square root
+        (or any other radical).
+      </p>
+    </remark>
+    <exercise permid="yaw">
+      <webwork>
+          <setup>
+<pg-code>
+$yes=PopUp(['?','is', 'is not'],1);
+$no=PopUp(['?','is', 'is not'],2);
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="FqN">
+              Identify which of the following are polynomials and which are not.
+              <ol label="a." permid="GoP">
+                <li permid="uKr">
+                  <p permid="tjz">
+                    The expression <m>-2x^9-\frac{7}{13}x^3-1</m> <var name="$yes" form="popup"/> a polynomial.
+                  </p>
+                </li>
+                <li permid="aRA">
+                  <p permid="ZqI">
+                    The expression <m>5x^{-2}-5x^2+3</m> <var name="$no" form="popup"/> a polynomial.
+                  </p>
+                </li>
+                <li permid="GYJ">
+                  <p permid="FxR">
+                    The expression <m>\sqrt{2}x-\frac{3}{5}</m> <var name="$yes" form="popup"/> a polynomial.
+                  </p>
+                </li>
+                <li permid="nfS">
+                  <p permid="lFa">
+                    The expression <m>5x^3-5^{-5}x-x^4</m> <var name="$yes" form="popup"/> a polynomial.
+                  </p>
+                </li>
+                <li permid="Tnb">
+                  <p permid="RMj">
+                    The expression <m>\frac{25}{x^2}+23-x</m> <var name="$no" form="popup"/> a polynomial.
+                  </p>
+                </li>
+                <li permid="zuk">
+                  <p permid="xTs">
+                    The expression <m>37x^6-x+8^{\frac{4}{3}}</m> <var name="$yes" form="popup"/> a polynomial.
+                  </p>
+                </li>
+                <li permid="fBt">
+                  <p permid="eaB">
+                    The expression <m>\sqrt{7x}-4x^3</m> <var name="$no" form="popup"/> a polynomial.
+                  </p>
+                </li>
+                <li permid="LIC">
+                  <p permid="KhK">
+                    The expression <m>6x^{\frac{3}{2}}+1</m> <var name="$no" form="popup"/> a polynomial.
+                  </p>
+                </li>
+                <li permid="rPL">
+                  <p permid="qoT">
+                    The expression <m>6^x-3x^6</m> <var name="$no" form="popup"/> a polynomial.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution permid="kGL">
+            <p permid="EGT">
+              <ol label="a." permid="pqE">
+                <li permid="XWU">
+                  <p permid="Wwc">
+                    The expression <m>-2x^9-\frac{7}{13}x^3-1</m> is a polynomial.
+                  </p>
+                </li>
+                <li permid="Eed">
+                  <p permid="CDl">
+                    The expression <m>5x^{-2}-5x^2+3</m> is not a polynomial because it has negative exponents on a variable.
+                  </p>
+                </li>
+                <li permid="klm">
+                  <p permid="iKu">
+                    The expression <m>\sqrt{2}x-\frac{3}{5}</m> is a polynomial.
+                    Note that <em>coefficients</em>
+                    can have radicals even though variables cannot,
+                    and the square root here is <em>only</em> applied to the <m>2</m>.
+                  </p>
+                </li>
+                <li permid="Qsv">
+                  <p permid="ORD">
+                    The expression <m>5x^3-5^{-5}x-x^4</m> is a polynomial.
+                    Note that <em>coefficients</em>
+                    can have negative exponents even though variables cannot.
+                  </p>
+                </li>
+                <li permid="wzE">
+                  <p permid="uYM">
+                    The expression <m>\frac{25}{x^2}+23-x</m> is not a polynomial because it has a variable in a denominator.
+                  </p>
+                </li>
+                <li permid="cGN">
+                  <p permid="bfV">
+                    The expression <m>37x^6-x+8^{\frac{4}{3}}</m> is a polynomial.
+                    Note that <em>coefficients</em>
+                    can have fractional exponents even though variables cannot.
+                  </p>
+                </li>
+                <li permid="INW">
+                  <p permid="Hne">
+                    The expression <m>\sqrt{7x}-4x^3</m> is not a polynomial because it has a variable inside a radical.
+                  </p>
+                </li>
+                <li permid="oVf">
+                  <p permid="nun">
+                    The expression <m>6x^{\frac{3}{2}}+1</m> is not a polynomial because a variable has a fractional exponent.
+                  </p>
+                </li>
+                <li permid="Vco">
+                  <p permid="TBw">
+                    The expression <m>6^x-3x^6</m> is not a polynomial because it has a variable in an exponent.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+    <definition xml:id="definition-degree" permid="hcl">
+      <idx>degree</idx>
+      <idx><h>polynomial</h><h>degree of a term</h></idx>
+      <idx>degree</idx>
+      <statement>
+        <p permid="Gwg">
+          When a term only has one variable,
+          its <term>degree</term> is the exponent on that variable.
+          When a term has more than one variable,
+          its <term>degree</term> is the sum of the exponents on the variables in that term.
+          When a term has no variables,
+          its <term>degree</term> is <m>0</m>.
+        </p>
+      </statement>
+    </definition>
+    <p permid="zBB">
+      For example:
+      <ul permid="vPK">
+        <li permid="lqF">
+          <p permid="zIF">
+            the degree of <m>5x^2</m> is <m>2</m>;
+          </p>
+        </li>
+        <li permid="RxO">
+          <p permid="fPO">
+            the degree of <m>-\frac{4}{7}y^5</m> is <m>5</m>.
+          </p>
+        </li>
+        <li permid="xEX">
+          <p permid="LWX">
+            the degree of <m>-4x^2y^3</m> is <m>5</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p permid="fIK">
+      Polynomial terms are often classified by their degree.
+      In doing so,
+      we would refer to <m>5x^2</m> as a second-degree term.
+    </p>
+    <definition xml:id="definition-degree-polynomial" permid="Nju">
+      <statement>
+        <p permid="mDp">
+          The <term>degree of a polynomial</term><idx><h>polynomial</h><h>degree of a polynomial</h></idx> is the greatest degree that appears amongst its terms.
+          If the polynomial is just <m>0</m>,
+          it has no terms, and we say its degree is <m>-1</m>.
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="definition-leading-term" permid="tqD">
+      <statement>
+        <p permid="SKy">
+          The <term>leading term</term><idx><h>polynomial</h><h>leading term</h></idx> of a polynomial is the term with the greatest degree
+          (assuming there is one, and there is no tie).
+        </p>
+      </statement>
+    </definition>
+    <p permid="LPT">
+      For example, the degree of the polynomial
+      <m>x^2-5x+3</m> is <m>2</m> because the terms have degrees <m>2</m>,
+      <m>1</m>, and <m>0</m>, and <m>2</m> is the largest.
+      Its leading term is <m>x^2</m>.
+      Polynomials are often classified by their degree and we would say that
+      <m>x^2-5x+3</m> is a second-degree polynomial.
+    </p>
+    <p permid="rXc">
+      The coefficient of a polynomial's leading term is called the polynomial's
+      <term>leading coefficient</term>.
+          <idx><h>polynomial</h><h>leading coefficient</h></idx>
+      For example,
+      the leading coefficient of <m>x^2-5x+3</m> is <m>1</m>
+      (because <m>x^2=1\cdot x^2</m>).
+    </p>
+    <definition xml:id="definition-constant-term" permid="ZxM">
+      <statement>
+        <p permid="yRH">
+          A term with no variable factor is called a
+          <term>constant term</term>.
+              <idx><h>constant term</h></idx>
+              <idx><h>polynomial</h><h>constant term of</h></idx>
+        </p>
+      </statement>
+    </definition>
+    <p permid="Yel">
+      For example,
+      the constant term of the polynomial <m>x^2-5x+3</m> is <m>3</m>.
+    </p>
+    <p permid="Elu">
+      There are some special names for polynomials with certain degrees:
+      <ul permid="bWT">
+        <li permid="dMg">
+          <p permid="seg">
+            A zero-degree polynomial is called a
+            <term>constant polynomial</term>
+            or simply a <term>constant</term>.
+          </p>
+          <p permid="Ylp">
+            An example is the polynomial <m>7</m>,
+            which has degree zero because it can be viewed as <m>7x^0</m>.
+          </p>
+        </li>
+        <li permid="JTp">
+          <p permid="Esy">
+            A first-degree polynomial is called a
+            <term>linear polynomial</term>.
+          </p>
+          <p permid="kzH">
+            An example is <m>-2x+7</m>.
+          </p>
+        </li>
+        <li permid="qay">
+          <p permid="QGQ">
+            A second-degree polynomial is called a
+            <term>quadratic polynomial</term>.
+          </p>
+          <p permid="wNZ">
+            An example is <m>4x^2-2x+7</m>.
+          </p>
+        </li>
+        <li permid="WhH">
+          <p permid="cVi">
+            A third-degree polynomial is called a
+            <term>cubic polynomial</term>.
+          </p>
+          <p permid="Jcr">
+            An example is <m>x^3+4x^2-2x+7</m>.
+          </p>
+        </li>
+      </ul>
+      Fourth-degree and fifth-degree polynomials are called quartic and quintic polynomials,
+      respectively.
+      If the degree of the polynomial,
+      <m>n</m>, is greater than five,
+      we'll simply call it an <m>n</m>th-degree polynomial.
+      For example, the polynomial
+      <m>5x^8-4x^5+1</m> is an <m>8</m>th-degree polynomial.
+    </p>
+    <remark xml:id="remark-standard-form" permid="RTn">
+      <p permid="UzL">
+        To help us recognize a polynomial's degree,
+        it is the standard convention to write a polynomial's terms in order from greatest-degree term to lowest-degree term.
+        When a polynomial is written in this order,
+        it is written in <term>standard form</term>.
+        For example,
+        it is standard practice to write <m>7-4x-x^2</m> as
+        <m>-x^2-4x+7</m> since <m>-x^2</m> is the leading term.
+        By writing the polynomial in standard form,
+        we can look at the first term to determine both the polynomial's degree and leading term.
+      </p>
+    </remark>
+    <p permid="ksD">
+      There are special names for polynomials with a small number of terms:
+    </p>
+    <definition xml:id="definition-monomial-binomial-trinomial" permid="FEV">
+      <statement>
+        <p permid="eYQ">
+          <ul permid="uax">
+            <li permid="CoQ">
+              <p permid="pjA">
+                A polynomial with one term,
+                such as <m>3x^5</m> or <m>9</m>,
+                is called a <term>monomial</term>.
+    <idx><h>monomial</h></idx>
+    <idx><h>polynomial</h><h>monomial</h></idx>
+              </p>
+            </li>
+            <li permid="ivZ">
+              <p permid="VqJ">
+                A polynomial with two terms,
+                such as <m>3x^5+2x</m> or <m>-2x+1</m>,
+                is called a <term>binomial</term>.
+    <idx><h>binomial</h></idx>
+    <idx><h>polynomial</h><h>binomial</h></idx>
+              </p>
+            </li>
+            <li permid="ODi">
+              <p permid="BxS">
+                A polynomial with three terms,
+                such as <m>x^2-5x+3</m>, is called a <term>trinomial</term>.
+    <idx><h>trinomial</h></idx>
+    <idx><h>polynomial</h><h>trinomial</h></idx>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+  </subsection>
+  <subsection permid="Oas">
     <title>Adding and Subtracting Polynomials</title>
-
-    <introduction permid="zPJ">
-
-        <p permid="tcv">A polynomial is a particular type of algebraic expression used for things all around us.<ul permid="ahG">
-            <li permid="Iec">
-                <p permid="PWW">A company's sales, <m>s</m> (in millions of dollars), can be modeled by <m>2.2t+5.8</m>, where <m>t</m> stands for the number of years since <m>2010</m>.</p>
-            </li>
-
-            <li permid="oll">
-                <p permid="wef">The height of an object from the ground, <m>h</m> (in feet), launched upward from the top of a building can be modeled by <m>-16t^2+32t+300</m>, where <m>t</m> represents the amount of time (in seconds) since the launch.</p>
-            </li>
-            <li permid="Usu">
-                <p permid="clo">The volume of an open-top box with a square base, <m>V</m> (in cubic inches), can be calculated by <m>30s^2-\frac{1}{2}s^2</m>, where <m>s</m> stands for the length of the square base and the box sides have to be cut from a certain square piece of metal.</p>
-            </li>
-        </ul></p>
-
-        <p permid="ZjE">All of the expressions above are <term>polynomials</term>. In this section, we will learn some basic vocabulary relating to polynomials and we'll then learn how to add and subtract polynomials.</p>
-
-    </introduction>
-
-    <subsection permid="hTj">
-        <title>Polynomial Vocabulary</title>
-
-        <definition xml:id="definition-polynomial" permid="oGK"><idx><h>polynomial</h></idx>
-             <statement>
-                <p permid="OaF">A <term>polynomial</term> is an expression that consists of terms summed together. Each term must be the product of a number and one or more variables raised to whole number powers. Since <m>0</m> is a whole number, a term can just be a number. A polynomial may have just one term. The expression <m>0</m> is also considered a polynomial, with zero terms.</p>
-            </statement>
-        </definition>
-        <p permid="Hga">Some examples of polynomials in one variable are: <me permid="pcw">x^2-5x+2\qquad t^3-1\qquad 7y</me>. The expression <m>3x^4y^3+7xy^2-12xy</m> is an example of a polynomial in several variables.</p>
-
-        <definition xml:id="definition-term-polynomial" permid="UNT"><idx><h>polynomial</h><h>terms of</h></idx>
-            <statement>
-                <p permid="uhO">A <term>term</term><idx><h>term</h></idx> of a polynomial is the product of a numerical coefficient and one or more variables raised to whole number powers. Since <m>0</m> is a whole number, a term can just be a number.</p>
-            </statement>
-        </definition>
-        <p permid="nnj">For example:<ul permid="jBs">
-            <li permid="AzD">
-                <p permid="Isx">the polynomial <m>x^2-5x+3</m> has three terms: <m>x^2</m>, <m>-5x</m>, and <m>3</m>;</p>
-            </li>
-            <li permid="gGM">
-                <p permid="ozG">the polynomial <m> 3x^4+7xy^2-12xy</m> also has three terms;</p>
-            </li>
-            <li permid="MNV">
-                <p permid="UGP">the polynomial <m>t^3-1</m> has two terms.</p>
-            </li>
-        </ul></p>
-
-        <definition xml:id="definition-coefficient" permid="AVc"><idx><h>polynomial</h><h>coefficients of</h></idx><idx>coefficient</idx>
-            <statement>
-                <p permid="aoX">The <term>coefficient</term> (or numerical coefficient) of a term is the numerical factor in the term.</p>
-            </statement>
-        </definition>
-        <p permid="Tus">For example:<ul permid="PIB">
-            <li permid="sVe">
-                <p permid="ANY">the coefficient of the term <m>\frac{4}{3}x^6</m> is <m>\frac{4}{3}</m>;</p>
-            </li>
-            <li permid="Zcn">
-                <p permid="gVh">the coefficient of the second term of the polynomial <m>x^2-5x+3</m> is <m>-5</m>;</p>
-            </li>
-            <li permid="Fjw">
-                <p permid="Ncq">the coefficient of the term <m>\frac{y^7}{4}</m> is <m>\frac{1}{4}</m>.</p>
-            </li>
-        </ul></p>
-
-        <remark permid="lMe">
-            <p permid="osC">Because variables in polynomials must have whole number exponents, a polynomial will never have a variable in the denominator of a fraction or under a square root (or any other radical).</p>
-        </remark>
-
-        <exercise permid="yaw">
-            <webwork>
-                <setup>
-            <pg-code>
-                $yes=PopUp(['?','is', 'is not'],1);
-                $no=PopUp(['?','is', 'is not'],2);
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="FqN">Identify which of the following are polynomials and which are not.<ol label="a." permid="GoP">
-                        <li permid="uKr">
-                            <p permid="tjz">The expression <m>-2x^9-\frac{7}{13}x^3-1</m> <var name="$yes" form="popup"/> a polynomial.</p>
-                        </li>
-                        <li permid="aRA">
-                            <p permid="ZqI">The expression <m>5x^{-2}-5x^2+3</m> <var name="$no" form="popup"/> a polynomial.</p>
-                        </li>
-                        <li permid="GYJ">
-                            <p permid="FxR">The expression <m>\sqrt{2}x-\frac{3}{5}</m> <var name="$yes" form="popup"/> a polynomial.</p>
-                        </li>
-                        <li permid="nfS">
-                            <p permid="lFa">The expression <m>5x^3-5^{-5}x-x^4</m> <var name="$yes" form="popup"/> a polynomial.</p>
-                        </li>
-                        <li permid="Tnb">
-                            <p permid="RMj">The expression <m>\frac{25}{x^2}+23-x</m> <var name="$no" form="popup"/> a polynomial.</p>
-                        </li>
-                        <li permid="zuk">
-                            <p permid="xTs">The expression <m>37x^6-x+8^{\frac{4}{3}}</m> <var name="$yes" form="popup"/> a polynomial.</p>
-                        </li>
-                        <li permid="fBt">
-                            <p permid="eaB">The expression <m>\sqrt{7x}-4x^3</m> <var name="$no" form="popup"/> a polynomial.</p>
-                        </li>
-                        <li permid="LIC">
-                            <p permid="KhK">The expression <m>6x^{\frac{3}{2}}+1</m> <var name="$no" form="popup"/> a polynomial.</p>
-                        </li>
-                        <li permid="rPL">
-                            <p permid="qoT">The expression <m>6^x-3x^6</m> <var name="$no" form="popup"/> a polynomial.</p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution permid="kGL"><p permid="EGT">
-                    <ol label="a." permid="pqE">
-                        <li permid="XWU">
-                            <p permid="Wwc">The expression <m>-2x^9-\frac{7}{13}x^3-1</m> is a polynomial.</p>
-                        </li>
-                        <li permid="Eed">
-                            <p permid="CDl">The expression <m>5x^{-2}-5x^2+3</m> is not a polynomial because it has negative exponents on a variable.</p>
-                        </li>
-                        <li permid="klm">
-                            <p permid="iKu">The expression <m>\sqrt{2}x-\frac{3}{5}</m> is a polynomial. Note that <em>coefficients</em> can have radicals even though variables cannot, and the square root here is <em>only</em> applied to the <m>2</m>.</p>
-                        </li>
-                        <li permid="Qsv">
-                            <p permid="ORD">The expression <m>5x^3-5^{-5}x-x^4</m> is a polynomial. Note that <em>coefficients</em> can have negative exponents even though variables cannot.</p>
-                        </li>
-                        <li permid="wzE">
-                            <p permid="uYM">The expression <m>\frac{25}{x^2}+23-x</m> is not a polynomial because it has a variable in a denominator.</p>
-                        </li>
-                        <li permid="cGN">
-                            <p permid="bfV">The expression <m>37x^6-x+8^{\frac{4}{3}}</m> is a polynomial. Note that <em>coefficients</em> can have fractional exponents even though variables cannot.</p>
-                        </li>
-                        <li permid="INW">
-                            <p permid="Hne">The expression <m>\sqrt{7x}-4x^3</m> is not a polynomial because it has a variable inside a radical.</p>
-                        </li>
-                        <li permid="oVf">
-                            <p permid="nun">The expression <m>6x^{\frac{3}{2}}+1</m> is not a polynomial because a variable has a fractional exponent.</p>
-                        </li>
-                        <li permid="Vco">
-                            <p permid="TBw">The expression <m>6^x-3x^6</m> is not a polynomial because it has a variable in an exponent.</p>
-                        </li>
-                    </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
-
-        <definition xml:id="definition-degree" permid="hcl"><idx>degree</idx><idx><h>polynomial</h><h>degree of a term</h></idx><idx>degree</idx>
-            <statement>
-                <p permid="Gwg">When a term only has one variable, its <term>degree</term> is the exponent on that variable. When a term has more than one variable, its <term>degree</term> is the sum of the exponents on the variables in that term. When a term has no variables, its <term>degree</term> is <m>0</m>.</p>
-            </statement>
-        </definition>
-
-        <p permid="zBB">For example:<ul permid="vPK">
-            <li permid="lqF">
-                <p permid="zIF">the degree of <m>5x^2</m> is <m>2</m>;</p>
-            </li>
-            <li permid="RxO">
-                <p permid="fPO">the degree of <m>-\frac{4}{7}y^5</m> is <m>5</m>.</p>
-            </li>
-            <li permid="xEX">
-                <p permid="LWX">the degree of <m>-4x^2y^3</m> is <m>5</m>.</p>
-            </li>
-        </ul></p>
-
-        <p permid="fIK">Polynomial terms are often classified by their degree. In doing so, we would refer to <m>5x^2</m> as a second-degree term.</p>
-
-        <definition xml:id="definition-degree-polynomial" permid="Nju">
-            <statement>
-
-                <p permid="mDp">The <term>degree of a polynomial</term><idx><h>polynomial</h><h>degree of a polynomial</h></idx> is the greatest degree that appears amongst its terms. If the polynomial is just <m>0</m>, it has no terms, and we say its degree is <m>-1</m>.</p>
-            </statement>
-        </definition>
-
-        <definition xml:id="definition-leading-term" permid="tqD">
-            <statement>
-                <p permid="SKy">The <term>leading term</term><idx><h>polynomial</h><h>leading term</h></idx> of a polynomial is the term with the greatest degree (assuming there is one, and there is no tie).</p>
-            </statement>
-        </definition>
-
-        <p permid="LPT">For example, the degree of the polynomial <m>x^2-5x+3</m> is <m>2</m> because the terms have degrees <m>2</m>, <m>1</m>, and <m>0</m>, and <m>2</m> is the largest. Its leading term is <m>x^2</m>. Polynomials are often classified by their degree and we would say that <m>x^2-5x+3</m> is a second-degree polynomial.</p>
-
-        <p permid="rXc">The coefficient of a polynomial's leading term is called the polynomial's <term>leading coefficient</term><idx><h>polynomial</h><h>leading coefficient</h></idx>. For example, the leading coefficient of <m>x^2-5x+3</m> is <m>1</m> (because <m>x^2=1\cdot x^2</m>).</p>
-
-        <definition xml:id="definition-constant-term" permid="ZxM">
-            <statement>
-                <p permid="yRH">A term with no variable factor is called a <term>constant term</term><idx><h>constant term</h></idx><idx><h>polynomial</h><h>constant term of</h></idx>.</p>
-            </statement>
-        </definition>
-        
-        <p permid="Yel">For example, the constant term of the polynomial <m>x^2-5x+3</m> is <m>3</m>.</p>
-
-        <p permid="Elu">There are some special names for polynomials with certain degrees:<ul permid="bWT">
-            <li permid="dMg">
-                <p permid="seg">A zero-degree polynomial is called a <term>constant polynomial</term> or simply a <term>constant</term>.</p>
-                <p permid="Ylp">An example is the polynomial <m>7</m>, which has degree zero because it can be viewed as <m>7x^0</m>.</p>
-            </li>
-            <li permid="JTp">
-                <p permid="Esy">A first-degree polynomial is called a <term>linear polynomial</term>.</p>
-                <p permid="kzH">An example is <m>-2x+7</m>.</p>
-            </li>
-            <li permid="qay">
-                <p permid="QGQ">A second-degree polynomial is called a <term>quadratic polynomial</term>.</p>
-                <p permid="wNZ">An example is <m>4x^2-2x+7</m>.</p>
-            </li>
-            <li permid="WhH">
-                <p permid="cVi">A third-degree polynomial is called a <term>cubic polynomial</term>.</p>
-                <p permid="Jcr">An example is <m>x^3+4x^2-2x+7</m>.</p>
-            </li>
-        </ul>Fourth-degree and fifth-degree polynomials are called quartic and quintic polynomials, respectively. If the degree of the polynomial, <m>n</m>, is greater than five, we'll simply call it an <m>n</m>th-degree polynomial. For example, the polynomial <m>5x^8-4x^5+1</m> is an <m>8</m>th-degree polynomial.</p>
-
-        <remark xml:id="remark-standard-form" permid="RTn">
-            <p permid="UzL">To help us recognize a polynomial's degree, it is the standard convention to write a polynomial's terms in order from greatest-degree term to lowest-degree term. When a polynomial is written in this order, it is written in <term>standard form</term>. For example, it is standard practice to write <m>7-4x-x^2</m> as <m>-x^2-4x+7</m> since <m>-x^2</m> is the leading term. By writing the polynomial in standard form, we can look at the first term to determine both the polynomial's degree and leading term.</p>
-        </remark>
-
-        <p permid="ksD">There are special names for polynomials with a small number of terms:</p>
-        <definition xml:id="definition-monomial-binomial-trinomial" permid="FEV">
-            <statement>
-                <p permid="eYQ"><ul permid="uax">
-                    <li permid="CoQ">
-                        <p permid="pjA">A polynomial with one term, such as <m>3x^5</m> or <m>9</m>, is called a <term>monomial</term><idx><h>monomial</h></idx><idx><h>polynomial</h><h>monomial</h></idx>.</p>
-                    </li>
-                    <li permid="ivZ">
-                        <p permid="VqJ">A polynomial with two terms, such as <m>3x^5+2x</m> or <m>-2x+1</m>, is called a <term>binomial</term><idx><h>binomial</h></idx><idx><h>polynomial</h><h>binomial</h></idx>.</p>
-                    </li>
-                    <li permid="ODi">
-                        <p permid="BxS">A polynomial with three terms, such as <m>x^2-5x+3</m>, is called a <term>trinomial</term><idx><h>trinomial</h></idx><idx><h>polynomial</h><h>trinomial</h></idx>.</p>
-                    </li>
-                </ul></p>
-            </statement>
-        </definition>
-
-    </subsection>
-
-    <subsection permid="Oas">
-        <title>Adding and Subtracting Polynomials</title><idx><h>polynomial</h><h>addition and subtraction</h></idx><idx><h>addition</h><h>of polynomials</h></idx>
-        <example xml:id="example-ketchup-production-costs" permid="ehF">
-            <title>Production Costs</title>
-
-            <p permid="LfZ">Bayani started a company that is devoted to one product: ketchup. The company's production costs only involve two components: supplies and labor. The cost of supplies, <m>S</m> (in thousands of dollars), can be modeled by <m>S=0.05x^2+2x+30</m>, where <m>x</m> is number of thousands of jars of ketchup produced. The labor cost for his employees, <m>L</m> (in thousands of dollars), can be modeled by <m>0.1x^2+4x</m>, where <m>x</m> again represents the number of jars they produce (in thousands of jars). Find a model for the company's total production costs.</p>
-
-            <p permid="rni">Since Bayani's company only has these two costs, we can find a model for the total production costs, <m>C</m> (in thousands of dollars), by adding the supply costs and the labor costs:<me permid="VjF">C=\left(0.05x^2+2x+30\right)+\left(0.1x^2+4x\right)</me></p>
-
-            <p permid="Xur">To finish simplifying our total production cost model, we'll combine the like terms:<md permid="hxX">
-                <mrow>C \amp= 0.05x^2+0.1x^2+2x+4x+30</mrow>
-                <mrow> \amp= 0.15x^2+6x+30</mrow>
-            </md>This simplified model can now calculate Bayani's total production costs <m>C</m> (in thousands of dollars) when the company produces <m>x</m> thousand jars of ketchup.</p>
-        </example>
-
-        <p permid="QzM">In short, the process of adding two or more polynomials involves recognizing and then combining the like terms. </p>
-
-        <exercise permid="OYH">
-            <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract25.pg" seed="2"/>
-        </exercise>
-
+    <idx><h>polynomial</h><h>addition and subtraction</h></idx>
+    <idx><h>addition</h><h>of polynomials</h></idx>
+    <example xml:id="example-ketchup-production-costs" permid="ehF">
+      <title>Production Costs</title>
+      <p permid="LfZ">
+        Bayani started a company that is devoted to one product: ketchup.
+        The company's production costs only involve two components:
+        supplies and labor.
+        The cost of supplies, <m>S</m>
+        (in thousands of dollars),
+        can be modeled by <m>S=0.05x^2+2x+30</m>,
+        where <m>x</m> is number of thousands of jars of ketchup produced.
+        The labor cost for his employees, <m>L</m>
+        (in thousands of dollars),
+        can be modeled by <m>0.1x^2+4x</m>,
+        where <m>x</m> again represents the number of jars they produce
+        (in thousands of jars).
+        Find a model for the company's total production costs.
+      </p>
+      <p permid="rni">
+        Since Bayani's company only has these two costs,
+        we can find a model for the total production costs, <m>C</m>
+        (in thousands of dollars),
+        by adding the supply costs and the labor costs:
+        <me permid="VjF">
+          C=\left(0.05x^2+2x+30\right)+\left(0.1x^2+4x\right)
+        </me>
+      </p>
+      <p permid="Xur">
+        To finish simplifying our total production cost model,
+        we'll combine the like terms:
+        <md permid="hxX">
+          <mrow>C \amp= 0.05x^2+0.1x^2+2x+4x+30</mrow>
+          <mrow>\amp= 0.15x^2+6x+30</mrow>
+        </md>
+        This simplified model can now calculate Bayani's total production costs <m>C</m>
+        (in thousands of dollars)
+        when the company produces <m>x</m> thousand jars of ketchup.
+      </p>
+    </example>
+    <p permid="QzM">
+      In short, the process of adding two or more polynomials involves recognizing and then combining the like terms.
+    </p>
+    <exercise permid="OYH">
+      <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract25.pg" seed="2"/>
+    </exercise>
 <!--         <example xml:id="example-polyadd1">
-        <statement><p>Add <m>\left(5x^3+4x^2-6x\right)</m> and <m>\left(-3x^2+9x-2\right)</m>.</p></statement>
-        <solution><p>First identify the like terms and then combine them.<md>
-            <mrow>\left(5x^3+4x^2-6x\right)+\left(-3x^2+9x-2\right) \amp= 5x^3+4x^2+(-3x^2)+(-6x)+9x+(-2)</mrow>
-            <mrow> \amp= 5x^3+x^2+3x-2</mrow>
-        </md></p></solution></example>
- -->
-        <example xml:id="example-polyadd2" permid="KoO">
+<statement><p>Add <m>\left(5x^3+4x^2-6x\right)</m> and <m>\left(-3x^2+9x-2\right)</m>.</p></statement>
+<solution><p>First identify the like terms and then combine them.<md> <mrow>\left(5x^3+4x^2-6x\right)+\left(-3x^2+9x-2\right) \amp= 5x^3+4x^2+(-3x^2)+(-6x)+9x+(-2)</mrow> <mrow> \amp= 5x^3+x^2+3x-2</mrow> </md></p></solution></example>
+-->
+    <example xml:id="example-polyadd2" permid="KoO">
+      <statement>
+        <p permid="DBA">
+          Simplify the expression <m>\left(\frac{1}{2}x^2-\frac{2}{3}x-\frac{3}{2}\right)+\left(\frac{3}{2}x^2+\frac{7}{2}x-\frac{1}{4}\right)</m>.
+        </p>
+      </statement>
+      <solution permid="fWS">
+        <p permid="kOc">
+          <md permid="NFg">
+            <mrow>\amp\left(\frac{1}{2}x^2-\frac{2}{3}x-\frac{3}{2}\right)+\left(\frac{3}{2}x^2+\frac{7}{2}x-\frac{1}{4}\right)</mrow>
+            <mrow>\amp=\left(\frac{1}{2}x^2+\frac{3}{2}x^2\right)+\left(\left(-\frac{2}{3}x\right)+\frac{7}{2}x\right)+\left(\left(-\frac{3}{2}\right)+\left(-\frac{1}{4}\right)\right)</mrow>
+            <mrow>\amp= \left(\frac{4}{2}x^2\right)+\left(\left(-\frac{4}{6}x\right)+\frac{21}{6}x\right)+\left(\left(-\frac{6}{4}\right)+\left(-\frac{1}{4}\right)\right)</mrow>
+            <mrow>\amp= \left(2x^2\right)+\left(\frac{17}{6}x\right)+\left(-\frac{7}{4}\right)</mrow>
+            <mrow>\amp=2x^2 +\frac{17}{6}x-\frac{7}{4}</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <example xml:id="example-profit-revenue-and-costs" permid="qvX">
+      <title>Profit, Revenue, and Costs</title>
+      <p permid="jIJ">
+        From <xref ref="example-ketchup-production-costs">Example</xref>,
+        we know Bayani's ketchup company's production costs, <m>C</m>
+        (in thousands of dollars),
+        for producing <m>x</m> thousand jars of ketchup is modeled by <m>C=0.15x^2+6x+30</m>.
+        The revenue, <m>R</m>
+        (in thousands of dollars),
+        from selling the ketchup can be modeled by <m>R=13x</m>,
+        where <m>x</m> stands for the number of thousands of jars of ketchup sold.
+        The company's net profit can be calculated using the concept:
+        <me permid="BqO">
+          \text{net profit} = \text{revenue}  -  \text{costs}
+        </me>
+        Assuming all products produced will be sold,
+        a polynomial to model the company's net profit, <m>P</m>
+        (in thousands of dollars)
+        is:
+        <md permid="tMp">
+          <mrow>P \amp= R-C</mrow>
+          <mrow>\amp= \left(13x\right)-\left(0.15x^2+6x+30\right)</mrow>
+          <mrow>\amp= 13x-0.15x^2-6x-30</mrow>
+          <mrow>\amp= -0.15x^2+\left(13x+(-6x)\right)-30</mrow>
+          <mrow>\amp=-0.15x^2+7x-30</mrow>
+        </md>
+      </p>
+    </example>
+    <p permid="wGV">
+      The key distinction between the addition and subtraction of polynomials is that when we subtract a polynomial,
+      we must subtract each term in that polynomial.
+    </p>
+    <remark permid="iRy">
+      <p permid="AGU">
+        Notice that our first step in simplifying the expression in <xref ref="example-profit-revenue-and-costs">Example</xref>
+        was to subtract <em>every</em>
+        term in the second expression.
+        We can also think of this as distributing a factor of <m>-1</m> across the second polynomial,
+        <m>0.15x^2+6x+30</m>, and then adding these terms as follows:
+        <md permid="ZTy">
+          <mrow>P \amp= R-C</mrow>
+          <mrow>\amp= \left(13x\right)-\left(0.15x^2+6x+30\right)</mrow>
+          <mrow>\amp= 13x+(-1)(0.15x^2)+(-1)(6x)+(-1)(30)</mrow>
+          <mrow>\amp= 13x-0.15x^2-6x-30</mrow>
+          <mrow>\amp= -0.15x^2+\left(13x+(-6x)\right)-30</mrow>
+          <mrow>\amp=-0.15x^2+7x-30</mrow>
+        </md>
+      </p>
+    </remark>
+    <example xml:id="example-poysub1" permid="WDg">
+      <statement>
+        <p permid="PPS">
+          Subtract <m>\left(5x^3+4x^2-6x\right)-\left(-3x^2+9x-2\right)</m>.
+        </p>
+      </statement>
+      <solution permid="Meb">
+        <p permid="QVl">
+          We must first subtract every term in
+          <m>\left(-3x^2+9x-2\right)</m> from <m>\left(5x^3+4x^2-6x\right)</m>.
+          Then we can combine like terms.
+          <md permid="GaH">
+            <mrow>\amp\left(5x^3+4x^2-6x\right)-\left(-3x^2+9x-2\right)</mrow>
+            <mrow>\amp= 5x^3+4x^2-6x \highlight{{}+{}} 3x^2 \highlight{{}-{}} 9x \highlight{{}+{}} 2</mrow>
+            <mrow>\amp= 5x^3+\left(4x^2+3x^2\right)+\left(-6x+(-9x)\right)+2</mrow>
+            <mrow>\amp= 5x^3+7x^2-15x+2</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <exercise permid="vfQ">
+      <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract90.pg" seed="3"/>
+    </exercise>
+    <p permid="cOe">
+      Let's look at one more example involving multiple variables.
+      Remember that like terms must have the same variable(s) with the same exponent.
+    </p>
+    <example xml:id="example-polysub2" permid="CKp">
+      <statement>
+        <p permid="vXb">
+          Subtract <m>\left( 3x^2y+8xy^2-17y^3 \right)-\left(2x^2y+11xy^2+4y^2 \right)</m>.
+        </p>
+      </statement>
+      <solution permid="slk">
+        <p permid="xcu">
+          Again, we'll begin by subtracting each term in <m>\left(2x^2y+11xy^2+4y^2\right)</m>.
+          Once we've done this, we'll need to identify and combine like terms.
+          <md permid="mhQ">
+            <mrow>\amp\left( 3x^2y+8xy^2-17y^3 \right)-\left(2x^2y+11xy^2+4y^2\right)</mrow>
+            <mrow>\amp= 3x^2y+8xy^2-17y^3 \highlight{{}-{}} 2x^2y \highlight{{}-{}} 11xy^2 \highlight{{}-{}} 4y^2</mrow>
+            <mrow>\amp=\left(3x^2y+\left(-2x^2y\right)\right)+\left(8xy^2+\left(-11xy^2\right)\right)+\left(-17y^3\right)+\left(-4y^2\right)</mrow>
+            <mrow>\amp= x^2y-3xy^2-17y^3-4y^2</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="uhB">
+    <title>Evaluating Polynomial Expressions</title>
+    <p permid="IVn">
+      Evaluating expressions was introduced in <xref ref="section-variables-and-evaluating-expressions">Section</xref>,
+      and involves replacing the variable(s) in an expression with specific numbers and calculating the result.
+      Here, we will look at evaluating polynomial expressions.
+    </p>
+    <example permid="bmZ">
+      <statement>
+        <p permid="cek">
+          Evaluate the expression <m>-12y^3+4y^2-9y+2</m> for <m>y=-5</m>.
+        </p>
+      </statement>
+      <solution permid="Yst">
+        <p permid="djD">
+          We will replace <m>y</m> with <m>-5</m> and simplify the result:
+          <md permid="SoZ">
+            <mrow>-12y^3+4y^2-9y+2 \amp= -12(\substitute{-5})^3+4(\substitute{-5})^2-9(\substitute{-5})+2</mrow>
+            <mrow>\amp= -12(-125)+4(25)+45+2</mrow>
+            <mrow>\amp= 1647</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <remark permid="nBr">
+      <p permid="MVm">
+        Recall that <m>(-5)^2</m> and <m>-5^2</m> are not the same expressions.
+        The first expression, <m>(-5)^2</m>,
+        represents the number <m>-5</m> squared and is <m>(-5)(-5)=25</m>.
+        The second expression, <m>-5^2</m>,
+        is the <em>opposite</em> of the number <m>5</m> squared and is <m>-5^2=-(5\cdot 5) = -25</m>.
+      </p>
+    </remark>
+    <example permid="Hui">
+      <statement>
+        <p permid="Ilt">
+          Evaluate the expression <m>C=0.15x^2+6x+30</m> from <xref ref="example-ketchup-production-costs">Example</xref>
+          for <m>x=10</m> and explain what this means in context.
+        </p>
+      </statement>
+      <solution permid="EzC">
+        <p permid="JqM">
+          We will replace <m>x</m> with <m>10</m>:
+          <md permid="ywi">
+            <mrow>C\amp=0.15x^2+6x+30</mrow>
+            <mrow>\amp=0.15(\substitute{10})^2+6(\substitute{10})+30</mrow>
+            <mrow>\amp=105</mrow>
+          </md>
+          In context, we can interpret this as it costing
+          <m>\$105{,}000</m> to produce <m>10{,}000</m> jars of ketchup.
+        </p>
+      </solution>
+    </example>
+    <exercise permid="TIA">
+      <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg" seed="3"/>
+    </exercise>
+  </subsection>
+  <exercises permid="aoK">
+    <exercisegroup cols="2" permid="GvT">
+      <title>Review and Warmup</title>
+      <exercise permid="vWO">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)+y','(-x)-y');
+Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
+@termcount = (1,2,2,3,3,4,4)[NchooseK(7,4)];
+for $i (0..3) {
+$expression[$i] = Formula("0");
+$answers[$i] = List();
+my @vars;
+my @exps;
+for $j (1..$termcount[$i]) {
+my $nextvar = list_random('x','y','z','t','s');
+my $nextexp;
+do {$nextexp = list_random(0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
+push(@vars,$nextvar);
+push(@exps,$nextexp);
+$string = non_zero_random(-9,9,0.1).$vars[$j-1].'^'.$exps[$j-1];
+$expression[$i] = Compute("$expression[$i]+ $string")->reduce->reduce;
+$answers[$i] = List($answers[$i],Formula("$string")->reduce->reduce);
+}
+}
+$exp0=$expression[0];
+$exp1=$expression[1];
+$exp2=$expression[2];
+$exp3=$expression[3];
+</pg-code>
+            </setup>
             <statement>
-                <p permid="DBA">Simplify the expression <m>\left(\frac{1}{2}x^2-\frac{2}{3}x-\frac{3}{2}\right)+\left(\frac{3}{2}x^2+\frac{7}{2}x-\frac{1}{4}\right)</m>.</p>
+              <p permid="lxW">
+                List the terms in each expression.
+                <ol label="a." permid="mvY">
+                  <li permid="Bjx">
+                    <p permid="hFb">
+                      <m><var name="$exp0" /></m>
+                    </p>
+                    <p permid="NMk">
+                      <var name="$answers[0]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="hqG">
+                    <p permid="tTt">
+                      <m><var name="$exp1" /></m>
+                    </p>
+                    <p permid="aaC">
+                      <var name="$answers[1]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="NxP">
+                    <p permid="GhL">
+                      <m><var name="$exp2" /></m>
+                    </p>
+                    <p permid="moU">
+                      <var name="$answers[2]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="tEY">
+                    <p permid="Swd">
+                      <m><var name="$exp3" /></m>
+                    </p>
+                    <p permid="yDm">
+                      <var name="$answers[3]" width="25" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </statement>
-            <solution permid="fWS">
-                <p permid="kOc"><md permid="NFg">
-                    <mrow>\amp\left(\frac{1}{2}x^2-\frac{2}{3}x-\frac{3}{2}\right)+\left(\frac{3}{2}x^2+\frac{7}{2}x-\frac{1}{4}\right)</mrow>
-                    <mrow>\amp=\left(\frac{1}{2}x^2+\frac{3}{2}x^2\right)+\left(\left(-\frac{2}{3}x\right)+\frac{7}{2}x\right)+\left(\left(-\frac{3}{2}\right)+\left(-\frac{1}{4}\right)\right)</mrow>
-                    <mrow>\amp= \left(\frac{4}{2}x^2\right)+\left(\left(-\frac{4}{6}x\right)+\frac{21}{6}x\right)+\left(\left(-\frac{6}{4}\right)+\left(-\frac{1}{4}\right)\right)</mrow>
-                    <mrow>\amp= \left(2x^2\right)+\left(\frac{17}{6}x\right)+\left(-\frac{7}{4}\right)</mrow>
-                    <mrow>\amp=2x^2 +\frac{17}{6}x-\frac{7}{4}</mrow>
-                </md></p>
+            <solution permid="QNU">
+              <p permid="pxV">
+                <ol label="a." permid="VxN">
+                  <li permid="ZMh">
+                    <p permid="eKv">
+                      The terms are <m><var name="$answers[0]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="FTq">
+                    <p permid="KRE">
+                      The terms are <m><var name="$answers[1]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="maz">
+                    <p permid="qYN">
+                      The terms are <m><var name="$answers[2]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="ShI">
+                    <p permid="XfW">
+                      The terms are <m><var name="$answers[3]" /></m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </solution>
-        </example>
-
-
-        <example xml:id="example-profit-revenue-and-costs" permid="qvX">
-            <title>Profit, Revenue, and Costs</title>
-
-            <p permid="jIJ">From <xref ref="example-ketchup-production-costs">Example</xref>, we know Bayani's ketchup company's production costs, <m>C</m> (in thousands of dollars), for producing <m>x</m> thousand jars of ketchup is modeled by <m>C=0.15x^2+6x+30</m>. The revenue, <m>R</m> (in thousands of dollars), from selling the ketchup can be modeled by <m>R=13x</m>, where <m>x</m> stands for the number of thousands of jars of ketchup sold. The company's net profit can be calculated using the concept:<me permid="BqO">\text{net profit} = \text{revenue}  -  \text{costs}</me>Assuming all products produced will be sold, a polynomial to model the company's net profit, <m>P</m> (in thousands of dollars) is:<md permid="tMp">
-                <mrow>P \amp= R-C</mrow>
-                <mrow>\amp= \left(13x\right)-\left(0.15x^2+6x+30\right)</mrow>
-                <mrow>\amp= 13x-0.15x^2-6x-30</mrow>
-                <mrow>\amp= -0.15x^2+\left(13x+(-6x)\right)-30</mrow>
-                <mrow>\amp=-0.15x^2+7x-30</mrow>
-            </md></p>
-        </example>
-
-        <p permid="wGV">The key distinction between the addition and subtraction of polynomials is that when we subtract a polynomial, we must subtract each term in that polynomial.</p>
-
-        <remark permid="iRy">
-            <p permid="AGU">Notice that our first step in simplifying the expression in <xref ref="example-profit-revenue-and-costs">Example</xref> was to subtract <em>every</em> term in the second expression. We can also think of this as distributing a factor of <m>-1</m> across the second polynomial, <m>0.15x^2+6x+30</m>, and then adding these terms as follows:
-            <md permid="ZTy">
-                <mrow>P \amp= R-C</mrow>
-                <mrow>\amp= \left(13x\right)-\left(0.15x^2+6x+30\right)</mrow>
-                <mrow>\amp= 13x+(-1)(0.15x^2)+(-1)(6x)+(-1)(30)</mrow>
-                <mrow>\amp= 13x-0.15x^2-6x-30</mrow>
-                <mrow>\amp= -0.15x^2+\left(13x+(-6x)\right)-30</mrow>
-                <mrow>\amp=-0.15x^2+7x-30</mrow>
-            </md></p>
-        </remark>
-
-        <example xml:id="example-poysub1" permid="WDg">
+        </webwork>
+      </exercise>
+      <exercise permid="cdX">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)+y','(-x)-y');
+Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
+@termcount = (1,2,2,3,3,4,4)[NchooseK(7,4)];
+for $i (0..3) {
+$expression[$i] = Formula("0");
+$answers[$i] = List();
+my @vars;
+my @exps;
+for $j (1..$termcount[$i]) {
+my $nextvar = list_random('x','y','z','t','s');
+my $nextexp;
+do {$nextexp = list_random(0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
+push(@vars,$nextvar);
+push(@exps,$nextexp);
+$string = non_zero_random(-9,9,0.1).$vars[$j-1].'^'.$exps[$j-1];
+$expression[$i] = Compute("$expression[$i]+ $string")->reduce->reduce;
+$answers[$i] = List($answers[$i],Formula("$string")->reduce->reduce);
+}
+}
+$exp0=$expression[0];
+$exp1=$expression[1];
+$exp2=$expression[2];
+$exp3=$expression[3];
+</pg-code>
+            </setup>
             <statement>
-                <p permid="PPS">Subtract <m>\left(5x^3+4x^2-6x\right)-\left(-3x^2+9x-2\right)</m>.</p>
+              <p permid="RFf">
+                List the terms in each expression.
+                <ol label="a." permid="SDh">
+                  <li permid="yoR">
+                    <p permid="Dnf">
+                      <m><var name="$exp0" /></m>
+                    </p>
+                    <p permid="juo">
+                      <var name="$answers[0]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="ewa">
+                    <p permid="PBx">
+                      <m><var name="$exp1" /></m>
+                    </p>
+                    <p permid="vIG">
+                      <var name="$answers[1]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="KDj">
+                    <p permid="bPP">
+                      <m><var name="$exp2" /></m>
+                    </p>
+                    <p permid="HWY">
+                      <var name="$answers[2]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="qKs">
+                    <p permid="oeh">
+                      <m><var name="$exp3" /></m>
+                    </p>
+                    <p permid="Ulq">
+                      <var name="$answers[3]" width="25" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </statement>
-            <solution permid="Meb">
-                <p permid="QVl">We must first subtract every term in <m>\left(-3x^2+9x-2\right)</m> from <m>\left(5x^3+4x^2-6x\right)</m>. Then we can combine like terms.
-                <md permid="GaH">
-                    <mrow>\amp\left(5x^3+4x^2-6x\right)-\left(-3x^2+9x-2\right)</mrow>
-                    <mrow>\amp= 5x^3+4x^2-6x \highlight{{}+{}} 3x^2 \highlight{{}-{}} 9x \highlight{{}+{}} 2</mrow>
-                    <mrow>\amp= 5x^3+\left(4x^2+3x^2\right)+\left(-6x+(-9x)\right)+2  </mrow>
-                    <mrow>\amp= 5x^3+7x^2-15x+2</mrow>
-                </md></p>
+            <solution permid="wVd">
+              <p permid="VFe">
+                <ol label="a." permid="BEW">
+                  <li permid="WRB">
+                    <p permid="Asz">
+                      The terms are <m><var name="$answers[0]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="CYK">
+                    <p permid="gzI">
+                      The terms are <m><var name="$answers[1]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="jfT">
+                    <p permid="MGR">
+                      The terms are <m><var name="$answers[2]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="Pnc">
+                    <p permid="sOa">
+                      The terms are <m><var name="$answers[3]" /></m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </solution>
-        </example>
-
-        <exercise permid="vfQ">
-            <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract90.pg" seed="3"/>
-        </exercise>
-
-
-        <p permid="cOe">Let's look at one more example involving multiple variables. Remember that like terms must have the same variable(s) with the same exponent.</p>
-
-        <example xml:id="example-polysub2" permid="CKp">
+        </webwork>
+      </exercise>
+      <exercise permid="Ilg">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)+y','(-x)-y');
+Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
+@termcount = (1,2,2,3,3,4,4)[NchooseK(7,4)];
+for $i (0..3) {
+$expression[$i] = Formula("0");
+$answers[$i] = List();
+my @vars;
+my @exps;
+for $j (1..$termcount[$i]) {
+my $nextvar = list_random('x','y','z','t','s');
+my $nextexp;
+do {$nextexp = list_random(0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
+push(@vars,$nextvar);
+push(@exps,$nextexp);
+$string = non_zero_random(-9,9,0.1).$vars[$j-1].'^'.$exps[$j-1];
+$expression[$i] = Compute("$expression[$i]+ $string")->reduce->reduce;
+$answers[$i] = List($answers[$i],Formula("$string")->reduce->reduce);
+}
+}
+$exp0=$expression[0];
+$exp1=$expression[1];
+$exp2=$expression[2];
+$exp3=$expression[3];
+</pg-code>
+            </setup>
             <statement>
-                <p permid="vXb">Subtract <m>\left( 3x^2y+8xy^2-17y^3 \right)-\left(2x^2y+11xy^2+4y^2 \right)</m>.</p>
+              <p permid="xMo">
+                List the terms in each expression.
+                <ol label="a." permid="yKq">
+                  <li permid="vul">
+                    <p permid="YVj">
+                      <m><var name="$exp0" /></m>
+                    </p>
+                    <p permid="Fcs">
+                      <var name="$answers[0]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="bBu">
+                    <p permid="ljB">
+                      <m><var name="$exp1" /></m>
+                    </p>
+                    <p permid="RqK">
+                      <var name="$answers[1]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="HID">
+                    <p permid="xxT">
+                      <m><var name="$exp2" /></m>
+                    </p>
+                    <p permid="dFc">
+                      <var name="$answers[2]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="nPM">
+                    <p permid="JMl">
+                      <m><var name="$exp3" /></m>
+                    </p>
+                    <p permid="pTu">
+                      <var name="$answers[3]" width="25" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </statement>
-            <solution permid="slk">
-                <p permid="xcu">Again, we'll begin by subtracting each term in <m>\left(2x^2y+11xy^2+4y^2\right)</m>. Once we've done this, we'll need to identify and combine like terms.
-                    <md permid="mhQ">
-                    <mrow>\amp\left( 3x^2y+8xy^2-17y^3 \right)-\left(2x^2y+11xy^2+4y^2\right)</mrow>
-                    <mrow>\amp=
-                    3x^2y+8xy^2-17y^3 \highlight{{}-{}} 2x^2y \highlight{{}-{}} 11xy^2 \highlight{{}-{}} 4y^2</mrow>
-                    <mrow>\amp=\left(3x^2y+\left(-2x^2y\right)\right)+\left(8xy^2+\left(-11xy^2\right)\right)+\left(-17y^3\right)+\left(-4y^2\right)</mrow>
-                    <mrow>\amp= x^2y-3xy^2-17y^3-4y^2 </mrow>
-                </md></p>
+            <solution permid="dcm">
+              <p permid="BMn">
+                <ol label="a." permid="hMf">
+                  <li permid="TWV">
+                    <p permid="WaD">
+                      The terms are <m><var name="$answers[0]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="Aee">
+                    <p permid="ChM">
+                      The terms are <m><var name="$answers[1]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="gln">
+                    <p permid="ioV">
+                      The terms are <m><var name="$answers[2]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="Msw">
+                    <p permid="Owe">
+                      The terms are <m><var name="$answers[3]" /></m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </solution>
-        </example>
-    </subsection>
-
-    <subsection permid="uhB">
-        <title>Evaluating Polynomial Expressions</title>
-        <p permid="IVn">Evaluating expressions was introduced in <xref ref="section-variables-and-evaluating-expressions">Section</xref>, and involves replacing the variable(s) in an expression with specific numbers and calculating the result. Here, we will look at evaluating polynomial expressions.</p>
-        <example permid="bmZ">
-            <statement><p permid="cek">
-                Evaluate the expression <m>-12y^3+4y^2-9y+2</m> for <m>y=-5</m>.
-            </p></statement>
-            <solution permid="Yst"><p permid="djD">
-                We will replace <m>y</m> with <m>-5</m> and simplify the result:
-                <md permid="SoZ">
-                    <mrow>-12y^3+4y^2-9y+2 \amp= -12(\substitute{-5})^3+4(\substitute{-5})^2-9(\substitute{-5})+2 </mrow>
-                    <mrow>\amp= -12(-125)+4(25)+45+2</mrow>
-                    <mrow>\amp= 1647</mrow>
-                </md>
-            </p></solution>
-        </example>
-
-        <remark permid="nBr"><p permid="MVm">Recall that <m>(-5)^2</m> and <m>-5^2</m> are not the same expressions. The first expression, <m>(-5)^2</m>, represents the number <m>-5</m> squared and is <m>(-5)(-5)=25</m>. The second expression, <m>-5^2</m>, is the <em>opposite</em> of the number <m>5</m> squared and is <m>-5^2=-(5\cdot 5) = -25</m>.</p></remark>
-
-        <example permid="Hui">
-            <statement><p permid="Ilt">
-                Evaluate the expression <m>C=0.15x^2+6x+30</m> from <xref ref="example-ketchup-production-costs">Example</xref> for <m>x=10</m> and explain what this means in context.
-            </p></statement>
-            <solution permid="EzC"><p permid="JqM">
-                We will replace <m>x</m> with <m>10</m>:
-                <md permid="ywi">
-                    <mrow>C\amp=0.15x^2+6x+30</mrow>
-                    <mrow>\amp=0.15(\substitute{10})^2+6(\substitute{10})+30</mrow>
-                    <mrow>\amp=105</mrow>
-                </md>
-                In context, we can interpret this as it costing <m>\$105{,}000</m> to produce <m>10{,}000</m> jars of ketchup.
-            </p></solution>
-        </example>
-
-        <exercise permid="TIA">
-            <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg" seed="3"/>
-        </exercise>
-    </subsection>
-
-
-    <exercises permid="aoK">
-        <exercisegroup cols="2" permid="GvT">
-            <title>Review and Warmup</title>
-            <exercise permid="vWO">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->noreduce('(-x)+y','(-x)-y');
-                Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-                @termcount = (1,2,2,3,3,4,4)[NchooseK(7,4)];
-                for $i (0..3) {
-                    $expression[$i] = Formula("0");
-                    $answers[$i] = List();
-                    my @vars;
-                    my @exps;
-                    for $j (1..$termcount[$i]) {
-                        my $nextvar = list_random('x','y','z','t','s');
-                        my $nextexp;
-                        do {$nextexp = list_random(0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
-                        push(@vars,$nextvar);
-                        push(@exps,$nextexp);
-                        $string = non_zero_random(-9,9,0.1).$vars[$j-1].'^'.$exps[$j-1];
-                        $expression[$i] = Compute("$expression[$i]+ $string")->reduce->reduce;
-                        $answers[$i] = List($answers[$i],Formula("$string")->reduce->reduce);
-                    }
-                }
-                $exp0=$expression[0];
-                $exp1=$expression[1];
-                $exp2=$expression[2];
-                $exp3=$expression[3];
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="lxW">List the terms in each expression.<ol label="a." permid="mvY">
-                            <li permid="Bjx">
-                                <p permid="hFb"><m><var name="$exp0" /></m></p>
-                                <p permid="NMk"><var name="$answers[0]" width="25" /></p>
-                            </li>
-                            <li permid="hqG">
-                                <p permid="tTt"><m><var name="$exp1" /></m></p>
-                                <p permid="aaC"><var name="$answers[1]" width="25" /></p>
-                            </li>
-                            <li permid="NxP">
-                                <p permid="GhL"><m><var name="$exp2" /></m></p>
-                                <p permid="moU"><var name="$answers[2]" width="25" /></p>
-                            </li>
-                            <li permid="tEY">
-                                <p permid="Swd"><m><var name="$exp3" /></m></p>
-                                <p permid="yDm"><var name="$answers[3]" width="25" /></p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                    <solution permid="QNU">
-                        <p permid="pxV"><ol label="a." permid="VxN">
-                            <li permid="ZMh">
-                                <p permid="eKv">The terms are <m><var name="$answers[0]" /></m>.</p>
-                            </li>
-                            <li permid="FTq">
-                                <p permid="KRE">The terms are <m><var name="$answers[1]" /></m>.</p>
-                            </li>
-                            <li permid="maz">
-                                <p permid="qYN">The terms are <m><var name="$answers[2]" /></m>.</p>
-                            </li>
-                            <li permid="ShI">
-                                <p permid="XfW">The terms are <m><var name="$answers[3]" /></m>.</p>
-                            </li>
-                        </ol></p>
-                    </solution>
-                </webwork>
-            </exercise>
-            <exercise permid="cdX">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->noreduce('(-x)+y','(-x)-y');
-                Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-                @termcount = (1,2,2,3,3,4,4)[NchooseK(7,4)];
-                for $i (0..3) {
-                    $expression[$i] = Formula("0");
-                    $answers[$i] = List();
-                    my @vars;
-                    my @exps;
-                    for $j (1..$termcount[$i]) {
-                        my $nextvar = list_random('x','y','z','t','s');
-                        my $nextexp;
-                        do {$nextexp = list_random(0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
-                        push(@vars,$nextvar);
-                        push(@exps,$nextexp);
-                        $string = non_zero_random(-9,9,0.1).$vars[$j-1].'^'.$exps[$j-1];
-                        $expression[$i] = Compute("$expression[$i]+ $string")->reduce->reduce;
-                        $answers[$i] = List($answers[$i],Formula("$string")->reduce->reduce);
-                    }
-                }
-                $exp0=$expression[0];
-                $exp1=$expression[1];
-                $exp2=$expression[2];
-                $exp3=$expression[3];
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="RFf">List the terms in each expression.<ol label="a." permid="SDh">
-                            <li permid="yoR">
-                                <p permid="Dnf"><m><var name="$exp0" /></m></p>
-                                <p permid="juo"><var name="$answers[0]" width="25" /></p>
-                            </li>
-                            <li permid="ewa">
-                                <p permid="PBx"><m><var name="$exp1" /></m></p>
-                                <p permid="vIG"><var name="$answers[1]" width="25" /></p>
-                            </li>
-                            <li permid="KDj">
-                                <p permid="bPP"><m><var name="$exp2" /></m></p>
-                                <p permid="HWY"><var name="$answers[2]" width="25" /></p>
-                            </li>
-                            <li permid="qKs">
-                                <p permid="oeh"><m><var name="$exp3" /></m></p>
-                                <p permid="Ulq"><var name="$answers[3]" width="25" /></p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                    <solution permid="wVd">
-                        <p permid="VFe"><ol label="a." permid="BEW">
-                            <li permid="WRB">
-                                <p permid="Asz">The terms are <m><var name="$answers[0]" /></m>.</p>
-                            </li>
-                            <li permid="CYK">
-                                <p permid="gzI">The terms are <m><var name="$answers[1]" /></m>.</p>
-                            </li>
-                            <li permid="jfT">
-                                <p permid="MGR">The terms are <m><var name="$answers[2]" /></m>.</p>
-                            </li>
-                            <li permid="Pnc">
-                                <p permid="sOa">The terms are <m><var name="$answers[3]" /></m>.</p>
-                            </li>
-                        </ol></p>
-                    </solution>
-                </webwork>
-            </exercise>
-            <exercise permid="Ilg">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->noreduce('(-x)+y','(-x)-y');
-                Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-                @termcount = (1,2,2,3,3,4,4)[NchooseK(7,4)];
-                for $i (0..3) {
-                    $expression[$i] = Formula("0");
-                    $answers[$i] = List();
-                    my @vars;
-                    my @exps;
-                    for $j (1..$termcount[$i]) {
-                        my $nextvar = list_random('x','y','z','t','s');
-                        my $nextexp;
-                        do {$nextexp = list_random(0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
-                        push(@vars,$nextvar);
-                        push(@exps,$nextexp);
-                        $string = non_zero_random(-9,9,0.1).$vars[$j-1].'^'.$exps[$j-1];
-                        $expression[$i] = Compute("$expression[$i]+ $string")->reduce->reduce;
-                        $answers[$i] = List($answers[$i],Formula("$string")->reduce->reduce);
-                    }
-                }
-                $exp0=$expression[0];
-                $exp1=$expression[1];
-                $exp2=$expression[2];
-                $exp3=$expression[3];
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="xMo">List the terms in each expression.<ol label="a." permid="yKq">
-                            <li permid="vul">
-                                <p permid="YVj"><m><var name="$exp0" /></m></p>
-                                <p permid="Fcs"><var name="$answers[0]" width="25" /></p>
-                            </li>
-                            <li permid="bBu">
-                                <p permid="ljB"><m><var name="$exp1" /></m></p>
-                                <p permid="RqK"><var name="$answers[1]" width="25" /></p>
-                            </li>
-                            <li permid="HID">
-                                <p permid="xxT"><m><var name="$exp2" /></m></p>
-                                <p permid="dFc"><var name="$answers[2]" width="25" /></p>
-                            </li>
-                            <li permid="nPM">
-                                <p permid="JMl"><m><var name="$exp3" /></m></p>
-                                <p permid="pTu"><var name="$answers[3]" width="25" /></p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                    <solution permid="dcm">
-                        <p permid="BMn"><ol label="a." permid="hMf">
-                            <li permid="TWV">
-                                <p permid="WaD">The terms are <m><var name="$answers[0]" /></m>.</p>
-                            </li>
-                            <li permid="Aee">
-                                <p permid="ChM">The terms are <m><var name="$answers[1]" /></m>.</p>
-                            </li>
-                            <li permid="gln">
-                                <p permid="ioV">The terms are <m><var name="$answers[2]" /></m>.</p>
-                            </li>
-                            <li permid="Msw">
-                                <p permid="Owe">The terms are <m><var name="$answers[3]" /></m>.</p>
-                            </li>
-                        </ol></p>
-                    </solution>
-                </webwork>
-            </exercise>
-            <exercise permid="osp">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->noreduce('(-x)+y','(-x)-y');
-                Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-                @termcount = (1,2,2,3,3,4,4)[NchooseK(7,4)];
-                for $i (0..3) {
-                    $expression[$i] = Formula("0");
-                    $answers[$i] = List();
-                    my @vars;
-                    my @exps;
-                    for $j (1..$termcount[$i]) {
-                        my $nextvar = list_random('x','y','z','t','s');
-                        my $nextexp;
-                        do {$nextexp = list_random(0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
-                        push(@vars,$nextvar);
-                        push(@exps,$nextexp);
-                        $string = non_zero_random(-9,9,0.1).$vars[$j-1].'^'.$exps[$j-1];
-                        $expression[$i] = Compute("$expression[$i]+ $string")->reduce->reduce;
-                        $answers[$i] = List($answers[$i],Formula("$string")->reduce->reduce);
-                    }
-                }
-                $exp0=$expression[0];
-                $exp1=$expression[1];
-                $exp2=$expression[2];
-                $exp3=$expression[3];
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="dTx">List the terms in each expression.<ol label="a." permid="eRz">
-                            <li permid="szF">
-                                <p permid="uDn"><m><var name="$exp0" /></m></p>
-                                <p permid="aKw"><var name="$answers[0]" width="25" /></p>
-                            </li>
-                            <li permid="YGO">
-                                <p permid="GRF"><m><var name="$exp1" /></m></p>
-                                <p permid="mYO"><var name="$answers[1]" width="25" /></p>
-                            </li>
-                            <li permid="ENX">
-                                <p permid="TfX"><m><var name="$exp2" /></m></p>
-                                <p permid="zng"><var name="$answers[2]" width="25" /></p>
-                            </li>
-                            <li permid="kVg">
-                                <p permid="fup"><m><var name="$exp3" /></m></p>
-                                <p permid="LBy"><var name="$answers[3]" width="25" /></p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                    <solution permid="Jjv">
-                        <p permid="hTw"><ol label="a." permid="NTo">
-                            <li permid="Rcp">
-                                <p permid="rIH">The terms are <m><var name="$answers[0]" /></m>.</p>
-                            </li>
-                            <li permid="xjy">
-                                <p permid="XPQ">The terms are <m><var name="$answers[1]" /></m>.</p>
-                            </li>
-                            <li permid="dqH">
-                                <p permid="DWZ">The terms are <m><var name="$answers[2]" /></m>.</p>
-                            </li>
-                            <li permid="JxQ">
-                                <p permid="kei">The terms are <m><var name="$answers[3]" /></m>.</p>
-                            </li>
-                        </ol></p>
-                    </solution>
-                </webwork>
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2" permid="mDc">
-            <exercise permid="Uzy">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->noreduce('(-x)+y','(-x)-y');
-                Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-                Context()->operators->set(
-                    '+' => {class => 'bizarro::BOP::add', isCommand => 1},
-                    '-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
-                );
-                @termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
-                for $i (0..3) {
-                    $expression[$i] = Formula("0");
-                    my @vars;
-                    my @exps;
-                    for $j (1..$termcount[$i]) {
-                        my $nextvar = list_random(@vars,@vars,@vars,'x','y','z','t','s');
-                        my $nextexp;
-                        do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
-                        push(@vars,$nextvar);
-                        push(@exps,$nextexp);
-                        $string = non_zero_random(-9,9,1).$vars[$j-1].'^'.$exps[$j-1];
-                        $expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
-                    }
-                }
-                $exp0=$expression[0];
-                $exp1=$expression[1];
-                $exp2=$expression[2];
-                $exp3=$expression[3];
-                for $i (0..3) {
-                    $answers[$i] = Formula($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'+'.
-                            $expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'x+'.
-                            $expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'y+'.
-                            $expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'z+'.
-                            $expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'s+'.
-                            $expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'t+'.
-                            $expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2x^2+'.
-                            $expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2y^2+'.
-                            $expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2z^2+'.
-                            $expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2s^2+'.
-                            $expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2t^2')->reduce->reduce;
-                    $evaluator[$i] = $answers[$i] -> cmp(
-                       checker=>sub{
-                          my ( $correct, $student, $ansHash ) = @_;
-                          return 0 if $ansHash->{isPreview} || $correct != $student;
-                          $student = $ansHash->{student_formula};
-                          $correct = $correct->{original_formula} if defined $correct->{original_formula};
-                          $student = Formula("$student"); $correct = Formula("$correct");
-                          return 0 unless ($correct == $student);
-                          Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
-                          delete $correct->{test_values}, $student->{test_values};
-                          my $OK = (($correct == $student) or ($student == $correct));
-                          Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
-                          Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
-                          return $OK;
-                    });
-                }
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="KaG">Simplify each expression, if possible, by combining like terms.</p>
-                        <instruction>If the expression cannot be simplified further, just enter it as it is.</instruction>
-                        <p permid="qhP"><ol label="a." permid="KYI">
-                            <li permid="pEZ">
-                                <p permid="Qlr"><m><var name="$exp0" /></m></p>
-                                <p permid="wsA"><var name="$evaluator[0]" width="25" /></p>
-                            </li>
-                            <li permid="VMi">
-                                <p permid="czJ"><m><var name="$exp1" /></m></p>
-                                <p permid="IGS"><var name="$evaluator[1]" width="25" /></p>
-                            </li>
-                            <li permid="BTr">
-                                <p permid="oOb"><m><var name="$exp2" /></m></p>
-                                <p permid="UVk"><var name="$evaluator[2]" width="25" /></p>
-                            </li>
-                            <li permid="iaA">
-                                <p permid="Bct"><m><var name="$exp3" /></m></p>
-                                <p permid="hjC"><var name="$evaluator[3]" width="25" /></p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                </webwork>
-            </exercise>
-            <exercise permid="AGH">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Numeric");
-                Context()->noreduce('(-x)+y','(-x)-y');
-                Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-                Context()->operators->set(
-                    '+' => {class => 'bizarro::BOP::add', isCommand => 1},
-                    '-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
-                );
-                @termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
-                for $i (0..3) {
-                    $expression[$i] = Formula("0");
-                    my @vars;
-                    my @exps;
-                    for $j (1..$termcount[$i]) {
-                        my $nextvar = list_random(@vars,@vars,@vars,'x','y','z','t','s');
-                        my $nextexp;
-                        do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
-                        push(@vars,$nextvar);
-                        push(@exps,$nextexp);
-                        $string = non_zero_random(-9,9,1).$vars[$j-1].'^'.$exps[$j-1];
-                        $expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
-                    }
-                }
-                $exp0=$expression[0];
-                $exp1=$expression[1];
-                $exp2=$expression[2];
-                $exp3=$expression[3];
-                for $i (0..3) {
-                    $answers[$i] = Formula($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'+'.
-                            $expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'x+'.
-                            $expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'y+'.
-                            $expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'z+'.
-                            $expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'s+'.
-                            $expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'t+'.
-                            $expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2x^2+'.
-                            $expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2y^2+'.
-                            $expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2z^2+'.
-                            $expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2s^2+'.
-                            $expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2t^2')->reduce->reduce;
-                    $evaluator[$i] = $answers[$i] -> cmp(
-                       checker=>sub{
-                          my ( $correct, $student, $ansHash ) = @_;
-                          return 0 if $ansHash->{isPreview} || $correct != $student;
-                          $student = $ansHash->{student_formula};
-                          $correct = $correct->{original_formula} if defined $correct->{original_formula};
-                          $student = Formula("$student"); $correct = Formula("$correct");
-                          return 0 unless ($correct == $student);
-                          Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
-                          delete $correct->{test_values}, $student->{test_values};
-                          my $OK = (($correct == $student) or ($student == $correct));
-                          Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
-                          Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
-                          return $OK;
-                    });
-                }
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="WoY">Simplify each expression, if possible, by combining like terms.</p>
-                        <instruction>If the expression cannot be simplified further, just enter it as it is.</instruction>
-                        <p permid="Cwh"><ol label="a." permid="rfR">
-                            <li permid="OhJ">
-                                <p permid="NqL"><m><var name="$exp0" /></m></p>
-                                <p permid="txU"><var name="$evaluator[0]" width="25" /></p>
-                            </li>
-                            <li permid="uoS">
-                                <p permid="ZFd"><m><var name="$exp1" /></m></p>
-                                <p permid="FMm"><var name="$evaluator[1]" width="25" /></p>
-                            </li>
-                            <li permid="awb">
-                                <p permid="lTv"><m><var name="$exp2" /></m></p>
-                                <p permid="SaE"><var name="$evaluator[2]" width="25" /></p>
-                            </li>
-                            <li permid="GDk">
-                                <p permid="yhN"><m><var name="$exp3" /></m></p>
-                                <p permid="eoW"><var name="$evaluator[3]" width="25" /></p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                </webwork>
-            </exercise>
-            <exercise permid="gNQ">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Fraction");
-                Context()->noreduce('(-x)+y','(-x)-y');
-                Context()->flags->set(reduceConstants=>0);
-                Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-                Context()->operators->set(
-                    '+' => {class => 'bizarro::BOP::add', isCommand => 1},
-                    '-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
-                );
-                @termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
-                for $i (0..3) {
-                    $expression[$i] = Formula("0");
-                    my @vars;
-                    my @exps;
-                    for $j (1..$termcount[$i]) {
-                        my $nextvar = list_random(@vars,@vars,@vars,'x','y','z','t','s');
-                        my $nextexp;
-                        do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
-                        push(@vars,$nextvar);
-                        push(@exps,$nextexp);
-                        $string = Fraction(non_zero_random(-9,9,1),non_zero_random(-9,9,1)).$vars[$j-1].'^'.$exps[$j-1];
-                        $expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
-                    }
-                }
-                $exp0=$expression[0];
-                $exp1=$expression[1];
-                $exp2=$expression[2];
-                $exp3=$expression[3];
-                for $i (0..3) {
-                    $answers[$i] = Formula(Fraction($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'+'.
-                            Fraction($expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'x+'.
-                            Fraction($expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'y+'.
-                            Fraction($expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'z+'.
-                            Fraction($expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'s+'.
-                            Fraction($expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'t+'.
-                            Fraction($expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2x^2+'.
-                            Fraction($expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2y^2+'.
-                            Fraction($expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2z^2+'.
-                            Fraction($expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2s^2+'.
-                            Fraction($expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2t^2')->reduce->reduce;
-                    $evaluator[$i] = $answers[$i] -> cmp(
-                       checker=>sub{
-                          my ( $correct, $student, $ansHash ) = @_;
-                          return 0 if $ansHash->{isPreview} || $correct != $student;
-                          $student = $ansHash->{student_formula};
-                          $correct = $correct->{original_formula} if defined $correct->{original_formula};
-                          $student = Formula("$student"); $correct = Formula("$correct");
-                          return 0 unless ($correct == $student);
-                          Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
-                          delete $correct->{test_values}, $student->{test_values};
-                          my $OK = (($correct == $student) or ($student == $correct));
-                          Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
-                          Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
-                          return $OK;
-                    });
-                }
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="iDq">Simplify each expression, if possible, by combining like terms.</p>
-                        <instruction>If the expression cannot be simplified further, just enter it as it is.</instruction>
-                        <p permid="OKz"><ol label="a." permid="Xna">
-                            <li permid="mKt">
-                                <p permid="Kwf"><m><var name="$exp0" /></m></p>
-                                <p permid="qDo"><var name="$evaluator[0]" width="25" /></p>
-                            </li>
-                            <li permid="SRC">
-                                <p permid="WKx"><m><var name="$exp1" /></m></p>
-                                <p permid="CRG"><var name="$evaluator[1]" width="25" /></p>
-                            </li>
-                            <li permid="yYL">
-                                <p permid="iYP"><m><var name="$exp2" /></m></p>
-                                <p permid="PfY"><var name="$evaluator[2]" width="25" /></p>
-                            </li>
-                            <li permid="ffU">
-                                <p permid="vnh"><m><var name="$exp3" /></m></p>
-                                <p permid="buq"><var name="$evaluator[3]" width="25" /></p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                </webwork>
-            </exercise>
-            <exercise permid="MUZ">
-                <webwork>
-                    <setup>
-            <pg-code>
-                Context("Fraction");
-                Context()->noreduce('(-x)+y','(-x)-y');
-                Context()->flags->set(reduceConstants=>0);
-                Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-                Context()->operators->set(
-                    '+' => {class => 'bizarro::BOP::add', isCommand => 1},
-                    '-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
-                );
-                @termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
-                for $i (0..3) {
-                    $expression[$i] = Formula("0");
-                    my @vars;
-                    my @exps;
-                    for $j (1..$termcount[$i]) {
-                        my $nextvar = list_random(@vars,@vars,@vars,'x','y','z','t','s');
-                        my $nextexp;
-                        do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
-                        push(@vars,$nextvar);
-                        push(@exps,$nextexp);
-                        $string = Fraction(non_zero_random(-9,9,1),non_zero_random(-9,9,1)).$vars[$j-1].'^'.$exps[$j-1];
-                        $expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
-                    }
-                }
-                $exp0=$expression[0];
-                $exp1=$expression[1];
-                $exp2=$expression[2];
-                $exp3=$expression[3];
-                for $i (0..3) {
-                    $answers[$i] = Formula(Fraction($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'+'.
-                            Fraction($expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'x+'.
-                            Fraction($expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'y+'.
-                            Fraction($expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'z+'.
-                            Fraction($expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'s+'.
-                            Fraction($expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'t+'.
-                            Fraction($expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2x^2+'.
-                            Fraction($expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2y^2+'.
-                            Fraction($expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2z^2+'.
-                            Fraction($expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2s^2+'.
-                            Fraction($expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2t^2')->reduce->reduce;
-                    $evaluator[$i] = $answers[$i] -> cmp(
-                       checker=>sub{
-                          my ( $correct, $student, $ansHash ) = @_;
-                          return 0 if $ansHash->{isPreview} || $correct != $student;
-                          $student = $ansHash->{student_formula};
-                          $correct = $correct->{original_formula} if defined $correct->{original_formula};
-                          $student = Formula("$student"); $correct = Formula("$correct");
-                          return 0 unless ($correct == $student);
-                          Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
-                          delete $correct->{test_values}, $student->{test_values};
-                          my $OK = (($correct == $student) or ($student == $correct));
-                          Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
-                          Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
-                          return $OK;
-                    });
-                }
-            </pg-code>
-                    </setup>
-                    <statement>
-                        <p permid="uRI">Simplify each expression, if possible, by combining like terms.</p>
-                        <instruction>If the expression cannot be simplified further, just enter it as it is.</instruction>
-                        <p permid="aYR"><ol label="a." permid="Duj">
-                            <li permid="Lnd">
-                                <p permid="HBz"><m><var name="$exp0" /></m></p>
-                                <p permid="nII"><var name="$evaluator[0]" width="25" /></p>
-                            </li>
-                            <li permid="rum">
-                                <p permid="TPR"><m><var name="$exp1" /></m></p>
-                                <p permid="zXa"><var name="$evaluator[1]" width="25" /></p>
-                            </li>
-                            <li permid="XBv">
-                                <p permid="gej"><m><var name="$exp2" /></m></p>
-                                <p permid="Mls"><var name="$evaluator[2]" width="25" /></p>
-                            </li>
-                            <li permid="jPN">
-                                <p permid="ssB"><m><var name="$exp3" /></m></p>
-                                <p permid="YzK"><var name="$evaluator[3]" width="25" /></p>
-                            </li>
-                        </ol></p>
-                    </statement>
-                </webwork>
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="SKl">
-            <title>Vocabulary Questions</title>
-            <exercise permid="tci">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract0.pg" />
-            </exercise>
-            <exercise permid="Zjr">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract0.pg" />
-            </exercise>
-            <exercise permid="FqA">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract5.pg" />
-            </exercise>
-            <exercise permid="lxJ">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract5.pg" />
-            </exercise>
-            <!-- seed set to give distinct degrees -->
-            <exercise permid="RES">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract10.pg" seed="725"/>
-            </exercise>
-            <exercise permid="xMb">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract10.pg" seed="728"/>
-            </exercise>
-            <exercise permid="dTk">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract11.pg" />
-            </exercise>
-            <exercise permid="Kat">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract11.pg" />
-            </exercise>
-            <exercise permid="qhC">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract15.pg" />
-            </exercise>
-            <exercise permid="WoL">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract15.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="yRu">
-            <exercise permid="CvU">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar10.pg" />
-            </exercise>
-            <exercise permid="iDd">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar10.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="eYD">
-            <title>Simplifying Polynomials</title>
-            <exercise permid="OKm">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract20.pg" />
-            </exercise>
-            <exercise permid="uRv">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract20.pg" />
-            </exercise>
-            <exercise permid="aYE">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract25.pg" />
-            </exercise>
-            <exercise permid="HfN">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract25.pg" />
-            </exercise>
-            <exercise permid="nmW">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract35.pg" />
-            </exercise>
-            <exercise permid="Tuf">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract35.pg" />
-            </exercise>
-            <exercise permid="zBo">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract40.pg" />
-            </exercise>
-            <exercise permid="fIx">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract40.pg" />
-            </exercise>
-            <exercise permid="LPG">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract45.pg" />
-            </exercise>
-            <exercise permid="rWP">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract45.pg" />
-            </exercise>
-            <exercise width="wide" permid="YdY">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract50.pg" />
-            </exercise>
-            <exercise width="wide" permid="Elh">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract50.pg" />
-            </exercise>
-            <exercise permid="ksq">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract55.pg" />
-            </exercise>
-            <exercise permid="Qzz">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract55.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="LfM">
-            <exercise permid="wGI">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract80.pg" />
-            </exercise>
-            <exercise permid="cNR">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract80.pg" />
-            </exercise>
-            <exercise permid="IVa">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract85.pg" />
-            </exercise>
-            <exercise permid="pcj">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract85.pg" />
-            </exercise>
-            <exercise permid="Vjs">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract90.pg" />
-            </exercise>
-            <exercise permid="BqB">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract90.pg" />
-            </exercise>
-            <exercise permid="hxK">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract95.pg" />
-            </exercise>
-            <exercise permid="NET">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract95.pg" />
-            </exercise>
-            <exercise permid="tMc">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract100.pg" />
-            </exercise>
-            <exercise permid="ZTl">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract100.pg" />
-            </exercise>
-            <exercise permid="Gau">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract105.pg" />
-            </exercise>
-            <exercise permid="mhD">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract105.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="rmV">
-            <exercise width="wide" permid="SoM">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract130.pg" />
-            </exercise>
-            <exercise width="wide" permid="yvV">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract130.pg" />
-            </exercise>
-            <exercise width="wide" permid="eDe">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract135.pg" />
-            </exercise>
-            <exercise width="wide" permid="KKn">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract135.pg" />
-            </exercise>
-            <exercise permid="qRw">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar15.pg" />
-            </exercise>
-            <exercise permid="WYF">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar15.pg" />
-            </exercise>
-            <exercise permid="DfO">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar20.pg" />
-            </exercise>
-            <exercise permid="jmX">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar20.pg" />
-            </exercise>
-            <exercise width="wide" permid="Pug">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar25.pg" />
-            </exercise>
-            <exercise width="wide" permid="vBp">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar25.pg" />
-            </exercise>
-            <exercise permid="bIy">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar30.pg" />
-            </exercise>
-            <exercise permid="HPH">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar30.pg" />
-            </exercise>
-            <exercise width="wide" permid="nWQ">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar35.pg" />
-            </exercise>
-            <exercise width="wide" permid="UdZ">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar35.pg" />
-            </exercise>
-            <exercise permid="Ali">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar40.pg" />
-            </exercise>
-            <exercise permid="gsr">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar40.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup permid="Xue">
-            <exercise permid="MzA">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract140.pg" />
-            </exercise>
-            <exercise permid="sGJ">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract140.pg" />
-            </exercise>
-            <exercise permid="YNS">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar55.pg" />
-            </exercise>
-            <exercise permid="EVb">
-                <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar55.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="DBn">
-            <title>Evaluating Polynomials</title>
-            <exercise permid="lck">
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
-            </exercise>
-            <exercise permid="Rjt">
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
-            </exercise>
-            <exercise permid="xqC">
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate110.pg" />
-            </exercise>
-            <exercise permid="dxL">
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate110.pg" />
-            </exercise>
-            <exercise permid="JEU">
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate120.pg" />
-            </exercise>
-            <exercise permid="pMd">
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate120.pg" />
-            </exercise>
-            <exercise permid="VTm">
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg" />
-            </exercise>
-            <exercise permid="Cav">
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg" />
-            </exercise>
-            <exercise permid="ihE">
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
-            </exercise>
-            <exercise permid="OoN">
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
-            </exercise>
-            <exercise permid="uvW">
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
-            </exercise>
-            <exercise permid="aDf">
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
-            </exercise>
-            <exercise permid="GKo">
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
-            </exercise>
-            <exercise permid="mRx">
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
-            </exercise>
-            <exercise permid="SYG">
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
-            </exercise>
-            <exercise permid="zfP">
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="jIw">
-            <title>Applications of Simplifying Polynomials</title>
-            <exercise permid="fmY">
-                <webwork source="BasicAlgebra/EvaluateExpressions/EvaluateFormula30.pg" />
-            </exercise>
-            <exercise permid="Luh">
-                <webwork source="BasicAlgebra/EvaluateExpressions/EvaluateFormula30.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup permid="PPF">
-            <exercise permid="rBq">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication10.pg" />
-            </exercise>
-            <exercise permid="XIz">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication10.pg" />
-            </exercise>
-            <exercise permid="DPI">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication20.pg" />
-            </exercise>
-            <exercise permid="jWR">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication20.pg" />
-            </exercise>
-            <exercise permid="Qea">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication30.pg" />
-            </exercise>
-            <exercise permid="wlj">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication30.pg" />
-            </exercise>
-            <exercise permid="css">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication40.pg" />
-            </exercise>
-            <exercise permid="IzB">
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication40.pg" />
-            </exercise>
-        </exercisegroup>
-    </exercises>
-
-
+        </webwork>
+      </exercise>
+      <exercise permid="osp">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)+y','(-x)-y');
+Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
+@termcount = (1,2,2,3,3,4,4)[NchooseK(7,4)];
+for $i (0..3) {
+$expression[$i] = Formula("0");
+$answers[$i] = List();
+my @vars;
+my @exps;
+for $j (1..$termcount[$i]) {
+my $nextvar = list_random('x','y','z','t','s');
+my $nextexp;
+do {$nextexp = list_random(0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
+push(@vars,$nextvar);
+push(@exps,$nextexp);
+$string = non_zero_random(-9,9,0.1).$vars[$j-1].'^'.$exps[$j-1];
+$expression[$i] = Compute("$expression[$i]+ $string")->reduce->reduce;
+$answers[$i] = List($answers[$i],Formula("$string")->reduce->reduce);
+}
+}
+$exp0=$expression[0];
+$exp1=$expression[1];
+$exp2=$expression[2];
+$exp3=$expression[3];
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="dTx">
+                List the terms in each expression.
+                <ol label="a." permid="eRz">
+                  <li permid="szF">
+                    <p permid="uDn">
+                      <m><var name="$exp0" /></m>
+                    </p>
+                    <p permid="aKw">
+                      <var name="$answers[0]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="YGO">
+                    <p permid="GRF">
+                      <m><var name="$exp1" /></m>
+                    </p>
+                    <p permid="mYO">
+                      <var name="$answers[1]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="ENX">
+                    <p permid="TfX">
+                      <m><var name="$exp2" /></m>
+                    </p>
+                    <p permid="zng">
+                      <var name="$answers[2]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="kVg">
+                    <p permid="fup">
+                      <m><var name="$exp3" /></m>
+                    </p>
+                    <p permid="LBy">
+                      <var name="$answers[3]" width="25" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <solution permid="Jjv">
+              <p permid="hTw">
+                <ol label="a." permid="NTo">
+                  <li permid="Rcp">
+                    <p permid="rIH">
+                      The terms are <m><var name="$answers[0]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="xjy">
+                    <p permid="XPQ">
+                      The terms are <m><var name="$answers[1]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="dqH">
+                    <p permid="DWZ">
+                      The terms are <m><var name="$answers[2]" /></m>.
+                    </p>
+                  </li>
+                  <li permid="JxQ">
+                    <p permid="kei">
+                      The terms are <m><var name="$answers[3]" /></m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="mDc">
+      <exercise permid="Uzy">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)+y','(-x)-y');
+Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
+Context()->operators->set(
+'+' => {class => 'bizarro::BOP::add', isCommand => 1},
+'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+);
+@termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
+for $i (0..3) {
+$expression[$i] = Formula("0");
+my @vars;
+my @exps;
+for $j (1..$termcount[$i]) {
+my $nextvar = list_random(@vars,@vars,@vars,'x','y','z','t','s');
+my $nextexp;
+do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
+push(@vars,$nextvar);
+push(@exps,$nextexp);
+$string = non_zero_random(-9,9,1).$vars[$j-1].'^'.$exps[$j-1];
+$expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
+}
+}
+$exp0=$expression[0];
+$exp1=$expression[1];
+$exp2=$expression[2];
+$exp3=$expression[3];
+for $i (0..3) {
+$answers[$i] = Formula($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'+'.
+$expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'x+'.
+$expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'y+'.
+$expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'z+'.
+$expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'s+'.
+$expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'t+'.
+$expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2x^2+'.
+$expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2y^2+'.
+$expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2z^2+'.
+$expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2s^2+'.
+$expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2t^2')->reduce->reduce;
+$evaluator[$i] = $answers[$i] -> cmp(
+checker=>sub{
+my ( $correct, $student, $ansHash ) = @_;
+return 0 if $ansHash->{isPreview} || $correct != $student;
+$student = $ansHash->{student_formula};
+$correct = $correct->{original_formula} if defined $correct->{original_formula};
+$student = Formula("$student"); $correct = Formula("$correct");
+return 0 unless ($correct == $student);
+Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
+delete $correct->{test_values}, $student->{test_values};
+my $OK = (($correct == $student) or ($student == $correct));
+Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
+Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
+return $OK;
+});
+}
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="KaG">
+                Simplify each expression, if possible, by combining like terms.
+              </p>
+              <instruction>
+                If the expression cannot be simplified further, just enter it as it is.
+              </instruction>
+              <p permid="qhP">
+                <ol label="a." permid="KYI">
+                  <li permid="pEZ">
+                    <p permid="Qlr">
+                      <m><var name="$exp0" /></m>
+                    </p>
+                    <p permid="wsA">
+                      <var name="$evaluator[0]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="VMi">
+                    <p permid="czJ">
+                      <m><var name="$exp1" /></m>
+                    </p>
+                    <p permid="IGS">
+                      <var name="$evaluator[1]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="BTr">
+                    <p permid="oOb">
+                      <m><var name="$exp2" /></m>
+                    </p>
+                    <p permid="UVk">
+                      <var name="$evaluator[2]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="iaA">
+                    <p permid="Bct">
+                      <m><var name="$exp3" /></m>
+                    </p>
+                    <p permid="hjC">
+                      <var name="$evaluator[3]" width="25" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+      <exercise permid="AGH">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)+y','(-x)-y');
+Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
+Context()->operators->set(
+'+' => {class => 'bizarro::BOP::add', isCommand => 1},
+'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+);
+@termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
+for $i (0..3) {
+$expression[$i] = Formula("0");
+my @vars;
+my @exps;
+for $j (1..$termcount[$i]) {
+my $nextvar = list_random(@vars,@vars,@vars,'x','y','z','t','s');
+my $nextexp;
+do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
+push(@vars,$nextvar);
+push(@exps,$nextexp);
+$string = non_zero_random(-9,9,1).$vars[$j-1].'^'.$exps[$j-1];
+$expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
+}
+}
+$exp0=$expression[0];
+$exp1=$expression[1];
+$exp2=$expression[2];
+$exp3=$expression[3];
+for $i (0..3) {
+$answers[$i] = Formula($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'+'.
+$expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'x+'.
+$expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'y+'.
+$expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'z+'.
+$expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'s+'.
+$expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'t+'.
+$expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2x^2+'.
+$expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2y^2+'.
+$expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2z^2+'.
+$expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2s^2+'.
+$expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2t^2')->reduce->reduce;
+$evaluator[$i] = $answers[$i] -> cmp(
+checker=>sub{
+my ( $correct, $student, $ansHash ) = @_;
+return 0 if $ansHash->{isPreview} || $correct != $student;
+$student = $ansHash->{student_formula};
+$correct = $correct->{original_formula} if defined $correct->{original_formula};
+$student = Formula("$student"); $correct = Formula("$correct");
+return 0 unless ($correct == $student);
+Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
+delete $correct->{test_values}, $student->{test_values};
+my $OK = (($correct == $student) or ($student == $correct));
+Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
+Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
+return $OK;
+});
+}
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="WoY">
+                Simplify each expression, if possible, by combining like terms.
+              </p>
+              <instruction>
+                If the expression cannot be simplified further, just enter it as it is.
+              </instruction>
+              <p permid="Cwh">
+                <ol label="a." permid="rfR">
+                  <li permid="OhJ">
+                    <p permid="NqL">
+                      <m><var name="$exp0" /></m>
+                    </p>
+                    <p permid="txU">
+                      <var name="$evaluator[0]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="uoS">
+                    <p permid="ZFd">
+                      <m><var name="$exp1" /></m>
+                    </p>
+                    <p permid="FMm">
+                      <var name="$evaluator[1]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="awb">
+                    <p permid="lTv">
+                      <m><var name="$exp2" /></m>
+                    </p>
+                    <p permid="SaE">
+                      <var name="$evaluator[2]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="GDk">
+                    <p permid="yhN">
+                      <m><var name="$exp3" /></m>
+                    </p>
+                    <p permid="eoW">
+                      <var name="$evaluator[3]" width="25" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+      <exercise permid="gNQ">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Fraction");
+Context()->noreduce('(-x)+y','(-x)-y');
+Context()->flags->set(reduceConstants=>0);
+Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
+Context()->operators->set(
+'+' => {class => 'bizarro::BOP::add', isCommand => 1},
+'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+);
+@termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
+for $i (0..3) {
+$expression[$i] = Formula("0");
+my @vars;
+my @exps;
+for $j (1..$termcount[$i]) {
+my $nextvar = list_random(@vars,@vars,@vars,'x','y','z','t','s');
+my $nextexp;
+do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
+push(@vars,$nextvar);
+push(@exps,$nextexp);
+$string = Fraction(non_zero_random(-9,9,1),non_zero_random(-9,9,1)).$vars[$j-1].'^'.$exps[$j-1];
+$expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
+}
+}
+$exp0=$expression[0];
+$exp1=$expression[1];
+$exp2=$expression[2];
+$exp3=$expression[3];
+for $i (0..3) {
+$answers[$i] = Formula(Fraction($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'+'.
+Fraction($expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'x+'.
+Fraction($expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'y+'.
+Fraction($expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'z+'.
+Fraction($expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'s+'.
+Fraction($expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'t+'.
+Fraction($expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2x^2+'.
+Fraction($expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2y^2+'.
+Fraction($expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2z^2+'.
+Fraction($expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2s^2+'.
+Fraction($expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2t^2')->reduce->reduce;
+$evaluator[$i] = $answers[$i] -> cmp(
+checker=>sub{
+my ( $correct, $student, $ansHash ) = @_;
+return 0 if $ansHash->{isPreview} || $correct != $student;
+$student = $ansHash->{student_formula};
+$correct = $correct->{original_formula} if defined $correct->{original_formula};
+$student = Formula("$student"); $correct = Formula("$correct");
+return 0 unless ($correct == $student);
+Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
+delete $correct->{test_values}, $student->{test_values};
+my $OK = (($correct == $student) or ($student == $correct));
+Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
+Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
+return $OK;
+});
+}
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="iDq">
+                Simplify each expression, if possible, by combining like terms.
+              </p>
+              <instruction>
+                If the expression cannot be simplified further, just enter it as it is.
+              </instruction>
+              <p permid="OKz">
+                <ol label="a." permid="Xna">
+                  <li permid="mKt">
+                    <p permid="Kwf">
+                      <m><var name="$exp0" /></m>
+                    </p>
+                    <p permid="qDo">
+                      <var name="$evaluator[0]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="SRC">
+                    <p permid="WKx">
+                      <m><var name="$exp1" /></m>
+                    </p>
+                    <p permid="CRG">
+                      <var name="$evaluator[1]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="yYL">
+                    <p permid="iYP">
+                      <m><var name="$exp2" /></m>
+                    </p>
+                    <p permid="PfY">
+                      <var name="$evaluator[2]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="ffU">
+                    <p permid="vnh">
+                      <m><var name="$exp3" /></m>
+                    </p>
+                    <p permid="buq">
+                      <var name="$evaluator[3]" width="25" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+      <exercise permid="MUZ">
+        <webwork>
+            <setup>
+<pg-code>
+Context("Fraction");
+Context()->noreduce('(-x)+y','(-x)-y');
+Context()->flags->set(reduceConstants=>0);
+Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
+Context()->operators->set(
+'+' => {class => 'bizarro::BOP::add', isCommand => 1},
+'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+);
+@termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
+for $i (0..3) {
+$expression[$i] = Formula("0");
+my @vars;
+my @exps;
+for $j (1..$termcount[$i]) {
+my $nextvar = list_random(@vars,@vars,@vars,'x','y','z','t','s');
+my $nextexp;
+do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] != 0 or $nextexp != 0);
+push(@vars,$nextvar);
+push(@exps,$nextexp);
+$string = Fraction(non_zero_random(-9,9,1),non_zero_random(-9,9,1)).$vars[$j-1].'^'.$exps[$j-1];
+$expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
+}
+}
+$exp0=$expression[0];
+$exp1=$expression[1];
+$exp2=$expression[2];
+$exp3=$expression[3];
+for $i (0..3) {
+$answers[$i] = Formula(Fraction($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'+'.
+Fraction($expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'x+'.
+Fraction($expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'y+'.
+Fraction($expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'z+'.
+Fraction($expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'s+'.
+Fraction($expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'t+'.
+Fraction($expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2x^2+'.
+Fraction($expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2y^2+'.
+Fraction($expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2z^2+'.
+Fraction($expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2s^2+'.
+Fraction($expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0)).'/2t^2')->reduce->reduce;
+$evaluator[$i] = $answers[$i] -> cmp(
+checker=>sub{
+my ( $correct, $student, $ansHash ) = @_;
+return 0 if $ansHash->{isPreview} || $correct != $student;
+$student = $ansHash->{student_formula};
+$correct = $correct->{original_formula} if defined $correct->{original_formula};
+$student = Formula("$student"); $correct = Formula("$correct");
+return 0 unless ($correct == $student);
+Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
+delete $correct->{test_values}, $student->{test_values};
+my $OK = (($correct == $student) or ($student == $correct));
+Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
+Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
+return $OK;
+});
+}
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="uRI">
+                Simplify each expression, if possible, by combining like terms.
+              </p>
+              <instruction>
+                If the expression cannot be simplified further, just enter it as it is.
+              </instruction>
+              <p permid="aYR">
+                <ol label="a." permid="Duj">
+                  <li permid="Lnd">
+                    <p permid="HBz">
+                      <m><var name="$exp0" /></m>
+                    </p>
+                    <p permid="nII">
+                      <var name="$evaluator[0]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="rum">
+                    <p permid="TPR">
+                      <m><var name="$exp1" /></m>
+                    </p>
+                    <p permid="zXa">
+                      <var name="$evaluator[1]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="XBv">
+                    <p permid="gej">
+                      <m><var name="$exp2" /></m>
+                    </p>
+                    <p permid="Mls">
+                      <var name="$evaluator[2]" width="25" />
+                    </p>
+                  </li>
+                  <li permid="jPN">
+                    <p permid="ssB">
+                      <m><var name="$exp3" /></m>
+                    </p>
+                    <p permid="YzK">
+                      <var name="$evaluator[3]" width="25" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="SKl">
+      <title>Vocabulary Questions</title>
+      <exercise permid="tci">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract0.pg" />
+      </exercise>
+      <exercise permid="Zjr">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract0.pg" />
+      </exercise>
+      <exercise permid="FqA">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract5.pg" />
+      </exercise>
+      <exercise permid="lxJ">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract5.pg" />
+      </exercise>
+<!-- seed set to give distinct degrees -->
+      <exercise permid="RES">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract10.pg" seed="725"/>
+      </exercise>
+      <exercise permid="xMb">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract10.pg" seed="728"/>
+      </exercise>
+      <exercise permid="dTk">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract11.pg" />
+      </exercise>
+      <exercise permid="Kat">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract11.pg" />
+      </exercise>
+      <exercise permid="qhC">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract15.pg" />
+      </exercise>
+      <exercise permid="WoL">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract15.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="yRu">
+      <exercise permid="CvU">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar10.pg" />
+      </exercise>
+      <exercise permid="iDd">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar10.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="eYD">
+      <title>Simplifying Polynomials</title>
+      <exercise permid="OKm">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract20.pg" />
+      </exercise>
+      <exercise permid="uRv">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract20.pg" />
+      </exercise>
+      <exercise permid="aYE">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract25.pg" />
+      </exercise>
+      <exercise permid="HfN">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract25.pg" />
+      </exercise>
+      <exercise permid="nmW">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract35.pg" />
+      </exercise>
+      <exercise permid="Tuf">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract35.pg" />
+      </exercise>
+      <exercise permid="zBo">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract40.pg" />
+      </exercise>
+      <exercise permid="fIx">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract40.pg" />
+      </exercise>
+      <exercise permid="LPG">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract45.pg" />
+      </exercise>
+      <exercise permid="rWP">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract45.pg" />
+      </exercise>
+      <exercise width="wide" permid="YdY">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract50.pg" />
+      </exercise>
+      <exercise width="wide" permid="Elh">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract50.pg" />
+      </exercise>
+      <exercise permid="ksq">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract55.pg" />
+      </exercise>
+      <exercise permid="Qzz">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract55.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="LfM">
+      <exercise permid="wGI">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract80.pg" />
+      </exercise>
+      <exercise permid="cNR">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract80.pg" />
+      </exercise>
+      <exercise permid="IVa">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract85.pg" />
+      </exercise>
+      <exercise permid="pcj">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract85.pg" />
+      </exercise>
+      <exercise permid="Vjs">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract90.pg" />
+      </exercise>
+      <exercise permid="BqB">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract90.pg" />
+      </exercise>
+      <exercise permid="hxK">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract95.pg" />
+      </exercise>
+      <exercise permid="NET">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract95.pg" />
+      </exercise>
+      <exercise permid="tMc">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract100.pg" />
+      </exercise>
+      <exercise permid="ZTl">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract100.pg" />
+      </exercise>
+      <exercise permid="Gau">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract105.pg" />
+      </exercise>
+      <exercise permid="mhD">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract105.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="rmV">
+      <exercise width="wide" permid="SoM">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract130.pg" />
+      </exercise>
+      <exercise width="wide" permid="yvV">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract130.pg" />
+      </exercise>
+      <exercise width="wide" permid="eDe">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract135.pg" />
+      </exercise>
+      <exercise width="wide" permid="KKn">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract135.pg" />
+      </exercise>
+      <exercise permid="qRw">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar15.pg" />
+      </exercise>
+      <exercise permid="WYF">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar15.pg" />
+      </exercise>
+      <exercise permid="DfO">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar20.pg" />
+      </exercise>
+      <exercise permid="jmX">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar20.pg" />
+      </exercise>
+      <exercise width="wide" permid="Pug">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar25.pg" />
+      </exercise>
+      <exercise width="wide" permid="vBp">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar25.pg" />
+      </exercise>
+      <exercise permid="bIy">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar30.pg" />
+      </exercise>
+      <exercise permid="HPH">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar30.pg" />
+      </exercise>
+      <exercise width="wide" permid="nWQ">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar35.pg" />
+      </exercise>
+      <exercise width="wide" permid="UdZ">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar35.pg" />
+      </exercise>
+      <exercise permid="Ali">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar40.pg" />
+      </exercise>
+      <exercise permid="gsr">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar40.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup permid="Xue">
+      <exercise permid="MzA">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract140.pg" />
+      </exercise>
+      <exercise permid="sGJ">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract140.pg" />
+      </exercise>
+      <exercise permid="YNS">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar55.pg" />
+      </exercise>
+      <exercise permid="EVb">
+        <webwork source="BasicAlgebra/PolynomialBasics/polyMultVar55.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="DBn">
+      <title>Evaluating Polynomials</title>
+      <exercise permid="lck">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
+      </exercise>
+      <exercise permid="Rjt">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
+      </exercise>
+      <exercise permid="xqC">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate110.pg" />
+      </exercise>
+      <exercise permid="dxL">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate110.pg" />
+      </exercise>
+      <exercise permid="JEU">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate120.pg" />
+      </exercise>
+      <exercise permid="pMd">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate120.pg" />
+      </exercise>
+      <exercise permid="VTm">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg" />
+      </exercise>
+      <exercise permid="Cav">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg" />
+      </exercise>
+      <exercise permid="ihE">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+      </exercise>
+      <exercise permid="OoN">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+      </exercise>
+      <exercise permid="uvW">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+      </exercise>
+      <exercise permid="aDf">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+      </exercise>
+      <exercise permid="GKo">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+      </exercise>
+      <exercise permid="mRx">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+      </exercise>
+      <exercise permid="SYG">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+      </exercise>
+      <exercise permid="zfP">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="jIw">
+      <title>Applications of Simplifying Polynomials</title>
+      <exercise permid="fmY">
+        <webwork source="BasicAlgebra/EvaluateExpressions/EvaluateFormula30.pg" />
+      </exercise>
+      <exercise permid="Luh">
+        <webwork source="BasicAlgebra/EvaluateExpressions/EvaluateFormula30.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup permid="PPF">
+      <exercise permid="rBq">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication10.pg" />
+      </exercise>
+      <exercise permid="XIz">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication10.pg" />
+      </exercise>
+      <exercise permid="DPI">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication20.pg" />
+      </exercise>
+      <exercise permid="jWR">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication20.pg" />
+      </exercise>
+      <exercise permid="Qea">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication30.pg" />
+      </exercise>
+      <exercise permid="wlj">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication30.pg" />
+      </exercise>
+      <exercise permid="css">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication40.pg" />
+      </exercise>
+      <exercise permid="IzB">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtractApplication40.pg" />
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

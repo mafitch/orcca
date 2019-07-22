@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,675 +6,766 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
 <section xml:id="section-linear-equations-and-inequalities-with-fractions" permid="cHj">
-
-    <title>Linear Equations and Inequalities with Fractions</title>
-
-    <introduction permid="uDJ">
-        <p permid="hTS">In this section, we will learn how to solve linear equations and inequalities with fractions.</p>
-    </introduction>
-
-    <subsection permid="IOs">
-        <title>Introduction</title>
-
-        <sidebyside widths="47% 47%" margins="0%" permid="HXu">
-
-            <p permid="VFA">So far, in our last step of solving for a variable we have divided each side of the equation by a constant, as in:<md permid="GwC">
-                <mrow>2x\amp=10</mrow>
-                <mrow>\divideunder{2x}{2} \amp= \divideunder{10}{2}</mrow>
-                <mrow>x\amp=5</mrow>
-            </md></p>
-            <p permid="BMJ">If we have a coefficient that is a fraction, we <em>could</em> proceed in exactly the same manner:<md permid="mDL">
-                <mrow>\frac{1}{2}x\amp=10</mrow>
-                <mrow>\divideunder{\frac{1}{2}x}{\frac{1}{2}} \amp= \divideunder{10}{\frac{1}{2}}</mrow>
-                <mrow>x\amp=10\cdot \frac{2}{1}=20</mrow>
-            </md></p>
-        </sidebyside>
-
-        <p permid="Obb">What if our equation or inequality was more complicated though, for example <m>\frac{1}{4}x+\frac{2}{3}=\frac{1}{6}</m>? We would have to first do a lot of fraction arithmetic in order to then divide each side by the coefficient of <m>x</m>. An alternate approach is to instead <em>multiply</em> each side of the equation by a chosen constant that eliminates the denominator. In the equation <m>\frac{1}{2}x=10</m>, we could simply multiply each side of the equation by <m>2</m>, which would eliminate the denominator of <m>2</m>:
-            <md permid="SKU">
-                <mrow>\frac{1}{2}x\amp=10</mrow>
-                <mrow>\multiplyleft{2}\left(\frac{1}{2}x\right)\amp=\multiplyleft{2}10</mrow>
-                <mrow>x\amp=20</mrow>
-            </md>
-        For more complicated equations, we will multiply each side of the equation by the least common denominator (LCD) of all fractions contained in the equation.</p>
-    </subsection>
-
-    <subsection xml:id="subsection-eliminating-denominators" permid="oVB">
-        <title>Eliminating Denominators</title>
-
-        <example permid="oeD">
-
-                <sidebyside widths="47% 47%" margins="0%" permid="FcO">
-
-                    <stack>
-                        <p permid="HBV">Deshawn planted a sapling in his yard that was <m>4</m>-feet tall. The tree will grow <m>\frac{2}{3}</m> of a foot every year. How many years will it take for his tree to be <m>10</m> feet tall?</p>
-                        <p permid="nJe">Since the tree grows <m>\frac{2}{3}</m> of a foot every year, we can use a table to help write a formula modeling the tree's growth:</p>
-                    </stack>
-
-                    <tabular permid="MVI">
-                        <col halign="center"/>
-                        <col halign="center"/>
-                        <row bottom="medium">
-                            <cell>Years Passed</cell>
-                            <cell>Tree's Height (ft)</cell>
-                        </row>
-                        <row>
-                            <cell><m>0</m></cell>
-                            <cell><m>4</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>1</m></cell>
-                            <cell><m>4+\frac{2}{3}</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>2</m></cell>
-                            <cell><m>4+\frac{2}{3}\cdot2</m></cell>
-                        </row>
+  <title>Linear Equations and Inequalities with Fractions</title>
+  <introduction permid="uDJ">
+    <p permid="hTS">
+      In this section,
+      we will learn how to solve linear equations and inequalities with fractions.
+    </p>
+  </introduction>
+  <subsection permid="IOs">
+    <title>Introduction</title>
+    <sidebyside widths="47% 47%" margins="0%" permid="HXu">
+      <p permid="VFA">
+        So far, in our last step of solving for a variable we have divided each side of the equation by a constant, as in:
+        <md permid="GwC">
+          <mrow>2x\amp=10</mrow>
+          <mrow>\divideunder{2x}{2} \amp= \divideunder{10}{2}</mrow>
+          <mrow>x\amp=5</mrow>
+        </md>
+      </p>
+      <p permid="BMJ">
+        If we have a coefficient that is a fraction,
+        we <em>could</em> proceed in exactly the same manner:
+        <md permid="mDL">
+          <mrow>\frac{1}{2}x\amp=10</mrow>
+          <mrow>\divideunder{\frac{1}{2}x}{\frac{1}{2}} \amp= \divideunder{10}{\frac{1}{2}}</mrow>
+          <mrow>x\amp=10\cdot \frac{2}{1}=20</mrow>
+        </md>
+      </p>
+    </sidebyside>
+    <p permid="Obb">
+      What if our equation or inequality was more complicated though,
+      for example <m>\frac{1}{4}x+\frac{2}{3}=\frac{1}{6}</m>?
+      We would have to first do a lot of fraction arithmetic in order to then divide each side by the coefficient of <m>x</m>.
+      An alternate approach is to instead <em>multiply</em>
+      each side of the equation by a chosen constant that eliminates the denominator.
+      In the equation <m>\frac{1}{2}x=10</m>,
+      we could simply multiply each side of the equation by <m>2</m>,
+      which would eliminate the denominator of <m>2</m>:
+      <md permid="SKU">
+        <mrow>\frac{1}{2}x\amp=10</mrow>
+        <mrow>\multiplyleft{2}\left(\frac{1}{2}x\right)\amp=\multiplyleft{2}10</mrow>
+        <mrow>x\amp=20</mrow>
+      </md>
+      For more complicated equations,
+      we will multiply each side of the equation by the least common denominator (LCD) of all fractions contained in the equation.
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-eliminating-denominators" permid="oVB">
+    <title>Eliminating Denominators</title>
+    <example permid="oeD">
+      <sidebyside widths="47% 47%" margins="0%" permid="FcO">
+        <stack>
+          <p permid="HBV">
+            Deshawn planted a sapling in his yard that was <m>4</m>-feet tall.
+            The tree will grow <m>\frac{2}{3}</m> of a foot every year.
+            How many years will it take for his tree to be <m>10</m> feet tall?
+          </p>
+          <p permid="nJe">
+            Since the tree grows <m>\frac{2}{3}</m> of a foot every year,
+            we can use a table to help write a formula modeling the tree's growth:
+          </p>
+        </stack>
+        <tabular permid="MVI">
+          <col halign="center"/>
+          <col halign="center"/>
+          <row bottom="medium">
+            <cell>Years Passed</cell>
+            <cell>Tree's Height (ft)</cell>
+          </row>
+          <row>
+            <cell><m>0</m></cell>
+            <cell><m>4</m></cell>
+          </row>
+          <row>
+            <cell><m>1</m></cell>
+            <cell><m>4+\frac{2}{3}</m></cell>
+          </row>
+          <row>
+            <cell><m>2</m></cell>
+            <cell><m>4+\frac{2}{3}\cdot2</m></cell>
+          </row>
 <!--                         <row>
-                            <cell><m>3</m></cell>
-                            <cell><m>\frac{2}{3}\cdot3+4=6</m></cell>
-                        </row> -->
-                        <row>
-                            <cell><m>\vdots</m></cell>
-                            <cell><m>\vdots</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>y</m></cell>
-                            <cell><m>4+\frac{2}{3}y</m></cell>
-                        </row>
-                    </tabular>
-                </sidebyside>
-
-                <p permid="TQn">From this, we've determined that <m>y</m> years since the tree was planted, the tree's height will be <m>4+\frac{2}{3}y</m> feet.</p>
-
-                <sidebyside widths="47% 47%" margins="0%" permid="ljX">
-                    <p permid="zXw">To find when Deshawn's tree will be <m>10</m> feet tall, we write and solve this equation:
-                    <md permid="ySd">
-                        <mrow>4+\frac{2}{3}y\amp=10</mrow>
-                        <mrow>\multiplyleft{3}\left(4+\frac{2}{3}y\right)\amp=\multiplyleft{3}10</mrow>
-                        <mrow>3\cdot4+3\cdot\frac{2}{3}y\amp=30</mrow>
-                        <mrow>12+2y\amp=30</mrow>
-                        <mrow>2y\amp=18</mrow>
-                        <mrow>y\amp=9</mrow>
-                    </md></p>
-                    <p permid="geF">Now we will check the solution <m>9</m> in the equation <m>4+\frac{2}{3}y=10</m>:
-                    <md permid="eZm">
-                        <mrow>4+\frac{2}{3}y\amp=10</mrow>
-                        <mrow>4+\frac{2}{3}(\substitute{9})\amp\stackrel{?}{=}10</mrow>
-                        <mrow>4+6\amp\stackrel{\checkmark}{=}10</mrow>
-                    </md>
-                    </p>
-                </sidebyside>
-
-                <p permid="MlO">In summary, it will take <m>9</m> years for Deshawn's tree to reach <m>10</m> feet tall.</p>
-        </example>
-
-        <p permid="uik">Let's look at a few more examples.</p>
-
-        <example permid="UlM">
-            <statement>
-                <p permid="ssX">Solve for <m>x</m> in <m>\frac{1}{4}x+\frac{2}{3}=\frac{1}{6}</m>.</p>
-            </statement>
-            <solution permid="aKS">
-                <p permid="XQm">To solve this equation, we first need to identify the LCD of all fractions in the equation. On the left side we have <m>\frac{1}{4}</m> and <m>\frac{2}{3}</m>. On the right side we have <m>\frac{1}{6}</m>. The LCD of <m>3, 4</m>, and <m>6</m> is <m>12</m>, so we will multiply each side of the equation by <m>12</m> in order to eliminate <em>all</em> of the denominators:</p>
-
-                <sidebyside widths="47% 47%" margins="0%" permid="Rrg">
-                    <p permid="DXv"><md permid="Lgv">
-                        <mrow>\frac{1}{4}x+\frac{2}{3}\amp=\frac{1}{6}</mrow>
-                        <mrow>\multiplyleft{12}\left(\frac{1}{4}x+\frac{2}{3}\right)\amp=\multiplyleft{12}\frac{1}{6}</mrow>
-                        <mrow>12\cdot\left(\frac{1}{4}x\right)+12\cdot\left(\frac{2}{3}\right)\amp=12\cdot\frac{1}{6}</mrow>
-                        <mrow>3x+8\amp=2</mrow>
-                        <mrow>3x\amp=-6</mrow>
-                        <mrow>\divideunder{3x}{3}\amp=\divideunder{-6}{3}</mrow>
-                        <mrow>x\amp=-2</mrow>
-                    </md>
-                    </p>
-                    <p permid="keE">Checking the solution <m>-2</m>:
-                    <md permid="rnE">
-                        <mrow>\frac{1}{4}x+\frac{2}{3}\amp=\frac{1}{6}</mrow>
-                        <mrow>\frac{1}{4}(\substitute{-2})+\frac{2}{3}\amp\stackrel{?}{=}\frac{1}{6}</mrow>
-                        <mrow>-\frac{2}{4}+\frac{2}{3}\amp\stackrel{?}{=}\frac{1}{6}</mrow>
-                        <mrow>-\frac{6}{12}+\frac{8}{12}\amp\stackrel{?}{=}\frac{1}{6}</mrow>
-                        <mrow>\frac{2}{12}\amp\stackrel{\checkmark}{=}\frac{1}{6}</mrow>
-                    </md>
-                    </p>
-                </sidebyside>
-
-                <p permid="QlN">The solution is therefore <m>-2</m> and the solution set is <m>\{-2\}</m>.</p>
-            </solution>
-        </example>
-
-        <example permid="AsV">
-            <statement>
-                <p permid="YAg">Solve for <m>z</m> in <m>-\frac{2}{5}z-\frac{3}{2}=-\frac{1}{2}z+\frac{4}{5}</m>.</p>
-            </statement>
-            <solution permid="GSb">
-                <sidebyside widths="47% 47%" margins="0%" permid="xyp">
-                    <p permid="wsW">The first thing we need to do is identify the LCD of all denominators in this equation. Since the denominators are <m>2</m> and <m>5</m>, the LCD is <m>10</m>. So as our first step, we will multiply each side of the equation by <m>10</m> in order to eliminate all denominators:
-                    <md permid="XuN">
-                        <mrow>-\frac{2}{5}z-\frac{3}{2}\amp=-\frac{1}{2}z+\frac{4}{5}</mrow>
-                        <mrow>\multiplyleft{10}\left(-\frac{2}{5}z-\frac{3}{2}\right)\amp=\multiplyleft{10}\left(-\frac{1}{2}z+\frac{4}{5}\right)</mrow>
-                        <mrow>10\left(-\frac{2}{5}z\right)-10\left(\frac{3}{2}\right)\amp=10\left(-\frac{1}{2}z\right)+10\left(\frac{4}{5}\right)</mrow>
-                        <mrow>-4z-15\amp=-5z+8</mrow>
-                        <mrow>z-15\amp=8</mrow>
-                        <mrow>z\amp=23</mrow>
-                    </md>
-                    </p>
-                    <p permid="cAf">Checking the solution <m>23</m>:
-                    <md permid="DBW">
-                        <mrow>-\frac{2}{5}z-\frac{3}{2}\amp=-\frac{1}{2}z+\frac{4}{5}</mrow>
-                        <mrow>-\frac{2}{5}(\substitute{23})-\frac{3}{2}\amp\stackrel{?}{=}-\frac{1}{2}(\substitute{23})+\frac{4}{5}</mrow>
-                        <mrow>-\frac{46}{5}-\frac{3}{2}\amp\stackrel{?}{=}-\frac{23}{2}+\frac{4}{5}</mrow>
-                        <mrow>-\frac{46}{5}\cdot\frac{2}{2}-\frac{3}{2}\cdot\frac{5}{5}\amp\stackrel{?}{=}-\frac{23}{2}\cdot\frac{5}{5}+\frac{4}{5}\cdot\frac{2}{2}</mrow>
-                        <mrow>-\frac{92}{10}-\frac{15}{10}\amp\stackrel{?}{=}-\frac{115}{10}+\frac{8}{10}</mrow>
-                        <mrow>-\frac{107}{10}\amp\stackrel{\checkmark}{=}-\frac{107}{10}</mrow>
-                    </md>
-                    </p>
-                </sidebyside>
-                <p permid="IHo">Thus, the solution is <m>23</m> and so the solution set is <m>\{23\}</m>.</p>
-            </solution>
-        </example>
-
-        <example permid="gAe">
-            <statement>
-                <p permid="EHp">Solve for <m>a</m> in the equation <m>\frac{2}{3}(a+1)+5=\frac{1}{3}</m>.</p>
-            </statement>
-            <solution permid="mZk">
-                <sidebyside widths="47% 47%" margins="0%" permid="dFy">
-                    <p permid="oOx"><md permid="jJf">
-                        <mrow>\frac{2}{3}(a+1)+5\amp=\frac{1}{3}</mrow>
-                        <mrow>\multiplyleft{3}\left(\frac{2}{3}(a+1)+5\right)\amp=\multiplyleft{3}\frac{1}{3}</mrow>
-                        <mrow>3\cdot\frac{2}{3}(a+1)+3\cdot5\amp=1</mrow>
-                        <mrow>2(a+1)+15\amp=1</mrow>
-                        <mrow>2a+2+15\amp=1</mrow>
-                        <mrow>2a+17\amp=1</mrow>
-                        <mrow>2a\amp=-16</mrow>
-                        <mrow>a\amp=-8</mrow>
-                    </md></p>
-                    <p permid="UVG">Check the solution <m>-8</m> in the equation <m>\frac{2}{3}(a+1)+5=\frac{1}{3}</m>, we find that:<md permid="PQo">
-                        <mrow>\frac{2}{3}(a+1)+5\amp=\frac{1}{3}</mrow>
-                        <mrow>\frac{2}{3}(\substitute{-8}+1)+5\amp\stackrel{?}{=}\frac{1}{3}</mrow>
-                        <mrow>\frac{2}{3}(-7)+5\amp\stackrel{?}{=}\frac{1}{3}</mrow>
-                        <mrow>-\frac{14}{3}+\frac{15}{3}\amp\stackrel{\checkmark}{=}\frac{1}{3}</mrow>
-                    </md></p>
-                </sidebyside>
-
-                <p permid="BcP">The solution is therefore <m>-8</m> and the solution set is <m>\{-8\}</m>.</p>
-            </solution>
-        </example>
-
-        <example xml:id="example-cross-multiply-showing-LCD" permid="MHn">
-            <statement>
-                <p permid="kOy">Solve for <m>b</m> in the equation <m>\frac{2b+1}{3}=\frac{2}{5}</m>.</p>
-            </statement>
-            <solution permid="Tgt">
-                <sidebyside widths="47% 47%" margins="0%" permid="JMH">
-                    <p permid="hjY"><md permid="vXx">
-                        <mrow>\frac{2b+1}{3}\amp=\frac{2}{5}</mrow>
-                        <mrow>\multiplyleft{15}\frac{2b+1}{3}\amp=\multiplyleft{15}\frac{2}{5}</mrow>
-                        <mrow>5(2b+1)\amp=6</mrow>
-                        <mrow>10b+5\amp=6</mrow>
-                        <mrow>10b\amp=1</mrow>
-                        <mrow>b\amp=\frac{1}{10}</mrow>
-                    </md></p>
-                    <p permid="Nrh">Checking the solution <m>\frac{1}{10}</m>:<md permid="ceG">
-                        <mrow>\frac{2b+1}{3}\amp=\frac{2}{5}</mrow>
-                        <mrow>\frac{2\left(\substitute{\frac{1}{10}}\right)+1}{3}\amp\stackrel{?}{=}\frac{2}{5}</mrow>
-                        <mrow>\frac{\frac{1}{5}+1}{3}\amp\stackrel{?}{=}\frac{2}{5}</mrow>
-                        <mrow>\frac{\frac{1}{5}+\frac{5}{5}}{3}\amp\stackrel{?}{=}\frac{2}{5}</mrow>
-                        <mrow>\frac{\frac{6}{5}}{3}\amp\stackrel{?}{=}\frac{2}{5}</mrow>
-                        <mrow>\frac{6}{5}\cdot \frac{1}{3}\amp\stackrel{\checkmark}{=}\frac{2}{5}</mrow>
-                    </md></p>
-                </sidebyside>
-
-                <p permid="tyq">The solution is <m>\frac{1}{10}</m> and the solution set is <m>\left\{\frac{1}{10}\right\}</m>.</p>
-            </solution>
-        </example>
-
-        <remark permid="YVF">
-            <p permid="pyr">You might know about solving <xref ref="example-cross-multiply-showing-LCD">Example</xref> with a technique called <term>cross-multiplication</term>. Cross-multiplication is a specialized application of the process of clearing the denominators from an equation.  This process will be discussed in <xref ref="section-ratios-and-proportions">Section</xref>.</p>
+<cell><m>3</m></cell>
+<cell><m>\frac{2}{3}\cdot3+4=6</m></cell>
+</row> -->
+          <row>
+            <cell><m>\vdots</m></cell>
+            <cell><m>\vdots</m></cell>
+          </row>
+          <row>
+            <cell><m>y</m></cell>
+            <cell><m>4+\frac{2}{3}y</m></cell>
+          </row>
+        </tabular>
+      </sidebyside>
+      <p permid="TQn">
+        From this, we've determined that <m>y</m> years since the tree was planted,
+        the tree's height will be <m>4+\frac{2}{3}y</m> feet.
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="ljX">
+        <p permid="zXw">
+          To find when Deshawn's tree will be <m>10</m> feet tall,
+          we write and solve this equation:
+          <md permid="ySd">
+            <mrow>4+\frac{2}{3}y\amp=10</mrow>
+            <mrow>\multiplyleft{3}\left(4+\frac{2}{3}y\right)\amp=\multiplyleft{3}10</mrow>
+            <mrow>3\cdot4+3\cdot\frac{2}{3}y\amp=30</mrow>
+            <mrow>12+2y\amp=30</mrow>
+            <mrow>2y\amp=18</mrow>
+            <mrow>y\amp=9</mrow>
+          </md>
+        </p>
+        <p permid="geF">
+          Now we will check the solution <m>9</m> in the equation <m>4+\frac{2}{3}y=10</m>:
+          <md permid="eZm">
+            <mrow>4+\frac{2}{3}y\amp=10</mrow>
+            <mrow>4+\frac{2}{3}(\substitute{9})\amp\stackrel{?}{=}10</mrow>
+            <mrow>4+6\amp\stackrel{\checkmark}{=}10</mrow>
+          </md>
+        </p>
+      </sidebyside>
+      <p permid="MlO">
+        In summary, it will take <m>9</m> years for Deshawn's tree to reach <m>10</m> feet tall.
+      </p>
+    </example>
+    <p permid="uik">
+      Let's look at a few more examples.
+    </p>
+    <example permid="UlM">
+      <statement>
+        <p permid="ssX">
+          Solve for <m>x</m> in <m>\frac{1}{4}x+\frac{2}{3}=\frac{1}{6}</m>.
+        </p>
+      </statement>
+      <solution permid="aKS">
+        <p permid="XQm">
+          To solve this equation,
+          we first need to identify the LCD of all fractions in the equation.
+          On the left side we have <m>\frac{1}{4}</m> and <m>\frac{2}{3}</m>.
+          On the right side we have <m>\frac{1}{6}</m>.
+          The LCD of <m>3, 4</m>, and <m>6</m> is <m>12</m>,
+          so we will multiply each side of the equation by <m>12</m> in order to eliminate
+          <em>all</em> of the denominators:
+        </p>
+        <sidebyside widths="47% 47%" margins="0%" permid="Rrg">
+          <p permid="DXv">
+            <md permid="Lgv">
+              <mrow>\frac{1}{4}x+\frac{2}{3}\amp=\frac{1}{6}</mrow>
+              <mrow>\multiplyleft{12}\left(\frac{1}{4}x+\frac{2}{3}\right)\amp=\multiplyleft{12}\frac{1}{6}</mrow>
+              <mrow>12\cdot\left(\frac{1}{4}x\right)+12\cdot\left(\frac{2}{3}\right)\amp=12\cdot\frac{1}{6}</mrow>
+              <mrow>3x+8\amp=2</mrow>
+              <mrow>3x\amp=-6</mrow>
+              <mrow>\divideunder{3x}{3}\amp=\divideunder{-6}{3}</mrow>
+              <mrow>x\amp=-2</mrow>
+            </md>
+          </p>
+          <p permid="keE">
+            Checking the solution <m>-2</m>:
+            <md permid="rnE">
+              <mrow>\frac{1}{4}x+\frac{2}{3}\amp=\frac{1}{6}</mrow>
+              <mrow>\frac{1}{4}(\substitute{-2})+\frac{2}{3}\amp\stackrel{?}{=}\frac{1}{6}</mrow>
+              <mrow>-\frac{2}{4}+\frac{2}{3}\amp\stackrel{?}{=}\frac{1}{6}</mrow>
+              <mrow>-\frac{6}{12}+\frac{8}{12}\amp\stackrel{?}{=}\frac{1}{6}</mrow>
+              <mrow>\frac{2}{12}\amp\stackrel{\checkmark}{=}\frac{1}{6}</mrow>
+            </md>
+          </p>
+        </sidebyside>
+        <p permid="QlN">
+          The solution is therefore <m>-2</m> and the solution set is <m>\{-2\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="AsV">
+      <statement>
+        <p permid="YAg">
+          Solve for <m>z</m> in <m>-\frac{2}{5}z-\frac{3}{2}=-\frac{1}{2}z+\frac{4}{5}</m>.
+        </p>
+      </statement>
+      <solution permid="GSb">
+        <sidebyside widths="47% 47%" margins="0%" permid="xyp">
+          <p permid="wsW">
+            The first thing we need to do is identify the LCD of all denominators in this equation.
+            Since the denominators are <m>2</m> and <m>5</m>, the LCD is <m>10</m>.
+            So as our first step,
+            we will multiply each side of the equation by <m>10</m> in order to eliminate all denominators:
+            <md permid="XuN">
+              <mrow>-\frac{2}{5}z-\frac{3}{2}\amp=-\frac{1}{2}z+\frac{4}{5}</mrow>
+              <mrow>\multiplyleft{10}\left(-\frac{2}{5}z-\frac{3}{2}\right)\amp=\multiplyleft{10}\left(-\frac{1}{2}z+\frac{4}{5}\right)</mrow>
+              <mrow>10\left(-\frac{2}{5}z\right)-10\left(\frac{3}{2}\right)\amp=10\left(-\frac{1}{2}z\right)+10\left(\frac{4}{5}\right)</mrow>
+              <mrow>-4z-15\amp=-5z+8</mrow>
+              <mrow>z-15\amp=8</mrow>
+              <mrow>z\amp=23</mrow>
+            </md>
+          </p>
+          <p permid="cAf">
+            Checking the solution <m>23</m>:
+            <md permid="DBW">
+              <mrow>-\frac{2}{5}z-\frac{3}{2}\amp=-\frac{1}{2}z+\frac{4}{5}</mrow>
+              <mrow>-\frac{2}{5}(\substitute{23})-\frac{3}{2}\amp\stackrel{?}{=}-\frac{1}{2}(\substitute{23})+\frac{4}{5}</mrow>
+              <mrow>-\frac{46}{5}-\frac{3}{2}\amp\stackrel{?}{=}-\frac{23}{2}+\frac{4}{5}</mrow>
+              <mrow>-\frac{46}{5}\cdot\frac{2}{2}-\frac{3}{2}\cdot\frac{5}{5}\amp\stackrel{?}{=}-\frac{23}{2}\cdot\frac{5}{5}+\frac{4}{5}\cdot\frac{2}{2}</mrow>
+              <mrow>-\frac{92}{10}-\frac{15}{10}\amp\stackrel{?}{=}-\frac{115}{10}+\frac{8}{10}</mrow>
+              <mrow>-\frac{107}{10}\amp\stackrel{\checkmark}{=}-\frac{107}{10}</mrow>
+            </md>
+          </p>
+        </sidebyside>
+        <p permid="IHo">
+          Thus, the solution is <m>23</m> and so the solution set is <m>\{23\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="gAe">
+      <statement>
+        <p permid="EHp">
+          Solve for <m>a</m> in the equation <m>\frac{2}{3}(a+1)+5=\frac{1}{3}</m>.
+        </p>
+      </statement>
+      <solution permid="mZk">
+        <sidebyside widths="47% 47%" margins="0%" permid="dFy">
+          <p permid="oOx">
+            <md permid="jJf">
+              <mrow>\frac{2}{3}(a+1)+5\amp=\frac{1}{3}</mrow>
+              <mrow>\multiplyleft{3}\left(\frac{2}{3}(a+1)+5\right)\amp=\multiplyleft{3}\frac{1}{3}</mrow>
+              <mrow>3\cdot\frac{2}{3}(a+1)+3\cdot5\amp=1</mrow>
+              <mrow>2(a+1)+15\amp=1</mrow>
+              <mrow>2a+2+15\amp=1</mrow>
+              <mrow>2a+17\amp=1</mrow>
+              <mrow>2a\amp=-16</mrow>
+              <mrow>a\amp=-8</mrow>
+            </md>
+          </p>
+          <p permid="UVG">
+            Check the solution <m>-8</m> in the equation <m>\frac{2}{3}(a+1)+5=\frac{1}{3}</m>,
+            we find that:
+            <md permid="PQo">
+              <mrow>\frac{2}{3}(a+1)+5\amp=\frac{1}{3}</mrow>
+              <mrow>\frac{2}{3}(\substitute{-8}+1)+5\amp\stackrel{?}{=}\frac{1}{3}</mrow>
+              <mrow>\frac{2}{3}(-7)+5\amp\stackrel{?}{=}\frac{1}{3}</mrow>
+              <mrow>-\frac{14}{3}+\frac{15}{3}\amp\stackrel{\checkmark}{=}\frac{1}{3}</mrow>
+            </md>
+          </p>
+        </sidebyside>
+        <p permid="BcP">
+          The solution is therefore <m>-8</m> and the solution set is <m>\{-8\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example xml:id="example-cross-multiply-showing-LCD" permid="MHn">
+      <statement>
+        <p permid="kOy">
+          Solve for <m>b</m> in the equation <m>\frac{2b+1}{3}=\frac{2}{5}</m>.
+        </p>
+      </statement>
+      <solution permid="Tgt">
+        <sidebyside widths="47% 47%" margins="0%" permid="JMH">
+          <p permid="hjY">
+            <md permid="vXx">
+              <mrow>\frac{2b+1}{3}\amp=\frac{2}{5}</mrow>
+              <mrow>\multiplyleft{15}\frac{2b+1}{3}\amp=\multiplyleft{15}\frac{2}{5}</mrow>
+              <mrow>5(2b+1)\amp=6</mrow>
+              <mrow>10b+5\amp=6</mrow>
+              <mrow>10b\amp=1</mrow>
+              <mrow>b\amp=\frac{1}{10}</mrow>
+            </md>
+          </p>
+          <p permid="Nrh">
+            Checking the solution <m>\frac{1}{10}</m>:
+            <md permid="ceG">
+              <mrow>\frac{2b+1}{3}\amp=\frac{2}{5}</mrow>
+              <mrow>\frac{2\left(\substitute{\frac{1}{10}}\right)+1}{3}\amp\stackrel{?}{=}\frac{2}{5}</mrow>
+              <mrow>\frac{\frac{1}{5}+1}{3}\amp\stackrel{?}{=}\frac{2}{5}</mrow>
+              <mrow>\frac{\frac{1}{5}+\frac{5}{5}}{3}\amp\stackrel{?}{=}\frac{2}{5}</mrow>
+              <mrow>\frac{\frac{6}{5}}{3}\amp\stackrel{?}{=}\frac{2}{5}</mrow>
+              <mrow>\frac{6}{5}\cdot \frac{1}{3}\amp\stackrel{\checkmark}{=}\frac{2}{5}</mrow>
+            </md>
+          </p>
+        </sidebyside>
+        <p permid="tyq">
+          The solution is <m>\frac{1}{10}</m> and the solution set is <m>\left\{\frac{1}{10}\right\}</m>.
+        </p>
+      </solution>
+    </example>
+    <remark permid="YVF">
+      <p permid="pyr">
+        You might know about solving <xref ref="example-cross-multiply-showing-LCD">Example</xref>
+        with a technique called <term>cross-multiplication</term>.
+        Cross-multiplication is a specialized application of the process of clearing the denominators from an equation.
+        This process will be discussed in <xref ref="section-ratios-and-proportions">Section</xref>.
+      </p>
 <!--
-            <p>With this property, we can go from <m>\frac{2b+1}{3}=\frac{2}{5}</m> directly to <m>(2b+1)\cdot5=3\cdot2</m>, saving the second step. This property can be verified using the same process of eliminating the denominator by multiplying each side of the equation by the LCD (which in this case is <m>bd</m>):
-                <md>
-                    <mrow>\frac{a}{b}\amp=\frac{c}{d}</mrow>
-                    <mrow>\multiplyleft{bd}\frac{a}{b}\amp=\multiplyleft{bd}\frac{c}{d}</mrow>
-                    <mrow>ad\amp=bc</mrow>
-                </md>
-            </p>
-
-            <p>On the left side, if we consider the fraction line as the division symbol, we have <m>b\div b=1</m>. In other words, those two <m>b</m>'s canceled. Similarly, those two <m>d</m>'s on the right side also canceled.</p>
- --></remark>
-
-        <example permid="sOw">
-            <statement>
-                <p permid="QVH">In a science lab, a container had <m>21</m> ounces of water at 9:00<nbsp/><am/>. Water has been evaporating at the rate of <m>3</m> ounces every <m>5</m> minutes. When will there be <m>8</m> ounces of water left?</p>
-            </statement>
-            <solution permid="znC">
-                <p permid="ZFz">Since the container has been losing <m>3</m> oz of water every <m>5</m> minutes, it loses <m>\frac{3}{5}</m> oz every minute. In <m>m</m> minutes since 9:00<nbsp/><am/>, the container would lose <m>\frac{3}{5}m</m> oz of water. Since the container had <m>21</m> oz of water at the beginning, the amount of water in the container can be modeled by <m>21-\frac{3}{5}m</m> (in oz).</p>
-                <sidebyside widths="47% 47%" margins="0%" permid="pTQ">
-
-                    <p permid="FMI">To find when there would be <m>8</m> oz of water left, we write and solve this equation:
-                        <md permid="IlP">
-                            <mrow>21-\frac{3}{5}m\amp=8</mrow>
-                            <mrow>\multiplyleft{5}\left(21-\frac{3}{5}x\right)\amp=\multiplyleft{5}8</mrow>
-                            <mrow>5\cdot21-5\cdot\frac{3}{5}x\amp=40</mrow>
-                            <mrow>105-3m\amp=40</mrow>
-                            <mrow>105-3m\subtractright{105}\amp=40\subtractright{105}</mrow>
-                            <mrow>-3m\amp=-65</mrow>
-                            <mrow>\divideunder{-3m}{-3}\amp=\divideunder{-65}{-3}</mrow>
-                            <mrow>m\amp=\frac{65}{3}</mrow>
-                        </md>
-                    </p>
-                    <p permid="lTR">Checking the solution <m>\frac{65}{3}</m>:
-                        <md permid="osY">
-                            <mrow>21-\frac{3}{5}m\amp=8</mrow>
-                            <mrow>21-\frac{3}{5}\left(\substitute{\frac{65}{3}}\right)\amp\stackrel{?}{=}8</mrow>
-                            <mrow>21-13\amp\stackrel{\checkmark}{=}8</mrow>
-                        </md>
-                    </p>
-                </sidebyside>
-
-
-                <p permid="Sba">Therefore, the solution is <m>\frac{65}{3}</m>. As a mixed number, this is <m>21\frac{2}{3}</m>. In context, this means that <m>21</m> minutes and <m>40</m> seconds after 9:00<nbsp/><am/>, at 9:21:40<nbsp/><am/>, the container will have <m>8</m> ounces of water left.</p>
-
-            </solution>
-        </example>
-
-        <exercise permid="WaZ">
-            <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction290.pg" />
-        </exercise>
-    </subsection>
-
-    <subsection permid="VcK">
-        <title>Solving Inequalities with Fractions</title>
-
-        <p permid="apt">We can also solve linear inequalities involving fractions by multiplying each side of the inequality by the LCD of all fractions within the inequality. Remember that with inequalities, everything works exactly the same except that the inequality sign reverses direction whenever we multiply each side of the inequality by a negative number.</p>
-
-        <example permid="Cii">
-            <statement>
-                <p permid="xcQ">Solve for <m>x</m> in the inequality <m>\frac{3}{4}x-2\gt\frac{4}{5}x</m>. Write the solution set in both set-builder notation and interval notation.</p>
-            </statement>
-            <solution permid="fuL">
-                <p permid="yij">
-                    <md permid="UAh">
-                        <mrow>\frac{3}{4}x-2\amp\gt\frac{4}{5}x</mrow>
-                        <mrow>\multiplyleft{20}\left(\frac{3}{4}x-2\right)\amp\gt\multiplyleft{20}\frac{4}{5}x</mrow>
-                        <mrow>20\cdot\frac{3}{4}x-20\cdot2\amp\gt16x</mrow>
-                        <mrow>15x-40\amp\gt16x</mrow>
-                        <mrow>15x-40\subtractright{15x}\amp\gt16x\subtractright{15x}</mrow>
-                        <mrow>-40\amp\gt x</mrow>
-                        <mrow>x\amp\lt-40</mrow>
-                    </md>
-                </p>
-
-                <p permid="eps">The solution set in set-builder notation is <m>\{x\mid x\lt-40\}</m>. Note that it's equivalent to write <m>\{x\mid-40\gt x\}</m>, but it's easier to understand if we write <m>x</m> first in an inequality.</p>
-                <p permid="KwB">The solution set in interval notation is <m>(-\infty,-40)</m>.</p>
-            </solution>
-        </example>
-
-        <example permid="ipr">
-            <statement>
-                <p permid="djZ">Solve for <m>y</m> in the inequality <m>\frac{4}{7}-\frac{4}{3}y\le\frac{2}{3}</m>. Write the solution set in both set-builder notation and interval notation.</p>
-            </statement>
-            <solution permid="LBU">
-                <p permid="qDK">
-                    <md permid="AHq">
-                        <mrow>\frac{4}{7}-\frac{4}{3}y\amp\le\frac{2}{3}</mrow>
-                        <mrow>\multiplyleft{21}\left(\frac{4}{7}-\frac{4}{3}y\right)\amp\le\multiplyleft{21}\left(\frac{2}{3}\right)</mrow>
-                        <mrow>21\left(\frac{4}{7}\right)-21\left(\frac{4}{3}y\right)\amp\le21\left(\frac{2}{3}\right)</mrow>
-                        <mrow>12-28y\amp\le14</mrow>
-                        <mrow>-28y\amp\le2</mrow>
-                        <mrow>\divideunder{-28y}{-28}\amp\ge\divideunder{2}{-28}</mrow>
-                        <mrow>y\amp\ge-\frac{1}{14}</mrow>
-                    </md>
-                </p>
-
-                <p permid="WKT">Note that when we divided each side of the inequality by <m>-28</m>, the inequality symbol reversed direction.</p>
-                <p permid="CSc">The solution set in set-builder notation is <m>\left\{y\mid y\ge-\frac{1}{14}\right\}</m>.</p>
-                <p permid="iZl">The solution set in interval notation is <m>\left[-\frac{1}{14},\infty\right)</m>.</p>
-            </solution>
-        </example>
-
-        <example permid="OwA">
-            <statement>
-                <p permid="Jri">In a certain class, a student's grade is calculated by the average of their scores on 3 tests. Aidan scored <m>78\%</m> and <m>54\%</m> on the first two tests. If he wants to earn at least a grade of C <m>(70\%)</m>, what's the lowest score he needs to earn on the third exam?</p>
-            </statement>
-            <solution permid="rJd">
-                <p permid="Pgu">Assume Aidan will score <m>x\%</m> on the third test. To make his average test score greater than or equal to <m>70\%</m>, we write and solve this inequality:
-                    <md permid="gOz">
-                        <mrow>\frac{78+54+x}{3}\amp\ge70</mrow>
-                        <mrow>\frac{132+x}{3}\amp\ge70</mrow>
-                        <mrow>\multiplyleft{3}\frac{132+x}{3}\amp\ge\multiplyleft{3}70</mrow>
-                        <mrow>132+x\amp\ge210</mrow>
-                        <mrow>x\amp\ge78</mrow>
-                    </md>
-                </p>
-
-                <p permid="vnD">To earn at least a C grade, Aidan needs to score at least <m>78\%</m> on the third test.</p>
-            </solution>
-        </example>
-
-    </subsection>
-
-    <exercises permid="BjT">
-        <exercisegroup cols="3" permid="hrc">
-            <title>Review and Warmup</title>
-            <exercise permid="eww">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
-            </exercise>
-            <exercise permid="KDF">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
-            </exercise>
-            <exercise permid="qKO">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
-            </exercise>
-            <exercise permid="WRX">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
-            </exercise>
-            <exercise permid="CZg">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg"  />
-            </exercise>
-            <exercise permid="jgp">
-                <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg"  />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="4" permid="Nyl">
-            <title>Solving Linear Equations with Fractions</title>
-            <exercise permid="Pny">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction05.pg" />
-            </exercise>
-            <exercise permid="vuH">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction05.pg" />
-            </exercise>
-            <exercise permid="bBQ">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction10.pg" />
-            </exercise>
-            <exercise permid="HIZ">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction10.pg" />
-            </exercise>
-            <exercise permid="nQi">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction30.pg" />
-            </exercise>
-            <exercise permid="TXr">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction30.pg" />
-            </exercise>
-            <exercise permid="AeA">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction40.pg" />
-            </exercise>
-            <exercise permid="glJ">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction40.pg" />
-            </exercise>
-            <exercise permid="MsS">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction50.pg" />
-            </exercise>
-            <exercise permid="sAb">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction50.pg" />
-            </exercise>
-            <exercise permid="YHk">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction60.pg" />
-            </exercise>
-            <exercise permid="EOt">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction60.pg" />
-            </exercise>
-            <exercise permid="kVC">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction70.pg" />
-            </exercise>
-            <exercise permid="RcL">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction70.pg" />
-            </exercise>
-            <exercise permid="xjU">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction80.pg" />
-            </exercise>
-            <exercise permid="drd">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction80.pg" />
-            </exercise>
-            <exercise permid="Jym">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg" />
-            </exercise>
-            <exercise permid="pFv">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg" />
-            </exercise>
-            <exercise permid="VME">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg" />
-            </exercise>
-            <exercise permid="BTN">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg" />
-            </exercise>
-            <exercise permid="iaW">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction110.pg" />
-            </exercise>
-            <exercise permid="Oif">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction110.pg" />
-            </exercise>
-            <exercise permid="upo">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction120.pg" />
-            </exercise>
-            <exercise permid="awx">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction120.pg" />
-            </exercise>
-            <exercise permid="GDG">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction130.pg" />
-            </exercise>
-            <exercise permid="mKP">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction130.pg" />
-            </exercise>
-            <exercise permid="SRY">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction140.pg" />
-            </exercise>
-            <exercise permid="yZh">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction140.pg" />
-            </exercise>
-            <exercise permid="fgq">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction150.pg" />
-            </exercise>
-            <exercise permid="Lnz">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction150.pg" />
-            </exercise>
-            <exercise permid="ruI">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction160.pg" />
-            </exercise>
-            <exercise permid="XBR">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction160.pg" />
-            </exercise>
-            <exercise permid="DJa">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction170.pg" />
-            </exercise>
-            <exercise permid="jQj">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction170.pg" />
-            </exercise>
-            <exercise permid="PXs">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction180.pg" />
-            </exercise>
-            <exercise permid="weB">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction180.pg" />
-            </exercise>
-            <exercise permid="clK">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction190.pg" />
-            </exercise>
-            <exercise permid="IsT">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction190.pg" />
-            </exercise>
-            <exercise permid="oAc">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction200.pg" />
-            </exercise>
-            <exercise permid="UHl">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction200.pg" />
-            </exercise>
-            <exercise permid="AOu">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction210.pg" />
-            </exercise>
-            <exercise permid="gVD">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction210.pg" />
-            </exercise>
-            <exercise permid="NcM">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction220.pg" />
-            </exercise>
-            <exercise permid="tjV">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction220.pg" />
-            </exercise>
-            <exercise permid="Zre">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction230.pg" />
-            </exercise>
-            <exercise permid="Fyn">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction230.pg" />
-            </exercise>
-            <exercise permid="lFw">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction240.pg" />
-            </exercise>
-            <exercise permid="RMF">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction240.pg" />
-            </exercise>
-            <exercise permid="xTO">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction250.pg" />
-            </exercise>
-            <exercise permid="eaX">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction250.pg" />
-            </exercise>
-            <exercise permid="Kig">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction260.pg" />
-            </exercise>
-            <exercise permid="qpp">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction260.pg" />
-            </exercise>
-            <exercise permid="Wwy">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction270.pg" />
-            </exercise>
-            <exercise permid="CDH">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction270.pg" />
-            </exercise>
-            <exercise permid="iKQ">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction300.pg" />
-            </exercise>
-            <exercise permid="ORZ">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction300.pg" />
-            </exercise>
-            <exercise permid="uZi">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction310.pg" />
-            </exercise>
-            <exercise permid="bgr">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction310.pg" />
-            </exercise>
-            <exercise permid="HnA">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction330.pg" />
-            </exercise>
-            <exercise permid="nuJ">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction330.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="3" permid="tFu">
-            <exercise permid="TBS">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction280.pg" />
-            </exercise>
-            <exercise permid="zJb">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction280.pg" />
-            </exercise>
-            <exercise permid="fQk">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction290.pg" />
-            </exercise>
-            <exercise permid="LXt">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction290.pg" />
-            </exercise>
-            <exercise permid="seC">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction340.pg" />
-            </exercise>
-            <exercise permid="YlL">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction340.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="ZMD">
-            <exercise permid="EsU">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction340.pg" />
-            </exercise>
-            <exercise permid="kAd">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction340.pg" />
-            </exercise>
-            <exercise permid="QHm">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction20.pg" />
-            </exercise>
-            <exercise permid="wOv">
-                <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction20.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup permid="FTM">
-            <title>Applications</title>
-            <exercise permid="cVE">
-                <webwork source="BasicAlgebra/LinearEquationApplications/FractionLinearApplication10.pg" />
-            </exercise>
-            <exercise permid="JcN">
-                <webwork source="BasicAlgebra/LinearEquationApplications/FractionLinearApplication20.pg" />
-            </exercise>
-            <exercise permid="pjW">
-                <webwork source="BasicAlgebra/LinearEquationApplications/FractionLinearApplication30.pg" />
-            </exercise>
-            <exercise permid="Vrf">
-                <webwork source="BasicAlgebra/LinearEquationApplications/FractionLinearApplication40.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="3" permid="maV">
-            <title>Solving Inequalities with Fractions</title>
-            <exercise permid="Byo">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction10.pg" />
-            </exercise>
-            <exercise permid="hFx">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction10.pg" />
-            </exercise>
-            <exercise permid="NMG">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction20.pg" />
-            </exercise>
-            <exercise permid="tTP">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction20.pg" />
-            </exercise>
-            <exercise permid="aaY">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction30.pg" />
-            </exercise>
-            <exercise permid="Gih">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction30.pg" />
-            </exercise>
-            <exercise permid="mpq">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction40.pg" />
-            </exercise>
-            <exercise permid="Swz">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction40.pg" />
-            </exercise>
-            <exercise permid="yDI">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction50.pg" />
-            </exercise>
-            <exercise permid="eKR">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction50.pg" />
-            </exercise>
-            <exercise permid="KSa">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction60.pg" />
-            </exercise>
-            <exercise permid="qZj">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction60.pg" />
-            </exercise>
-            <exercise permid="Xgs">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction70.pg" />
-            </exercise>
-            <exercise permid="DnB">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction70.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="Sie">
-            <exercise permid="juK">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction80.pg" />
-            </exercise>
-            <exercise permid="PBT">
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction80.pg" />
-            </exercise>
-
-        </exercisegroup>
-        <exercisegroup permid="ypn">
-            <title>Applications</title>
-            <exercise permid="vJc">
-                <webwork source="BasicAlgebra/LinearInequalities/InequalityWordProblem20.pg" />
-            </exercise>
-            <exercise permid="bQl">
-                <webwork source="BasicAlgebra/LinearInequalities/InequalityWordProblem20.pg" />
-            </exercise>
-        </exercisegroup>
-    </exercises>
-
+<p>With this property, we can go from <m>\frac{2b+1}{3}=\frac{2}{5}</m> directly to <m>(2b+1)\cdot5=3\cdot2</m>, saving the second step. This property can be verified using the same process of eliminating the denominator by multiplying each side of the equation by the LCD (which in this case is <m>bd</m>): <md> <mrow>\frac{a}{b}\amp=\frac{c}{d}</mrow> <mrow>\multiplyleft{bd}\frac{a}{b}\amp=\multiplyleft{bd}\frac{c}{d}</mrow> <mrow>ad\amp=bc</mrow> </md> </p>
+<p>On the left side, if we consider the fraction line as the division symbol, we have <m>b\div b=1</m>. In other words, those two <m>b</m>'s canceled. Similarly, those two <m>d</m>'s on the right side also canceled.</p>
+-->
+    </remark>
+    <example permid="sOw">
+      <statement>
+        <p permid="QVH">
+          In a science lab,
+          a container had <m>21</m> ounces of water at 9:00<nbsp/><am/>.
+          Water has been evaporating at the rate of <m>3</m> ounces every <m>5</m> minutes.
+          When will there be <m>8</m> ounces of water left?
+        </p>
+      </statement>
+      <solution permid="znC">
+        <p permid="ZFz">
+          Since the container has been losing <m>3</m> oz of water every <m>5</m> minutes,
+          it loses <m>\frac{3}{5}</m> oz every minute.
+          In <m>m</m> minutes since 9:00<nbsp/><am/>,
+          the container would lose <m>\frac{3}{5}m</m> oz of water.
+          Since the container had <m>21</m> oz of water at the beginning,
+          the amount of water in the container can be modeled by <m>21-\frac{3}{5}m</m>
+          (in oz).
+        </p>
+        <sidebyside widths="47% 47%" margins="0%" permid="pTQ">
+          <p permid="FMI">
+            To find when there would be <m>8</m> oz of water left,
+            we write and solve this equation:
+            <md permid="IlP">
+              <mrow>21-\frac{3}{5}m\amp=8</mrow>
+              <mrow>\multiplyleft{5}\left(21-\frac{3}{5}x\right)\amp=\multiplyleft{5}8</mrow>
+              <mrow>5\cdot21-5\cdot\frac{3}{5}x\amp=40</mrow>
+              <mrow>105-3m\amp=40</mrow>
+              <mrow>105-3m\subtractright{105}\amp=40\subtractright{105}</mrow>
+              <mrow>-3m\amp=-65</mrow>
+              <mrow>\divideunder{-3m}{-3}\amp=\divideunder{-65}{-3}</mrow>
+              <mrow>m\amp=\frac{65}{3}</mrow>
+            </md>
+          </p>
+          <p permid="lTR">
+            Checking the solution <m>\frac{65}{3}</m>:
+            <md permid="osY">
+              <mrow>21-\frac{3}{5}m\amp=8</mrow>
+              <mrow>21-\frac{3}{5}\left(\substitute{\frac{65}{3}}\right)\amp\stackrel{?}{=}8</mrow>
+              <mrow>21-13\amp\stackrel{\checkmark}{=}8</mrow>
+            </md>
+          </p>
+        </sidebyside>
+        <p permid="Sba">
+          Therefore, the solution is <m>\frac{65}{3}</m>.
+          As a mixed number, this is <m>21\frac{2}{3}</m>.
+          In context, this means that <m>21</m> minutes and <m>40</m> seconds after 9:00<nbsp/><am/>, at 9:21:40<nbsp/><am/>,
+          the container will have <m>8</m> ounces of water left.
+        </p>
+      </solution>
+    </example>
+    <exercise permid="WaZ">
+      <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction290.pg" />
+    </exercise>
+  </subsection>
+  <subsection permid="VcK">
+    <title>Solving Inequalities with Fractions</title>
+    <p permid="apt">
+      We can also solve linear inequalities involving fractions by multiplying each side of the inequality by the LCD of all fractions within the inequality.
+      Remember that with inequalities,
+      everything works exactly the same except that the inequality sign reverses direction whenever we multiply each side of the inequality by a negative number.
+    </p>
+    <example permid="Cii">
+      <statement>
+        <p permid="xcQ">
+          Solve for <m>x</m> in the inequality <m>\frac{3}{4}x-2\gt\frac{4}{5}x</m>.
+          Write the solution set in both set-builder notation and interval notation.
+        </p>
+      </statement>
+      <solution permid="fuL">
+        <p permid="yij">
+          <md permid="UAh">
+            <mrow>\frac{3}{4}x-2\amp\gt\frac{4}{5}x</mrow>
+            <mrow>\multiplyleft{20}\left(\frac{3}{4}x-2\right)\amp\gt\multiplyleft{20}\frac{4}{5}x</mrow>
+            <mrow>20\cdot\frac{3}{4}x-20\cdot2\amp\gt16x</mrow>
+            <mrow>15x-40\amp\gt16x</mrow>
+            <mrow>15x-40\subtractright{15x}\amp\gt16x\subtractright{15x}</mrow>
+            <mrow>-40\amp\gt x</mrow>
+            <mrow>x\amp\lt-40</mrow>
+          </md>
+        </p>
+        <p permid="eps">
+          The solution set in set-builder notation is <m>\{x\mid x\lt-40\}</m>.
+          Note that it's equivalent to write <m>\{x\mid-40\gt x\}</m>,
+          but it's easier to understand if we write <m>x</m> first in an inequality.
+        </p>
+        <p permid="KwB">
+          The solution set in interval notation is <m>(-\infty,-40)</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="ipr">
+      <statement>
+        <p permid="djZ">
+          Solve for <m>y</m> in the inequality <m>\frac{4}{7}-\frac{4}{3}y\le\frac{2}{3}</m>.
+          Write the solution set in both set-builder notation and interval notation.
+        </p>
+      </statement>
+      <solution permid="LBU">
+        <p permid="qDK">
+          <md permid="AHq">
+            <mrow>\frac{4}{7}-\frac{4}{3}y\amp\le\frac{2}{3}</mrow>
+            <mrow>\multiplyleft{21}\left(\frac{4}{7}-\frac{4}{3}y\right)\amp\le\multiplyleft{21}\left(\frac{2}{3}\right)</mrow>
+            <mrow>21\left(\frac{4}{7}\right)-21\left(\frac{4}{3}y\right)\amp\le21\left(\frac{2}{3}\right)</mrow>
+            <mrow>12-28y\amp\le14</mrow>
+            <mrow>-28y\amp\le2</mrow>
+            <mrow>\divideunder{-28y}{-28}\amp\ge\divideunder{2}{-28}</mrow>
+            <mrow>y\amp\ge-\frac{1}{14}</mrow>
+          </md>
+        </p>
+        <p permid="WKT">
+          Note that when we divided each side of the inequality by <m>-28</m>,
+          the inequality symbol reversed direction.
+        </p>
+        <p permid="CSc">
+          The solution set in set-builder notation is <m>\left\{y\mid y\ge-\frac{1}{14}\right\}</m>.
+        </p>
+        <p permid="iZl">
+          The solution set in interval notation is <m>\left[-\frac{1}{14},\infty\right)</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="OwA">
+      <statement>
+        <p permid="Jri">
+          In a certain class,
+          a student's grade is calculated by the average of their scores on 3 tests.
+          Aidan scored <m>78\%</m> and <m>54\%</m> on the first two tests.
+          If he wants to earn at least a grade of C <m>(70\%)</m>,
+          what's the lowest score he needs to earn on the third exam?
+        </p>
+      </statement>
+      <solution permid="rJd">
+        <p permid="Pgu">
+          Assume Aidan will score <m>x\%</m> on the third test.
+          To make his average test score greater than or equal to <m>70\%</m>,
+          we write and solve this inequality:
+          <md permid="gOz">
+            <mrow>\frac{78+54+x}{3}\amp\ge70</mrow>
+            <mrow>\frac{132+x}{3}\amp\ge70</mrow>
+            <mrow>\multiplyleft{3}\frac{132+x}{3}\amp\ge\multiplyleft{3}70</mrow>
+            <mrow>132+x\amp\ge210</mrow>
+            <mrow>x\amp\ge78</mrow>
+          </md>
+        </p>
+        <p permid="vnD">
+          To earn at least a C grade, Aidan needs to score at least <m>78\%</m> on the third test.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <exercises permid="BjT">
+    <exercisegroup cols="3" permid="hrc">
+      <title>Review and Warmup</title>
+      <exercise permid="eww">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
+      </exercise>
+      <exercise permid="KDF">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
+      </exercise>
+      <exercise permid="qKO">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
+      </exercise>
+      <exercise permid="WRX">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
+      </exercise>
+      <exercise permid="CZg">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg"  />
+      </exercise>
+      <exercise permid="jgp">
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg"  />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="4" permid="Nyl">
+      <title>Solving Linear Equations with Fractions</title>
+      <exercise permid="Pny">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction05.pg" />
+      </exercise>
+      <exercise permid="vuH">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction05.pg" />
+      </exercise>
+      <exercise permid="bBQ">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction10.pg" />
+      </exercise>
+      <exercise permid="HIZ">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction10.pg" />
+      </exercise>
+      <exercise permid="nQi">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction30.pg" />
+      </exercise>
+      <exercise permid="TXr">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction30.pg" />
+      </exercise>
+      <exercise permid="AeA">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction40.pg" />
+      </exercise>
+      <exercise permid="glJ">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction40.pg" />
+      </exercise>
+      <exercise permid="MsS">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction50.pg" />
+      </exercise>
+      <exercise permid="sAb">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction50.pg" />
+      </exercise>
+      <exercise permid="YHk">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction60.pg" />
+      </exercise>
+      <exercise permid="EOt">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction60.pg" />
+      </exercise>
+      <exercise permid="kVC">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction70.pg" />
+      </exercise>
+      <exercise permid="RcL">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction70.pg" />
+      </exercise>
+      <exercise permid="xjU">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction80.pg" />
+      </exercise>
+      <exercise permid="drd">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction80.pg" />
+      </exercise>
+      <exercise permid="Jym">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg" />
+      </exercise>
+      <exercise permid="pFv">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg" />
+      </exercise>
+      <exercise permid="VME">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg" />
+      </exercise>
+      <exercise permid="BTN">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg" />
+      </exercise>
+      <exercise permid="iaW">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction110.pg" />
+      </exercise>
+      <exercise permid="Oif">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction110.pg" />
+      </exercise>
+      <exercise permid="upo">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction120.pg" />
+      </exercise>
+      <exercise permid="awx">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction120.pg" />
+      </exercise>
+      <exercise permid="GDG">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction130.pg" />
+      </exercise>
+      <exercise permid="mKP">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction130.pg" />
+      </exercise>
+      <exercise permid="SRY">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction140.pg" />
+      </exercise>
+      <exercise permid="yZh">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction140.pg" />
+      </exercise>
+      <exercise permid="fgq">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction150.pg" />
+      </exercise>
+      <exercise permid="Lnz">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction150.pg" />
+      </exercise>
+      <exercise permid="ruI">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction160.pg" />
+      </exercise>
+      <exercise permid="XBR">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction160.pg" />
+      </exercise>
+      <exercise permid="DJa">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction170.pg" />
+      </exercise>
+      <exercise permid="jQj">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction170.pg" />
+      </exercise>
+      <exercise permid="PXs">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction180.pg" />
+      </exercise>
+      <exercise permid="weB">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction180.pg" />
+      </exercise>
+      <exercise permid="clK">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction190.pg" />
+      </exercise>
+      <exercise permid="IsT">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction190.pg" />
+      </exercise>
+      <exercise permid="oAc">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction200.pg" />
+      </exercise>
+      <exercise permid="UHl">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction200.pg" />
+      </exercise>
+      <exercise permid="AOu">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction210.pg" />
+      </exercise>
+      <exercise permid="gVD">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction210.pg" />
+      </exercise>
+      <exercise permid="NcM">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction220.pg" />
+      </exercise>
+      <exercise permid="tjV">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction220.pg" />
+      </exercise>
+      <exercise permid="Zre">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction230.pg" />
+      </exercise>
+      <exercise permid="Fyn">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction230.pg" />
+      </exercise>
+      <exercise permid="lFw">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction240.pg" />
+      </exercise>
+      <exercise permid="RMF">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction240.pg" />
+      </exercise>
+      <exercise permid="xTO">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction250.pg" />
+      </exercise>
+      <exercise permid="eaX">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction250.pg" />
+      </exercise>
+      <exercise permid="Kig">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction260.pg" />
+      </exercise>
+      <exercise permid="qpp">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction260.pg" />
+      </exercise>
+      <exercise permid="Wwy">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction270.pg" />
+      </exercise>
+      <exercise permid="CDH">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction270.pg" />
+      </exercise>
+      <exercise permid="iKQ">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction300.pg" />
+      </exercise>
+      <exercise permid="ORZ">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction300.pg" />
+      </exercise>
+      <exercise permid="uZi">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction310.pg" />
+      </exercise>
+      <exercise permid="bgr">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction310.pg" />
+      </exercise>
+      <exercise permid="HnA">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction330.pg" />
+      </exercise>
+      <exercise permid="nuJ">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction330.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="tFu">
+      <exercise permid="TBS">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction280.pg" />
+      </exercise>
+      <exercise permid="zJb">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction280.pg" />
+      </exercise>
+      <exercise permid="fQk">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction290.pg" />
+      </exercise>
+      <exercise permid="LXt">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction290.pg" />
+      </exercise>
+      <exercise permid="seC">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction340.pg" />
+      </exercise>
+      <exercise permid="YlL">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction340.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="ZMD">
+      <exercise permid="EsU">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction340.pg" />
+      </exercise>
+      <exercise permid="kAd">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction340.pg" />
+      </exercise>
+      <exercise permid="QHm">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction20.pg" />
+      </exercise>
+      <exercise permid="wOv">
+        <webwork source="BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction20.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup permid="FTM">
+      <title>Applications</title>
+      <exercise permid="cVE">
+        <webwork source="BasicAlgebra/LinearEquationApplications/FractionLinearApplication10.pg" />
+      </exercise>
+      <exercise permid="JcN">
+        <webwork source="BasicAlgebra/LinearEquationApplications/FractionLinearApplication20.pg" />
+      </exercise>
+      <exercise permid="pjW">
+        <webwork source="BasicAlgebra/LinearEquationApplications/FractionLinearApplication30.pg" />
+      </exercise>
+      <exercise permid="Vrf">
+        <webwork source="BasicAlgebra/LinearEquationApplications/FractionLinearApplication40.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="maV">
+      <title>Solving Inequalities with Fractions</title>
+      <exercise permid="Byo">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction10.pg" />
+      </exercise>
+      <exercise permid="hFx">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction10.pg" />
+      </exercise>
+      <exercise permid="NMG">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction20.pg" />
+      </exercise>
+      <exercise permid="tTP">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction20.pg" />
+      </exercise>
+      <exercise permid="aaY">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction30.pg" />
+      </exercise>
+      <exercise permid="Gih">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction30.pg" />
+      </exercise>
+      <exercise permid="mpq">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction40.pg" />
+      </exercise>
+      <exercise permid="Swz">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction40.pg" />
+      </exercise>
+      <exercise permid="yDI">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction50.pg" />
+      </exercise>
+      <exercise permid="eKR">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction50.pg" />
+      </exercise>
+      <exercise permid="KSa">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction60.pg" />
+      </exercise>
+      <exercise permid="qZj">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction60.pg" />
+      </exercise>
+      <exercise permid="Xgs">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction70.pg" />
+      </exercise>
+      <exercise permid="DnB">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction70.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="Sie">
+      <exercise permid="juK">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction80.pg" />
+      </exercise>
+      <exercise permid="PBT">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction80.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup permid="ypn">
+      <title>Applications</title>
+      <exercise permid="vJc">
+        <webwork source="BasicAlgebra/LinearInequalities/InequalityWordProblem20.pg" />
+      </exercise>
+      <exercise permid="bQl">
+        <webwork source="BasicAlgebra/LinearInequalities/InequalityWordProblem20.pg" />
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

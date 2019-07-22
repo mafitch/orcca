@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,717 +6,1041 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
 <section xml:id="section-technical-definition-of-a-function" permid="qhH">
-
-    <title>Technical Definition of a Function</title>
-
-    <introduction permid="gsw">
-        <p permid="yoW">In <xref ref="section-function-basics">Section</xref>, we discussed a conceptual understanding of functions and <xref ref="definition-function-informal">Definition</xref>. In this section we'll start with a more technical definition of what is a function, consistent with the ideas from <xref ref="section-function-basics">Section</xref>.</p>
-    </introduction>
-
-    <subsection xml:id="definition-function-technical" permid="WoQ">
-        <title>Formally Defining a Function</title>
-
-        <definition xml:id="definition-function-formal" permid="NEY">
-            <title>Function (Technical Definition)</title><idx><h>function</h><h>technical definition</h></idx>
-            <statement>
-                <p permid="WhM">A <term>function</term> is a collection of ordered pairs <m>(x,y)</m> such that any particular value of <m>x</m> is paired with at most one value for <m>y</m>.</p>
-            </statement>
-        </definition>
-
-        <p permid="jfY">How is this definition consistent with the informal <xref ref="definition-function-informal">Definition</xref>, which describes a function as a <em>process</em>? Well, if you have a collection of ordered pairs <m>(x,y)</m>, you can choose to view the left number as an input and the right value as the output. If the function's name is <m>f</m> and you want to find <m>f(x)</m> for a particular number <m>x</m>, look in the collection of ordered pairs to see if <m>x</m> appears among the first coordinates. If it does, then <m>f(x)</m> is the (unique) <m>y</m>-value it was paired with. If it does not, then that <m>x</m> is just not in the domain of <m>f</m>, because you have no way to determine what <m>f(x)</m> would be.</p>
-
-        <example xml:id="example-function-technical" permid="tMh">
-            <p permid="CoV">Using <xref ref="definition-function-technical">Definition</xref>, a function <m>f</m> could be given by <me permid="gls">\left\{(1,4), (2,3), (5,3), (6,1)\right\}</me>. <ol label="a." permid="CaA">
-                <li permid="GKt">
-                    <p permid="Hun">What is <m>f(1)?</m> Since the ordered pair <m>(1,4)</m> appears in the collection of ordered pairs, we would say that <m>f(1)=4</m>.</p>
+  <title>Technical Definition of a Function</title>
+  <introduction permid="gsw">
+    <p permid="yoW">
+      In <xref ref="section-function-basics">Section</xref>,
+      we discussed a conceptual understanding of functions and <xref ref="definition-function-informal">Definition</xref>.
+      In this section we'll start with a more technical definition of what is a function,
+      consistent with the ideas from <xref ref="section-function-basics">Section</xref>.
+    </p>
+  </introduction>
+  <subsection xml:id="definition-function-technical" permid="WoQ">
+    <title>Formally Defining a Function</title>
+    <definition xml:id="definition-function-formal" permid="NEY">
+      <title>Function (Technical Definition)</title>
+      <idx><h>function</h><h>technical definition</h></idx>
+      <statement>
+        <p permid="WhM">
+          A <term>function</term> is a collection of ordered pairs <m>(x,y)</m> such that any particular value of <m>x</m> is paired with at most one value for <m>y</m>.
+        </p>
+      </statement>
+    </definition>
+    <p permid="jfY">
+      How is this definition consistent with the informal <xref ref="definition-function-informal">Definition</xref>,
+      which describes a function as a <em>process</em>?
+      Well, if you have a collection of ordered pairs <m>(x,y)</m>,
+      you can choose to view the left number as an input and the right value as the output.
+      If the function's name is <m>f</m> and you want to find <m>f(x)</m> for a particular number <m>x</m>,
+      look in the collection of ordered pairs to see if <m>x</m> appears among the first coordinates.
+      If it does, then <m>f(x)</m> is the (unique) <m>y</m>-value it was paired with.
+      If it does not,
+      then that <m>x</m> is just not in the domain of <m>f</m>,
+      because you have no way to determine what <m>f(x)</m> would be.
+    </p>
+    <example xml:id="example-function-technical" permid="tMh">
+      <p permid="CoV">
+        Using <xref ref="definition-function-technical">Definition</xref>,
+        a function <m>f</m> could be given by
+        <me permid="gls">
+          \left\{(1,4), (2,3), (5,3), (6,1)\right\}
+        </me>.
+        <ol label="a." permid="CaA">
+          <li permid="GKt">
+            <p permid="Hun">
+              What is <m>f(1)?</m> Since the ordered pair <m>(1,4)</m> appears in the collection of ordered pairs,
+              we would say that <m>f(1)=4</m>.
+            </p>
+          </li>
+          <li permid="mRC">
+            <p permid="nBw">
+              What is <m>f(2)?</m> Since the ordered pair <m>(2,3)</m> appears in the collection of ordered pairs,
+              we would say that <m>f(2)=3</m>.
+            </p>
+          </li>
+          <li permid="SYL">
+            <p permid="TIF">
+              What is <m>f(3)?</m> None of the ordered pairs in the collection start with <m>3</m>,
+              so <m>f(3)</m> is undefined,
+              and we would say that <m>3</m> is not in the domain of <m>f</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </example>
+    <p permid="Pnh">
+      Let's spend some time seeing how this new definition applies to things that we already understand as functions from <xref ref="section-function-basics">Section</xref>.
+    </p>
+    <example xml:id="example-function-technical-table" permid="ZTq">
+      <title>A Function Given as a Table</title>
+      <sidebyside widths="47% 47%" margins="0%" permid="SoR">
+        <p permid="iwe">
+          Consider the function <m>g</m> expressed by <xref ref="table-technical">Table</xref>.
+          How is this
+          <q>a collection of ordered pairs?</q>
+          With tables the connection is most easily apparent.
+          Pair off each <m>x</m>-value with its <m>y</m>-value.
+        </p>
+        <table xml:id="table-technical" permid="GDp">
+          <caption/>
+          <tabular halign="center" permid="mKy">
+            <col right="minor" />
+            <col />
+            <row bottom="major">
+              <cell><m>x</m></cell>
+              <cell><m>g(x)</m></cell>
+            </row>
+            <row>
+              <cell>12</cell>
+              <cell><m>0.16</m></cell>
+            </row>
+            <row>
+              <cell>15</cell>
+              <cell><m>3.2</m></cell>
+            </row>
+            <row>
+              <cell>18</cell>
+              <cell><m>1.4</m></cell>
+            </row>
+            <row>
+              <cell>21</cell>
+              <cell><m>1.4</m></cell>
+            </row>
+            <row>
+              <cell>24</cell>
+              <cell><m>0.98</m></cell>
+            </row>
+          </tabular>
+        </table>
+      </sidebyside>
+      <p permid="ODn">
+        In this case, we can view this function as:
+        <me permid="MsB">
+          \left\{(12,0.16), (15,3.2), (18,3.2), (21,1.4), (24,0.98)\right\}
+        </me>.
+      </p>
+    </example>
+    <example permid="Gaz">
+      <title>A Function Given as a Formula</title>
+      <p permid="uKw">
+        Consider the function <m>h</m> expressed by the formula <m>h(x)=x^2</m>.
+        How is this
+        <q>a collection of ordered pairs?</q>
+      </p>
+      <p permid="aRF">
+        This time, the collection is <em>really big</em>.
+        Imagine an <m>x</m>-value, like <m>x=2</m>.
+        We can calculate that <m>f(2)=2^2=4</m>.
+        So the input <m>2</m> pairs with the output <m>4</m> and the ordered pair <m>(2,4)</m> is part of the collection.
+      </p>
+      <p permid="GYO">
+        You could move on to <em>any</em>
+        <m>x</m>-value, like say <m>x=2.1</m>.
+        We can calculate that <m>f(2.1)=2.1^2=4.41</m>.
+        So the input <m>2.1</m> pairs with the output <m>4.41</m> and the ordered pair
+        <m>(2.1,4.41)</m> is part of the collection.
+      </p>
+      <p permid="nfX">
+        The collection is so large that we cannot literally list all the ordered pairs as was done in <xref ref="example-function-technical">Example</xref>
+        and <xref ref="example-function-technical-table">Example</xref>.
+        We just have to imagine this giant collection of ordered pairs.
+        And if it helps to conceptualize it,
+        we know that the ordered pairs <m>(2,4)</m> and <m>(2.1,4.41)</m> are included.
+      </p>
+    </example>
+    <example permid="mhI">
+      <title>A Function Given as a Graph</title>
+      <p permid="Tng">
+        Consider the functions <m>p</m> and <m>q</m> expressed in <xref ref="figure-discrete-graph">Figure</xref>
+        and <xref ref="figure-continuous-graph">Figure</xref>.
+        How is each of these
+        <q>a collection of ordered pairs?</q>
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="ywa">
+        <figure xml:id="figure-discrete-graph" permid="LIH">
+          <caption><m>y=p(x)</m></caption>
+          <image permid="YGT">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot+[soliddot] coordinates {(1,4) (2,3) (5,3) (6,1)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+        <figure xml:id="figure-continuous-graph" permid="rPQ">
+          <caption><m>y=q(x)</m></caption>
+          <image permid="EOc">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot+[smooth] {x+sin(90*x)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      <p permid="zup">
+        In <xref ref="figure-discrete-graph">Figure</xref>,
+        we see that <m>p(1)=4</m>, <m>p(2)=3</m>,
+        <m>p(5)=3</m>, and <m>p(6)=1</m>.
+        The graph <em>literally is</em> the collection
+        <me permid="szK">
+          \left\{(1,4), (2,3), (5,3), (6,1)\right\}
+        </me>.
+      </p>
+      <p permid="fBy">
+        In <xref ref="figure-continuous-graph">Figure</xref>,
+        we can see a few whole number function values,
+        like <m>q(0)=0</m> and <m>q(1)=2</m>.
+        But the entire curve has infinitely many points on it and we'd never be able to list them all.
+        We just have to imagine the giant collection of ordered pairs.
+        And if it helps to conceptualize it,
+        we know that the ordered pairs <m>(0,0)</m> and <m>(1,2)</m> are included.
+      </p>
+    </example>
+    <p permid="vuq">
+      Try it yourself in the following exercise.
+    </p>
+<!--TODO: the following question displays the correct answer as {{...}} with an extra brace pair. Investigate. -->
+    <exercise permid="KKs">
+      <webwork>
+          <setup>
+<pg-code>
+Context()->lists->set(List => {open => "{", close => "}"});
+Context()->parens->set("{" => {type => "List", close => "}"});
+$gr = init_graph(-7,-7,7,7,
+axes=>[0,0],
+grid=>[14,14],
+size=>[240,240]
+);
+$gr->lb('reset');
+for my $j (-6,-4,-2,2,4,6) {
+$gr->lb( new Label($j, -0, $j,'black','center','top','large'));
+$gr->lb( new Label(0, $j, $j,'black','right','middle','large'));
+}
+$gr->stamps( closed_circle(-5,2,'blue') );
+$gr->stamps( closed_circle(-2,-3,'blue') );
+$gr->stamps( closed_circle(4,3,'blue') );
+$answer=List("{(-5,2),(-2,-3),(4,3)}");
+$evaluator = $answer->cmp(requireParenMatch=>1)->withPostFilter(AnswerHints(
+List(Point(-5,2),Point(-2,-3),Point(4,3)) => "You need to enclose the set in braces.",
+));
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="ewf">
+              The graph below is of <m>y=f(x)</m>.
+            </p>
+            <sidebyside widths="40%" permid="eDj">
+              <image permid="kVl" pg-name="$gr" />
+            </sidebyside>
+            <p permid="KDo">
+              Write the function <m>f</m> as a set of ordered pairs.
+            </p>
+            <instruction>
+              Since it is a <em>set</em>, the answer should be in curly braces. Each ordered pair has a comma inside <em>and</em> the ordered pairs themselves should be separated by commas.
+            </instruction>
+            <p permid="qKx">
+              <var name="$answer" evaluator="$evaluator" width="30" />
+            </p>
+          </statement>
+          <solution permid="EVg">
+            <p permid="gGR">
+              The function can be expressed as the set <m>\{(-5,2), (-2,-3), (4,3)\}</m>.
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <subsection permid="CvZ">
+    <title>Identifying What is <em>Not</em> a Function</title>
+    <p permid="bBz">
+      Just because you have a set of order pairs,
+      a table, a graph, or an equation,
+      it does not necessarily mean that you have a function.
+      Conceptually,
+      whatever you have needs to give consistent outputs if you feed it the same input.
+      More technically,
+      the set of ordered pairs is not allowed to have two ordered pairs that have the same <m>x</m>-value,
+      but different <m>y</m>-values.
+    </p>
+    <example permid="qRB">
+      <statement>
+        <p permid="XWZ">
+          Consider each set of ordered pairs.
+          Does it make a function?
+          <ol label="a." cols="2" permid="ihJ">
+            <li permid="zfU">
+              <p permid="zPO">
+                <m>\left\{\left(5,9\right),\left(3,2\right),\left(\frac{1}{2},0.6\right),\left(5,1\right)\right\}</m>
+              </p>
+            </li>
+            <li permid="fnd">
+              <p permid="fWX">
+                <m>\left\{\left(-5,12\right),\left(3,7\right),\left(\sqrt{2},1\right),\left(-0.9,4\right)\right\}</m>
+              </p>
+            </li>
+            <li permid="Lum">
+              <p permid="Meg">
+                <m>\left\{\left(5,9\right),\left(3,9\right),\left(4.2,\sqrt{2}\right),\left(\frac{4}{3},\frac{1}{2}\right)\right\}</m>
+              </p>
+            </li>
+            <li permid="rBv">
+              <p permid="slp">
+                <m>\left\{\left(5,9\right),\left(0.7,2\right),\left(\sqrt{25},3\right),\left(\frac{2}{3},\frac{3}{2}\right)\right\}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution permid="MzF">
+        <p permid="MOa">
+          <ol label="a." permid="xqH">
+            <li permid="XIE">
+              <p permid="Ysy">
+                This set of ordered pairs is <em>not</em> a function.
+                The problem is that it has both <m>(5,9)</m> and <m>(5,1)</m>.
+                It uses the same <m>x</m>-value paired with two different <m>y</m>-values.
+                We have no clear way to turn the input <m>5</m> into an output.
+              </p>
+            </li>
+            <li permid="DPN">
+              <p permid="EzH">
+                This set of ordered pairs <em>is</em> a function.
+                It is a collection of ordered pairs and the <m>x</m>-values are never reused.
+              </p>
+            </li>
+            <li permid="jWW">
+              <p permid="kGQ">
+                This set of ordered pairs <em>is</em> a function.
+                It is a collection of ordered pairs and the <m>x</m>-values are never reused.
+                You might note that the <em>output</em>
+                value <m>9</m> appears twice, but that doesn't matter.
+                That just tells us that the function turns <m>5</m> into <m>9</m> and it also turns <m>3</m> into <m>9</m>.
+              </p>
+            </li>
+            <li permid="Qef">
+              <p permid="QNZ">
+                This set of ordered pairs is <em>not</em>
+                a function, but it's a little tricky.
+                One of the ordered pairs uses <m>\sqrt{25}</m> as an input value.
+                But that is the same as <m>5</m>,
+                which is also used as an input value in another ordered pair.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+    <p permid="HII">
+      Now that we understand how some sets of ordered pairs might not be functions,
+      what about tables, graphs, and equations?
+      If we are handed one of these things,
+      can we tell whether or not it is giving us a function?
+    </p>
+    <exercise permid="Uee">
+      <title>Does This Table Make a Function?</title>
+      <webwork>
+          <setup>
+<pg-code>
+$a = PopUp(['?','does','does not'],1);
+$b = PopUp(['?','does','does not'],2);
+$c = PopUp(['?','does','does not'],1);
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="WRG">
+              Which of these tables make <m>y</m> a function of <m>x</m>?
+              <ol label="a." cols="3" permid="uwb">
+                <li permid="wlo">
+                  <tabular permid="SRH">
+                    <row bottom="major">
+                      <cell><m>x</m></cell>
+                      <cell><m>y</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>2</m></cell>
+                      <cell><m>1</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>3</m></cell>
+                      <cell><m>1</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>4</m></cell>
+                      <cell><m>2</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>2</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>2</m></cell>
+                    </row>
+                  </tabular>
+                  <p permid="wVi">
+                    This table <var name="$a" form="popup"/> make <m>y</m> a function of <m>x</m>.
+                  </p>
                 </li>
-                <li permid="mRC">
-                    <p permid="nBw">What is <m>f(2)?</m> Since the ordered pair <m>(2,3)</m> appears in the collection of ordered pairs, we would say that <m>f(2)=3</m>.</p>
+                <li permid="csx">
+                  <tabular permid="yYQ">
+                    <row bottom="major">
+                      <cell><m>x</m></cell>
+                      <cell><m>y</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>8</m></cell>
+                      <cell><m>3</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>9</m></cell>
+                      <cell><m>2</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>1</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>2</m></cell>
+                      <cell><m>0</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>8</m></cell>
+                      <cell><m>1</m></cell>
+                    </row>
+                  </tabular>
+                  <p permid="dcr">
+                    This table <var name="$b" form="popup"/> make <m>y</m> a function of <m>x</m>.
+                  </p>
                 </li>
-                <li permid="SYL">
-                    <p permid="TIF">What is <m>f(3)?</m> None of the ordered pairs in the collection start with <m>3</m>, so <m>f(3)</m> is undefined, and we would say that <m>3</m> is not in the domain of <m>f</m>.</p>
+                <li permid="IzG">
+                  <tabular permid="ffZ">
+                    <row bottom="major">
+                      <cell><m>x</m></cell>
+                      <cell><m>y</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>9</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>9</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>2</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>2</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>2</m></cell>
+                    </row>
+                  </tabular>
+                  <p permid="JjA">
+                    This table <var name="$c" form="popup"/> make <m>y</m> a function of <m>x</m>.
+                  </p>
                 </li>
-            </ol></p>
-        </example>
-
-        <p permid="Pnh">Let's spend some time seeing how this new definition applies to things that we already understand as functions from <xref ref="section-function-basics">Section</xref>.</p>
-
-        <example xml:id="example-function-technical-table" permid="ZTq">
-            <title>A Function Given as a Table</title>
-            <sidebyside widths="47% 47%" margins="0%" permid="SoR">
-                <p permid="iwe">Consider the function <m>g</m> expressed by <xref ref="table-technical">Table</xref>. How is this <q>a collection of ordered pairs?</q> With tables the connection is most easily apparent. Pair off each <m>x</m>-value with its <m>y</m>-value.</p>
-
-
-                <table xml:id="table-technical" permid="GDp">
-                    <caption/>
-                    <tabular halign="center" permid="mKy">
-                        <col right="minor" />
-                        <col />
-                        <row bottom="major">
-                            <cell><m>x</m></cell>
-                            <cell><m>g(x)</m></cell>
-                        </row>
-                        <row>
-                            <cell>12</cell>
-                            <cell><m>0.16</m></cell>
-                        </row>
-                        <row>
-                            <cell>15</cell>
-                            <cell><m>3.2</m></cell>
-                        </row>
-                        <row>
-                            <cell>18</cell>
-                            <cell><m>1.4</m></cell>
-                        </row>
-                        <row>
-                            <cell>21</cell>
-                            <cell><m>1.4</m></cell>
-                        </row>
-                        <row>
-                            <cell>24</cell>
-                            <cell><m>0.98</m></cell>
-                        </row>
-                    </tabular>
-                </table>
-            </sidebyside>
-
-            <p permid="ODn">In this case, we can view this function as: <me permid="MsB">\left\{(12,0.16), (15,3.2), (18,3.2), (21,1.4), (24,0.98)\right\}</me>.</p>
-        </example>
-
-        <example permid="Gaz">
-            <title>A Function Given as a Formula</title>
-            <p permid="uKw">Consider the function <m>h</m> expressed by the formula <m>h(x)=x^2</m>. How is this <q>a collection of ordered pairs?</q></p>
-
-            <p permid="aRF">This time, the collection is <em>really big</em>. Imagine an <m>x</m>-value, like <m>x=2</m>. We can calculate that <m>f(2)=2^2=4</m>. So the input <m>2</m> pairs with the output <m>4</m> and the ordered pair <m>(2,4)</m> is part of the collection.</p>
-
-            <p permid="GYO">You could move on to <em>any</em> <m>x</m>-value, like say <m>x=2.1</m>. We can calculate that <m>f(2.1)=2.1^2=4.41</m>. So the input <m>2.1</m> pairs with the output <m>4.41</m> and the ordered pair <m>(2.1,4.41)</m> is part of the collection.</p>
-
-            <p permid="nfX">The collection is so large that we cannot literally list all the ordered pairs as was done in <xref ref="example-function-technical">Example</xref> and <xref ref="example-function-technical-table">Example</xref>. We just have to imagine this giant collection of ordered pairs. And if it helps to conceptualize it, we know that the ordered pairs <m>(2,4)</m> and <m>(2.1,4.41)</m> are included.</p>
-        </example>
-
-        <example permid="mhI">
-            <title>A Function Given as a Graph</title>
-            <p permid="Tng">Consider the functions <m>p</m> and <m>q</m> expressed in <xref ref="figure-discrete-graph">Figure</xref> and <xref ref="figure-continuous-graph">Figure</xref>. How is each of these <q>a collection of ordered pairs?</q></p>
-
-            <sidebyside widths="47% 47%" margins="0%" permid="ywa">
-                <figure xml:id="figure-discrete-graph" permid="LIH">
-                    <caption><m>y=p(x)</m></caption>
-                    <image permid="YGT">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot+[soliddot] coordinates {(1,4) (2,3) (5,3) (6,1)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-
-                <figure xml:id="figure-continuous-graph" permid="rPQ">
-                    <caption><m>y=q(x)</m></caption>
-                    <image permid="EOc">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot+[smooth] {x+sin(90*x)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-
-            <p permid="zup">In <xref ref="figure-discrete-graph">Figure</xref>, we see that <m>p(1)=4</m>, <m>p(2)=3</m>, <m>p(5)=3</m>, and <m>p(6)=1</m>. The graph <em>literally is</em> the collection <me permid="szK">\left\{(1,4), (2,3), (5,3), (6,1)\right\}</me>.</p>
-
-            <p permid="fBy">In <xref ref="figure-continuous-graph">Figure</xref>, we can see a few whole number function values, like <m>q(0)=0</m> and <m>q(1)=2</m>. But the entire curve has infinitely many points on it and we'd never be able to list them all. We just have to imagine the giant collection of ordered pairs. And if it helps to conceptualize it, we know that the ordered pairs <m>(0,0)</m> and <m>(1,2)</m> are included.</p>
-
-        </example>
-
-        <p permid="vuq">Try it yourself in the following exercise.</p>
-
-        <!--TODO: the following question displays the correct answer as {{...}} with an extra brace pair. Investigate. -->
-        <exercise permid="KKs">
-            <webwork>
-                <setup>
-            <pg-code>
-                Context()->lists->set(List => {open => "{", close => "}"});
-                Context()->parens->set("{" => {type => "List", close => "}"});
-                $gr = init_graph(-7,-7,7,7,
-                 axes=>[0,0],
-                 grid=>[14,14],
-                 size=>[240,240]
-                );
-                $gr->lb('reset');
-                for my $j (-6,-4,-2,2,4,6) {
-                  $gr->lb( new Label($j, -0, $j,'black','center','top','large'));
-                  $gr->lb( new Label(0, $j, $j,'black','right','middle','large'));
-                }
-                $gr->stamps( closed_circle(-5,2,'blue') );
-                $gr->stamps( closed_circle(-2,-3,'blue') );
-                $gr->stamps( closed_circle(4,3,'blue') );
-                $answer=List("{(-5,2),(-2,-3),(4,3)}");
-                $evaluator = $answer->cmp(requireParenMatch=>1)->withPostFilter(AnswerHints(
-                  List(Point(-5,2),Point(-2,-3),Point(4,3)) => "You need to enclose the set in braces.",
-                ));
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="ewf">The graph below is of <m>y=f(x)</m>.</p>
-                    <sidebyside widths="40%" permid="eDj">
-                        <image permid="kVl" pg-name="$gr" />
-                    </sidebyside>
-                    <p permid="KDo">Write the function <m>f</m> as a set of ordered pairs.</p>
-                    <instruction>Since it is a <em>set</em>, the answer should be in curly braces. Each ordered pair has a comma inside <em>and</em> the ordered pairs themselves should be separated by commas.</instruction>
-                    <p permid="qKx"><var name="$answer" evaluator="$evaluator" width="30" /></p>
-                </statement>
-                <solution permid="EVg">
-                    <p permid="gGR">The function can be expressed as the set <m>\{(-5,2), (-2,-3), (4,3)\}</m>.</p>
-                </solution>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <subsection permid="CvZ">
-        <title>Identifying What is <em>Not</em> a Function</title>
-        <p permid="bBz">Just because you have a set of order pairs, a table, a graph, or an equation, it does not necessarily mean that you have a function. Conceptually, whatever you have needs to give consistent outputs if you feed it the same input. More technically, the set of ordered pairs is not allowed to have two ordered pairs that have the same <m>x</m>-value, but different <m>y</m>-values.</p>
-
-        <example permid="qRB">
-            <statement>
-                <p permid="XWZ">Consider each set of ordered pairs. Does it make a function?<ol label="a." cols="2" permid="ihJ">
-                    <li permid="zfU">
-                        <p permid="zPO"><m>\left\{\left(5,9\right),\left(3,2\right),\left(\frac{1}{2},0.6\right),\left(5,1\right)\right\}</m></p>
-                    </li>
-                    <li permid="fnd">
-                        <p permid="fWX"><m>\left\{\left(-5,12\right),\left(3,7\right),\left(\sqrt{2},1\right),\left(-0.9,4\right)\right\}</m></p>
-                    </li>
-                    <li permid="Lum">
-                        <p permid="Meg"><m>\left\{\left(5,9\right),\left(3,9\right),\left(4.2,\sqrt{2}\right),\left(\frac{4}{3},\frac{1}{2}\right)\right\}</m></p>
-                    </li>
-                    <li permid="rBv">
-                        <p permid="slp"><m>\left\{\left(5,9\right),\left(0.7,2\right),\left(\sqrt{25},3\right),\left(\frac{2}{3},\frac{3}{2}\right)\right\}</m></p>
-                    </li>
-                </ol></p>
-            </statement>
-            <solution permid="MzF">
-                <p permid="MOa"><ol label="a." permid="xqH">
-                    <li permid="XIE">
-                        <p permid="Ysy">This set of ordered pairs is <em>not</em> a function. The problem is that it has both <m>(5,9)</m> and <m>(5,1)</m>. It uses the same <m>x</m>-value paired with two different <m>y</m>-values. We have no clear way to turn the input <m>5</m> into an output.</p>
-                    </li>
-                    <li permid="DPN">
-                        <p permid="EzH">This set of ordered pairs <em>is</em> a function. It is a collection of ordered pairs and the <m>x</m>-values are never reused.</p>
-                    </li>
-                    <li permid="jWW">
-                        <p permid="kGQ">This set of ordered pairs <em>is</em> a function. It is a collection of ordered pairs and the <m>x</m>-values are never reused. You might note that the <em>output</em> value <m>9</m> appears twice, but that doesn't matter. That just tells us that the function turns <m>5</m> into <m>9</m> and it also turns <m>3</m> into <m>9</m>.</p>
-                    </li>
-                    <li permid="Qef">
-                        <p permid="QNZ">This set of ordered pairs is <em>not</em> a function, but it's a little tricky. One of the ordered pairs uses <m>\sqrt{25}</m> as an input value. But that is the same as <m>5</m>, which is also used as an input value in another ordered pair.</p>
-                    </li>
-                </ol></p>
-            </solution>
-        </example>
-
-        <p permid="HII">Now that we understand how some sets of ordered pairs might not be functions, what about tables, graphs, and equations? If we are handed one of these things, can we tell whether or not it is giving us a function?</p>
-
-        <exercise permid="Uee">
-            <title>Does This Table Make a Function?</title>
-            <webwork>
-                <setup>
-            <pg-code>
-                $a = PopUp(['?','does','does not'],1);
-                $b = PopUp(['?','does','does not'],2);
-                $c = PopUp(['?','does','does not'],1);
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="WRG">Which of these tables make <m>y</m> a function of <m>x</m>?<ol label="a." cols="3" permid="uwb">
-                        <li permid="wlo">
-                            <tabular permid="SRH">
-                                <row bottom="major">
-                                    <cell><m>x</m></cell>
-                                    <cell><m>y</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>2</m></cell>
-                                    <cell><m>1</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>3</m></cell>
-                                    <cell><m>1</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>4</m></cell>
-                                    <cell><m>2</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>5</m></cell>
-                                    <cell><m>2</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>6</m></cell>
-                                    <cell><m>2</m></cell>
-                                </row>
-                            </tabular>
-                            <p permid="wVi">This table <var name="$a" form="popup"/> make <m>y</m> a function of <m>x</m>.</p>
-                        </li>
-                        <li permid="csx">
-                            <tabular permid="yYQ">
-                                <row bottom="major">
-                                    <cell><m>x</m></cell>
-                                    <cell><m>y</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>8</m></cell>
-                                    <cell><m>3</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>9</m></cell>
-                                    <cell><m>2</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>5</m></cell>
-                                    <cell><m>1</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>2</m></cell>
-                                    <cell><m>0</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>8</m></cell>
-                                    <cell><m>1</m></cell>
-                                </row>
-                            </tabular>
-                            <p permid="dcr">This table <var name="$b" form="popup"/> make <m>y</m> a function of <m>x</m>.</p>
-                        </li>
-                        <li permid="IzG">
-                            <tabular permid="ffZ">
-                                <row bottom="major">
-                                    <cell><m>x</m></cell>
-                                    <cell><m>y</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>5</m></cell>
-                                    <cell><m>9</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>5</m></cell>
-                                    <cell><m>9</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>6</m></cell>
-                                    <cell><m>2</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>6</m></cell>
-                                    <cell><m>2</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>6</m></cell>
-                                    <cell><m>2</m></cell>
-                                </row>
-                            </tabular>
-                            <p permid="JjA">This table <var name="$c" form="popup"/> make <m>y</m> a function of <m>x</m>.</p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution permid="lcp">
-                    <p permid="sVj"><ol label="a." permid="dxQ">
-                        <li permid="oGP">
-                            <p permid="pqJ">This table does make <m>y</m> a function of <m>x</m>. In the table, no <m>x</m>-value is repeated.</p>
-                        </li>
-                        <li permid="UNY">
-                            <p permid="VxS">This table does not make <m>y</m> a function of <m>x</m>. In the table, the <m>x</m>-value <m>8</m> is repeated and it is paired with two different <m>y</m>-values, <m>3</m> and <m>1</m>.</p>
-                        </li>
-                        <li permid="AVh">
-                            <p permid="BFb">This table does make <m>y</m> a function of <m>x</m>, but you have to think carefully. It's true that the <m>x</m>-value <m>5</m> is used more than once in the table. But in both places, the <m>y</m>-value is the same, <m>9</m>. So there is no conceptual issue with asking for <m>f(5)</m>; it would definitely be <m>9</m>. Similarly, the repeated use of <m>6</m> as an <m>x</m>-value is not a problem since it is always paired with output <m>2</m>.</p>
-                        </li>
-                    </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
-
-        <example xml:id="example-is-it-a-function" permid="WYK">
-            <title>Does This Graph Make a Function?</title>
-            <statement>
-                <p permid="Eei">Which of these graphs make <m>y</m> a function of <m>x</m>?</p>
-                <sidebyside widths="32% 32% 32%" margins="0%" permid="vBu">
-                    <figure xml:id="figure-is-it-a-function-1" permid="klr">
-                        <caption/>
-                        <image permid="Lni">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot+[soliddot] coordinates {(2,4) (-5,-5) (3, 4) (0,4) (4,0) (-3,1) (-3,-2)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                        </image>
-                    </figure>
-                    <figure xml:id="figure-is-it-a-function-2" permid="QsA">
-                        <caption/>
-                        <image permid="Rcu">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot+[domain=0:360,-] ({4*cos(x)+2},{3*sin(x)+1});
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                        </image>
-                    </figure>
-                    <figure xml:id="figure-is-it-a-function-3" permid="wzJ">
-                        <caption/>
-                        <image permid="xjD">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot+[] {x^2/10-sin(45*x)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                        </image>
-                    </figure>
-                </sidebyside>
-                <sidebyside widths="32% 32% 32%" margins="0%" permid="bID">
-                    <figure xml:id="figure-is-it-a-function-4" permid="cGS">
-                        <caption/>
-                        <image permid="dqM">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot+[] {0.5*x+2};
-                        \addplot[hollowdot] coordinates {(-4,0) (2,3) (6, 5)};
-                        \addplot[soliddot] coordinates {(-4,4) (2,1)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                        </image>
-                    </figure>
-                    <figure xml:id="figure-is-it-a-function-5" permid="IOb">
-                        <caption/>
-                        <image permid="JxV">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot[primarycurve, samples=29,smooth] {cos(45*x)};
-                        \addplot[primarycurve, samples=29,smooth] {sin(90*x)+3};
-                        \addplot[primarycurve, samples=29,smooth] {(cos(45*x))^3-2};
-                        \addplot[primarycurve, samples=29,smooth] {sqrt(sin(90*x)+1)+5};
-                        \addplot[primarycurve, samples=29,smooth] {exp(sin(120*x))-6};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                        </image>
-                    </figure>
-                    <figure xml:id="figure-is-it-a-function-6" permid="oVk">
-                        <caption/>
-                        <image permid="pFe">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot+[] ({x^2/10-sin(45*x)},{x});
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                        </image>
-                    </figure>
-                </sidebyside>
-            </statement>
-            <solution permid="sGO">
-                <p permid="Zcs">The graph in <xref ref="figure-is-it-a-function-1">Figure</xref> does <em>not</em> make <m>y</m> a function of <m>x</m>. Two ordered pairs on that graph are <m>(-3,1)</m> and <m>(-3,-2)</m>, so an input value is used twice with different output values.</p>
-                <p permid="FjB">The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em> make <m>y</m> a function of <m>x</m>. There are many ordered pairs with the same input value, but different output values. For example, <m>(2,-2)</m> and <m>(2,4)</m>.</p>
-                <p permid="lqK">The graph in <xref ref="figure-is-it-a-function-3">Figure</xref> <em>does</em> make <m>y</m> a function of <m>x</m>. It appears that no matter what <m>x</m>-value you choose on the <m>x</m>-axis, there is exactly one <m>y</m>-value paired up with it on the graph.</p>
-                <p permid="RxT">The graph in <xref ref="figure-is-it-a-function-4">Figure</xref> <em>does</em> make <m>y</m> a function of <m>x</m>, but we should discuss. The hollow dots on the line indicate that the line goes right up to that point, but never reaches it. We say there is a <q>hole</q> in the graph at these points. For two of these holes, there is a separate ordered pair immediately above or below the hole. The graph has the ordered pair <m>(-4,4)</m>. It <em>also</em> has ordered pairs like <m>(\text{very close to }{-4},\text{very close to }0)</m>, but it does not have <m>(-4,0)</m>. Overall, there is no <m>x</m>-value that is used twice with different <m>y</m>-values, so this graph does make <m>y</m> a function of <m>x</m></p>
-                <p permid="xFc">The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em> make <m>y</m> a function of <m>x</m>. There are many ordered pairs with the same input value, but different output values. For example, <m>(0,1)</m>, <m>(0,3)</m>, <m>(0,-1)</m>, <m>(0,5)</m>, and <m>(0,-6)</m> all use <m>x=0</m>.</p>
-                <p permid="dMl">The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em> make <m>y</m> a function of <m>x</m>. There are many ordered pairs with the same input value, but different output values. For example at <m>x=2</m>, there is both a positive and a negative associated <m>y</m>-value. It's hard to say exactly what these <m>y</m>-values are, but we don't have to.</p>
-            </solution>
-        </example>
-
-        <p permid="nPR">This last set of examples might reveal something to you. For instance in <xref ref="figure-is-it-a-function-2">Figure</xref>, the issue is that there are places on the graph with the same <m>x</m>-value, but different <m>y</m>-values. Visually, what that means is there are places on the graph that are directly above/below each other. Thinking about this leads to a quick visual <q>test</q> to determine if a graph gives <m>y</m> as a function of <m>x</m>.</p>
-
-        <fact xml:id="fact-vertical-line-test" permid="Pul">
-            <title>Vertical Line Test</title><idx><h>vertical line test</h></idx>
-            <p permid="ShN">Given a graph in the <m>xy</m>-plane, if a vertical line ever touches it in more than one place, the graph does <em>not</em> give <m>y</m> as a function of <m>x</m>. If vertical lines only ever touch the graph once or never at all, then the graph <em>does</em> give <m>y</m> as a function of <m>x</m>.</p>
-        </fact>
-
-        <example permid="DfT">
-            <p permid="Vct">In each graph from <xref ref="example-is-it-a-function">Example</xref>, we can apply the <xref ref="fact-vertical-line-test" text="title" />.</p>
-
-            <sidebyside widths="32% 32% 32%" margins="0%" permid="HPM">
-                <figure permid="BjC">
-                    <caption>A vertical line touching the graph twice makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
-                    <image permid="VMn">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot[verticallinetest] coordinates {(-3,-7) (-3,7)};
-                        \addplot[soliddot] coordinates {(2,4) (-5,-5) (3, 4) (0,4) (4,0) (-3,1) (-3,-2)};
-                        \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-3,1) (-3,-2)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-                <figure permid="hqL">
-                    <caption>A vertical line touching the graph twice makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
-                    <image permid="BTw">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot[verticallinetest] coordinates {(2,-7) (2,7)};
-                        \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(2,-2) (2,4)};
-                        \addplot[primarycurve,domain=0:360,-] ({4*cos(x)+2},{3*sin(x)+1});
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-                <figure permid="NxU">
-                    <caption>All vertical lines only touch the graph once, so this graph does give <m>y</m> as a function of <m>x</m>.</caption>
-                    <image permid="iaF">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot[verticallinetest] coordinates {(-5,-7) (-5,7)};
-                        \addplot[verticallinetest] coordinates {(-3,-7) (-3,7)};
-                        \addplot[verticallinetest] coordinates {(-1,-7) (-1,7)};
-                        \addplot[verticallinetest] coordinates {(1,-7) (1,7)};
-                        \addplot[verticallinetest] coordinates {(3,-7) (3,7)};
-                        \addplot[verticallinetest] coordinates {(5,-7) (5,7)};
-                        \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-5,1.79) (-3,1.6) (-1,0.8) (1,-0.6) (3,0.19) (5,3.2)};
-                        \addplot[primarycurve] {x^2/10-sin(45*x)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-            <sidebyside widths="32% 32% 32%" margins="0%" permid="nWV">
-                <figure permid="tFd">
-                    <caption>All vertical lines only touch the graph once, or not at all, so this graph does give <m>y</m> as a function of <m>x</m>.</caption>
-                    <image permid="OhO">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot[verticallinetest] coordinates {(-6,-7) (-6,7)};
-                        \addplot[verticallinetest] coordinates {(-4,-7) (-4,7)};
-                        \addplot[verticallinetest] coordinates {(-2,-7) (-2,7)};
-                        \addplot[verticallinetest] coordinates {(2,-7) (2,7)};
-                        \addplot[verticallinetest] coordinates {(4,-7) (4,7)};
-                        \addplot[verticallinetest] coordinates {(6,-7) (6,7)};
-                        \addplot[primarycurve] {0.5*x+2};
-                        \addplot[hollowdot] coordinates {(-4,0) (2,3) (6, 5)};
-                        \addplot[soliddot] coordinates {(-4,4) (2,1)};
-                        \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-6,-1) (-4,4) (-2,1) (0,2) (2,1) (4,4)};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-                <figure permid="ZMm">
-                    <caption>A vertical line touching the graph more than once makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
-                    <image permid="uoX">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot[verticallinetest] coordinates {(-4,-7) (-4,7)};
-                        \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-4,6) (-4,3) (-4,-1) (-4,-3) (-4,-5.6)};
-                        \addplot[primarycurve, samples=29,smooth] {cos(45*x)};
-                        \addplot[primarycurve, samples=29,smooth] {sin(90*x)+3};
-                        \addplot[primarycurve, samples=29,smooth] {(cos(45*x))^3-2};
-                        \addplot[primarycurve, samples=29,smooth] {sqrt(sin(90*x)+1)+5};
-                        \addplot[primarycurve, samples=29,smooth] {exp(sin(120*x))-6};
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-                <figure permid="FTv">
-                    <caption>A vertical line touching the graph more than once makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
-                    <image permid="awg">
-            <latex-image>
-                <![CDATA[\begin{tikzpicture}
-                    \begin{axis}
-                        \addplot[verticallinetest] coordinates {(2,-7) (2,7)};
-                        \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(2,4.25) (2,-5.4)};
-                        \addplot[primarycurve] ({x^2/10-sin(45*x)},{x});
-                    \end{axis}
-                \end{tikzpicture}]]>
-            </latex-image>
-                    </image>
-                </figure>
-            </sidebyside>
-        </example>
-
-        <p permid="TXa">Lastly, we come to equations. Certain equations with variables <m>x</m> and <m>y</m> clearly make <m>y</m> a function of <m>x</m>. For example, <m>y=x^2+1</m> says that if you have an <m>x</m>-value, all you have to do is substitute it into that equation and you will have determined an output <m>y</m>-value. You could then name the function <m>f</m> and give a formula for it: <m>f(x)=x^2+1</m>.</p>
-
-        <p permid="Aej">With other equations, it may not be immediately clear whether or not they make <m>y</m> a function of <m>x</m>.</p>
-
-        <example permid="jnc">
-            <statement>
-                <p permid="maE">Do each of these equations make <m>y</m> a function of <m>x</m>?<ol label="a." cols="3" permid="OoS">
-                    <li permid="hcq">
-                        <p permid="hMk"><m>2x+3y=5</m></p>
-                    </li>
-                    <li permid="Njz">
-                        <p permid="NTt"><m>y=\pm\sqrt{x+4}</m></p>
-                    </li>
-                    <li permid="tqI">
-                        <p permid="uaC"><m>x^2+y^2=9</m></p>
-                    </li>
-                </ol></p>
-            </statement>
-            <solution permid="YNX">
-                <p permid="JTu"><ol label="a." permid="JEZ">
-                    <li permid="ZxR">
-                        <p permid="ahL">The equation <m>2x+3y=5</m> <em>does</em> make <m>y</m> a function of <m>x</m>. Here are three possible explanations.<ol label="i." permid="DIJ">
-                            <li permid="XBA">
-                                <p permid="rur">You recognize that the graph of this equation would be a non-vertical line and so it would pass the <xref ref="fact-vertical-line-test" text="title" />.</p>
-                            </li>
-                            <li permid="FFa">
-                                <p permid="GoU">Imagine that you have a specific value for <m>x</m> and you substitute it in to <m>2x+3y=5</m>. Will you be able to use algebra to solve for <m>y</m>? All you will need is to simplify, subtract from both sides, and divide on both sides, so you will be able to determine <m>y</m>.</p>
-                            </li>
-                            <li permid="lMj">
-                                <p permid="mwd">Can you just isolate <m>y</m> in terms of <m>x</m>? Yes, a few steps of algebra can turn <m>2x+3y=5</m> into <m>y=\frac{5-2x}{3}</m>. Now you have an explicit formula for <m>y</m> in terms of <m>x</m>, so <m>y</m> is a function of <m>x</m>.</p>
-                            </li>
-                        </ol></p>
-                    </li>
-                    <li permid="vfV">
-                        <p permid="SDm">The equation <m>y=\pm\sqrt{x+4}</m> does <em>not</em> make <m>y</m> a function of <m>x</m>. Just having the <m>\pm</m> (plus <em>or</em> minus) in the equation immediately tells you that for almost any valid <m>x</m>-value, there would be <em>two</em> associated <m>y</m>-values.</p>
-                    </li>
-                    <li permid="bne">
-                        <p permid="yKv">The equation <m>x^2+y^2=9</m> does <em>not</em> make <m>y</m> a function of <m>x</m>. Here are three possible explanations.<ol label="i." permid="pMi">
-                            <li permid="RTs">
-                                <p permid="AzI">Imagine that you have a specific value for <m>x</m> and you substitute it in to <m>x^2+y^2=9</m>. Will you be able to use algebra to solve for <m>y</m>? For example, if you substitute in <m>x=1</m>, then you have <m>1+y^2=9</m>, which simplifies to <m>y^2=8</m>. Can you really determine what <m>y</m> is? No, because it could be <m>\sqrt{8}</m> or it could be <m>-\sqrt{8}</m>. So this equation does not provide you with a way to turn <m>x</m>-values into <m>y</m>-values.</p>
-                            </li>
-                            <li permid="yaB">
-                                <p permid="eRE">Can you just isolate <m>y</m> in terms of <m>x</m>? You might get started and use algebra to convert <m>x^2+y^2=9</m> into <m>y^2=9-x^2</m>. But what now? The best you can do is acknowledge that <m>y</m> is either the positive or the negative square root of <m>9 - x^2</m>. You might write <m>y=\pm\sqrt{9-x^2}</m>. But now for almost any valid <m>x</m>-value, there are <em>two</em> associated <m>y</m>-values.</p>
-                            </li>
-                            <li permid="ehK">
-                                <p permid="KYN">You recognize that the graph of this equation would be a circle with radius <m>3</m> and so it would not pass the <xref ref="fact-vertical-line-test" text="title" />.</p>
-                            </li>
-                        </ol></p>
-                    </li>
-                </ol></p>
-            </solution>
-        </example>
-
-        <exercise permid="Aln">
-            <webwork>
-                <setup>
-            <pg-code>
-                $yes=PopUp(['?','does','does not'],1);
-                $no=PopUp(['?','does','does not'],2);
-            </pg-code>
-                </setup>
-                <statement>
-                    <p permid="CYP">Do each of these equations make <m>y</m> a function of <m>x</m>?<ol label="a." cols="3" permid="aDk">
-                        <li permid="KoT">
-                            <p permid="rfW"><m>5x^2-4y=12</m></p>
-                            <p permid="Xnf">This equation <var name="$yes" form="popup" /> make <m>y</m> a function of <m>x</m>.</p>
-                        </li>
-                        <li permid="qwc">
-                            <p permid="Duo"><m>5x-4y^2=12</m></p>
-                            <p permid="jBx">This equation <var name="$no" form="popup" /> make <m>y</m> a function of <m>x</m>.</p>
-                        </li>
-                        <li permid="WDl">
-                            <p permid="PIG"><m>x=\sqrt{y}</m></p>
-                            <p permid="vPP">This equation <var name="$yes" form="popup" /> make <m>y</m> a function of <m>x</m>.</p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution permid="Rjy">
-                    <p permid="qaD"><ol label="a." permid="VTr">
-                        <li permid="CKu">
-                            <p permid="bWY">The equation <m>5x^2-4y=12</m> <em>does</em> make <m>y</m> a function of <m>x</m>. You can isolate <m>y</m> in terms of <m>x</m>. A few steps of algebra can turn <m>5x^2-4y=12</m> into <m>y=\frac{5x^2-12}{4}</m>. Now you have an explicit formula for <m>y</m> in terms of <m>x</m>, so <m>y</m> is a function of <m>x</m>.</p>
-                        </li>
-                        <li permid="iRD">
-                            <p permid="Ieh">The equation <m>5x-4y^2=12</m> does <em>not</em> make <m>y</m> a function of <m>x</m>. You cannot isolate <m>y</m> in terms of <m>x</m>. You might get started and use algebra to convert <m>5x-4y^2=12</m> into <m>y^2=\frac{5x-12}{4}</m>. But what now? The best you can do is acknowledge that <m>y</m> is either the positive or the negative square root of <m>\frac{5x-12}{4}</m>. You might write <m>y=\pm\sqrt{\frac{5x-12}{4}}</m>. But now for almost any valid <m>x</m>-value, there are <em>two</em> associated <m>y</m>-values.</p>
-                        </li>
-                        <li permid="OYM">
-                            <p permid="olq">The equation <m>x=\sqrt{y}</m> <em>does</em> make <m>y</m> a function of <m>x</m>. If you try substituting a non-negative <m>x</m>-value, then you can square both sides and you know exactly what the value of <m>y</m> is.</p>
-
-                            <p permid="Usz">If you try substituting a negative <m>x</m>-value, then you are saying that <m>\sqrt{y}</m> is negative, which is impossible. So for negative <m>x</m>, there are no <m>y</m>-values. This is not a problem for the equation giving you a function. This just means that the domain of that function does not include negative numbers. Its domain would be <m>[0,\infty)</m>.</p>
-                        </li>
-                    </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <exercises permid="iDi">
-        <exercisegroup permid="OKr">
-            <title>Determining If Sets of Ordered Pairs Are Functions</title>
-            <exercise permid="Tuk">
-                <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition10.pg" />
-            </exercise>
-            <exercise permid="zBt">
-                <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition10.pg" />
-            </exercise>
-            <exercise permid="fIC">
-                <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg" />
-            </exercise>
-            <exercise permid="LPL">
-                <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" permid="uRA">
-            <title>Domain and Range</title>
-            <exercise permid="rWU">
-                <webwork source="Math95/Functions/Functions10.pg" />
-            </exercise>
-            <exercise permid="Yed">
-                <webwork source="Math95/Functions/Functions11.pg" />
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2" permid="aYJ">
-            <title>Determining If Graphs Are Functions</title>
-        <exercise permid="Elm">
-            <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg" />
-        </exercise>
-        <exercise permid="ksv">
-            <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg" />
-        </exercise>
-        <exercise permid="QzE">
-            <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg" />
-        </exercise>
-        <exercise permid="wGN">
-            <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg" />
-        </exercise>
+              </ol>
+            </p>
+          </statement>
+          <solution permid="lcp">
+            <p permid="sVj">
+              <ol label="a." permid="dxQ">
+                <li permid="oGP">
+                  <p permid="pqJ">
+                    This table does make <m>y</m> a function of <m>x</m>.
+                    In the table, no <m>x</m>-value is repeated.
+                  </p>
+                </li>
+                <li permid="UNY">
+                  <p permid="VxS">
+                    This table does not make <m>y</m> a function of <m>x</m>.
+                    In the table,
+                    the <m>x</m>-value <m>8</m> is repeated and it is paired with two different <m>y</m>-values,
+                    <m>3</m> and <m>1</m>.
+                  </p>
+                </li>
+                <li permid="AVh">
+                  <p permid="BFb">
+                    This table does make <m>y</m> a function of <m>x</m>,
+                    but you have to think carefully.
+                    It's true that the <m>x</m>-value <m>5</m> is used more than once in the table.
+                    But in both places, the <m>y</m>-value is the same, <m>9</m>.
+                    So there is no conceptual issue with asking for <m>f(5)</m>;
+                    it would definitely be <m>9</m>.
+                    Similarly, the repeated use of <m>6</m> as an <m>x</m>-value is not a problem since it is always paired with output <m>2</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+    <example xml:id="example-is-it-a-function" permid="WYK">
+      <title>Does This Graph Make a Function?</title>
+      <statement>
+        <p permid="Eei">
+          Which of these graphs make <m>y</m> a function of <m>x</m>?
+        </p>
+        <sidebyside widths="32% 32% 32%" margins="0%" permid="vBu">
+          <figure xml:id="figure-is-it-a-function-1" permid="klr">
+            <caption/>
+            <image permid="Lni">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot+[soliddot] coordinates {(2,4) (-5,-5) (3, 4) (0,4) (4,0) (-3,1) (-3,-2)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+            </image>
+          </figure>
+          <figure xml:id="figure-is-it-a-function-2" permid="QsA">
+            <caption/>
+            <image permid="Rcu">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot+[domain=0:360,-] ({4*cos(x)+2},{3*sin(x)+1});
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+            </image>
+          </figure>
+          <figure xml:id="figure-is-it-a-function-3" permid="wzJ">
+            <caption/>
+            <image permid="xjD">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot+[] {x^2/10-sin(45*x)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+        <sidebyside widths="32% 32% 32%" margins="0%" permid="bID">
+          <figure xml:id="figure-is-it-a-function-4" permid="cGS">
+            <caption/>
+            <image permid="dqM">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot+[] {0.5*x+2};
+\addplot[hollowdot] coordinates {(-4,0) (2,3) (6, 5)};
+\addplot[soliddot] coordinates {(-4,4) (2,1)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+            </image>
+          </figure>
+          <figure xml:id="figure-is-it-a-function-5" permid="IOb">
+            <caption/>
+            <image permid="JxV">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot[primarycurve, samples=29,smooth] {cos(45*x)};
+\addplot[primarycurve, samples=29,smooth] {sin(90*x)+3};
+\addplot[primarycurve, samples=29,smooth] {(cos(45*x))^3-2};
+\addplot[primarycurve, samples=29,smooth] {sqrt(sin(90*x)+1)+5};
+\addplot[primarycurve, samples=29,smooth] {exp(sin(120*x))-6};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+            </image>
+          </figure>
+          <figure xml:id="figure-is-it-a-function-6" permid="oVk">
+            <caption/>
+            <image permid="pFe">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot+[] ({x^2/10-sin(45*x)},{x});
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </statement>
+      <solution permid="sGO">
+        <p permid="Zcs">
+          The graph in <xref ref="figure-is-it-a-function-1">Figure</xref> does <em>not</em>
+          make <m>y</m> a function of <m>x</m>.
+          Two ordered pairs on that graph are <m>(-3,1)</m> and <m>(-3,-2)</m>,
+          so an input value is used twice with different output values.
+        </p>
+        <p permid="FjB">
+          The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em>
+          make <m>y</m> a function of <m>x</m>.
+          There are many ordered pairs with the same input value,
+          but different output values.
+          For example, <m>(2,-2)</m> and <m>(2,4)</m>.
+        </p>
+        <p permid="lqK">
+          The graph in <xref ref="figure-is-it-a-function-3">Figure</xref> <em>does</em>
+          make <m>y</m> a function of <m>x</m>.
+          It appears that no matter what <m>x</m>-value you choose on the <m>x</m>-axis,
+          there is exactly one <m>y</m>-value paired up with it on the graph.
+        </p>
+        <p permid="RxT">
+          The graph in <xref ref="figure-is-it-a-function-4">Figure</xref> <em>does</em>
+          make <m>y</m> a function of <m>x</m>, but we should discuss.
+          The hollow dots on the line indicate that the line goes right up to that point,
+          but never reaches it.
+          We say there is a
+          <q>hole</q>
+          in the graph at these points.
+          For two of these holes,
+          there is a separate ordered pair immediately above or below the hole.
+          The graph has the ordered pair <m>(-4,4)</m>.
+          It <em>also</em> has ordered pairs like <m>(\text{very close to }{-4},\text{very close to }0)</m>,
+          but it does not have <m>(-4,0)</m>.
+          Overall, there is no <m>x</m>-value that is used twice with different <m>y</m>-values,
+          so this graph does make <m>y</m> a function of <m>x</m>
+        </p>
+        <p permid="xFc">
+          The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em>
+          make <m>y</m> a function of <m>x</m>.
+          There are many ordered pairs with the same input value,
+          but different output values.
+          For example, <m>(0,1)</m>, <m>(0,3)</m>, <m>(0,-1)</m>,
+          <m>(0,5)</m>, and <m>(0,-6)</m> all use <m>x=0</m>.
+        </p>
+        <p permid="dMl">
+          The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em>
+          make <m>y</m> a function of <m>x</m>.
+          There are many ordered pairs with the same input value,
+          but different output values.
+          For example at <m>x=2</m>,
+          there is both a positive and a negative associated <m>y</m>-value.
+          It's hard to say exactly what these <m>y</m>-values are,
+          but we don't have to.
+        </p>
+      </solution>
+    </example>
+    <p permid="nPR">
+      This last set of examples might reveal something to you.
+      For instance in <xref ref="figure-is-it-a-function-2">Figure</xref>,
+      the issue is that there are places on the graph with the same <m>x</m>-value,
+      but different <m>y</m>-values.
+      Visually, what that means is there are places on the graph that are directly above/below each other.
+      Thinking about this leads to a quick visual
+      <q>test</q>
+      to determine if a graph gives <m>y</m> as a function of <m>x</m>.
+    </p>
+    <fact xml:id="fact-vertical-line-test" permid="Pul">
+      <title>Vertical Line Test</title>
+      <idx><h>vertical line test</h></idx>
+      <p permid="ShN">
+        Given a graph in the <m>xy</m>-plane,
+        if a vertical line ever touches it in more than one place,
+        the graph does <em>not</em> give <m>y</m> as a function of <m>x</m>.
+        If vertical lines only ever touch the graph once or never at all,
+        then the graph <em>does</em> give <m>y</m> as a function of <m>x</m>.
+      </p>
+    </fact>
+    <example permid="DfT">
+      <p permid="Vct">
+        In each graph from <xref ref="example-is-it-a-function">Example</xref>,
+        we can apply the <xref ref="fact-vertical-line-test" text="title" />.
+      </p>
+      <sidebyside widths="32% 32% 32%" margins="0%" permid="HPM">
+        <figure permid="BjC">
+          <caption>A vertical line touching the graph twice makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
+          <image permid="VMn">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot[verticallinetest] coordinates {(-3,-7) (-3,7)};
+\addplot[soliddot] coordinates {(2,4) (-5,-5) (3, 4) (0,4) (4,0) (-3,1) (-3,-2)};
+\addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-3,1) (-3,-2)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+        <figure permid="hqL">
+          <caption>A vertical line touching the graph twice makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
+          <image permid="BTw">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot[verticallinetest] coordinates {(2,-7) (2,7)};
+\addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(2,-2) (2,4)};
+\addplot[primarycurve,domain=0:360,-] ({4*cos(x)+2},{3*sin(x)+1});
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+        <figure permid="NxU">
+          <caption>All vertical lines only touch the graph once, so this graph does give <m>y</m> as a function of <m>x</m>.</caption>
+          <image permid="iaF">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot[verticallinetest] coordinates {(-5,-7) (-5,7)};
+\addplot[verticallinetest] coordinates {(-3,-7) (-3,7)};
+\addplot[verticallinetest] coordinates {(-1,-7) (-1,7)};
+\addplot[verticallinetest] coordinates {(1,-7) (1,7)};
+\addplot[verticallinetest] coordinates {(3,-7) (3,7)};
+\addplot[verticallinetest] coordinates {(5,-7) (5,7)};
+\addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-5,1.79) (-3,1.6) (-1,0.8) (1,-0.6) (3,0.19) (5,3.2)};
+\addplot[primarycurve] {x^2/10-sin(45*x)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      <sidebyside widths="32% 32% 32%" margins="0%" permid="nWV">
+        <figure permid="tFd">
+          <caption>All vertical lines only touch the graph once, or not at all, so this graph does give <m>y</m> as a function of <m>x</m>.</caption>
+          <image permid="OhO">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot[verticallinetest] coordinates {(-6,-7) (-6,7)};
+\addplot[verticallinetest] coordinates {(-4,-7) (-4,7)};
+\addplot[verticallinetest] coordinates {(-2,-7) (-2,7)};
+\addplot[verticallinetest] coordinates {(2,-7) (2,7)};
+\addplot[verticallinetest] coordinates {(4,-7) (4,7)};
+\addplot[verticallinetest] coordinates {(6,-7) (6,7)};
+\addplot[primarycurve] {0.5*x+2};
+\addplot[hollowdot] coordinates {(-4,0) (2,3) (6, 5)};
+\addplot[soliddot] coordinates {(-4,4) (2,1)};
+\addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-6,-1) (-4,4) (-2,1) (0,2) (2,1) (4,4)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+        <figure permid="ZMm">
+          <caption>A vertical line touching the graph more than once makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
+          <image permid="uoX">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot[verticallinetest] coordinates {(-4,-7) (-4,7)};
+\addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-4,6) (-4,3) (-4,-1) (-4,-3) (-4,-5.6)};
+\addplot[primarycurve, samples=29,smooth] {cos(45*x)};
+\addplot[primarycurve, samples=29,smooth] {sin(90*x)+3};
+\addplot[primarycurve, samples=29,smooth] {(cos(45*x))^3-2};
+\addplot[primarycurve, samples=29,smooth] {sqrt(sin(90*x)+1)+5};
+\addplot[primarycurve, samples=29,smooth] {exp(sin(120*x))-6};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+        <figure permid="FTv">
+          <caption>A vertical line touching the graph more than once makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
+          <image permid="awg">
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}
+\addplot[verticallinetest] coordinates {(2,-7) (2,7)};
+\addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(2,4.25) (2,-5.4)};
+\addplot[primarycurve] ({x^2/10-sin(45*x)},{x});
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+    </example>
+    <p permid="TXa">
+      Lastly, we come to equations.
+      Certain equations with variables <m>x</m> and <m>y</m> clearly make <m>y</m> a function of <m>x</m>.
+      For example,
+      <m>y=x^2+1</m> says that if you have an <m>x</m>-value,
+      all you have to do is substitute it into that equation and you will have determined an output <m>y</m>-value.
+      You could then name the function <m>f</m> and give a formula for it:
+      <m>f(x)=x^2+1</m>.
+    </p>
+    <p permid="Aej">
+      With other equations,
+      it may not be immediately clear whether or not they make <m>y</m> a function of <m>x</m>.
+    </p>
+    <example permid="jnc">
+      <statement>
+        <p permid="maE">
+          Do each of these equations make <m>y</m> a function of <m>x</m>?
+          <ol label="a." cols="3" permid="OoS">
+            <li permid="hcq">
+              <p permid="hMk">
+                <m>2x+3y=5</m>
+              </p>
+            </li>
+            <li permid="Njz">
+              <p permid="NTt">
+                <m>y=\pm\sqrt{x+4}</m>
+              </p>
+            </li>
+            <li permid="tqI">
+              <p permid="uaC">
+                <m>x^2+y^2=9</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution permid="YNX">
+        <p permid="JTu">
+          <ol label="a." permid="JEZ">
+            <li permid="ZxR">
+              <p permid="ahL">
+                The equation <m>2x+3y=5</m> <em>does</em>
+                make <m>y</m> a function of <m>x</m>.
+                Here are three possible explanations.
+                <ol label="i." permid="DIJ">
+                  <li permid="XBA">
+                    <p permid="rur">
+                      You recognize that the graph of this equation would be a non-vertical line and so it would pass the <xref ref="fact-vertical-line-test" text="title" />.
+                    </p>
+                  </li>
+                  <li permid="FFa">
+                    <p permid="GoU">
+                      Imagine that you have a specific value for <m>x</m> and you substitute it in to <m>2x+3y=5</m>.
+                      Will you be able to use algebra to solve for <m>y</m>?
+                      All you will need is to simplify, subtract from both sides,
+                      and divide on both sides, so you will be able to determine <m>y</m>.
+                    </p>
+                  </li>
+                  <li permid="lMj">
+                    <p permid="mwd">
+                      Can you just isolate <m>y</m> in terms of <m>x</m>?
+                      Yes, a few steps of algebra can turn <m>2x+3y=5</m> into <m>y=\frac{5-2x}{3}</m>.
+                      Now you have an explicit formula for <m>y</m> in terms of <m>x</m>,
+                      so <m>y</m> is a function of <m>x</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </li>
+            <li permid="vfV">
+              <p permid="SDm">
+                The equation <m>y=\pm\sqrt{x+4}</m> does <em>not</em>
+                make <m>y</m> a function of <m>x</m>.
+                Just having the <m>\pm</m>
+                (plus <em>or</em> minus)
+                in the equation immediately tells you that for almost any valid <m>x</m>-value,
+                there would be <em>two</em> associated <m>y</m>-values.
+              </p>
+            </li>
+            <li permid="bne">
+              <p permid="yKv">
+                The equation <m>x^2+y^2=9</m> does <em>not</em>
+                make <m>y</m> a function of <m>x</m>.
+                Here are three possible explanations.
+                <ol label="i." permid="pMi">
+                  <li permid="RTs">
+                    <p permid="AzI">
+                      Imagine that you have a specific value for <m>x</m> and you substitute it in to <m>x^2+y^2=9</m>.
+                      Will you be able to use algebra to solve for <m>y</m>?
+                      For example, if you substitute in <m>x=1</m>,
+                      then you have <m>1+y^2=9</m>,
+                      which simplifies to <m>y^2=8</m>.
+                      Can you really determine what <m>y</m> is?
+                      No, because it could be <m>\sqrt{8}</m> or it could be <m>-\sqrt{8}</m>.
+                      So this equation does not provide you with a way to turn <m>x</m>-values into <m>y</m>-values.
+                    </p>
+                  </li>
+                  <li permid="yaB">
+                    <p permid="eRE">
+                      Can you just isolate <m>y</m> in terms of <m>x</m>?
+                      You might get started and use algebra to convert
+                      <m>x^2+y^2=9</m> into <m>y^2=9-x^2</m>.
+                      But what now?
+                      The best you can do is acknowledge that <m>y</m> is either the positive or the negative square root of <m>9 - x^2</m>.
+                      You might write <m>y=\pm\sqrt{9-x^2}</m>.
+                      But now for almost any valid <m>x</m>-value,
+                      there are <em>two</em> associated <m>y</m>-values.
+                    </p>
+                  </li>
+                  <li permid="ehK">
+                    <p permid="KYN">
+                      You recognize that the graph of this equation would be a circle with radius <m>3</m> and so it would not pass the <xref ref="fact-vertical-line-test" text="title" />.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+    <exercise permid="Aln">
+      <webwork>
+          <setup>
+<pg-code>
+$yes=PopUp(['?','does','does not'],1);
+$no=PopUp(['?','does','does not'],2);
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="CYP">
+              Do each of these equations make <m>y</m> a function of <m>x</m>?
+              <ol label="a." cols="3" permid="aDk">
+                <li permid="KoT">
+                  <p permid="rfW">
+                    <m>5x^2-4y=12</m>
+                  </p>
+                  <p permid="Xnf">
+                    This equation <var name="$yes" form="popup" /> make <m>y</m> a function of <m>x</m>.
+                  </p>
+                </li>
+                <li permid="qwc">
+                  <p permid="Duo">
+                    <m>5x-4y^2=12</m>
+                  </p>
+                  <p permid="jBx">
+                    This equation <var name="$no" form="popup" /> make <m>y</m> a function of <m>x</m>.
+                  </p>
+                </li>
+                <li permid="WDl">
+                  <p permid="PIG">
+                    <m>x=\sqrt{y}</m>
+                  </p>
+                  <p permid="vPP">
+                    This equation <var name="$yes" form="popup" /> make <m>y</m> a function of <m>x</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution permid="Rjy">
+            <p permid="qaD">
+              <ol label="a." permid="VTr">
+                <li permid="CKu">
+                  <p permid="bWY">
+                    The equation <m>5x^2-4y=12</m> <em>does</em>
+                    make <m>y</m> a function of <m>x</m>.
+                    You can isolate <m>y</m> in terms of <m>x</m>.
+                    A few steps of algebra can turn
+                    <m>5x^2-4y=12</m> into <m>y=\frac{5x^2-12}{4}</m>.
+                    Now you have an explicit formula for <m>y</m> in terms of <m>x</m>,
+                    so <m>y</m> is a function of <m>x</m>.
+                  </p>
+                </li>
+                <li permid="iRD">
+                  <p permid="Ieh">
+                    The equation <m>5x-4y^2=12</m> does <em>not</em>
+                    make <m>y</m> a function of <m>x</m>.
+                    You cannot isolate <m>y</m> in terms of <m>x</m>.
+                    You might get started and use algebra to convert
+                    <m>5x-4y^2=12</m> into <m>y^2=\frac{5x-12}{4}</m>.
+                    But what now?
+                    The best you can do is acknowledge that <m>y</m> is either the positive or the negative square root of <m>\frac{5x-12}{4}</m>.
+                    You might write <m>y=\pm\sqrt{\frac{5x-12}{4}}</m>.
+                    But now for almost any valid <m>x</m>-value,
+                    there are <em>two</em> associated <m>y</m>-values.
+                  </p>
+                </li>
+                <li permid="OYM">
+                  <p permid="olq">
+                    The equation <m>x=\sqrt{y}</m> <em>does</em>
+                    make <m>y</m> a function of <m>x</m>.
+                    If you try substituting a non-negative <m>x</m>-value,
+                    then you can square both sides and you know exactly what the value of <m>y</m> is.
+                  </p>
+                  <p permid="Usz">
+                    If you try substituting a negative <m>x</m>-value,
+                    then you are saying that <m>\sqrt{y}</m> is negative, which is impossible.
+                    So for negative <m>x</m>, there are no <m>y</m>-values.
+                    This is not a problem for the equation giving you a function.
+                    This just means that the domain of that function does not include negative numbers.
+                    Its domain would be <m>[0,\infty)</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <exercises permid="iDi">
+    <exercisegroup permid="OKr">
+      <title>Determining If Sets of Ordered Pairs Are Functions</title>
+      <exercise permid="Tuk">
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition10.pg" />
+      </exercise>
+      <exercise permid="zBt">
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition10.pg" />
+      </exercise>
+      <exercise permid="fIC">
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg" />
+      </exercise>
+      <exercise permid="LPL">
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="uRA">
+      <title>Domain and Range</title>
+      <exercise permid="rWU">
+        <webwork source="Math95/Functions/Functions10.pg" />
+      </exercise>
+      <exercise permid="Yed">
+        <webwork source="Math95/Functions/Functions11.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="aYJ">
+      <title>Determining If Graphs Are Functions</title>
+      <exercise permid="Elm">
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg" />
+      </exercise>
+      <exercise permid="ksv">
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg" />
+      </exercise>
+      <exercise permid="QzE">
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg" />
+      </exercise>
+      <exercise permid="wGN">
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg" />
+      </exercise>
 <!--         <exercise>
-            <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph30.pg" />
-        </exercise>
-        <exercise>
-            <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph30.pg" />
-        </exercise> -->
-
-        </exercisegroup>
-        <exercisegroup cols="2" permid="HfS">
-            <title>Determining If Equations Are Functions</title>
-            <exercise permid="cNW">
-                <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations10.pg" />
-            </exercise>
-            <exercise permid="IVf">
-                <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations10.pg" />
-            </exercise>
-            <exercise permid="pco">
-                <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations20.pg" />
-            </exercise>
-            <exercise permid="Vjx">
-                <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations20.pg" />
-            </exercise>
-        </exercisegroup>
+<webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph30.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph30.pg" />
+</exercise> -->
+    </exercisegroup>
+    <exercisegroup cols="2" permid="HfS">
+      <title>Determining If Equations Are Functions</title>
+      <exercise permid="cNW">
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations10.pg" />
+      </exercise>
+      <exercise permid="IVf">
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations10.pg" />
+      </exercise>
+      <exercise permid="pco">
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations20.pg" />
+      </exercise>
+      <exercise permid="Vjx">
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations20.pg" />
+      </exercise>
+    </exercisegroup>
 <!--TODO: WeBWorK: break these apart into multiple exercises-->
-        <exercisegroup cols="2" permid="nnb">
-            <title>Determining If Tables Are Functions</title>
-            <exercise permid="BqG">
-                <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg" />
-            </exercise>
-            <exercise permid="hxP">
-                <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg" />
-            </exercise>
-        </exercisegroup>
-    </exercises>
+    <exercisegroup cols="2" permid="nnb">
+      <title>Determining If Tables Are Functions</title>
+      <exercise permid="BqG">
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg" />
+      </exercise>
+      <exercise permid="hxP">
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg" />
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

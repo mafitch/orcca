@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,1128 +6,1744 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
 <section xml:id="section-exponential-functions" permid="Nnh">
-
-    <title>Exponential Functions</title>
-
-   <subsection permid="tuq"><title>Graph Exponential Functions</title>
-
-<p permid="wKI">The functions we have studied so far do not give us a model for many naturally occurring phenomena. From the growth of populations and the spread of viruses to radioactive decay and compounding interest, the models are very different from what we have studied so far. These models involve exponential functions.</p>
-
-<definition xml:id="definition-exponential-function" permid="zxX">
-<idx><h>exponential</h></idx> <idx><h>function</h><h>exponential</h></idx><title>Exponential Function</title>
-<statement><p permid="CVt">An <term>exponential function</term>, where <m>b&gt;0</m> and <m>b\ne 1,</m> is a function of the form<me permid="EZb">f\left(x\right)={b}^{x}</me></p></statement></definition>
-
-<p permid="cRR">Notice that in this function, the variable is the exponent. In our functions so far, the variables were the base.</p>
-
-<figure permid="Api"><image source="images/CNX_IntAlg_Figure_10_02_001_img.jpg" width="100%" permid="TcG">
-<description>A comparison of a linear function, a quadratic function, and an exponential function, with arrows pointing to the variable, x.</description></image>
-</figure>
-
-<p permid="IZa">Our definition says <m>b\ne 1.</m> If we let <m>b=1,</m> then <m>f\left(x\right)={b}^{x}</m> becomes <m>f\left(x\right)={1}^{x}.</m> Since <m>{1}^{x}=1</m> for all real numbers, <m>f\left(x\right)={1}^{}.</m> This is the constant function.</p>
-
-<p permid="pgj">Our definition also says <m>b&gt;0.</m> If we let a base be negative, say <m>-4,</m> then <m>f\left(x\right)={\left(-4\right)}^{x}</m> is not a real number when <m>x=\frac{1}{2}</m>:
-
-<me permid="lgk">\begin{array}{cccc}\hfill f\left(x\right)&amp; =\hfill &amp; {\left(-4\right)}^{x}\hfill \\ \hfill f\left(\frac{1}{2}\right)&amp; =\hfill &amp; {\left(-4\right)}^{\frac{1}{2}}\hfill \\ \hfill f\left(\frac{1}{2}\right)&amp; =\hfill &amp; \sqrt{-4}\hfill&amp; \text{not a real number} \end{array}</me>
-
-In fact, <m>f\left(x\right)={\left(-4\right)}^{x}</m> would not be a real number any time <m>x</m> is a fraction with an even denominator. So our definition requires <m>b&gt;0.</m></p>
-
-<p permid="Vns">By graphing a few exponential functions, we will be able to see their unique properties.</p>
-
-<example xml:id="graphing-exponential-functions-with-base-greater-than-one" permid="rTy">
-    <statement>
-        <p permid="byd">On the same coordinate system graph <m>f\left(x\right)={2}^{x}</m> and <m>g\left(x\right)={3}^{x}.</m></p></statement>
-        <solution permid="hut">
-            <p permid="HqR">We will use point plotting to graph the functions.</p>
-
-            <p permid="nya"><figure permid="zMs"><image source="images/CNX_IntAlg_Figure_10_02_002_img.jpg" width="60%" permid="zjP"><description>A table of values for graphing f(x)=2^x and g(x)=3^x.</description></image>
-        </figure></p>
-
-<p permid="TFj"><figure permid="fTB"><image source="images/CNX_IntAlg_Figure_10_02_003_img.jpg" width="40%" permid="fqY"><description>A graph of f(x)=2^x, in blue, and g(x)=3^x, in red, graphed on the same coordinate system.</description></image>
-</figure></p>
-</solution></example>
-
-<exercise permid="Qwi">
-    <statement>
-        <p permid="dnq">Graph: <m>f\left(x\right)={4}^{x}.</m></p>
-</statement>
-<solution permid="mem">
-<p permid="MaK">
-<figure permid="shT"><image source="images/CNX_IntAlg_Figure_10_02_301_img.jpg" width="30%" permid="Lyh"><description>A graph of f(x)=4^x.</description></image></figure>
-</p>
-</solution></exercise>
-
-<exercise permid="wDr">
-    <statement>
-        <p permid="Juz">Graph: <m>g\left(x\right)={5}^{x}.</m></p>
-</statement>
-<solution permid="Slv">
-<p permid="Ypc">
-<figure permid="Ewl"><image source="images/CNX_IntAlg_Figure_10_02_302_img.jpg" width="30%" permid="rFq"><description>A graph of g(x)=5^x.</description></image></figure>
-</p>
-</solution></exercise>
-
-<p permid="BuB">If we look at the graphs from the previous examples, we can identify some of the properties of exponential functions.</p>
-
-<p permid="hBK">The graphs of <m>f\left(x\right)={2}^{x}</m> and <m>g\left(x\right)={3}^{x}</m>, as well as the graphs of <m>f\left(x\right)={4}^{x}</m> and <m>g\left(x\right)={5}^{x}</m>, all have the same basic shape. This is the shape we expect from an exponential function where <m>b&gt;1</m>.</p>
-
-<p permid="NIT">We notice, that for each function, the graph contains the point <m>\left(0,1\right).</m> This makes sense because <m>{b}^{0}=1</m> for any <m>b&gt;1</m>.</p>
-
-<p permid="tQc">The graph of each function, <m>f\left(x\right)={b}^{x}</m> also contains the point <m>\left(1,b\right).</m> The graph of <m>f\left(x\right)={2}^{x}</m> contains <m>\left(1,2\right)</m> and the graph of <m>g\left(x\right)={3}^{x}</m> contains <m>\left(1,3\right).</m> This makes sense as <m>{b}^{1}=b</m> for any <m>b&gt;1</m>.</p>
-
-<p permid="ZXl">Notice too, that the graph of each function <m>f\left(x\right)={b}^{x}</m> also contains the point <m>\left(-1,\frac{1}{b}\right).</m> The graph of <m>f\left(x\right)={2}^{x}</m> contains <m>\left(-1,\frac{1}{2}\right)</m> and the graph of <m>g\left(x\right)={3}^{x}</m> contains <m>\left(-1,\frac{1}{3}\right).</m> This makes sense as <m>{b}^{-1}=\frac{1}{b}</m> for any <m>b&gt;1</m>.</p>
-
-<p permid="Geu">What is the domain for each function? From the graphs we can see that the domain is the set of all real numbers. There is no restriction on the domain. We write the domain in interval notation as <m>(-\infty ,\infty)</m>.</p>
-
-<p permid="mlD">Look at each graph. What is the range of the function? Notice that the graph is always above and never touches the <m>x</m>-axis. Thus, the range is all positive numbers. We write the range in interval notation as <m>\left(0,\infty \right).</m></p>
-
-<p permid="SsM">Whenever a graph of a function approaches a line but never touches it, we call that line an <term>asymptote</term>. For the exponential functions we are looking at, the graph approaches the <m>x</m>-axis very closely but will never cross it. So we call the line <m>y=0,</m> the <m>x</m>-axis, a horizontal asymptote.</p>
-
-<p permid="yzV">We summarize these results below.
-<figure permid="gwr">
-    <caption>Properties of the Graph of <m>f\left(x\right)={b}^{x}</m> when <m>b&gt;1</m></caption>
-    <sidebyside widths="50% 35%" margins="5%" permid="koZ">
-        <tabular permid="kKL">
+  <title>Exponential Functions</title>
+  <subsection permid="tuq">
+    <title>Graph Exponential Functions</title>
+    <p permid="wKI">
+      The functions we have studied so far do not give us a model for many naturally occurring phenomena.
+      From the growth of populations and the spread of viruses to radioactive decay and compounding interest,
+      the models are very different from what we have studied so far.
+      These models involve exponential functions.
+    </p>
+    <definition xml:id="definition-exponential-function" permid="zxX">
+      <idx><h>exponential</h></idx>
+      <idx><h>function</h><h>exponential</h></idx>
+      <title>Exponential Function</title>
+      <statement>
+        <p permid="CVt">
+          An <term>exponential function</term>,
+          where <m>b&gt;0</m> and <m>b\ne 1</m>, is a function of the form
+          <me permid="EZb">
+            f\left(x\right)={b}^{x}
+          </me>
+        </p>
+      </statement>
+    </definition>
+    <p permid="cRR">
+      Notice that in this function,
+      the variable is the exponent.
+      In our functions so far, the variables were the base.
+    </p>
+    <figure permid="Api">
+      <image source="images/CNX_IntAlg_Figure_10_02_001_img.jpg" width="100%" permid="TcG">
+        <description>A comparison of a linear function, a quadratic function, and an exponential function, with arrows pointing to the variable, x.</description>
+      </image>
+    </figure>
+    <p permid="IZa">
+      Our definition says <m>b\ne 1</m>.
+      If we let <m>b=1</m>, then
+      <m>f\left(x\right)={b}^{x}</m> becomes <m>f\left(x\right)={1}^{x}</m>.
+      Since <m>{1}^{x}=1</m> for all real numbers,
+      <m>f\left(x\right)={1}^{}</m>.
+      This is the constant function.
+    </p>
+    <p permid="pgj">
+      Our definition also says <m>b&gt;0</m>.
+      If we let a base be negative, say <m>-4</m>,
+      then <m>f\left(x\right)={\left(-4\right)}^{x}</m> is not a real number when <m>x=\frac{1}{2}</m>:
+      <me permid="lgk">
+        \begin{array}{cccc}\hfill f\left(x\right)&amp; =\hfill &amp; {\left(-4\right)}^{x}\hfill \\ \hfill f\left(\frac{1}{2}\right)&amp; =\hfill &amp; {\left(-4\right)}^{\frac{1}{2}}\hfill \\ \hfill f\left(\frac{1}{2}\right)&amp; =\hfill &amp; \sqrt{-4}\hfill&amp; \text{not a real number} \end{array}
+      </me>
+      In fact, <m>f\left(x\right)={\left(-4\right)}^{x}</m> would not be a real number any time <m>x</m> is a fraction with an even denominator.
+      So our definition requires <m>b&gt;0</m>.
+    </p>
+    <p permid="Vns">
+      By graphing a few exponential functions,
+      we will be able to see their unique properties.
+    </p>
+    <example xml:id="graphing-exponential-functions-with-base-greater-than-one" permid="rTy">
+      <statement>
+        <p permid="byd">
+          On the same coordinate system graph
+          <m>f\left(x\right)={2}^{x}</m> and <m>g\left(x\right)={3}^{x}</m>.
+        </p>
+      </statement>
+      <solution permid="hut">
+        <p permid="HqR">
+          We will use point plotting to graph the functions.
+        </p>
+        <p permid="nya">
+          <figure permid="zMs">
+            <image source="images/CNX_IntAlg_Figure_10_02_002_img.jpg" width="60%" permid="zjP">
+              <description>A table of values for graphing f(x)=2^x and g(x)=3^x.</description>
+            </image>
+          </figure>
+        </p>
+        <p permid="TFj">
+          <figure permid="fTB">
+            <image source="images/CNX_IntAlg_Figure_10_02_003_img.jpg" width="40%" permid="fqY">
+              <description>A graph of f(x)=2^x, in blue, and g(x)=3^x, in red, graphed on the same coordinate system.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </example>
+    <exercise permid="Qwi">
+      <statement>
+        <p permid="dnq">
+          Graph: <m>f\left(x\right)={4}^{x}</m>.
+        </p>
+      </statement>
+      <solution permid="mem">
+        <p permid="MaK">
+          <figure permid="shT">
+            <image source="images/CNX_IntAlg_Figure_10_02_301_img.jpg" width="30%" permid="Lyh">
+              <description>A graph of f(x)=4^x.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </exercise>
+    <exercise permid="wDr">
+      <statement>
+        <p permid="Juz">
+          Graph: <m>g\left(x\right)={5}^{x}</m>.
+        </p>
+      </statement>
+      <solution permid="Slv">
+        <p permid="Ypc">
+          <figure permid="Ewl">
+            <image source="images/CNX_IntAlg_Figure_10_02_302_img.jpg" width="30%" permid="rFq">
+              <description>A graph of g(x)=5^x.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </exercise>
+    <p permid="BuB">
+      If we look at the graphs from the previous examples,
+      we can identify some of the properties of exponential functions.
+    </p>
+    <p permid="hBK">
+      The graphs of <m>f\left(x\right)={2}^{x}</m> and <m>g\left(x\right)={3}^{x}</m>,
+      as well as the graphs of <m>f\left(x\right)={4}^{x}</m> and <m>g\left(x\right)={5}^{x}</m>,
+      all have the same basic shape.
+      This is the shape we expect from an exponential function where <m>b&gt;1</m>.
+    </p>
+    <p permid="NIT">
+      We notice, that for each function,
+      the graph contains the point <m>\left(0,1\right)</m>.
+      This makes sense because <m>{b}^{0}=1</m> for any <m>b&gt;1</m>.
+    </p>
+    <p permid="tQc">
+      The graph of each function,
+      <m>f\left(x\right)={b}^{x}</m> also contains the point <m>\left(1,b\right)</m>.
+      The graph of <m>f\left(x\right)={2}^{x}</m> contains <m>\left(1,2\right)</m> and the graph of
+      <m>g\left(x\right)={3}^{x}</m> contains <m>\left(1,3\right)</m>.
+      This makes sense as <m>{b}^{1}=b</m> for any <m>b&gt;1</m>.
+    </p>
+    <p permid="ZXl">
+      Notice too, that the graph of each function
+      <m>f\left(x\right)={b}^{x}</m> also contains the point <m>\left(-1,\frac{1}{b}\right)</m>.
+      The graph of <m>f\left(x\right)={2}^{x}</m> contains <m>\left(-1,\frac{1}{2}\right)</m> and the graph of
+      <m>g\left(x\right)={3}^{x}</m> contains <m>\left(-1,\frac{1}{3}\right)</m>.
+      This makes sense as <m>{b}^{-1}=\frac{1}{b}</m> for any <m>b&gt;1</m>.
+    </p>
+    <p permid="Geu">
+      What is the domain for each function?
+      From the graphs we can see that the domain is the set of all real numbers.
+      There is no restriction on the domain.
+      We write the domain in interval notation as <m>(-\infty ,\infty)</m>.
+    </p>
+    <p permid="mlD">
+      Look at each graph.
+      What is the range of the function?
+      Notice that the graph is always above and never touches the <m>x</m>-axis.
+      Thus, the range is all positive numbers.
+      We write the range in interval notation as <m>\left(0,\infty \right)</m>.
+    </p>
+    <p permid="SsM">
+      Whenever a graph of a function approaches a line but never touches it,
+      we call that line an <term>asymptote</term>.
+      For the exponential functions we are looking at,
+      the graph approaches the <m>x</m>-axis very closely but will never cross it.
+      So we call the line <m>y=0</m>,
+      the <m>x</m>-axis, a horizontal asymptote.
+    </p>
+    <p permid="yzV">
+      We summarize these results below.
+      <figure permid="gwr">
+        <caption>Properties of the Graph of <m>f\left(x\right)={b}^{x}</m> when <m>b&gt;1</m></caption>
+        <sidebyside widths="50% 35%" margins="5%" permid="koZ">
+          <tabular permid="kKL">
             <row>
-                <cell>Domain</cell>
-                <cell><m>(-\infty ,\infty)</m></cell>
+              <cell>Domain</cell>
+              <cell><m>(-\infty ,\infty)</m></cell>
             </row>
             <row>
-                <cell>Range</cell>
-                <cell><m>\left(0,\infty \right)</m></cell>
+              <cell>Range</cell>
+              <cell><m>\left(0,\infty \right)</m></cell>
             </row>
             <row>
-                <cell><m>x</m>-intercept</cell>
-                <cell>None</cell>
+              <cell><m>x</m>-intercept</cell>
+              <cell>None</cell>
             </row>
             <row>
-                <cell><m>y</m>-intercept</cell>
-                <cell><m>\left(0,1\right)</m></cell>
+              <cell><m>y</m>-intercept</cell>
+              <cell><m>\left(0,1\right)</m></cell>
             </row>
             <row>
-                <cell>Contains</cell>
-                <cell><m>\left(1,b\right), \left(-1,\frac{1}{b}\right)</m></cell>
+              <cell>Contains</cell>
+              <cell><m>\left(1,b\right), \left(-1,\frac{1}{b}\right)</m></cell>
             </row>
             <row>
-                <cell>Asymptote</cell>
-                <cell><m>x</m>-axis, the line <m>y=0</m></cell>
+              <cell>Asymptote</cell>
+              <cell><m>x</m>-axis, the line <m>y=0</m></cell>
             </row>
-        </tabular>
-        <image source="images/exp_graphs_1.png"  permid="XMz">
+          </tabular>
+          <image source="images/exp_graphs_1.png" permid="XMz">
             <description>A graph of f(x)=b^x when b>1.</description>
-        </image>
-    </sidebyside>
-</figure></p>
-
-
-<p permid="eHe">Our definition of an exponential function <m>f\left(x\right)={b}^{x}</m> says <m>b&gt;0,</m> but the examples and discussion so far has been about functions where <m>b&gt;1.</m> What happens when <m>0&lt;b&lt;1</m>? The next example will explore this possibility.</p>
-
-<example xml:id="graphing-exponential-functions-with-base-between-zero-and-one" permid="YaH"><statement><p permid="HFm">On the same coordinate system, graph <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}</m> and <m>g\left(x\right)={\left(\frac{1}{3}\right)}^{x}.</m></p></statement><solution permid="NBC">
-<p permid="kDu">We will use point plotting to graph the functions.</p>
-<p permid="QKD">
-<figure permid="cYV"><image source="images/CNX_IntAlg_Figure_10_02_005_img.jpg" width="50%" permid="DTI"><description>A table of values for f(x)=(1/2)^x and g(x)=(1/3)^x.</description></image></figure>
-</p>
-<p permid="wRM"><figure permid="Jge"><image source="images/CNX_IntAlg_Figure_10_02_006_img.jpg" width="40%" permid="kaR"><description>A graph of f(x)=(1/2)^x, in blue, and g(x)=(1/3)^x, in red, graphed on the same coordinate system.</description></image></figure>
-</p>
-</solution></example>
-
-<exercise permid="cKA">
-    <statement>
-        <p permid="pBI">Graph: <m>f\left(x\right)={\left(\frac{1}{4}\right)}^{x}.</m></p>
-    </statement>
-    <solution permid="ysE">
+          </image>
+        </sidebyside>
+      </figure>
+    </p>
+    <p permid="eHe">
+      Our definition of an exponential function <m>f\left(x\right)={b}^{x}</m> says <m>b&gt;0</m>,
+      but the examples and discussion so far has been about functions where <m>b&gt;1</m>.
+      What happens when <m>0&lt;b&lt;1</m>?
+      The next example will explore this possibility.
+    </p>
+    <example xml:id="graphing-exponential-functions-with-base-between-zero-and-one" permid="YaH">
+      <statement>
+        <p permid="HFm">
+          On the same coordinate system,
+          graph <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}</m> and <m>g\left(x\right)={\left(\frac{1}{3}\right)}^{x}</m>.
+        </p>
+      </statement>
+      <solution permid="NBC">
+        <p permid="kDu">
+          We will use point plotting to graph the functions.
+        </p>
+        <p permid="QKD">
+          <figure permid="cYV">
+            <image source="images/CNX_IntAlg_Figure_10_02_005_img.jpg" width="50%" permid="DTI">
+              <description>A table of values for f(x)=(1/2)^x and g(x)=(1/3)^x.</description>
+            </image>
+          </figure>
+        </p>
+        <p permid="wRM">
+          <figure permid="Jge">
+            <image source="images/CNX_IntAlg_Figure_10_02_006_img.jpg" width="40%" permid="kaR">
+              <description>A graph of f(x)=(1/2)^x, in blue, and g(x)=(1/3)^x, in red, graphed on the same coordinate system.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </example>
+    <exercise permid="cKA">
+      <statement>
+        <p permid="pBI">
+          Graph: <m>f\left(x\right)={\left(\frac{1}{4}\right)}^{x}</m>.
+        </p>
+      </statement>
+      <solution permid="ysE">
         <p permid="pnn">
-        <figure permid="Vuw"><image source="images/CNX_IntAlg_Figure_10_02_303_img.jpg" width="30%" permid="Qia"><description>Graph of f(x)=(1/4)^x.</description></image></figure></p>
-
-        </solution></exercise>
-
-<exercise permid="IRJ">
-    <statement>
-        <p permid="VIR">Graph: <m>g\left(x\right)={\left(\frac{1}{5}\right)}^{x}.</m></p>
-        </statement>
-        <solution  permid="ezN">
-            <p permid="BBF">
-            <figure permid="hIO"><image source="images/CNX_IntAlg_Figure_10_02_304_img.jpg" width="30%" permid="wpj"><description>Graph of g(x)=(1/5)^x.</description></image></figure></p>
-        </solution></exercise>
-
-
-<p permid="KOn">Now let's look at the graphs from the previous examples, so we can now identify some of the properties of exponential functions where <m>0&lt;b&lt;1.</m></p>
-
-<p permid="qVw">The graphs of <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}</m> and <m>g\left(x\right)={\left(\frac{1}{3}\right)}^{x}</m> as well as the graphs of <m>f\left(x\right)={\left(\frac{1}{4}\right)}^{x}</m> and <m>g\left(x\right)={\left(\frac{1}{5}\right)}^{x}</m> all have the same basic shape. While this is the shape we expect from an exponential function, the graphs go down from left to right (i.e. they're decreasing), while the previous graphs, when <m>b&gt;1,</m> went from up from left to right (i.e. they're increasing).</p>
-
-<p permid="XcF">We notice that for each function, the graph still contains the point (0, 1). This should make sense because <m>{b}^{0}=1</m> for any <m>b&gt;0</m>.</p>
-
-<p permid="DjO">As before, the graph of each function, <m>f\left(x\right)={b}^{x},</m> also contains the point <m>\left(1,b\right).</m> The graph of <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}</m> contains <m>\left(1,\frac{1}{2}\right)</m> and the graph of <m>g\left(x\right)={\left(\frac{1}{3}\right)}^{x}</m> contains <m>\left(1,\frac{1}{3}\right).</m> This makes sense as <m>{b}^{1}=b</m> for any <m>b</m>.</p>
-
-<p permid="jqX">Notice too that the graph of each function, <m>f\left(x\right)={b}^{x},</m> also contains the point <m>\left(-1,\frac{1}{b}\right).</m> The graph of <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}</m> contains <m>\left(-1,2\right)</m> and the graph of <m>g\left(x\right)={\left(\frac{1}{3}\right)}^{x}</m> contains <m>\left(-1,3\right).</m> This makes sense as <m>{b}^{-1}=\frac{1}{b}</m> for any <m>b&gt;0</m>.</p>
-
-<p permid="Pyg">What is the domain and range for each function? From the graphs we can see that the domain is the set of all real numbers and we write the domain in interval notation as <m>\left(-\infty ,\infty \right).</m> Again, the graph is always above and never touches the <m>x</m>-axis. Thus, the range is the set of all positive numbers. We write the range in interval notation as <m>\left(0,\infty \right).</m></p>
-
-<p permid="vFp">We will summarize these properties in <xref ref="table-properties-of-graph-exponential-function-with-base-greater-than-zero">Table</xref>, which also includes when <m>b&gt;1.</m></p>
-
-<table xml:id="table-properties-of-graph-exponential-function-with-base-greater-than-zero" width="100%" permid="Mib">
-    <caption>Properties of the Graph of <m>f(x)=b^x</m></caption>
-    <tabular permid="QRU">
+          <figure permid="Vuw">
+            <image source="images/CNX_IntAlg_Figure_10_02_303_img.jpg" width="30%" permid="Qia">
+              <description>Graph of f(x)=(1/4)^x.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </exercise>
+    <exercise permid="IRJ">
+      <statement>
+        <p permid="VIR">
+          Graph: <m>g\left(x\right)={\left(\frac{1}{5}\right)}^{x}</m>.
+        </p>
+      </statement>
+      <solution  permid="ezN">
+        <p permid="BBF">
+          <figure permid="hIO">
+            <image source="images/CNX_IntAlg_Figure_10_02_304_img.jpg" width="30%" permid="wpj">
+              <description>Graph of g(x)=(1/5)^x.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </exercise>
+    <p permid="KOn">
+      Now let's look at the graphs from the previous examples,
+      so we can now identify some of the properties of exponential functions where <m>0&lt;b&lt;1</m>.
+    </p>
+    <p permid="qVw">
+      The graphs of <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}</m> and
+      <m>g\left(x\right)={\left(\frac{1}{3}\right)}^{x}</m> as well as the graphs of <m>f\left(x\right)={\left(\frac{1}{4}\right)}^{x}</m> and
+      <m>g\left(x\right)={\left(\frac{1}{5}\right)}^{x}</m> all have the same basic shape.
+      While this is the shape we expect from an exponential function,
+      the graphs go down from left to right (i.e. they're decreasing),
+      while the previous graphs, when <m>b&gt;1</m>,
+      went from up from left to right (i.e. they're increasing).
+    </p>
+    <p permid="XcF">
+      We notice that for each function,
+      the graph still contains the point (0, 1).
+      This should make sense because
+      <m>{b}^{0}=1</m> for any <m>b&gt;0</m>.
+    </p>
+    <p permid="DjO">
+      As before, the graph of each function,
+      <m>f\left(x\right)={b}^{x}</m>,
+      also contains the point <m>\left(1,b\right)</m>.
+      The graph of <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}</m> contains <m>\left(1,\frac{1}{2}\right)</m> and the graph of
+      <m>g\left(x\right)={\left(\frac{1}{3}\right)}^{x}</m> contains <m>\left(1,\frac{1}{3}\right)</m>.
+      This makes sense as <m>{b}^{1}=b</m> for any <m>b</m>.
+    </p>
+    <p permid="jqX">
+      Notice too that the graph of each function,
+      <m>f\left(x\right)={b}^{x}</m>,
+      also contains the point <m>\left(-1,\frac{1}{b}\right)</m>.
+      The graph of <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}</m> contains <m>\left(-1,2\right)</m> and the graph of
+      <m>g\left(x\right)={\left(\frac{1}{3}\right)}^{x}</m> contains <m>\left(-1,3\right)</m>.
+      This makes sense as <m>{b}^{-1}=\frac{1}{b}</m> for any <m>b&gt;0</m>.
+    </p>
+    <p permid="Pyg">
+      What is the domain and range for each function?
+      From the graphs we can see that the domain is the set of all real numbers and we write the domain in interval notation as <m>\left(-\infty ,\infty \right)</m>.
+      Again, the graph is always above and never touches the <m>x</m>-axis.
+      Thus, the range is the set of all positive numbers.
+      We write the range in interval notation as <m>\left(0,\infty \right)</m>.
+    </p>
+    <p permid="vFp">
+      We will summarize these properties in <xref ref="table-properties-of-graph-exponential-function-with-base-greater-than-zero">Table</xref>,
+      which also includes when <m>b&gt;1</m>.
+    </p>
+    <table xml:id="table-properties-of-graph-exponential-function-with-base-greater-than-zero" width="100%" permid="Mib">
+      <caption>Properties of the Graph of <m>f(x)=b^x</m></caption>
+      <tabular permid="QRU">
         <row bottom="major">
-            <cell colspan="2">when <m>b&gt;1</m></cell>
-            <cell colspan="2">when <m>0&lt;b&lt;1</m></cell>
+          <cell colspan="2">when <m>b&gt;1</m></cell>
+          <cell colspan="2">when <m>0&lt;b&lt;1</m></cell>
         </row>
         <row>
-            <cell>Domain</cell>
-            <cell><m>\left(-\infty ,\infty \right)</m></cell>
-            <cell>Domain</cell>
-            <cell><m>\left(-\infty ,\infty \right)</m></cell>
+          <cell>Domain</cell>
+          <cell><m>\left(-\infty ,\infty \right)</m></cell>
+          <cell>Domain</cell>
+          <cell><m>\left(-\infty ,\infty \right)</m></cell>
         </row>
         <row>
-            <cell>Range</cell>
-            <cell><m>\left(0,\infty \right)</m></cell>
-            <cell>Range</cell>
-            <cell><m>\left(0,\infty \right)</m></cell>
+          <cell>Range</cell>
+          <cell><m>\left(0,\infty \right)</m></cell>
+          <cell>Range</cell>
+          <cell><m>\left(0,\infty \right)</m></cell>
         </row>
         <row>
-            <cell><m>x</m>-intercept</cell>
-            <cell>none</cell>
-            <cell><m>x</m>-intercept</cell>
-            <cell>none</cell>
+          <cell><m>x</m>-intercept</cell>
+          <cell>none</cell>
+          <cell><m>x</m>-intercept</cell>
+          <cell>none</cell>
         </row>
         <row>
-            <cell><m>y</m>-intercept</cell>
-            <cell><m>\left(0,1\right)</m></cell>
-            <cell><m>y</m>-intercept</cell>
-            <cell><m>\left(0,1\right)</m></cell>
+          <cell><m>y</m>-intercept</cell>
+          <cell><m>\left(0,1\right)</m></cell>
+          <cell><m>y</m>-intercept</cell>
+          <cell><m>\left(0,1\right)</m></cell>
         </row>
         <row>
-            <cell>Contains</cell>
-            <cell><m>\left(1,b\right), \left(-1,\frac{1}{b}\right)</m></cell>
-            <cell>Contains</cell>
-            <cell><m>\left(1,b\right), \left(-1,\frac{1}{b}\right)</m></cell>
+          <cell>Contains</cell>
+          <cell><m>\left(1,b\right), \left(-1,\frac{1}{b}\right)</m></cell>
+          <cell>Contains</cell>
+          <cell><m>\left(1,b\right), \left(-1,\frac{1}{b}\right)</m></cell>
         </row>
         <row>
-            <cell>Asymptote</cell>
-            <cell><m>x</m>-axis, the line <m>y=0</m></cell>
-            <cell>Asymptote</cell>
-            <cell><m>x</m>-axis, the line <m>y=0</m></cell>
+          <cell>Asymptote</cell>
+          <cell><m>x</m>-axis, the line <m>y=0</m></cell>
+          <cell>Asymptote</cell>
+          <cell><m>x</m>-axis, the line <m>y=0</m></cell>
         </row>
         <row>
-            <cell>Basic shape</cell>
-            <cell>increasing</cell>
-            <cell>Basic shape</cell>
-            <cell>decreasing</cell>
+          <cell>Basic shape</cell>
+          <cell>increasing</cell>
+          <cell>Basic shape</cell>
+          <cell>decreasing</cell>
         </row>
-    </tabular>
-</table>
-
-<figure permid="MDA"><image source="images/exp_graphs_2.png" align="center" width="100%" permid="cws"><description>Graphs of the functions y=b^x when b>0 and y=b^x when b is between 0 and 1, graphed side by side.</description></image></figure>
-
-<example permid="EhQ">
-    <statement>
-        <p permid="nMv">On the same coordinate system, graph <m>f\left(x\right)={3}^{x}</m> and <m>g\left(x\right)={3}^{x}-2.</m></p></statement>
-        <solution permid="tIL">
-            <p permid="NPX">We will use point plotting to graph the functions.
-
-            <figure permid="tXg"><image source="images/CNX_IntAlg_Figure_10_02_010_img.jpg" width="60%" permid="IDB"><description>Table of values for f(x)=3^x and g(x)=3^x-2.</description></image></figure>
-
-            <figure permid="aep"><image source="images/CNX_IntAlg_Figure_10_02_011_img.jpg" width="50%" permid="oKK"><description>Graphs of f(x)=3^x, in blue, and g(x)=3^x-2, in red, graphed on the same coordinate system.</description></image></figure></p>
-
-        </solution>
-</example>
-
-
-<exercise permid="oYS">
-    <statement>
-        <p permid="BQa">On the same coordinate system, graph: <m>f\left(x\right)={3}^{x}</m> and <m>g\left(x\right)={3}^{x}+2.</m></p>
-    </statement>
-    <solution permid="KGW">
-        <p permid="Gly"><figure permid="msH"><image source="images/CNX_IntAlg_Figure_10_02_307_img.jpg" width="30%" permid="URT"><description>Graphs of f(x)=3^x, in blue, and g(x)=3^x+2, in red, graphed on the same coordinate system.</description></image></figure></p>
-    </solution></exercise>
-
-<exercise permid="Vgb">
-    <statement>
-        <p permid="hXj">On the same coordinate system, graph: <m>f\left(x\right)={4}^{x}</m> and <m>g\left(x\right)={4}^{x}-2.</m></p>
-    </statement>
-    <solution permid="qOf">
-        <p permid="SzQ"><figure permid="yGZ"><image source="images/CNX_IntAlg_Figure_10_02_308_img.jpg" width="30%" permid="AZc"><description>Graphs of f(x)=4^x, in blue, and g(x)=4^x-2, in red, graphed on the same coordinate system.</description></image></figure>
+      </tabular>
+    </table>
+    <figure permid="MDA">
+      <image source="images/exp_graphs_2.png" align="center" width="100%" permid="cws">
+        <description>Graphs of the functions y=b^x when b>0 and y=b^x when b is between 0 and 1, graphed side by side.</description>
+      </image>
+    </figure>
+    <example permid="EhQ">
+      <statement>
+        <p permid="nMv">
+          On the same coordinate system,
+          graph <m>f\left(x\right)={3}^{x}</m> and <m>g\left(x\right)={3}^{x}-2</m>.
         </p>
-    </solution>
+      </statement>
+      <solution permid="tIL">
+        <p permid="NPX">
+          We will use point plotting to graph the functions.
+          <figure permid="tXg">
+            <image source="images/CNX_IntAlg_Figure_10_02_010_img.jpg" width="60%" permid="IDB">
+              <description>Table of values for f(x)=3^x and g(x)=3^x-2.</description>
+            </image>
+          </figure>
+          <figure permid="aep">
+            <image source="images/CNX_IntAlg_Figure_10_02_011_img.jpg" width="50%" permid="oKK">
+              <description>Graphs of f(x)=3^x, in blue, and g(x)=3^x-2, in red, graphed on the same coordinate system.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </example>
+    <exercise permid="oYS">
+      <statement>
+        <p permid="BQa">
+          On the same coordinate system, graph:
+          <m>f\left(x\right)={3}^{x}</m> and <m>g\left(x\right)={3}^{x}+2</m>.
+        </p>
+      </statement>
+      <solution permid="KGW">
+        <p permid="Gly">
+          <figure permid="msH">
+            <image source="images/CNX_IntAlg_Figure_10_02_307_img.jpg" width="30%" permid="URT">
+              <description>Graphs of f(x)=3^x, in blue, and g(x)=3^x+2, in red, graphed on the same coordinate system.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
     </exercise>
-
-<p permid="bMy">All of our exponential functions so far have had either an integer or a rational number as the base. We will now look at an exponential function with an irrational number as the base.</p>
-
-<p permid="HTH">Before we can look at this exponential function, we need to define the irrational number, <m>e</m>. This number is used as a base in many applications in the sciences and business that are modeled by exponential functions. The number is defined as the value of <m>{\left(1+\frac{1}{n}\right)}^{n}</m> as <m>n</m> gets larger and larger. We say, as <m>n</m> approaches infinity, or increases without bound. The table shows the value of <m>{\left(1+\frac{1}{n}\right)}^{n}</m> for several values of <m>n</m>.
-
-<table permid="spk">
-<caption></caption>
-<tabular permid="wZd"><row bottom="major"><cell><m>n</m></cell><cell><m>{\left(1+\frac{1}{n}\right)}^{n}</m></cell></row><row><cell>1</cell><cell>2</cell></row><row><cell>2</cell><cell>2.25</cell></row><row><cell>5</cell><cell>2.48832</cell></row><row><cell>10</cell><cell>2.59374246</cell></row><row><cell>100</cell><cell>2.704813829...</cell></row><row><cell>1,000</cell><cell>2.716923932...</cell></row><row><cell>10,000</cell><cell>2.718145927...</cell></row><row><cell>100,000</cell><cell>2.718268237...</cell></row><row><cell>1,000,000</cell><cell>2.718280469...</cell></row><row><cell>1,000,000,000</cell><cell>2.718281827...</cell></row></tabular>
+    <exercise permid="Vgb">
+      <statement>
+        <p permid="hXj">
+          On the same coordinate system, graph:
+          <m>f\left(x\right)={4}^{x}</m> and <m>g\left(x\right)={4}^{x}-2</m>.
+        </p>
+      </statement>
+      <solution permid="qOf">
+        <p permid="SzQ">
+          <figure permid="yGZ">
+            <image source="images/CNX_IntAlg_Figure_10_02_308_img.jpg" width="30%" permid="AZc">
+              <description>Graphs of f(x)=4^x, in blue, and g(x)=4^x-2, in red, graphed on the same coordinate system.</description>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </exercise>
+    <p permid="bMy">
+      All of our exponential functions so far have had either an integer or a rational number as the base.
+      We will now look at an exponential function with an irrational number as the base.
+    </p>
+    <p permid="HTH">
+      Before we can look at this exponential function,
+      we need to define the irrational number, <m>e</m>.
+      This number is used as a base in many applications in the sciences and business that are modeled by exponential functions.
+      The number is defined as the value of
+      <m>{\left(1+\frac{1}{n}\right)}^{n}</m> as <m>n</m> gets larger and larger.
+      We say, as <m>n</m> approaches infinity,
+      or increases without bound.
+      The table shows the value of
+      <m>{\left(1+\frac{1}{n}\right)}^{n}</m> for several values of <m>n</m>.
+      <table permid="spk">
+        <caption></caption>
+        <tabular permid="wZd">
+          <row bottom="major">
+            <cell><m>n</m></cell>
+            <cell><m>{\left(1+\frac{1}{n}\right)}^{n}</m></cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>2</cell>
+            <cell>2.25</cell>
+          </row>
+          <row>
+            <cell>5</cell>
+            <cell>2.48832</cell>
+          </row>
+          <row>
+            <cell>10</cell>
+            <cell>2.59374246</cell>
+          </row>
+          <row>
+            <cell>100</cell>
+            <cell>2.704813829...</cell>
+          </row>
+          <row>
+            <cell>1,000</cell>
+            <cell>2.716923932...</cell>
+          </row>
+          <row>
+            <cell>10,000</cell>
+            <cell>2.718145927...</cell>
+          </row>
+          <row>
+            <cell>100,000</cell>
+            <cell>2.718268237...</cell>
+          </row>
+          <row>
+            <cell>1,000,000</cell>
+            <cell>2.718280469...</cell>
+          </row>
+          <row>
+            <cell>1,000,000,000</cell>
+            <cell>2.718281827...</cell>
+          </row>
+        </tabular>
+      </table>
+      <me permid="Rnt">
+        e\approx 2.718281827
+      </me>
+      The number <m>e</m> is like the number <m>\pi </m> in that we use a symbol to represent it because its decimal representation never stops or repeats.
+      The irrational number <m>e</m> is called the
+      <term>natural base</term>.
+    </p>
+    <definition xml:id="definition-natural-base-e" permid="fFg">
+      <idx><h>natural base e</h></idx>
+      <title>Natural Base e</title>
+      <statement>
+        <p permid="jcC">
+          The <term>natural base <m>e</m></term>
+          is defined as the value of <m>{\left(1+\frac{1}{n}\right)}^{n}</m>,
+          as <m>n</m> increases without bound.
+          We say, as <m>n</m> approaches infinity,
+        </p>
+        <p permid="PjL">
+          <me permid="xuC">
+            e\approx 2.718281827..
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="definition-natural-exponential-function" permid="LMp">
+      <idx><h>natural exponential</h></idx>
+      <idx><h>function</h></idx>
+      <idx><h>natural exponential</h></idx>
+      <title>Natural Exponential Function</title>
+      <statement>
+        <p permid="vqU">
+          The exponential function whose base is <m>e</m>,
+          <m>f\left(x\right)={e}^{x}</m>,
+          is called the <term>natural exponential function</term>.
+        </p>
+      </statement>
+    </definition>
+    <p permid="oaQ">
+      Let's graph the function <m>f\left(x\right)={e}^{x}</m> on the same coordinate system as
+      <m>g\left(x\right)={2}^{x}</m> and <m>h\left(x\right)={3}^{x}</m>.
+    </p>
+    <figure permid="sKJ">
+      <image source="images/CNX_IntAlg_Figure_10_02_012.jpg" width="50%" permid="hgl">
+        <description>Graph of the function f(x)=e^x, in blue, on the same coordinate system as g(x)=2^x, in red, and h(x)=3^x, in green.</description>
+      </image>
+    </figure>
+    <p permid="UhZ">
+      Notice that the graph of <m>f\left(x\right)={e}^{x}</m> is between the graphs of
+      <m>g\left(x\right)={2}^{x}</m> and <m>h\left(x\right)={3}^{x}</m>.
+      This should make sense as <m>2&lt;e&lt;3</m>.
+    </p>
+  </subsection>
+  <subsection  permid="ZBz">
+    <title>Use Exponential Models in Applications</title>
+    <p permid="YRS">
+      Exponential functions model many situations.
+      If you own a bank account,
+      you have experienced the use of an exponential function,
+      which is used to calculate compound interest.
+      If you've worked in a laboratory with bacteria,
+      then you are familiar with the exponential growth of bacteria,
+      which can be modeled by an exponential function.
+    </p>
+    <paragraphs permid="lPR">
+      <title>Compound Interest</title>
+      <introduction permid="izM">
+        <p permid="swo">
+          There are two formulas that are used to determine the balance in the account when interest is earned.
+          If a principal,
+          <m>P</m>, is invested at an interest rate, <m>r</m>
+          (in decimal form),
+          for <m>t</m> years, the new balance, <m>A</m>,
+          will depend on how often the interest is compounded.
+          If the interest is compounded <m>n</m> times a year we use the formula <m>A=P\left(1+\frac{r}{n}\right)^{nt}</m>.
+          If the interest is compounded continuously,
+          we use the formula <m>A=P{e}^{rt}</m>.
+          These are the formulas for <term>compound interest</term>.
+        </p>
+      </introduction>
+      <p permid="saP">
+        For a principal, <m>P</m>, invested at an interest rate, <m>r</m>
+        (in decimal form),
+        for <m>t</m> years, the new balance, <m>A</m>, is:
+      </p>
+      <p permid="YhY">
+        <md permid="JIU">
+          <mrow>A=P\left(1+\frac{r}{n}\right)^{nt}\amp \text{when compounded } n \text{ times a year.}</mrow>
+        </md>
+        <md permid="pQd">
+          <mrow>A=P{e}^{rt}\amp  \text{when compounded continuously.}</mrow>
+        </md>
+      </p>
+      <p permid="Eph">
+        As you work with the interest formulas,
+        it is often helpful to identify the values of the variables first and then substitute them into the formula.
+      </p>
+      <example permid="CsD">
+        <statement>
+          <p permid="TTE">
+            A total of <m>\$10{,}000</m> was invested in a college fund for a new grandchild.
+            If the interest rate is <m>5\%</m>,
+            how much will be in the account in <m>18</m> years by each method of compounding?
+          </p>
+          <ol label="a." permid="kYT">
+            <li permid="BXe">
+              compound quarterly
+            </li>
+            <li permid="ien">
+              compound monthly
+            </li>
+            <li permid="Olw">
+              compound continuously
+            </li>
+          </ol>
+        </statement>
+        <solution permid="ZPU">
+          <table halign="left" permid="Ywt">
+            <tabular permid="dgm">
+              <row>
+                <cell halign="left"></cell>
+                <cell><m>A=\text{ ?}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Identify the values of each variable in the formulas.</cell>
+                <cell><m>P=\$10{,}000</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Be sure to express the percent as a decimal.</cell>
+                <cell><m>r=0.05</m></cell>
+              </row>
+              <row>
+                <cell halign="left"></cell>
+                <cell><m>t=18</m> years</cell>
+              </row>
+<!--           </tabular>
 </table>
-
-<me permid="Rnt">e\approx 2.718281827</me>
-
-The number <m>e</m> is like the number <m>\pi </m> in that we use a symbol to represent it because its decimal representation never stops or repeats. The irrational number <m>e</m> is called the <term>natural base</term>.</p>
-<definition xml:id="definition-natural-base-e" permid="fFg">
-
-<idx><h>natural base e</h></idx> <title>Natural Base e</title>
-<statement>
-<p permid="jcC">The <term>natural base <m>e</m></term> is defined as the value of <m>{\left(1+\frac{1}{n}\right)}^{n},</m> as <m>n</m> increases without bound. We say, as <m>n</m> approaches infinity,</p>
-<p permid="PjL"><me permid="xuC">e\approx 2.718281827...</me></p></statement></definition>
-
-<definition xml:id="definition-natural-exponential-function" permid="LMp"><idx><h>natural exponential</h></idx><idx><h>function</h></idx><idx><h>natural exponential</h></idx><title>Natural Exponential Function</title>
-<statement>
-<p permid="vqU">The exponential function whose base is <m>e,</m> <m>f\left(x\right)={e}^{x}</m>, is called the <term>natural exponential function</term>.</p></statement></definition>
-
-<p permid="oaQ">Let's graph the function <m>f\left(x\right)={e}^{x}</m> on the same coordinate system as <m>g\left(x\right)={2}^{x}</m> and <m>h\left(x\right)={3}^{x}.</m></p>
-
-    <figure permid="sKJ"><image source="images/CNX_IntAlg_Figure_10_02_012.jpg" width="50%" permid="hgl"><description>Graph of the function f(x)=e^x, in blue, on the same coordinate system as g(x)=2^x, in red, and h(x)=3^x, in green.</description></image></figure>
-
-<p permid="UhZ">Notice that the graph of <m>f\left(x\right)={e}^{x}</m> is between the graphs of <m>g\left(x\right)={2}^{x}</m> and <m>h\left(x\right)={3}^{x}.</m> This should make sense as <m>2&lt;e&lt;3</m>.</p>
-</subsection>
-
-<subsection  permid="ZBz"><title>Use Exponential Models in Applications</title>
-
-<p permid="YRS">Exponential functions model many situations. If you own a bank account, you have experienced the use of an exponential function, which is used to calculate compound interest. If you've worked in a laboratory with bacteria, then you are familiar with the exponential growth of bacteria, which can be modeled by an exponential function.</p>
-
-<paragraphs permid="lPR">
-
-<title>Compound Interest</title>
-
-<introduction permid="izM"><p permid="swo">There are two formulas that are used to determine the balance in the account when interest is earned. If a principal, <m>P</m>, is invested at an interest rate, <m>r</m> (in decimal form), for <m>t</m> years, the new balance, <m>A</m>, will depend on how often the interest is compounded. If the interest is compounded <m>n</m> times a year we use the formula <m>A=P\left(1+\frac{r}{n}\right)^{nt}.</m> If the interest is compounded continuously, we use the formula <m>A=P{e}^{rt}.</m> These are the formulas for <term>compound interest</term>.</p></introduction>
-
-
-<p permid="saP">For a principal, <m>P</m>, invested at an interest rate, <m>r</m> (in decimal form), for <m>t</m> years, the new balance, <m>A</m>, is:</p>
-<p permid="YhY"><md permid="JIU">
-    <mrow>A=P\left(1+\frac{r}{n}\right)^{nt}\amp \text{when compounded } n \text{ times a year.}</mrow></md><md permid="pQd">
-    <mrow>A=P{e}^{rt}\amp  \text{when compounded continuously.}</mrow>
-</md></p>
-
-
-<p permid="Eph">As you work with the interest formulas, it is often helpful to identify the values of the variables first and then substitute them into the formula.</p>
-
-<example permid="CsD"><statement><p permid="TTE">A total of <m>\$10{,}000</m> was invested in a college fund for a new grandchild. If the interest rate is <m>5\%</m>, how much will be in the account in <m>18</m> years by each method of compounding?</p>
-
-<ol label="a." permid="kYT">
-<li permid="BXe">compound quarterly</li>
-<li permid="ien">compound monthly</li>
-<li permid="Olw">compound continuously</li></ol></statement>
-
-<solution permid="ZPU">
-
-
-    <table halign="left" permid="Ywt">
-                <tabular permid="dgm">
-                    <row>
-                        <cell halign="left">   </cell>
-                        <cell><m>A=\text{ ?}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Identify the values of each variable in the formulas.</cell>
-                        <cell><m>P=\$10{,}000</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Be sure to express the percent as a decimal.</cell>
-                        <cell><m>r=0.05</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">   </cell>
-                        <cell><m>t=18</m> years</cell>
-                    </row>
-      <!--           </tabular>
-        </table>
- -->
-     <!--    <table halign="left">
-            <tabular> -->
-                    <row><cell halign="left">a. </cell><cell>   </cell></row>
-                    <row>
-                        <cell halign="left">For quarterly compounding, <m>n=4</m></cell>
-                        <cell><m>A=P\left(1+\frac{r}{n}\right)^{nt}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">There are <m>4</m> quarters per year.</cell>
-                        <cell>   </cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Substitute the values in the formula.</cell>
-                        <cell><m>A=10{,}000\left(1+\frac{0.05}{4}\right)^{4\cdot 18}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Compute the amount, being careful to follow</cell>
-                        <cell>    </cell>
-                    </row>
-                    <row>
-                        <cell halign="left">the order of operation as you enter the</cell>
-                        <cell>   </cell>
-                    </row>
-                    <row>
-                        <cell halign="left">expression into your calculator.</cell>
-                        <cell>     </cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Round to the nearest cent.</cell>
-                        <cell><m>A=\$24{,}459.20</m></cell>
-                    </row>
-                    <row></row>
-              <!--   </tabular>
-            </table>
-
-            <table halign="left">
-                <tabular> -->
-                    <row><cell halign="left">b. </cell><cell>   </cell></row>
-                    <row>
-                        <cell halign="left">For monthly compounding, <m>n=12</m></cell>
-                        <cell><m>A=P\left(1+\frac{r}{n}\right)^{nt}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">There are <m>12</m> months per year.</cell>
-                        <cell>   </cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Substitute the values in the formula.</cell>
-                        <cell><m>A=10{,}000\left(1+\frac{0.05}{12}\right)^{12\cdot 18}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Compute and round to the nearest cent.</cell>
-                        <cell><m>A=\$24{,}550.08</m></cell>
-                    </row>
-                    <row></row>
-                <!-- </tabular>
-            </table>
-
-            <table halign="left">
-                <tabular> -->
-                    <row><cell halign="left">c. </cell><cell>   </cell></row>
-                    <row>
-                        <cell halign="left">For compounding continuously,</cell>
-                        <cell><m>A=Pe^{nt}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Substitute the values in the formula.</cell>
-                        <cell><m>A=10{,}000e^{0.05\cdot 18}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Compute and round to the nearest cent.</cell>
-                        <cell><m>A=\$24{,}596.03</m></cell>
-                    </row>
-
-                </tabular>
-            </table>
-
+-->
+<!--    <table halign="left">
+<tabular> -->
+              <row>
+                <cell halign="left">a.</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">For quarterly compounding, <m>n=4</m></cell>
+                <cell><m>A=P\left(1+\frac{r}{n}\right)^{nt}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">There are <m>4</m> quarters per year.</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">Substitute the values in the formula.</cell>
+                <cell><m>A=10{,}000\left(1+\frac{0.05}{4}\right)^{4\cdot 18}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Compute the amount, being careful to follow</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">the order of operation as you enter the</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">expression into your calculator.</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">Round to the nearest cent.</cell>
+                <cell><m>A=\$24{,}459.20</m></cell>
+              </row>
+              <row>
+              </row>
+<!--   </tabular>
+</table>
+<table halign="left">
+<tabular> -->
+              <row>
+                <cell halign="left">b.</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">For monthly compounding, <m>n=12</m></cell>
+                <cell><m>A=P\left(1+\frac{r}{n}\right)^{nt}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">There are <m>12</m> months per year.</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">Substitute the values in the formula.</cell>
+                <cell><m>A=10{,}000\left(1+\frac{0.05}{12}\right)^{12\cdot 18}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Compute and round to the nearest cent.</cell>
+                <cell><m>A=\$24{,}550.08</m></cell>
+              </row>
+              <row>
+              </row>
+<!-- </tabular>
+</table>
+<table halign="left">
+<tabular> -->
+              <row>
+                <cell halign="left">c.</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">For compounding continuously,</cell>
+                <cell><m>A=Pe^{nt}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Substitute the values in the formula.</cell>
+                <cell><m>A=10{,}000e^{0.05\cdot 18}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Compute and round to the nearest cent.</cell>
+                <cell><m>A=\$24{,}596.03</m></cell>
+              </row>
+            </tabular>
+          </table>
 <!-- <p><m>\begin{array}{cccccc}\begin{array}{c}\text{Identify the values of each variable in the formulas.}\hfill \\ \text{Remember to express the percent as a decimal.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp; \begin{array}{ccc}\hfill A&amp; =\hfill &amp; ?\hfill \\ \hfill P&amp; =\hfill &amp; $10,000\hfill \\ \hfill r&amp; =\hfill &amp; 0.05\hfill \\ \hfill t&amp; =\hfill &amp; 18 \text{ years}\hfill \end{array}\hfill \end{array}</m></p>
-<p>a.
-<m>\begin{array}{cccccc}\begin{array}{c}\text{For quarterly compounding, } n=4. \text{ There are 4}\hfill \\ \text{quarters in a year.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp;  A=P{\left(1+\frac{r}{n}\right)}^{nt}\hfill \\ \text{Substitute the values in the formula.}\hfill &amp; &amp; &amp; &amp; &amp;  A=10,000{\left(1+\frac{0.05}{4}\right)}^{4\cdot 18}\hfill \\ \begin{array}{c}\text{Compute the amount. Be careful to consider the}\hfill \\ \text{order of operations as you enter the expression into}\hfill \\ \text{your calculator.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp;  A=$24,459.20\hfill \end{array}</m></p>
-<p>b.
-<m>\begin{array}{cccccc}\begin{array}{c}\text{For monthly compounding, } n=12. \text{ There are 12}\hfill \\ \text{months in a year.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp;  A=P{\left(1+\frac{r}{n}\right)}^{nt}\hfill \\ \text{Substitute the values in the formula.}\hfill &amp; &amp; &amp; &amp; &amp;  A=10,000{\left(1+\frac{0.05}{12}\right)}^{12\cdot 18}\hfill \\ \text{Compute the amount.}\hfill &amp; &amp; &amp; &amp; &amp;  A=$24,550.08\hfill \end{array}</m></p>
-<p>c.
-<m>\begin{array}{cccccc}\text{For compounding continuously,}\hfill &amp; &amp;&amp; &amp; &amp; &amp; &amp;  A=P{e}^{rt}\hfill \\ \text{Substitute the values in the formula.}\hfill &amp; &amp;&amp; &amp; &amp; &amp; &amp;  A=10,000{e}^{0.05\cdot 18}\hfill \\ \text{Compute the amount.}\hfill &amp; &amp;&amp; &amp; &amp; &amp; &amp;  A=$24,596.03\hfill \end{array}</m></p> -->
-
-        </solution></example>
-
-    <exercise permid="OGV">
-        <webwork>
-                    <pg-macros>
-                         <macro-file>contextCurrency.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Currency");
-                $answer1=Currency(22332.96);
-                $answer2=Currency(22362.49);
-                $answer3=Currency(22377.37);
-            </pg-code>
-                     </setup>
-        <statement>
-            <p permid="Oes">Angela invested <m>\$15{,}000</m> in a savings account. If the interest rate is <m>4\%</m>, how much will be in the account in <m>10</m> years by each method of compounding? Round each answer to the nearest cent.</p>
-
-            <ol label="a." permid="duu">
-                <li permid="usF">compound quarterly: $<var name="$answer1" width="10" /></li>
-                <li permid="azO">compound monthly: $<var name="$answer2" width="10" /></li>
-                <li permid="GGX">compound continuously: $<var name="$answer3" width="10" /></li></ol>
-
-        </statement>
-        <solution permid="WVo">
-            <ol label="a." permid="YKB">
-                <li permid="mOg"><p permid="lIN">For compounding quarterly, <m>n=4</m>. Plugging this and <m>P=\$15{,}000</m>, <m>r=0.04</m>, and <m>t=10</m> into the compound interest formula, we have:<md permid="VXm">
-
-                    <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
-                    <mrow>\amp=\substitute{15000}\left(1+\frac{\substitute{0.04}}{\substitute{4}}\right)^{(\substitute{4}\cdot \substitute{10})}</mrow>
-                    <mrow>\amp=15000\left(1+\frac{0.04}{4}\right)^{40}</mrow>
-                    <mrow>\amp\approx \$22333</mrow></md>
-
-            </p></li>
-
-                <li permid="SVp"><p permid="RPW">For compounding monthly, <m>n=12</m>. Plugging this and <m>P=\$15{,}000</m>, <m>r=0.04</m>, and <m>t=10</m> into the compound interest formula, we have:<md permid="Cev">
-
-                    <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
-                    <mrow>\amp=\substitute{15000}\left(1+\frac{\substitute{0.04}}{\substitute{12}}\right)^{(\substitute{12}\cdot \substitute{10})}</mrow>
-                    <mrow>\amp=15000\left(1+\frac{0.04}{12}\right)^{120}</mrow>
-                    <mrow>\amp\approx \$22362</mrow></md>
-                </p></li>
-
-                <li permid="zcy"><p permid="xXf">For compounding continuously, we use the formula <m>A=Pe^{rt}</m>, and plug in <m>P=\$15{,}000</m>, <m>r=0.04</m>, and <m>t=10</m>. This gives us:<md permid="ilE">
-
-                    <mrow>A\amp=Pe^{rt}</mrow>
-                    <mrow>\amp=\substitute{15000}e^{(\substitute{0.04}\cdot \substitute{10})}</mrow>
-                    <mrow>\amp\approx \$22377</mrow></md>
-
-            </p></li>
-            </ol>
+<p>a. <m>\begin{array}{cccccc}\begin{array}{c}\text{For quarterly compounding, } n=4. \text{ There are 4}\hfill \\ \text{quarters in a year.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp;  A=P{\left(1+\frac{r}{n}\right)}^{nt}\hfill \\ \text{Substitute the values in the formula.}\hfill &amp; &amp; &amp; &amp; &amp;  A=10,000{\left(1+\frac{0.05}{4}\right)}^{4\cdot 18}\hfill \\ \begin{array}{c}\text{Compute the amount. Be careful to consider the}\hfill \\ \text{order of operations as you enter the expression into}\hfill \\ \text{your calculator.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp;  A=$24,459.20\hfill \end{array}</m></p>
+<p>b. <m>\begin{array}{cccccc}\begin{array}{c}\text{For monthly compounding, } n=12. \text{ There are 12}\hfill \\ \text{months in a year.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp;  A=P{\left(1+\frac{r}{n}\right)}^{nt}\hfill \\ \text{Substitute the values in the formula.}\hfill &amp; &amp; &amp; &amp; &amp;  A=10,000{\left(1+\frac{0.05}{12}\right)}^{12\cdot 18}\hfill \\ \text{Compute the amount.}\hfill &amp; &amp; &amp; &amp; &amp;  A=$24,550.08\hfill \end{array}</m></p>
+<p>c. <m>\begin{array}{cccccc}\text{For compounding continuously,}\hfill &amp; &amp;&amp; &amp; &amp; &amp; &amp;  A=P{e}^{rt}\hfill \\ \text{Substitute the values in the formula.}\hfill &amp; &amp;&amp; &amp; &amp; &amp; &amp;  A=10,000{e}^{0.05\cdot 18}\hfill \\ \text{Compute the amount.}\hfill &amp; &amp;&amp; &amp; &amp; &amp; &amp;  A=$24,596.03\hfill \end{array}</m></p> -->
         </solution>
-    </webwork>
-    </exercise>
-
-    <exercise permid="uOe">
+      </example>
+      <exercise permid="OGV">
         <webwork>
-                    <pg-macros>
-                         <macro-file>contextCurrency.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Currency");
-                $a=Currency(21071.81);
-                $b=Currency(21137.04);
-                $c=Currency(21170.00);
-            </pg-code>
-                     </setup>
+            <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Currency");
+$answer1=Currency(22332.96);
+$answer2=Currency(22362.49);
+$answer3=Currency(22377.37);
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="Oes">
+                Angela invested <m>\$15{,}000</m> in a savings account.
+                If the interest rate is <m>4\%</m>,
+                how much will be in the account in <m>10</m> years by each method of compounding?
+                Round each answer to the nearest cent.
+              </p>
+              <ol label="a." permid="duu">
+                <li permid="usF">
+                  compound quarterly: $<var name="$answer1" width="10" />
+                </li>
+                <li permid="azO">
+                  compound monthly: $<var name="$answer2" width="10" />
+                </li>
+                <li permid="GGX">
+                  compound continuously: $<var name="$answer3" width="10" />
+                </li>
+              </ol>
+            </statement>
+            <solution permid="WVo">
+              <ol label="a." permid="YKB">
+                <li permid="mOg">
+                  <p permid="lIN">
+                    For compounding quarterly, <m>n=4</m>.
+                    Plugging this and <m>P=\$15{,}000</m>, <m>r=0.04</m>,
+                    and <m>t=10</m> into the compound interest formula, we have:
+                    <md permid="VXm">
+                      <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                      <mrow>\amp=\substitute{15000}\left(1+\frac{\substitute{0.04}}{\substitute{4}}\right)^{(\substitute{4}\cdot \substitute{10})}</mrow>
+                      <mrow>\amp=15000\left(1+\frac{0.04}{4}\right)^{40}</mrow>
+                      <mrow>\amp\approx \$22333</mrow>
+                    </md>
+                  </p>
+                </li>
+                <li permid="SVp">
+                  <p permid="RPW">
+                    For compounding monthly, <m>n=12</m>.
+                    Plugging this and <m>P=\$15{,}000</m>, <m>r=0.04</m>,
+                    and <m>t=10</m> into the compound interest formula, we have:
+                    <md permid="Cev">
+                      <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                      <mrow>\amp=\substitute{15000}\left(1+\frac{\substitute{0.04}}{\substitute{12}}\right)^{(\substitute{12}\cdot \substitute{10})}</mrow>
+                      <mrow>\amp=15000\left(1+\frac{0.04}{12}\right)^{120}</mrow>
+                      <mrow>\amp\approx \$22362</mrow>
+                    </md>
+                  </p>
+                </li>
+                <li permid="zcy">
+                  <p permid="xXf">
+                    For compounding continuously,
+                    we use the formula <m>A=Pe^{rt}</m>,
+                    and plug in <m>P=\$15{,}000</m>,
+                    <m>r=0.04</m>, and <m>t=10</m>.
+                    This gives us:
+                    <md permid="ilE">
+                      <mrow>A\amp=Pe^{rt}</mrow>
+                      <mrow>\amp=\substitute{15000}e^{(\substitute{0.04}\cdot \substitute{10})}</mrow>
+                      <mrow>\amp\approx \$22377</mrow>
+                    </md>
+                  </p>
+                </li>
+              </ol>
+            </solution>
+        </webwork>
+      </exercise>
+      <exercise permid="uOe">
+        <webwork>
+            <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Currency");
+$a=Currency(21071.81);
+$b=Currency(21137.04);
+$c=Currency(21170.00);
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="ulB">
+                Allan invested <m>\$10{,}000</m> in a mutual fund.
+                If the interest rate is <m>5\%</m>,
+                how much will be in the account in <m>15</m> years by each method of compounding?
+                Round each answer to the nearest cent.
+              </p>
+              <ol label="a." permid="JBD">
+                <li permid="fjH">
+                  compound quarterly: <var name="$a" width="10" />
+                </li>
+                <li permid="LqQ">
+                  compound monthly: <var name="$b" width="10" />
+                </li>
+                <li permid="rxZ">
+                  compound continuously: <var name="$c" width="10" />
+                </li>
+              </ol>
+            </statement>
+            <solution permid="Dcx">
+              <ol label="a." permid="ERK">
+                <li permid="XFi">
+                  <p permid="eeo">
+                    For compounding quarterly, <m>n=4</m>.
+                    Plugging this and <m>P=\$10{,}000</m>, <m>r=0.05</m>,
+                    and <m>t=15</m> into the compound interest formula, we have:
+                    <md permid="OsN">
+                      <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                      <mrow>\amp=\substitute{10000}\left(1+\frac{\substitute{0.05}}{\substitute{4}}\right)^{(\substitute{4}\cdot \substitute{15})}</mrow>
+                      <mrow>\amp=10000\left(1+\frac{0.05}{4}\right)^{60}</mrow>
+                      <mrow>\amp\approx \$21072</mrow>
+                    </md>
+                  </p>
+                </li>
+                <li permid="DMr">
+                  <p permid="Klx">
+                    For compounding monthly, <m>n=12</m>.
+                    Plugging this and <m>P=\$10{,}000</m>, <m>r=0.05</m>,
+                    and <m>t=15</m> into the compound interest formula, we have:
+                    <md permid="uzW">
+                      <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                      <mrow>\amp=\substitute{10000}\left(1+\frac{\substitute{0.05}}{\substitute{12}}\right)^{(\substitute{12}\cdot \substitute{15})}</mrow>
+                      <mrow>\amp=10000\left(1+\frac{0.05}{12}\right)^{180}</mrow>
+                      <mrow>\amp\approx \$21137</mrow>
+                    </md>
+                  </p>
+                </li>
+                <li permid="jTA">
+                  <p permid="qsG">
+                    For compounding continuously,
+                    we use the formula <m>A=Pe^{rt}</m>,
+                    and plug in <m>P=\$10{,}000</m>,
+                    <m>r=0.05</m>, and <m>t=15</m>.
+                    This gives us:
+                    <md permid="aHf">
+                      <mrow>A\amp=Pe^{rt}</mrow>
+                      <mrow>\amp=\substitute{10000}e^{(\substitute{0.05}\cdot \substitute{15})}</mrow>
+                      <mrow>\amp\approx \$21170</mrow>
+                    </md>
+                  </p>
+                </li>
+              </ol>
+            </solution>
+        </webwork>
+      </exercise>
+    </paragraphs>
+    <paragraphs permid="RXa">
+      <title>Exponential Growth and Decay</title>
+      <introduction permid="Hcw">
+        <p permid="YDx">
+          Other topics that are modeled by exponential functions involve growth and decay.
+          Both also use the formula <m>A=P{e}^{rt}</m> we used for the growth of money.
+          For growth and decay, generally we use <m>{A}_{0}</m>,
+          as the original amount instead of calling it <m>P</m>,
+          the principal.
+          We see that <term>exponential growth</term>
+          has a positive rate of growth and
+          <term>exponential decay</term>
+          has a negative rate of growth.
+        </p>
+      </introduction>
+      <p permid="kwq">
+        For an original amount, <m>{A}_{0}</m>,
+        that grows or decays at a rate, <m>r</m>,
+        for a certain time, <m>t</m>,
+        the final amount, <m>A</m>, is:
+        <me permid="dBL">
+          A={A}_{0}{e}^{rt}
+        </me>
+      </p>
+      <p permid="QDz">
+        Exponential growth is typically seen in the growth of populations of humans or animals or bacteria.
+        Our next example looks at the growth of a virus.
+      </p>
+      <example permid="aVn">
         <statement>
-            <p permid="ulB">Allan invested <m>\$10{,}000</m> in a mutual fund. If the interest rate is <m>5\%</m>, how much will be in the account in <m>15</m> years by each method of compounding? Round each answer to the nearest cent.</p>
-
-            <ol label="a." permid="JBD">
-                <li permid="fjH">compound quarterly: <var name="$a" width="10" /></li>
-                <li permid="LqQ">compound monthly: <var name="$b" width="10" /></li>
-                <li permid="rxZ">compound continuously: <var name="$c" width="10" /></li></ol>
-
+          <p permid="AaN">
+            Chris is a researcher at the Center for Disease Control and Prevention and he is trying to understand the behavior of a new and dangerous virus.
+            He starts his experiment with <m>100</m> of the virus that grows at a rate of <m>25\%</m> per hour.
+            He will check on the virus in <m>24</m> hours.
+            How many viruses will he find?
+          </p>
         </statement>
-        <solution permid="Dcx">
-            <ol label="a." permid="ERK">
-                <li permid="XFi"><p permid="eeo">For compounding quarterly, <m>n=4</m>. Plugging this and <m>P=\$10{,}000</m>, <m>r=0.05</m>, and <m>t=15</m> into the compound interest formula, we have:<md permid="OsN">
-
-                    <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
-                    <mrow>\amp=\substitute{10000}\left(1+\frac{\substitute{0.05}}{\substitute{4}}\right)^{(\substitute{4}\cdot \substitute{15})}</mrow>
-                    <mrow>\amp=10000\left(1+\frac{0.05}{4}\right)^{60}</mrow>
-                    <mrow>\amp\approx \$21072</mrow></md>
-
-            </p></li>
-
-                <li permid="DMr"><p permid="Klx">For compounding monthly, <m>n=12</m>. Plugging this and <m>P=\$10{,}000</m>, <m>r=0.05</m>, and <m>t=15</m> into the compound interest formula, we have:<md permid="uzW">
-
-                    <mrow>A\amp=P\left(1+\frac{r}{n}\right)^{nt}</mrow>
-                    <mrow>\amp=\substitute{10000}\left(1+\frac{\substitute{0.05}}{\substitute{12}}\right)^{(\substitute{12}\cdot \substitute{15})}</mrow>
-                    <mrow>\amp=10000\left(1+\frac{0.05}{12}\right)^{180}</mrow>
-                    <mrow>\amp\approx \$21137</mrow></md>
-                </p></li>
-
-                <li permid="jTA"><p permid="qsG">For compounding continuously, we use the formula <m>A=Pe^{rt}</m>, and plug in <m>P=\$10{,}000</m>, <m>r=0.05</m>, and <m>t=15</m>. This gives us:<md permid="aHf">
-
-                    <mrow>A\amp=Pe^{rt}</mrow>
-                    <mrow>\amp=\substitute{10000}e^{(\substitute{0.05}\cdot \substitute{15})}</mrow>
-                    <mrow>\amp\approx \$21170</mrow></md>
-
-            </p></li>
-            </ol>
-        </solution>
-    </webwork>
-    </exercise>
-
-    
-
-</paragraphs>
-
-<paragraphs permid="RXa">
-<title>Exponential Growth and Decay</title>
-
-<introduction permid="Hcw"><p permid="YDx">Other topics that are modeled by exponential functions involve growth and decay. Both also use the formula <m>A=P{e}^{rt}</m> we used for the growth of money. For growth and decay, generally we use <m>{A}_{0}</m>, as the original amount instead of calling it <m>P,</m> the principal. We see that <term>exponential growth</term> has a positive rate of growth and <term>exponential decay</term> has a negative rate of growth.</p></introduction>
-
-<p permid="kwq">For an original amount, <m>{A}_{0}</m>, that grows or decays at a rate, <m>r</m>, for a certain time, <m>t</m>, the final amount, <m>A</m>, is:
-
-<me permid="dBL">A={A}_{0}{e}^{rt}</me></p>
-
-<p permid="QDz">Exponential growth is typically seen in the growth of populations of humans or animals or bacteria. Our next example looks at the growth of a virus.</p>
-
-
-<example permid="aVn">
-    <statement>
-        <p permid="AaN">Chris is a researcher at the Center for Disease Control and Prevention and he is trying to understand the behavior of a new and dangerous virus. He starts his experiment with <m>100</m> of the virus that grows at a rate of <m>25\%</m> per hour. He will check on the virus in <m>24</m> hours. How many viruses will he find?</p></statement>
-
         <solution permid="FXd">
-
-            <table permid="EDC">
-                <tabular permid="Jnv">
-                    <row>
-                        <cell halign="left">Identify the values of each variable in the formula.</cell>
-                        <cell><m>A=\text{ ?}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Be sure to put the percent in decimal form.</cell>
-                        <cell><m>A_{0}=100</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Be sure the units match - the rate is per hour,</cell>
-                        <cell><m>r=0.25\text{/hour}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">the time is in hours.</cell>
-                        <cell><m>t=24\text{ hours}</m></cell>
-                    </row>
-                    <row><cell>  </cell><cell>   </cell></row>
-                    <row>
-                        <cell halign="left">Substitute the values in the formula: <m>A=A_{0}e^{rt}</m></cell>
-                        <cell><m>A=100e^{0.25\cdot 24}</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Compute the amount.</cell>
-                        <cell><m>A=40,342.88</m></cell>
-                    </row>
-                    <row>
-                        <cell halign="left">Round to the nearest whole virus.</cell>
-                        <cell><m>A=40,343</m></cell>
-                    </row>
-                    <row>
-                        <cell>answer  the question.</cell>
-                        <cell halign="left">The researcher will find 40,343 viruses.</cell>
-                    </row>
-                </tabular>
-            </table>
-
-
-            <!-- <p><m>\begin{array}{cccccc}\begin{array}{c}\text{Identify the values of each variable in the formulas.}\hfill \\ \text{Be sure to put the percent in decimal form.}\hfill \\ \text{Be sure the units match the rate is per hour and}\hfill \\ \text{the time is in hours.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp; \begin{array}{ccc}\hfill A&amp; =\hfill &amp; ?\hfill \\ \hfill {A}_{0}&amp; =\hfill &amp; 100\hfill \\ \hfill r&amp; =\hfill &amp; 0.25\text{/hour}\hfill \\ \hfill t&amp; =\hfill &amp; 24 \text{ hours}\hfill \end{array}\hfill \\ \\ \\ \text{Substitute the values in the formula:} A={A}_{0}{e}^{rt}.\hfill &amp; &amp; &amp; &amp; &amp; A=100{e}^{0.25\cdot 24}\hfill \\ \text{Compute the amount.}\hfill &amp; &amp; &amp; &amp; &amp; A=40,342.88\hfill \\ \text{Round to the nearest whole virus.}\hfill &amp; &amp; &amp; &amp; &amp; A=40,343\hfill \\ &amp; &amp; &amp; &amp; &amp; \begin{array}{c}\text{The researcher will find 40,343}\hfill \\ \text{viruses.}\hfill \end{array}\hfill \end{array}</m></p> -->
-
-
-</solution></example>
-
-    <exercise permid="njF">
-        <webwork>
-                    <pg-macros>
-                         <macro-file>contextNumeric.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Numeric");
-                $answer=166;
-                
-            </pg-code>
-                     </setup>
-        <statement>
-        <p permid="asK">Another researcher at the Center for Disease Control and Prevention, Lisa, is studying the growth of a bacteria. She starts his experiment with <m>50</m> of the bacteria that grows at a rate of <m>15\%</m> per hour. She will check on the bacteria every <m>8</m> hours. How many bacteria will she find in <m>8</m> hours?</p>
-
-        <p permid="GzT">She will find <var name="$answer" width="5" /> bacteria.</p>
-        </statement>
-
-        <solution permid="jjG">
-        <p permid="eOi">First, we identify the values of each variable: <m>A_{0}=50</m>, <m>r=0.15\text{/hour}</m>, and <m>t=8\text{ hours}</m>.</p>
-
-        <p permid="KVr">Next, we substitute these values into the formula and simplify, <m>A=A_{0}e^{rt}</m>: <md permid="GOo">
-                <mrow>A\amp=A_{0}e^{rt}</mrow>
-                <mrow>\amp=\substitute{50}e^{\substitute{0.15}\cdot \substitute{8}}</mrow>
-                <mrow>\amp\approx 166\text{ bacteria}</mrow></md> 
-        </p>
-
+          <table permid="EDC">
+            <tabular permid="Jnv">
+              <row>
+                <cell halign="left">Identify the values of each variable in the formula.</cell>
+                <cell><m>A=\text{ ?}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Be sure to put the percent in decimal form.</cell>
+                <cell><m>A_{0}=100</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Be sure the units match - the rate is per hour,</cell>
+                <cell><m>r=0.25\text{/hour}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">the time is in hours.</cell>
+                <cell><m>t=24\text{ hours}</m></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell halign="left">Substitute the values in the formula: <m>A=A_{0}e^{rt}</m></cell>
+                <cell><m>A=100e^{0.25\cdot 24}</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Compute the amount.</cell>
+                <cell><m>A=40,342.88</m></cell>
+              </row>
+              <row>
+                <cell halign="left">Round to the nearest whole virus.</cell>
+                <cell><m>A=40,343</m></cell>
+              </row>
+              <row>
+                <cell>answer  the question.</cell>
+                <cell halign="left">The researcher will find 40,343 viruses.</cell>
+              </row>
+            </tabular>
+          </table>
+<!-- <p><m>\begin{array}{cccccc}\begin{array}{c}\text{Identify the values of each variable in the formulas.}\hfill \\ \text{Be sure to put the percent in decimal form.}\hfill \\ \text{Be sure the units match the rate is per hour and}\hfill \\ \text{the time is in hours.}\hfill \end{array}\hfill &amp; &amp; &amp; &amp; &amp; \begin{array}{ccc}\hfill A&amp; =\hfill &amp; ?\hfill \\ \hfill {A}_{0}&amp; =\hfill &amp; 100\hfill \\ \hfill r&amp; =\hfill &amp; 0.25\text{/hour}\hfill \\ \hfill t&amp; =\hfill &amp; 24 \text{ hours}\hfill \end{array}\hfill \\ \\ \\ \text{Substitute the values in the formula:} A={A}_{0}{e}^{rt}.\hfill &amp; &amp; &amp; &amp; &amp; A=100{e}^{0.25\cdot 24}\hfill \\ \text{Compute the amount.}\hfill &amp; &amp; &amp; &amp; &amp; A=40,342.88\hfill \\ \text{Round to the nearest whole virus.}\hfill &amp; &amp; &amp; &amp; &amp; A=40,343\hfill \\ &amp; &amp; &amp; &amp; &amp; \begin{array}{c}\text{The researcher will find 40,343}\hfill \\ \text{viruses.}\hfill \end{array}\hfill \end{array}</m></p> -->
         </solution>
-        </webwork>
-    </exercise>
-
-    <exercise permid="TqO">
+      </example>
+      <exercise permid="njF">
         <webwork>
-                    <pg-macros>
-                         <macro-file>contextNumeric.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Numeric");
-                $answer=1102;
-                
-            </pg-code>
-                     </setup>
-        <statement>
-        <p permid="mHc">Maria, a biologist is observing the growth pattern of a virus. She starts with <m>100</m> of the virus that grows at a rate of <m>10\%</m> per hour. She will check on the virus in <m>24</m> hours. How many viruses will she find?</p>
-
-        <p permid="SOl">She will find <var name="$answer" width="5" /> viruses.</p>
-        </statement>
-
-        <solution permid="PqP">
-        <p permid="rcA">First, we identify the values of each variable: <m>A_{0}=100</m>, <m>r=0.10\text{/hour}</m>, and <m>t=24\text{ hours}</m>.</p>
-
-        <p permid="XjJ">Next, we substitute these values into the formula and simplify, <m>A=A_{0}e^{rt}</m>: <md permid="mVx">
-                <mrow>A\amp=A_{0}e^{rt}</mrow>
-                <mrow>\amp=\substitute{100}e^{\substitute{0.10}\cdot \substitute{24}}</mrow>
-                <mrow>\amp\approx 1102\text{ viruses}</mrow></md> 
-        </p>
-
-        </solution>
+            <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+$answer=166;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="asK">
+                Another researcher at the Center for Disease Control and Prevention, Lisa,
+                is studying the growth of a bacteria.
+                She starts his experiment with <m>50</m> of the bacteria that grows at a rate of <m>15\%</m> per hour.
+                She will check on the bacteria every <m>8</m> hours.
+                How many bacteria will she find in <m>8</m> hours?
+              </p>
+              <p permid="GzT">
+                She will find <var name="$answer" width="5" /> bacteria.
+              </p>
+            </statement>
+            <solution permid="jjG">
+              <p permid="eOi">
+                First, we identify the values of each variable:
+                <m>A_{0}=50</m>, <m>r=0.15\text{/hour}</m>,
+                and <m>t=8\text{ hours}</m>.
+              </p>
+              <p permid="KVr">
+                Next, we substitute these values into the formula and simplify,
+                <m>A=A_{0}e^{rt}</m>:
+                <md permid="GOo">
+                  <mrow>A\amp=A_{0}e^{rt}</mrow>
+                  <mrow>\amp=\substitute{50}e^{\substitute{0.15}\cdot \substitute{8}}</mrow>
+                  <mrow>\amp\approx 166\text{ bacteria}</mrow>
+                </md>
+              </p>
+            </solution>
         </webwork>
-    </exercise>
-
-
-
-</paragraphs>
-
-</subsection>
-
-<exercises permid="FII">
+      </exercise>
+      <exercise permid="TqO">
+        <webwork>
+            <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+$answer=1102;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="mHc">
+                Maria, a biologist is observing the growth pattern of a virus.
+                She starts with <m>100</m> of the virus that grows at a rate of <m>10\%</m> per hour.
+                She will check on the virus in <m>24</m> hours.
+                How many viruses will she find?
+              </p>
+              <p permid="SOl">
+                She will find <var name="$answer" width="5" /> viruses.
+              </p>
+            </statement>
+            <solution permid="PqP">
+              <p permid="rcA">
+                First, we identify the values of each variable:
+                <m>A_{0}=100</m>, <m>r=0.10\text{/hour}</m>,
+                and <m>t=24\text{ hours}</m>.
+              </p>
+              <p permid="XjJ">
+                Next, we substitute these values into the formula and simplify,
+                <m>A=A_{0}e^{rt}</m>:
+                <md permid="mVx">
+                  <mrow>A\amp=A_{0}e^{rt}</mrow>
+                  <mrow>\amp=\substitute{100}e^{\substitute{0.10}\cdot \substitute{24}}</mrow>
+                  <mrow>\amp\approx 1102\text{ viruses}</mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+    </paragraphs>
+  </subsection>
+  <exercises permid="FII">
     <exercisegroup permid="yej">
-                <title>Evaluate Exponential Functions</title>
-                
-                <exercise permid="iVl">
-                    <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="6">
-                    </webwork>
-                </exercise>
-                <exercise permid="Pcu">
-                    <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="5">
-                    </webwork>
-                </exercise>
-                <exercise permid="vjD">
-                    <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="4">
-                    </webwork>
-                </exercise>
-                <exercise permid="bqM">
-                    <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="3">
-                    </webwork>
-                </exercise>
+      <title>Evaluate Exponential Functions</title>
+      <exercise permid="iVl">
+        <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="6">
+        </webwork>
+      </exercise>
+      <exercise permid="Pcu">
+        <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="5">
+        </webwork>
+      </exercise>
+      <exercise permid="vjD">
+        <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="4">
+        </webwork>
+      </exercise>
+      <exercise permid="bqM">
+        <webwork source="Library/Rochester/setAlgebra28ExpFunctions/sw6_1_3.pg" seed="3">
+        </webwork>
+      </exercise>
     </exercisegroup>
-
     <exercisegroup cols="3" permid="els">
-        <title>Graph Exponential Functions</title>
-        <introduction permid="HxV"><p permid="EKG">In the following exercises, graph each exponential function.</p></introduction>
-
-        <exercise permid="nFe">
-            <statement><p permid="yVu"><m>f(x)=2^x</m></p></statement>
-            <answer  permid="sDs">
-                 <p permid="DqS"><figure permid="XTD"><image source="images/CNX_IntAlg_Figure_10_02_309_img.jpg" width="40%" permid="Nnu">
-                </image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="TMn">
-            <statement><p permid="jyb"><m>g(x)=3^x</m></p></statement>
-        </exercise>
-
-        <exercise permid="zTw">
-            <statement><p permid="PFk"><m>f(x)=6^x</m></p></statement>
-            <answer >
-                 <p permid="vMt"><figure permid="EaM"><image source="images/CNX_IntAlg_Figure_10_02_311_img.jpg" width="40%" permid="tuD">
-                </image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="gaF">
-            <statement><p permid="bTC"><m>g(x)=7^x</m></p></statement>
-        </exercise>
-
-        <exercise permid="MhO">
-            <statement><p permid="IaL"><m>f(x)=(1.5)^x</m></p></statement>
-            <answer >
-                <p permid="ohU"><figure permid="khV"><image source="images/CNX_IntAlg_Figure_10_02_313_img.jpg" width="40%" permid="ZBM">
-                </image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="soX">
-            <statement><p permid="Upd"><m>g(x)=(2.5)^x</m></p></statement>
-        </exercise>
-
-        <exercise permid="Ywg">
-            <statement><p permid="Awm"><m>f(x)=\left(\frac{1}{2}\right)^x</m></p></statement>
-            <answer >
-                 <p permid="gDv"><figure permid="Qpe"><image source="images/CNX_IntAlg_Figure_10_02_315_img.jpg" width="40%" permid="FIV">
-                </image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="EDp">
-            <statement><p permid="MKE"><m>g(x)=\left(\frac{1}{3}\right)^x</m></p></statement>
-        </exercise>
-
-        <exercise permid="kKy">
-            <statement><p permid="sRN"><m>f(x)=\left(\frac{1}{6}\right)^x</m></p></statement>
-            <answer >
-                 <p permid="YYW"><figure permid="wwn"><image source="images/CNX_IntAlg_Figure_10_02_317_img.jpg" width="40%" permid="lQe">
-                </image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="QRH">
-            <statement><p permid="Fgf"><m>g(x)=\left(\frac{1}{7}\right)^x</m></p></statement>
-        </exercise>
-
-        <exercise permid="wYQ">
-            <statement><p permid="lno"><m>f(x)=(0.4)^x</m></p></statement>
-            <answer >
-                <p permid="Rux"><figure permid="cDw"><image source="images/CNX_IntAlg_Figure_10_02_319_img.jpg" width="40%" permid="RXn">
-                </image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="dfZ">
-            <statement><p permid="xBG"><m>g(x)=(0.6)^x</m></p></statement>
-        </exercise>
-
+      <title>Graph Exponential Functions</title>
+      <introduction permid="HxV">
+        <p permid="EKG">
+          In the following exercises, graph each exponential function.
+        </p>
+      </introduction>
+      <exercise permid="nFe">
+        <statement>
+          <p permid="yVu">
+            <m>f(x)=2^x</m>
+          </p>
+        </statement>
+        <answer  permid="sDs">
+        <p permid="DqS">
+          <figure permid="XTD">
+            <image source="images/CNX_IntAlg_Figure_10_02_309_img.jpg" width="40%" permid="Nnu">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="TMn">
+        <statement>
+          <p permid="jyb">
+            <m>g(x)=3^x</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="zTw">
+        <statement>
+          <p permid="PFk">
+            <m>f(x)=6^x</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="vMt">
+          <figure permid="EaM">
+            <image source="images/CNX_IntAlg_Figure_10_02_311_img.jpg" width="40%" permid="tuD">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="gaF">
+        <statement>
+          <p permid="bTC">
+            <m>g(x)=7^x</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="MhO">
+        <statement>
+          <p permid="IaL">
+            <m>f(x)=(1.5)^x</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="ohU">
+          <figure permid="khV">
+            <image source="images/CNX_IntAlg_Figure_10_02_313_img.jpg" width="40%" permid="ZBM">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="soX">
+        <statement>
+          <p permid="Upd">
+            <m>g(x)=(2.5)^x</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="Ywg">
+        <statement>
+          <p permid="Awm">
+            <m>f(x)=\left(\frac{1}{2}\right)^x</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="gDv">
+          <figure permid="Qpe">
+            <image source="images/CNX_IntAlg_Figure_10_02_315_img.jpg" width="40%" permid="FIV">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="EDp">
+        <statement>
+          <p permid="MKE">
+            <m>g(x)=\left(\frac{1}{3}\right)^x</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="kKy">
+        <statement>
+          <p permid="sRN">
+            <m>f(x)=\left(\frac{1}{6}\right)^x</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="YYW">
+          <figure permid="wwn">
+            <image source="images/CNX_IntAlg_Figure_10_02_317_img.jpg" width="40%" permid="lQe">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="QRH">
+        <statement>
+          <p permid="Fgf">
+            <m>g(x)=\left(\frac{1}{7}\right)^x</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="wYQ">
+        <statement>
+          <p permid="lno">
+            <m>f(x)=(0.4)^x</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="Rux">
+          <figure permid="cDw">
+            <image source="images/CNX_IntAlg_Figure_10_02_319_img.jpg" width="40%" permid="RXn">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="dfZ">
+        <statement>
+          <p permid="xBG">
+            <m>g(x)=(0.6)^x</m>
+          </p>
+        </statement>
+      </exercise>
     </exercisegroup>
-
     <exercisegroup cols="2" permid="KsB">
-        <introduction permid="Jni"><p permid="dIP">In the following exercises, graph each pair of functions in the same coordinate system.</p></introduction>
-
-        <exercise permid="pur">
-            <statement><p permid="JPY"><m>f\left(x\right)={4}^{x}, g\left(x\right)={4}^{x-1}</m></p>
-            </statement>
-            <answer >
-                <p permid="pXh"><figure permid="IKF"><image source="images/CNX_IntAlg_Figure_10_02_321_img.jpg" width="40%" permid="yew"></image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="VBA">
-            <statement><p permid="Weq"><m>f\left(x\right)={3}^{x}, g\left(x\right)={3}^{x-1}</m></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="BIJ">
-            <statement><p permid="Clz"><m>f\left(x\right)={2}^{x}, g\left(x\right)={2}^{x-2}</m></p>
-            </statement>
-            <answer ><p permid="isI"><figure permid="oRO"><image source="images/CNX_IntAlg_Figure_10_02_323_img.jpg" width="40%" permid="elF"></image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="hPS">
-            <statement>
-                <p permid="OzR"><m>f\left(x\right)={2}^{x}, g\left(x\right)={2}^{x+2}</m></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="NXb">
-            <statement>
-                <p permid="uHa"><m>f\left(x\right)={3}^{x}, g\left(x\right)={3}^{x}+2</m></p>
-            </statement>
-            <answer ><p permid="aOj"><figure permid="UYX"><image source="images/CNX_IntAlg_Figure_10_02_325_img.jpg" width="40%" permid="KsO"></image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="uek">
-            <statement>
-                <p permid="GVs"><m>f\left(x\right)={4}^{x}, g\left(x\right)={4}^{x}+2</m></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="alt">
-            <statement>
-                <p permid="ncB"><m>f\left(x\right)={2}^{x}, g\left(x\right)={2}^{x}+1</m></p>
-            </statement>
-            <answer ><p permid="TjK"><figure permid="Bgg"><image source="images/CNX_IntAlg_Figure_10_02_327_img.jpg" width="40%" permid="qzX"></image></figure></p>
-            </answer >
-        </exercise>
-
-        <exercise permid="GsC">
-            <statement>
-                <p permid="zqT"><m>f\left(x\right)={2}^{x}, g\left(x\right)={2}^{x}-1</m></p>
-            </statement>
-        </exercise>
+      <introduction permid="Jni">
+        <p permid="dIP">
+          In the following exercises,
+          graph each pair of functions in the same coordinate system.
+        </p>
+      </introduction>
+      <exercise permid="pur">
+        <statement>
+          <p permid="JPY">
+            <m>f\left(x\right)={4}^{x}, g\left(x\right)={4}^{x-1}</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="pXh">
+          <figure permid="IKF">
+            <image source="images/CNX_IntAlg_Figure_10_02_321_img.jpg" width="40%" permid="yew">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="VBA">
+        <statement>
+          <p permid="Weq">
+            <m>f\left(x\right)={3}^{x}, g\left(x\right)={3}^{x-1}</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="BIJ">
+        <statement>
+          <p permid="Clz">
+            <m>f\left(x\right)={2}^{x}, g\left(x\right)={2}^{x-2}</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="isI">
+          <figure permid="oRO">
+            <image source="images/CNX_IntAlg_Figure_10_02_323_img.jpg" width="40%" permid="elF">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="hPS">
+        <statement>
+          <p permid="OzR">
+            <m>f\left(x\right)={2}^{x}, g\left(x\right)={2}^{x+2}</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="NXb">
+        <statement>
+          <p permid="uHa">
+            <m>f\left(x\right)={3}^{x}, g\left(x\right)={3}^{x}+2</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="aOj">
+          <figure permid="UYX">
+            <image source="images/CNX_IntAlg_Figure_10_02_325_img.jpg" width="40%" permid="KsO">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="uek">
+        <statement>
+          <p permid="GVs">
+            <m>f\left(x\right)={4}^{x}, g\left(x\right)={4}^{x}+2</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="alt">
+        <statement>
+          <p permid="ncB">
+            <m>f\left(x\right)={2}^{x}, g\left(x\right)={2}^{x}+1</m>
+          </p>
+        </statement>
+        <answer >
+        <p permid="TjK">
+          <figure permid="Bgg">
+            <image source="images/CNX_IntAlg_Figure_10_02_327_img.jpg" width="40%" permid="qzX">
+            </image>
+          </figure>
+        </p>
+        </answer >
+      </exercise>
+      <exercise permid="GsC">
+        <statement>
+          <p permid="zqT">
+            <m>f\left(x\right)={2}^{x}, g\left(x\right)={2}^{x}-1</m>
+          </p>
+        </statement>
+      </exercise>
     </exercisegroup>
-
     <exercisegroup cols="3" permid="qzK">
-
-        <introduction permid="mzL"><p permid="fyc">In the following exercises, graph each exponential function.</p></introduction>
-
-        <exercise permid="SGU">
-            <statement>
-                <p permid="LFl"><m>f\left(x\right)={3}^{x+2}</m></p>
-            </statement>
-            <answer permid="vxY"><p permid="rMu"><figure permid="hnp"><image source="images/CNX_IntAlg_Figure_10_02_329_img.jpg" width="40%" permid="WHg"></image></figure></p>
-            </answer>
-        </exercise>
-
-        <exercise permid="yOd">
-            <statement>
-                <p permid="fcD"><m>f\left(x\right)={3}^{x-2}</m></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="eVm">
-            <statement>
-                <p permid="LjM"><m>f\left(x\right)={2}^{x}+3</m></p>
-            </statement>
-            <answer permid="bFh"><p permid="Nuy"><figure permid="tBH"><image source="images/CNX_IntAlg_Figure_10_02_331_img.jpg" width="40%" permid="COp"></image></figure></p>
-            </answer>
-        </exercise>
-
-        <exercise permid="Lcv">
-            <statement>
-                <p permid="rqV"><m>f\left(x\right)={2}^{x}-3</m></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="rjE">
-            <statement>
-                <p permid="Xye"><m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x-4}</m></p>
-            </statement>
-            <answer permid="HMq"><p permid="ZIQ"><figure permid="FPZ"><image source="images/CNX_IntAlg_Figure_10_02_333_img.jpg" width="40%" permid="iVy"></image></figure></p>
-            </answer>
-        </exercise>
-
-        <exercise permid="XqN">
-            <statement>
-                <p permid="DFn"><m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}-3</m></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="DxW">
-            <statement>
-                <p permid="jMw"><m>f\left(x\right)={e}^{x}+1</m></p>
-            </statement>
-            <answer permid="nTz"><p permid="lXi"><figure permid="Ser"><image source="images/CNX_IntAlg_Figure_10_02_335_img.jpg" width="40%" permid="PcH"></image></figure></p>
-            </answer>
-        </exercise>
-
-        <exercise permid="jFf">
-            <statement>
-                <p permid="PTF"><m>f\left(x\right)={e}^{x-2}</m></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="PMo">
-            <statement>
-                <p permid="waO"><m>f\left(x\right)=\text{−}{2}^{x}</m></p>
-            </statement>
-            <answer permid="UaI"><p permid="ylA"><figure permid="esJ"><image source="images/CNX_IntAlg_Figure_10_02_337_img.jpg" width="40%" permid="vjQ"></image></figure></p>
-            </answer>
-        </exercise>
-
-        <exercise permid="vTx">
-            <statement>
-                <p permid="chX"><m>f\left(x\right)={3}^{x}</m></p>
-            </statement>
-        </exercise>
+      <introduction permid="mzL">
+        <p permid="fyc">
+          In the following exercises, graph each exponential function.
+        </p>
+      </introduction>
+      <exercise permid="SGU">
+        <statement>
+          <p permid="LFl">
+            <m>f\left(x\right)={3}^{x+2}</m>
+          </p>
+        </statement>
+        <answer permid="vxY">
+          <p permid="rMu">
+            <figure permid="hnp">
+              <image source="images/CNX_IntAlg_Figure_10_02_329_img.jpg" width="40%" permid="WHg">
+              </image>
+            </figure>
+          </p>
+        </answer>
+      </exercise>
+      <exercise permid="yOd">
+        <statement>
+          <p permid="fcD">
+            <m>f\left(x\right)={3}^{x-2}</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="eVm">
+        <statement>
+          <p permid="LjM">
+            <m>f\left(x\right)={2}^{x}+3</m>
+          </p>
+        </statement>
+        <answer permid="bFh">
+          <p permid="Nuy">
+            <figure permid="tBH">
+              <image source="images/CNX_IntAlg_Figure_10_02_331_img.jpg" width="40%" permid="COp">
+              </image>
+            </figure>
+          </p>
+        </answer>
+      </exercise>
+      <exercise permid="Lcv">
+        <statement>
+          <p permid="rqV">
+            <m>f\left(x\right)={2}^{x}-3</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="rjE">
+        <statement>
+          <p permid="Xye">
+            <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x-4}</m>
+          </p>
+        </statement>
+        <answer permid="HMq">
+          <p permid="ZIQ">
+            <figure permid="FPZ">
+              <image source="images/CNX_IntAlg_Figure_10_02_333_img.jpg" width="40%" permid="iVy">
+              </image>
+            </figure>
+          </p>
+        </answer>
+      </exercise>
+      <exercise permid="XqN">
+        <statement>
+          <p permid="DFn">
+            <m>f\left(x\right)={\left(\frac{1}{2}\right)}^{x}-3</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="DxW">
+        <statement>
+          <p permid="jMw">
+            <m>f\left(x\right)={e}^{x}+1</m>
+          </p>
+        </statement>
+        <answer permid="nTz">
+          <p permid="lXi">
+            <figure permid="Ser">
+              <image source="images/CNX_IntAlg_Figure_10_02_335_img.jpg" width="40%" permid="PcH">
+              </image>
+            </figure>
+          </p>
+        </answer>
+      </exercise>
+      <exercise permid="jFf">
+        <statement>
+          <p permid="PTF">
+            <m>f\left(x\right)={e}^{x-2}</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="PMo">
+        <statement>
+          <p permid="waO">
+            <m>f\left(x\right)=\text{−}{2}^{x}</m>
+          </p>
+        </statement>
+        <answer permid="UaI">
+          <p permid="ylA">
+            <figure permid="esJ">
+              <image source="images/CNX_IntAlg_Figure_10_02_337_img.jpg" width="40%" permid="vjQ">
+              </image>
+            </figure>
+          </p>
+        </answer>
+      </exercise>
+      <exercise permid="vTx">
+        <statement>
+          <p permid="chX">
+            <m>f\left(x\right)={3}^{x}</m>
+          </p>
+        </statement>
+      </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="WGT">
-<introduction permid="IhP"><p permid="kRP">In the following exercises, match the graphs to one of the following functions: 
-        <sidebyside permid="caG">
-        <p permid="ghW"><ol label="a." permid="Rgc">
-            <li permid="QaJ"><m>{2}^{x}</m></li>
-            <li permid="whS"><m>{2}^{x+1}</m></li>
-            <li permid="cpb"><m>{2}^{x-1}</m></li></ol></p>
-        <p permid="Mpf"><ol label="A." permid="xnl">
-            <li permid="Iwk"><m>{2}^{x}+2</m></li>
-            <li permid="oDt"><m>{2}^{x}-2</m></li>
-            <li permid="UKC"><m>{3}^{x}</m></li></ol></p>
-        </sidebyside></p>
-    </introduction>
-
-        <exercise permid="ooY">
-            <statement>
-                <p permid="Ipg"><figure permid="owp"><image source="images/CNX_IntAlg_Figure_10_02_201_img.jpg" width="40%" permid="bqZ"></image></figure></p>
-            </statement>
-            <answer permid="AhR"><p permid="KzS">C</p>
-            </answer>
-        </exercise>
-
-        <exercise permid="Uwh">
-            <statement>
-                <p permid="UDy"><figure permid="AKH"><image source="images/CNX_IntAlg_Figure_10_02_202_img.jpg" width="40%" permid="Hyi"></image></figure></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="ADq">
-            <statement>
-                <p permid="gRQ"><figure permid="MYZ"><image source="images/CNX_IntAlg_Figure_10_02_203_img.jpg" width="40%" permid="nFr"></image></figure></p>
-            </statement>
-            <answer permid="gpa"><p permid="qHb">a</p>
-            </answer>
-        </exercise>
-
-        <exercise permid="gKz">
-            <statement>
-                <p permid="tgi"><figure permid="Znr"><image source="images/CNX_IntAlg_Figure_10_02_204_img.jpg" width="40%" permid="TMA"></image></figure></p>
-            </statement>
-        </exercise>
-
-        <exercise permid="MRI">
-            <statement>
-                <p permid="FuA"><figure permid="lBJ"><image source="images/CNX_IntAlg_Figure_10_02_205_img.jpg" width="40%" permid="zTJ"></image></figure></p>
-            </statement>
-            <answer permid="Mwj"><p permid="WOk">B</p>
-            </answer>
-        </exercise>
-
-        <exercise permid="sYR">
-            <statement>
-                <p permid="RIS"><figure permid="xQb"><image source="images/CNX_IntAlg_Figure_10_02_206_img.jpg" width="40%" permid="gaS"></image></figure></p>
-            </statement>
-        </exercise>
+      <introduction permid="IhP">
+        <p permid="kRP">
+          In the following exercises,
+          match the graphs to one of the following functions:
+          <sidebyside permid="caG">
+            <p permid="ghW">
+              <ol label="a." permid="Rgc">
+                <li permid="QaJ">
+                  <m>{2}^{x}</m>
+                </li>
+                <li permid="whS">
+                  <m>{2}^{x+1}</m>
+                </li>
+                <li permid="cpb">
+                  <m>{2}^{x-1}</m>
+                </li>
+              </ol>
+            </p>
+            <p permid="Mpf">
+              <ol label="A." permid="xnl">
+                <li permid="Iwk">
+                  <m>{2}^{x}+2</m>
+                </li>
+                <li permid="oDt">
+                  <m>{2}^{x}-2</m>
+                </li>
+                <li permid="UKC">
+                  <m>{3}^{x}</m>
+                </li>
+              </ol>
+            </p>
+          </sidebyside>
+        </p>
+      </introduction>
+      <exercise permid="ooY">
+        <statement>
+          <p permid="Ipg">
+            <figure permid="owp">
+              <image source="images/CNX_IntAlg_Figure_10_02_201_img.jpg" width="40%" permid="bqZ">
+              </image>
+            </figure>
+          </p>
+        </statement>
+        <answer permid="AhR">
+          <p permid="KzS">
+            C
+          </p>
+        </answer>
+      </exercise>
+      <exercise permid="Uwh">
+        <statement>
+          <p permid="UDy">
+            <figure permid="AKH">
+              <image source="images/CNX_IntAlg_Figure_10_02_202_img.jpg" width="40%" permid="Hyi">
+              </image>
+            </figure>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="ADq">
+        <statement>
+          <p permid="gRQ">
+            <figure permid="MYZ">
+              <image source="images/CNX_IntAlg_Figure_10_02_203_img.jpg" width="40%" permid="nFr">
+              </image>
+            </figure>
+          </p>
+        </statement>
+        <answer permid="gpa">
+          <p permid="qHb">
+            a
+          </p>
+        </answer>
+      </exercise>
+      <exercise permid="gKz">
+        <statement>
+          <p permid="tgi">
+            <figure permid="Znr">
+              <image source="images/CNX_IntAlg_Figure_10_02_204_img.jpg" width="40%" permid="TMA">
+              </image>
+            </figure>
+          </p>
+        </statement>
+      </exercise>
+      <exercise permid="MRI">
+        <statement>
+          <p permid="FuA">
+            <figure permid="lBJ">
+              <image source="images/CNX_IntAlg_Figure_10_02_205_img.jpg" width="40%" permid="zTJ">
+              </image>
+            </figure>
+          </p>
+        </statement>
+        <answer permid="Mwj">
+          <p permid="WOk">
+            B
+          </p>
+        </answer>
+      </exercise>
+      <exercise permid="sYR">
+        <statement>
+          <p permid="RIS">
+            <figure permid="xQb">
+              <image source="images/CNX_IntAlg_Figure_10_02_206_img.jpg" width="40%" permid="gaS">
+              </image>
+            </figure>
+          </p>
+        </statement>
+      </exercise>
     </exercisegroup>
-
     <exercisegroup permid="COc">
-
-        <Title><p permid="LTG">Use exponential models in applications</p></Title>
-        <introduction permid="Zga"><p permid="QYY">In the following exercises, use an exponential model to solve.</p></introduction>
-
-        <exercise permid="Fnj">
-                    <webwork>
-                    <pg-macros>
-                         <macro-file>contextCurrency.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Currency");
-                $answer1=Currency(7387.28);
-                $answer2=Currency(7434.57);
-                $answer3=Currency(7459.12);
-
-                
-            </pg-code>
-                     </setup>
-                     <statement>
-                    <p permid="dXk">Edgar accumulated <m>\$5,000</m> in credit card debt. If the interest rate is <m>20\%</m> per year, and he does not make any payments for 2 years, how much will he owe on this debt in 2 years by each method of compounding?
-                    <ol label="a." permid="pIM">
-                        <li permid="ARL"><p permid="WzP">compound quarterly: <var name="$answer1" width="10" /></p></li>
-                        <li permid="gYU"><p permid="CGY">compound monthly: <var name="$answer2" width="10" /></p></li>
-                        <li permid="Ngd"><p permid="iOh">compound continuously: <var name="$answer3" width="10" /></p></li>
-                    </ol>
-                </p>
-            </statement>
-                    </webwork>
-                </exercise>
-
-
-        <exercise permid="lus">
-            <webwork>
-                    <pg-macros>
-                         <macro-file>contextCurrency.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Currency");
-                $answer1=Currency(21768.22);
-                $answer2=Currency(21832.76);
-                $answer3=Currency(21865.43);
-
-                
-            </pg-code>
-                     </setup>
-            <statement>
-                <p permid="Ket">Cynthia invested <m>\$12,000</m> in a savings account. If the interest rate is <m>6\%,</m> how much will be in the account in <m>10</m> years by each method of compounding?
-                     <ol label="a." permid="VPV">
-                        <li permid="tnm"><p permid="OVq">compound quarterly: <var name="$answer1" width="10" /></p></li>
-                        <li permid="Zuv"><p permid="vcz">compound monthly: <var name="$answer2" width="10" /></p></li>
-                        <li permid="FBE"><p permid="bjI">compound continuously: <var name="$answer3" width="10" /></p></li>
-                    </ol>
-                </p>
-            </statement>
-        </webwork>
-        </exercise>
-
-        <exercise permid="RBB">
-            <webwork>
-                    <pg-macros>
-                         <macro-file>contextCurrency.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Currency");
-                $answer1=Currency(36945.28);                      
-            </pg-code>
-                     </setup>
-            <statement>
-                <p permid="qlC">Rochelle deposits <m>\$5,000</m> in an IRA. What will be the value of her investment in <m>25</m> years if the investment is earning <m>8\%</m> per year and is compounded continuously?</p>
-                <p permid="WsL">The value of her investment will be <var name="$answer1" width="10" />.</p>
-            </statement>
-        </webwork>
-        </exercise>
-
-        <exercise permid="xIK">
-            <webwork>
-                    <pg-macros>
-                         <macro-file>contextCurrency.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Currency");
-                $answer1=Currency(14512.15);                      
-            </pg-code>
-                     </setup>
-            <statement>
-                <p permid="CzU">Nazerhy deposits <m>\$8,000</m> in a certificate of deposit. The annual interest rate is <m>6\%</m> and the interest will be compounded quarterly. How much will the certificate be worth in <m>10</m> years?</p>
-            <p permid="iHd">His certificate will be worth <var name="$answer1" width="10" />.</p>
-            </statement>
-        </webwork>
-        </exercise>
-
-        <exercise permid="dPT">
+      <Title>
+      <p permid="LTG">
+        Use exponential models in applications
+      </p>
+      </Title>
+      <introduction permid="Zga">
+        <p permid="QYY">
+          In the following exercises, use an exponential model to solve.
+        </p>
+      </introduction>
+      <exercise permid="Fnj">
         <webwork>
-                    <pg-macros>
-                         <macro-file>contextNumeric.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Numeric");
-                $answer=162;
-                
-            </pg-code>
-                     </setup>
-        <statement>
-        <p permid="OOm">A researcher at the Center for Disease Control and Prevention is studying the growth of a bacteria. He starts his experiment with <m>100</m> of the bacteria that grows at a rate of <m>6\%</m> per hour. He will check on the bacteria every <m>8</m> hours. How many bacteria will he find in <m>8</m> hours?</p>
-
-        <p permid="uVv">He will find <var name="$answer" width="10" /> bacteria.</p>
-        </statement>
+            <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Currency");
+$answer1=Currency(7387.28);
+$answer2=Currency(7434.57);
+$answer3=Currency(7459.12);
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="dXk">
+                Edgar accumulated <m>\$5,000</m> in credit card debt.
+                If the interest rate is <m>20\%</m> per year,
+                and he does not make any payments for 2 years,
+                how much will he owe on this debt in 2 years by each method of compounding?
+                <ol label="a." permid="pIM">
+                  <li permid="ARL">
+                    <p permid="WzP">
+                      compound quarterly: <var name="$answer1" width="10" />
+                    </p>
+                  </li>
+                  <li permid="gYU">
+                    <p permid="CGY">
+                      compound monthly: <var name="$answer2" width="10" />
+                    </p>
+                  </li>
+                  <li permid="Ngd">
+                    <p permid="iOh">
+                      compound continuously: <var name="$answer3" width="10" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
         </webwork>
-    </exercise>
-
-        <exercise permid="JXc">
+      </exercise>
+      <exercise permid="lus">
         <webwork>
-                    <pg-macros>
-                         <macro-file>contextNumeric.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Numeric");
-                $answer=6076;
-                
-            </pg-code>
-                     </setup>
-        <statement>
-        <p permid="bcE">A biologist is observing the growth pattern of a virus. She starts with <m>50</m> of the virus that grows at a rate of <m>20\%</m> per hour. She will check on the virus in <m>24</m> hours. How many viruses will she find?</p>
-
-        <p permid="HjN">She will find <var name="$answer" width="10" /> viruses.</p>
-        </statement>
+            <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Currency");
+$answer1=Currency(21768.22);
+$answer2=Currency(21832.76);
+$answer3=Currency(21865.43);
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="Ket">
+                Cynthia invested <m>\$12,000</m> in a savings account.
+                If the interest rate is <m>6\%</m>,
+                how much will be in the account in <m>10</m> years by each method of compounding?
+                <ol label="a." permid="VPV">
+                  <li permid="tnm">
+                    <p permid="OVq">
+                      compound quarterly: <var name="$answer1" width="10" />
+                    </p>
+                  </li>
+                  <li permid="Zuv">
+                    <p permid="vcz">
+                      compound monthly: <var name="$answer2" width="10" />
+                    </p>
+                  </li>
+                  <li permid="FBE">
+                    <p permid="bjI">
+                      compound continuously: <var name="$answer3" width="10" />
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
         </webwork>
-    </exercise>
-    
-
-        <exercise permid="qel">
-            <webwork>
-                    <pg-macros>
-                         <macro-file>contextNumeric.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Numeric");
-                $answer=288929825;
-                
-            </pg-code>
-                     </setup>
+      </exercise>
+      <exercise permid="RBB">
+        <webwork>
+            <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Currency");
+$answer1=Currency(36945.28);
+</pg-code>
+            </setup>
             <statement>
-                <p permid="nqW">In the last ten years the population of Indonesia has grown at a rate of <m>1.12\%</m> per year to <m>258,316,051</m>. If this rate continues, what will be the population in <m>10</m> more years?</p>
-                <p permid="Tyf">The population will be <var name="$answer" width="15" />.</p>
+              <p permid="qlC">
+                Rochelle deposits <m>\$5,000</m> in an IRA. What will be the value of her investment in <m>25</m> years if the investment is earning <m>8\%</m> per year and is compounded continuously?
+              </p>
+              <p permid="WsL">
+                The value of her investment will be <var name="$answer1" width="10" />.
+              </p>
             </statement>
-            </webwork>
-        </exercise>
-
-        <exercise permid="Wlu">
-            <webwork>
-                    <pg-macros>
-                         <macro-file>contextNumeric.pl</macro-file>
-                     </pg-macros>
-                     <setup>
-            <pg-code>
-                Context("Numeric");
-                $answer=225206961;
-                
-            </pg-code>
-                     </setup>
+        </webwork>
+      </exercise>
+      <exercise permid="xIK">
+        <webwork>
+            <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Currency");
+$answer1=Currency(14512.15);
+</pg-code>
+            </setup>
             <statement>
-                <p permid="zFo">In the last ten years the population of Brazil has grown at a rate of <m>0.9\%</m> per year to <m>205,823,665</m>. If this rate continues, what will be the population in <m>10</m> more years?</p>
-
-            <p permid="fMx">The population will be <var name="$answer" width="15" />.</p>
+              <p permid="CzU">
+                Nazerhy deposits <m>\$8,000</m> in a certificate of deposit.
+                The annual interest rate is <m>6\%</m> and the interest will be compounded quarterly.
+                How much will the certificate be worth in <m>10</m> years?
+              </p>
+              <p permid="iHd">
+                His certificate will be worth <var name="$answer1" width="10" />.
+              </p>
             </statement>
-            </webwork>
-        </exercise>
+        </webwork>
+      </exercise>
+      <exercise permid="dPT">
+        <webwork>
+            <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+$answer=162;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="OOm">
+                A researcher at the Center for Disease Control and Prevention is studying the growth of a bacteria.
+                He starts his experiment with <m>100</m> of the bacteria that grows at a rate of <m>6\%</m> per hour.
+                He will check on the bacteria every <m>8</m> hours.
+                How many bacteria will he find in <m>8</m> hours?
+              </p>
+              <p permid="uVv">
+                He will find <var name="$answer" width="10" /> bacteria.
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+      <exercise permid="JXc">
+        <webwork>
+            <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+$answer=6076;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="bcE">
+                A biologist is observing the growth pattern of a virus.
+                She starts with <m>50</m> of the virus that grows at a rate of <m>20\%</m> per hour.
+                She will check on the virus in <m>24</m> hours.
+                How many viruses will she find?
+              </p>
+              <p permid="HjN">
+                She will find <var name="$answer" width="10" /> viruses.
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+      <exercise permid="qel">
+        <webwork>
+            <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+$answer=288929825;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="nqW">
+                In the last ten years the population of Indonesia has grown at a rate of <m>1.12\%</m> per year to <m>258,316,051</m>.
+                If this rate continues,
+                what will be the population in <m>10</m> more years?
+              </p>
+              <p permid="Tyf">
+                The population will be <var name="$answer" width="15" />.
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
+      <exercise permid="Wlu">
+        <webwork>
+            <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
+            <setup>
+<pg-code>
+Context("Numeric");
+$answer=225206961;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="zFo">
+                In the last ten years the population of Brazil has grown at a rate of <m>0.9\%</m> per year to <m>205,823,665</m>.
+                If this rate continues,
+                what will be the population in <m>10</m> more years?
+              </p>
+              <p permid="fMx">
+                The population will be <var name="$answer" width="15" />.
+              </p>
+            </statement>
+        </webwork>
+      </exercise>
     </exercisegroup>
-
-</exercises>
-
-<conclusion permid="Bnk"><p permid="xgh">This section is adapted from <pubtitle>"Evaluate and Graph Exponential Functions"</pubtitle><fn><url href="https://cnx.org/contents/8xG8nd5x@1.1:o8YqDl8U@1/Evaluate-and-Graph-Exponential-Functions" /></fn> by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn><url href="http://creativecommons.org/licenses/by/4.0" /></fn>/ A derivative from the original work <pubtitle>"Evaluate and Graph Exponential Functions"</pubtitle><fn><url href="https://cnx.org/contents/raRoCxSU@3/Evaluate-and-Graph-Exponential-Functions" /></fn> by OpenStax, OpenStax CNX.</p></conclusion>
-
+  </exercises>
+  <conclusion permid="Bnk">
+    <p permid="xgh">
+      This section is adapted from
+      <pubtitle>"Evaluate and Graph Exponential Functions"</pubtitle><fn>
+      <url href="https://cnx.org/contents/8xG8nd5x@1.1:o8YqDl8U@1/Evaluate-and-Graph-Exponential-Functions" />
+      </fn> by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn>
+      <url href="http://creativecommons.org/licenses/by/4.0" />
+      </fn>/ A derivative from the original work
+      <pubtitle>"Evaluate and Graph Exponential Functions"</pubtitle><fn>
+      <url href="https://cnx.org/contents/raRoCxSU@3/Evaluate-and-Graph-Exponential-Functions" />
+      </fn> by OpenStax, OpenStax CNX.
+    </p>
+  </conclusion>
 </section>
