@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,570 +6,788 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
-<section xml:id="section-the-quadratic-formula">
-
-    <title>The Quadratic Formula</title>
-
-    <introduction>
-        <p>We have learned how to solve quadratic equations using factoring and the square root property. In this section, we will learn a third method, the quadratic formula. We will also learn when to use each method and to distinguish between linear and quadratic equations.</p>
-    </introduction>
-
-    <subsection>
-        <title>Solving Quadratic Equations with the Quadratic Formula</title>
-
-        <p>The standard form of a quadratic equation is <me>ax^2+bx+c=0</me> Let's look at two examples as a review of solving quadratic equations.</p>
-
-        <p>First, let's look at when <m>b=0</m> and the equation looks like <m>ax^2+c=0</m>. One way to solve this type of equation is with the square root property.</p>
-
-        <example>
-            <statement>
-                <p>Solve for <m>x</m> in <m>x^2-4=0</m>.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>x^2-4\amp=0</mrow>
-                    <mrow>x^2\amp=4</mrow></md><md>
-                    <mrow>x\amp=-2\amp\text{or}\amp\amp x\amp=2</mrow>
-                </md>The solution set is <m>\{-2,2\}</m>.</p>
-            </solution>
-        </example>
-
-        <p>Second, if we can factor the left side of the equation in <m>ax^2+bx+c=0</m>, then we can solve the equation by factoring.</p>
-
-        <example>
-            <statement>
-                <p>Solve for <m>x</m> in <m>x^2-4x-12=0</m>.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>x^2-4x-12\amp=0</mrow>
-                    <mrow>(x-6)(x+2)\amp=0</mrow></md><md>
-                    <mrow>x-6\amp=0\amp\text{or}\amp\amp x+2\amp=0</mrow>
-                    <mrow>x\amp=6\amp\text{or}\amp\amp x\amp=-2</mrow>
-                </md>The solution set is <m>\{-2,6\}</m>.</p>
-            </solution>
-        </example>
-
-        <p>A third method for solving a quadratic equation is to use what is known as the quadratic formula.</p>
-
-        <fact xml:id="fact-the-quadratic-formula"><idx><h>solving</h><h>quadratic equations</h><h>quadratic formula</h></idx>
-            <title>The Quadratic Formula</title>
-            <p>For any quadratic equation <m>ax^2+bx+c=0</m>, the solutions are given by <me>x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</me></p>
-        </fact>
-
-        <p>As we have seen from solving quadratic equations, there can be at most two solutions. Both of the solutions are included in the quadratic formula with the <m>\pm</m> symbol. We could write the two solutions separately as<md>
-        <mrow>x=\frac{-b-\sqrt{b^2-4ac}}{2a}\amp\amp\text{ or }\amp\amp x=\frac{-b+\sqrt{b^2-4ac}}{2a}</mrow></md>,
-        but it is more efficient to simplify them together.</p>
-
-        <p>This method for solving quadratic equations will work to solve <em>every</em> quadratic equation. It is most helpful  when <m>b\ne0</m> and when <m>ax^2+bx+c</m> cannot be factored. In this section, we will only focus on how to use the formula.</p>
-
-        <p>In <xref ref="section-solving-quadratic-equations-by-factoring">Section</xref>, we saw an example where a physics class launched a tennis ball off the roof of a building. In that example, the numbers were simplified so we could solve it by factoring. Now we will solve a similar example with more realistic numbers.</p>
-
-        <example xml:id="example-quadratic-equation-flying-object">
-            <statement>
-                <p>Linh is in another physics class that launches a tennis ball from a rooftop that is <m>90.2</m> feet above the ground. They fire it directly upward at a speed of <m>14.4</m> feet per second and measure the time it takes for the ball to hit the ground below. We can model the height of the tennis ball, <m>h</m>, in feet, with the quadratic equation <m>h=-16x^2+14.4x+90.2</m>, where <m>x</m> represents the time in seconds after the launch. According to the model, when should the ball hit the ground? Round the time to one decimal place.</p>
-
-                <p>The ground has a height of <m>0</m> feet. Substituting <m>0</m> for <m>h</m> in the equation, we have this quadratic equation:
-                <me>0=-16x^2+14.4x+90.2</me>
-                We cannot solve this equation with factoring or the square root property, so we will use the quadratic formula. First, we will identify that <m>\highlight{a=-16}</m>, <m>\highlight{b=14.4}</m> and <m>\highlight{c=90.2}</m>, and substitute them into the formula:<md>
-                    <mrow>x\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
-                    <mrow>x\amp=\frac{-(\substitute{14.4})\pm\sqrt{(\substitute{14.4})^2-4(\substitute{-16})(\substitute{90.2})}}{2(\substitute{-16})}</mrow>
-                    <mrow>x\amp=\frac{-14.4\pm\sqrt{207.36-(-5772.8)}}{-32}</mrow>
-                    <mrow>x\amp=\frac{-14.4\pm\sqrt{207.36+5772.8}}{-32}</mrow>
-                    <mrow>x\amp=\frac{-14.4\pm\sqrt{5980.16}}{-32}</mrow>
-                    <intertext>These are the exact solutions, but because we have a context we want to approximate the solutions with decimals.</intertext>
-                    <mrow>x\amp\approx-2.0\text{ or }x\approx2.9</mrow>
-                </md>We don't use the negative solution because a negative time does not make sense in this context. The ball will hit the ground approximately <m>2.9</m> seconds after it is launched.</p>
-            </statement>
-        </example>
-
-        <p>The quadratic formula can be used to solve any quadratic equation, but it requires that you don't make <em>any</em> slip-up with remembering the formula, that you correctly identify <m>a</m>, <m>b</m>, and <m>c</m>, and that you don't make any arithmetic mistakes when you calculate and simplify. We recommend that you always check whether you can factor or use the square root property before using the quadratic formula. Here is another example.</p>
-
-        <example>
-            <statement>
-                <p>Solve for <m>x</m> in <m>2x^2-9x+5=0</m>.</p>
-            </statement>
-            <solution>
-                <p>First, we check and see that we cannot factor the left side (because we can't find two numbers that multiply to <m>10</m> and add to <m>-9</m>) or use the square root property (because <m>b\neq0</m>) so we must use the quadratic formula. Next we identify that <m>\highlight{a=2}</m>, <m>\highlight{b=-9}</m> and <m>\highlight{c=5}</m>. We will substitute them into the quadratic formula:<md>
-                    <mrow>x\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
-                    <mrow>x\amp=\frac{-(\substitute{-9})\pm\sqrt{(\substitute{-9})^2-4(\substitute{2})(\substitute{5})}}{2(\substitute{2})}</mrow>
-                    <mrow>x\amp=\frac{9\pm\sqrt{81-40}}{4}</mrow>
-                    <mrow>x\amp=\frac{9\pm\sqrt{41}}{4}</mrow></md>
-                    This is fully simplified because we cannot simplify <m>\sqrt{41}</m> or reduce the fraction. The solution set is <m>\left\{\frac{9-\sqrt{41}}{4},\frac{9+\sqrt{41}}{4}\right\}</m>. We do not have a context here so we leave the solutions in their exact form.</p>
-            </solution>
-        </example>
-
-        <p>When a quadratic equation is not in standard form we must convert it before we can identify the values of <m>a</m>, <m>b</m> and <m>c</m>. We will show that in the next example.</p>
-
-        <example xml:id="example-solve-quadratic-equation-using-quadratic-formula">
-            <statement>
-                <p>Solve for <m>x</m> in <m>x^2=-10x-3</m>.</p>
-            </statement>
-            <solution>
-                <p>First, we convert the equation into standard form by adding <m>10x</m> and <m>3</m> to each side of the equation:
-                    <me>x^2+10x+3=0</me>
-                   Next, we check and see that we cannot factor the left side or use the square root property so we must use the quadratic formula. We identify that <m>\highlight{a=1}</m>, <m>\highlight{b=10}</m> and <m>\highlight{c=3}</m>. We will substitute them into the quadratic formula:<md>
-                    <mrow>x\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
-                    <mrow>x\amp=\frac{-\substitute{10}\pm\sqrt{(\substitute{10})^2-4(\substitute{1})(\substitute{3})}}{2(\substitute{1})}</mrow>
-                    <mrow>x\amp=\frac{-10\pm\sqrt{100-12}}{2}</mrow>
-                    <mrow>x\amp=\frac{-10\pm\sqrt{88}}{2}</mrow></md>
-                    Now we need to simplify the square root:<md>
-                    <mrow>x\amp=\frac{-10\pm2\sqrt{22}}{2}</mrow>
-                    <intertext>Lastly we need to reduce the fractions, which can be done by separating terms:</intertext>
-                    <mrow>x\amp=\frac{-10}{2}\pm\frac{2\sqrt{22}}{2}</mrow>
-                    <mrow>x\amp=-5\pm\sqrt{22}</mrow>
-                </md>The solution set is <m>\{-5-\sqrt{22}, -5+\sqrt{22}\}</m>.</p>
-            </solution>
-        </example>
-
-        <p>Sometimes, it may not be immediately apparent that you will need to solve a quadratic equation when first attempting a problem, as will be demonstrated in the next example.</p>
-
-        <example xml:id="example-solve-rational-equation-drug-injection-algebraically">
-            <statement>
-                <p>Solve <m>C(t)=0.35</m>, where <m>C(t)=\frac{3t}{t^2+8}</m> gives a drug's concentration in milligrams per liter <m>t</m> hours since an injection. (This function was explored in the introduction of <xref ref="section-rational-functions">Section</xref>.)</p>
-            </statement>
-            <solution>
-                <p>To solve <m>C(t)=0.35</m>, we'll begin by setting up <m>\frac{3t}{t^2+8}=0.35</m>. We'll begin by identifying that the LCD is <m>t^2+8</m>, and multiply each side of the equation by this:
-                <md>
-                    <mrow>\frac{3t}{t^2+8}\amp=0.35</mrow>
-                    <mrow>\frac{3t}{\highlight{\cancel{t^2+8}}}\multiplyright{\highlight{\cancel{\left(t^2+8\right)}}}\amp=0.35\multiplyright{\left(t^2+8\right)}</mrow>
-                    <mrow>3t\amp=0.35\left(t^2+8\right)</mrow>
-                    <mrow>3t\amp=0.35t^2+2.8</mrow>
-                </md>
-                    This results in a quadratic equation so we will put it in standard form and use the quadratic formula:
-                <md>
-                    <mrow>0\amp=0.35t^2-3t+2.8</mrow>
-                    <mrow>t\amp=\frac{-(-3)\pm \sqrt{(-3)^2-4(0.35)(2.8)}}{2(0.35)}</mrow>
-                    <mrow>t\amp=\frac{3\pm \sqrt{5.08}}{0.7}</mrow>
-                    <mrow>t\amp\approx 1.066 \text{ or } t\approx 7.506</mrow>
-                </md>Each of these answers should be checked in the original equation; they both work. In context, this means that the drug concentration will reach <m>0.35</m> milligrams per liter about <m>1.066</m> hours after the injection was given, and again <m>7.506</m> hours after the injection was given.
-                </p>
-            </solution>
-        </example>
-
-        <remark><p>The irrational solutions to quadratic equations can be checked, although doing so can sometimes involve a lot of simplification and is not shown throughout this section. As an example, to check the solution of <m>-5+\sqrt{22}</m> from <xref ref="example-solve-quadratic-equation-using-quadratic-formula">Example</xref>, we would replace <m>x</m> with <m>-5+\sqrt{22}</m> and check that the two sides of the equation are equal. This check is shown here:
-        <md>
-            <mrow>x^2\amp=-10x-3</mrow>
-            <mrow>(\substitute{-5+\sqrt{22}})^2\amp\stackrel{?}{=}-10(\substitute{-5+\sqrt{22}})-3</mrow>
-            <mrow>(-5)^2+2(-5)(\sqrt{22})+(\sqrt{22})^2\amp\stackrel{?}{=}-10(-5+\sqrt{22})-3</mrow>
-            <mrow>25-10\sqrt{22}+22 \amp\stackrel{?}{=}50-10\sqrt{22}-3</mrow>
-            <mrow>47-10\sqrt{22}\amp\stackrel{\checkmark}{=}47-10\sqrt{22}</mrow>
+<section xml:id="section-the-quadratic-formula" permid="jPS">
+  <title>The Quadratic Formula</title>
+  <introduction permid="czO">
+    <p permid="lyb">
+      We have learned how to solve quadratic equations using factoring and the square root property.
+      In this section,
+      we will learn a third method, the quadratic formula.
+      We will also learn when to use each method and to distinguish between linear and quadratic equations.
+    </p>
+  </introduction>
+  <subsection permid="PXb">
+    <title>Solving Quadratic Equations with the Quadratic Formula</title>
+    <p permid="qhU">
+      The standard form of a quadratic equation is
+      <me permid="Elz">
+        ax^2+bx+c=0
+      </me>
+      Let's look at two examples as a review of solving quadratic equations.
+    </p>
+    <p permid="Wpd">
+      First, let's look at when <m>b=0</m> and the equation looks like <m>ax^2+c=0</m>.
+      One way to solve this type of equation is with the square root property.
+    </p>
+    <example permid="ChR">
+      <statement>
+        <p permid="DBF">
+          Solve for <m>x</m> in <m>x^2-4=0</m>.
+        </p>
+      </statement>
+      <solution permid="IGX">
+        <p permid="BMs">
+          <md permid="cOj">
+            <mrow>x^2-4\amp=0</mrow>
+            <mrow>x^2\amp=4</mrow>
+          </md>
+          <md permid="IVs">
+            <mrow>x\amp=-2\amp\text{or}\amp\amp x\amp=2</mrow>
+          </md>
+          The solution set is <m>\{-2,2\}</m>.
+        </p>
+      </solution>
+    </example>
+    <p permid="Cwm">
+      Second, if we can factor the left side of the equation in <m>ax^2+bx+c=0</m>,
+      then we can solve the equation by factoring.
+    </p>
+    <example permid="ipa">
+      <statement>
+        <p permid="jIO">
+          Solve for <m>x</m> in <m>x^2-4x-12=0</m>.
+        </p>
+      </statement>
+      <solution permid="oOg">
+        <p permid="hTB">
+          <md permid="pcB">
+            <mrow>x^2-4x-12\amp=0</mrow>
+            <mrow>(x-6)(x+2)\amp=0</mrow>
+          </md>
+          <md permid="VjK">
+            <mrow>x-6\amp=0\amp\text{or}\amp\amp x+2\amp=0</mrow>
+            <mrow>x\amp=6\amp\text{or}\amp\amp x\amp=-2</mrow>
+          </md>
+          The solution set is <m>\{-2,6\}</m>.
+        </p>
+      </solution>
+    </example>
+    <p permid="iDv">
+      A third method for solving a quadratic equation is to use what is known as the quadratic formula.
+    </p>
+    <fact xml:id="fact-the-quadratic-formula" permid="Tgc">
+      <idx><h>solving</h><h>quadratic equations</h><h>quadratic formula</h></idx>
+      <title>The Quadratic Formula</title>
+      <p permid="ZjJ">
+        For any quadratic equation <m>ax^2+bx+c=0</m>,
+        the solutions are given by
+        <me permid="ksI">
+          x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+        </me>
+      </p>
+    </fact>
+    <p permid="OKE">
+      As we have seen from solving quadratic equations,
+      there can be at most two solutions.
+      Both of the solutions are included in the quadratic formula with the <m>\pm</m> symbol.
+      We could write the two solutions separately as
+      <md permid="BqT">
+        <mrow>x=\frac{-b-\sqrt{b^2-4ac}}{2a}\amp\amp\text{ or }\amp\amp x=\frac{-b+\sqrt{b^2-4ac}}{2a}</mrow>
+      </md>,
+      but it is more efficient to simplify them together.
+    </p>
+    <p permid="uRN">
+      This method for solving quadratic equations will work to solve
+      <em>every</em> quadratic equation.
+      It is most helpful when <m>b\ne0</m> and when <m>ax^2+bx+c</m> cannot be factored.
+      In this section, we will only focus on how to use the formula.
+    </p>
+    <p permid="aYW">
+      In <xref ref="section-solving-quadratic-equations-by-factoring">Section</xref>,
+      we saw an example where a physics class launched a tennis ball off the roof of a building.
+      In that example,
+      the numbers were simplified so we could solve it by factoring.
+      Now we will solve a similar example with more realistic numbers.
+    </p>
+    <example xml:id="example-quadratic-equation-flying-object" permid="Owj">
+      <statement>
+        <p permid="PPX">
+          Linh is in another physics class that launches a tennis ball from a rooftop that is <m>90.2</m> feet above the ground.
+          They fire it directly upward at a speed of <m>14.4</m> feet per second and measure the time it takes for the ball to hit the ground below.
+          We can model the height of the tennis ball, <m>h</m>,
+          in feet, with the quadratic equation <m>h=-16x^2+14.4x+90.2</m>,
+          where <m>x</m> represents the time in seconds after the launch.
+          According to the model, when should the ball hit the ground?
+          Round the time to one decimal place.
+        </p>
+        <p permid="vXg">
+          The ground has a height of <m>0</m> feet.
+          Substituting <m>0</m> for <m>h</m> in the equation,
+          we have this quadratic equation:
+          <me permid="QzR">
+            0=-16x^2+14.4x+90.2
+          </me>
+          We cannot solve this equation with factoring or the square root property,
+          so we will use the quadratic formula.
+          First, we will identify that <m>\highlight{a=-16}</m>,
+          <m>\highlight{b=14.4}</m> and <m>\highlight{c=90.2}</m>,
+          and substitute them into the formula:
+          <md permid="hyc">
+            <mrow>x\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+            <mrow>x\amp=\frac{-(\substitute{14.4})\pm\sqrt{(\substitute{14.4})^2-4(\substitute{-16})(\substitute{90.2})}}{2(\substitute{-16})}</mrow>
+            <mrow>x\amp=\frac{-14.4\pm\sqrt{207.36-(-5772.8)}}{-32}</mrow>
+            <mrow>x\amp=\frac{-14.4\pm\sqrt{207.36+5772.8}}{-32}</mrow>
+            <mrow>x\amp=\frac{-14.4\pm\sqrt{5980.16}}{-32}</mrow>
+            <intertext>These are the exact solutions, but because we have a context we want to approximate the solutions with decimals.</intertext>
+            <mrow>x\amp\approx-2.0\text{ or }x\approx2.9</mrow>
+          </md>
+          We don't use the negative solution because a negative time does not make sense in this context.
+          The ball will hit the ground approximately <m>2.9</m> seconds after it is launched.
+        </p>
+      </statement>
+    </example>
+    <p permid="Hgf">
+      The quadratic formula can be used to solve any quadratic equation,
+      but it requires that you don't make <em>any</em>
+      slip-up with remembering the formula,
+      that you correctly identify <m>a</m>, <m>b</m>, and <m>c</m>,
+      and that you don't make any arithmetic mistakes when you calculate and simplify.
+      We recommend that you always check whether you can factor or use the square root property before using the quadratic formula.
+      Here is another example.
+    </p>
+    <example permid="uDs">
+      <statement>
+        <p permid="cep">
+          Solve for <m>x</m> in <m>2x^2-9x+5=0</m>.
+        </p>
+      </statement>
+      <solution permid="UVp">
+        <p permid="OaK">
+          First, we check and see that we cannot factor the left side
+          (because we can't find two numbers that multiply to <m>10</m> and add to <m>-9</m>)
+          or use the square root property
+          (because <m>b\neq0</m>)
+          so we must use the quadratic formula.
+          Next we identify that <m>\highlight{a=2}</m>,
+          <m>\highlight{b=-9}</m> and <m>\highlight{c=5}</m>.
+          We will substitute them into the quadratic formula:
+          <md permid="NFl">
+            <mrow>x\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+            <mrow>x\amp=\frac{-(\substitute{-9})\pm\sqrt{(\substitute{-9})^2-4(\substitute{2})(\substitute{5})}}{2(\substitute{2})}</mrow>
+            <mrow>x\amp=\frac{9\pm\sqrt{81-40}}{4}</mrow>
+            <mrow>x\amp=\frac{9\pm\sqrt{41}}{4}</mrow>
+          </md>
+          This is fully simplified because we cannot simplify
+          <m>\sqrt{41}</m> or reduce the fraction.
+          The solution set is <m>\left\{\frac{9-\sqrt{41}}{4},\frac{9+\sqrt{41}}{4}\right\}</m>.
+          We do not have a context here so we leave the solutions in their exact form.
+        </p>
+      </solution>
+    </example>
+    <p permid="nno">
+      When a quadratic equation is not in standard form we must convert it before we can identify the values of <m>a</m>,
+      <m>b</m> and <m>c</m>.
+      We will show that in the next example.
+    </p>
+    <example xml:id="example-solve-quadratic-equation-using-quadratic-formula" permid="aKB">
+      <statement>
+        <p permid="Ily">
+          Solve for <m>x</m> in <m>x^2=-10x-3</m>.
+        </p>
+      </statement>
+      <solution permid="Bcy">
+        <p permid="uhT">
+          First, we convert the equation into standard form by adding <m>10x</m> and <m>3</m> to each side of the equation:
+          <me permid="wHa">
+            x^2+10x+3=0
+          </me>
+          Next, we check and see that we cannot factor the left side or use the square root property so we must use the quadratic formula.
+          We identify that <m>\highlight{a=1}</m>,
+          <m>\highlight{b=10}</m> and <m>\highlight{c=3}</m>.
+          We will substitute them into the quadratic formula:
+          <md permid="tMu">
+            <mrow>x\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+            <mrow>x\amp=\frac{-\substitute{10}\pm\sqrt{(\substitute{10})^2-4(\substitute{1})(\substitute{3})}}{2(\substitute{1})}</mrow>
+            <mrow>x\amp=\frac{-10\pm\sqrt{100-12}}{2}</mrow>
+            <mrow>x\amp=\frac{-10\pm\sqrt{88}}{2}</mrow>
+          </md>
+          Now we need to simplify the square root:
+          <md permid="ZTD">
+            <mrow>x\amp=\frac{-10\pm2\sqrt{22}}{2}</mrow>
+            <intertext>Lastly we need to reduce the fractions, which can be done by separating terms:</intertext>
+            <mrow>x\amp=\frac{-10}{2}\pm\frac{2\sqrt{22}}{2}</mrow>
+            <mrow>x\amp=-5\pm\sqrt{22}</mrow>
+          </md>
+          The solution set is <m>\{-5-\sqrt{22}, -5+\sqrt{22}\}</m>.
+        </p>
+      </solution>
+    </example>
+    <p permid="Tux">
+      Sometimes, it may not be immediately apparent that you will need to solve a quadratic equation when first attempting a problem,
+      as will be demonstrated in the next example.
+    </p>
+    <example xml:id="example-solve-rational-equation-drug-injection-algebraically" permid="GRK">
+      <statement>
+        <p permid="osH">
+          Solve <m>C(t)=0.35</m>, where
+          <m>C(t)=\frac{3t}{t^2+8}</m> gives a drug's concentration in milligrams per liter <m>t</m> hours since an injection.
+          (This function was explored in the introduction of <xref ref="section-rational-functions">Section</xref>.)
+        </p>
+      </statement>
+      <solution permid="hjH">
+        <p permid="apc">
+          To solve <m>C(t)=0.35</m>,
+          we'll begin by setting up <m>\frac{3t}{t^2+8}=0.35</m>.
+          We'll begin by identifying that the LCD is <m>t^2+8</m>,
+          and multiply each side of the equation by this:
+          <md permid="GaM">
+            <mrow>\frac{3t}{t^2+8}\amp=0.35</mrow>
+            <mrow>\frac{3t}{\highlight{\cancel{t^2+8}}}\multiplyright{\highlight{\cancel{\left(t^2+8\right)}}}\amp=0.35\multiplyright{\left(t^2+8\right)}</mrow>
+            <mrow>3t\amp=0.35\left(t^2+8\right)</mrow>
+            <mrow>3t\amp=0.35t^2+2.8</mrow>
+          </md>
+          This results in a quadratic equation so we will put it in standard form and use the quadratic formula:
+          <md permid="mhV">
+            <mrow>0\amp=0.35t^2-3t+2.8</mrow>
+            <mrow>t\amp=\frac{-(-3)\pm \sqrt{(-3)^2-4(0.35)(2.8)}}{2(0.35)}</mrow>
+            <mrow>t\amp=\frac{3\pm \sqrt{5.08}}{0.7}</mrow>
+            <mrow>t\amp\approx 1.066 \text{ or } t\approx 7.506</mrow>
+          </md>
+          Each of these answers should be checked in the original equation;
+          they both work.
+          In context, this means that the drug concentration will reach <m>0.35</m> milligrams per liter about <m>1.066</m> hours after the injection was given,
+          and again <m>7.506</m> hours after the injection was given.
+        </p>
+      </solution>
+    </example>
+    <remark permid="znl">
+      <p permid="FqS">
+        The irrational solutions to quadratic equations can be checked,
+        although doing so can sometimes involve a lot of simplification and is not shown throughout this section.
+        As an example, to check the solution of
+        <m>-5+\sqrt{22}</m> from <xref ref="example-solve-quadratic-equation-using-quadratic-formula">Example</xref>,
+        we would replace <m>x</m> with
+        <m>-5+\sqrt{22}</m> and check that the two sides of the equation are equal.
+        This check is shown here:
+        <md permid="Spe">
+          <mrow>x^2\amp=-10x-3</mrow>
+          <mrow>(\substitute{-5+\sqrt{22}})^2\amp\stackrel{?}{=}-10(\substitute{-5+\sqrt{22}})-3</mrow>
+          <mrow>(-5)^2+2(-5)(\sqrt{22})+(\sqrt{22})^2\amp\stackrel{?}{=}-10(-5+\sqrt{22})-3</mrow>
+          <mrow>25-10\sqrt{22}+22 \amp\stackrel{?}{=}50-10\sqrt{22}-3</mrow>
+          <mrow>47-10\sqrt{22}\amp\stackrel{\checkmark}{=}47-10\sqrt{22}</mrow>
         </md>
-        </p></remark>
-        <p>When the radicand from the quadratic formula (which is called the <term>discriminant</term><idx><h>discriminant</h></idx>) is a negative number, the quadratic equation has no real solution. <xref ref="example-quadratic-equation-no-solution">Example</xref> shows what happens in this case.</p>
-
-        <example xml:id="example-quadratic-equation-no-solution">
-            <statement>
-                <p>Solve for <m>y</m> in <m>y^2-4y+8=0</m>.</p>
-            </statement>
-            <solution>
-                <p>Identify that <m>\highlight{a=1}</m>, <m>\highlight{b=-4}</m> and <m>\highlight{c=8}</m>. We will substitute them into the quadratic formula:<md>
-                    <mrow>y\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
-                    <mrow>\amp=\frac{-(\substitute{-4})\pm\sqrt{(\substitute{-4})^2-4(\substitute{1})(\substitute{8})}}{2(\substitute{1})}</mrow>
-                    <mrow>\amp=\frac{4\pm\sqrt{16-32}}{2}</mrow>
-                    <mrow>\amp=\frac{4\pm\sqrt{-16}}{2}</mrow>
-                </md>The square root of a negative number is not a real number, so we will simply state that this equation has no real solutions.</p>
-            </solution>
-        </example>
-
-
+      </p>
+    </remark>
+    <p permid="zBG">
+      When the radicand from the quadratic formula
+      (which is called the <term>discriminant</term>
+          <idx><h>discriminant</h></idx>
+      )
+      is a negative number, the quadratic equation has no real solution.
+      <xref ref="example-quadratic-equation-no-solution">Example</xref>
+      shows what happens in this case.
+    </p>
+    <example xml:id="example-quadratic-equation-no-solution" permid="mYT">
+      <statement>
+        <p permid="UzQ">
+          Solve for <m>y</m> in <m>y^2-4y+8=0</m>.
+        </p>
+      </statement>
+      <solution permid="NqQ">
+        <p permid="Gwl">
+          Identify that <m>\highlight{a=1}</m>,
+          <m>\highlight{b=-4}</m> and <m>\highlight{c=8}</m>.
+          We will substitute them into the quadratic formula:
+          <md permid="ywn">
+            <mrow>y\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+            <mrow>\amp=\frac{-(\substitute{-4})\pm\sqrt{(\substitute{-4})^2-4(\substitute{1})(\substitute{8})}}{2(\substitute{1})}</mrow>
+            <mrow>\amp=\frac{4\pm\sqrt{16-32}}{2}</mrow>
+            <mrow>\amp=\frac{4\pm\sqrt{-16}}{2}</mrow>
+          </md>
+          The square root of a negative number is not a real number,
+          so we will simply state that this equation has no real solutions.
+        </p>
+      </solution>
+    </example>
 <!-- Originally this chapter came after the quadratic functions chapter. The move makes this a forward reference. -->
 <!--         <example>
-            <title>Pellet Trajectory Revisited</title>
-            <statement>
-                <p>Recall the example from <xref ref="section-properties-of-quadratic-functions"/>, we did an example where Yang measured the <xref ref="figure-shooting-distance" text="title">vertical distance that his pellets deviated</xref> from the cross-hairs at various distances to the target. A model for the distance that the pellet will rise or fall in inches, <m>y</m>, is given by <m>y=-0.005x^2+0.19x-0.9</m>, where <m>x</m> represents the distance to the target in yards. At what target distance will the pellet fall <m>6</m> inches from the reticule's aim?</p>
-            </statement>
-            <solution>
-                <p>First, start by setting up the equation. Since we know that the pellet will fall <m>6</m> inches, that means that <m>y=-6</m>. So our equation to solve is <m>-6=-0.005x^2+0.19x-0.9</m>. Since this isn't in standard form, we have to move the <m>-6</m> over to the other side.
-                <md>
-                    <mrow>-6\amp=-0.005x^2+0.19x-0.9</mrow>
-                    <mrow>\addleft{6}-6\amp=-0.005x^2+0.19x-0.9\addright{6}</mrow>
-                    <mrow>0\amp=-0.005x^2+0.19x+5.1</mrow>
-                    <intertext>Next, we should assume that this doesn't factor nicely and go for the quadratic formula. In this case, <m>\highlight{a=-0.005}</m>, <m>\highlight{b=0.19}</m>, and <m>\highlight{c=5.1}</m>.</intertext>
-                    <mrow>x\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
-                    <mrow>\amp=\frac{-0.19\pm\sqrt{0.19^2-4(-0.005)(5.1)}}{2(-0.005)}</mrow>
-                    <mrow>\amp=\frac{-0.19\pm\sqrt{0.1381}}{-0.01}</mrow>
-                </md></p>
-                <p>This expression is in exact form, but this is scenario requires an approximation to be valuable. <me>x\approx-18.16 \text{ or } x\approx56.16</me>. The negative solution is meaningless in this case, so we should assume that the positive solution is the one for which we were looking. In conclusion, the pellet will have to travel about <m>56.16</m> yards before it falls <m>6</m> inches.</p>
-
-            </solution>
-        </example> -->
-
-    </subsection>
-
-    <subsection>
-        <title>Recognizing Linear and Quadratic Equations</title>
-
-        <p>Now that we have solved both linear and quadratic equations, it is important to identify each type of equation. Recall that a <term>linear equation</term> has a degree of one and a <term>quadratic equation</term> has a degree of two. If there is any other operation on the variable such as division or a square root then it is not linear or quadratic. We can have other operations on numbers, but not the variables. Let's look at an example.</p>
+<title>Pellet Trajectory Revisited</title>
+<statement>
+<p>Recall the example from <xref ref="section-properties-of-quadratic-functions"/>, we did an example where Yang measured the <xref ref="figure-shooting-distance" text="title">vertical distance that his pellets deviated</xref> from the cross-hairs at various distances to the target. A model for the distance that the pellet will rise or fall in inches, <m>y</m>, is given by <m>y=-0.005x^2+0.19x-0.9</m>, where <m>x</m> represents the distance to the target in yards. At what target distance will the pellet fall <m>6</m> inches from the reticule's aim?</p>
+</statement>
+<solution>
+<p>First, start by setting up the equation. Since we know that the pellet will fall <m>6</m> inches, that means that <m>y=-6</m>. So our equation to solve is <m>-6=-0.005x^2+0.19x-0.9</m>. Since this isn't in standard form, we have to move the <m>-6</m> over to the other side. <md> <mrow>-6\amp=-0.005x^2+0.19x-0.9</mrow> <mrow>\addleft{6}-6\amp=-0.005x^2+0.19x-0.9\addright{6}</mrow> <mrow>0\amp=-0.005x^2+0.19x+5.1</mrow> <intertext>Next, we should assume that this doesn't factor nicely and go for the quadratic formula. In this case, <m>\highlight{a=-0.005}</m>, <m>\highlight{b=0.19}</m>, and <m>\highlight{c=5.1}</m>.</intertext> <mrow>x\amp=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow> <mrow>\amp=\frac{-0.19\pm\sqrt{0.19^2-4(-0.005)(5.1)}}{2(-0.005)}</mrow> <mrow>\amp=\frac{-0.19\pm\sqrt{0.1381}}{-0.01}</mrow> </md></p>
+<p>This expression is in exact form, but this is scenario requires an approximation to be valuable. <me>x\approx-18.16 \text{ or } x\approx56.16</me>. The negative solution is meaningless in this case, so we should assume that the positive solution is the one for which we were looking. In conclusion, the pellet will have to travel about <m>56.16</m> yards before it falls <m>6</m> inches.</p>
+</solution>
+</example> -->
+  </subsection>
+  <subsection permid="wek">
+    <title>Recognizing Linear and Quadratic Equations</title>
+    <p permid="fIP">
+      Now that we have solved both linear and quadratic equations,
+      it is important to identify each type of equation.
+      Recall that a <term>linear equation</term>
+      has a degree of one and a <term>quadratic equation</term> has a degree of two.
+      If there is any other operation on the variable such as division or a square root then it is not linear or quadratic.
+      We can have other operations on numbers, but not the variables.
+      Let's look at an example.
+    </p>
 <!-- todo: should we move this exercise to the first quadratic solving section where I wrote an example like this already? -->
-        <exercise xml:id="identify-linear-and-quadratic-equations">
-            <introduction>
-                <p>Identify whether each equation is linear, quadratic or neither.</p>
-            </introduction>
-            <webwork>
-                <setup>
-                    <pg-code>
-                        $linear = PopUp(['?','linear','quadratic','neither'],1);
-                        $quadratic = PopUp(['?','linear','quadratic','neither'],2);
-                        $neither = PopUp(['?','linear','quadratic','neither'],3);
-                   </pg-code>
-                </setup>
-                <statement>
-                    <p><ol label="a.">
-                        <li>
-                            <p>The equation <m>3=7y^2-8y</m> is <var name="$quadratic" form="popup"/>.</p>
-                        </li>
-                        <li>
-                            <p>The equation <m>5x+3=7x-8</m> is <var name="$linear" form="popup"/>.</p>
-                        </li>
-                        <li>
-                            <p>The equation <m>r^3-7=4</m> is <var name="$neither" form="popup"/>.</p>
-                        </li>
-                        <li>
-                            <p>The equation <m>\sqrt{7}x+4=10</m> is <var name="$linear" form="popup"/>.</p>
-                        </li>
-                    </ol></p>
-                </statement>
-                <solution>
-                    <p>We will check the degree of each equation:
-                    <ol label="a.">
-                        <li>
-                            <p>This is a quadratic equation because there is a <m>y^2</m> term.</p>
-                        </li>
-                        <li>
-                            <p>This is a linear equation because the highest exponent is one.</p>
-                        </li>
-                        <li>
-                            <p>This is neither linear nor quadratic because it has a degree of three.</p>
-                        </li>
-                        <li>
-                            <p>This is a linear equation because it has a degree of one. The coefficient is irrational, but the variable is not in the square root.</p>
-                        </li>
-                    </ol></p>
-                </solution>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <subsection>
-        <title>Solving Linear and Quadratic Equations</title>
-
-        <p>When an equation is <term>linear</term>, we move all variable terms to one side of the equation and all constant terms to the other side. Then we use division if needed to solve for the variable. This is outlined in <xref ref="list-solve-multistep-linear-equation">List</xref>.</p>
-
-        <p>When an equation is <term>quadratic</term>, we have three different methods we can use. Here is an outline of the general process for determining which method to use.</p>
-
-        <algorithm xml:id="algorithm-solving-linear-and-quadratic-equations"><idx><h>solving</h><h>linear and quadratic equations</h></idx>
-            <title>Solving Quadratic Equations</title>
-            <p><ol>
-                <li><p>First, check whether there is a linear term, or whether there is only a squared expression and a constant. If there is only a squared expression and a constant, isolate the squared quantity and use the <term>square root method</term>.</p></li>
-                <li><p>If there <em>is</em> a linear term, put the equation in <term>standard form</term> with all of the terms on one side and zero on the other side.
-                    <ol>
-                        <li><p>If the polynomial factors, solve the equation by <term>factoring</term>.</p></li>
-                        <li><p>If the polynomial does not factor, use the <term>quadratic formula</term>.</p></li>
-                    </ol>
-                </p></li>
-            </ol></p>
-        </algorithm>
-
-        <p>Here are some examples:</p>
-
-        <example xml:id="example-compare-linear-quadratic-quadratic-without-x-term">
-            <statement>
-                <p>Solve for <m>x</m> in <m>x^2=7x^2-12</m>.</p>
-            </statement>
-            <solution>
-                    <p>This is a quadratic equation because there are <m>x^2</m> terms. There are no <m>x</m> terms so we will use the square root method. We start by combining the <m>x^2</m> terms on the left.<md>
-                    <mrow>x^2\amp=7x^2-12</mrow>
-                    <mrow>-6x^2\amp=-12</mrow>
-                    <mrow>x^2\amp=2</mrow></md><md>
-                    <mrow>x\amp=-\sqrt{2}\amp\text{or}\amp\amp x=\sqrt{2}</mrow>
-                </md>The solution set is <m>\{-\sqrt{2},\sqrt{2}\}.</m></p>
-            </solution>
-        </example>
-
-        <example xml:id="example-compare-linear-quadratic-quadratic-formula">
-            <statement>
-                <p>Solve for <m>p</m> in <m>p^2=-2p+2</m>.</p>
-            </statement>
-            <solution>
-                <p>This is a quadratic equation that also contains a linear term so we will put the equation in standard form. Then we see that the left side does not factor so we will use the quadratic formula.<md>
-                    <mrow>p^2+2p-2\amp=0</mrow>
-                    <mrow>p\amp=\frac{-(2)\pm\sqrt{(2)^2-4(1)(-2)}}{2(1)}</mrow>
-                    <mrow>p\amp=\frac{-2\pm\sqrt{4+8}}{2}</mrow>
-                    <mrow>p\amp=\frac{-2\pm\sqrt{12}}{2}</mrow>
-                    <mrow>p\amp=\frac{-2\pm2\sqrt{3}}{2}</mrow>
-                    <mrow>p\amp=\frac{-2}{2}\pm\frac{2\sqrt{3}}{2}</mrow>
-                    <mrow>p\amp=-1\pm \sqrt{3}</mrow>
-                </md>The solution set is <m>\{-1-\sqrt{3},-1+\sqrt{3}\}.</m></p>
-            </solution>
-        </example>
-
-        <example xml:id="example-compare-linear-quadratic-linear">
-            <statement>
-                <p>Solve for <m>t</m> in <m>7-t=9t+11</m>.</p>
-            </statement>
-            <solution>
-                <p>This is a linear equation so we will combine the linear terms on one side and the constant terms on the other side.<md>
-                    <mrow>-10t\amp=4</mrow>
-                    <mrow>t\amp=\frac{4}{-10}</mrow>
-                    <mrow>t\amp=-\frac{2}{5}</mrow>
-                </md>The solution set is <m>\left\{-\frac{2}{5}\right\}.</m></p>
-            </solution>
-        </example>
-
-        <example xml:id="example-compare-linear-quadratic-quadratic-with-x-term-factor">
-            <statement>
-                <p>Solve for <m>z</m> in <m>z^2-10=3z+30</m>.</p>
-            </statement>
-            <solution>
-                <p>This is a quadratic equation with a linear term so we will put it in standard form. Then we see that the left side factors so we solve by factoring.
-                <md>
-                    <mrow>z^2-10=3z+30</mrow>
-                    <mrow>z^2-3z-40\amp=0</mrow>
-                    <mrow>(z+5)(z-8)\amp=0</mrow></md><md>
-                    <mrow>z+5\amp=0\amp\amp\text{ or }\amp z-8\amp=0</mrow>
-                    <mrow>z\amp=-5\amp\amp\text{ or }\amp z\amp=8</mrow>
-                </md>The solution set is <m>\{-5, 8\}</m>.</p>
-            </solution>
-        </example>
-    </subsection>
-
-    <exercises>
-        <exercisegroup cols="2">
-            <title>Review and Warmup</title>
-            <exercise>
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_01.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_01.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="3">
-            <title>Solve Quadratic Equations Using the Quadratic Formula</title>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad155.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad155.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad165.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad165.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad150.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad150.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad160.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad160.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad175.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad175.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad176.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad176.pg" />
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="3">
-            <title>Solve Quadratic Equations Using an Appropriate Method</title>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad205.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad205.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad315.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad315.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad210.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad210.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad260.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad260.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad150.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad150.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad185.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad185.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad81.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad81.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps70.pg" />
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2">
-            <title>Quadratic Formula Applications</title>
-                <!-- TODO: Should these be mixed applications with factoring and square root method added? -->
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication20.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication20.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication50.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication50.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication90.pg" />
-            </exercise>
-        </exercisegroup>
-
-            <exercise><!-- Kara's challenge problem -->
-                <webwork>
-                    <setup>
-                        <pg-code>
-                            Context()->variables->are(m=>'Real',n=>'Real',p=>'Real');
-                            $answer = Compute("(-n-sqrt(n^2-4mp))/(2m),(-n+sqrt(n^2-4mp))/(2m)");
-                       </pg-code>
-                    </setup>
-                    <statement>
-                        <p>Solve for <m>x</m> in the equation <m>mx^{2}+nx+p=0</m>.</p>
-                        <instruction>Enter the two solutions as a comma-separated list.  Be mindful of how you use parentheses in typing up the answers.</instruction>
-                        <p> <var name = "$answer" width="40"/></p>
-                    </statement>
-                    <solution>
-                        <p>To solve a quadratic equation of the form <m>ax^{2}+bx+c=0</m>, we can use the quadratic formula.  In this case, <m>a=m</m>, <m>b=n</m>, and <m>c=p.</m>  Thus, the solutions are<m>\frac{-n + \sqrt{n^{2}-4mp}}{2m}, \frac{-n - \sqrt{n^{2}-4mp}}{2m}</m>, or <m>\frac{-n \pm \sqrt{n^{2}-4mp}}{2m}</m>.
-                        </p>
-                    </solution>
-                </webwork>
-            </exercise>
-
-
-    </exercises>
+    <exercise xml:id="identify-linear-and-quadratic-equations" permid="LBD">
+      <introduction permid="fuu">
+        <p permid="RFk">
+          Identify whether each equation is linear, quadratic or neither.
+        </p>
+      </introduction>
+      <webwork>
+          <setup>
+<pg-code>
+$linear = PopUp(['?','linear','quadratic','neither'],1);
+$quadratic = PopUp(['?','linear','quadratic','neither'],2);
+$neither = PopUp(['?','linear','quadratic','neither'],3);
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="xMt">
+              <ol label="a." permid="qDt">
+                <li permid="WKC">
+                  <p permid="Mlx">
+                    The equation <m>3=7y^2-8y</m> is <var name="$quadratic" form="popup"/>.
+                  </p>
+                </li>
+                <li permid="CRL">
+                  <p permid="ssG">
+                    The equation <m>5x+3=7x-8</m> is <var name="$linear" form="popup"/>.
+                  </p>
+                </li>
+                <li permid="iYU">
+                  <p permid="YzP">
+                    The equation <m>r^3-7=4</m> is <var name="$neither" form="popup"/>.
+                  </p>
+                </li>
+                <li permid="Pgd">
+                  <p permid="EGY">
+                    The equation <m>\sqrt{7}x+4=10</m> is <var name="$linear" form="popup"/>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution permid="SaJ">
+            <p permid="mDu">
+              We will check the degree of each equation:
+              <ol label="a." permid="epb">
+                <li permid="vnm">
+                  <p permid="kOh">
+                    This is a quadratic equation because there is a <m>y^2</m> term.
+                  </p>
+                </li>
+                <li permid="buv">
+                  <p permid="QVq">
+                    This is a linear equation because the highest exponent is one.
+                  </p>
+                </li>
+                <li permid="HBE">
+                  <p permid="xcz">
+                    This is neither linear nor quadratic because it has a degree of three.
+                  </p>
+                </li>
+                <li permid="nIN">
+                  <p permid="djI">
+                    This is a linear equation because it has a degree of one.
+                    The coefficient is irrational,
+                    but the variable is not in the square root.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <subsection permid="clt">
+    <title>Solving Linear and Quadratic Equations</title>
+    <p permid="LPY">
+      When an equation is <term>linear</term>,
+      we move all variable terms to one side of the equation and all constant terms to the other side.
+      Then we use division if needed to solve for the variable.
+      This is outlined in <xref ref="list-solve-multistep-linear-equation">List</xref>.
+    </p>
+    <p permid="rXh">
+      When an equation is <term>quadratic</term>,
+      we have three different methods we can use.
+      Here is an outline of the general process for determining which method to use.
+    </p>
+    <algorithm xml:id="algorithm-solving-linear-and-quadratic-equations" permid="rIM">
+      <idx><h>solving</h><h>linear and quadratic equations</h></idx>
+      <title>Solving Quadratic Equations</title>
+      <p permid="Xuw">
+        <ol permid="Kwk">
+          <li permid="TPW">
+            <p permid="JqR">
+              First, check whether there is a linear term,
+              or whether there is only a squared expression and a constant.
+              If there is only a squared expression and a constant,
+              isolate the squared quantity and use the
+              <term>square root method</term>.
+            </p>
+          </li>
+          <li permid="zXf">
+            <p permid="pya">
+              If there <em>is</em> a linear term,
+              put the equation in <term>standard form</term>
+              with all of the terms on one side and zero on the other side.
+              <ol permid="bIQ">
+                <li permid="vBH">
+                  <p permid="Puy">
+                    If the polynomial factors, solve the equation by <term>factoring</term>.
+                  </p>
+                </li>
+                <li permid="geo">
+                  <p permid="VFj">
+                    If the polynomial does not factor,
+                    use the <term>quadratic formula</term>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </algorithm>
+    <p permid="Yeq">
+      Here are some examples:
+    </p>
+    <example xml:id="example-compare-linear-quadratic-quadratic-without-x-term" permid="XPV">
+      <statement>
+        <p permid="AGZ">
+          Solve for <m>x</m> in <m>x^2=7x^2-12</m>.
+        </p>
+      </statement>
+      <solution permid="txZ">
+        <p permid="SKD">
+          This is a quadratic equation because there are <m>x^2</m> terms.
+          There are no <m>x</m> terms so we will use the square root method.
+          We start by combining the <m>x^2</m> terms on the left.
+          <md permid="eDw">
+            <mrow>x^2\amp=7x^2-12</mrow>
+            <mrow>-6x^2\amp=-12</mrow>
+            <mrow>x^2\amp=2</mrow>
+          </md>
+          <md permid="KKF">
+            <mrow>x\amp=-\sqrt{2}\amp\text{or}\amp\amp x=\sqrt{2}</mrow>
+          </md>
+          The solution set is <m>\{-\sqrt{2},\sqrt{2}\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example xml:id="example-compare-linear-quadratic-quadratic-formula" permid="DXe">
+      <statement>
+        <p permid="gOi">
+          Solve for <m>p</m> in <m>p^2=-2p+2</m>.
+        </p>
+      </statement>
+      <solution permid="ZFi">
+        <p permid="yRM">
+          This is a quadratic equation that also contains a linear term so we will put the equation in standard form.
+          Then we see that the left side does not factor so we will use the quadratic formula.
+          <md permid="qRO">
+            <mrow>p^2+2p-2\amp=0</mrow>
+            <mrow>p\amp=\frac{-(2)\pm\sqrt{(2)^2-4(1)(-2)}}{2(1)}</mrow>
+            <mrow>p\amp=\frac{-2\pm\sqrt{4+8}}{2}</mrow>
+            <mrow>p\amp=\frac{-2\pm\sqrt{12}}{2}</mrow>
+            <mrow>p\amp=\frac{-2\pm2\sqrt{3}}{2}</mrow>
+            <mrow>p\amp=\frac{-2}{2}\pm\frac{2\sqrt{3}}{2}</mrow>
+            <mrow>p\amp=-1\pm \sqrt{3}</mrow>
+          </md>
+          The solution set is <m>\{-1-\sqrt{3},-1+\sqrt{3}\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example xml:id="example-compare-linear-quadratic-linear" permid="ken">
+      <statement>
+        <p permid="MVr">
+          Solve for <m>t</m> in <m>7-t=9t+11</m>.
+        </p>
+      </statement>
+      <solution permid="FMr">
+        <p permid="eYV">
+          This is a linear equation so we will combine the linear terms on one side and the constant terms on the other side.
+          <md permid="WYX">
+            <mrow>-10t\amp=4</mrow>
+            <mrow>t\amp=\frac{4}{-10}</mrow>
+            <mrow>t\amp=-\frac{2}{5}</mrow>
+          </md>
+          The solution set is <m>\left\{-\frac{2}{5}\right\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example xml:id="example-compare-linear-quadratic-quadratic-with-x-term-factor" permid="Qlw">
+      <statement>
+        <p permid="tcA">
+          Solve for <m>z</m> in <m>z^2-10=3z+30</m>.
+        </p>
+      </statement>
+      <solution permid="lTA">
+        <p permid="Lge">
+          This is a quadratic equation with a linear term so we will put it in standard form.
+          Then we see that the left side factors so we solve by factoring.
+          <md permid="Dgg">
+            <mrow>z^2-10=3z+30</mrow>
+            <mrow>z^2-3z-40\amp=0</mrow>
+            <mrow>(z+5)(z-8)\amp=0</mrow>
+          </md>
+          <md permid="jnp">
+            <mrow>z+5\amp=0\amp\amp\text{ or }\amp z-8\amp=0</mrow>
+            <mrow>z\amp=-5\amp\amp\text{ or }\amp z\amp=8</mrow>
+          </md>
+          The solution set is <m>\{-5, 8\}</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <exercises permid="IsC">
+    <exercisegroup cols="2" permid="ozL">
+      <title>Review and Warmup</title>
+      <exercise permid="Ncv">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate90.pg" />
+      </exercise>
+      <exercise permid="tjE">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate90.pg" />
+      </exercise>
+      <exercise permid="ZqN">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+      </exercise>
+      <exercise permid="FxW">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+      </exercise>
+      <exercise permid="lFf">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+      </exercise>
+      <exercise permid="RMo">
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+      </exercise>
+      <exercise permid="xTx">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
+      </exercise>
+      <exercise permid="eaG">
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
+      </exercise>
+      <exercise permid="KhP">
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_01.pg" />
+      </exercise>
+      <exercise permid="qoY">
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_01.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="UGU">
+      <title>Solve Quadratic Equations Using the Quadratic Formula</title>
+      <exercise permid="Wwh">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad155.pg" />
+      </exercise>
+      <exercise permid="CDq">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad155.pg" />
+      </exercise>
+      <exercise permid="iKz">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad165.pg" />
+      </exercise>
+      <exercise permid="ORI">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad165.pg" />
+      </exercise>
+      <exercise permid="uYR">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad150.pg" />
+      </exercise>
+      <exercise permid="bga">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad150.pg" />
+      </exercise>
+      <exercise permid="Hnj">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad160.pg" />
+      </exercise>
+      <exercise permid="nus">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad160.pg" />
+      </exercise>
+      <exercise permid="TBB">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad170.pg" />
+      </exercise>
+      <exercise permid="zIK">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad170.pg" />
+      </exercise>
+      <exercise permid="fPT">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad175.pg" />
+      </exercise>
+      <exercise permid="LXc">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad175.pg" />
+      </exercise>
+      <exercise permid="sel">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad176.pg" />
+      </exercise>
+      <exercise permid="Ylu">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad176.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="AOd">
+      <title>Solve Quadratic Equations Using an Appropriate Method</title>
+      <exercise permid="EsD">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad205.pg" />
+      </exercise>
+      <exercise permid="kzM">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad205.pg" />
+      </exercise>
+      <exercise permid="QGV">
+        <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps110.pg" />
+      </exercise>
+      <exercise permid="wOe">
+        <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps110.pg" />
+      </exercise>
+      <exercise permid="cVn">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad315.pg" />
+      </exercise>
+      <exercise permid="Jcw">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad315.pg" />
+      </exercise>
+      <exercise permid="pjF">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg" />
+      </exercise>
+      <exercise permid="VqO">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg" />
+      </exercise>
+      <exercise permid="BxX">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad210.pg" />
+      </exercise>
+      <exercise permid="hFg">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad210.pg" />
+      </exercise>
+      <exercise permid="NMp">
+        <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps170.pg" />
+      </exercise>
+      <exercise permid="tTy">
+        <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps170.pg" />
+      </exercise>
+      <exercise permid="aaH">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad260.pg" />
+      </exercise>
+      <exercise permid="GhQ">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad260.pg" />
+      </exercise>
+      <exercise permid="moZ">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
+      </exercise>
+      <exercise permid="Swi">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
+      </exercise>
+      <exercise permid="yDr">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad150.pg" />
+      </exercise>
+      <exercise permid="eKA">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad150.pg" />
+      </exercise>
+      <exercise permid="KRJ">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad185.pg" />
+      </exercise>
+      <exercise permid="qYS">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad185.pg" />
+      </exercise>
+      <exercise permid="Xgb">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad81.pg" />
+      </exercise>
+      <exercise permid="Dnk">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad81.pg" />
+      </exercise>
+      <exercise permid="jut">
+        <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps70.pg" />
+      </exercise>
+      <exercise permid="PBC">
+        <webwork source="BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps70.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="gVm">
+      <title>Quadratic Formula Applications</title>
+<!-- TODO: Should these be mixed applications with factoring and square root method added? -->
+      <exercise permid="vIL">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication10.pg" />
+      </exercise>
+      <exercise permid="bPU">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication10.pg" />
+      </exercise>
+      <exercise permid="HXd">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication20.pg" />
+      </exercise>
+      <exercise permid="oem">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication20.pg" />
+      </exercise>
+      <exercise permid="Ulv">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication30.pg" />
+      </exercise>
+      <exercise permid="AsE">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication30.pg" />
+      </exercise>
+      <exercise permid="gzN">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg" />
+      </exercise>
+      <exercise permid="MGW">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg" />
+      </exercise>
+      <exercise permid="sOf">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication50.pg" />
+      </exercise>
+      <exercise permid="YVo">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication50.pg" />
+      </exercise>
+      <exercise permid="Fcx">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg" />
+      </exercise>
+      <exercise permid="ljG">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg" />
+      </exercise>
+      <exercise permid="RqP">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication70.pg" />
+      </exercise>
+      <exercise permid="xxY">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication70.pg" />
+      </exercise>
+      <exercise permid="dFh">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication80.pg" />
+      </exercise>
+      <exercise permid="JMq">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication80.pg" />
+      </exercise>
+      <exercise permid="pTz">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication90.pg" />
+      </exercise>
+      <exercise permid="WaI">
+        <webwork source="BasicAlgebra/QuadraticApplications/QuadraticEquationApplication90.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercise permid="wsF">
+<!-- Kara's challenge problem -->
+      <webwork>
+          <setup>
+<pg-code>
+Context()->variables->are(m=>'Real',n=>'Real',p=>'Real');
+$answer = Compute("(-n-sqrt(n^2-4mp))/(2m),(-n+sqrt(n^2-4mp))/(2m)");
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="dTC">
+              Solve for <m>x</m> in the equation <m>mx^{2}+nx+p=0</m>.
+            </p>
+            <instruction>
+              Enter the two solutions as a comma-separated list.  Be mindful of how you use parentheses in typing up the answers.
+            </instruction>
+            <p permid="KaL">
+              <var name = "$answer" width="40"/>
+            </p>
+          </statement>
+          <solution permid="yhS">
+            <p permid="rnn">
+              To solve a quadratic equation of the form <m>ax^{2}+bx+c=0</m>,
+              we can use the quadratic formula.
+              In this case, <m>a=m</m>, <m>b=n</m>, and <m>c=p</m>.
+              Thus, the solutions are<m>\frac{-n + \sqrt{n^{2}-4mp}}{2m}, \frac{-n - \sqrt{n^{2}-4mp}}{2m}</m>,
+              or <m>\frac{-n \pm \sqrt{n^{2}-4mp}}{2m}</m>.
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </exercises>
 </section>

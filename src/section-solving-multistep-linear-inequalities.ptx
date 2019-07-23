@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,309 +6,408 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
-<section xml:id="section-solving-multistep-linear-inequalities">
-
-    <title>Solving Multistep Linear Inequalities</title>
-
-    <introduction>
-
-        <p>We have learned how to solve one-step inequalities in <xref ref="section-solving-one-step-inequalities" text="title">Section</xref>. In this section, we will learn how to solve multistep inequalities.</p>
-    </introduction>
-
-    <subsection>
-        <title>Solving Multistep Inequalities</title>
-        <p>When solving a linear inequality, we follow the same steps in <xref ref="list-solve-multistep-linear-equation">List</xref>. The only difference in our steps to solving is that when we multiply or divide by a negative number on both sides of an inequality, the direction of the inequality symbol must switch. We will look at some examples.</p>
-
-        <list xml:id="list-solve-multistep-linear-inequality"><idx><h>solving</h><h>linear inequalities</h><h>multistep</h></idx>
-            <caption>Steps to Solve Linear Inequalities</caption>
-            <dl>
-                <li><title>Simplify</title><p>Simplify the expressions on each side of the inequality by distributing and combining like terms.</p></li>
-                <li><title>Isolate</title><p>Use addition or subtraction to isolate the variable terms and constant terms (numbers) so that they are on different sides of the inequality symbol.</p></li>
-                <li><title>Eliminate</title><p>Use multiplication or division to eliminate the variable term's coefficient. If each side of the inequality is multiplied or divided by a negative number, switch the direction of the inequality symbol.</p></li>
-                <li><title>Check</title><p>When specified, verify the infinite solution set by checking multiple solutions.</p></li>
-                <li><title>Summarize</title><p>State the solution set or (in the case of an application problem) summarize the result in a complete sentence using appropriate units.</p></li>
-            </dl>
-        </list>
-
-        <example xml:id="example-inequality-simple">
-            <statement>
-                <p>Solve for <m>t</m> in the inequality <m>-3t+5\geq11</m>. Write the solution set in both set-builder notation and interval notation.</p>
-            </statement>
-            <solution>
-                <p>
-                    <md>
-                        <mrow>-3t+5\amp\geq11</mrow>
-                        <mrow>-3t+5\subtractright{5}\amp\geq11\subtractright{5}</mrow>
-                        <mrow>-3t\amp\geq6</mrow>
-                        <mrow>\divideunder{-3t}{-3}\amp\mathbin{\highlight{\le}}\divideunder{6}{-3}</mrow>
-                        <mrow>t\amp\leq-2</mrow>
-                    </md>
-                </p>
-                <p>Note that when we divided both sides of the inequality by <m>-3</m>, we had to switch the direction of the inequality symbol.</p>
-                <p>The solution set in set-builder notation is <m>\{t\mid t\leq-2\}</m>.</p>
-                <p>The solution set in interval notation is <m>(-\infty,-2]</m>.</p>
-            </solution>
-        </example>
-
-        <remark>
-            <p>Since the inequality solved in <xref ref="example-inequality-simple">Example</xref> has infinitely many solutions, it's difficult to check. We found that all values of <m>t</m> for which <m>t\leq-2</m> are solutions, so one approach is to check if <m>-2</m> is a solution and additionally if one other number less than <m>-2</m> is a solution.</p>
-
-            <sidebyside widths="47% 47%" margins="0%">
-                <p>Here, we'll check that <m>-2</m> satisfies this inequality:
-                <md>
-                    <mrow>-3t+5\amp\geq11</mrow>
-                    <mrow>-3(\substitute{-2})+5\amp\stackrel{?}{\geq}11</mrow>
-                    <mrow>6+5\amp\stackrel{?}{\geq}11</mrow>
-                    <mrow>11\amp\stackrel{\checkmark}{\geq}11</mrow>
-                </md></p>
-                <p>Next, we can check another number smaller than <m>-2</m>, such as <m>-5</m>:
-                <md>
-                    <mrow>-3t+5\amp\geq11</mrow>
-                    <mrow>-3(\substitute{-5})+5\amp\stackrel{?}{\geq}11</mrow>
-                    <mrow>15+5\amp\stackrel{?}{\geq}11</mrow>
-                    <mrow>20\amp\stackrel{\checkmark}{\geq}11</mrow>
-                </md></p>
-            </sidebyside>
-            <p>Thus, both <m>-2</m> and <m>-5</m> are solutions. It's important to note that this doesn't directly verify that <em>all</em> solutions to this inequality check. It's valuable though in that it would likely help us catch an error if we had made one. Consult your instructor to see if you're expected to check your answer in this manner.</p>
-        </remark>
-
-        <example>
-            <statement>
-                <p>Solve for <m>z</m> in the inequality <m>(6z+5)-(2z-3)\lt-12</m>. Write the solution set in both set-builder notation and interval notation.</p>
-            </statement>
-            <solution>
-                <p>
-                    <md>
-                        <mrow>(6z+5)-(2z-3)\amp\lt-12</mrow>
-                        <mrow>6z+5-2z+3\amp\lt-12</mrow>
-                        <mrow>4z+8\amp\lt-12</mrow>
-                        <mrow>4z+8\subtractright{8}\amp\lt-12\subtractright{8}</mrow>
-                        <mrow>4z\amp\lt-20</mrow>
-                        <mrow>\divideunder{4z}{4}\amp\lt\divideunder{-20}{4}</mrow>
-                        <mrow>z\amp\lt -5</mrow>
-                    </md>
-                </p>
-                <p>Note that we divided both sides of the inequality by <m>4</m> and since this is a positive number we <em>did not</em> need to switch the direction of the inequality symbol.</p>
-                <p>The solution set in set-builder notation is <m>\{z\mid z\lt-5\}</m>.</p>
-                <p>The solution set in interval notation is <m>(-\infty,-5)</m>.</p>
-            </solution>
-        </example>
-
-
-        <example>
-            <statement>
-                <p>Solve for <m>x</m> in <m>-2-2(2x+1)\gt4-(3-x)</m>. Write the solution set in both set-builder notation and interval notation.</p>
-            </statement>
-            <solution>
-                <p>
-                    <md>
-                        <mrow>-2-2(2x+1)\amp\gt4-(3-x)</mrow>
-                        <mrow>-2-4x-2\amp\gt4-3+x</mrow>
-                        <mrow>-4x-4\amp\gt x+1</mrow>
-                        <mrow>-4x-4\subtractright{x}\amp\gt x+1\subtractright{x}</mrow>
-                        <mrow>-5x-4\amp\gt1</mrow>
-                        <mrow>-5x-4\addright{4}\amp\gt1\addright{4}</mrow>
-                        <mrow>-5x\amp\gt5</mrow>
-                        <mrow>\divideunder{-5x}{-5}\amp\mathbin{\highlight{\lt}}\divideunder{5}{-5}</mrow>
-                        <mrow>x\amp\lt-1</mrow>
-                    </md>
-                </p>
-
-                <p>Note that when we divided both sides of the inequality by <m>-5</m>, we had to switch the direction of the inequality symbol.</p>
-
-                <p>The solution set in set-builder notation is <m>\{x\mid x\lt-1\}</m>.</p>
-                <p>The solution set in interval notation is <m>(-\infty,-1)</m>.</p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>When a stopwatch started, the pressure inside a gas container was <m>4.2</m> atm (standard atmospheric pressure). As the container was heated, the pressure increased by <m>0.7</m> atm per minute. The maximum pressure the container can handle was <m>21.7</m> atm. Heating must be stopped once the pressure reaches <m>21.7</m> atm. In what time interval was the container safe?</p>
-            </statement>
-            <solution>
-                <p>The pressure increases by <m>0.7</m> atm per minute, so it increases by <m>0.7m</m> after <m>m</m> minutes. Counting in the original pressure of <m>4.2</m> atm, pressure in the container can be modeled by <m>0.7m+4.2</m>, where <m>m</m> is the number of minutes since the stop watch started.</p>
-
-                <p>The container is safe when the pressure is <m>21.7</m> atm or lower. We can write and solve this inequality:
-                    <md>
-                        <mrow>0.7m+4.2\amp\leq21.7</mrow>
-                        <mrow>0.7m+4.2\subtractright{4.2}\amp\leq21.7\subtractright{4.2}</mrow>
-                        <mrow>0.7m\amp\leq17.5</mrow>
-                        <mrow>\divideunder{0.7m}{0.7}\amp\leq\divideunder{17.5}{0.7}</mrow>
-                        <mrow>m\amp\leq25</mrow>
-                    </md>
-                </p>
-
-                <p>In summary, the container was safe as long as <m>m\leq25</m>. Assuming that <m>m</m> also must be greater than or equal to zero, this means <m>0\leq m\leq 25</m>. We can write this as the time interval as <m>[0,25]</m>. Thus, the container was safe between 0 minutes and 25 minutes.</p>
-            </solution>
-        </example>
-    </subsection>
-
-
-    <exercises>
-        <exercisegroup cols="3">
-            <title>Review and Warmup</title>
-             <introduction><p>For each problem below, in addition to writing the different notations for each solution set, draw a graph of each solution set on a number line.</p></introduction>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality41.pg"/>
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality41.pg"/>
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality50.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality50.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation130.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation140.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="3">
-            <title>Solving Multistep Linear Inequalities</title>
-             <introduction><p>For each problem below, in addition to writing the different notations for each solution set, draw a graph of each solution set on a number line.</p></introduction>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality180.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality180.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality190.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality190.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality200.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality200.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality210.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality210.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality220.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality220.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality230.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality230.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality240.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality240.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality250.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality250.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality260.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality260.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality270.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality270.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality280.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality280.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality290.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality290.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality300.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality300.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality310.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality310.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality320.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/SolveInequality320.pg" />
-            </exercise>
-
-        </exercisegroup>
-        <exercisegroup>
-            <title>Applications</title>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/InequalityWordProblem10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/LinearInequalities/InequalityWordProblem10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/LinearInequalities/LinearInequalities8.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/LinearInequalities/LinearInequalities8.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/LinearInequalities/LinearInequalities9.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/LinearInequalities/LinearInequalities9.pg" />
-            </exercise>
-        </exercisegroup>
-
-
-    </exercises>
+<section xml:id="section-solving-multistep-linear-inequalities" permid="jdy">
+  <title>Solving Multistep Linear Inequalities</title>
+  <introduction permid="sbL">
+    <p permid="xvy">
+      We have learned how to solve one-step inequalities in <xref ref="section-solving-one-step-inequalities" text="title">Section</xref>.
+      In this section, we will learn how to solve multistep inequalities.
+    </p>
+  </introduction>
+  <subsection permid="PkH">
+    <title>Solving Multistep Inequalities</title>
+    <p permid="pQZ">
+      When solving a linear inequality,
+      we follow the same steps in <xref ref="list-solve-multistep-linear-equation">List</xref>.
+      The only difference in our steps to solving is that when we multiply or divide by a negative number on both sides of an inequality,
+      the direction of the inequality symbol must switch.
+      We will look at some examples.
+    </p>
+    <list xml:id="list-solve-multistep-linear-inequality" permid="fNt">
+      <idx><h>solving</h><h>linear inequalities</h><h>multistep</h></idx>
+      <caption>Steps to Solve Linear Inequalities</caption>
+      <dl permid="wLE">
+        <li permid="cSN">
+          <title>Simplify</title>
+          <p permid="hCG">
+            Simplify the expressions on each side of the inequality by distributing and combining like terms.
+          </p>
+        </li>
+        <li permid="IZW">
+          <title>Isolate</title>
+          <p permid="NJP">
+            Use addition or subtraction to isolate the variable terms and constant terms (numbers) so that they are on different sides of the inequality symbol.
+          </p>
+        </li>
+        <li permid="phf">
+          <title>Eliminate</title>
+          <p permid="tQY">
+            Use multiplication or division to eliminate the variable term's coefficient.
+            If each side of the inequality is multiplied or divided by a negative number,
+            switch the direction of the inequality symbol.
+          </p>
+        </li>
+        <li permid="Voo">
+          <title>Check</title>
+          <p permid="ZYh">
+            When specified,
+            verify the infinite solution set by checking multiple solutions.
+          </p>
+        </li>
+        <li permid="Bvx">
+          <title>Summarize</title>
+          <p permid="Gfq">
+            State the solution set or
+            (in the case of an application problem)
+            summarize the result in a complete sentence using appropriate units.
+          </p>
+        </li>
+      </dl>
+    </list>
+    <example xml:id="example-inequality-simple" permid="bdA">
+      <statement>
+        <p permid="Aqe">
+          Solve for <m>t</m> in the inequality <m>-3t+5\geq11</m>.
+          Write the solution set in both set-builder notation and interval notation.
+        </p>
+      </statement>
+      <solution permid="YiU">
+        <p permid="mmz">
+          <md permid="VYi">
+            <mrow>-3t+5\amp\geq11</mrow>
+            <mrow>-3t+5\subtractright{5}\amp\geq11\subtractright{5}</mrow>
+            <mrow>-3t\amp\geq6</mrow>
+            <mrow>\divideunder{-3t}{-3}\amp\mathbin{\highlight{\le}}\divideunder{6}{-3}</mrow>
+            <mrow>t\amp\leq-2</mrow>
+          </md>
+        </p>
+        <p permid="StI">
+          Note that when we divided both sides of the inequality by <m>-3</m>,
+          we had to switch the direction of the inequality symbol.
+        </p>
+        <p permid="yAR">
+          The solution set in set-builder notation is <m>\{t\mid t\leq-2\}</m>.
+        </p>
+        <p permid="eIa">
+          The solution set in interval notation is <m>(-\infty,-2]</m>.
+        </p>
+      </solution>
+    </example>
+    <remark permid="zGk">
+      <p permid="YSO">
+        Since the inequality solved in <xref ref="example-inequality-simple">Example</xref>
+        has infinitely many solutions, it's difficult to check.
+        We found that all values of <m>t</m> for which <m>t\leq-2</m> are solutions,
+        so one approach is to check if <m>-2</m> is a solution and additionally if one other number less than <m>-2</m> is a solution.
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="LUC">
+        <p permid="EZX">
+          Here, we'll check that <m>-2</m> satisfies this inequality:
+          <md permid="Cfr">
+            <mrow>-3t+5\amp\geq11</mrow>
+            <mrow>-3(\substitute{-2})+5\amp\stackrel{?}{\geq}11</mrow>
+            <mrow>6+5\amp\stackrel{?}{\geq}11</mrow>
+            <mrow>11\amp\stackrel{\checkmark}{\geq}11</mrow>
+          </md>
+        </p>
+        <p permid="lhg">
+          Next, we can check another number smaller than <m>-2</m>,
+          such as <m>-5</m>:
+          <md permid="imA">
+            <mrow>-3t+5\amp\geq11</mrow>
+            <mrow>-3(\substitute{-5})+5\amp\stackrel{?}{\geq}11</mrow>
+            <mrow>15+5\amp\stackrel{?}{\geq}11</mrow>
+            <mrow>20\amp\stackrel{\checkmark}{\geq}11</mrow>
+          </md>
+        </p>
+      </sidebyside>
+      <p permid="Rop">
+        Thus, both <m>-2</m> and <m>-5</m> are solutions.
+        It's important to note that this doesn't directly verify that <em>all</em>
+        solutions to this inequality check.
+        It's valuable though in that it would likely help us catch an error if we had made one.
+        Consult your instructor to see if you're expected to check your answer in this manner.
+      </p>
+    </remark>
+    <example permid="HkJ">
+      <statement>
+        <p permid="gxn">
+          Solve for <m>z</m> in the inequality <m>(6z+5)-(2z-3)\lt-12</m>.
+          Write the solution set in both set-builder notation and interval notation.
+        </p>
+      </statement>
+      <solution permid="Eqd">
+        <p permid="KPj">
+          <md permid="OtJ">
+            <mrow>(6z+5)-(2z-3)\amp\lt-12</mrow>
+            <mrow>6z+5-2z+3\amp\lt-12</mrow>
+            <mrow>4z+8\amp\lt-12</mrow>
+            <mrow>4z+8\subtractright{8}\amp\lt-12\subtractright{8}</mrow>
+            <mrow>4z\amp\lt-20</mrow>
+            <mrow>\divideunder{4z}{4}\amp\lt\divideunder{-20}{4}</mrow>
+            <mrow>z\amp\lt -5</mrow>
+          </md>
+        </p>
+        <p permid="qWs">
+          Note that we divided both sides of the inequality by <m>4</m> and since this is a positive number we <em>did not</em>
+          need to switch the direction of the inequality symbol.
+        </p>
+        <p permid="XdB">
+          The solution set in set-builder notation is <m>\{z\mid z\lt-5\}</m>.
+        </p>
+        <p permid="DkK">
+          The solution set in interval notation is <m>(-\infty,-5)</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="nrS">
+      <statement>
+        <p permid="MEw">
+          Solve for <m>x</m> in <m>-2-2(2x+1)\gt4-(3-x)</m>.
+          Write the solution set in both set-builder notation and interval notation.
+        </p>
+      </statement>
+      <solution permid="kxm">
+        <p permid="jrT">
+          <md permid="uAS">
+            <mrow>-2-2(2x+1)\amp\gt4-(3-x)</mrow>
+            <mrow>-2-4x-2\amp\gt4-3+x</mrow>
+            <mrow>-4x-4\amp\gt x+1</mrow>
+            <mrow>-4x-4\subtractright{x}\amp\gt x+1\subtractright{x}</mrow>
+            <mrow>-5x-4\amp\gt1</mrow>
+            <mrow>-5x-4\addright{4}\amp\gt1\addright{4}</mrow>
+            <mrow>-5x\amp\gt5</mrow>
+            <mrow>\divideunder{-5x}{-5}\amp\mathbin{\highlight{\lt}}\divideunder{5}{-5}</mrow>
+            <mrow>x\amp\lt-1</mrow>
+          </md>
+        </p>
+        <p permid="Pzc">
+          Note that when we divided both sides of the inequality by <m>-5</m>,
+          we had to switch the direction of the inequality symbol.
+        </p>
+        <p permid="vGl">
+          The solution set in set-builder notation is <m>\{x\mid x\lt-1\}</m>.
+        </p>
+        <p permid="bNu">
+          The solution set in interval notation is <m>(-\infty,-1)</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="Tzb">
+      <statement>
+        <p permid="sLF">
+          When a stopwatch started,
+          the pressure inside a gas container was <m>4.2</m> atm
+          (standard atmospheric pressure).
+          As the container was heated,
+          the pressure increased by <m>0.7</m> atm per minute.
+          The maximum pressure the container can handle was <m>21.7</m> atm.
+          Heating must be stopped once the pressure reaches <m>21.7</m> atm.
+          In what time interval was the container safe?
+        </p>
+      </statement>
+      <solution permid="QEv">
+        <p permid="HUD">
+          The pressure increases by <m>0.7</m> atm per minute,
+          so it increases by <m>0.7m</m> after <m>m</m> minutes.
+          Counting in the original pressure of <m>4.2</m> atm,
+          pressure in the container can be modeled by <m>0.7m+4.2</m>,
+          where <m>m</m> is the number of minutes since the stop watch started.
+        </p>
+        <p permid="obM">
+          The container is safe when the pressure is <m>21.7</m> atm or lower.
+          We can write and solve this inequality:
+          <md permid="aIb">
+            <mrow>0.7m+4.2\amp\leq21.7</mrow>
+            <mrow>0.7m+4.2\subtractright{4.2}\amp\leq21.7\subtractright{4.2}</mrow>
+            <mrow>0.7m\amp\leq17.5</mrow>
+            <mrow>\divideunder{0.7m}{0.7}\amp\leq\divideunder{17.5}{0.7}</mrow>
+            <mrow>m\amp\leq25</mrow>
+          </md>
+        </p>
+        <p permid="UiV">
+          In summary, the container was safe as long as <m>m\leq25</m>.
+          Assuming that <m>m</m> also must be greater than or equal to zero,
+          this means <m>0\leq m\leq 25</m>.
+          We can write this as the time interval as <m>[0,25]</m>.
+          Thus, the container was safe between 0 minutes and 25 minutes.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <exercises permid="vrQ">
+    <exercisegroup cols="3" permid="byZ">
+      <title>Review and Warmup</title>
+      <introduction permid="TUA">
+        <p permid="dCH">
+          For each problem below,
+          in addition to writing the different notations for each solution set,
+          draw a graph of each solution set on a number line.
+        </p>
+      </introduction>
+      <exercise permid="AbJ">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality10.pg" />
+      </exercise>
+      <exercise permid="giS">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality10.pg" />
+      </exercise>
+      <exercise permid="Mqb">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality41.pg"/>
+      </exercise>
+      <exercise permid="sxk">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality41.pg"/>
+      </exercise>
+      <exercise permid="YEt">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality50.pg" />
+      </exercise>
+      <exercise permid="ELC">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality50.pg" />
+      </exercise>
+      <exercise permid="kSL">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality80.pg" />
+      </exercise>
+      <exercise permid="QZU">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality80.pg" />
+      </exercise>
+      <exercise permid="xhd">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality110.pg" />
+      </exercise>
+      <exercise permid="dom">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality110.pg" />
+      </exercise>
+      <exercise permid="Jvv">
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation130.pg" />
+      </exercise>
+      <exercise permid="pCE">
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation140.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="HGi">
+      <title>Solving Multistep Linear Inequalities</title>
+      <introduction permid="VJN">
+        <p permid="JJQ">
+          For each problem below,
+          in addition to writing the different notations for each solution set,
+          draw a graph of each solution set on a number line.
+        </p>
+      </introduction>
+      <exercise permid="BQW">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality170.pg" />
+      </exercise>
+      <exercise permid="hYf">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality170.pg" />
+      </exercise>
+      <exercise permid="Ofo">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality180.pg" />
+      </exercise>
+      <exercise permid="umx">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality180.pg" />
+      </exercise>
+      <exercise permid="atG">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality190.pg" />
+      </exercise>
+      <exercise permid="GAP">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality190.pg" />
+      </exercise>
+      <exercise permid="mHY">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality200.pg" />
+      </exercise>
+      <exercise permid="SPh">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality200.pg" />
+      </exercise>
+      <exercise permid="yWq">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality210.pg" />
+      </exercise>
+      <exercise permid="fdz">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality210.pg" />
+      </exercise>
+      <exercise permid="LkI">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality220.pg" />
+      </exercise>
+      <exercise permid="rrR">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality220.pg" />
+      </exercise>
+      <exercise permid="Xza">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality230.pg" />
+      </exercise>
+      <exercise permid="DGj">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality230.pg" />
+      </exercise>
+      <exercise permid="jNs">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality240.pg" />
+      </exercise>
+      <exercise permid="PUB">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality240.pg" />
+      </exercise>
+      <exercise permid="wbK">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality250.pg" />
+      </exercise>
+      <exercise permid="ciT">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality250.pg" />
+      </exercise>
+      <exercise permid="Iqc">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality260.pg" />
+      </exercise>
+      <exercise permid="oxl">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality260.pg" />
+      </exercise>
+      <exercise permid="UEu">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality270.pg" />
+      </exercise>
+      <exercise permid="ALD">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality270.pg" />
+      </exercise>
+      <exercise permid="gSM">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality280.pg" />
+      </exercise>
+      <exercise permid="MZV">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality280.pg" />
+      </exercise>
+      <exercise permid="the">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality290.pg" />
+      </exercise>
+      <exercise permid="Zon">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality290.pg" />
+      </exercise>
+      <exercise permid="Fvw">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality300.pg" />
+      </exercise>
+      <exercise permid="lCF">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality300.pg" />
+      </exercise>
+      <exercise permid="RJO">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality310.pg" />
+      </exercise>
+      <exercise permid="xQX">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality310.pg" />
+      </exercise>
+      <exercise permid="dYg">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality320.pg" />
+      </exercise>
+      <exercise permid="Kfp">
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality320.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup permid="nNr">
+      <title>Applications</title>
+      <exercise permid="qmy">
+        <webwork source="BasicAlgebra/LinearInequalities/InequalityWordProblem10.pg" />
+      </exercise>
+      <exercise permid="WtH">
+        <webwork source="BasicAlgebra/LinearInequalities/InequalityWordProblem10.pg" />
+      </exercise>
+      <exercise permid="CAQ">
+        <webwork source="Math95/LinearInequalities/LinearInequalities8.pg" />
+      </exercise>
+      <exercise permid="iHZ">
+        <webwork source="Math95/LinearInequalities/LinearInequalities8.pg" />
+      </exercise>
+      <exercise permid="OPi">
+        <webwork source="Math95/LinearInequalities/LinearInequalities9.pg" />
+      </exercise>
+      <exercise permid="uWr">
+        <webwork source="Math95/LinearInequalities/LinearInequalities9.pg" />
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

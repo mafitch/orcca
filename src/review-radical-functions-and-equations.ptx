@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,1018 +6,1127 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
-<section xml:id="review-radical-functions-and-equations">
-
-    <title>Radical Functions and Equations Chapter Review</title>
-
-    <subsection>
-        <title>Introduction to Radical Functions</title>
-        <p>In <xref ref="section-introduction-to-radical-functions">Section</xref> we covered the square root and other root functions. We learned how to find the <xref ref="fact-domain-of-radicals" text="title">domain of radical functions</xref> algebraically and the range graphically. We also saw the <xref ref="fact-distance-formula" text="title">distance formula</xref> which is an application of square roots.</p>
-
-        <example>
-            <title>The Square Root Function</title>
-            <statement>
-                <p>Algebraically find the domain of the function <m>f</m> where <m>f(x)=\sqrt{3x-1}+2</m> and then find the range by making a graph.</p>
-            </statement>
-            <solution>
-                <p>Using <xref ref="fact-domain-of-radicals">Fact</xref> to find the function's domain, we set the radicand greater than or equal to zero and solve:<md>
-                    <mrow>3x-1\amp\ge0</mrow>
-                    <mrow>3x\amp\ge1</mrow>
-                    <mrow>x\amp\ge\frac{1}{3}</mrow>
-                </md>The function's domain is <m>\left[\frac{1}{3},\infty\right)</m> in interval notation.</p>
-
-                <sidebyside widths="47% 47%" margins="0%">
-                    <p>To find the function's range, we look at a graph of the function. The graph shows that the function's range is <m>[2,\infty)</m>. The graph also verifies the function's domain is indeed <m>\left[\frac{1}{3},\infty\right)</m>.</p>
-
-                    <figure>
-                        <caption>Graph of <m>f(x)=\sqrt{3x-1}+2</m></caption>
-                        <image>
-                            <description></description>
-                            <latex-image>
-                            <![CDATA[\begin{tikzpicture}
-                                \begin{axis}[ymin=-1,ymax=6,xmin=-1,xmax=10,
-                                            ytick={0,1,...,5}, xtick={0,1,...,9}]
-                                    \addplot [primarycurve, -, domain=0.333:0.34] {sqrt(3*x-1)+2};
-                                    \addplot [primarycurve, -{Kite}, domain=0.34:5.667, samples=100] {sqrt(3*x-1)+2};
-                                    \addplot[soliddot] coordinates {(1/3,2)} node [right, color=firstcolor] {$(\frac{1}{3},2)$};
-                                \end{axis}
-                            \end{tikzpicture}
-                            ]]>
-                            </latex-image>
-                        </image>
-                    </figure>
-                </sidebyside>
-            </solution>
-        </example>
-
-        <example>
-            <title>The Distance Formula</title>
-            <statement>
-                <p>Find the distance between <m>(6,-13)</m> and <m>(-4,17)</m>.</p>
-            </statement>
-            <solution>
-                <p>To calculate the distance between <m>(6,-13)</m> and <m>(-4,17)</m>, we use the distance formula. It's good practice to mark each value with the corresponding variables in the formula:<me>(\stackrel{x_1}{6},\stackrel{y_1}{-13}), (\stackrel{x_2}{-4},\stackrel{y_2}{17})</me> We have:
-                <md>
-                    <mrow>d\amp=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</mrow>
-                    <mrow>d\amp=\sqrt{\left(\substitute{-4}-\substitute{6}\right)^2+\left(\substitute{17}-\substitute{(-13)}\right)^2}</mrow>
-                    <mrow>d\amp=\sqrt{\left(-10\right)^2+\left(30\right)^2}</mrow>
-                    <mrow>d\amp=\sqrt{100+900}</mrow>
-                    <mrow>d\amp=\sqrt{1000}</mrow>
-                    <mrow>d\amp=\sqrt{100}\cdot\sqrt{10}</mrow>
-                    <mrow>d\amp=10\sqrt{10}</mrow>
-                </md>The distance between <m>(6,-13)</m> and <m>(-4,17)</m> is <m>10\sqrt{10}</m> or approximately <m>31.62</m> units.</p>
-            </solution>
-        </example>
-
-        <example>
-            <title>The Cube Root Function</title>
-            <statement>
-                <p>Algebraically find the domain and graphically find the range of the function <m>g</m> where <m>g(x)=-2\sqrt[3]{x+6}-1</m>.</p>
-            </statement>
-            <solution>
-                <p>First note that the index of the function <m>g</m> for <m>g(x)=-2\sqrt[3]{x+6}-1</m> is odd. By <xref ref="fact-domain-of-radicals">Fact</xref>, the domain is <m>(-\infty,\infty)</m>.</p>
-
-                <p>To find the function's range, we use the graph the function. According to the graph, the function's range is also <m>(-\infty,\infty)</m>.</p>
-                        <figure>
-                            <caption>Graph of <m>y=g(x)=-2\sqrt[3]{x+6}-1</m></caption>
-                            <image width="47%">
-                                <description></description>
-                                <latex-image>
-                                <![CDATA[\begin{tikzpicture}
-                                    \begin{axis}[ymin=-10,ymax=10,xmin=-15,xmax=15, ytick={-8,-6,...,8}, xtick={-12,-9,...,12}, minor xtick=, minor ytick=]
-                                        \addplot[primarycurve, variable=\t, domain=-6.518:3.16, samples=50] ({(((t+1)/-2)^3-6)},{t}) node[above right, pos=0.45] {$y=-2\sqrt[3]{x+6}-1$};
-                                    \end{axis}
-                                \end{tikzpicture}]]>
-                                </latex-image>
-                            </image>
-                        </figure>
-            </solution>
-        </example>
-
-        <example>
-            <title>Other Roots</title>
-            <statement>
-                <p>Algebraically find the domain and graphically find the range of the function <m>h</m> where <m>h(x)=8-\frac{5}{2}\sqrt[4]{6-2x}</m>.</p>
-            </statement>
-            <solution>
-                <p>First note that the index of this function is <m>4</m>, which is even. By <xref ref="fact-domain-of-radicals">Fact</xref>, to find the domain of this function we must set the radicand greater or equal to zero and solve.
-                    <md>
-                        <mrow>6-2x\amp\ge0</mrow>
-                        <mrow>-2x\amp\ge\subtractright{6}</mrow>
-                        <mrow>x\amp\mathbin{\highlight{\le}}\divideunder{-6}{-2}</mrow>
-                        <mrow>x\amp\le3</mrow>
-                    </md>
-                    So, the domain of <m>h</m> is <m>(-\infty,3]</m>.</p>
-                    <p>To find the function's range, we use the graph the function. By the graph, the function's range is <m>(-\infty,8]</m>.</p>
-                        <figure>
-                            <caption>Graph of <m>y=h(x)=8-\frac{5}{2}\sqrt[4]{6-2x}</m></caption>
-                            <image width="47%">
-                                <description></description>
-                                <latex-image>
-                                <![CDATA[\begin{tikzpicture}
-                                    \begin{axis}[ymin=-3,ymax=9,xmin=-10,xmax=4, ytick={-2,-1,...,8}, xtick={-8,-6,...,2}, minor xtick=, minor ytick=]
-                                        \addplot[primarycurve, variable=\t, {Kite}-, domain=2.355:8] ({(((t-8)/-2.5)^4-6)/-2},{t}) node[above left, pos=0.6] {$y=8-\frac{5}{2}\sqrt[4]{6-2x}$};
-                                        \addplot[soliddot, color=firstcolor] coordinates{(3,8)};
-                                    \end{axis}
-                                \end{tikzpicture}]]>
-                                </latex-image>
-                            </image>
-                        </figure>
-            </solution>
-        </example>
-    </subsection>
-
-    <subsection>
-        <title>Radical Expressions and Rational Exponents</title>
-        <p>In <xref ref="section-radical-expressions-and-rational-exponents">Section</xref> we learned the <xref ref="fact-rational-exponent-rule-ii" text="title">rational exponent rule</xref> and added it to our <xref ref="list-exponent-rules-complete" text="title"> list of exponent rules</xref>.</p>
-
-        <example>
-            <title>Radical Expressions and Rational Exponents</title>
-            <statement>
-                <p>Simplify the expressions using <xref ref="fact-rational-exponent-rule-i">Fact</xref> or <xref ref="fact-rational-exponent-rule-ii">Fact</xref>.
-                <ol label="a." cols="4">
-                    <li><p><m>100^{\sfrac{1}{2}}</m></p></li>
-                    <li><p><m>(-64)^{-\sfrac{1}{3}}</m></p></li>
-                    <li><p><m>-81^{\sfrac{3}{4}}</m></p></li>
-                    <li><p><m>\left(-\frac{1}{27}\right)^{\sfrac{2}{3}}</m></p></li>
-                </ol></p>
-            </statement>
-            <solution>
-                <p><ol label="a.">
-                    <li>
-                        <p><md>
-                            <mrow>100^{\sfrac{1}{2}}\amp=\left(\sqrt{100}\right)</mrow>
-                            <mrow>\amp=10</mrow>
-                        </md></p>
-                    </li>
-                    <li>
-                        <p><md>
-                            <mrow>(-64)^{-\sfrac{1}{3}}\amp=\frac{1}{(-64)^{\sfrac{1}{3}}}</mrow>
-                            <mrow>\amp=\frac{1}{\left(\sqrt[3]{(-64)}\right)}</mrow>
-                            <mrow>\amp=\frac{1}{-4}</mrow>
-                        </md></p>
-                    </li>
-                    <li>
-                        <p><md>
-                            <mrow>-81^{\sfrac{3}{4}}\amp=-\left(\sqrt[4]{81}\right)^3</mrow>
-                            <mrow>\amp=-3^3</mrow>
-                            <mrow>\amp=-27</mrow>
-                        </md></p>
-                    </li>
-                    <li>
-                        <p>In this problem the negative can be associated with either the numerator or the denominator, but not both. We choose the numerator.</p>
-                        <p><md>
-                            <mrow>\left(-\frac{1}{27}\right)^{\sfrac{2}{3}}\amp=\left(\sqrt[3]{-\frac{1}{27}}\right)^2</mrow>
-                            <mrow>\amp=\left(\frac{\sqrt[3]{-1}}{\sqrt[3]{27}}\right)^2</mrow>
-                            <mrow>\amp=\left(\frac{-1}{3}\right)^2</mrow>
-                            <mrow>\amp=\frac{(-1)^2}{(3)^2}</mrow>
-                            <mrow>\amp=\frac{1}{9}</mrow>
-                        </md></p>
-                    </li>
-                </ol></p>
-            </solution>
-        </example>
-
-        <example>
-            <title>More Expressions with Rational Exponents</title>
-            <statement>
-                <p>Use exponent properties in <xref ref="list-exponent-rules-complete">List</xref> to simplify the expressions, and write all final versions using radicals.
-                <ol label="a." cols="4">
-                    <li><p><m>7z^{\sfrac{5}{9}}</m></p></li>
-                    <li><p><m>\frac{5}{4}x^{-\sfrac{2}{3}}</m></p></li>
-                    <li><p><m>\left(-9q^5\right)^{\sfrac{4}{5}}</m></p></li>
-                    <li><p><m>\sqrt{y^5}\cdot\sqrt[4]{y^2}</m></p></li>
-                    <li><p><m>\frac{\sqrt{t^3}}{\sqrt[3]{t^2}}</m></p></li>
-                    <li><p><m>\sqrt{\sqrt[3]{x}}</m></p></li>
-                    <li><p><m>5\left(4+a^{\sfrac{1}{2}}\right)^2</m></p></li>
-                    <li><p><m>-6\left(2p^{-\sfrac{5}{2}}\right)^{\sfrac{3}{5}}</m></p></li>
-                </ol></p>
-            </statement>
-            <solution>
-                <p><ol label="a.">
-                    <li>
-                        <p>
-                            <md>
-                                <mrow>7z^{\sfrac{5}{9}}\amp=7\sqrt[9]{z^5}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <md>
-                                <mrow>\frac{5}{4}x^{-\sfrac{2}{3}}\amp=\frac{5}{4}\cdot\frac{1}{x^{\sfrac{2}{3}}}</mrow>
-                                <mrow>\amp=\frac{5}{4}\cdot\frac{1}{\sqrt[3]{x^2}}</mrow>
-                                <mrow>\amp=\frac{5}{4\sqrt[3]{x^2}}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <md>
-                                <mrow>\left(-9q^5\right)^{\sfrac{4}{5}}\amp=\left(-9\right)^{\sfrac{4}{5}}\cdot\left(q^5\right)^{\sfrac{4}{5}}</mrow>
-                                <mrow>\amp=\left(-9\right)^{\sfrac{4}{5}}\cdot q^{5\cdot\sfrac{4}{5}}</mrow>
-                                <mrow>\amp=\left(\sqrt[5]{-9}\right)^4\cdot q^{4}</mrow>
-                                <mrow>\amp=\left(q\sqrt[5]{-9}\right)^4</mrow>
-                                </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <md>
-                                <mrow>\sqrt{y^5}\cdot\sqrt[4]{y^2}\amp=y^{\sfrac{5}{2}}\cdot y^{\sfrac{2}{4}}</mrow>
-                                <mrow>\amp=y^{\sfrac{5}{2}+\sfrac{2}{4}}</mrow>
-                                <mrow>\amp=y^{\sfrac{10}{4}+\sfrac{1}{4}}</mrow>
-                                <mrow>\amp=x^{\sfrac{11}{4}}</mrow>
-                                <mrow>\amp=\sqrt[4]{x^{11}}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <md>
-                                <mrow>\frac{\sqrt{t^3}}{\sqrt[3]{t^2}}\amp=\frac{t^{\sfrac{3}{2}}}{t^{\sfrac{2}{3}}}</mrow>
-                                <mrow>\amp=t^{\sfrac{3}{2}-\sfrac{2}{3}}</mrow>
-                                <mrow>\amp=t^{\sfrac{9}{6}-\sfrac{4}{6}}</mrow>
-                                <mrow>\amp=t^{\sfrac{5}{6}}</mrow>
-                                <mrow>\amp=\sqrt[6]{t^5}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <md>
-                                <mrow>\sqrt{\sqrt[3]{x}}\amp=\sqrt{x^{\sfrac{1}{3}}}</mrow>
-                                <mrow>\amp=\left(x^{\sfrac{1}{3}}\right)^{\sfrac{1}{2}}</mrow>
-                                <mrow>\amp=x^{\sfrac{1}{3}\cdot\sfrac{1}{2}}</mrow>
-                                <mrow>\amp=x^{\sfrac{1}{6}}</mrow>
-                                <mrow>\amp=\sqrt[6]{x}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <md alignment="alignat">
-                                <mrow>5\left(4+a^{\sfrac{1}{2}}\right)^2\amp=5\left(4+a^{\sfrac{1}{2}}\right)\left(4+a^{\sfrac{1}{2}}\right)</mrow>
-                                <mrow>\amp=5\left(4^2+2\cdot4\cdot a^{\sfrac{1}{2}}+\left(a^{\sfrac{1}{2}}\right)^2\right)</mrow>
-                                <mrow>\amp=5\left(16+8a^{\sfrac{1}{2}}+a^{\sfrac{1}{2}\cdot 2}\right)</mrow>
-                                <mrow>\amp=5\left(16+8a^{\sfrac{1}{2}}+a\right)</mrow>
-                                <mrow>\amp=5\left(16+8\sqrt{a}+a\right)</mrow>
-                                <mrow>\amp=80+40\sqrt{a}+5a</mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <md>
-                                <mrow>-6\left(2p^{-\sfrac{5}{2}}\right)^{\sfrac{3}{5}}\amp=-6\cdot2^{\sfrac{3}{5}}\cdot p^{-\sfrac{5}{2}\cdot\sfrac{3}{5}}</mrow>
-                                <mrow>\amp=-6\cdot2^{\sfrac{3}{5}}\cdot p^{-\sfrac{3}{2}}</mrow>
-                                <mrow>\amp=-\frac{6\cdot 2^{\sfrac{3}{5}}}{p^{\sfrac{3}{2}}}</mrow>
-                                <mrow>\amp=-\frac{6\sqrt[5]{2^3}}{\sqrt{p^3}}</mrow>
-                                <mrow>\amp=-\frac{6\sqrt[5]{8}}{\sqrt{p^3}}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                </ol></p>
-            </solution>
-        </example>
-    </subsection>
-
-   <subsection>
-        <title>Radical Expression Operations</title>
-        <p>In <xref ref="section-radical-expression-operations">Section</xref> we learned to apply properties previously learned in <xref ref="section-square-root-properties">Section</xref> to radicals with higher roots and to more complicated radical expressions. These properties include the following:
-
-        <md>
-            <mrow>\sqrt[m]{x^m}\amp=x\amp\text{where }m\text{ is odd}</mrow>
-            <mrow>\sqrt[n]{x^n}\amp=\abs{x}\amp\text{where }n\text{ is even}</mrow>
-            <mrow>\sqrt[n]{x\cdot y}\amp=\sqrt[n]{x}\cdot\sqrt[n]{y}</mrow>
-            <mrow>\sqrt[n]{\frac{x}{y}}\amp=\frac{\sqrt[n]{x}}{\sqrt[n]{y}}, \text{ where }y\ne0</mrow>
-        </md>
+<section xml:id="review-radical-functions-and-equations" permid="MqW">
+  <title>Radical Functions and Equations Chapter Review</title>
+  <subsection permid="syf">
+    <title>Introduction to Radical Functions</title>
+    <p permid="HeA">
+      In <xref ref="section-introduction-to-radical-functions">Section</xref>
+      we covered the square root and other root functions.
+      We learned how to find the <xref ref="fact-domain-of-radicals" text="title">domain of radical functions</xref>
+      algebraically and the range graphically.
+      We also saw the <xref ref="fact-distance-formula" text="title">distance formula</xref>
+      which is an application of square roots.
+    </p>
+    <example permid="wMz">
+      <title>The Square Root Function</title>
+      <statement>
+        <p permid="taV">
+          Algebraically find the domain of the function <m>f</m> where
+          <m>f(x)=\sqrt{3x-1}+2</m> and then find the range by making a graph.
         </p>
-
-        <example>
-            <statement>
-                <p>Simplify <m>\sqrt{y^2-4y+4}</m>.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\sqrt{y^2-4y+4}\amp=\sqrt{(y-2)^2}</mrow>
-                    <mrow>\amp=\abs{y-2}</mrow>
-                </md>We used the property <m>\sqrt[n]{x^n}=\abs{x}\text{ where }n\text{ is even}</m>.</p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Simplify <m>\sqrt[4]{48x^6y^9}</m>. Assume all variables are positive.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\sqrt[4]{48x^6y^9}\amp=\sqrt[4]{16\cdot 3\cdot x^4\cdot x^2\cdot y^8\cdot y}</mrow>
-                    <mrow>\amp=\sqrt[4]{2^4\cdot 3\cdot x^4\cdot x^2\cdot \left(y^2\right)^4\cdot y}</mrow>
-                    <mrow>\amp=2xy^2\sqrt[4]{3x^2y}</mrow>
-                </md>We used the property <m>\sqrt[n]{x^n}=\abs{x}\text{ where }m\text{ is even}</m>, but absolute value signs were unnecessary since all variables are assumed to be positive.</p>
-            </solution>
-        </example>
-
-         <example>
-            <statement>
-                <p>Do multiplication: <m>\sqrt[3]{4y}\cdot\sqrt[3]{10y^4}</m></p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\sqrt[3]{4y}\cdot\sqrt[3]{10y^4}\amp=\sqrt[3]{(4y)\cdot\left(10y^4\right)}</mrow>
-                    <mrow>\amp=\sqrt[3]{40y^5}</mrow>
-                    <mrow>\amp=\sqrt[3]{8\cdot 5\cdot y^3\cdot y^2}</mrow>
-                    <mrow>\amp=\sqrt[3]{2^3\cdot 5\cdot y^3\cdot y^2}</mrow>
-                    <mrow>\amp=2y\sqrt[3]{5y^2}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Do division: <m>\frac{\sqrt[4]{5m^6n^{10}}}{\sqrt[4]{80m^{10}n}}</m>. Assume all variables are positive.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\frac{\sqrt[4]{5a^5b^{12}}}{\sqrt[4]{80a^{17}b^3}}\amp=\sqrt[4]{\frac{5a^5b^{12}}{80a^{17}b^3}}</mrow>
-                    <mrow>\amp=\sqrt[4]{\frac{1b^9}{16a^{12}}}</mrow>
-                    <mrow>\amp=\sqrt[4]{\frac{b^8b}{2^4\left(a^3\right)^4}}</mrow>
-                    <mrow>\amp=\frac{b^2\sqrt[4]{b}}{2a^3}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <p>In addition, we reviewed how to add or subtract radical expressions from <xref ref="section-square-root-properties">Section</xref> and applied this concept to higher roots and more complicated radical expressions.</p>
-
-        <example>
-            <statement>
-                <p>Simplify <m>\sqrt[3]{128x^4}-3x\sqrt[3]{54x}</m>.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\sqrt[3]{128x^4}-3x\sqrt[3]{54x}\amp=\sqrt[3]{64\cdot 2\cdot x^3\cdot x}-3x\sqrt[3]{27\cdot 2\cdot x}</mrow>
-                    <mrow>\amp=\sqrt[3]{4^3\cdot 2\cdot x^3\cdot x}-3x\sqrt[3]{3^3\cdot 2\cdot x}</mrow>
-                    <mrow>\amp=4x\sqrt[3]{2x}-9x\sqrt[3]{2x}</mrow>
-                    <mrow>\amp=-5x\sqrt[3]{2x}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-    </subsection>
-
-    <subsection>
-        <title>More on Rationalizing the Denominator</title>
-        <p>In <xref ref="section-more-on-rationalizing-the-denominator">Section</xref> we covered how to rationalize the denominator when it contains a single square root or a binomial.</p>
-
-        <example>
-            <title>A Review of Rationalizing the Denominator</title>
-            <statement>
-                <p>Rationalize the denominator of the expressions.
-                <ol label="a." cols="2">
-                    <li><p><m>\frac{12}{\sqrt{3}}</m></p></li>
-                    <li><p><m>\frac{\sqrt{5}}{\sqrt{75}}</m></p></li>
-                </ol></p>
-            </statement>
-            <solution>
-                <p><ol label="a.">
-                    <li><p>
-                            <md>
-                                <mrow>\frac{12}{\sqrt{3}}\amp=\frac{12}{\sqrt{3}}\multiplyright{\frac{\sqrt{3}}{\sqrt{3}}}</mrow>
-                                <mrow>\amp=\frac{12\sqrt{3}}{\sqrt{9}}</mrow>
-                                <mrow>\amp=\frac{12\sqrt{3}}{3}</mrow>
-                                <mrow>\amp=4\sqrt{3}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li><p>First we will simplify <m>\sqrt{75}</m>.
-                            <md>
-                                <mrow>\frac{\sqrt{5}}{\sqrt{75}}\amp=\frac{\sqrt{5}}{\sqrt{25\cdot 3}}</mrow>
-                                <mrow>\amp=\frac{\sqrt{5}}{\sqrt{25}\cdot\sqrt{3}}</mrow>
-                                <mrow>\amp=\frac{\sqrt{5}}{5\sqrt{3}}</mrow>
-                                <intertext>Now we can rationalize the denominator by multiplying the numerator and denominator by <m>\sqrt{3}</m>.</intertext>
-                                <mrow>\amp=\frac{\sqrt{5}}{5\sqrt{3}}\multiplyright{\frac{\sqrt{3}}{\sqrt{3}}}</mrow>
-                                <mrow>\amp=\frac{\sqrt{15}}{5\cdot\sqrt{9}}</mrow>
-                                <mrow>\amp=\frac{\sqrt{15}}{5\cdot 3}</mrow>
-                                <mrow>\amp=\frac{\sqrt{15}}{15}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                </ol></p>
-            </solution>
-        </example>
-
-        <example>
-            <title>Rationalize Denominator with Difference of Squares Formula</title>
-            <statement>
-                <p>Rationalize the denominator in <m>\frac{\sqrt{6}-\sqrt{5}}{\sqrt{3}+\sqrt{2}}</m>.</p>
-            </statement>
-            <solution>
-                <p>To remove radicals in <m>\sqrt{3}+\sqrt{2}</m> with the difference of squares formula, we multiply it with <m>\sqrt{3}-\sqrt{2}</m>.<md>
-                    <mrow>\frac{\sqrt{6}-\sqrt{5}}{\sqrt{3}+\sqrt{2}}\amp=\frac{\sqrt{6}-\sqrt{5}}{\sqrt{3}+\sqrt{2}}\multiplyright{\frac{\left(\sqrt{3}-\sqrt{2}\right)}{\left(\sqrt{3}-\sqrt{2}\right)}}</mrow>
-                    <mrow>\amp=\frac{\sqrt{6}\multiplyright{\sqrt{3}}-\sqrt{6}\multiplyright{\sqrt{2}}-\sqrt{5}\multiplyright{\sqrt{3}}-\sqrt{5}\multiplyright{-\sqrt{2}}}{\left(\sqrt{3}\right)^2-\left(\sqrt{2}\right)^2}</mrow>
-                    <mrow>\amp=\frac{\sqrt{18}-\sqrt{12}-\sqrt{15}+\sqrt{10}}{9-4}</mrow>
-                    <mrow>\amp=\frac{3\sqrt{2}-2\sqrt{3}-\sqrt{15}+\sqrt{10}}{5}</mrow>
-                </md></p>
-            </solution>
-        </example>
-    </subsection>
-
-    <subsection>
-        <title>Solving Radical Equations</title>
-        <p>In <xref ref="section-solving-radical-equations">Section</xref> we covered solving equations that contain a radical. We learned about extraneous solutions and the need to check our solutions.</p>
-
-        <example>
-            <title>Solving Radical Equations</title>
-            <statement>
-                <p>Solve for <m>r</m> in <m>r=9+\sqrt{r+3}</m>.</p>
-            </statement>
-            <solution>
-                <p>We will isolate the radical first, and then square both sides.
-                    <md>
-                        <mrow>r\amp=9+\sqrt{r+3}</mrow>
-                        <mrow>r-9\amp=\sqrt{r+3}</mrow>
-                        <mrow>\left(r-9\right)^{\highlight{2}}\amp=\left(\sqrt{r+3}\right)^{\highlight{2}}</mrow>
-                        <mrow>r^2-18r+81\amp=r+3</mrow>
-                        <mrow>r^2-19r+78\amp=0</mrow>
-                        <mrow>(r-6)(r-13)\amp=0</mrow>
-                        <mrow>r-6=0\amp\text{ or }r-13=0</mrow>
-                        <mrow>r=6\amp\text{ or }r=13</mrow>
-                    </md>
-                Because we squared both sides of an equation, we must check both solutions.</p>
-                <p>Substitute <m>\substitute{6}</m> into <m>r=9+\sqrt{r+3}</m>, and we have:
-                    <md>
-                        <mrow>r\amp=9+\sqrt{r+3}</mrow>
-                        <mrow>\substitute{6}\amp\stackrel{?}{=}9+\sqrt{\substitute{6}+3}</mrow>
-                        <mrow>6\amp\stackrel{?}{=}9+\sqrt{9}</mrow>
-                        <mrow>6\amp\stackrel{?}{=}9+3</mrow>
-                        <mrow>6\amp\stackrel{\text{no}}{=}12</mrow>
-                    </md>
-                It turns out <m>6</m> is an extraneous solution.</p>
-                <p>Next, we substitute <m>\substitute{13}</m> into <m>r=9+\sqrt{r+3}</m>:
-                    <md>
-                        <mrow>r\amp=9+\sqrt{r+3}</mrow>
-                        <mrow>\substitute{13}\amp\stackrel{?}{=}9+\sqrt{\substitute{13}+3}</mrow>
-                        <mrow>13\amp\stackrel{?}{=}9+\sqrt{16}</mrow>
-                        <mrow>13\amp\stackrel{?}{=}9+4</mrow>
-                        <mrow>13\amp\stackrel{\checkmark}{=}13</mrow>
-                    </md>
-                So, <m>13</m> is the solution.</p>
-                <p>The equation has one solution: <m>13</m>. The solution set is <m>\{13\}</m>.</p>
-            </solution>
-        </example>
-
-            <example>
-                <title>Solving Radical Equations that Require Squaring Twice</title>
-                <statement>
-                    <p>Solve the equation <m>\sqrt{t+9}=-1-\sqrt{t}</m> for <m>t</m>.</p>
-                </statement>
-                <solution>
-                    <p>We cannot isolate two radicals, so we will simply square both sides, and later try to isolate the remaining radical.
-                        <md>
-                            <mrow>\sqrt{t+9}\amp=-1-\sqrt{t}</mrow>
-                            <mrow>\left(\sqrt{t+9}\right)^\highlight{2}\amp=\left(-1-\sqrt{t}\right)^\highlight{2}</mrow>
-                            <mrow>t+9\amp=1+2\sqrt{t}+t \amp\text{ after expanding the binomial squared}</mrow>
-                            <mrow>9\amp=1+2\sqrt{t}</mrow>
-                            <mrow>8\amp=2\sqrt{t}</mrow>
-                            <mrow>\frac{8}{2}\amp=\frac{2\sqrt{t}}{2}</mrow>
-                            <mrow>4\amp=\sqrt{t}</mrow>
-                            <mrow>(4)^\highlight{2}\amp=\left(\sqrt{t}\right)^\highlight{2}</mrow>
-                            <mrow>16\amp=t</mrow>
-                        </md>
-                    Because we squared both sides of an equation, we must check the solution by substituting <m>\substitute{16}</m> into <m>\sqrt{t+9}=-1-\sqrt{t}</m>, and we have:
-                        <md>
-                            <mrow>\sqrt{t+9}\amp=-1-\sqrt{t}</mrow>
-                            <mrow>\sqrt{\substitute{16}+9}\amp\stackrel{?}{=}-1-\sqrt{16}</mrow>
-                            <mrow>\sqrt{25}\amp\stackrel{?}{=}-1-4</mrow>
-                            <mrow>5\amp\stackrel{\text{no}}{=}-5</mrow>
-                        </md>
-                    Our solution did not check so there is no solution to this equation. The solution set is <m>\{\text{ }\}</m>.</p>
-                </solution>
-            </example>
-    </subsection>
-
-    <exercises>
-        <exercisegroup cols="2">
-            <title>Introduction to Radical Functions</title>
-            <!-- <p>Domain and Range</p> -->
-            <exercise>
-                <webwork source="BasicAlgebra/FunctionBasics/Functions225.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FunctionBasics/Functions225.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FunctionBasics/Functions240.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FunctionBasics/Functions240.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg" />
-            </exercise>
-            <!-- Graphing with technology -->
-            <!-- <exercise>
-              <webwork>
-                <pg-macros>
-                    <macro-file>PCCgraphMacros.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <pg-code>
-                        Context("Numeric");
-                        Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
-                        Context()->noreduce("(-x)-y","(-x)+y");
-
-                        $fname = RandomVariableName(type=>function);
-                        $a = non_zero_random(-5,5,1);
-                        $b = non_zero_random(-5,5,1);
-
-                        $func = Formula("sqrt($a-x)+$b")->reduce;
-
-                        $alt="This picture shows the graph of a radical function $fname(x)=$func. The point ($a,$b) is labeled.";
-
-                        ($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,1.5*$a],[0,2*$b]);
-
-                        @xticks = @$xticks_ref;
-                        @yticks = @$yticks_ref;
-
-                        $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-                           axes=>[0,0],
-                           grid=>[$ticknum[0],$ticknum[1]],
-                           size=>[xPixels(),yPixels()]
-                        );
-                        $gr->lb('reset');
-                        for my $j (@xticks) {
-                            if (abs($j) &lt; 10**(-10)) {next;}
-                            $gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
-                        }
-                        $gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
-                        $gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
-
-                        for my $j (@yticks) {
-                            if (Real($j) == 0) {next;}
-                            $gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
-                        }
-
-                        $xfunc = sub { my $t = shift();
-                            return $a-($t)**2; };
-                        $yfunc = sub { my $t = shift();
-                            return $t+$b; };
-                        $funct = new Fun( $xfunc, $yfunc, $gr);
-                        $funct -> domain(0,10);
-
-                        $hx = ($a+$min[0])/2;
-                        $hy = $func->eval(x=>$hx);
-                        $gr->lb( new Label($hx, $hy+$marksep[1]/4, "$fname(x)",'blue','center','middle'));
-
-                        $gr->stamps( closed_circle($a, $b, 'red') );
-                        $gr->lb( new Label($a, $b-$marksep[1]/8, "($a,$b)",'red','center','top'));
-
-                        Context("Interval");
-                        $range = Compute("[$b,inf)");
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Use the graph to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
-
-                    <instruction>If you need to enter <m>\infty</m>, you can type  <c>inf</c> or <c>infinity</c>.  If you need to union two (or more) intervals, use the letter <c>U</c>. For example: <c>(-inf,5) \cup (5, inf)</c>.</instruction>
-
-                    <p><var name="$range" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>We use the graph the function <m><var name="$fname" />(x)=<var name="$func" /></m>:</p>
-
-                    <sidebyside>
-                      <image pg-name="$gr">
-                          <description><var name="$alt" /></description>
-                      </image>
-                    </sidebyside>
-
-                    <p>The function's range is <m><var name="$range"/></m>.</p>
-                </solution>
-              </webwork>
-            </exercise>
-            <exercise>
-              <webwork>
-                <pg-macros>
-                    <macro-file>PCCgraphMacros.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <pg-code>
-                        Context("Numeric");
-                        Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
-                        Context()->noreduce("(-x)-y","(-x)+y");
-
-                        $fname = RandomVariableName(type=>function);
-                        $a = non_zero_random(-5,5,1);
-                        $b = non_zero_random(-5,5,1);
-
-                        $func = Formula("sqrt($a-x)+$b")->reduce;
-
-                        $alt="This picture shows the graph of a radical function $fname(x)=$func. The point ($a,$b) is labeled.";
-
-                        ($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,1.5*$a],[0,2*$b]);
-
-                        @xticks = @$xticks_ref;
-                        @yticks = @$yticks_ref;
-
-                        $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-                           axes=>[0,0],
-                           grid=>[$ticknum[0],$ticknum[1]],
-                           size=>[xPixels(),yPixels()]
-                        );
-                        $gr->lb('reset');
-                        for my $j (@xticks) {
-                            if (abs($j) &lt; 10**(-10)) {next;}
-                            $gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
-                        }
-                        $gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
-                        $gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
-
-                        for my $j (@yticks) {
-                            if (Real($j) == 0) {next;}
-                            $gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
-                        }
-
-                        $xfunc = sub { my $t = shift();
-                            return $a-($t)**2; };
-                        $yfunc = sub { my $t = shift();
-                            return $t+$b; };
-                        $funct = new Fun( $xfunc, $yfunc, $gr);
-                        $funct -> domain(0,10);
-
-                        $hx = ($a+$min[0])/2;
-                        $hy = $func->eval(x=>$hx);
-                        $gr->lb( new Label($hx, $hy+$marksep[1]/4, "$fname(x)",'blue','center','middle'));
-
-                        $gr->stamps( closed_circle($a, $b, 'red') );
-                        $gr->lb( new Label($a, $b-$marksep[1]/8, "($a,$b)",'red','center','top'));
-
-                        Context("Interval");
-                        $range = Compute("[$b,inf)");
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Use the graph to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
-
-                    <instruction>If you need to enter <m>\infty</m>, you can type  <c>inf</c> or <c>infinity</c>.  If you need to union two (or more) intervals, use the letter <c>U</c>. For example: <c>(-inf,5) \cup (5, inf)</c>.</instruction>
-
-                    <p><var name="$range" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>We use the graph the function <m><var name="$fname" />(x)=<var name="$func" /></m>:</p>
-
-                    <sidebyside>
-                      <image pg-name="$gr">
-                          <description><var name="$alt" /></description>
-                      </image>
-                    </sidebyside>
-
-                    <p>The function's range is <m><var name="$range"/></m>.</p>
-                </solution>
-              </webwork>
-            </exercise>
- -->
-            <!-- Applications -->
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg" />
-            </exercise>
-            <!-- Distance Formula -->
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad135.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/QuadraticEquations/solveQuad135.pg" />
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2">
-            <title>Radical Expressions and Rational Exponents</title>
-            <!-- <p>Calculation</p> -->
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots40.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots40.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents12.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents12.pg" />
-            </exercise>
-            <!-- <p>Convert Fractional Exponents to Radicals</p> -->
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents10.pg"/>
-            </exercise>
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents10.pg"/>
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FractionalExponentToRadical20.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FractionalExponentToRadical20.pg" />
-            </exercise>
-            <!-- <p>Simplifying Expressions with Rational Exponents</p> -->
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents16.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents16.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents20.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents20.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents24.pg"/>
-            </exercise>
-            <exercise>
-                <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents24.pg"/>
-            </exercise>
-        </exercisegroup>
-
-
-        <exercisegroup cols="2">
-            <title>More on Rationalizing the Denominator</title>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator130.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator130.pg" />
-            </exercise>
-            <!-- <p>Rationalizing the Denominator Using the Difference of Squares Formula</p> -->
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
-            </exercise>
-            </exercisegroup>
-
-        <exercisegroup cols="2">
-            <title>Solving Radical Equations</title>
-            <!-- Solving Radical Equations -->
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations4.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations4.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations6.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations6.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
-            </exercise>
-            <!-- Solving with technology -->
-            <!-- <exercise>
-              <webwork>
-                <pg-macros>
-                    <macro-file>PCCgraphMacros.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <pg-code>
-                        Context("FiniteSolutionSets");
-                        Context()->flags->remove("NumberCheck");
-                        Context()->flags->set(
-                          tolerance => 0.005,
-                          tolType => "absolute",
-                        );
-
-                        do{
-                            $a = non_zero_random(-5,5,0.1);
-                            $b = non_zero_random(-5,5,0.1);
-                            $root = ($a-($b)**2)/(2*$b);
-                            $x = $root**2;
-                        } until ( $root > 0 );
-
-                        $solutions = Formula("{$x}");
-
-                        $left = Formula("sqrt(x+$a)")->reduce;
-                        $right = Formula("sqrt(x)+$b")->reduce;
-                        $funcNew = Compute("$left-sqrt(x)-$b")->reduce;
-
-                        $alt="This picture shows the graph of the function $f(x)=$funcNew. The points ($x,0) is labeled.";
-
-                        ($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$x],[-2,2]);
-
-                        @xticks = @$xticks_ref;
-                        @yticks = @$yticks_ref;
-
-                        $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-                           axes=>[0,0],
-                           grid=>[$ticknum[0],$ticknum[1]],
-                           size=>[xPixels(),yPixels()]
-                        );
-                        $gr->lb('reset');
-                        for my $j (@xticks) {
-                            if (abs($j) &lt; 10**(-10)) {next;}
-                            $gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
-                        }
-                        $gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
-                        $gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
-
-                        for my $j (@yticks) {
-                            if (Real($j) == 0) {next;}
-                            $gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
-                        }
-
-                        add_functions($gr, "$funcNew for x in &lt; $min[0],$max[0] > using color:red and weight:1");
-
-                        $hx = ($x+$max[0])/2;
-                        $hy = $funcNew->eval(x=>$hx);
-                        $gr->lb( new Label($hx, $hy+$marksep[1]/4, "f(x)",'red','center','middle'));
-
-                        $xShow = int($x*100)/100;
-                        $gr->stamps( closed_circle($x, 0, 'red') );
-                        $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
-
-                        <!-- todo: change this code to not subtract the right side onto the left before graphing. -->
-
-                    <!-- </pg-code>
-                </setup>
-                <statement>
-                    <p>Solveolve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
-
-                    <instruction>Round your answers to two decimal places if needed.</instruction>
-
-                    <p><var name="$solutions" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>First, we move all terms to one side of the equals sign:<md>
-                        <mrow><var name="$left" />\amp=<var name="$right" /></mrow>
-                        <mrow><var name="$funcNew" />\amp=0</mrow>
-                    </md></p>
-
-                    <p>Next, we use technology to graph the function <m>f(x)=<var name="$funcNew" /></m>:</p>
-
-                    <sidebyside>
-                      <image pg-name="$gr">
-                          <description><var name="$alt" /></description>
-                      </image>
-                    </sidebyside>
-
-                    <p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
-                </solution>
-              </webwork>
-            </exercise>
-            <exercise>
-              <webwork>
-                <pg-macros>
-                    <macro-file>PCCgraphMacros.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <pg-code>
-                        Context("FiniteSolutionSets");
-                        Context()->flags->remove("NumberCheck");
-                        Context()->flags->set(
-                          tolerance => 0.005,
-                          tolType => "absolute",
-                        );
-
-                        do{
-                            $a = non_zero_random(-5,5,0.1);
-                            $b = non_zero_random(-5,5,0.1);
-                            $root = ($a-($b)**2)/(2*$b);
-                            $x = $root**2;
-                        } until ( $root > 0 );
-
-                        $solutions = Formula("{$x}");
-
-                        $left = Formula("sqrt(x+$a)")->reduce;
-                        $right = Formula("sqrt(x)+$b")->reduce;
-                        $funcNew = Compute("$left-sqrt(x)-$b")->reduce;
-
-                        $alt="This picture shows the graph of the function $f(x)=$funcNew. The points ($x,0) is labeled.";
-
-                        ($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$x],[-2,2]);
-
-                        @xticks = @$xticks_ref;
-                        @yticks = @$yticks_ref;
-
-                        $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-                           axes=>[0,0],
-                           grid=>[$ticknum[0],$ticknum[1]],
-                           size=>[xPixels(),yPixels()]
-                        );
-                        $gr->lb('reset');
-                        for my $j (@xticks) {
-                            if (abs($j) &lt; 10**(-10)) {next;}
-                            $gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
-                        }
-                        $gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
-                        $gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
-
-                        for my $j (@yticks) {
-                            if (Real($j) == 0) {next;}
-                            $gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
-                        }
-
-                        add_functions($gr, "$funcNew for x in &lt; $min[0],$max[0] > using color:red and weight:1");
-
-                        $hx = ($x+$max[0])/2;
-                        $hy = $funcNew->eval(x=>$hx);
-                        $gr->lb( new Label($hx, $hy+$marksep[1]/4, "f(x)",'red','center','middle'));
-
-                        $xShow = int($x*100)/100;
-                        $gr->stamps( closed_circle($x, 0, 'red') );
-                        $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
-
-                        <!-- todo: change this code to not subtract the right side onto the left before graphing. -->
-
-                    <!-- </pg-code>
-                </setup>
-                <statement>
-                    <p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
-
-                    <instruction>Round your answers to two decimal places if needed.</instruction>
-
-                    <p><var name="$solutions" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>First, we move all terms to one side of the equals sign:<md>
-                        <mrow><var name="$left" />\amp=<var name="$right" /></mrow>
-                        <mrow><var name="$funcNew" />\amp=0</mrow>
-                    </md></p>
-
-                    <p>Next, we use technology to graph the function <m>f(x)=<var name="$funcNew" /></m>:</p>
-
-                    <sidebyside>
-                      <image pg-name="$gr">
-                          <description><var name="$alt" /></description>
-                      </image>
-                    </sidebyside>
-
-                    <p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
-                </solution>
-              </webwork>
-            </exercise> -->
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication92.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication92.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication122.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication122.pg" />
-            </exercise>
-
-        </exercisegroup>
-    </exercises>
+      </statement>
+      <solution permid="qXn">
+        <p permid="BKN">
+          Using <xref ref="fact-domain-of-radicals">Fact</xref>
+          to find the function's domain,
+          we set the radicand greater than or equal to zero and solve:
+          <md permid="YcL">
+            <mrow>3x-1\amp\ge0</mrow>
+            <mrow>3x\amp\ge1</mrow>
+            <mrow>x\amp\ge\frac{1}{3}</mrow>
+          </md>
+          The function's domain is <m>\left[\frac{1}{3},\infty\right)</m> in interval notation.
+        </p>
+        <sidebyside widths="47% 47%" margins="0%" permid="Vpj">
+          <p permid="hRW">
+            To find the function's range,
+            we look at a graph of the function.
+            The graph shows that the function's range is <m>[2,\infty)</m>.
+            The graph also verifies the function's domain is indeed <m>\left[\frac{1}{3},\infty\right)</m>.
+          </p>
+          <figure permid="NZf">
+            <caption>Graph of <m>f(x)=\sqrt{3x-1}+2</m></caption>
+            <image permid="UcM">
+              <description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[ymin=-1,ymax=6,xmin=-1,xmax=10,
+ytick={0,1,...,5}, xtick={0,1,...,9}]
+\addplot [primarycurve, -, domain=0.333:0.34] {sqrt(3*x-1)+2};
+\addplot [primarycurve, -{Kite}, domain=0.34:5.667, samples=100] {sqrt(3*x-1)+2};
+\addplot[soliddot] coordinates {(1/3,2)} node [right, color=firstcolor] {$(\frac{1}{3},2)$};
+\end{axis}
+\end{tikzpicture}
+]]>
+</latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </solution>
+    </example>
+    <example permid="cTI">
+      <title>The Distance Formula</title>
+      <statement>
+        <p permid="Zie">
+          Find the distance between <m>(6,-13)</m> and <m>(-4,17)</m>.
+        </p>
+      </statement>
+      <solution permid="Xew">
+        <p permid="ugo">
+          To calculate the distance between <m>(6,-13)</m> and <m>(-4,17)</m>,
+          we use the distance formula.
+          It's good practice to mark each value with the corresponding variables in the formula:
+          <me permid="rVC">
+            (\stackrel{x_1}{6},\stackrel{y_1}{-13}), (\stackrel{x_2}{-4},\stackrel{y_2}{17})
+          </me>
+          We have:
+          <md permid="EjU">
+            <mrow>d\amp=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</mrow>
+            <mrow>d\amp=\sqrt{\left(\substitute{-4}-\substitute{6}\right)^2+\left(\substitute{17}-\substitute{(-13)}\right)^2}</mrow>
+            <mrow>d\amp=\sqrt{\left(-10\right)^2+\left(30\right)^2}</mrow>
+            <mrow>d\amp=\sqrt{100+900}</mrow>
+            <mrow>d\amp=\sqrt{1000}</mrow>
+            <mrow>d\amp=\sqrt{100}\cdot\sqrt{10}</mrow>
+            <mrow>d\amp=10\sqrt{10}</mrow>
+          </md>
+          The distance between <m>(6,-13)</m> and <m>(-4,17)</m> is
+          <m>10\sqrt{10}</m> or approximately <m>31.62</m> units.
+        </p>
+      </solution>
+    </example>
+    <example permid="JaR">
+      <title>The Cube Root Function</title>
+      <statement>
+        <p permid="Fpn">
+          Algebraically find the domain and graphically find the range of the function <m>g</m> where <m>g(x)=-2\sqrt[3]{x+6}-1</m>.
+        </p>
+      </statement>
+      <solution permid="DlF">
+        <p permid="anx">
+          First note that the index of the function <m>g</m> for <m>g(x)=-2\sqrt[3]{x+6}-1</m> is odd.
+          By <xref ref="fact-domain-of-radicals">Fact</xref>,
+          the domain is <m>(-\infty,\infty)</m>.
+        </p>
+        <p permid="GuG">
+          To find the function's range,
+          we use the graph the function.
+          According to the graph,
+          the function's range is also <m>(-\infty,\infty)</m>.
+        </p>
+        <figure permid="mBP">
+          <caption>Graph of <m>y=g(x)=-2\sqrt[3]{x+6}-1</m></caption>
+          <image width="47%" permid="AjV">
+            <description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[ymin=-10,ymax=10,xmin=-15,xmax=15, ytick={-8,-6,...,8}, xtick={-12,-9,...,12}, minor xtick=, minor ytick=]
+\addplot[primarycurve, variable=\t, domain=-6.518:3.16, samples=50] ({(((t+1)/-2)^3-6)},{t}) node[above right, pos=0.45] {$y=-2\sqrt[3]{x+6}-1$};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </solution>
+    </example>
+    <example permid="pia">
+      <title>Other Roots</title>
+      <statement>
+        <p permid="lww">
+          Algebraically find the domain and graphically find the range of the function <m>h</m> where <m>h(x)=8-\frac{5}{2}\sqrt[4]{6-2x}</m>.
+        </p>
+      </statement>
+      <solution permid="jsO">
+        <p permid="SIY">
+          First note that the index of this function is <m>4</m>,
+          which is even.
+          By <xref ref="fact-domain-of-radicals">Fact</xref>,
+          to find the domain of this function we must set the radicand greater or equal to zero and solve.
+          <md permid="krd">
+            <mrow>6-2x\amp\ge0</mrow>
+            <mrow>-2x\amp\ge\subtractright{6}</mrow>
+            <mrow>x\amp\mathbin{\highlight{\le}}\divideunder{-6}{-2}</mrow>
+            <mrow>x\amp\le3</mrow>
+          </md>
+          So, the domain of <m>h</m> is <m>(-\infty,3]</m>.
+        </p>
+        <p permid="yQh">
+          To find the function's range,
+          we use the graph the function.
+          By the graph, the function's range is <m>(-\infty,8]</m>.
+        </p>
+        <figure permid="eXq">
+          <caption>Graph of <m>y=h(x)=8-\frac{5}{2}\sqrt[4]{6-2x}</m></caption>
+          <image width="47%" permid="gre">
+            <description></description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[ymin=-3,ymax=9,xmin=-10,xmax=4, ytick={-2,-1,...,8}, xtick={-8,-6,...,2}, minor xtick=, minor ytick=]
+\addplot[primarycurve, variable=\t, {Kite}-, domain=2.355:8] ({(((t-8)/-2.5)^4-6)/-2},{t}) node[above left, pos=0.6] {$y=8-\frac{5}{2}\sqrt[4]{6-2x}$};
+\addplot[soliddot, color=firstcolor] coordinates{(3,8)};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="YFo">
+    <title>Radical Expressions and Rational Exponents</title>
+    <p permid="nlJ">
+      In <xref ref="section-radical-expressions-and-rational-exponents">Section</xref>
+      we learned the <xref ref="fact-rational-exponent-rule-ii" text="title">rational exponent rule</xref>
+      and added it to our <xref ref="list-exponent-rules-complete" text="title"> list of exponent rules</xref>.
+    </p>
+    <example permid="Bws">
+      <title>Radical Expressions and Rational Exponents</title>
+      <statement>
+        <p permid="RDF">
+          Simplify the expressions using <xref ref="fact-rational-exponent-rule-i">Fact</xref>
+          or <xref ref="fact-rational-exponent-rule-ii">Fact</xref>.
+          <ol label="a." cols="4" permid="xwt">
+            <li permid="pRU">
+              <p permid="FKM">
+                <m>100^{\sfrac{1}{2}}</m>
+              </p>
+            </li>
+            <li permid="VZd">
+              <p permid="lRV">
+                <m>(-64)^{-\sfrac{1}{3}}</m>
+              </p>
+            </li>
+            <li permid="Cgm">
+              <p permid="RZe">
+                <m>-81^{\sfrac{3}{4}}</m>
+              </p>
+            </li>
+            <li permid="inv">
+              <p permid="ygn">
+                <m>\left(-\frac{1}{27}\right)^{\sfrac{2}{3}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution permid="PzX">
+        <p permid="Lez">
+          <ol label="a." permid="FaS">
+            <li permid="OuE">
+              <p permid="enw">
+                <md permid="Qym">
+                  <mrow>100^{\sfrac{1}{2}}\amp=\left(\sqrt{100}\right)</mrow>
+                  <mrow>\amp=10</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="uBN">
+              <p permid="KuF">
+                <md permid="wFv">
+                  <mrow>(-64)^{-\sfrac{1}{3}}\amp=\frac{1}{(-64)^{\sfrac{1}{3}}}</mrow>
+                  <mrow>\amp=\frac{1}{\left(\sqrt[3]{(-64)}\right)}</mrow>
+                  <mrow>\amp=\frac{1}{-4}</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="aIW">
+              <p permid="qBO">
+                <md permid="cME">
+                  <mrow>-81^{\sfrac{3}{4}}\amp=-\left(\sqrt[4]{81}\right)^3</mrow>
+                  <mrow>\amp=-3^3</mrow>
+                  <mrow>\amp=-27</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="GQf">
+              <p permid="WIX">
+                In this problem the negative can be associated with either the numerator or the denominator,
+                but not both.
+                We choose the numerator.
+              </p>
+              <p permid="CQg">
+                <md permid="ITN">
+                  <mrow>\left(-\frac{1}{27}\right)^{\sfrac{2}{3}}\amp=\left(\sqrt[3]{-\frac{1}{27}}\right)^2</mrow>
+                  <mrow>\amp=\left(\frac{\sqrt[3]{-1}}{\sqrt[3]{27}}\right)^2</mrow>
+                  <mrow>\amp=\left(\frac{-1}{3}\right)^2</mrow>
+                  <mrow>\amp=\frac{(-1)^2}{(3)^2}</mrow>
+                  <mrow>\amp=\frac{1}{9}</mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+    <example permid="hDB">
+      <title>More Expressions with Rational Exponents</title>
+      <statement>
+        <p permid="xKO">
+          Use exponent properties in <xref ref="list-exponent-rules-complete">List</xref> to simplify the expressions,
+          and write all final versions using radicals.
+          <ol label="a." cols="4" permid="dDC">
+            <li permid="mXo">
+              <p permid="iXp">
+                <m>7z^{\sfrac{5}{9}}</m>
+              </p>
+            </li>
+            <li permid="Tex">
+              <p permid="Pey">
+                <m>\frac{5}{4}x^{-\sfrac{2}{3}}</m>
+              </p>
+            </li>
+            <li permid="zlG">
+              <p permid="vlH">
+                <m>\left(-9q^5\right)^{\sfrac{4}{5}}</m>
+              </p>
+            </li>
+            <li permid="fsP">
+              <p permid="bsQ">
+                <m>\sqrt{y^5}\cdot\sqrt[4]{y^2}</m>
+              </p>
+            </li>
+            <li permid="LzY">
+              <p permid="HzZ">
+                <m>\frac{\sqrt{t^3}}{\sqrt[3]{t^2}}</m>
+              </p>
+            </li>
+            <li permid="rHh">
+              <p permid="nHi">
+                <m>\sqrt{\sqrt[3]{x}}</m>
+              </p>
+            </li>
+            <li permid="XOq">
+              <p permid="TOr">
+                <m>5\left(4+a^{\sfrac{1}{2}}\right)^2</m>
+              </p>
+            </li>
+            <li permid="DVz">
+              <p permid="zVA">
+                <m>-6\left(2p^{-\sfrac{5}{2}}\right)^{\sfrac{3}{5}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution permid="vHg">
+        <p permid="rlI">
+          <ol label="a." permid="lib">
+            <li permid="kcI">
+              <p permid="gcJ">
+                <md permid="paW">
+                  <mrow>7z^{\sfrac{5}{9}}\amp=7\sqrt[9]{z^5}</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="QjR">
+              <p permid="MjS">
+                <md permid="Vif">
+                  <mrow>\frac{5}{4}x^{-\sfrac{2}{3}}\amp=\frac{5}{4}\cdot\frac{1}{x^{\sfrac{2}{3}}}</mrow>
+                  <mrow>\amp=\frac{5}{4}\cdot\frac{1}{\sqrt[3]{x^2}}</mrow>
+                  <mrow>\amp=\frac{5}{4\sqrt[3]{x^2}}</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="wra">
+              <p permid="srb">
+                <md permid="Bpo">
+                  <mrow>\left(-9q^5\right)^{\sfrac{4}{5}}\amp=\left(-9\right)^{\sfrac{4}{5}}\cdot\left(q^5\right)^{\sfrac{4}{5}}</mrow>
+                  <mrow>\amp=\left(-9\right)^{\sfrac{4}{5}}\cdot q^{5\cdot\sfrac{4}{5}}</mrow>
+                  <mrow>\amp=\left(\sqrt[5]{-9}\right)^4\cdot q^{4}</mrow>
+                  <mrow>\amp=\left(q\sqrt[5]{-9}\right)^4</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="cyj">
+              <p permid="Yyk">
+                <md permid="hwx">
+                  <mrow>\sqrt{y^5}\cdot\sqrt[4]{y^2}\amp=y^{\sfrac{5}{2}}\cdot y^{\sfrac{2}{4}}</mrow>
+                  <mrow>\amp=y^{\sfrac{5}{2}+\sfrac{2}{4}}</mrow>
+                  <mrow>\amp=y^{\sfrac{10}{4}+\sfrac{1}{4}}</mrow>
+                  <mrow>\amp=x^{\sfrac{11}{4}}</mrow>
+                  <mrow>\amp=\sqrt[4]{x^{11}}</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="IFs">
+              <p permid="EFt">
+                <md permid="NDG">
+                  <mrow>\frac{\sqrt{t^3}}{\sqrt[3]{t^2}}\amp=\frac{t^{\sfrac{3}{2}}}{t^{\sfrac{2}{3}}}</mrow>
+                  <mrow>\amp=t^{\sfrac{3}{2}-\sfrac{2}{3}}</mrow>
+                  <mrow>\amp=t^{\sfrac{9}{6}-\sfrac{4}{6}}</mrow>
+                  <mrow>\amp=t^{\sfrac{5}{6}}</mrow>
+                  <mrow>\amp=\sqrt[6]{t^5}</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="oMB">
+              <p permid="kMC">
+                <md permid="tKP">
+                  <mrow>\sqrt{\sqrt[3]{x}}\amp=\sqrt{x^{\sfrac{1}{3}}}</mrow>
+                  <mrow>\amp=\left(x^{\sfrac{1}{3}}\right)^{\sfrac{1}{2}}</mrow>
+                  <mrow>\amp=x^{\sfrac{1}{3}\cdot\sfrac{1}{2}}</mrow>
+                  <mrow>\amp=x^{\sfrac{1}{6}}</mrow>
+                  <mrow>\amp=\sqrt[6]{x}</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="UTK">
+              <p permid="QTL">
+                <md alignment="alignat" permid="ZRY">
+                  <mrow>5\left(4+a^{\sfrac{1}{2}}\right)^2\amp=5\left(4+a^{\sfrac{1}{2}}\right)\left(4+a^{\sfrac{1}{2}}\right)</mrow>
+                  <mrow>\amp=5\left(4^2+2\cdot4\cdot a^{\sfrac{1}{2}}+\left(a^{\sfrac{1}{2}}\right)^2\right)</mrow>
+                  <mrow>\amp=5\left(16+8a^{\sfrac{1}{2}}+a^{\sfrac{1}{2}\cdot 2}\right)</mrow>
+                  <mrow>\amp=5\left(16+8a^{\sfrac{1}{2}}+a\right)</mrow>
+                  <mrow>\amp=5\left(16+8\sqrt{a}+a\right)</mrow>
+                  <mrow>\amp=80+40\sqrt{a}+5a</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="BaT">
+              <p permid="xaU">
+                <md permid="FZh">
+                  <mrow>-6\left(2p^{-\sfrac{5}{2}}\right)^{\sfrac{3}{5}}\amp=-6\cdot2^{\sfrac{3}{5}}\cdot p^{-\sfrac{5}{2}\cdot\sfrac{3}{5}}</mrow>
+                  <mrow>\amp=-6\cdot2^{\sfrac{3}{5}}\cdot p^{-\sfrac{3}{2}}</mrow>
+                  <mrow>\amp=-\frac{6\cdot 2^{\sfrac{3}{5}}}{p^{\sfrac{3}{2}}}</mrow>
+                  <mrow>\amp=-\frac{6\sqrt[5]{2^3}}{\sqrt{p^3}}</mrow>
+                  <mrow>\amp=-\frac{6\sqrt[5]{8}}{\sqrt{p^3}}</mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="EMx">
+    <title>Radical Expression Operations</title>
+    <p permid="TsS">
+      In <xref ref="section-radical-expression-operations">Section</xref>
+      we learned to apply properties previously learned in <xref ref="section-square-root-properties">Section</xref>
+      to radicals with higher roots and to more complicated radical expressions.
+      These properties include the following:
+      <md permid="mgq">
+        <mrow>\sqrt[m]{x^m}\amp=x\amp\text{where }m\text{ is odd}</mrow>
+        <mrow>\sqrt[n]{x^n}\amp=\abs{x}\amp\text{where }n\text{ is even}</mrow>
+        <mrow>\sqrt[n]{x\cdot y}\amp=\sqrt[n]{x}\cdot\sqrt[n]{y}</mrow>
+        <mrow>\sqrt[n]{\frac{x}{y}}\amp=\frac{\sqrt[n]{x}}{\sqrt[n]{y}}, \text{ where }y\ne0</mrow>
+      </md>
+    </p>
+    <example permid="NKK">
+      <statement>
+        <p permid="dRX">
+          Simplify <m>\sqrt{y^2-4y+4}</m>.
+        </p>
+      </statement>
+      <solution permid="bOp">
+        <p permid="XsR">
+          <md permid="Snz">
+            <mrow>\sqrt{y^2-4y+4}\amp=\sqrt{(y-2)^2}</mrow>
+            <mrow>\amp=\abs{y-2}</mrow>
+          </md>
+          We used the property <m>\sqrt[n]{x^n}=\abs{x}\text{ where }n\text{ is even}</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="tRT">
+      <statement>
+        <p permid="JZg">
+          Simplify <m>\sqrt[4]{48x^6y^9}</m>.
+          Assume all variables are positive.
+        </p>
+      </statement>
+      <solution permid="HVy">
+        <p permid="DAa">
+          <md permid="yuI">
+            <mrow>\sqrt[4]{48x^6y^9}\amp=\sqrt[4]{16\cdot 3\cdot x^4\cdot x^2\cdot y^8\cdot y}</mrow>
+            <mrow>\amp=\sqrt[4]{2^4\cdot 3\cdot x^4\cdot x^2\cdot \left(y^2\right)^4\cdot y}</mrow>
+            <mrow>\amp=2xy^2\sqrt[4]{3x^2y}</mrow>
+          </md>
+          We used the property <m>\sqrt[n]{x^n}=\abs{x}\text{ where }m\text{ is even}</m>,
+          but absolute value signs were unnecessary since all variables are assumed to be positive.
+        </p>
+      </solution>
+    </example>
+    <example permid="ZZc">
+      <statement>
+        <p permid="qgp">
+          Do multiplication: <m>\sqrt[3]{4y}\cdot\sqrt[3]{10y^4}</m>
+        </p>
+      </statement>
+      <solution permid="ocH">
+        <p permid="jHj">
+          <md permid="eBR">
+            <mrow>\sqrt[3]{4y}\cdot\sqrt[3]{10y^4}\amp=\sqrt[3]{(4y)\cdot\left(10y^4\right)}</mrow>
+            <mrow>\amp=\sqrt[3]{40y^5}</mrow>
+            <mrow>\amp=\sqrt[3]{8\cdot 5\cdot y^3\cdot y^2}</mrow>
+            <mrow>\amp=\sqrt[3]{2^3\cdot 5\cdot y^3\cdot y^2}</mrow>
+            <mrow>\amp=2y\sqrt[3]{5y^2}</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <example permid="Ggl">
+      <statement>
+        <p permid="Wny">
+          Do division:
+          <m>\frac{\sqrt[4]{5m^6n^{10}}}{\sqrt[4]{80m^{10}n}}</m>.
+          Assume all variables are positive.
+        </p>
+      </statement>
+      <solution permid="UjQ">
+        <p permid="POs">
+          <md permid="KJa">
+            <mrow>\frac{\sqrt[4]{5a^5b^{12}}}{\sqrt[4]{80a^{17}b^3}}\amp=\sqrt[4]{\frac{5a^5b^{12}}{80a^{17}b^3}}</mrow>
+            <mrow>\amp=\sqrt[4]{\frac{1b^9}{16a^{12}}}</mrow>
+            <mrow>\amp=\sqrt[4]{\frac{b^8b}{2^4\left(a^3\right)^4}}</mrow>
+            <mrow>\amp=\frac{b^2\sqrt[4]{b}}{2a^3}</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <p permid="zAb">
+      In addition,
+      we reviewed how to add or subtract radical expressions from <xref ref="section-square-root-properties">Section</xref>
+      and applied this concept to higher roots and more complicated radical expressions.
+    </p>
+    <example permid="mnu">
+      <statement>
+        <p permid="CuH">
+          Simplify <m>\sqrt[3]{128x^4}-3x\sqrt[3]{54x}</m>.
+        </p>
+      </statement>
+      <solution permid="AqZ">
+        <p permid="vVB">
+          <md permid="qQj">
+            <mrow>\sqrt[3]{128x^4}-3x\sqrt[3]{54x}\amp=\sqrt[3]{64\cdot 2\cdot x^3\cdot x}-3x\sqrt[3]{27\cdot 2\cdot x}</mrow>
+            <mrow>\amp=\sqrt[3]{4^3\cdot 2\cdot x^3\cdot x}-3x\sqrt[3]{3^3\cdot 2\cdot x}</mrow>
+            <mrow>\amp=4x\sqrt[3]{2x}-9x\sqrt[3]{2x}</mrow>
+            <mrow>\amp=-5x\sqrt[3]{2x}</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="kTG">
+    <title>More on Rationalizing the Denominator</title>
+    <p permid="fHk">
+      In <xref ref="section-more-on-rationalizing-the-denominator">Section</xref>
+      we covered how to rationalize the denominator when it contains a single square root or a binomial.
+    </p>
+    <example permid="SuD">
+      <title>A Review of Rationalizing the Denominator</title>
+      <statement>
+        <p permid="iBQ">
+          Rationalize the denominator of the expressions.
+          <ol label="a." cols="2" permid="JKL">
+            <li permid="hic">
+              <p permid="did">
+                <m>\frac{12}{\sqrt{3}}</m>
+              </p>
+            </li>
+            <li permid="Npl">
+              <p permid="Jpm">
+                <m>\frac{\sqrt{5}}{\sqrt{75}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution permid="gyi">
+        <p permid="ccK">
+          <ol label="a." permid="Rpk">
+            <li permid="twu">
+              <p permid="pwv">
+                <md permid="WXs">
+                  <mrow>\frac{12}{\sqrt{3}}\amp=\frac{12}{\sqrt{3}}\multiplyright{\frac{\sqrt{3}}{\sqrt{3}}}</mrow>
+                  <mrow>\amp=\frac{12\sqrt{3}}{\sqrt{9}}</mrow>
+                  <mrow>\amp=\frac{12\sqrt{3}}{3}</mrow>
+                  <mrow>\amp=4\sqrt{3}</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="ZDD">
+              <p permid="VDE">
+                First we will simplify <m>\sqrt{75}</m>.
+                <md permid="DeB">
+                  <mrow>\frac{\sqrt{5}}{\sqrt{75}}\amp=\frac{\sqrt{5}}{\sqrt{25\cdot 3}}</mrow>
+                  <mrow>\amp=\frac{\sqrt{5}}{\sqrt{25}\cdot\sqrt{3}}</mrow>
+                  <mrow>\amp=\frac{\sqrt{5}}{5\sqrt{3}}</mrow>
+                  <intertext>Now we can rationalize the denominator by multiplying the numerator and denominator by <m>\sqrt{3}</m>.</intertext>
+                  <mrow>\amp=\frac{\sqrt{5}}{5\sqrt{3}}\multiplyright{\frac{\sqrt{3}}{\sqrt{3}}}</mrow>
+                  <mrow>\amp=\frac{\sqrt{15}}{5\cdot\sqrt{9}}</mrow>
+                  <mrow>\amp=\frac{\sqrt{15}}{5\cdot 3}</mrow>
+                  <mrow>\amp=\frac{\sqrt{15}}{15}</mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+    <example permid="yBM">
+      <title>Rationalize Denominator with Difference of Squares Formula</title>
+      <statement>
+        <p permid="OIZ">
+          Rationalize the denominator in <m>\frac{\sqrt{6}-\sqrt{5}}{\sqrt{3}+\sqrt{2}}</m>.
+        </p>
+      </statement>
+      <solution permid="MFr">
+        <p permid="IjT">
+          To remove radicals in <m>\sqrt{3}+\sqrt{2}</m> with the difference of squares formula,
+          we multiply it with <m>\sqrt{3}-\sqrt{2}</m>.
+          <md permid="jlK">
+            <mrow>\frac{\sqrt{6}-\sqrt{5}}{\sqrt{3}+\sqrt{2}}\amp=\frac{\sqrt{6}-\sqrt{5}}{\sqrt{3}+\sqrt{2}}\multiplyright{\frac{\left(\sqrt{3}-\sqrt{2}\right)}{\left(\sqrt{3}-\sqrt{2}\right)}}</mrow>
+            <mrow>\amp=\frac{\sqrt{6}\multiplyright{\sqrt{3}}-\sqrt{6}\multiplyright{\sqrt{2}}-\sqrt{5}\multiplyright{\sqrt{3}}-\sqrt{5}\multiplyright{-\sqrt{2}}}{\left(\sqrt{3}\right)^2-\left(\sqrt{2}\right)^2}</mrow>
+            <mrow>\amp=\frac{\sqrt{18}-\sqrt{12}-\sqrt{15}+\sqrt{10}}{9-4}</mrow>
+            <mrow>\amp=\frac{3\sqrt{2}-2\sqrt{3}-\sqrt{15}+\sqrt{10}}{5}</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="RaP">
+    <title>Solving Radical Equations</title>
+    <p permid="LOt">
+      In <xref ref="section-solving-radical-equations">Section</xref>
+      we covered solving equations that contain a radical.
+      We learned about extraneous solutions and the need to check our solutions.
+    </p>
+    <example permid="eIV">
+      <title>Solving Radical Equations</title>
+      <statement>
+        <p permid="uQi">
+          Solve for <m>r</m> in <m>r=9+\sqrt{r+3}</m>.
+        </p>
+      </statement>
+      <solution permid="sMA">
+        <p permid="orc">
+          We will isolate the radical first,
+          and then square both sides.
+          <md permid="PsT">
+            <mrow>r\amp=9+\sqrt{r+3}</mrow>
+            <mrow>r-9\amp=\sqrt{r+3}</mrow>
+            <mrow>\left(r-9\right)^{\highlight{2}}\amp=\left(\sqrt{r+3}\right)^{\highlight{2}}</mrow>
+            <mrow>r^2-18r+81\amp=r+3</mrow>
+            <mrow>r^2-19r+78\amp=0</mrow>
+            <mrow>(r-6)(r-13)\amp=0</mrow>
+            <mrow>r-6=0\amp\text{ or }r-13=0</mrow>
+            <mrow>r=6\amp\text{ or }r=13</mrow>
+          </md>
+          Because we squared both sides of an equation,
+          we must check both solutions.
+        </p>
+        <p permid="Uyl">
+          Substitute <m>\substitute{6}</m> into <m>r=9+\sqrt{r+3}</m>,
+          and we have:
+          <md permid="vAc">
+            <mrow>r\amp=9+\sqrt{r+3}</mrow>
+            <mrow>\substitute{6}\amp\stackrel{?}{=}9+\sqrt{\substitute{6}+3}</mrow>
+            <mrow>6\amp\stackrel{?}{=}9+\sqrt{9}</mrow>
+            <mrow>6\amp\stackrel{?}{=}9+3</mrow>
+            <mrow>6\amp\stackrel{\text{no}}{=}12</mrow>
+          </md>
+          It turns out <m>6</m> is an extraneous solution.
+        </p>
+        <p permid="AFu">
+          Next, we substitute <m>\substitute{13}</m> into <m>r=9+\sqrt{r+3}</m>:
+          <md permid="bHl">
+            <mrow>r\amp=9+\sqrt{r+3}</mrow>
+            <mrow>\substitute{13}\amp\stackrel{?}{=}9+\sqrt{\substitute{13}+3}</mrow>
+            <mrow>13\amp\stackrel{?}{=}9+\sqrt{16}</mrow>
+            <mrow>13\amp\stackrel{?}{=}9+4</mrow>
+            <mrow>13\amp\stackrel{\checkmark}{=}13</mrow>
+          </md>
+          So, <m>13</m> is the solution.
+        </p>
+        <p permid="gMD">
+          The equation has one solution: <m>13</m>.
+          The solution set is <m>\{13\}</m>.
+        </p>
+      </solution>
+    </example>
+    <example permid="KQe">
+      <title>Solving Radical Equations that Require Squaring Twice</title>
+      <statement>
+        <p permid="aXr">
+          Solve the equation <m>\sqrt{t+9}=-1-\sqrt{t}</m> for <m>t</m>.
+        </p>
+      </statement>
+      <solution permid="YTJ">
+        <p permid="MTM">
+          We cannot isolate two radicals,
+          so we will simply square both sides,
+          and later try to isolate the remaining radical.
+          <md permid="HOu">
+            <mrow>\sqrt{t+9}\amp=-1-\sqrt{t}</mrow>
+            <mrow>\left(\sqrt{t+9}\right)^\highlight{2}\amp=\left(-1-\sqrt{t}\right)^\highlight{2}</mrow>
+            <mrow>t+9\amp=1+2\sqrt{t}+t \amp\text{ after expanding the binomial squared}</mrow>
+            <mrow>9\amp=1+2\sqrt{t}</mrow>
+            <mrow>8\amp=2\sqrt{t}</mrow>
+            <mrow>\frac{8}{2}\amp=\frac{2\sqrt{t}}{2}</mrow>
+            <mrow>4\amp=\sqrt{t}</mrow>
+            <mrow>(4)^\highlight{2}\amp=\left(\sqrt{t}\right)^\highlight{2}</mrow>
+            <mrow>16\amp=t</mrow>
+          </md>
+          Because we squared both sides of an equation,
+          we must check the solution by substituting
+          <m>\substitute{16}</m> into <m>\sqrt{t+9}=-1-\sqrt{t}</m>,
+          and we have:
+          <md permid="nVD">
+            <mrow>\sqrt{t+9}\amp=-1-\sqrt{t}</mrow>
+            <mrow>\sqrt{\substitute{16}+9}\amp\stackrel{?}{=}-1-\sqrt{16}</mrow>
+            <mrow>\sqrt{25}\amp\stackrel{?}{=}-1-4</mrow>
+            <mrow>5\amp\stackrel{\text{no}}{=}-5</mrow>
+          </md>
+          Our solution did not check so there is no solution to this equation.
+          The solution set is <m>\{\text{ }\}</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <exercises permid="xhY">
+    <exercisegroup cols="2" permid="dph">
+      <title>Introduction to Radical Functions</title>
+<!-- <p>Domain and Range</p> -->
+      <exercise permid="BRR">
+        <webwork source="BasicAlgebra/FunctionBasics/Functions225.pg" />
+      </exercise>
+      <exercise permid="hZa">
+        <webwork source="BasicAlgebra/FunctionBasics/Functions225.pg" />
+      </exercise>
+      <exercise permid="Ogj">
+        <webwork source="BasicAlgebra/FunctionBasics/Functions240.pg" />
+      </exercise>
+      <exercise permid="uns">
+        <webwork source="BasicAlgebra/FunctionBasics/Functions240.pg" />
+      </exercise>
+      <exercise permid="auB">
+        <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg" />
+      </exercise>
+      <exercise permid="GBK">
+        <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg" />
+      </exercise>
+<!-- Graphing with technology -->
+<!-- <exercise>
+<webwork>
+<pg-macros>
+<macro-file>PCCgraphMacros.pl</macro-file>
+</pg-macros>
+<setup>
+<pg-code>
+Context("Numeric");
+Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
+Context()->noreduce("(-x)-y","(-x)+y");
+$fname = RandomVariableName(type=>function);
+$a = non_zero_random(-5,5,1);
+$b = non_zero_random(-5,5,1);
+$func = Formula("sqrt($a-x)+$b")->reduce;
+$alt="This picture shows the graph of a radical function $fname(x)=$func. The point ($a,$b) is labeled.";
+($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,1.5*$a],[0,2*$b]);
+@xticks = @$xticks_ref;
+@yticks = @$yticks_ref;
+$gr = init_graph($min[0],$min[1],$max[0],$max[1],
+axes=>[0,0],
+grid=>[$ticknum[0],$ticknum[1]],
+size=>[xPixels(),yPixels()]
+);
+$gr->lb('reset');
+for my $j (@xticks) {
+if (abs($j) &lt; 10**(-10)) {next;}
+$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+}
+$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
+$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
+for my $j (@yticks) {
+if (Real($j) == 0) {next;}
+$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+}
+$xfunc = sub { my $t = shift();
+return $a-($t)**2; };
+$yfunc = sub { my $t = shift();
+return $t+$b; };
+$funct = new Fun( $xfunc, $yfunc, $gr);
+$funct -> domain(0,10);
+$hx = ($a+$min[0])/2;
+$hy = $func->eval(x=>$hx);
+$gr->lb( new Label($hx, $hy+$marksep[1]/4, "$fname(x)",'blue','center','middle'));
+$gr->stamps( closed_circle($a, $b, 'red') );
+$gr->lb( new Label($a, $b-$marksep[1]/8, "($a,$b)",'red','center','top'));
+Context("Interval");
+$range = Compute("[$b,inf)");
+</pg-code>
+</setup>
+<statement>
+<p>Use the graph to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
+<instruction>If you need to enter <m>\infty</m>, you can type  <c>inf</c> or <c>infinity</c>.  If you need to union two (or more) intervals, use the letter <c>U</c>. For example: <c>(-inf,5) \cup (5, inf)</c>.</instruction>
+<p><var name="$range" width="10" /></p>
+</statement>
+<solution>
+<p>We use the graph the function <m><var name="$fname" />(x)=<var name="$func" /></m>:</p>
+<sidebyside>
+<image pg-name="$gr">
+<description><var name="$alt" /></description>
+</image>
+</sidebyside>
+<p>The function's range is <m><var name="$range"/></m>.</p>
+</solution>
+</webwork>
+</exercise>
+<exercise>
+<webwork>
+<pg-macros>
+<macro-file>PCCgraphMacros.pl</macro-file>
+</pg-macros>
+<setup>
+<pg-code>
+Context("Numeric");
+Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
+Context()->noreduce("(-x)-y","(-x)+y");
+$fname = RandomVariableName(type=>function);
+$a = non_zero_random(-5,5,1);
+$b = non_zero_random(-5,5,1);
+$func = Formula("sqrt($a-x)+$b")->reduce;
+$alt="This picture shows the graph of a radical function $fname(x)=$func. The point ($a,$b) is labeled.";
+($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,1.5*$a],[0,2*$b]);
+@xticks = @$xticks_ref;
+@yticks = @$yticks_ref;
+$gr = init_graph($min[0],$min[1],$max[0],$max[1],
+axes=>[0,0],
+grid=>[$ticknum[0],$ticknum[1]],
+size=>[xPixels(),yPixels()]
+);
+$gr->lb('reset');
+for my $j (@xticks) {
+if (abs($j) &lt; 10**(-10)) {next;}
+$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+}
+$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
+$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
+for my $j (@yticks) {
+if (Real($j) == 0) {next;}
+$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+}
+$xfunc = sub { my $t = shift();
+return $a-($t)**2; };
+$yfunc = sub { my $t = shift();
+return $t+$b; };
+$funct = new Fun( $xfunc, $yfunc, $gr);
+$funct -> domain(0,10);
+$hx = ($a+$min[0])/2;
+$hy = $func->eval(x=>$hx);
+$gr->lb( new Label($hx, $hy+$marksep[1]/4, "$fname(x)",'blue','center','middle'));
+$gr->stamps( closed_circle($a, $b, 'red') );
+$gr->lb( new Label($a, $b-$marksep[1]/8, "($a,$b)",'red','center','top'));
+Context("Interval");
+$range = Compute("[$b,inf)");
+</pg-code>
+</setup>
+<statement>
+<p>Use the graph to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
+<instruction>If you need to enter <m>\infty</m>, you can type  <c>inf</c> or <c>infinity</c>.  If you need to union two (or more) intervals, use the letter <c>U</c>. For example: <c>(-inf,5) \cup (5, inf)</c>.</instruction>
+<p><var name="$range" width="10" /></p>
+</statement>
+<solution>
+<p>We use the graph the function <m><var name="$fname" />(x)=<var name="$func" /></m>:</p>
+<sidebyside>
+<image pg-name="$gr">
+<description><var name="$alt" /></description>
+</image>
+</sidebyside>
+<p>The function's range is <m><var name="$range"/></m>.</p>
+</solution>
+</webwork>
+</exercise>
+-->
+<!-- Applications -->
+      <exercise permid="mIT">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg" />
+      </exercise>
+      <exercise permid="SQc">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg" />
+      </exercise>
+<!-- Distance Formula -->
+      <exercise permid="yXl">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad135.pg" />
+      </exercise>
+      <exercise permid="feu">
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad135.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="Jwq">
+      <title>Radical Expressions and Rational Exponents</title>
+<!-- <p>Calculation</p> -->
+      <exercise permid="LlD">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots30.pg" />
+      </exercise>
+      <exercise permid="rsM">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots30.pg" />
+      </exercise>
+      <exercise permid="XzV">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots40.pg" />
+      </exercise>
+      <exercise permid="DHe">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots40.pg" />
+      </exercise>
+      <exercise permid="jOn">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents12.pg" />
+      </exercise>
+      <exercise permid="PVw">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents12.pg" />
+      </exercise>
+<!-- <p>Convert Fractional Exponents to Radicals</p> -->
+      <exercise permid="wcF">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents10.pg"/>
+      </exercise>
+      <exercise permid="cjO">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents10.pg"/>
+      </exercise>
+      <exercise permid="IqX">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FractionalExponentToRadical20.pg" />
+      </exercise>
+      <exercise permid="oyg">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FractionalExponentToRadical20.pg" />
+      </exercise>
+<!-- <p>Simplifying Expressions with Rational Exponents</p> -->
+      <exercise permid="UFp">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents16.pg" />
+      </exercise>
+      <exercise permid="AMy">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents16.pg" />
+      </exercise>
+      <exercise permid="gTH">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents20.pg" />
+      </exercise>
+      <exercise permid="NaQ">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents20.pg" />
+      </exercise>
+      <exercise permid="thZ">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents24.pg"/>
+      </exercise>
+      <exercise permid="Zpi">
+        <webwork source="Math95/RadicalsRationalExponents/RadicalsRationalExponents24.pg"/>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="pDz">
+      <title>More on Rationalizing the Denominator</title>
+      <exercise permid="Fwr">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
+      </exercise>
+      <exercise permid="lDA">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
+      </exercise>
+      <exercise permid="RKJ">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator130.pg" />
+      </exercise>
+      <exercise permid="xRS">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator130.pg" />
+      </exercise>
+<!-- <p>Rationalizing the Denominator Using the Difference of Squares Formula</p> -->
+      <exercise permid="dZb">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
+      </exercise>
+      <exercise permid="Kgk">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
+      </exercise>
+      <exercise permid="qnt">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
+      </exercise>
+      <exercise permid="WuC">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="VKI">
+      <title>Solving Radical Equations</title>
+<!-- Solving Radical Equations -->
+      <exercise permid="CBL">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation80.pg" />
+      </exercise>
+      <exercise permid="iIU">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation80.pg" />
+      </exercise>
+      <exercise permid="OQd">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation90.pg" />
+      </exercise>
+      <exercise permid="uXm">
+        <webwork source="BasicAlgebra/RadicalEquations/SolvingRadicalEquation90.pg" />
+      </exercise>
+      <exercise permid="bev">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations4.pg" />
+      </exercise>
+      <exercise permid="HlE">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations4.pg" />
+      </exercise>
+      <exercise permid="nsN">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations6.pg" />
+      </exercise>
+      <exercise permid="TzW">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations6.pg" />
+      </exercise>
+      <exercise permid="zHf">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
+      </exercise>
+      <exercise permid="fOo">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquations7.pg" />
+      </exercise>
+<!-- Solving with technology -->
+<!-- <exercise>
+<webwork>
+<pg-macros>
+<macro-file>PCCgraphMacros.pl</macro-file>
+</pg-macros>
+<setup>
+<pg-code>
+Context("FiniteSolutionSets");
+Context()->flags->remove("NumberCheck");
+Context()->flags->set(
+tolerance => 0.005,
+tolType => "absolute",
+);
+do{
+$a = non_zero_random(-5,5,0.1);
+$b = non_zero_random(-5,5,0.1);
+$root = ($a-($b)**2)/(2*$b);
+$x = $root**2;
+} until ( $root > 0 );
+$solutions = Formula("{$x}");
+$left = Formula("sqrt(x+$a)")->reduce;
+$right = Formula("sqrt(x)+$b")->reduce;
+$funcNew = Compute("$left-sqrt(x)-$b")->reduce;
+$alt="This picture shows the graph of the function $f(x)=$funcNew. The points ($x,0) is labeled.";
+($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$x],[-2,2]);
+@xticks = @$xticks_ref;
+@yticks = @$yticks_ref;
+$gr = init_graph($min[0],$min[1],$max[0],$max[1],
+axes=>[0,0],
+grid=>[$ticknum[0],$ticknum[1]],
+size=>[xPixels(),yPixels()]
+);
+$gr->lb('reset');
+for my $j (@xticks) {
+if (abs($j) &lt; 10**(-10)) {next;}
+$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+}
+$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
+$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
+for my $j (@yticks) {
+if (Real($j) == 0) {next;}
+$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+}
+add_functions($gr, "$funcNew for x in &lt; $min[0],$max[0] > using color:red and weight:1");
+$hx = ($x+$max[0])/2;
+$hy = $funcNew->eval(x=>$hx);
+$gr->lb( new Label($hx, $hy+$marksep[1]/4, "f(x)",'red','center','middle'));
+$xShow = int($x*100)/100;
+$gr->stamps( closed_circle($x, 0, 'red') );
+$gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
+<!-- todo: change this code to not subtract the right side onto the left before graphing. -->
+<!-- </pg-code>
+</setup>
+<statement>
+<p>Solveolve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
+<instruction>Round your answers to two decimal places if needed.</instruction>
+<p><var name="$solutions" width="10" /></p>
+</statement>
+<solution>
+<p>First, we move all terms to one side of the equals sign:<md> <mrow><var name="$left" />\amp=<var name="$right" /></mrow> <mrow><var name="$funcNew" />\amp=0</mrow> </md></p>
+<p>Next, we use technology to graph the function <m>f(x)=<var name="$funcNew" /></m>:</p>
+<sidebyside>
+<image pg-name="$gr">
+<description><var name="$alt" /></description>
+</image>
+</sidebyside>
+<p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
+</solution>
+</webwork>
+</exercise>
+<exercise>
+<webwork>
+<pg-macros>
+<macro-file>PCCgraphMacros.pl</macro-file>
+</pg-macros>
+<setup>
+<pg-code>
+Context("FiniteSolutionSets");
+Context()->flags->remove("NumberCheck");
+Context()->flags->set(
+tolerance => 0.005,
+tolType => "absolute",
+);
+do{
+$a = non_zero_random(-5,5,0.1);
+$b = non_zero_random(-5,5,0.1);
+$root = ($a-($b)**2)/(2*$b);
+$x = $root**2;
+} until ( $root > 0 );
+$solutions = Formula("{$x}");
+$left = Formula("sqrt(x+$a)")->reduce;
+$right = Formula("sqrt(x)+$b")->reduce;
+$funcNew = Compute("$left-sqrt(x)-$b")->reduce;
+$alt="This picture shows the graph of the function $f(x)=$funcNew. The points ($x,0) is labeled.";
+($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$x],[-2,2]);
+@xticks = @$xticks_ref;
+@yticks = @$yticks_ref;
+$gr = init_graph($min[0],$min[1],$max[0],$max[1],
+axes=>[0,0],
+grid=>[$ticknum[0],$ticknum[1]],
+size=>[xPixels(),yPixels()]
+);
+$gr->lb('reset');
+for my $j (@xticks) {
+if (abs($j) &lt; 10**(-10)) {next;}
+$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+}
+$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, 'x','black','center','bottom'));
+$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, 'y','black','left','middle'));
+for my $j (@yticks) {
+if (Real($j) == 0) {next;}
+$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+}
+add_functions($gr, "$funcNew for x in &lt; $min[0],$max[0] > using color:red and weight:1");
+$hx = ($x+$max[0])/2;
+$hy = $funcNew->eval(x=>$hx);
+$gr->lb( new Label($hx, $hy+$marksep[1]/4, "f(x)",'red','center','middle'));
+$xShow = int($x*100)/100;
+$gr->stamps( closed_circle($x, 0, 'red') );
+$gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
+<!-- todo: change this code to not subtract the right side onto the left before graphing. -->
+<!-- </pg-code>
+</setup>
+<statement>
+<p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
+<instruction>Round your answers to two decimal places if needed.</instruction>
+<p><var name="$solutions" width="10" /></p>
+</statement>
+<solution>
+<p>First, we move all terms to one side of the equals sign:<md> <mrow><var name="$left" />\amp=<var name="$right" /></mrow> <mrow><var name="$funcNew" />\amp=0</mrow> </md></p>
+<p>Next, we use technology to graph the function <m>f(x)=<var name="$funcNew" /></m>:</p>
+<sidebyside>
+<image pg-name="$gr">
+<description><var name="$alt" /></description>
+</image>
+</sidebyside>
+<p>The function's <m>x</m>-intercept gives us one solution of the equation: <m>x=<var name="$xShow"/></m>.</p>
+</solution>
+</webwork>
+</exercise> -->
+      <exercise permid="LVx">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral90.pg" />
+      </exercise>
+      <exercise permid="scG">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsLiteral90.pg" />
+      </exercise>
+      <exercise permid="YjP">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication92.pg" />
+      </exercise>
+      <exercise permid="EqY">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication92.pg" />
+      </exercise>
+      <exercise permid="kyh">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication122.pg" />
+      </exercise>
+      <exercise permid="QFq">
+        <webwork source="Math95/SolvingRadicalEquations/SolvingRadicalEquationsApplication122.pg" />
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

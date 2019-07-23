@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,549 +6,729 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
-<section xml:id="section-addition-and-subtraction-of-rational-expressions">
-
-    <title>Addition and Subtraction of Rational Expressions</title>
-
-    <introduction>
-        <p>In the last section, we learned how to multiply and divide rational expressions. In this section, we will learn how to add and subtract rational expressions.</p>
-    </introduction>
-
-    <subsection>
-        <title>Introduction</title>
-
-        <example xml:id="example-boat-river-rational-function">
-
-            <p>Julia is taking her family on a boat trip <m>12</m> miles down the river and back. The river flows at a speed of <m>2</m> miles per hour and she wants to drive the boat at a constant speed, <m>b</m> miles per hour downstream and back upstream. As explained in <xref ref="figure-downstream">Figure</xref> and <xref ref="figure-upstream">Figure</xref>, due to the current of the river, the actual speed of travel is <m>b+2</m> miles per hour going downstream, and <m>b-2</m> miles per hour going upstream.</p>
-
+<section xml:id="section-addition-and-subtraction-of-rational-expressions" permid="eDr">
+  <title>Addition and Subtraction of Rational Expressions</title>
+  <introduction permid="vPX">
+    <p permid="HIQ">
+      In the last section,
+      we learned how to multiply and divide rational expressions.
+      In this section,
+      we will learn how to add and subtract rational expressions.
+    </p>
+  </introduction>
+  <subsection permid="KKA">
+    <title>Introduction</title>
+    <example xml:id="example-boat-river-rational-function" permid="uaK">
+      <p permid="oVs">
+        Julia is taking her family on a boat trip <m>12</m> miles down the river and back.
+        The river flows at a speed of <m>2</m> miles per hour and she wants to drive the boat at a constant speed,
+        <m>b</m> miles per hour downstream and back upstream.
+        As explained in <xref ref="figure-downstream">Figure</xref>
+        and <xref ref="figure-upstream">Figure</xref>,
+        due to the current of the river,
+        the actual speed of travel is <m>b+2</m> miles per hour going downstream,
+        and <m>b-2</m> miles per hour going upstream.
+      </p>
 <!-- TODO: Add xref  -->
-            <p>We need to review three forms of the formula for movement at a constant, or uniform, rate:<md>
-                <mrow>d\amp=rt\amp r\amp=\frac{d}{t}\amp t\amp=\frac{d}{r}</mrow>
-
-            </md>where <m>d</m> stands for distance, <m>r</m> represents speed, and <m>t</m> stands for time. According to the third form, the time it takes the boat to travel downstream is <m>\frac{12}{b+2}</m>, and the time it takes to get back upstream is <m>\frac{12}{b-2}</m>.</p> 
-
-
-        <p>The point of this section is to work with expressions like <m>\frac{12}{b-2}+\frac{12}{b+2}</m>, where two rational expressions are added (or subtracted). There are times when it is useful to combine them into a single fraction. We will learn that the expression <m>\frac{12}{b-2}+\frac{12}{b+2}</m> is equal to the expression <m>\frac{24b}{b^2-4}</m> and we will learn how to make that simplification.</p>
+      <p permid="VcB">
+        We need to review three forms of the formula for movement at a constant,
+        or uniform, rate:
+        <md permid="pFm">
+          <mrow>d\amp=rt\amp r\amp=\frac{d}{t}\amp t\amp=\frac{d}{r}</mrow>
+        </md>
+        where <m>d</m> stands for distance,
+        <m>r</m> represents speed, and <m>t</m> stands for time.
+        According to the third form,
+        the time it takes the boat to travel downstream is <m>\frac{12}{b+2}</m>,
+        and the time it takes to get back upstream is <m>\frac{12}{b-2}</m>.
+      </p>
+      <p permid="BjK">
+        The point of this section is to work with expressions like <m>\frac{12}{b-2}+\frac{12}{b+2}</m>,
+        where two rational expressions are added
+        (or subtracted).
+        There are times when it is useful to combine them into a single fraction.
+        We will learn that the expression
+        <m>\frac{12}{b-2}+\frac{12}{b+2}</m> is equal to the expression
+        <m>\frac{24b}{b^2-4}</m> and we will learn how to make that simplification.
+      </p>
     </example>
-
-
-
 <!--         <p>In the example, the curve is still smooth, but there are two breaks at <m>x=-2</m> and <m>x=2</m>. Those two vertical lines are called <term>asymptotes</term>. A function's graph approaches an asymptote infinitely close, but never touches it.</p>
-
-        <p>In math, we use <m>\infty</m> to represent infinity. In the graph, the function's value approaches <m>\infty</m> as its <m>x</m> value approaches <m>2</m> from the right side, and approaches <m>-\infty</m> as its <m>x</m> value approaches <m>2</m> from the left side. Let's investigate why this is happening.</p>
-
-        <p>We will build a table of values for <m>t(v)</m>:</p>
-
-        <table>
-            <caption>Values of <m>t(v)=\frac{12}{v-2}+\frac{12}{v+2}</m></caption>
-            <tabular>
-                <col halign="center"/>
-                <col halign="center"/>
-                <col halign="center"/>
-                <row bottom="medium">
-                    <cell><m>v</m></cell>
-                    <cell><m>t(v)</m></cell>
-                    <cell>interpretation</cell>
-                </row>
-                <row>
-                    <cell><m>2.1</m></cell>
-                    <cell><m>122.92</m></cell>
-                    <cell><line>If the boat drives at <m>2.1</m> miles per hour,</line><line>the trip would take approximately <m>122.93</m> hours.</line></cell>
-                </row>
-                <row>
-                    <cell><m>2.01</m></cell>
-                    <cell><m>1202.99</m></cell>
-                    <cell><line>If the boat drives at <m>2.01</m> miles per hour,</line><line>the trip would take approximately <m>1202.99</m> hours.</line></cell>
-                </row>
-            </tabular>
-        </table>
- -->
-        <!-- <p>When the boat drives from Town B back to Town A at <m>2.1</m> miles per hour, the river's current would decrease the actual speed to <m>0.1</m> mile per hour. It would take the boat <m>\frac{12}{0.1}=120</m> hours to complete the travel from Town B back to Town A.</p>
-
-        <p>Similarly, as the boat drives from Town B to Town A at a speed closer and closer to <m>2</m>, the division <m>\frac{12}{v-2}</m> would produce a larger and larger value, approaching <m>\infty</m>. When we graph the function, we would plot <m>(2.1,122.93), (2.01,1202.99), (2.001,12003), \ldots</m>. This is why we see a vertical asymptote at <m>x=2</m>.</p>
-
-        <p>Now we understand why <m>t(v)=\frac{12}{v-2}+\frac{12}{v+2}</m> has two vertical asymptotes at <m>x=-2</m> and <m>x=2</m>. The domain of <m>t(v)</m> is <m>(-\infty,-2)\cup(-2,2)\cup(2,\infty)</m> in interval notation, and <lbrace /><m>x \mid x\ne-2, x\ne2</m><rbrace /> in set notation.</p> -->
-    </subsection>
-
-    <subsection>
-        <title>Addition and Subtraction of Rational Expressions with the Same Denominator</title>
-
-        <p>The process of adding and subtracting rational expressions will be very similar to the process of adding and subtracting purely numerical fractions.</p>
-
-        <p>If the two expressions have the same denominator, then we can rely on the property of <xref ref="fact-add-fractions-with-same-denominator" text="title">adding and subtracting fractions</xref> and simplify that result.</p>
-
-        <sidebyside widths="47% 47%" margins="0%">
-
-            <p>Let's review how to add fractions with the same denominator:<md>
-                <mrow>\frac{1}{10}+\frac{3}{10}\amp=\frac{1+3}{10}</mrow>
-                <mrow>\amp=\frac{4}{10}</mrow>
-                <mrow>\amp=\frac{2}{5}</mrow>
-            </md></p>
-
-            <p>We can add and subtract rational expressions in the same way:<md>
-                <mrow>\frac{2}{3x}-\frac{5}{3x}\amp=\frac{2-5}{3x}</mrow>
-                <mrow>\amp=\frac{-3}{3x}</mrow>
-                <mrow>\amp=-\frac{1}{x}</mrow>
-            </md></p>
-        </sidebyside>
-
-        
-
-        <example>
-            <statement>
-                <p>Add the rational expressions: <m>\dfrac{2x}{x+y}+\dfrac{2y}{x+y}</m>.</p>
-            </statement>
-            <solution>
-                <p>These expressions already have a common denominator:<md>
-                    <mrow>\frac{2x}{x+y}+\frac{2y}{x+y}\amp=\frac{2x+2y}{x+y}</mrow>
-                    <mrow>\amp=\frac{2\cancelhighlight{(x+y)}}{\cancelhighlight{x+y}}</mrow>
-                    <mrow>\amp=\frac{2}{1}</mrow>
-                    <mrow>\amp=2</mrow>
-                </md>Note that we didn't stop at <m>\frac{2x+2y}{x+y}</m>. If possible, we must simplify the numerator and denominator. Since this is a multivariable expression, this textbook ignores domain restrictions while canceling.</p>
-            </solution>
-        </example>
-        </subsection>
-
-        <subsection>
-        <title>Addition and Subtraction of Rational Expressions with Different Denominators</title>
-
-        <introduction><p>Below are the steps to follow when adding or subtracting rational expressions, in general.
-
-        <list xml:id="list-add-subtract-rational-expressions">
-            <caption>Steps to Adding/Subtracting Rational Expressions</caption>
-            <dl>
-                <li><title>Identify the LCD</title><p>Determine the least common denominator of all of the denominators.</p></li>
-                <li><title>Build</title><p>If necessary, build each expression so that the denominators are the same.</p></li>
-                <li><title>Add/Subtract</title><p>Combine the numerators using the <xref ref="fact-add-fractions-with-same-denominator" text="title">properties of adding and subtracting fractions</xref>.</p></li>
-                <li><title>Simplify</title><p>Simplify the resulting rational expression as much as possible. This may require factoring the numerator.</p></li>
-            </dl>
-        </list></p></introduction>
-
-        <sidebyside widths="47% 47%" margins="0%">
-            <p>As you can see from the list above, to add rational expressions with different denominators, we'll need to build each fraction to the least common denominator. This is similar to the way we treat numerical fractions. Let's briefly review this process by adding <m>\frac{3}{5}</m> and <m>\frac{1}{6}</m>:</p>
-            <p><md>
-                <mrow>\frac{3}{5}+\frac{1}{6}\amp=\frac{3}{5}\multiplyright{\frac{6}{6}}+\frac{1}{6}\multiplyright{\frac{5}{5}}</mrow>
-                <mrow>\amp=\frac{18}{30}+\frac{5}{30}</mrow>
-                <mrow>\amp=\frac{18+5}{30}</mrow>
-                <mrow>\amp=\frac{23}{30}</mrow>
-            </md></p>
-        </sidebyside>
-
-        <p>This exact method can be used when adding rational expressions containing variables. The key is that the expressions <em>must</em> have the same denominator before they can be added or subtracted. If they don't have this initially, then we'll identify the least common denominator and build each expression so that it has that denominator.</p>
-
-        <paragraphs>
-            <title>Finding the Least Common Denominator of Rational Expressions</title>
-
-        <p>In <xref ref="section-fractions-and-fraction-arithmetic">Section</xref>, a method for finding the least common of denominator of numerical fractions is suggested, which can also be applied to rational expressions.</p>
-
-        <p>To find the least common denominator (LCD) of two or more rational expressions with this method, we must first find the prime factors of each denominator. In other words, factor each denominator completely. These prime factors will be the building blocks we need to build the LCD of the rational expressions.</p>
-
-        <p>To build the LCD, we first collect all of the prime factors from the first denominator. Next, we collect only those prime factors from the second denominator that haven't already been collected from the first denominator.</p>
-
-        <p>If there is more than one rational expression, we continue collecting prime factors from each denominator that haven't already been collected. The last step then is to multiply together all of the prime factors that were collected in this process. This resulting product will be the LCD.</p>
-
-        <p>Let's see how this works with an example.</p>
-
-        <example xml:id="example-finding-LCD-of-rational-expresions"><statement>
-            <p>Find the least common denominator of the rational expressions <m>\frac{1}{x^2-2x-15}</m> and <m>\frac{2x^2}{x^2-9}</m>.</p>
+<p>In math, we use <m>\infty</m> to represent infinity. In the graph, the function's value approaches <m>\infty</m> as its <m>x</m> value approaches <m>2</m> from the right side, and approaches <m>-\infty</m> as its <m>x</m> value approaches <m>2</m> from the left side. Let's investigate why this is happening.</p>
+<p>We will build a table of values for <m>t(v)</m>:</p>
+<table>
+<caption>Values of <m>t(v)=\frac{12}{v-2}+\frac{12}{v+2}</m></caption>
+<tabular>
+<col halign="center"/>
+<col halign="center"/>
+<col halign="center"/>
+<row bottom="medium">
+<cell><m>v</m></cell>
+<cell><m>t(v)</m></cell>
+<cell>interpretation</cell>
+</row>
+<row>
+<cell><m>2.1</m></cell>
+<cell><m>122.92</m></cell>
+<cell><line>If the boat drives at <m>2.1</m> miles per hour,</line><line>the trip would take approximately <m>122.93</m> hours.</line></cell>
+</row>
+<row>
+<cell><m>2.01</m></cell>
+<cell><m>1202.99</m></cell>
+<cell><line>If the boat drives at <m>2.01</m> miles per hour,</line><line>the trip would take approximately <m>1202.99</m> hours.</line></cell>
+</row>
+</tabular>
+</table>
+-->
+<!-- <p>When the boat drives from Town B back to Town A at <m>2.1</m> miles per hour, the river's current would decrease the actual speed to <m>0.1</m> mile per hour. It would take the boat <m>\frac{12}{0.1}=120</m> hours to complete the travel from Town B back to Town A.</p>
+<p>Similarly, as the boat drives from Town B to Town A at a speed closer and closer to <m>2</m>, the division <m>\frac{12}{v-2}</m> would produce a larger and larger value, approaching <m>\infty</m>. When we graph the function, we would plot <m>(2.1,122.93), (2.01,1202.99), (2.001,12003), \ldots</m>. This is why we see a vertical asymptote at <m>x=2</m>.</p>
+<p>Now we understand why <m>t(v)=\frac{12}{v-2}+\frac{12}{v+2}</m> has two vertical asymptotes at <m>x=-2</m> and <m>x=2</m>. The domain of <m>t(v)</m> is <m>(-\infty,-2)\cup(-2,2)\cup(2,\infty)</m> in interval notation, and <lbrace /><m>x \mid x\ne-2, x\ne2</m><rbrace /> in set notation.</p> -->
+  </subsection>
+  <subsection permid="qRJ">
+    <title>Addition and Subtraction of Rational Expressions with the Same Denominator</title>
+    <p permid="YHb">
+      The process of adding and subtracting rational expressions will be very similar to the process of adding and subtracting purely numerical fractions.
+    </p>
+    <p permid="EOk">
+      If the two expressions have the same denominator,
+      then we can rely on the property of <xref ref="fact-add-fractions-with-same-denominator" text="title">adding and subtracting fractions</xref> and simplify that result.
+    </p>
+    <sidebyside widths="47% 47%" margins="0%" permid="Gpc">
+      <p permid="jgg">
+        Let's review how to add fractions with the same denominator:
+        <md permid="VMv">
+          <mrow>\frac{1}{10}+\frac{3}{10}\amp=\frac{1+3}{10}</mrow>
+          <mrow>\amp=\frac{4}{10}</mrow>
+          <mrow>\amp=\frac{2}{5}</mrow>
+        </md>
+      </p>
+      <p permid="Pnp">
+        We can add and subtract rational expressions in the same way:
+        <md permid="BTE">
+          <mrow>\frac{2}{3x}-\frac{5}{3x}\amp=\frac{2-5}{3x}</mrow>
+          <mrow>\amp=\frac{-3}{3x}</mrow>
+          <mrow>\amp=-\frac{1}{x}</mrow>
+        </md>
+      </p>
+    </sidebyside>
+    <example permid="ahT">
+      <statement>
+        <p permid="hqT">
+          Add the rational expressions:
+          <m>\dfrac{2x}{x+y}+\dfrac{2y}{x+y}</m>.
+        </p>
+      </statement>
+      <solution permid="bXg">
+        <p permid="iwm">
+          These expressions already have a common denominator:
+          <md permid="iaN">
+            <mrow>\frac{2x}{x+y}+\frac{2y}{x+y}\amp=\frac{2x+2y}{x+y}</mrow>
+            <mrow>\amp=\frac{2\cancelhighlight{(x+y)}}{\cancelhighlight{x+y}}</mrow>
+            <mrow>\amp=\frac{2}{1}</mrow>
+            <mrow>\amp=2</mrow>
+          </md>
+          Note that we didn't stop at <m>\frac{2x+2y}{x+y}</m>.
+          If possible, we must simplify the numerator and denominator.
+          Since this is a multivariable expression,
+          this textbook ignores domain restrictions while canceling.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="WYS">
+    <title>Addition and Subtraction of Rational Expressions with Different Denominators</title>
+    <introduction permid="PIO">
+      <p permid="nPZ">
+        Below are the steps to follow when adding or subtracting rational expressions,
+        in general.
+        <list xml:id="list-add-subtract-rational-expressions" permid="Xnn">
+          <caption>Steps to Adding/Subtracting Rational Expressions</caption>
+          <dl permid="FjJ">
+            <li permid="lqS">
+              <title>Identify the LCD</title>
+              <p permid="JTC">
+                Determine the least common denominator of all of the denominators.
+              </p>
+            </li>
+            <li permid="Ryb">
+              <title>Build</title>
+              <p permid="qaL">
+                If necessary,
+                build each expression so that the denominators are the same.
+              </p>
+            </li>
+            <li permid="xFk">
+              <title>Add/Subtract</title>
+              <p permid="WhU">
+                Combine the numerators using the <xref ref="fact-add-fractions-with-same-denominator" text="title">properties of adding and subtracting fractions</xref>.
+              </p>
+            </li>
+            <li permid="dMt">
+              <title>Simplify</title>
+              <p permid="Cpd">
+                Simplify the resulting rational expression as much as possible.
+                This may require factoring the numerator.
+              </p>
+            </li>
+          </dl>
+        </list>
+      </p>
+    </introduction>
+    <sidebyside widths="47% 47%" margins="0%" permid="Duw">
+      <p permid="vuy">
+        As you can see from the list above,
+        to add rational expressions with different denominators,
+        we'll need to build each fraction to the least common denominator.
+        This is similar to the way we treat numerical fractions.
+        Let's briefly review this process by adding
+        <m>\frac{3}{5}</m> and <m>\frac{1}{6}</m>:
+      </p>
+      <p permid="bBH">
+        <md permid="OhW">
+          <mrow>\frac{3}{5}+\frac{1}{6}\amp=\frac{3}{5}\multiplyright{\frac{6}{6}}+\frac{1}{6}\multiplyright{\frac{5}{5}}</mrow>
+          <mrow>\amp=\frac{18}{30}+\frac{5}{30}</mrow>
+          <mrow>\amp=\frac{18+5}{30}</mrow>
+          <mrow>\amp=\frac{23}{30}</mrow>
+        </md>
+      </p>
+    </sidebyside>
+    <p permid="kVt">
+      This exact method can be used when adding rational expressions containing variables.
+      The key is that the expressions <em>must</em>
+      have the same denominator before they can be added or subtracted.
+      If they don't have this initially,
+      then we'll identify the least common denominator and build each expression so that it has that denominator.
+    </p>
+    <paragraphs permid="jnk">
+      <title>Finding the Least Common Denominator of Rational Expressions</title>
+      <p permid="TXi">
+        In <xref ref="section-fractions-and-fraction-arithmetic">Section</xref>,
+        a method for finding the least common of denominator of numerical fractions is suggested,
+        which can also be applied to rational expressions.
+      </p>
+      <p permid="Aer">
+        To find the least common denominator (LCD) of two or more rational expressions with this method,
+        we must first find the prime factors of each denominator.
+        In other words, factor each denominator completely.
+        These prime factors will be the building blocks we need to build the LCD of the rational expressions.
+      </p>
+      <p permid="glA">
+        To build the LCD, we first collect all of the prime factors from the first denominator.
+        Next, we collect only those prime factors from the second denominator that haven't already been collected from the first denominator.
+      </p>
+      <p permid="MsJ">
+        If there is more than one rational expression,
+        we continue collecting prime factors from each denominator that haven't already been collected.
+        The last step then is to multiply together all of the prime factors that were collected in this process.
+        This resulting product will be the LCD.
+      </p>
+      <p permid="szS">
+        Let's see how this works with an example.
+      </p>
+      <example xml:id="example-finding-LCD-of-rational-expresions" permid="Vya">
+        <statement>
+          <p permid="Nyc">
+            Find the least common denominator of the rational expressions
+            <m>\frac{1}{x^2-2x-15}</m> and <m>\frac{2x^2}{x^2-9}</m>.
+          </p>
         </statement>
-
-        <solution><p>The first step is to factor the denominators of each expression completely.</p>
-        <sidebyside widths="40% 40%">
-        <p><md><mrow>\frac{1}{x^2-2x-15}</mrow>
-            <mrow>=\frac{1}{(x+3)(x-5)}</mrow></md></p>
-
-        <p><md><mrow>\frac{2x^2}{x^2-9}</mrow>
-            <mrow>=\frac{2x^2}{(x+3)(x-3)}</mrow></md></p></sidebyside> 
-
-        <p>Now, we collect all of the factors from the first denominator, which are <m>(x+3)</m> and <m>(x-5)</m>. Next, we collect only the factors of the second denominator that we haven't already taken from the first denominator. Notice that we have already taken a factor of <m>(x+3)</m>. Therefore, we need only collect the factor of <m>(x-3)</m> from the second denominator. This gives us three factors: <m>(x+3)</m>, <m>(x-5)</m>, and <m>(x-3)</m>. Multiplying these together gives us our LCD:</p>
-
-        <p>LCD <m>=(x+3)(x-5)(x-3)</m></p>
-
+        <solution permid="Iep">
+          <p permid="ODv">
+            The first step is to factor the denominators of each expression completely.
+          </p>
+          <sidebyside widths="40% 40%" permid="hMs">
+            <p permid="uKE">
+              <md permid="upf">
+                <mrow>\frac{1}{x^2-2x-15}</mrow>
+                <mrow>=\frac{1}{(x+3)(x-5)}</mrow>
+              </md>
+            </p>
+            <p permid="aRN">
+              <md permid="awo">
+                <mrow>\frac{2x^2}{x^2-9}</mrow>
+                <mrow>=\frac{2x^2}{(x+3)(x-3)}</mrow>
+              </md>
+            </p>
+          </sidebyside>
+          <p permid="GYW">
+            Now, we collect all of the factors from the first denominator,
+            which are <m>(x+3)</m> and <m>(x-5)</m>.
+            Next, we collect only the factors of the second denominator that we haven't already taken from the first denominator.
+            Notice that we have already taken a factor of <m>(x+3)</m>.
+            Therefore, we need only collect the factor of <m>(x-3)</m> from the second denominator.
+            This gives us three factors:
+            <m>(x+3)</m>, <m>(x-5)</m>, and <m>(x-3)</m>.
+            Multiplying these together gives us our LCD:
+          </p>
+          <p permid="ngf">
+            LCD <m>=(x+3)(x-5)(x-3)</m>
+          </p>
         </solution>
-        </example>
-
-        <example><statement>
-            <p>Find the least common denominator of the rational expressions <m>\frac{5y^2}{6xy+30y^2}</m> and <m>\frac{y}{4x^2+12xy-40y^2}</m>.</p>
+      </example>
+      <example permid="BFj">
+        <statement>
+          <p permid="tFl">
+            Find the least common denominator of the rational expressions
+            <m>\frac{5y^2}{6xy+30y^2}</m> and <m>\frac{y}{4x^2+12xy-40y^2}</m>.
+          </p>
         </statement>
-
-        <solution><p>The first step is to factor the denominators of each expression completely.</p>
-        <sidebyside widths="40% 40%">
-        <p><md><mrow>\frac{5y^2}{6xy+30y^2}</mrow>
-            <mrow>=\frac{5y^2}{2\cdot 3\cdot\ y(x+5y)}</mrow></md></p>
-
-        <p><md><mrow>\frac{y}{4x^2+12xy-40y^2}</mrow>
-            <mrow>=\frac{y}{2\cdot 2(x+5y)(x-2y)}</mrow></md></p></sidebyside> 
-
-        <p>Now, we collect all of the factors from the first denominator, which are <m>2</m>, <m>3</m>, <m>y</m>, and <m>(x+5y)</m>. Next, we collect only the factors of the second denominator that we haven't already taken from the first denominator. Notice that we have already taken factors of <m>2</m> and <m>(x+5y)</m>. Therefore, we need only collect the second factor of <m>2</m>, as well as the factor of <m>(x-2y)</m> from the second denominator. This gives us the following factors to build the LCD: <m>2</m>, <m>2</m>, <m>3</m>, <m>y</m>, <m>(x+5y)</m> and <m>(x-2y)</m>. Multiplying these together gives us:</p>
-
-        <p>LCD <m>=2\cdot 2\cdot 3\cdot y(x+5y)(x-2y)=12y(x+5y)(x-2y)</m></p>
+        <solution permid="oly">
+          <p permid="Tno">
+            The first step is to factor the denominators of each expression completely.
+          </p>
+          <sidebyside widths="40% 40%" permid="NTB">
+            <p permid="zux">
+              <md permid="GDx">
+                <mrow>\frac{5y^2}{6xy+30y^2}</mrow>
+                <mrow>=\frac{5y^2}{2\cdot 3\cdot\ y(x+5y)}</mrow>
+              </md>
+            </p>
+            <p permid="fBG">
+              <md permid="mKG">
+                <mrow>\frac{y}{4x^2+12xy-40y^2}</mrow>
+                <mrow>=\frac{y}{2\cdot 2(x+5y)(x-2y)}</mrow>
+              </md>
+            </p>
+          </sidebyside>
+          <p permid="LIP">
+            Now, we collect all of the factors from the first denominator,
+            which are <m>2</m>, <m>3</m>,
+            <m>y</m>, and <m>(x+5y)</m>.
+            Next, we collect only the factors of the second denominator that we haven't already taken from the first denominator.
+            Notice that we have already taken factors of <m>2</m> and <m>(x+5y)</m>.
+            Therefore, we need only collect the second factor of <m>2</m>,
+            as well as the factor of <m>(x-2y)</m> from the second denominator.
+            This gives us the following factors to build the LCD: <m>2</m>,
+            <m>2</m>, <m>3</m>, <m>y</m>,
+            <m>(x+5y)</m> and <m>(x-2y)</m>.
+            Multiplying these together gives us:
+          </p>
+          <p permid="rPY">
+            LCD <m>=2\cdot 2\cdot 3\cdot y(x+5y)(x-2y)=12y(x+5y)(x-2y)</m>
+          </p>
         </solution>
-        </example>
+      </example>
     </paragraphs>
-
-    <p>Before we apply this new skill to adding or subtracting rational expressions, let's go over the next step of building each expression to an equivalent rational expression with the LCD, by looking again at the expressions from <xref ref="example-finding-LCD-of-rational-expresions">Example</xref>.</p>
-
-    <example>
-            <p>Now that we found the LCD of rational expressions <m>\frac{1}{x^2-2x-15}</m> and <m>\frac{2x^2}{x^2-9}</m> to be <m>(x+3)(x-5)(x-3)</m>. Let's build each of these rational expressions up to an equivalent rational expression that has <m>(x+3)(x-5)(x-3)</m> as its denominator.</p>
-            <p>To do that, we will need to multiply each expression by a fraction equivalent to one. That fraction will need to include, in both the numerator and denominator, all factors of the LCD that are missing from the denominator of the original expression. To see which factors are missing, we need to look at each denominator in factored form.</p>
-                <sidebyside widths="40% 40%" margins="0%">
-                    <p><md>
-                        <mrow>\frac{1}{x^2-2x-15}\amp=\frac{1}{(x+3)(x-5)}\multiplyright{\frac{x-3}{x-3}}</mrow>
-                        <mrow>\amp=\frac{1(x-3)}{(x+3)(x-5)(x-3)}</mrow>
-                        <mrow>\amp=\frac{x-3}{(x+3)(x-5)(x-3)}</mrow>
-                    </md></p>
-
-                    <p><md>
-                        <mrow>\frac{2x^2}{x^2-9}\amp=\frac{2x^2}{(x+3)(x-3)}\multiplyright{\frac{x-5}{x-5}}</mrow>
-                        <mrow>\amp=\frac{2x^2\left(x-5\right)}{(x+3)(x-5)(x-3)}</mrow>
-                        <mrow>\amp=\frac{2x^3-10x^2}{(x+3)(x-5)(x-3)}</mrow>
-                    </md></p>
-                </sidebyside> 
-            <p>Notice that the denominator of the first rational expression was missing a factor of <m>x-3</m>, so we multiplied by a fraction whose numerator and denominator are both <m>x-3</m>. Similarly, the second rational expression was missing a factor of <m>x-5</m>, so we used that factor to make a fraction equivalent to one to multiply the second rational expression by. Now, we have two rational expressions with the same denominator, namely the LCD.</p>
-        </example>
-
-
-        <p>Let's apply what we've learned so far to adding the two expressions with denominators that are <m>b-2</m> and <m>b+2</m> from <xref ref="example-boat-river-rational-function">Example</xref>.</p>
-        <example>
-            <statement>
-                <p>Add the rational expressions and fully simplify the function given by <m>t(b)=\frac{12}{b-2}+\frac{12}{b+2}</m>, where the function name, <m>t</m>, stands for time.</p>
-            </statement>
-            <solution><p>Note that both denominators are factored completely and, when we follow the process of collecting factors to build the LCD, we obtain an LCD of <m>(b-2)(b+2)</m>. Next, we build each expression up to an equivalent rational expression that has the LCD as its denominator by multiplying both the numerator and denominator by the missing factor needed. Once we obtain common denominators, we are ready to add, as you can see below.</p>
-                <p><md>
-                    <mrow>t(b)\amp=\frac{12}{b-2}+\frac{12}{b+2}</mrow>
-                    <mrow>t(b)\amp=\frac{12}{b-2}\multiplyright{\frac{b+2}{b+2}}+\frac{12}{b+2}\multiplyright{\frac{b-2}{b-2}}</mrow>
-                    <mrow>t(b)\amp=\frac{12b+24}{(b-2)(b+2)}+\frac{12b-24}{(b+2)(b-2)}</mrow>
-                    <mrow>t(b)\amp=\frac{(12b+24)+(12b-24)}{(b+2)(b-2)}</mrow>
-                    <mrow>t(b)\amp=\frac{24b}{(b+2)(b-2)}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Add the rational expressions: <m>\dfrac{2}{5x^2y}+\dfrac{3}{20xy^2}</m></p>
-            </statement>
-            <solution>
-                <p>By collecting prime factors of each denominator, using the method we've discussed previously, we see that the least common denominator of <m>5x^2y</m> and <m>20xy^2</m> must include two <m>x</m>'s and two <m>y</m>'s, as well as <m>5\cdot 2\cdot 2=20</m>. Thus, the LCD is <m>20x^2y^2</m>. We will build both denominators to <m>20x^2y^2</m> before doing the addition.<md>
-                    <mrow>\frac{2}{5x^2y}+\frac{3}{20xy^2}\amp=\frac{2}{5x^2y}\multiplyright{\frac{4y}{4y}}+\frac{3}{20xy^2}\multiplyright{\frac{x}{x}}</mrow>
-                    <mrow>\amp=\frac{8y}{20x^2y^2}+\frac{3x}{20x^2y^2}</mrow>
-                    <mrow>\amp=\frac{8y+3x}{20x^2y^2}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-
+    <p permid="RcC">
+      Before we apply this new skill to adding or subtracting rational expressions,
+      let's go over the next step of building each expression to an equivalent rational expression with the LCD, by looking again at the expressions from <xref ref="example-finding-LCD-of-rational-expresions">Example</xref>.
+    </p>
+    <example permid="mwl">
+      <p permid="ZMu">
+        Now that we found the LCD of rational expressions <m>\frac{1}{x^2-2x-15}</m> and
+        <m>\frac{2x^2}{x^2-9}</m> to be <m>(x+3)(x-5)(x-3)</m>.
+        Let's build each of these rational expressions up to an equivalent rational expression that has <m>(x+3)(x-5)(x-3)</m> as its denominator.
+      </p>
+      <p permid="FTD">
+        To do that, we will need to multiply each expression by a fraction equivalent to one.
+        That fraction will need to include,
+        in both the numerator and denominator,
+        all factors of the LCD that are missing from the denominator of the original expression.
+        To see which factors are missing,
+        we need to look at each denominator in factored form.
+      </p>
+      <sidebyside widths="40% 40%" margins="0%" permid="jBF">
+        <p permid="maM">
+          <md permid="SRP">
+            <mrow>\frac{1}{x^2-2x-15}\amp=\frac{1}{(x+3)(x-5)}\multiplyright{\frac{x-3}{x-3}}</mrow>
+            <mrow>\amp=\frac{1(x-3)}{(x+3)(x-5)(x-3)}</mrow>
+            <mrow>\amp=\frac{x-3}{(x+3)(x-5)(x-3)}</mrow>
+          </md>
+        </p>
+        <p permid="ShV">
+          <md permid="yYY">
+            <mrow>\frac{2x^2}{x^2-9}\amp=\frac{2x^2}{(x+3)(x-3)}\multiplyright{\frac{x-5}{x-5}}</mrow>
+            <mrow>\amp=\frac{2x^2\left(x-5\right)}{(x+3)(x-5)(x-3)}</mrow>
+            <mrow>\amp=\frac{2x^3-10x^2}{(x+3)(x-5)(x-3)}</mrow>
+          </md>
+        </p>
+      </sidebyside>
+      <p permid="ype">
+        Notice that the denominator of the first rational expression was missing a factor of <m>x-3</m>,
+        so we multiplied by a fraction whose numerator and denominator are both <m>x-3</m>.
+        Similarly, the second rational expression was missing a factor of <m>x-5</m>,
+        so we used that factor to make a fraction equivalent to one to multiply the second rational expression by.
+        Now, we have two rational expressions with the same denominator,
+        namely the LCD.
+      </p>
+    </example>
+    <p permid="xjL">
+      Let's apply what we've learned so far to adding the two expressions with denominators that are <m>b-2</m> and <m>b+2</m> from <xref ref="example-boat-river-rational-function">Example</xref>.
+    </p>
+    <example permid="SDu">
+      <statement>
+        <p permid="ewn">
+          Add the rational expressions and fully simplify the function given by <m>t(b)=\frac{12}{b-2}+\frac{12}{b+2}</m>,
+          where the function name, <m>t</m>, stands for time.
+        </p>
+      </statement>
+      <solution permid="UsH">
+        <p permid="XXh">
+          Note that both denominators are factored completely and,
+          when we follow the process of collecting factors to build the LCD, we obtain an LCD of <m>(b-2)(b+2)</m>.
+          Next, we build each expression up to an equivalent rational expression that has the LCD as its denominator by multiplying both the numerator and denominator by the missing factor needed.
+          Once we obtain common denominators,
+          we are ready to add, as you can see below.
+        </p>
+        <p permid="Eeq">
+          <md permid="fgh">
+            <mrow>t(b)\amp=\frac{12}{b-2}+\frac{12}{b+2}</mrow>
+            <mrow>t(b)\amp=\frac{12}{b-2}\multiplyright{\frac{b+2}{b+2}}+\frac{12}{b+2}\multiplyright{\frac{b-2}{b-2}}</mrow>
+            <mrow>t(b)\amp=\frac{12b+24}{(b-2)(b+2)}+\frac{12b-24}{(b+2)(b-2)}</mrow>
+            <mrow>t(b)\amp=\frac{(12b+24)+(12b-24)}{(b+2)(b-2)}</mrow>
+            <mrow>t(b)\amp=\frac{24b}{(b+2)(b-2)}</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <example permid="yKD">
+      <statement>
+        <p permid="KDw">
+          Add the rational expressions:
+          <m>\dfrac{2}{5x^2y}+\dfrac{3}{20xy^2}</m>
+        </p>
+      </statement>
+      <solution permid="AzQ">
+        <p permid="klz">
+          By collecting prime factors of each denominator,
+          using the method we've discussed previously,
+          we see that the least common denominator of <m>5x^2y</m> and <m>20xy^2</m> must include two <m>x</m>'s and two <m>y</m>'s, as well as <m>5\cdot 2\cdot 2=20</m>.
+          Thus, the LCD is <m>20x^2y^2</m>.
+          We will build both denominators to
+          <m>20x^2y^2</m> before doing the addition.
+          <md permid="Lnq">
+            <mrow>\frac{2}{5x^2y}+\frac{3}{20xy^2}\amp=\frac{2}{5x^2y}\multiplyright{\frac{4y}{4y}}+\frac{3}{20xy^2}\multiplyright{\frac{x}{x}}</mrow>
+            <mrow>\amp=\frac{8y}{20x^2y^2}+\frac{3x}{20x^2y^2}</mrow>
+            <mrow>\amp=\frac{8y+3x}{20x^2y^2}</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
 <!--TODO: Add WW exercise: determine LCD of various pairs of rational expressions-->
-
 <!--         <example>
-            <statement>
-                <p>Subtract rational expressions <m>\frac{2}{x^2+x}-\frac{1}{x^2}</m></p>
-            </statement>
-            <solution>
-                <p>We must avoid this mistake:<me>\frac{2}{x^2+x}-\frac{1}{x^2}=\frac{2}{x^2+x}-\frac{1\addright{x}}{x^2\addright{x}}</me>We can only multiply or divide the same number in a fraction's numerator and denominator; we may not add or subtract numbers in the mistake above. The correct first step is to factor the denominators:<md>
-                    <mrow>\frac{2}{x^2+x}-\frac{1}{x^2}\amp=\frac{2}{x(x+1)}-\frac{1}{x^2}</mrow>
-                </md>The common denominator of <m>x(x+1)</m> and <m>x^2</m> must include two <m>x</m>'s and one <m>(x+1)</m> as factors, and it is <m>x^2(x+1)</m>. The rest of the solution is:<md>
-                    <mrow>\amp=\frac{2\multiplyright{x}}{x(x+1)\multiplyright{x}}-\frac{1\multiplyright{(x+1)}}{x^2\multiplyright{(x+1)}}</mrow>
-                    <mrow>\amp=\frac{2x}{x^2(x+1)}-\frac{x+1}{x^2(x+1)}</mrow>
-                    <mrow>\amp=\frac{2x-(x+1)}{x^2(x+1)}</mrow>
-                    <mrow>\amp=\frac{2x-x-1}{x^2(x+1)}</mrow>
-                    <mrow>\amp=\frac{x-1}{x^2(x+1)}</mrow>
-                </md></p>
-            </solution>
-        </example> -->
-
-
-        <p>Let's look at a few more complicated examples.</p>
-
-        <example xml:id="example-subtract-rational-expressions-with-restriction">
-            <statement>
-                <p>Subtract the rational expressions: <m>\dfrac{y}{y-2}-\dfrac{8y-8}{y^2-4}</m></p>
-            </statement>
-            <solution>
-                <p>To start, we'll make sure each denominator is factored. Next, we'll find the least common denominator and build each expression to that denominator. Then, we will be able to combine the numerators and simplify the expression.
-                    <md>
-                    <mrow>\frac{y}{y-2}-\frac{8y-8}{y^2-4}\amp=\frac{y}{y-2}-\frac{8y-8}{(y+2)(y-2)}</mrow>
-                    <mrow>\amp=\frac{y}{y-2}\multiplyright{\frac{y+2}{y+2}}-\frac{8y-8}{(y+2)(y-2)}</mrow>
-                    <mrow>\amp=\frac{y^2+2y}{(y+2)(y-2)}-\frac{8y-8}{(y+2)(y-2)}</mrow>
-                    <mrow>\amp=\frac{y^2+2y-\highlight{\attention{(}}8y-8\highlight{\attention{)}}}{(y+2)(y-2)}</mrow>
-                    <mrow>\amp=\frac{y^2+2y-8y+8}{(y+2)(y-2)}</mrow>
-                    <mrow>\amp=\frac{y^2-6y+8}{(y+2)(y-2)}</mrow>
-                    <mrow>\amp=\frac{\cancelhighlight{(y-2)}(y-4)}{(y+2)\cancelhighlight{(y-2)}}</mrow>
-                    <mrow>\amp=\frac{y-4}{y+2}, \text{ for } y\neq 2</mrow>
-                </md>Note that we must factor the numerator in <m>\frac{y^2-6y+8}{(y+2)(y-2)}</m> and try to reduce the fraction (which we did).</p>
-            </solution>
-        </example>
-
-        <warning><p>In <xref ref="example-subtract-rational-expressions-with-restriction">Example</xref>, be careful to subtract the entire numerator of <m>8y-8</m>. When this expression is in the numerator of <m>\frac{8y-8}{(y+2)(y-2)}</m>, it's implicitly grouped and doesn't need parentheses. But once <m>8y-8</m> is subtracted from <m>y^2+2y</m>, we need to add parentheses so the entire expression is subtracted.</p></warning>
-
-        <p>In the next example, we'll look at adding a rational expression to a polynomial. Much like adding a fraction and an integer, we'll rely on writing that expression as itself over one in order to build its denominator.</p>
-
-        <example>
-            <statement>
-                <p>Add the expressions: <m>-\dfrac{2}{r-1}+r</m></p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>-\frac{2}{r-1}+r\amp=-\frac{2}{r-1}+\frac{r}{1}</mrow>
-                    <mrow>\amp=-\frac{2}{r-1}+\frac{r}{1}\multiplyright{\frac{r-1}{r-1}}</mrow>
-                    <mrow>\amp=\frac{-2}{r-1}+\frac{r^2-r}{r-1}</mrow>
-                    <mrow>\amp=\frac{-2+r^2-r}{r-1}</mrow>
-                    <mrow>\amp=\frac{r^2-r-2}{r-1}</mrow>
-                    <mrow>\amp=\frac{(r-2)(r+1)}{r-1}</mrow>
-                </md>Note that we factored the numerator to reduce the fraction if possible. Even though it was not possible in this case, leaving it in factored form makes it easier to see that it is reduced.</p>
-            </solution>
-        </example>
-
-
-        <example>
-            <statement>
-                <p>Subtract the expressions: <m>\dfrac{6}{x^2-2x-8}-\dfrac{1}{x^2+3x+2}</m></p>
-            </statement>
-            <solution>
-                <p>To start, we'll need to factor each of the denominators. After that, we'll identify the LCD and build each denominator accordingly. Then we can combine the numerators and simplify the resulting expression.<md>
-                    <mrow>\frac{6}{x^2-2x-8}-\frac{1}{x^2+3x+2}\amp=\frac{6}{(x-4)(x+2)}-\frac{1}{(x+2)(x+1)}</mrow>
-                    <mrow>\amp=\frac{6}{(x-4)(x+2)}\multiplyright{\frac{x+1}{x+1}}-\frac{1}{(x+2)(x+1)}\multiplyright{\frac{x-4}{x-4}}</mrow>
-                    <mrow>\amp=\frac{6x+6}{(x-4)(x+2)(x+1)}-\frac{x-4}{(x+2)(x+1)(x-4)}</mrow>
-                    <mrow>\amp=\frac{6x+6-(x-4)}{(x-4)(x+2)(x+1)}</mrow>
-                    <mrow>\amp=\frac{6x+6-x+4}{(x-4)(x+2)(x+1)}</mrow>
-                    <mrow>\amp=\frac{5x+10}{(x-4)(x+2)(x+1)}</mrow>
-                    <mrow>\amp=\frac{5\cancelhighlight{(x+2)}}{(x-4)\cancelhighlight{(x+2)}(x+1)}</mrow>
-                    <mrow>\amp=\frac{5}{(x-4)(x+1)}, \text{ for }x\neq -2</mrow>
-                </md></p>
-            </solution>
-        </example>
-    </subsection>
-
+<statement>
+<p>Subtract rational expressions <m>\frac{2}{x^2+x}-\frac{1}{x^2}</m></p>
+</statement>
+<solution>
+<p>We must avoid this mistake:<me>\frac{2}{x^2+x}-\frac{1}{x^2}=\frac{2}{x^2+x}-\frac{1\addright{x}}{x^2\addright{x}}</me>We can only multiply or divide the same number in a fraction's numerator and denominator; we may not add or subtract numbers in the mistake above. The correct first step is to factor the denominators:<md> <mrow>\frac{2}{x^2+x}-\frac{1}{x^2}\amp=\frac{2}{x(x+1)}-\frac{1}{x^2}</mrow> </md>The common denominator of <m>x(x+1)</m> and <m>x^2</m> must include two <m>x</m>'s and one <m>(x+1)</m> as factors, and it is <m>x^2(x+1)</m>. The rest of the solution is:<md> <mrow>\amp=\frac{2\multiplyright{x}}{x(x+1)\multiplyright{x}}-\frac{1\multiplyright{(x+1)}}{x^2\multiplyright{(x+1)}}</mrow> <mrow>\amp=\frac{2x}{x^2(x+1)}-\frac{x+1}{x^2(x+1)}</mrow> <mrow>\amp=\frac{2x-(x+1)}{x^2(x+1)}</mrow> <mrow>\amp=\frac{2x-x-1}{x^2(x+1)}</mrow> <mrow>\amp=\frac{x-1}{x^2(x+1)}</mrow> </md></p>
+</solution>
+</example> -->
+    <p permid="dqU">
+      Let's look at a few more complicated examples.
+    </p>
+    <example xml:id="example-subtract-rational-expressions-with-restriction" permid="eRM">
+      <statement>
+        <p permid="qKF">
+          Subtract the rational expressions:
+          <m>\dfrac{y}{y-2}-\dfrac{8y-8}{y^2-4}</m>
+        </p>
+      </statement>
+      <solution permid="gGZ">
+        <p permid="QsI">
+          To start, we'll make sure each denominator is factored.
+          Next, we'll find the least common denominator and build each expression to that denominator.
+          Then, we will be able to combine the numerators and simplify the expression.
+          <md permid="ruz">
+            <mrow>\frac{y}{y-2}-\frac{8y-8}{y^2-4}\amp=\frac{y}{y-2}-\frac{8y-8}{(y+2)(y-2)}</mrow>
+            <mrow>\amp=\frac{y}{y-2}\multiplyright{\frac{y+2}{y+2}}-\frac{8y-8}{(y+2)(y-2)}</mrow>
+            <mrow>\amp=\frac{y^2+2y}{(y+2)(y-2)}-\frac{8y-8}{(y+2)(y-2)}</mrow>
+            <mrow>\amp=\frac{y^2+2y-\highlight{\attention{(}}8y-8\highlight{\attention{)}}}{(y+2)(y-2)}</mrow>
+            <mrow>\amp=\frac{y^2+2y-8y+8}{(y+2)(y-2)}</mrow>
+            <mrow>\amp=\frac{y^2-6y+8}{(y+2)(y-2)}</mrow>
+            <mrow>\amp=\frac{\cancelhighlight{(y-2)}(y-4)}{(y+2)\cancelhighlight{(y-2)}}</mrow>
+            <mrow>\amp=\frac{y-4}{y+2}, \text{ for } y\neq 2</mrow>
+          </md>
+          Note that we must factor the numerator in
+          <m>\frac{y^2-6y+8}{(y+2)(y-2)}</m> and try to reduce the fraction
+          (which we did).
+        </p>
+      </solution>
+    </example>
+    <warning permid="ZcA">
+      <p permid="IOj">
+        In <xref ref="example-subtract-rational-expressions-with-restriction">Example</xref>,
+        be careful to subtract the entire numerator of <m>8y-8</m>.
+        When this expression is in the numerator of <m>\frac{8y-8}{(y+2)(y-2)}</m>,
+        it's implicitly grouped and doesn't need parentheses.
+        But once <m>8y-8</m> is subtracted from <m>y^2+2y</m>,
+        we need to add parentheses so the entire expression is subtracted.
+      </p>
+    </warning>
+    <p permid="Jyd">
+      In the next example,
+      we'll look at adding a rational expression to a polynomial.
+      Much like adding a fraction and an integer,
+      we'll rely on writing that expression as itself over one in order to build its denominator.
+    </p>
+    <example permid="KYV">
+      <statement>
+        <p permid="WRO">
+          Add the expressions: <m>-\dfrac{2}{r-1}+r</m>
+        </p>
+      </statement>
+      <solution permid="MOi">
+        <p permid="wzR">
+          <md permid="XBI">
+            <mrow>-\frac{2}{r-1}+r\amp=-\frac{2}{r-1}+\frac{r}{1}</mrow>
+            <mrow>\amp=-\frac{2}{r-1}+\frac{r}{1}\multiplyright{\frac{r-1}{r-1}}</mrow>
+            <mrow>\amp=\frac{-2}{r-1}+\frac{r^2-r}{r-1}</mrow>
+            <mrow>\amp=\frac{-2+r^2-r}{r-1}</mrow>
+            <mrow>\amp=\frac{r^2-r-2}{r-1}</mrow>
+            <mrow>\amp=\frac{(r-2)(r+1)}{r-1}</mrow>
+          </md>
+          Note that we factored the numerator to reduce the fraction if possible.
+          Even though it was not possible in this case,
+          leaving it in factored form makes it easier to see that it is reduced.
+        </p>
+      </solution>
+    </example>
+    <example permid="rge">
+      <statement>
+        <p permid="CYX">
+          Subtract the expressions: <m>\dfrac{6}{x^2-2x-8}-\dfrac{1}{x^2+3x+2}</m>
+        </p>
+      </statement>
+      <solution permid="sVr">
+        <p permid="cHa">
+          To start, we'll need to factor each of the denominators.
+          After that, we'll identify the LCD and build each denominator accordingly.
+          Then we can combine the numerators and simplify the resulting expression.
+          <md permid="DIR">
+            <mrow>\frac{6}{x^2-2x-8}-\frac{1}{x^2+3x+2}\amp=\frac{6}{(x-4)(x+2)}-\frac{1}{(x+2)(x+1)}</mrow>
+            <mrow>\amp=\frac{6}{(x-4)(x+2)}\multiplyright{\frac{x+1}{x+1}}-\frac{1}{(x+2)(x+1)}\multiplyright{\frac{x-4}{x-4}}</mrow>
+            <mrow>\amp=\frac{6x+6}{(x-4)(x+2)(x+1)}-\frac{x-4}{(x+2)(x+1)(x-4)}</mrow>
+            <mrow>\amp=\frac{6x+6-(x-4)}{(x-4)(x+2)(x+1)}</mrow>
+            <mrow>\amp=\frac{6x+6-x+4}{(x-4)(x+2)(x+1)}</mrow>
+            <mrow>\amp=\frac{5x+10}{(x-4)(x+2)(x+1)}</mrow>
+            <mrow>\amp=\frac{5\cancelhighlight{(x+2)}}{(x-4)\cancelhighlight{(x+2)}(x+1)}</mrow>
+            <mrow>\amp=\frac{5}{(x-4)(x+1)}, \text{ for }x\neq -2</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
 <!--TODO: check if the CCOG needs modeling problems not anywhere in this chapter-->
 <!--     <subsection>
-        <title>Applications for Adding and Subtracting Rational Expressions</title>
-    </subsection>
- -->
-
+<title>Applications for Adding and Subtracting Rational Expressions</title>
+</subsection>
+-->
 <!--TODO: Add exercises like  \frac{6}{x^2-2x-8}-\frac{1}{x^2+3x+2} -->
-    <exercises>
-        <exercisegroup cols="4">
-            <title>Review and Warmup</title>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions09.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions09.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg" />
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="3">
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring445.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring445.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
-            </exercise>
-        </exercisegroup>
-
-         <exercisegroup cols="2">
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract20.pg" seed="5"/>
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract35.pg" seed="5"/>
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract80.pg" seed="5"/>
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract85.pg" seed="5"/>
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup cols="2">
-            <title>Addition and Subtraction of Rational Expressions with One Variable</title>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions10.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions40.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions40.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions90.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions120.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions120.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions100.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions100.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions100.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions100.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions130.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions130.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions140.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions140.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions150.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions150.pg" />
-            </exercise>
-        </exercisegroup>
-
-
-        <exercisegroup cols="2">
-            <title>Addition and Subtraction of Rational Expressions with More Than Variable</title>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions20.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions20.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions50.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions50.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions60.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions60.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions81.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions81.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions101.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions101.pg" />
-            </exercise>
-        </exercisegroup>
-    </exercises>
+  <exercises permid="Dgb">
+    <exercisegroup cols="4" permid="Put">
+      <title>Review and Warmup</title>
+      <exercise permid="Uem">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions09.pg" />
+      </exercise>
+      <exercise permid="Alv">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions09.pg" />
+      </exercise>
+      <exercise permid="gsE">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" />
+      </exercise>
+      <exercise permid="MzN">
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" />
+      </exercise>
+      <exercise permid="sGW">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg" />
+      </exercise>
+      <exercise permid="YOf">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg" />
+      </exercise>
+      <exercise permid="EVo">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg" />
+      </exercise>
+      <exercise permid="lcx">
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="vBC">
+      <exercise permid="RjG">
+        <webwork source="BasicAlgebra/Factoring/factoring445.pg" />
+      </exercise>
+      <exercise permid="xqP">
+        <webwork source="BasicAlgebra/Factoring/factoring445.pg" />
+      </exercise>
+      <exercise permid="dxY">
+        <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
+      </exercise>
+      <exercise permid="JFh">
+        <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
+      </exercise>
+      <exercise permid="pMq">
+        <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
+      </exercise>
+      <exercise permid="VTz">
+        <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
+      </exercise>
+      <exercise permid="CaI">
+        <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
+      </exercise>
+      <exercise permid="ihR">
+        <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="bIL">
+      <exercise permid="Opa">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract20.pg" seed="5"/>
+      </exercise>
+      <exercise permid="uwj">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract35.pg" seed="5"/>
+      </exercise>
+      <exercise permid="aDs">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract80.pg" seed="5"/>
+      </exercise>
+      <exercise permid="GKB">
+        <webwork source="BasicAlgebra/PolynomialBasics/PolyAddSubtract85.pg" seed="5"/>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="HPU">
+      <title>Addition and Subtraction of Rational Expressions with One Variable</title>
+      <exercise permid="mRK">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions10.pg" />
+      </exercise>
+      <exercise permid="SYT">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions10.pg" />
+      </exercise>
+      <exercise permid="zgc">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions10.pg" />
+      </exercise>
+      <exercise permid="fnl">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions10.pg" />
+      </exercise>
+      <exercise permid="Luu">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions30.pg" />
+      </exercise>
+      <exercise permid="rBD">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions30.pg" />
+      </exercise>
+      <exercise permid="XIM">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions30.pg" />
+      </exercise>
+      <exercise permid="DPV">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions30.pg" />
+      </exercise>
+      <exercise permid="jXe">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions40.pg" />
+      </exercise>
+      <exercise permid="Qen">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions40.pg" />
+      </exercise>
+      <exercise permid="wlw">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions110.pg" />
+      </exercise>
+      <exercise permid="csF">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions110.pg" />
+      </exercise>
+      <exercise permid="IzO">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions110.pg" />
+      </exercise>
+      <exercise permid="oGX">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions110.pg" />
+      </exercise>
+      <exercise permid="UOg">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions70.pg" />
+      </exercise>
+      <exercise permid="AVp">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions70.pg" />
+      </exercise>
+      <exercise permid="hcy">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions70.pg" />
+      </exercise>
+      <exercise permid="NjH">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions70.pg" />
+      </exercise>
+      <exercise permid="tqQ">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions80.pg" />
+      </exercise>
+      <exercise permid="ZxZ">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions80.pg" />
+      </exercise>
+      <exercise permid="FFi">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions80.pg" />
+      </exercise>
+      <exercise permid="lMr">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions80.pg" />
+      </exercise>
+      <exercise permid="RTA">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions90.pg" />
+      </exercise>
+      <exercise permid="yaJ">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions90.pg" />
+      </exercise>
+      <exercise permid="ehS">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions90.pg" />
+      </exercise>
+      <exercise permid="Kpb">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions90.pg" />
+      </exercise>
+      <exercise permid="qwk">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions120.pg" />
+      </exercise>
+      <exercise permid="WDt">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions120.pg" />
+      </exercise>
+      <exercise permid="CKC">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions100.pg" />
+      </exercise>
+      <exercise permid="iRL">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions100.pg" />
+      </exercise>
+      <exercise permid="OYU">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions100.pg" />
+      </exercise>
+      <exercise permid="vgd">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions100.pg" />
+      </exercise>
+      <exercise permid="bnm">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions130.pg" />
+      </exercise>
+      <exercise permid="Huv">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions130.pg" />
+      </exercise>
+      <exercise permid="nBE">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions140.pg" />
+      </exercise>
+      <exercise permid="TIN">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions140.pg" />
+      </exercise>
+      <exercise permid="zPW">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions150.pg" />
+      </exercise>
+      <exercise permid="fXf">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions150.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="nXd">
+      <title>Addition and Subtraction of Rational Expressions with More Than Variable</title>
+      <exercise permid="Meo">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions20.pg" />
+      </exercise>
+      <exercise permid="slx">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions20.pg" />
+      </exercise>
+      <exercise permid="YsG">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions50.pg" />
+      </exercise>
+      <exercise permid="EzP">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions50.pg" />
+      </exercise>
+      <exercise permid="kGY">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions60.pg" />
+      </exercise>
+      <exercise permid="QOh">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions60.pg" />
+      </exercise>
+      <exercise permid="wVq">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions81.pg" />
+      </exercise>
+      <exercise permid="dcz">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions81.pg" />
+      </exercise>
+      <exercise permid="JjI">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions101.pg" />
+      </exercise>
+      <exercise permid="pqR">
+        <webwork source="BasicAlgebra/RationalExpressionAlgebraSkills/addSubtractRationalExpressions101.pg" />
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

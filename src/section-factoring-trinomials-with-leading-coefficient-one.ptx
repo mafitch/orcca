@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,1176 +6,1403 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
-<section xml:id="section-factoring-trinomials-with-leading-coefficient-one">
-
-    <title>Factoring Trinomials with Leading Coefficient One</title>
-
-    <introduction>
-
-        <p>In <xref ref="chapter-exponents-and-polynomials">Chapter</xref>, we learned how to multiply binomials like <m>(x+2)(x+3)</m> and obtain the trinomial <m>x^2+5x+6</m>. In this section, we will learn how to undo that. So we'll be starting with a trinomial like <m>x^2+5x+6</m> and obtaining its factored form <m>(x+2)(x+3)</m>. The trinomials that we'll factor in this section all have leading coefficient <m>1</m>, but <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">Section</xref> will cover some more general trinomials.</p>
-
-    </introduction>
-
-    <subsection>
-        <title>Factoring Trinomials by Listing Factor Pairs</title><idx><h>factoring</h><h>with factor pairs</h></idx>
-
-        <p>Consider the example <m>x^2+5x+6=(x+2)(x+3)</m>. There are at least three things that are important to notice:<ul>
-            <li>
-                <p>The leading coefficient of <m>x^2+5x+6</m> is <m>1</m>.</p>
-            </li>
-            <li>
-                <p>The two factors on the right use the numbers <m>2</m> and <m>3</m>, and when you <em>multiply</em> these you get the <m>\highlight{6}</m>.</p>
-            </li>
-            <li>
-                <p>The two factors on the right use the numbers <m>2</m> and <m>3</m>, and when you <em>add</em> these you get the <m>\highlight{5}</m>.</p>
-            </li>
-        </ul>So the idea is that if you need to factor <m>x^2+5x+6</m> and you somehow discover that <m>2</m> and <m>3</m> are special numbers (because <m>2\cdot3=6</m> and <m>2+3=5</m>), then you can conclude that <m>(x+2)(x+3)</m> is the factored form of the given polynomial.</p>
-
-        <example xml:id="example-factor-trinomial">
-            <p>Factor <m>x^2+13x+40</m>.  Since the leading coefficient is <m>1</m>, we are looking to write this polynomial as <m>(x+\mathord{?})(x+\mathord{?})</m> where the question marks are two possibly different, possibly negative, numbers. We need these two numbers to multiply to <m>40</m> and add to <m>13</m>. How can you track these two numbers down? Since the numbers need to multiply to <m>40</m>, one method is to list all <term>factor pairs</term> of <m>40</m> in a table just to see what your options are. We'll write every <em>pair of factors</em> that multiply to <m>40</m>.</p>
-
-            <sidebyside widths="47% 47%">
-                <tabular>
-                    <row>
-                        <cell><m>1\cdot40</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>2\cdot20</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>4\cdot10</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>5\cdot8</m></cell>
-                    </row>
-                </tabular>
-                <tabular>
-                    <row>
-                        <cell><m>-1\cdot(-40)</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>-2\cdot(-20)</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>-4\cdot(-10)</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>-5\cdot(-8)</m></cell>
-                    </row>
-                </tabular>
-            </sidebyside>
-
-            <p>We wanted to find <em>all</em> factor pairs. To avoid missing any, we started using <m>1</m> as a factor, and then slowly increased that first factor.  The table skips over using <m>3</m> as a factor because <m>3</m> is not a factor of <m>40</m>.  Similarly, the table skips using <m>6</m> and <m>7</m> as a factor. Note that there would be no need to continue with <m>8</m> and beyond because we already found <q>large</q> factors like <m>8</m> as the partners of <q>small</q> factors like <m>5</m>.</p>
-
-            <p>There is an entire second column where the signs are reversed, since these are also ways to multiply two numbers to get <m>40</m>. In the end, there are eight factor pairs.</p>
-
-            <p>We need a pair of numbers that <em>also</em> adds to <m>13</m>. So we check what each of our factor pairs add up to:</p>
-
-            <sidebyside widths="47% 47%">
-                <tabular>
-                    <col right="minor" />
-                    <col />
-                    <row bottom="minor">
-                        <cell>Factor Pair</cell>
-                        <cell>Sum of the Pair</cell>
-                    </row>
-                    <row>
-                        <cell><m>1\cdot40</m></cell>
-                        <cell><m>41</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>2\cdot20</m></cell>
-                        <cell><m>22</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>4\cdot10</m></cell>
-                        <cell><m>14</m></cell>
-                    </row>
-                    <row>
-                        <cell><m>5\cdot8</m></cell>
-                        <cell><m>13</m> (what we wanted)</cell>
-                    </row>
-                </tabular>
-                <tabular>
-                    <col right="minor" />
-                    <col />
-                    <row bottom="minor">
-                        <cell>Factor Pair</cell>
-                        <cell>Sum of the Pair</cell>
-                    </row>
-                    <row>
-                        <cell><m>-1\cdot(-40)</m></cell>
-                        <cell>(no need to go this far)</cell>
-                    </row>
-                    <row>
-                        <cell><m>-2\cdot(-20)</m></cell>
-                        <cell>(no need to go this far)</cell>
-                    </row>
-                    <row>
-                        <cell><m>-4\cdot(-10)</m></cell>
-                        <cell>(no need to go this far)</cell>
-                    </row>
-                    <row>
-                        <cell><m>-5\cdot(-8)</m></cell>
-                        <cell>(no need to go this far)</cell>
-                    </row>
-                </tabular>
-            </sidebyside>
-
-            <p>The winning pair of numbers is <m>5</m> and <m>8</m>. Again, what matters is that <m>5\cdot8=40</m>, and <m>5+8=13</m>. So we can conclude that <m>x^2+13x+40=(x+5)(x+8)</m>.</p>
-        </example>
-
-        <!--TODO: Logically, the following two "paragraphs" belong inside the "example" above, but "paragraphs" can't be inside an example. Find some solution to this issue.-->
-
-        <p>To ensure that we made no mistakes, here is a way to check.</p>
-
-
-        <paragraphs>
-            <title>Multiply it Out</title>
-            <p>Multiplying out our answer <m>(x+5)(x+8)</m> should give us <m>x^2+13x+40</m>.</p>
-            <sidebyside widths="47% 47%" margins="0%">
-                <p><md>
-                    <mrow>(x+5)(x+8)\amp=x\cdot x+x\cdot 8+5\cdot x+5/cdot8</mrow>
-                    <mrow>\amp=x^2+8x+5x+40</mrow>
-                    <mrow>\amp\stackrel{\checkmark}{=}x^2+13x+40</mrow>
-                </md></p>
-                <stack>
-                    <p>We could also use a rectangular area diagram to verify the factorization is correct:</p>
-                    <tabular bottom="minor" halign="center">
-                        <row>
-                            <cell bottom="none"></cell>
-                            <cell><m>x</m></cell>
-                            <cell><m>5</m></cell>
-                        </row>
-                        <row>
-                            <cell right="minor" bottom="none"><m>x</m></cell>
-                            <cell right="minor"><m>x^2</m></cell>
-                            <cell right="minor"><m>5x</m></cell>
-                        </row>
-                        <row>
-                            <cell right="minor" bottom="none"><m>8</m></cell>
-                            <cell right="minor"><m>8x</m></cell>
-                            <cell right="minor"><m>40</m></cell>
-                        </row>
-                    </tabular>
-                </stack>
-            </sidebyside>
-        </paragraphs>
-        <!-- <paragraphs>
-            <title>Evaluating</title>
-            <p>If the answer really is <m>(x+5)(x+8)</m>, then notice how evaluating at <m>-5</m> would result in <m>0</m>. So the original expression should also result in <m>0</m> if we evaluate at <m>-5</m>. And similarly, if we evaluate it at <m>-8</m>, <m>x^2+13x+40</m> should be <m>0</m>.<md>
-                <mrow>(-5)^2+13(-5)+40\amp\stackrel{?}{=}0\amp(-8)^2+13(-8)+40\amp\stackrel{?}{=}0</mrow>
-                <mrow>25-65+40\amp\stackrel{?}{=}0\amp 64-104+40\amp\stackrel{?}{=}0</mrow>
-                <mrow>0\amp\stackrel{\checkmark}{=}0\amp 0\amp\stackrel{\checkmark}{=}0</mrow>
-            </md>. This also gives us evidence that the factoring was correct.</p>
-        </paragraphs> -->
-
-        <example>
-            <statement>
-                <p>Factor <m>y^2-11y+24</m>. The negative coefficient has a small complication as compared to <xref ref="example-factor-trinomial">Example</xref>, but the process is actually still the same.</p>
-            </statement>
-
-            <solution>
-                <p>We need a pair of numbers that multiply to <m>24</m> and add to <m>-11</m>. Note that we <em>do</em> care to keep track that they sum to a negative total.</p>
-                <sidebyside widths="47% 47%">
-                    <tabular>
-                        <col right="minor" />
-                        <col />
-                        <row bottom="minor">
-                            <cell>Factor Pair</cell>
-                            <cell>Sum of the Pair</cell>
-                        </row>
-                        <row>
-                            <cell><m>1\cdot24</m></cell>
-                            <cell><m>25</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>2\cdot12</m></cell>
-                            <cell><m>14</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>3\cdot8</m></cell>
-                            <cell><m>11</m> (close; wrong sign)</cell>
-                        </row>
-                        <row>
-                            <cell><m>4\cdot6</m></cell>
-                            <cell><m>10</m></cell>
-                        </row>
-                    </tabular>
-                    <tabular>
-                        <col right="minor" />
-                        <col />
-                        <row bottom="minor">
-                            <cell>Factor Pair</cell>
-                            <cell>Sum of the Pair</cell>
-                        </row>
-                        <row>
-                            <cell><m>-1\cdot(-24)</m></cell>
-                            <cell><m>-25</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>-2\cdot(-12)</m></cell>
-                            <cell><m>-14</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>-3\cdot(-8)</m></cell>
-                            <cell><m>-11</m> (what we wanted)</cell>
-                        </row>
-                        <row>
-                            <cell><m>-4\cdot(-6)</m></cell>
-                            <cell>(no need to go this far)</cell>
-                        </row>
-                    </tabular>
-                </sidebyside>
-
-                <p>So <m>y^2-11y+24=(y-3)(y-8)</m>. To confirm that this is correct, we should check by multiplying out the factored form:</p>
-                <sidebyside widths="47% 47%">
-                    <p><md>
-                        <mrow>(y-3)(y-8)\amp=y\cdot y+y(-8)-3\cdot y-3(-8)</mrow>
-                        <mrow>\amp=y^2-8y-3y+24</mrow>
-                        <mrow>\amp\stackrel{\checkmark}{=}y^2-11y+24</mrow>
-                    </md></p>
-                    <tabular bottom="minor" halign="center">
-                        <row>
-                            <cell bottom="none"></cell>
-                            <cell><m>y</m></cell>
-                            <cell><m>-3</m></cell>
-                        </row>
-                        <row>
-                            <cell right="minor" bottom="none"><m>y</m></cell>
-                            <cell right="minor"><m>y^2</m></cell>
-                            <cell right="minor"><m>-3y</m></cell>
-                        </row>
-                        <row>
-                            <cell right="minor" bottom="none"><m>-8</m></cell>
-                            <cell right="minor"><m>-8y</m></cell>
-                            <cell right="minor"><m>24</m></cell>
-                        </row>
-                    </tabular>
-                </sidebyside>
-               <!--  <p>Or by evaluating the original expression at <m>3</m> and <m>8</m>:<md>
-                    <mrow>3^2-11(3)+24\amp\stackrel{?}{=}0\amp8^2-11(8)+24\amp\stackrel{?}{=}0</mrow>
-                    <mrow>9-33+24\amp\stackrel{?}{=}0\amp 64-88+24\amp\stackrel{?}{=}0</mrow>
-                    <mrow>0\amp\stackrel{\checkmark}{=}0\amp 0\amp\stackrel{\checkmark}{=}0</mrow>
-                </md>. Our factorization passes the tests.</p> -->
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Factor <m>z^2+5z-6</m>. The negative coefficient is again a small complication from <xref ref="example-factor-trinomial">Example</xref>, but the process is actually still the same.</p>
-            </statement>
-
-            <solution>
-                <p>We need a pair of numbers that multiply to <m>-6</m> and add to <m>5</m>. Note that we <em>do</em> care to keep track that they multiply to a negative product.</p>
-                <sidebyside widths="47% 47%">
-                    <tabular>
-                        <col right="minor" />
-                        <col />
-                        <row bottom="minor">
-                            <cell>Factor Pair</cell>
-                            <cell>Sum of the Pair</cell>
-                        </row>
-                        <row>
-                            <cell><m>1\cdot(-6)</m></cell>
-                            <cell><m>-5</m> (close; wrong sign)</cell>
-                        </row>
-                        <row>
-                            <cell><m>2\cdot(-3)</m></cell>
-                            <cell><m>14</m></cell>
-                        </row>
-                    </tabular>
-                    <tabular>
-                        <col right="minor" />
-                        <col />
-                        <row bottom="minor">
-                            <cell>Factor Pair</cell>
-                            <cell>Sum of the Pair</cell>
-                        </row>
-                        <row>
-                            <cell><m>-1\cdot6</m></cell>
-                            <cell><m>5</m> (what we wanted)</cell>
-                        </row>
-                        <row>
-                            <cell><m>-2\cdot3</m></cell>
-                            <cell>(no need to go this far)</cell>
-                        </row>
-                    </tabular>
-                </sidebyside>
-
-                <p>So <m>z^2+5z-6=(z-1)(z+6)</m>. To confirm that this is correct, we should check by multiplying out the factored form:</p>
-                <sidebyside widths="47% 47%">
-                    <p><md>
-                        <mrow>(z-1)(z+6)\amp=z\cdot z+z\cdot 6-1\cdot z-1\cdot 6</mrow>
-                        <mrow>\amp=z^2+6z-z-6</mrow>
-                        <mrow>\amp\stackrel{\checkmark}{=}z^2+5z-6</mrow>
-                    </md></p>
-                    <tabular bottom="minor" halign="center">
-                        <row>
-                            <cell bottom="none"></cell>
-                            <cell><m>z</m></cell>
-                            <cell><m>-1</m></cell>
-                        </row>
-                        <row>
-                            <cell right="minor" bottom="none"><m>z</m></cell>
-                            <cell right="minor"><m>z^2</m></cell>
-                            <cell right="minor"><m>-z</m></cell>
-                        </row>
-                        <row>
-                            <cell right="minor" bottom="none"><m>6</m></cell>
-                            <cell right="minor"><m>6z</m></cell>
-                            <cell right="minor"><m>-6</m></cell>
-                        </row>
-                    </tabular>
-                </sidebyside>
-                <!-- <p>Or by evaluating the original expression at <m>1</m> and <m>-6</m>:<md>
-                    <mrow>1^2+5(1)-6\amp\stackrel{?}{=}0\amp(-6)^2+5(-6)-6\amp\stackrel{?}{=}0</mrow>
-                    <mrow>1+5-6\amp\stackrel{?}{=}0\amp 36-30-6\amp\stackrel{?}{=}0</mrow>
-                    <mrow>0\amp\stackrel{\checkmark}{=}0\amp 0\amp\stackrel{\checkmark}{=}0</mrow>
-                </md>. Our factorization passes the tests.</p> -->
-            </solution>
-        </example>
-
-        <exercise>
-            <webwork>
-                <pg-macros>
-                    <macro-file>contextLimitedFactor.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <pg-code>
-                        Context("LimitedFactor");
-                        Context()->variables->are(m=>'Real');
-                        $answer = Formula("(m+4)(m-10)");
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Factor <m>m^2-6m-40</m>.</p>
-                    <p><var name="$answer" width="25" /></p>
-                </statement>
-
-                <solution>
-                    <p>We need a pair of numbers that multiply to <m>-40</m> and add to <m>-6</m>. Note that we <em>do</em> care to keep track that they multiply to a negative product and sum to a negative total.</p>
-                    <sidebyside>
-                        <tabular>
-                            <col right="minor" />
-                            <col />
-                            <row bottom="minor">
-                                <cell>Factor Pair</cell>
-                                <cell>Sum of the Pair</cell>
-                            </row>
-                            <row>
-                                <cell><m>1\cdot(-40)</m></cell>
-                                <cell><m>-39</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>2\cdot(-20)</m></cell>
-                                <cell><m>-18</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>4\cdot(-10)</m></cell>
-                                <cell><m>-6</m> (what we wanted)</cell>
-                            </row>
-                            <row>
-                                <cell>(no need to continue)</cell>
-                                <cell>...</cell>
-                            </row>
-                        </tabular>
-                    </sidebyside>
-                    <p>So <m>m^2-6m-40=(m+4)(m-10)</m>. Checking this factorization is left up to the reader.</p>
-                </solution>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <subsection>
-        <title>Connection to Grouping</title>
-        <p>The factoring method we just learned takes a bit of a shortcut. To prepare yourself for a more complicated factoring technique in <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">Section</xref>, you may want to try taking the <q>scenic route</q> instead of that shortcut.</p>
-
-        <example>
-            <p>Let's factor <m>x^2+13x+40</m> again (the polynomial from <xref ref="example-factor-trinomial">Example</xref>). As before, it is important to discover that <m>5</m> and <m>8</m> are important numbers, because they multiply to <m>40</m> and add to <m>13</m>. As before, listing out all of the factor pairs is one way to discover the <m>5</m> and the <m>8</m>.</p>
-
-            <p>Instead of jumping to the factored answer, we can show how <m>x^2+13x+40</m> factors in a more step-by-step fashion using <m>5</m> and <m>8</m>. Since they add up to <m>13</m>, we can write:<md>
-                <mrow>x^2+\attention{13}x+40\amp=x^2+\attention{\overbrace{5x+8x}}+40</mrow>
-                <intertext>We have intentionally split up the trinomial into an unsimplified polynomial with four terms. In <xref ref="section-factoring-by-grouping">Section</xref>, we handled such four-term polynomials by grouping:</intertext>
-                <mrow>\amp=\left(x^2+5x\right)+(8x+40)</mrow>
-                <intertext>Now we can factor out each group's greatest common factor:</intertext>
-                <mrow>\amp=x(x+5)+8(x+5)</mrow>
-                <mrow>\amp=x\attention{\overbrace{(x+5)}}+8\attention{\overbrace{(x+5)}}</mrow>
-                <mrow>\amp=(x+5)(x+8)</mrow>
-            </md>Thus, we have found that <m>x^2+13x+40</m> factors as <m>(x+5)(x+8)</m> without memorizing the shortcut.</p>
-        </example>
-
-        <p>This approach takes more time, and ultimately you may not use it much. However, if you try a few examples this way, it may make you more comfortable with the more complicated technique in <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">Section</xref>.</p>
-    </subsection>
-
-    <subsection>
-        <title>Trinomials that are Quadratic in Form</title><idx><h>factoring</h><h>trinomials that are quadratic in form</h></idx>
-        <p>So far we have only factored examples of <term>quadratic</term><idx><h>quadratic</h></idx> trinomials: trinomials whose highest power of the variable is <m>2</m>. However, this technique can also be used to factor special trinomials of higher degree which we call "quadratic in form". Trinomials that are quadratic in form require that the highest power is even, that the next highest power is half of the highest power, and that the third term is a constant term.</p>
-
-        <p>In the four examples below, check:<ol>
-            <li>
-                <p>if the highest power is even</p>
-            </li>
-            <li>
-                <p>if the next highest power is half of the highest power</p>
-            </li>
-            <li>
-                <p>if the last term is constant</p>
-            </li>
-        </ol></p>
-
-        <sidebyside widths="47% 47%" margins="0%">
-            <stack>
-                <p>Factor pairs <em>will</em> help with<ellipsis/><ul>
-                    <li>
-                        <p><m>y^6-23y^3-50</m></p>
-                    </li>
-                    <li>
-                        <p><m>h^{16}+22h^8+105</m></p>
-                    </li>
-                </ul></p>
-            </stack>
-            <stack>
-                <p>Factor pairs <em>won't</em> help with<ellipsis/><ul>
-                    <li>
-                        <p><m>y^5-23y^3-50</m></p>
-                    </li>
-                    <li>
-                        <p><m>h^{16}+22h^8+105h^2</m></p>
-                    </li>
-                </ul></p>
-            </stack>
+<section xml:id="section-factoring-trinomials-with-leading-coefficient-one" permid="LFY">
+  <title>Factoring Trinomials with Leading Coefficient One</title>
+  <introduction permid="frL">
+    <p permid="nkF">
+      In <xref ref="chapter-exponents-and-polynomials">Chapter</xref>,
+      we learned how to multiply binomials like
+      <m>(x+2)(x+3)</m> and obtain the trinomial <m>x^2+5x+6</m>.
+      In this section, we will learn how to undo that.
+      So we'll be starting with a trinomial like
+      <m>x^2+5x+6</m> and obtaining its factored form <m>(x+2)(x+3)</m>.
+      The trinomials that we'll factor in this section all have leading coefficient <m>1</m>,
+      but <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">Section</xref>
+      will cover some more general trinomials.
+    </p>
+  </introduction>
+  <subsection permid="rNh">
+    <title>Factoring Trinomials by Listing Factor Pairs</title>
+    <idx><h>factoring</h><h>with factor pairs</h></idx>
+    <p permid="hvt">
+      Consider the example <m>x^2+5x+6=(x+2)(x+3)</m>.
+      There are at least three things that are important to notice:
+      <ul permid="ZCz">
+        <li permid="lQR">
+          <p permid="vkD">
+            The leading coefficient of <m>x^2+5x+6</m> is <m>1</m>.
+          </p>
+        </li>
+        <li permid="RYa">
+          <p permid="brM">
+            The two factors on the right use the numbers <m>2</m> and <m>3</m>,
+            and when you <em>multiply</em> these you get the <m>\highlight{6}</m>.
+          </p>
+        </li>
+        <li permid="yfj">
+          <p permid="HyV">
+            The two factors on the right use the numbers <m>2</m> and <m>3</m>,
+            and when you <em>add</em> these you get the <m>\highlight{5}</m>.
+          </p>
+        </li>
+      </ul>
+      So the idea is that if you need to factor
+      <m>x^2+5x+6</m> and you somehow discover that <m>2</m> and <m>3</m> are special numbers
+      (because <m>2\cdot3=6</m> and <m>2+3=5</m>),
+      then you can conclude that
+      <m>(x+2)(x+3)</m> is the factored form of the given polynomial.
+    </p>
+    <example xml:id="example-factor-trinomial" permid="ApV">
+      <p permid="jGf">
+        Factor <m>x^2+13x+40</m>.
+        Since the leading coefficient is <m>1</m>,
+        we are looking to write this polynomial as
+        <m>(x+\mathord{?})(x+\mathord{?})</m> where the question marks are two possibly different,
+        possibly negative, numbers.
+        We need these two numbers to multiply to <m>40</m> and add to <m>13</m>.
+        How can you track these two numbers down?
+        Since the numbers need to multiply to <m>40</m>,
+        one method is to list all <term>factor pairs</term>
+        of <m>40</m> in a table just to see what your options are.
+        We'll write every <em>pair of factors</em>
+        that multiply to <m>40</m>.
+      </p>
+      <sidebyside widths="47% 47%" permid="sLw">
+        <tabular permid="dvu">
+          <row>
+            <cell><m>1\cdot40</m></cell>
+          </row>
+          <row>
+            <cell><m>2\cdot20</m></cell>
+          </row>
+          <row>
+            <cell><m>4\cdot10</m></cell>
+          </row>
+          <row>
+            <cell><m>5\cdot8</m></cell>
+          </row>
+        </tabular>
+        <tabular permid="JCD">
+          <row>
+            <cell><m>-1\cdot(-40)</m></cell>
+          </row>
+          <row>
+            <cell><m>-2\cdot(-20)</m></cell>
+          </row>
+          <row>
+            <cell><m>-4\cdot(-10)</m></cell>
+          </row>
+          <row>
+            <cell><m>-5\cdot(-8)</m></cell>
+          </row>
+        </tabular>
+      </sidebyside>
+      <p permid="PNo">
+        We wanted to find <em>all</em> factor pairs.
+        To avoid missing any, we started using <m>1</m> as a factor,
+        and then slowly increased that first factor.
+        The table skips over using <m>3</m> as a factor because <m>3</m> is not a factor of <m>40</m>.
+        Similarly, the table skips using <m>6</m> and <m>7</m> as a factor.
+        Note that there would be no need to continue with <m>8</m> and beyond because we already found
+        <q>large</q>
+        factors like <m>8</m> as the partners of
+        <q>small</q>
+        factors like <m>5</m>.
+      </p>
+      <p permid="vUx">
+        There is an entire second column where the signs are reversed,
+        since these are also ways to multiply two numbers to get <m>40</m>.
+        In the end, there are eight factor pairs.
+      </p>
+      <p permid="cbG">
+        We need a pair of numbers that <em>also</em> adds to <m>13</m>.
+        So we check what each of our factor pairs add up to:
+      </p>
+      <sidebyside widths="47% 47%" permid="YSF">
+        <tabular permid="pJM">
+          <col right="minor" />
+          <col />
+          <row bottom="minor">
+            <cell>Factor Pair</cell>
+            <cell>Sum of the Pair</cell>
+          </row>
+          <row>
+            <cell><m>1\cdot40</m></cell>
+            <cell><m>41</m></cell>
+          </row>
+          <row>
+            <cell><m>2\cdot20</m></cell>
+            <cell><m>22</m></cell>
+          </row>
+          <row>
+            <cell><m>4\cdot10</m></cell>
+            <cell><m>14</m></cell>
+          </row>
+          <row>
+            <cell><m>5\cdot8</m></cell>
+            <cell><m>13</m> (what we wanted)</cell>
+          </row>
+        </tabular>
+        <tabular permid="VQV">
+          <col right="minor" />
+          <col />
+          <row bottom="minor">
+            <cell>Factor Pair</cell>
+            <cell>Sum of the Pair</cell>
+          </row>
+          <row>
+            <cell><m>-1\cdot(-40)</m></cell>
+            <cell>(no need to go this far)</cell>
+          </row>
+          <row>
+            <cell><m>-2\cdot(-20)</m></cell>
+            <cell>(no need to go this far)</cell>
+          </row>
+          <row>
+            <cell><m>-4\cdot(-10)</m></cell>
+            <cell>(no need to go this far)</cell>
+          </row>
+          <row>
+            <cell><m>-5\cdot(-8)</m></cell>
+            <cell>(no need to go this far)</cell>
+          </row>
+        </tabular>
+      </sidebyside>
+      <p permid="IiP">
+        The winning pair of numbers is <m>5</m> and <m>8</m>.
+        Again, what matters is that <m>5\cdot8=40</m>, and <m>5+8=13</m>.
+        So we can conclude that <m>x^2+13x+40=(x+5)(x+8)</m>.
+      </p>
+    </example>
+<!--TODO: Logically, the following two "paragraphs" belong inside the "example" above, but "paragraphs" can't be inside an example. Find some solution to this issue.-->
+    <p permid="NCC">
+      To ensure that we made no mistakes, here is a way to check.
+    </p>
+    <paragraphs permid="cEj">
+      <title>Multiply it Out</title>
+      <p permid="Bok">
+        Multiplying out our answer
+        <m>(x+5)(x+8)</m> should give us <m>x^2+13x+40</m>.
+      </p>
+      <sidebyside widths="47% 47%" margins="0%" permid="UiM">
+        <p permid="OHV">
+          <md permid="Ddx">
+            <mrow>(x+5)(x+8)\amp=x\cdot x+x\cdot 8+5\cdot x+5/cdot8</mrow>
+            <mrow>\amp=x^2+8x+5x+40</mrow>
+            <mrow>\amp\stackrel{\checkmark}{=}x^2+13x+40</mrow>
+          </md>
+        </p>
+        <stack>
+          <p permid="uPe">
+            We could also use a rectangular area diagram to verify the factorization is correct:
+          </p>
+          <tabular bottom="minor" halign="center" permid="BYe">
+            <row>
+              <cell bottom="none"></cell>
+              <cell><m>x</m></cell>
+              <cell><m>5</m></cell>
+            </row>
+            <row>
+              <cell right="minor" bottom="none"><m>x</m></cell>
+              <cell right="minor"><m>x^2</m></cell>
+              <cell right="minor"><m>5x</m></cell>
+            </row>
+            <row>
+              <cell right="minor" bottom="none"><m>8</m></cell>
+              <cell right="minor"><m>8x</m></cell>
+              <cell right="minor"><m>40</m></cell>
+            </row>
+          </tabular>
+        </stack>
+      </sidebyside>
+    </paragraphs>
+<!-- <paragraphs>
+<title>Evaluating</title>
+<p>If the answer really is <m>(x+5)(x+8)</m>, then notice how evaluating at <m>-5</m> would result in <m>0</m>. So the original expression should also result in <m>0</m> if we evaluate at <m>-5</m>. And similarly, if we evaluate it at <m>-8</m>, <m>x^2+13x+40</m> should be <m>0</m>.<md> <mrow>(-5)^2+13(-5)+40\amp\stackrel{?}{=}0\amp(-8)^2+13(-8)+40\amp\stackrel{?}{=}0</mrow> <mrow>25-65+40\amp\stackrel{?}{=}0\amp 64-104+40\amp\stackrel{?}{=}0</mrow> <mrow>0\amp\stackrel{\checkmark}{=}0\amp 0\amp\stackrel{\checkmark}{=}0</mrow> </md>. This also gives us evidence that the factoring was correct.</p>
+</paragraphs> -->
+    <example permid="gxe">
+      <statement>
+        <p permid="opY">
+          Factor <m>y^2-11y+24</m>.
+          The negative coefficient has a small complication as compared to <xref ref="example-factor-trinomial">Example</xref>,
+          but the process is actually still the same.
+        </p>
+      </statement>
+      <solution permid="LyU">
+        <p permid="EEp">
+          We need a pair of numbers that multiply to <m>24</m> and add to <m>-11</m>.
+          Note that we <em>do</em> care to keep track that they sum to a negative total.
+        </p>
+        <sidebyside widths="47% 47%" permid="EZO">
+          <tabular permid="ifn">
+            <col right="minor" />
+            <col />
+            <row bottom="minor">
+              <cell>Factor Pair</cell>
+              <cell>Sum of the Pair</cell>
+            </row>
+            <row>
+              <cell><m>1\cdot24</m></cell>
+              <cell><m>25</m></cell>
+            </row>
+            <row>
+              <cell><m>2\cdot12</m></cell>
+              <cell><m>14</m></cell>
+            </row>
+            <row>
+              <cell><m>3\cdot8</m></cell>
+              <cell><m>11</m> (close; wrong sign)</cell>
+            </row>
+            <row>
+              <cell><m>4\cdot6</m></cell>
+              <cell><m>10</m></cell>
+            </row>
+          </tabular>
+          <tabular permid="Omw">
+            <col right="minor" />
+            <col />
+            <row bottom="minor">
+              <cell>Factor Pair</cell>
+              <cell>Sum of the Pair</cell>
+            </row>
+            <row>
+              <cell><m>-1\cdot(-24)</m></cell>
+              <cell><m>-25</m></cell>
+            </row>
+            <row>
+              <cell><m>-2\cdot(-12)</m></cell>
+              <cell><m>-14</m></cell>
+            </row>
+            <row>
+              <cell><m>-3\cdot(-8)</m></cell>
+              <cell><m>-11</m> (what we wanted)</cell>
+            </row>
+            <row>
+              <cell><m>-4\cdot(-6)</m></cell>
+              <cell>(no need to go this far)</cell>
+            </row>
+          </tabular>
         </sidebyside>
-
-        <example>
-            <p>Factor <m>h^{16}+22h^8+105</m>. This polynomial is one of the examples above where using factor pairs will help. We find that <m>7\cdot15=105</m>, and <m>7+15=22</m>, so the numbers <m>7</m> and <m>15</m> can be used:<md>
-                <mrow>h^{16}+22h^8+105\amp=h^{16}+\overbrace{7h^8+15h^8}+105</mrow>
-                <mrow>\amp=\left(h^{16}+7h^8\right)+\left(15h^8+105\right)</mrow>
-                <mrow>\amp=h^8\left(h^8+7\right)+15\left(h^8+7\right)</mrow>
-                <mrow>\amp=\left(h^8+7\right)\left(h^8+15\right)</mrow>
-            </md>Actually, once we settled on using <m>7</m> and <m>15</m>, we could have concluded that <m>h^{16}+22h^8+105</m> factors as <m>\left(h^8+7\right)\left(h^8+15\right)</m>, if we know which power of <m>h</m> to use. We'll always use half the highest power in these factorizations.</p>
-            <p>In any case, to confirm that this is correct, we should check by multiplying out the factored form:</p>
-            <sidebyside widths="47% 47%">
-                <p><m>\begin{aligned}[t]
-                    (h^8+7)(h^8+15)\amp=h^8\cdot h^8+h^8\cdot 15+7\cdot h^8+7\cdot 15\\
-                    \amp=h^{16}+15h^8+7h^8+105\\
-                    \amp\stackrel{\checkmark}{=}h^{16}+22h^8+15\end{aligned}
-                </m></p>
-                <tabular bottom="minor" halign="center">
-                    <row>
-                        <cell bottom="none"></cell>
-                        <cell><m>h^8</m></cell>
-                        <cell><m>7</m></cell>
-                    </row>
-                    <row>
-                        <cell right="minor" bottom="none"><m>h^8</m></cell>
-                        <cell right="minor"><m>h^{16}</m></cell>
-                        <cell right="minor"><m>7h^8</m></cell>
-                    </row>
-                    <row>
-                        <cell right="minor" bottom="none"><m>15</m></cell>
-                        <cell right="minor"><m>15h^8</m></cell>
-                        <cell right="minor"><m>105</m></cell>
-                    </row>
-                </tabular>
+        <p permid="kLy">
+          So <m>y^2-11y+24=(y-3)(y-8)</m>.
+          To confirm that this is correct,
+          we should check by multiplying out the factored form:
+        </p>
+        <sidebyside widths="47% 47%" permid="lgX">
+          <p permid="QSH">
+            <md permid="jkG">
+              <mrow>(y-3)(y-8)\amp=y\cdot y+y(-8)-3\cdot y-3(-8)</mrow>
+              <mrow>\amp=y^2-8y-3y+24</mrow>
+              <mrow>\amp\stackrel{\checkmark}{=}y^2-11y+24</mrow>
+            </md>
+          </p>
+          <tabular bottom="minor" halign="center" permid="utF">
+            <row>
+              <cell bottom="none"></cell>
+              <cell><m>y</m></cell>
+              <cell><m>-3</m></cell>
+            </row>
+            <row>
+              <cell right="minor" bottom="none"><m>y</m></cell>
+              <cell right="minor"><m>y^2</m></cell>
+              <cell right="minor"><m>-3y</m></cell>
+            </row>
+            <row>
+              <cell right="minor" bottom="none"><m>-8</m></cell>
+              <cell right="minor"><m>-8y</m></cell>
+              <cell right="minor"><m>24</m></cell>
+            </row>
+          </tabular>
+        </sidebyside>
+<!--  <p>Or by evaluating the original expression at <m>3</m> and <m>8</m>:<md> <mrow>3^2-11(3)+24\amp\stackrel{?}{=}0\amp8^2-11(8)+24\amp\stackrel{?}{=}0</mrow> <mrow>9-33+24\amp\stackrel{?}{=}0\amp 64-88+24\amp\stackrel{?}{=}0</mrow> <mrow>0\amp\stackrel{\checkmark}{=}0\amp 0\amp\stackrel{\checkmark}{=}0</mrow> </md>. Our factorization passes the tests.</p> -->
+      </solution>
+    </example>
+    <example permid="MEn">
+      <statement>
+        <p permid="Uxh">
+          Factor <m>z^2+5z-6</m>.
+          The negative coefficient is again a small complication from <xref ref="example-factor-trinomial">Example</xref>,
+          but the process is actually still the same.
+        </p>
+      </statement>
+      <solution permid="rGd">
+        <p permid="wZQ">
+          We need a pair of numbers that multiply to <m>-6</m> and add to <m>5</m>.
+          Note that we <em>do</em> care to keep track that they multiply to a negative product.
+        </p>
+        <sidebyside widths="47% 47%" permid="Rog">
+          <tabular permid="aAO">
+            <col right="minor" />
+            <col />
+            <row bottom="minor">
+              <cell>Factor Pair</cell>
+              <cell>Sum of the Pair</cell>
+            </row>
+            <row>
+              <cell><m>1\cdot(-6)</m></cell>
+              <cell><m>-5</m> (close; wrong sign)</cell>
+            </row>
+            <row>
+              <cell><m>2\cdot(-3)</m></cell>
+              <cell><m>14</m></cell>
+            </row>
+          </tabular>
+          <tabular permid="GHX">
+            <col right="minor" />
+            <col />
+            <row bottom="minor">
+              <cell>Factor Pair</cell>
+              <cell>Sum of the Pair</cell>
+            </row>
+            <row>
+              <cell><m>-1\cdot6</m></cell>
+              <cell><m>5</m> (what we wanted)</cell>
+            </row>
+            <row>
+              <cell><m>-2\cdot3</m></cell>
+              <cell>(no need to go this far)</cell>
+            </row>
+          </tabular>
+        </sidebyside>
+        <p permid="dgZ">
+          So <m>z^2+5z-6=(z-1)(z+6)</m>.
+          To confirm that this is correct,
+          we should check by multiplying out the factored form:
+        </p>
+        <sidebyside widths="47% 47%" permid="xvp">
+          <p permid="Joi">
+            <md permid="PrP">
+              <mrow>(z-1)(z+6)\amp=z\cdot z+z\cdot 6-1\cdot z-1\cdot 6</mrow>
+              <mrow>\amp=z^2+6z-z-6</mrow>
+              <mrow>\amp\stackrel{\checkmark}{=}z^2+5z-6</mrow>
+            </md>
+          </p>
+          <tabular bottom="minor" halign="center" permid="mPg">
+            <row>
+              <cell bottom="none"></cell>
+              <cell><m>z</m></cell>
+              <cell><m>-1</m></cell>
+            </row>
+            <row>
+              <cell right="minor" bottom="none"><m>z</m></cell>
+              <cell right="minor"><m>z^2</m></cell>
+              <cell right="minor"><m>-z</m></cell>
+            </row>
+            <row>
+              <cell right="minor" bottom="none"><m>6</m></cell>
+              <cell right="minor"><m>6z</m></cell>
+              <cell right="minor"><m>-6</m></cell>
+            </row>
+          </tabular>
+        </sidebyside>
+<!-- <p>Or by evaluating the original expression at <m>1</m> and <m>-6</m>:<md> <mrow>1^2+5(1)-6\amp\stackrel{?}{=}0\amp(-6)^2+5(-6)-6\amp\stackrel{?}{=}0</mrow> <mrow>1+5-6\amp\stackrel{?}{=}0\amp 36-30-6\amp\stackrel{?}{=}0</mrow> <mrow>0\amp\stackrel{\checkmark}{=}0\amp 0\amp\stackrel{\checkmark}{=}0</mrow> </md>. Our factorization passes the tests.</p> -->
+      </solution>
+    </example>
+    <exercise permid="JJH">
+      <webwork>
+          <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
+          <setup>
+<pg-code>
+Context("LimitedFactor");
+Context()->variables->are(m=>'Real');
+$answer = Formula("(m+4)(m-10)");
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="TrO">
+              Factor <m>m^2-6m-40</m>.
+            </p>
+            <p permid="zyX">
+              <var name="$answer" width="25" />
+            </p>
+          </statement>
+          <solution permid="QiN">
+            <p permid="pvr">
+              We need a pair of numbers that multiply to <m>-40</m> and add to <m>-6</m>.
+              Note that we <em>do</em> care to keep track that they multiply to a negative product and sum to a negative total.
+            </p>
+            <sidebyside permid="dCy">
+              <tabular permid="SWp">
+                <col right="minor" />
+                <col />
+                <row bottom="minor">
+                  <cell>Factor Pair</cell>
+                  <cell>Sum of the Pair</cell>
+                </row>
+                <row>
+                  <cell><m>1\cdot(-40)</m></cell>
+                  <cell><m>-39</m></cell>
+                </row>
+                <row>
+                  <cell><m>2\cdot(-20)</m></cell>
+                  <cell><m>-18</m></cell>
+                </row>
+                <row>
+                  <cell><m>4\cdot(-10)</m></cell>
+                  <cell><m>-6</m> (what we wanted)</cell>
+                </row>
+                <row>
+                  <cell>(no need to continue)</cell>
+                  <cell>...</cell>
+                </row>
+              </tabular>
             </sidebyside>
-            <p>Our factorization passes the tests.</p>
-        </example>
-
-        <exercise>
-            <webwork>
-                <pg-macros>
-                    <macro-file>contextLimitedFactor.pl</macro-file>
-                </pg-macros>
-                <setup>
-                    <pg-code>
-                        Context("LimitedFactor");
-                        Context()->variables->are(y=>'Real');
-                        $answer = Formula("(y^3-25)(y^3+2)");
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Factor <m>y^6-23y^3-50</m>.</p>
-                    <p><var name="$answer" width="25" /></p>
-                </statement>
-
-                <solution>
-                    <p>We need a pair of numbers that multiply to <m>-50</m> and add to <m>-23</m>. Note that we <em>do</em> care to keep track that they multiply to a negative product and sum to a negative total.</p>
-                    <sidebyside>
-                        <tabular>
-                            <col right="minor" />
-                            <col />
-                            <row bottom="minor">
-                                <cell>Factor Pair</cell>
-                                <cell>Sum of the Pair</cell>
-                            </row>
-                            <row>
-                                <cell><m>1\cdot(-50)</m></cell>
-                                <cell><m>-49</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>2\cdot(-25)</m></cell>
-                                <cell><m>-23</m> (what we wanted)</cell>
-                            </row>
-                            <row>
-                                <cell>(no need to continue)</cell>
-                                <cell>...</cell>
-                            </row>
-                        </tabular>
-                    </sidebyside>
-                    <p>So <m>y^6-23y^3-50=\left(y^3-25\right)\left(y^3+2\right)</m>.</p>
-                </solution>
-            </webwork>
-        </exercise>
-    </subsection>
-
-    <subsection>
-        <title>Factoring in Stages</title><idx><h>factoring</h><h>in stages</h></idx>
-
-        <p>Sometimes factoring a polynomial will take two or more <q>stages.</q> Always begin factoring a polynomial by factoring out its greatest common factor, and <em>then</em> apply a second stage where you use a technique from this section. The process of factoring a polynomial is not complete until each of the factors cannot be factored further.</p>
-
-        <example>
-            <statement>
-                <p>Factor <m>2z^2-6z-80</m>.</p>
-            </statement>
-
-            <solution>
-                <p>We will first factor out the common factor, <m>2</m>:<me>2z^2-6z-80=2\left(z^2-3z-40\right)</me>
-
-                Now we are left with a factored expression that might factor more. Looking inside the parentheses, we ask ourselves, <q>what two numbers multiply to be <m>-40</m> and add to be <m>-3</m>?</q> Since <m>5</m> and <m>-8</m> do the job, the full factorization is:<md>
-                    <mrow>2z^2-6z-80\amp=2\left(z^2-3z-40\right)</mrow>
-                    <mrow>\amp=2(z+5)(z-8)</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Factor <m>-r^2+2r+24</m>.</p>
-            </statement>
-            <solution>
-                <p>The three terms don't exactly have a common factor, but as discussed in <xref ref="section-factoring-out-the-common-factor">Section</xref>, when the leading term has a negative sign, it is often helpful to factor out that negative sign: <me>-r^2+2r+24=-\mathopen{}\left(r^2-2r-24\right)\mathclose{}</me>.
-                Looking inside the parentheses, we ask ourselves, <q>what two numbers multiply to be <m>-24</m> and add to be <m>-2</m>?</q> Since <m>-6</m> and <m>4</m> work here, the full factorization is shown:<md>
-                    <mrow>-r^2+2r+24\amp=-\mathopen{}\left(r^2-2r-24\right)\mathclose{}</mrow>
-                    <mrow>\amp=-(r-6)(r+4)</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Factor <m>p^2q^3+4p^2q^2-60p^2q</m>.</p>
-            </statement>
-            <solution>
-                <p>First, always look for the greatest common factor: in this trinomial it is <m>p^2q</m>. After factoring this out, we have <me>p^2q^3+4p^2q^2-60p^2q=p^2q\mathopen{}\left(q^2+4q-60\right)\mathclose{}</me>. Looking inside the parentheses, we ask ourselves, <q>what two numbers multiply to be <m>-60</m> and add to be <m>4</m>?</q> Since <m>10</m> and <m>-6</m> fit the bill, the full factorization can be shown below:<md>
-                    <mrow>p^2q^3+4p^2q^2-60p^2q\amp=p^2q\mathopen{}\left(q^2+4q-60\right)\mathclose{}</mrow>
-                    <mrow>\amp=p^2q(q+10)(q-6)</mrow>
-                </md></p>
-            </solution>
-        </example>
-    </subsection>
-
-    <subsection>
-        <title>More Trinomials with Two Variables</title>
-
-        <p>You might encounter a trinomial with two variables that can be factored using the methods we've discussed in this section. It can be tricky though: <m>x^2+5xy+6y^2</m> has two variables and it <em>can</em> factor using the methods from this section, but <m>x^2+5x+6y^2</m> also has two variables and it <em>cannot</em> be factored. So in examples of this nature, it is even more important to check that factorizations you find actually work.</p>
-
-        <example>
-            <p>Factor <m>x^2+5xy+6y^2</m>. This is a trinomial, and the coefficient of <m>x</m> is <m>1</m>, so maybe we can factor it. We want to write <m>(x+\mathord{?})(x+\mathord{?})</m> where the question marks will be <em>something</em> that makes it all multiply out to <m>x^2+5xy+6y^2</m>.</p>
-
-            <p>Since the last term in the polynomial has a factor of <m>y^2</m>, it is natural to wonder if there is a factor of <m>y</m> in each of the two question marks. If there were, these two factors of <m>y</m> would multiply to <m>y^2</m>. So it is natural to wonder if we are looking for <m>(x+\mathord{?}y)(x+\mathord{?}y)</m> where now the question marks are just numbers.</p>
-
-            <p>At this point we can think like we have throughout this section. Are there some numbers that multiply to <m>6</m> and add to <m>5</m>? Yes, specifically <m>2</m> and <m>3</m>. So we suspect that <m>(x+2y)(x+3y)</m> might be the factorization.</p>
-
-            <p>To confirm that this is correct, we should check by multiplying out the factored form:</p>
-            <sidebyside widths="47% 47%">
-                <p><md>
-                    <mrow>(x+2y)(x+3y)\amp=x\cdot x+x\cdot 3y+2y\cdot x+2y\cdot3y</mrow>
-                    <mrow>\amp=x^2+3xy+2xy+6y^2</mrow>
-                    <mrow>\amp\stackrel{\checkmark}{=}x^2+5xy+6y^2</mrow>
-                </md></p>
-                <tabular bottom="minor" halign="center">
-                    <row>
-                        <cell bottom="none"></cell>
-                        <cell><m>x</m></cell>
-                        <cell><m>2y</m></cell>
-                    </row>
-                    <row>
-                        <cell right="minor" bottom="none"><m>x</m></cell>
-                        <cell right="minor"><m>x^2</m></cell>
-                        <cell right="minor"><m>2xy</m></cell>
-                    </row>
-                    <row>
-                        <cell right="minor" bottom="none"><m>3y</m></cell>
-                        <cell right="minor"><m>3xy</m></cell>
-                        <cell right="minor"><m>6y^2</m></cell>
-                    </row>
-                </tabular>
+            <p permid="VCA">
+              So <m>m^2-6m-40=(m+4)(m-10)</m>.
+              Checking this factorization is left up to the reader.
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <subsection permid="XUq">
+    <title>Connection to Grouping</title>
+    <p permid="tJL">
+      The factoring method we just learned takes a bit of a shortcut.
+      To prepare yourself for a more complicated factoring technique in <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">Section</xref>,
+      you may want to try taking the
+      <q>scenic route</q>
+      instead of that shortcut.
+    </p>
+    <example permid="pQQ">
+      <p permid="AEq">
+        Let's factor <m>x^2+13x+40</m> again
+        (the polynomial from <xref ref="example-factor-trinomial">Example</xref>).
+        As before, it is important to discover that <m>5</m> and <m>8</m> are important numbers,
+        because they multiply to <m>40</m> and add to <m>13</m>.
+        As before, listing out all of the factor pairs is one way to discover the <m>5</m> and the <m>8</m>.
+      </p>
+      <p permid="gLz">
+        Instead of jumping to the factored answer,
+        we can show how <m>x^2+13x+40</m> factors in a more step-by-step fashion using <m>5</m> and <m>8</m>.
+        Since they add up to <m>13</m>, we can write:
+        <md permid="vyY">
+          <mrow>x^2+\attention{13}x+40\amp=x^2+\attention{\overbrace{5x+8x}}+40</mrow>
+          <intertext>We have intentionally split up the trinomial into an unsimplified polynomial with four terms. In <xref ref="section-factoring-by-grouping">Section</xref>, we handled such four-term polynomials by grouping:</intertext>
+          <mrow>\amp=\left(x^2+5x\right)+(8x+40)</mrow>
+          <intertext>Now we can factor out each group's greatest common factor:</intertext>
+          <mrow>\amp=x(x+5)+8(x+5)</mrow>
+          <mrow>\amp=x\attention{\overbrace{(x+5)}}+8\attention{\overbrace{(x+5)}}</mrow>
+          <mrow>\amp=(x+5)(x+8)</mrow>
+        </md>
+        Thus, we have found that <m>x^2+13x+40</m> factors as
+        <m>(x+5)(x+8)</m> without memorizing the shortcut.
+      </p>
+    </example>
+    <p permid="ZQU">
+      This approach takes more time,
+      and ultimately you may not use it much.
+      However, if you try a few examples this way,
+      it may make you more comfortable with the more complicated technique in <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">Section</xref>.
+    </p>
+  </subsection>
+  <subsection permid="Ebz">
+    <title>Trinomials that are Quadratic in Form</title>
+    <idx><h>factoring</h><h>trinomials that are quadratic in form</h></idx>
+    <p permid="FYd">
+      So far we have only factored examples of <term>quadratic</term>
+          <idx><h>quadratic</h></idx>
+      trinomials: trinomials whose highest power of the variable is <m>2</m>.
+      However, this technique can also be used to factor special trinomials of higher degree which we call "quadratic in form". Trinomials that are quadratic in form require that the highest power is even,
+      that the next highest power is half of the highest power,
+      and that the third term is a constant term.
+    </p>
+    <p permid="mfm">
+      In the four examples below, check:
+      <ol permid="FJI">
+        <li permid="CPc">
+          <p permid="nGe">
+            if the highest power is even
+          </p>
+        </li>
+        <li permid="iWl">
+          <p permid="TNn">
+            if the next highest power is half of the highest power
+          </p>
+        </li>
+        <li permid="Pdu">
+          <p permid="zUw">
+            if the last term is constant
+          </p>
+        </li>
+      </ol>
+    </p>
+    <sidebyside widths="47% 47%" margins="0%" permid="Cfi">
+      <stack>
+        <p permid="aWn">
+          Factor pairs <em>will</em> help with<ellipsis/>
+          <ul permid="Noh">
+            <li permid="ems">
+              <p permid="gbF">
+                <m>y^6-23y^3-50</m>
+              </p>
+            </li>
+            <li permid="KtB">
+              <p permid="MiO">
+                <m>h^{16}+22h^8+105</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </stack>
+      <stack>
+        <p permid="Hdw">
+          Factor pairs <em>won't</em> help with<ellipsis/>
+          <ul permid="tvq">
+            <li permid="qAK">
+              <p permid="spX">
+                <m>y^5-23y^3-50</m>
+              </p>
+            </li>
+            <li permid="WHT">
+              <p permid="Yxg">
+                <m>h^{16}+22h^8+105h^2</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </stack>
+    </sidebyside>
+    <example permid="VXZ">
+      <p permid="MSI">
+        Factor <m>h^{16}+22h^8+105</m>.
+        This polynomial is one of the examples above where using factor pairs will help.
+        We find that <m>7\cdot15=105</m>,
+        and <m>7+15=22</m>, so the numbers <m>7</m> and <m>15</m> can be used:
+        <md permid="bGh">
+          <mrow>h^{16}+22h^8+105\amp=h^{16}+\overbrace{7h^8+15h^8}+105</mrow>
+          <mrow>\amp=\left(h^{16}+7h^8\right)+\left(15h^8+105\right)</mrow>
+          <mrow>\amp=h^8\left(h^8+7\right)+15\left(h^8+7\right)</mrow>
+          <mrow>\amp=\left(h^8+7\right)\left(h^8+15\right)</mrow>
+        </md>
+        Actually, once we settled on using <m>7</m> and <m>15</m>,
+        we could have concluded that
+        <m>h^{16}+22h^8+105</m> factors as <m>\left(h^8+7\right)\left(h^8+15\right)</m>,
+        if we know which power of <m>h</m> to use.
+        We'll always use half the highest power in these factorizations.
+      </p>
+      <p permid="sZR">
+        In any case, to confirm that this is correct,
+        we should check by multiplying out the factored form:
+      </p>
+      <sidebyside widths="47% 47%" permid="imr">
+        <p permid="Zha">
+          <m>\begin{aligned}[t] (h^8+7)(h^8+15)\amp=h^8\cdot h^8+h^8\cdot 15+7\cdot h^8+7\cdot 15\\ \amp=h^{16}+15h^8+7h^8+105\\ \amp\stackrel{\checkmark}{=}h^{16}+22h^8+15\end{aligned} </m>
+        </p>
+        <tabular bottom="minor" halign="center" permid="zdy">
+          <row>
+            <cell bottom="none"></cell>
+            <cell><m>h^8</m></cell>
+            <cell><m>7</m></cell>
+          </row>
+          <row>
+            <cell right="minor" bottom="none"><m>h^8</m></cell>
+            <cell right="minor"><m>h^{16}</m></cell>
+            <cell right="minor"><m>7h^8</m></cell>
+          </row>
+          <row>
+            <cell right="minor" bottom="none"><m>15</m></cell>
+            <cell right="minor"><m>15h^8</m></cell>
+            <cell right="minor"><m>105</m></cell>
+          </row>
+        </tabular>
+      </sidebyside>
+      <p permid="Foj">
+        Our factorization passes the tests.
+      </p>
+    </example>
+    <exercise permid="uAJ">
+      <webwork>
+          <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
+          <setup>
+<pg-code>
+Context("LimitedFactor");
+Context()->variables->are(y=>'Real');
+$answer = Formula("(y^3-25)(y^3+2)");
+</pg-code>
+          </setup>
+          <statement>
+            <p permid="fGg">
+              Factor <m>y^6-23y^3-50</m>.
+            </p>
+            <p permid="LNp">
+              <var name="$answer" width="25" />
+            </p>
+          </statement>
+          <solution permid="wpW">
+            <p permid="BJJ">
+              We need a pair of numbers that multiply to <m>-50</m> and add to <m>-23</m>.
+              Note that we <em>do</em> care to keep track that they multiply to a negative product and sum to a negative total.
+            </p>
+            <sidebyside permid="OtA">
+              <tabular permid="fkH">
+                <col right="minor" />
+                <col />
+                <row bottom="minor">
+                  <cell>Factor Pair</cell>
+                  <cell>Sum of the Pair</cell>
+                </row>
+                <row>
+                  <cell><m>1\cdot(-50)</m></cell>
+                  <cell><m>-49</m></cell>
+                </row>
+                <row>
+                  <cell><m>2\cdot(-25)</m></cell>
+                  <cell><m>-23</m> (what we wanted)</cell>
+                </row>
+                <row>
+                  <cell>(no need to continue)</cell>
+                  <cell>...</cell>
+                </row>
+              </tabular>
             </sidebyside>
-            <p>Our factorization passes the tests.</p>
-        </example>
-        <p>In <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">Section</xref>, there is a more definitive method for factoring polynomials of this form.</p>
-    </subsection>
-
-    <exercises>
-        <exercisegroup cols="3">
-            <title>Review and Warmup</title>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication25.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication25.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication35.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication35.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication40.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication40.pg" />
-            </exercise>
-            <exercise>
-              <webwork seed="2">
-                <setup>
-                    <pg-code>
-                        Context("Numeric");
-                        Context()->noreduce('(-x)-y','(-x)+y');
-                        $var = RandomVariableName(type=>'variable');
-                        Context()->variables->are($var=>'Real');
-
-                        $a = random(2,5,1);
-                        $b = non_zero_random(-10,10,1);
-                        do {$c = non_zero_random(-10,10,1);} until ($b!=$c);
-                        $bPlusC = $b+$c;
-                        $bc = $b*$c;
-                        $d = $a*$bPlusC;
-                        $e = $a*$bc;
-
-                        $binomial1 = Compute("$var+$b")->reduce;
-                        $binomial2 = Compute("$var+$c")->reduce;
-                        $s1 = Compute("$a*$var+$a*$b")->reduce;
-                        $s2 = Compute("$var**2+$bPlusC*$var+$bc")->reduce;
-
-                        $problem = Compute("$a*($var+$b)*($var+$c)")->reduce;
-                        $ans = Compute("$a*$var**2+$d*$var+$e")->reduce;
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Multiply the polynomials.</p>
-
-                    <p><m><var name="$problem" />=</m><var name="$ans" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>We could first distribute <m><var name="$a" /></m> into <m><var name="$binomial1" /></m> to get <m><var name="$s1" /></m>, and then multiply <m><var name="$s1" /></m> and <m><var name="$binomial2" /></m>:<md>
-                        <mrow><var name="$problem" />\amp=(<var name="$s1" />)(<var name="$binomial2" />)</mrow>
-                        <mrow>\amp=<var name="$ans" /></mrow>
-                    </md></p>
-
-                    <p>We could also first multiply <m><var name="$binomial1" /></m> and <m><var name="$binomial2" /></m> to get <m><var name="$s2" /></m>, and then distribute <m><var name="$a" /></m> into <m><var name="$s2" /></m>:<md>
-                        <mrow><var name="$problem" />\amp=<var name="$a" />(<var name="$s2" />)</mrow>
-                        <mrow>\amp=<var name="$ans" /></mrow>
-                    </md></p>
-                </solution>
-              </webwork>
-            </exercise>
-
-
-            <exercise>
-              <webwork seed="4">
-                <setup>
-                    <pg-code>
-                        Context("Numeric");
-                        Context()->noreduce('(-x)-y','(-x)+y');
-                        $var = RandomVariableName(type=>'variable');
-                        Context()->variables->are($var=>'Real');
-
-                        $a = -random(1,5,1);
-                        $b = non_zero_random(-10,10,1);
-                        do {$c = non_zero_random(-10,10,1);} until ($b!=$c);
-                        $bPlusC = $b+$c;
-                        $bc = $b*$c;
-                        $d = $a*$bPlusC;
-                        $e = $a*$bc;
-
-                        $binomial1 = Compute("$var+$b")->reduce;
-                        $binomial2 = Compute("$var+$c")->reduce;
-                        $s1 = Compute("$a*$var+$a*$b")->reduce;
-                        $s2 = Compute("$var**2+$bPlusC*$var+$bc")->reduce;
-                        $s3 = Compute("$a*($var**2+$bPlusC*$var+$bc)")->reduce;
-
-                        $problem = Compute("$a*($var+$b)*($var+$c)")->reduce;
-                        $ans = Compute("$a*$var**2+$d*$var+$e")->reduce;
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Multiply the polynomials.</p>
-
-                    <p><m><var name="$problem" />=</m><var name="$ans" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>We could first distribute <m><var name="$a" /></m> into <m><var name="$binomial1" /></m> to get <m><var name="$s1" /></m>, and then multiply <m><var name="$s1" /></m> and <m><var name="$binomial2" /></m>:<md>
-                        <mrow><var name="$problem" />\amp=(<var name="$s1" />)(<var name="$binomial2" />)</mrow>
-                        <mrow>\amp=<var name="$ans" /></mrow>
-                    </md></p>
-
-                    <p>We could also first multiply <m><var name="$binomial1" /></m> and <m><var name="$binomial2" /></m> to get <m><var name="$s2" /></m>, and then distribute <m><var name="$a" /></m> into <m><var name="$s2" /></m>:<md>
-                        <mrow><var name="$problem" />\amp=<var name="$s3" /></mrow>
-                        <mrow>\amp=<var name="$ans" /></mrow>
-                    </md></p>
-                </solution>
-              </webwork>
-            </exercise>
-            <exercise>
-              <webwork seed="3">
-                <setup>
-                    <pg-code>
-                        Context("Numeric");
-                        Context()->noreduce('(-x)-y','(-x)+y');
-                        $var = RandomVariableName(type=>'variable');
-                        Context()->variables->are($var=>'Real');
-
-                        $a = random(2,5,1);
-                        $b = non_zero_random(-10,10,1);
-                        do {$c = non_zero_random(-10,10,1);} until ($b!=$c);
-                        $bPlusC = $b+$c;
-                        $bc = $b*$c;
-                        $d = $a*$bPlusC;
-                        $e = $a*$bc;
-
-                        $binomial1 = Compute("$var+$b")->reduce;
-                        $binomial2 = Compute("$var+$c")->reduce;
-                        $s1 = Compute("$a*$var+$a*$b")->reduce;
-                        $s2 = Compute("$var**2+$bPlusC*$var+$bc")->reduce;
-
-                        $problem = Compute("$a*($var+$b)*($var+$c)")->reduce;
-                        $ans = Compute("$a*$var**2+$d*$var+$e")->reduce;
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Multiply the polynomials.</p>
-
-                    <p><m><var name="$problem" />=</m><var name="$ans" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>We could first distribute <m><var name="$a" /></m> into <m><var name="$binomial1" /></m> to get <m><var name="$s1" /></m>, and then multiply <m><var name="$s1" /></m> and <m><var name="$binomial2" /></m>:<md>
-                        <mrow><var name="$problem" />\amp=(<var name="$s1" />)(<var name="$binomial2" />)</mrow>
-                        <mrow>\amp=<var name="$ans" /></mrow>
-                    </md></p>
-
-                    <p>We could also first multiply <m><var name="$binomial1" /></m> and <m><var name="$binomial2" /></m> to get <m><var name="$s2" /></m>, and then distribute <m><var name="$a" /></m> into <m><var name="$s2" /></m>:<md>
-                        <mrow><var name="$problem" />\amp=<var name="$a" />(<var name="$s2" />)</mrow>
-                        <mrow>\amp=<var name="$ans" /></mrow>
-                    </md></p>
-                </solution>
-              </webwork>
-            </exercise>
-
-
-            <exercise>
-              <webwork seed="5">
-                <setup>
-                    <pg-code>
-                        Context("Numeric");
-                        Context()->noreduce('(-x)-y','(-x)+y');
-                        $var = RandomVariableName(type=>'variable');
-                        Context()->variables->are($var=>'Real');
-
-                        $a = -random(1,5,1);
-                        $b = non_zero_random(-10,10,1);
-                        do {$c = non_zero_random(-10,10,1);} until ($b!=$c);
-                        $bPlusC = $b+$c;
-                        $bc = $b*$c;
-                        $d = $a*$bPlusC;
-                        $e = $a*$bc;
-
-                        $binomial1 = Compute("$var+$b")->reduce;
-                        $binomial2 = Compute("$var+$c")->reduce;
-                        $s1 = Compute("$a*$var+$a*$b")->reduce;
-                        $s2 = Compute("$var**2+$bPlusC*$var+$bc")->reduce;
-                        $s3 = Compute("$a*($var**2+$bPlusC*$var+$bc)")->reduce;
-
-                        $problem = Compute("$a*($var+$b)*($var+$c)")->reduce;
-                        $ans = Compute("$a*$var**2+$d*$var+$e")->reduce;
-                    </pg-code>
-                </setup>
-                <statement>
-                    <p>Multiply the polynomials.</p>
-
-                    <p><m><var name="$problem" />=</m><var name="$ans" width="10" /></p>
-                </statement>
-                <solution>
-                    <p>We could first distribute <m><var name="$a" /></m> into <m><var name="$binomial1" /></m> to get <m><var name="$s1" /></m>, and then multiply <m><var name="$s1" /></m> and <m><var name="$binomial2" /></m>:<md>
-                        <mrow><var name="$problem" />\amp=(<var name="$s1" />)(<var name="$binomial2" />)</mrow>
-                        <mrow>\amp=<var name="$ans" /></mrow>
-                    </md></p>
-
-                    <p>We could also first multiply <m><var name="$binomial1" /></m> and <m><var name="$binomial2" /></m> to get <m><var name="$s2" /></m>, and then distribute <m><var name="$a" /></m> into <m><var name="$s2" /></m>:<md>
-                        <mrow><var name="$problem" />\amp=<var name="$s3" /></mrow>
-                        <mrow>\amp=<var name="$ans" /></mrow>
-                    </md></p>
-                </solution>
-              </webwork>
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="3">
-        <title>Factoring Trinomials with Leading Coefficient One</title>
-        <!-- One variable trinomial with no GCF -->
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring175.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring175.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring175.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring175.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring180.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring180.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring180.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring180.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring345.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring345.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring345.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring345.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring355.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring355.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring355.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring355.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring520.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring520.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring520.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring520.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring525.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring525.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring525.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring525.pg" />
-            </exercise>
-
-        <!-- One variable, GCF -->
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring380.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring380.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring380.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring380.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring390.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring390.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring390.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring390.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring395.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring395.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring395.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring395.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring400.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring400.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring400.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring400.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring440.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring440.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring440.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring440.pg" />
-            </exercise>
-
-
-        <!-- Multiple variable, no GCF -->
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring360.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring360.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring365.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring365.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring370.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring370.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring540.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring540.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring545.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring545.pg" />
-            </exercise>
-
-        <!-- Multiple variable, GCF -->
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring375.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring375.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring405.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring405.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring410.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring410.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring415.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring415.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring420.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring420.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring425.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring425.pg" />
-            </exercise>
-
-
-
-        <!-- something more -->
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring430.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring430.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring361.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring361.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring366.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring366.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring371.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring371.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring376.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring376.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring381.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring381.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring416.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/Factoring/factoring416.pg" />
-            </exercise>
-            <exercise width="wide">
-                <webwork source="BasicAlgebra/Factoring/factoring435.pg" />
-            </exercise>
-            <exercise width="wide">
-                <webwork source="BasicAlgebra/Factoring/factoring435.pg" />
-            </exercise>
-        </exercisegroup>
-
-        <exercisegroup>
-            <title>Challenge</title>
-
-            <exercise><!-- Kara's challenge problem -->
-                <webwork>
-                    <setup>
-                        <pg-code>
-                          $c = list_random(4,6,8,9,10,12,14,15,16,18,20)*random(-1,1,2);
-                          $absc = abs($c);
-                          @smalls = ();
-                          @bigs = ();
-                          for $i (1..floor(sqrt($absc))) {
-                            if ($absc % $i == 0) {
-                              push(@smalls,$i);
-                              push(@smalls,-$i);
-                              push(@bigs,$c/$i);
-                              push(@bigs,-$c/$i);
-                            }
-                          }
-                          @b = ();
-                          $n = scalar(@smalls);
-                          for $j (1..$n) {
-                            push(@b,$smalls[$j-1] + $bigs[$j-1]);
-                          }
-                          $answer = List(@b);
-
-                          Context()->variables->add(b=>'Real');
-                          $expression = Formula("x^2+bx+$c")->reduce;
-                       </pg-code>
-                    </setup>
-                    <statement>
-                          <p>What integers can go in the place of <m>b</m> so that the quadratic expression <m><var name="$expression" /></m> is factorable?</p>
-                          <instruction>Enter the solutions as a comma-separated list.</instruction>
-                          <p><var name="$answer" width="30"/></p>
-                    </statement>
-                    <hint> There are <var name="$n"/> answers.</hint>
-                    <solution>
-                        <p>Think about all of ways to factor <var name="$c"/>.  The list of possible <m>b</m>-values is <var name="$answer"/>.
-                        </p>
-                    </solution>
-                </webwork>
-            </exercise>
-        </exercisegroup>
-
-    </exercises>
-
+            <p permid="hQS">
+              So <m>y^6-23y^3-50=\left(y^3-25\right)\left(y^3+2\right)</m>.
+            </p>
+          </solution>
+      </webwork>
+    </exercise>
+  </subsection>
+  <subsection permid="kiI">
+    <title>Factoring in Stages</title>
+    <idx><h>factoring</h><h>in stages</h></idx>
+    <p permid="Smv">
+      Sometimes factoring a polynomial will take two or more
+      <q>stages.</q>
+      Always begin factoring a polynomial by factoring out its greatest common factor,
+      and <em>then</em> apply a second stage where you use a technique from this section.
+      The process of factoring a polynomial is not complete until each of the factors cannot be factored further.
+    </p>
+    <example permid="aHS">
+      <statement>
+        <p permid="lvs">
+          Factor <m>2z^2-6z-80</m>.
+        </p>
+      </statement>
+      <solution permid="XNm">
+        <p permid="NYb">
+          We will first factor out the common factor, <m>2</m>:
+          <me permid="KHW">
+            2z^2-6z-80=2\left(z^2-3z-40\right)
+          </me>
+          Now we are left with a factored expression that might factor more.
+          Looking inside the parentheses, we ask ourselves,
+          <q>what two numbers multiply to be <m>-40</m> and add to be <m>-3</m>?</q>
+          Since <m>5</m> and <m>-8</m> do the job,
+          the full factorization is:
+          <md permid="HNq">
+            <mrow>2z^2-6z-80\amp=2\left(z^2-3z-40\right)</mrow>
+            <mrow>\amp=2(z+5)(z-8)</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <example permid="GPb">
+      <statement>
+        <p permid="RCB">
+          Factor <m>-r^2+2r+24</m>.
+        </p>
+      </statement>
+      <solution permid="DUv">
+        <p permid="ufk">
+          The three terms don't exactly have a common factor,
+          but as discussed in <xref ref="section-factoring-out-the-common-factor">Section</xref>,
+          when the leading term has a negative sign,
+          it is often helpful to factor out that negative sign:
+          <me permid="qPf">
+            -r^2+2r+24=-\mathopen{}\left(r^2-2r-24\right)\mathclose{}
+          </me>.
+          Looking inside the parentheses, we ask ourselves,
+          <q>what two numbers multiply to be <m>-24</m> and add to be <m>-2</m>?</q>
+          Since <m>-6</m> and <m>4</m> work here,
+          the full factorization is shown:
+          <md permid="nUz">
+            <mrow>-r^2+2r+24\amp=-\mathopen{}\left(r^2-2r-24\right)\mathclose{}</mrow>
+            <mrow>\amp=-(r-6)(r+4)</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <example permid="mWk">
+      <statement>
+        <p permid="xJK">
+          Factor <m>p^2q^3+4p^2q^2-60p^2q</m>.
+        </p>
+      </statement>
+      <solution permid="kbE">
+        <p permid="amt">
+          First, always look for the greatest common factor:
+          in this trinomial it is <m>p^2q</m>.
+          After factoring this out, we have
+          <me permid="WWo">
+            p^2q^3+4p^2q^2-60p^2q=p^2q\mathopen{}\left(q^2+4q-60\right)\mathclose{}
+          </me>.
+          Looking inside the parentheses, we ask ourselves,
+          <q>what two numbers multiply to be <m>-60</m> and add to be <m>4</m>?</q>
+          Since <m>10</m> and <m>-6</m> fit the bill,
+          the full factorization can be shown below:
+          <md permid="UbI">
+            <mrow>p^2q^3+4p^2q^2-60p^2q\amp=p^2q\mathopen{}\left(q^2+4q-60\right)\mathclose{}</mrow>
+            <mrow>\amp=p^2q(q+10)(q-6)</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection permid="QpR">
+    <title>More Trinomials with Two Variables</title>
+    <p permid="ytE">
+      You might encounter a trinomial with two variables that can be factored using the methods we've discussed in this section.
+      It can be tricky though:
+      <m>x^2+5xy+6y^2</m> has two variables and it <em>can</em>
+      factor using the methods from this section,
+      but <m>x^2+5x+6y^2</m> also has two variables and it
+      <em>cannot</em> be factored.
+      So in examples of this nature,
+      it is even more important to check that factorizations you find actually work.
+    </p>
+    <example permid="Tdt">
+      <p permid="dQT">
+        Factor <m>x^2+5xy+6y^2</m>.
+        This is a trinomial, and the coefficient of <m>x</m> is <m>1</m>,
+        so maybe we can factor it.
+        We want to write <m>(x+\mathord{?})(x+\mathord{?})</m> where the question marks will be <em>something</em>
+        that makes it all multiply out to <m>x^2+5xy+6y^2</m>.
+      </p>
+      <p permid="JYc">
+        Since the last term in the polynomial has a factor of <m>y^2</m>,
+        it is natural to wonder if there is a factor of <m>y</m> in each of the two question marks.
+        If there were,
+        these two factors of <m>y</m> would multiply to <m>y^2</m>.
+        So it is natural to wonder if we are looking for
+        <m>(x+\mathord{?}y)(x+\mathord{?}y)</m> where now the question marks are just numbers.
+      </p>
+      <p permid="qfl">
+        At this point we can think like we have throughout this section.
+        Are there some numbers that multiply to <m>6</m> and add to <m>5</m>?
+        Yes, specifically <m>2</m> and <m>3</m>.
+        So we suspect that <m>(x+2y)(x+3y)</m> might be the factorization.
+      </p>
+      <p permid="Wmu">
+        To confirm that this is correct,
+        we should check by multiplying out the factored form:
+      </p>
+      <sidebyside widths="47% 47%" permid="zkC">
+        <p permid="CtD">
+          <md permid="AiR">
+            <mrow>(x+2y)(x+3y)\amp=x\cdot x+x\cdot 3y+2y\cdot x+2y\cdot3y</mrow>
+            <mrow>\amp=x^2+3xy+2xy+6y^2</mrow>
+            <mrow>\amp\stackrel{\checkmark}{=}x^2+5xy+6y^2</mrow>
+          </md>
+        </p>
+        <tabular bottom="minor" halign="center" permid="LrQ">
+          <row>
+            <cell bottom="none"></cell>
+            <cell><m>x</m></cell>
+            <cell><m>2y</m></cell>
+          </row>
+          <row>
+            <cell right="minor" bottom="none"><m>x</m></cell>
+            <cell right="minor"><m>x^2</m></cell>
+            <cell right="minor"><m>2xy</m></cell>
+          </row>
+          <row>
+            <cell right="minor" bottom="none"><m>3y</m></cell>
+            <cell right="minor"><m>3xy</m></cell>
+            <cell right="minor"><m>6y^2</m></cell>
+          </row>
+        </tabular>
+      </sidebyside>
+      <p permid="iAM">
+        Our factorization passes the tests.
+      </p>
+    </example>
+    <p permid="eAN">
+      In <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">Section</xref>,
+      there is a more definitive method for factoring polynomials of this form.
+    </p>
+  </subsection>
+  <exercises permid="wxa">
+    <exercisegroup cols="3" permid="ILs">
+      <title>Review and Warmup</title>
+      <exercise permid="BgT">
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication25.pg" />
+      </exercise>
+      <exercise permid="hoc">
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication25.pg" />
+      </exercise>
+      <exercise permid="Nvl">
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication35.pg" />
+      </exercise>
+      <exercise permid="tCu">
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication35.pg" />
+      </exercise>
+      <exercise permid="ZJD">
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication40.pg" />
+      </exercise>
+      <exercise permid="FQM">
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication40.pg" />
+      </exercise>
+      <exercise permid="lXV">
+        <webwork seed="2">
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)-y','(-x)+y');
+$var = RandomVariableName(type=>'variable');
+Context()->variables->are($var=>'Real');
+$a = random(2,5,1);
+$b = non_zero_random(-10,10,1);
+do {$c = non_zero_random(-10,10,1);} until ($b!=$c);
+$bPlusC = $b+$c;
+$bc = $b*$c;
+$d = $a*$bPlusC;
+$e = $a*$bc;
+$binomial1 = Compute("$var+$b")->reduce;
+$binomial2 = Compute("$var+$c")->reduce;
+$s1 = Compute("$a*$var+$a*$b")->reduce;
+$s2 = Compute("$var**2+$bPlusC*$var+$bc")->reduce;
+$problem = Compute("$a*($var+$b)*($var+$c)")->reduce;
+$ans = Compute("$a*$var**2+$d*$var+$e")->reduce;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="rUy">
+                Multiply the polynomials.
+              </p>
+              <p permid="YbH">
+                <m><var name="$problem" />=</m><var name="$ans" width="10" />
+              </p>
+            </statement>
+            <solution permid="cxf">
+              <p permid="GtC">
+                We could first distribute <m><var name="$a" /></m> into <m><var name="$binomial1" /></m> to get <m><var name="$s1" /></m>,
+                and then multiply <m><var name="$s1" /></m> and <m><var name="$binomial2" /></m>:
+                <md permid="gqa">
+                  <mrow><var name="$problem" />\amp=(<var name="$s1" />)(<var name="$binomial2" />)</mrow>
+                  <mrow>\amp=<var name="$ans" /></mrow>
+                </md>
+              </p>
+              <p permid="mAL">
+                We could also first multiply <m><var name="$binomial1" /></m> and <m><var name="$binomial2" /></m> to get <m><var name="$s2" /></m>,
+                and then distribute <m><var name="$a" /></m> into <m><var name="$s2" /></m>:
+                <md permid="Mxj">
+                  <mrow><var name="$problem" />\amp=<var name="$a" />(<var name="$s2" />)</mrow>
+                  <mrow>\amp=<var name="$ans" /></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+      <exercise permid="Sfe">
+        <webwork seed="4">
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)-y','(-x)+y');
+$var = RandomVariableName(type=>'variable');
+Context()->variables->are($var=>'Real');
+$a = -random(1,5,1);
+$b = non_zero_random(-10,10,1);
+do {$c = non_zero_random(-10,10,1);} until ($b!=$c);
+$bPlusC = $b+$c;
+$bc = $b*$c;
+$d = $a*$bPlusC;
+$e = $a*$bc;
+$binomial1 = Compute("$var+$b")->reduce;
+$binomial2 = Compute("$var+$c")->reduce;
+$s1 = Compute("$a*$var+$a*$b")->reduce;
+$s2 = Compute("$var**2+$bPlusC*$var+$bc")->reduce;
+$s3 = Compute("$a*($var**2+$bPlusC*$var+$bc)")->reduce;
+$problem = Compute("$a*($var+$b)*($var+$c)")->reduce;
+$ans = Compute("$a*$var**2+$d*$var+$e")->reduce;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="EiQ">
+                Multiply the polynomials.
+              </p>
+              <p permid="kpZ">
+                <m><var name="$problem" />=</m><var name="$ans" width="10" />
+              </p>
+            </statement>
+            <solution permid="IEo">
+              <p permid="SHU">
+                We could first distribute <m><var name="$a" /></m> into <m><var name="$binomial1" /></m> to get <m><var name="$s1" /></m>,
+                and then multiply <m><var name="$s1" /></m> and <m><var name="$binomial2" /></m>:
+                <md permid="sEs">
+                  <mrow><var name="$problem" />\amp=(<var name="$s1" />)(<var name="$binomial2" />)</mrow>
+                  <mrow>\amp=<var name="$ans" /></mrow>
+                </md>
+              </p>
+              <p permid="yPd">
+                We could also first multiply <m><var name="$binomial1" /></m> and <m><var name="$binomial2" /></m> to get <m><var name="$s2" /></m>,
+                and then distribute <m><var name="$a" /></m> into <m><var name="$s2" /></m>:
+                <md permid="YLB">
+                  <mrow><var name="$problem" />\amp=<var name="$s3" /></mrow>
+                  <mrow>\amp=<var name="$ans" /></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+      <exercise permid="ymn">
+        <webwork seed="3">
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)-y','(-x)+y');
+$var = RandomVariableName(type=>'variable');
+Context()->variables->are($var=>'Real');
+$a = random(2,5,1);
+$b = non_zero_random(-10,10,1);
+do {$c = non_zero_random(-10,10,1);} until ($b!=$c);
+$bPlusC = $b+$c;
+$bc = $b*$c;
+$d = $a*$bPlusC;
+$e = $a*$bc;
+$binomial1 = Compute("$var+$b")->reduce;
+$binomial2 = Compute("$var+$c")->reduce;
+$s1 = Compute("$a*$var+$a*$b")->reduce;
+$s2 = Compute("$var**2+$bPlusC*$var+$bc")->reduce;
+$problem = Compute("$a*($var+$b)*($var+$c)")->reduce;
+$ans = Compute("$a*$var**2+$d*$var+$e")->reduce;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="Qxi">
+                Multiply the polynomials.
+              </p>
+              <p permid="wEr">
+                <m><var name="$problem" />=</m><var name="$ans" width="10" />
+              </p>
+            </statement>
+            <solution permid="oLx">
+              <p permid="eWm">
+                We could first distribute <m><var name="$a" /></m> into <m><var name="$binomial1" /></m> to get <m><var name="$s1" /></m>,
+                and then multiply <m><var name="$s1" /></m> and <m><var name="$binomial2" /></m>:
+                <md permid="ESK">
+                  <mrow><var name="$problem" />\amp=(<var name="$s1" />)(<var name="$binomial2" />)</mrow>
+                  <mrow>\amp=<var name="$ans" /></mrow>
+                </md>
+              </p>
+              <p permid="Ldv">
+                We could also first multiply <m><var name="$binomial1" /></m> and <m><var name="$binomial2" /></m> to get <m><var name="$s2" /></m>,
+                and then distribute <m><var name="$a" /></m> into <m><var name="$s2" /></m>:
+                <md permid="kZT">
+                  <mrow><var name="$problem" />\amp=<var name="$a" />(<var name="$s2" />)</mrow>
+                  <mrow>\amp=<var name="$ans" /></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+      <exercise permid="etw">
+        <webwork seed="5">
+            <setup>
+<pg-code>
+Context("Numeric");
+Context()->noreduce('(-x)-y','(-x)+y');
+$var = RandomVariableName(type=>'variable');
+Context()->variables->are($var=>'Real');
+$a = -random(1,5,1);
+$b = non_zero_random(-10,10,1);
+do {$c = non_zero_random(-10,10,1);} until ($b!=$c);
+$bPlusC = $b+$c;
+$bc = $b*$c;
+$d = $a*$bPlusC;
+$e = $a*$bc;
+$binomial1 = Compute("$var+$b")->reduce;
+$binomial2 = Compute("$var+$c")->reduce;
+$s1 = Compute("$a*$var+$a*$b")->reduce;
+$s2 = Compute("$var**2+$bPlusC*$var+$bc")->reduce;
+$s3 = Compute("$a*($var**2+$bPlusC*$var+$bc)")->reduce;
+$problem = Compute("$a*($var+$b)*($var+$c)")->reduce;
+$ans = Compute("$a*$var**2+$d*$var+$e")->reduce;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="cLA">
+                Multiply the polynomials.
+              </p>
+              <p permid="ISJ">
+                <m><var name="$problem" />=</m><var name="$ans" width="10" />
+              </p>
+            </statement>
+            <solution permid="USG">
+              <p permid="rkE">
+                We could first distribute <m><var name="$a" /></m> into <m><var name="$binomial1" /></m> to get <m><var name="$s1" /></m>,
+                and then multiply <m><var name="$s1" /></m> and <m><var name="$binomial2" /></m>:
+                <md permid="Rhc">
+                  <mrow><var name="$problem" />\amp=(<var name="$s1" />)(<var name="$binomial2" />)</mrow>
+                  <mrow>\amp=<var name="$ans" /></mrow>
+                </md>
+              </p>
+              <p permid="XrN">
+                We could also first multiply <m><var name="$binomial1" /></m> and <m><var name="$binomial2" /></m> to get <m><var name="$s2" /></m>,
+                and then distribute <m><var name="$a" /></m> into <m><var name="$s2" /></m>:
+                <md permid="xol">
+                  <mrow><var name="$problem" />\amp=<var name="$s3" /></mrow>
+                  <mrow>\amp=<var name="$ans" /></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="3" permid="oSB">
+      <title>Factoring Trinomials with Leading Coefficient One</title>
+<!-- One variable trinomial with no GCF -->
+      <exercise permid="KAF">
+        <webwork source="BasicAlgebra/Factoring/factoring170.pg" />
+      </exercise>
+      <exercise permid="qHO">
+        <webwork source="BasicAlgebra/Factoring/factoring170.pg" />
+      </exercise>
+      <exercise permid="WOX">
+        <webwork source="BasicAlgebra/Factoring/factoring170.pg" />
+      </exercise>
+      <exercise permid="CWg">
+        <webwork source="BasicAlgebra/Factoring/factoring170.pg" />
+      </exercise>
+      <exercise permid="jdp">
+        <webwork source="BasicAlgebra/Factoring/factoring175.pg" />
+      </exercise>
+      <exercise permid="Pky">
+        <webwork source="BasicAlgebra/Factoring/factoring175.pg" />
+      </exercise>
+      <exercise permid="vrH">
+        <webwork source="BasicAlgebra/Factoring/factoring175.pg" />
+      </exercise>
+      <exercise permid="byQ">
+        <webwork source="BasicAlgebra/Factoring/factoring175.pg" />
+      </exercise>
+      <exercise permid="HFZ">
+        <webwork source="BasicAlgebra/Factoring/factoring180.pg" />
+      </exercise>
+      <exercise permid="nNi">
+        <webwork source="BasicAlgebra/Factoring/factoring180.pg" />
+      </exercise>
+      <exercise permid="TUr">
+        <webwork source="BasicAlgebra/Factoring/factoring180.pg" />
+      </exercise>
+      <exercise permid="AbA">
+        <webwork source="BasicAlgebra/Factoring/factoring180.pg" />
+      </exercise>
+      <exercise permid="giJ">
+        <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
+      </exercise>
+      <exercise permid="MpS">
+        <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
+      </exercise>
+      <exercise permid="sxb">
+        <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
+      </exercise>
+      <exercise permid="YEk">
+        <webwork source="BasicAlgebra/Factoring/factoring340.pg" />
+      </exercise>
+      <exercise permid="ELt">
+        <webwork source="BasicAlgebra/Factoring/factoring345.pg" />
+      </exercise>
+      <exercise permid="kSC">
+        <webwork source="BasicAlgebra/Factoring/factoring345.pg" />
+      </exercise>
+      <exercise permid="QZL">
+        <webwork source="BasicAlgebra/Factoring/factoring345.pg" />
+      </exercise>
+      <exercise permid="xgU">
+        <webwork source="BasicAlgebra/Factoring/factoring345.pg" />
+      </exercise>
+      <exercise permid="dod">
+        <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
+      </exercise>
+      <exercise permid="Jvm">
+        <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
+      </exercise>
+      <exercise permid="pCv">
+        <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
+      </exercise>
+      <exercise permid="VJE">
+        <webwork source="BasicAlgebra/Factoring/factoring350.pg" />
+      </exercise>
+      <exercise permid="BQN">
+        <webwork source="BasicAlgebra/Factoring/factoring355.pg" />
+      </exercise>
+      <exercise permid="hXW">
+        <webwork source="BasicAlgebra/Factoring/factoring355.pg" />
+      </exercise>
+      <exercise permid="Off">
+        <webwork source="BasicAlgebra/Factoring/factoring355.pg" />
+      </exercise>
+      <exercise permid="umo">
+        <webwork source="BasicAlgebra/Factoring/factoring355.pg" />
+      </exercise>
+      <exercise permid="atx">
+        <webwork source="BasicAlgebra/Factoring/factoring520.pg" />
+      </exercise>
+      <exercise permid="GAG">
+        <webwork source="BasicAlgebra/Factoring/factoring520.pg" />
+      </exercise>
+      <exercise permid="mHP">
+        <webwork source="BasicAlgebra/Factoring/factoring520.pg" />
+      </exercise>
+      <exercise permid="SOY">
+        <webwork source="BasicAlgebra/Factoring/factoring520.pg" />
+      </exercise>
+      <exercise permid="yWh">
+        <webwork source="BasicAlgebra/Factoring/factoring525.pg" />
+      </exercise>
+      <exercise permid="fdq">
+        <webwork source="BasicAlgebra/Factoring/factoring525.pg" />
+      </exercise>
+      <exercise permid="Lkz">
+        <webwork source="BasicAlgebra/Factoring/factoring525.pg" />
+      </exercise>
+      <exercise permid="rrI">
+        <webwork source="BasicAlgebra/Factoring/factoring525.pg" />
+      </exercise>
+<!-- One variable, GCF -->
+      <exercise permid="XyR">
+        <webwork source="BasicAlgebra/Factoring/factoring380.pg" />
+      </exercise>
+      <exercise permid="DGa">
+        <webwork source="BasicAlgebra/Factoring/factoring380.pg" />
+      </exercise>
+      <exercise permid="jNj">
+        <webwork source="BasicAlgebra/Factoring/factoring380.pg" />
+      </exercise>
+      <exercise permid="PUs">
+        <webwork source="BasicAlgebra/Factoring/factoring380.pg" />
+      </exercise>
+      <exercise permid="wbB">
+        <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
+      </exercise>
+      <exercise permid="ciK">
+        <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
+      </exercise>
+      <exercise permid="IpT">
+        <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
+      </exercise>
+      <exercise permid="oxc">
+        <webwork source="BasicAlgebra/Factoring/factoring385.pg" />
+      </exercise>
+      <exercise permid="UEl">
+        <webwork source="BasicAlgebra/Factoring/factoring390.pg" />
+      </exercise>
+      <exercise permid="ALu">
+        <webwork source="BasicAlgebra/Factoring/factoring390.pg" />
+      </exercise>
+      <exercise permid="gSD">
+        <webwork source="BasicAlgebra/Factoring/factoring390.pg" />
+      </exercise>
+      <exercise permid="MZM">
+        <webwork source="BasicAlgebra/Factoring/factoring390.pg" />
+      </exercise>
+      <exercise permid="tgV">
+        <webwork source="BasicAlgebra/Factoring/factoring395.pg" />
+      </exercise>
+      <exercise permid="Zoe">
+        <webwork source="BasicAlgebra/Factoring/factoring395.pg" />
+      </exercise>
+      <exercise permid="Fvn">
+        <webwork source="BasicAlgebra/Factoring/factoring395.pg" />
+      </exercise>
+      <exercise permid="lCw">
+        <webwork source="BasicAlgebra/Factoring/factoring395.pg" />
+      </exercise>
+      <exercise permid="RJF">
+        <webwork source="BasicAlgebra/Factoring/factoring400.pg" />
+      </exercise>
+      <exercise permid="xQO">
+        <webwork source="BasicAlgebra/Factoring/factoring400.pg" />
+      </exercise>
+      <exercise permid="dXX">
+        <webwork source="BasicAlgebra/Factoring/factoring400.pg" />
+      </exercise>
+      <exercise permid="Kfg">
+        <webwork source="BasicAlgebra/Factoring/factoring400.pg" />
+      </exercise>
+      <exercise permid="qmp">
+        <webwork source="BasicAlgebra/Factoring/factoring440.pg" />
+      </exercise>
+      <exercise permid="Wty">
+        <webwork source="BasicAlgebra/Factoring/factoring440.pg" />
+      </exercise>
+      <exercise permid="CAH">
+        <webwork source="BasicAlgebra/Factoring/factoring440.pg" />
+      </exercise>
+      <exercise permid="iHQ">
+        <webwork source="BasicAlgebra/Factoring/factoring440.pg" />
+      </exercise>
+<!-- Multiple variable, no GCF -->
+      <exercise permid="OOZ">
+        <webwork source="BasicAlgebra/Factoring/factoring360.pg" />
+      </exercise>
+      <exercise permid="uWi">
+        <webwork source="BasicAlgebra/Factoring/factoring360.pg" />
+      </exercise>
+      <exercise permid="bdr">
+        <webwork source="BasicAlgebra/Factoring/factoring365.pg" />
+      </exercise>
+      <exercise permid="HkA">
+        <webwork source="BasicAlgebra/Factoring/factoring365.pg" />
+      </exercise>
+      <exercise permid="nrJ">
+        <webwork source="BasicAlgebra/Factoring/factoring370.pg" />
+      </exercise>
+      <exercise permid="TyS">
+        <webwork source="BasicAlgebra/Factoring/factoring370.pg" />
+      </exercise>
+      <exercise permid="zGb">
+        <webwork source="BasicAlgebra/Factoring/factoring540.pg" />
+      </exercise>
+      <exercise permid="fNk">
+        <webwork source="BasicAlgebra/Factoring/factoring540.pg" />
+      </exercise>
+      <exercise permid="LUt">
+        <webwork source="BasicAlgebra/Factoring/factoring545.pg" />
+      </exercise>
+      <exercise permid="sbC">
+        <webwork source="BasicAlgebra/Factoring/factoring545.pg" />
+      </exercise>
+<!-- Multiple variable, GCF -->
+      <exercise permid="YiL">
+        <webwork source="BasicAlgebra/Factoring/factoring375.pg" />
+      </exercise>
+      <exercise permid="EpU">
+        <webwork source="BasicAlgebra/Factoring/factoring375.pg" />
+      </exercise>
+      <exercise permid="kxd">
+        <webwork source="BasicAlgebra/Factoring/factoring405.pg" />
+      </exercise>
+      <exercise permid="QEm">
+        <webwork source="BasicAlgebra/Factoring/factoring405.pg" />
+      </exercise>
+      <exercise permid="wLv">
+        <webwork source="BasicAlgebra/Factoring/factoring410.pg" />
+      </exercise>
+      <exercise permid="cSE">
+        <webwork source="BasicAlgebra/Factoring/factoring410.pg" />
+      </exercise>
+      <exercise permid="IZN">
+        <webwork source="BasicAlgebra/Factoring/factoring415.pg" />
+      </exercise>
+      <exercise permid="pgW">
+        <webwork source="BasicAlgebra/Factoring/factoring415.pg" />
+      </exercise>
+      <exercise permid="Vof">
+        <webwork source="BasicAlgebra/Factoring/factoring420.pg" />
+      </exercise>
+      <exercise permid="Bvo">
+        <webwork source="BasicAlgebra/Factoring/factoring420.pg" />
+      </exercise>
+      <exercise permid="hCx">
+        <webwork source="BasicAlgebra/Factoring/factoring425.pg" />
+      </exercise>
+      <exercise permid="NJG">
+        <webwork source="BasicAlgebra/Factoring/factoring425.pg" />
+      </exercise>
+<!-- something more -->
+      <exercise permid="tQP">
+        <webwork source="BasicAlgebra/Factoring/factoring430.pg" />
+      </exercise>
+      <exercise permid="ZXY">
+        <webwork source="BasicAlgebra/Factoring/factoring430.pg" />
+      </exercise>
+      <exercise permid="Gfh">
+        <webwork source="BasicAlgebra/Factoring/factoring361.pg" />
+      </exercise>
+      <exercise permid="mmq">
+        <webwork source="BasicAlgebra/Factoring/factoring361.pg" />
+      </exercise>
+      <exercise permid="Stz">
+        <webwork source="BasicAlgebra/Factoring/factoring366.pg" />
+      </exercise>
+      <exercise permid="yAI">
+        <webwork source="BasicAlgebra/Factoring/factoring366.pg" />
+      </exercise>
+      <exercise permid="eHR">
+        <webwork source="BasicAlgebra/Factoring/factoring371.pg" />
+      </exercise>
+      <exercise permid="KPa">
+        <webwork source="BasicAlgebra/Factoring/factoring371.pg" />
+      </exercise>
+      <exercise permid="qWj">
+        <webwork source="BasicAlgebra/Factoring/factoring376.pg" />
+      </exercise>
+      <exercise permid="Xds">
+        <webwork source="BasicAlgebra/Factoring/factoring376.pg" />
+      </exercise>
+      <exercise permid="DkB">
+        <webwork source="BasicAlgebra/Factoring/factoring381.pg" />
+      </exercise>
+      <exercise permid="jrK">
+        <webwork source="BasicAlgebra/Factoring/factoring381.pg" />
+      </exercise>
+      <exercise permid="PyT">
+        <webwork source="BasicAlgebra/Factoring/factoring416.pg" />
+      </exercise>
+      <exercise permid="vGc">
+        <webwork source="BasicAlgebra/Factoring/factoring416.pg" />
+      </exercise>
+      <exercise width="wide" permid="bNl">
+        <webwork source="BasicAlgebra/Factoring/factoring435.pg" />
+      </exercise>
+      <exercise width="wide" permid="HUu">
+        <webwork source="BasicAlgebra/Factoring/factoring435.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup permid="UZK">
+      <title>Challenge</title>
+      <exercise permid="obD">
+<!-- Kara's challenge problem -->
+        <webwork>
+            <setup>
+<pg-code>
+$c = list_random(4,6,8,9,10,12,14,15,16,18,20)*random(-1,1,2);
+$absc = abs($c);
+@smalls = ();
+@bigs = ();
+for $i (1..floor(sqrt($absc))) {
+if ($absc % $i == 0) {
+push(@smalls,$i);
+push(@smalls,-$i);
+push(@bigs,$c/$i);
+push(@bigs,-$c/$i);
+}
+}
+@b = ();
+$n = scalar(@smalls);
+for $j (1..$n) {
+push(@b,$smalls[$j-1] + $bigs[$j-1]);
+}
+$answer = List(@b);
+Context()->variables->add(b=>'Real');
+$expression = Formula("x^2+bx+$c")->reduce;
+</pg-code>
+            </setup>
+            <statement>
+              <p permid="oZS">
+                What integers can go in the place of <m>b</m> so that the quadratic expression <m><var name="$expression" /></m> is factorable?
+              </p>
+              <instruction>
+                Enter the solutions as a comma-separated list.
+              </instruction>
+              <p permid="Vhb">
+                <var name="$answer" width="30"/>
+              </p>
+            </statement>
+            <hint permid="hgY">
+              There are <var name="$n"/> answers.
+            </hint>
+            <solution permid="AZP">
+              <p permid="DyW">
+                Think about all of ways to factor <var name="$c"/>.
+                The list of possible <m>b</m>-values is <var name="$answer"/>.
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 </section>

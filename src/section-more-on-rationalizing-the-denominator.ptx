@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -7,367 +6,368 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-
-<section xml:id="section-more-on-rationalizing-the-denominator">
-
-    <title>More on Rationalizing the Denominator</title>
-
-    <introduction>
-        <p>In <xref ref="section-square-root-properties">Section</xref>, we learned how to rationalize the denominator in simple expressions like <m>\frac{1}{\sqrt{2}}</m>. We will briefly review this topic and then extend the concept to the next level.</p>
-    </introduction>
-
-    <subsection>
-        <title>A Review of Rationalizing the Denominator</title>
-
-        <p>To remove radicals from the denominator of <m>\frac{1}{\sqrt{2}}</m>, we multiply the numerator and denominator by <m>\sqrt{2}</m>:<md>
-            <mrow>\frac{1}{\sqrt{2}}\amp=\frac{1}{\sqrt{2}}\multiplyright{\frac{\sqrt{2}}{\sqrt{2}}}</mrow>
-            <mrow>\amp=\frac{\sqrt{2}}{2}</mrow>
-        </md>We used the property:<me>\sqrt{x}\cdot\sqrt{x}=x,\text{ where }x\text{ is positive}</me></p>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator of the expressions.
-                <ol label="a." cols="2">
-                    <li><p><m>\frac{3}{\sqrt{6}}</m></p></li>
-                    <li><p><m>\frac{\sqrt{5}}{\sqrt{72}}</m></p></li>
-                </ol></p>
-            </statement>
-            <solution>
-
-                <p><ol label="a.">
-                    <li><p>To rationalize the denominator of <m>\frac{3}{\sqrt{6}}</m>, we take the expression and multiply by a special version of <m>\highlight{1}</m> to make the radical in the denominator cancel.
-                            <md>
-                                <mrow>\frac{3}{\sqrt{6}}\amp=\frac{3}{\sqrt{6}}\multiplyright{\frac{\sqrt{6}}{\sqrt{6}}}</mrow>
-                                <mrow>\amp=\frac{3\sqrt{6}}{\sqrt{36}}</mrow>
-                                <mrow>\amp=\frac{3\sqrt{6}}{6}</mrow>
-                                <mrow>\amp=\frac{\sqrt{6}}{2}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li><p>Rationalizing the denominator of <m>\frac{\sqrt{5}}{\sqrt{72}}</m> is slightly trickier. We could go the brute force method and multiply both the numerator and denominator by <m>\sqrt{72}</m>, and it would be effective; however, we should note that the <m>\sqrt{72}</m> in the denominator can be <em>reduced</em> first. This will simplify future algebra.
-                            <md>
-                                <mrow>\frac{\sqrt{5}}{\sqrt{72}}\amp=\frac{\sqrt{5}}{\sqrt{36\cdot 2}}</mrow>
-                                <mrow>\amp=\frac{\sqrt{5}}{\sqrt{36}\cdot\sqrt{2}}</mrow>
-                                <mrow>\amp=\frac{\sqrt{5}}{6\cdot\sqrt{2}}</mrow>
-                                <intertext>Now all that remains is to multiply the numerator and denominator by <m>\sqrt{2}</m>.</intertext>
-                                <mrow>\amp=\frac{\sqrt{5}}{6\cdot\sqrt{2}}\multiplyright{\frac{\sqrt{2}}{\sqrt{2}}}</mrow>
-                                <mrow>\amp=\frac{\sqrt{10}}{6\cdot\sqrt{4}}</mrow>
-                                <mrow>\amp=\frac{\sqrt{10}}{6\cdot 2}</mrow>
-                                <mrow>\amp=\frac{\sqrt{10}}{12}</mrow>
-                            </md>
-                        </p>
-                    </li>
-                </ol></p>
-            </solution>
-        </example>
-        <!-- <p>We can extend this concept and use the following properties to rationalize denominators with radicals of other degrees:<md>
-            <mrow>\sqrt[3]{x^3}\amp=x</mrow>
-            <mrow>\sqrt[4]{x^4}\amp=x</mrow>
-            <mrow>\amp\ldots</mrow>
-            <mrow>\sqrt[n]{x^n}\amp=x</mrow>
-        </md>Let's look at a few examples.</p>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\frac{1}{\sqrt[3]{2}}</m>.</p>
-            </statement>
-            <solution>
-                <p>To remove the radical <m>\sqrt[3]{2}</m>, we will use the property <m>\sqrt[3]{2^3}=2</m>. This implies we will multiply the numerator and denominator by <m>\sqrt[3]{2^2}</m>:<md>
-                    <mrow>\frac{1}{\sqrt[3]{2}}\amp=\frac{1\multiplyright{\sqrt[3]{2^2}}}{\sqrt[3]{2}\multiplyright{\sqrt[3]{2^2}}}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{2^2}}{\sqrt[3]{2^3}}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{4}}{2}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\frac{\sqrt{3}}{3\sqrt{2x}}</m>. Assume all variables are positive.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\frac{\sqrt{3}}{3\sqrt{2x}}\amp=\frac{\sqrt{3}\multiplyright{\sqrt{2x}}}{3\sqrt{2x}\multiplyright{\sqrt{2x}}}</mrow>
-                    <mrow>\amp=\frac{\sqrt{3\cdot2x}}{3\cdot2x}</mrow>
-                    <mrow>\amp=\frac{\sqrt{6x}}{6x}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <p>In the example above, to remove the radical <m>\sqrt{2x}</m>, we did <m>\sqrt{2x}\cdot\sqrt{2x}=2x</m>. In the next example, to remove the radical <m>\sqrt[3]{2x^2}</m>, we do <m>\sqrt[3]{2x}\cdot\sqrt[3]{2^2x^2}=2x</m>.</p>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\frac{\sqrt[3]{y}}{3\sqrt[3]{2x}}</m>. Assume all variables are positive.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\frac{\sqrt[3]{y}}{3\sqrt[3]{2x}}\amp=\frac{\sqrt[3]{y}\multiplyright{\sqrt[3]{2^2x^2}}}{3\sqrt[3]{2x}\multiplyright{\sqrt[3]{2^2x^2}}}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{4x^2y}}{3\cdot2x}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{4x^2y}}{6x}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <p>When a radicand is a fraction, we should break it into two radicals, and then rationalize the denominator, like in the next two examples.</p>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\sqrt[3]{\frac{2}{3}}</m>.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\sqrt[3]{\frac{2}{3}}\amp=\frac{\sqrt[3]{2}}{\sqrt[3]{3}}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{2}\multiplyright{\sqrt{3^2}}}{\sqrt[3]{3}\multiplyright{\sqrt{3^2}}}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{2\cdot3^2}}{3}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{18}}{3}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\sqrt[3]{\frac{r}{s^2}}</m>. Assume all variables are positive.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\sqrt[3]{\frac{r}{s^2}}\amp=\frac{\sqrt[3]{r}}{\sqrt[3]{s^2}}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{r}\multiplyright{\sqrt[3]{s}}}{\sqrt[3]{s^2}\multiplyright{\sqrt[3]{s}}}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{rs}}{s}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <p>Before we rationalize the denominator, we should simplify the radical if possible, like in the next example.</p>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\frac{1}{\sqrt[3]{54x^5}}</m>. Assume all variables are positive.</p>
-            </statement>
-            <solution>
-                <p><md>
-                    <mrow>\frac{1}{\sqrt[3]{54x^5}}\amp=\frac{1}{\sqrt[3]{2\cdot3^3x^3x^2}}</mrow>
-                    <mrow>\amp=\frac{1}{3x\cdot\sqrt[3]{2x^2}}</mrow>
-                    <mrow>\amp=\frac{1\multiplyright{\sqrt[3]{2^2x}}}{3x\cdot\sqrt[3]{2x^2}\multiplyright{\sqrt[3]{2^2x}}}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{2^2x}}{3x\cdot2x}</mrow>
-                    <mrow>\amp=\frac{\sqrt[3]{4x}}{6x^2}</mrow>
-                </md></p>
-            </solution>
-        </example> -->
-    </subsection>
-
-    <subsection>
-        <title>Rationalize Denominator with Difference of Squares Formula</title>
-
-        <p>How can we remove the radical from the denominator of <m>\frac{1}{\sqrt{2}+1}</m>? Let's try multiplying the numerator and denominator by <m>\sqrt{2}</m>:<md>
-            <mrow>\frac{1}{\sqrt{2}+1}\amp=\frac{1}{\left(\sqrt{2}+1\right)}\multiplyright{\frac{\sqrt{2}}{\sqrt{2}}}</mrow>
-            <mrow>\amp=\frac{\sqrt{2}}{\sqrt{2}\cdot\highlight{\sqrt{2}}+1\cdot\highlight{\sqrt{2}}}</mrow>
-            <mrow>\amp=\frac{\sqrt{2}}{2+\sqrt{2}}</mrow>
-        </md>We removed one radical from the denominator, but created another. We need to find another method.  The difference of squares formula will help:<me>(a+b)(a-b)=a^2-b^2</me>Those two squares in <m>a^2-b^2</m> can remove square roots. To remove the radical from the denominator of <m>\frac{1}{\sqrt{2}+1}</m>, we multiply the numerator and denominator by <m>\sqrt{2}-1</m>:<md>
-            <mrow>\frac{1}{\sqrt{2}+1}\amp=\frac{1}{\left(\sqrt{2}+1\right)}\multiplyright{\frac{\left(\sqrt{2}-1\right)}{\left(\sqrt{2}-1\right)}}</mrow>
-            <mrow>\amp=\frac{\sqrt{2}-1}{\left(\sqrt{2}\right)^2-(1)^2}</mrow>
-            <mrow>\amp=\frac{\sqrt{2}-1}{2-1}</mrow>
-            <mrow>\amp=\frac{\sqrt{2}-1}{1}</mrow>
-            <mrow>\amp=\sqrt{2}-1</mrow>
-        </md>Let's look at a few more examples.</p>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\frac{\sqrt{7}-\sqrt{2}}{\sqrt{5}+\sqrt{3}}</m>.</p>
-            </statement>
-            <solution>
-                <p>To remove radicals in <m>\sqrt{5}+\sqrt{3}</m> with the difference of squares formula, we multiply it with <m>\sqrt{5}-\sqrt{3}</m>.<md>
-                    <mrow>\frac{\sqrt{7}-\sqrt{2}}{\sqrt{5}+\sqrt{3}}\amp=\frac{\sqrt{7}-\sqrt{2}}{\sqrt{5}+\sqrt{3}}\multiplyright{\frac{\left(\sqrt{5}-\sqrt{3}\right)}{\left(\sqrt{5}-\sqrt{3}\right)}}</mrow>
-                    <mrow>\amp=\frac{\sqrt{7}\multiplyright{\sqrt{5}}-\sqrt{7}\multiplyright{\sqrt{3}}-\sqrt{2}\multiplyright{\sqrt{5}}-\sqrt{2}\multiplyright{-\sqrt{3}}}{\left(\sqrt{5}\right)^2-\left(\sqrt{3}\right)^2}</mrow>
-                    <mrow>\amp=\frac{\sqrt{35}-\sqrt{21}-\sqrt{10}+\sqrt{6}}{5-3}</mrow>
-                    <mrow>\amp=\frac{\sqrt{35}-\sqrt{21}-\sqrt{10}+\sqrt{6}}{2}</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-        <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\frac{\sqrt{3}}{3-2\sqrt{3}}</m>.</p>
-            </statement>
-            <solution>
-                <p>To remove the radical in <m>3-2\sqrt{3}</m> with the difference of squares formula, we multiply it with <m>3+2\sqrt{3}</m>.<md>
-                    <mrow>\frac{\sqrt{3}}{3-2\sqrt{3}}\amp=\frac{\sqrt{3}}{(3-2\sqrt{3})}\multiplyright{\frac{(3+2\sqrt{3})}{(3+2\sqrt{3})}}
-                    </mrow>
-                    <mrow>\amp=\frac{\multiplyleft{3}\sqrt{3}+\multiplyleft{2\sqrt{3}}\sqrt{3}}{(3)^2-\left(2\sqrt{3}\right)^2}</mrow>
-                    <mrow>\amp=\frac{3\sqrt{3}+2\cdot 3}{9-2^2\left(\sqrt{3}\right)^2}</mrow>
-                    <mrow>\amp=\frac{3\sqrt{3}+6}{9-4(3)}</mrow>
-                    <mrow>\amp=\frac{3\left(\sqrt{3}+2\right)}{9-12}</mrow>
-                    <mrow>\amp=\frac{3\left(\sqrt{3}+2\right)}{-3}</mrow>
-                    <mrow>\amp=\frac{\sqrt{3}+2}{-1}</mrow>
-                    <mrow>\amp=-\sqrt{3}-2</mrow>
-                </md></p>
-            </solution>
-        </example>
-
-       <!--  <example>
-            <statement>
-                <p>Rationalize the denominator in <m>\frac{\sqrt{m}+\sqrt{n}}{\sqrt{m}-\sqrt{n}}</m>. Assume all variables are positive.</p>
-            </statement>
-            <solution>
-                <p>To remove radicals in <m>\sqrt{m}-\sqrt{n}</m> with the difference of squares formula, we multiply it with <m>\sqrt{m}+\sqrt{n}</m>. The solution is:<md>
-                    <mrow>\frac{\sqrt{m}+\sqrt{n}}{\sqrt{m}-\sqrt{n}}\amp=\frac{(\sqrt{m}+\sqrt{n})\multiplyright{(\sqrt{m}+\sqrt{n})}}{(\sqrt{m}-\sqrt{n})\multiplyright{(\sqrt{m}+\sqrt{n})}}</mrow>
-                    <mrow>\amp=\frac{\sqrt{m}\cdot\sqrt{m}+\sqrt{m}\cdot\sqrt{n}+\sqrt{n}\cdot\sqrt{m}+\sqrt{n}\cdot\sqrt{n}}{(\sqrt{m})^2-(\sqrt{n})^2}</mrow>
-                    <mrow>\amp=\frac{m+\sqrt{mn}+\sqrt{mn}+n}{m-n}</mrow>
-                    <mrow>\amp=\frac{m+2\sqrt{mn}+n}{m-n}</mrow>
-                </md></p>
-            </solution>
-        </example> -->
-
-    </subsection>
-    <exercises>
-        <exercisegroup cols="2">
-            <title>Review and Warmup</title>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator60.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator60.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator70.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
-            </exercise>
-        </exercisegroup> 
-        <exercisegroup cols="2">
-            <title>Further Rationalizing a Denominator</title>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator35.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator35.pg" />
-            </exercise>
-            <!-- <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator36.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator37.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator81.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator82.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator83.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator84.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator85.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator86.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator87.pg" />
-            </exercise> -->
-      <!--       <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg" />
-            </exercise> -->
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator110.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator130.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator130.pg" />
-            </exercise>
-           <!--  <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator140.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator150.pg" />
- -->           <!--  </exercise> -->
-        </exercisegroup>
-        <exercisegroup cols="2">
-            <title>Rationalizing the Denominator Using the Difference of Squares Formula</title>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
-            </exercise>
-            <!-- ugly multiple choice questions -->
-            <!-- <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator160.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator160.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator165.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator165.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator170.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator180.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator180.pg" />
-            </exercise> -->
-            <!-- <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator190.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator200.pg" />
-            </exercise>
-            <exercise>
-                <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator210.pg" />
-            </exercise> -->
-        </exercisegroup>
-
-        <!-- <exercise>
-            <webwork source="Math95/SimplifyRadicals/SimplifyRadicals25.pg" />
-        </exercise> -->
-
-    </exercises>
+<section xml:id="section-more-on-rationalizing-the-denominator" permid="tGh">
+  <title>More on Rationalizing the Denominator</title>
+  <introduction permid="ibJ">
+    <p permid="APh">
+      In <xref ref="section-square-root-properties">Section</xref>,
+      we learned how to rationalize the denominator in simple expressions like <m>\frac{1}{\sqrt{2}}</m>.
+      We will briefly review this topic and then extend the concept to the next level.
+    </p>
+  </introduction>
+  <subsection permid="ZNq">
+    <title>A Review of Rationalizing the Denominator</title>
+    <p permid="gWq">
+      To remove radicals from the denominator of <m>\frac{1}{\sqrt{2}}</m>,
+      we multiply the numerator and denominator by <m>\sqrt{2}</m>:
+      <md permid="Fza">
+        <mrow>\frac{1}{\sqrt{2}}\amp=\frac{1}{\sqrt{2}}\multiplyright{\frac{\sqrt{2}}{\sqrt{2}}}</mrow>
+        <mrow>\amp=\frac{\sqrt{2}}{2}</mrow>
+      </md>
+      We used the property:
+      <me permid="tkI">
+        \sqrt{x}\cdot\sqrt{x}=x,\text{ where }x\text{ is positive}
+      </me>
+    </p>
+    <example permid="pGi">
+      <statement>
+        <p permid="ItG">
+          Rationalize the denominator of the expressions.
+          <ol label="a." cols="2" permid="mLC">
+            <li permid="SSL">
+              <p permid="rvv">
+                <m>\frac{3}{\sqrt{6}}</m>
+              </p>
+            </li>
+            <li permid="yZU">
+              <p permid="XCE">
+                <m>\frac{\sqrt{5}}{\sqrt{72}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution permid="OiS">
+        <p permid="PYf">
+          <ol label="a." permid="GEt">
+            <li permid="fhd">
+              <p permid="DJN">
+                To rationalize the denominator of <m>\frac{3}{\sqrt{6}}</m>,
+                we take the expression and multiply by a special version of
+                <m>\highlight{1}</m> to make the radical in the denominator cancel.
+                <md permid="lGj">
+                  <mrow>\frac{3}{\sqrt{6}}\amp=\frac{3}{\sqrt{6}}\multiplyright{\frac{\sqrt{6}}{\sqrt{6}}}</mrow>
+                  <mrow>\amp=\frac{3\sqrt{6}}{\sqrt{36}}</mrow>
+                  <mrow>\amp=\frac{3\sqrt{6}}{6}</mrow>
+                  <mrow>\amp=\frac{\sqrt{6}}{2}</mrow>
+                </md>
+              </p>
+            </li>
+            <li permid="Lom">
+              <p permid="jQW">
+                Rationalizing the denominator of
+                <m>\frac{\sqrt{5}}{\sqrt{72}}</m> is slightly trickier.
+                We could go the brute force method and multiply both the numerator and denominator by <m>\sqrt{72}</m>,
+                and it would be effective;
+                however, we should note that the
+                <m>\sqrt{72}</m> in the denominator can be <em>reduced</em> first.
+                This will simplify future algebra.
+                <md permid="RNs">
+                  <mrow>\frac{\sqrt{5}}{\sqrt{72}}\amp=\frac{\sqrt{5}}{\sqrt{36\cdot 2}}</mrow>
+                  <mrow>\amp=\frac{\sqrt{5}}{\sqrt{36}\cdot\sqrt{2}}</mrow>
+                  <mrow>\amp=\frac{\sqrt{5}}{6\cdot\sqrt{2}}</mrow>
+                  <intertext>Now all that remains is to multiply the numerator and denominator by <m>\sqrt{2}</m>.</intertext>
+                  <mrow>\amp=\frac{\sqrt{5}}{6\cdot\sqrt{2}}\multiplyright{\frac{\sqrt{2}}{\sqrt{2}}}</mrow>
+                  <mrow>\amp=\frac{\sqrt{10}}{6\cdot\sqrt{4}}</mrow>
+                  <mrow>\amp=\frac{\sqrt{10}}{6\cdot 2}</mrow>
+                  <mrow>\amp=\frac{\sqrt{10}}{12}</mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+<!-- <p>We can extend this concept and use the following properties to rationalize denominators with radicals of other degrees:<md> <mrow>\sqrt[3]{x^3}\amp=x</mrow> <mrow>\sqrt[4]{x^4}\amp=x</mrow> <mrow>\amp\ldots</mrow> <mrow>\sqrt[n]{x^n}\amp=x</mrow> </md>Let's look at a few examples.</p>
+<example>
+<statement>
+<p>Rationalize the denominator in <m>\frac{1}{\sqrt[3]{2}}</m>.</p>
+</statement>
+<solution>
+<p>To remove the radical <m>\sqrt[3]{2}</m>, we will use the property <m>\sqrt[3]{2^3}=2</m>. This implies we will multiply the numerator and denominator by <m>\sqrt[3]{2^2}</m>:<md> <mrow>\frac{1}{\sqrt[3]{2}}\amp=\frac{1\multiplyright{\sqrt[3]{2^2}}}{\sqrt[3]{2}\multiplyright{\sqrt[3]{2^2}}}</mrow> <mrow>\amp=\frac{\sqrt[3]{2^2}}{\sqrt[3]{2^3}}</mrow> <mrow>\amp=\frac{\sqrt[3]{4}}{2}</mrow> </md></p>
+</solution>
+</example>
+<example>
+<statement>
+<p>Rationalize the denominator in <m>\frac{\sqrt{3}}{3\sqrt{2x}}</m>. Assume all variables are positive.</p>
+</statement>
+<solution>
+<p><md> <mrow>\frac{\sqrt{3}}{3\sqrt{2x}}\amp=\frac{\sqrt{3}\multiplyright{\sqrt{2x}}}{3\sqrt{2x}\multiplyright{\sqrt{2x}}}</mrow> <mrow>\amp=\frac{\sqrt{3\cdot2x}}{3\cdot2x}</mrow> <mrow>\amp=\frac{\sqrt{6x}}{6x}</mrow> </md></p>
+</solution>
+</example>
+<p>In the example above, to remove the radical <m>\sqrt{2x}</m>, we did <m>\sqrt{2x}\cdot\sqrt{2x}=2x</m>. In the next example, to remove the radical <m>\sqrt[3]{2x^2}</m>, we do <m>\sqrt[3]{2x}\cdot\sqrt[3]{2^2x^2}=2x</m>.</p>
+<example>
+<statement>
+<p>Rationalize the denominator in <m>\frac{\sqrt[3]{y}}{3\sqrt[3]{2x}}</m>. Assume all variables are positive.</p>
+</statement>
+<solution>
+<p><md> <mrow>\frac{\sqrt[3]{y}}{3\sqrt[3]{2x}}\amp=\frac{\sqrt[3]{y}\multiplyright{\sqrt[3]{2^2x^2}}}{3\sqrt[3]{2x}\multiplyright{\sqrt[3]{2^2x^2}}}</mrow> <mrow>\amp=\frac{\sqrt[3]{4x^2y}}{3\cdot2x}</mrow> <mrow>\amp=\frac{\sqrt[3]{4x^2y}}{6x}</mrow> </md></p>
+</solution>
+</example>
+<p>When a radicand is a fraction, we should break it into two radicals, and then rationalize the denominator, like in the next two examples.</p>
+<example>
+<statement>
+<p>Rationalize the denominator in <m>\sqrt[3]{\frac{2}{3}}</m>.</p>
+</statement>
+<solution>
+<p><md> <mrow>\sqrt[3]{\frac{2}{3}}\amp=\frac{\sqrt[3]{2}}{\sqrt[3]{3}}</mrow> <mrow>\amp=\frac{\sqrt[3]{2}\multiplyright{\sqrt{3^2}}}{\sqrt[3]{3}\multiplyright{\sqrt{3^2}}}</mrow> <mrow>\amp=\frac{\sqrt[3]{2\cdot3^2}}{3}</mrow> <mrow>\amp=\frac{\sqrt[3]{18}}{3}</mrow> </md></p>
+</solution>
+</example>
+<example>
+<statement>
+<p>Rationalize the denominator in <m>\sqrt[3]{\frac{r}{s^2}}</m>. Assume all variables are positive.</p>
+</statement>
+<solution>
+<p><md> <mrow>\sqrt[3]{\frac{r}{s^2}}\amp=\frac{\sqrt[3]{r}}{\sqrt[3]{s^2}}</mrow> <mrow>\amp=\frac{\sqrt[3]{r}\multiplyright{\sqrt[3]{s}}}{\sqrt[3]{s^2}\multiplyright{\sqrt[3]{s}}}</mrow> <mrow>\amp=\frac{\sqrt[3]{rs}}{s}</mrow> </md></p>
+</solution>
+</example>
+<p>Before we rationalize the denominator, we should simplify the radical if possible, like in the next example.</p>
+<example>
+<statement>
+<p>Rationalize the denominator in <m>\frac{1}{\sqrt[3]{54x^5}}</m>. Assume all variables are positive.</p>
+</statement>
+<solution>
+<p><md> <mrow>\frac{1}{\sqrt[3]{54x^5}}\amp=\frac{1}{\sqrt[3]{2\cdot3^3x^3x^2}}</mrow> <mrow>\amp=\frac{1}{3x\cdot\sqrt[3]{2x^2}}</mrow> <mrow>\amp=\frac{1\multiplyright{\sqrt[3]{2^2x}}}{3x\cdot\sqrt[3]{2x^2}\multiplyright{\sqrt[3]{2^2x}}}</mrow> <mrow>\amp=\frac{\sqrt[3]{2^2x}}{3x\cdot2x}</mrow> <mrow>\amp=\frac{\sqrt[3]{4x}}{6x^2}</mrow> </md></p>
+</solution>
+</example> -->
+  </subsection>
+  <subsection permid="FUz">
+    <title>Rationalize Denominator with Difference of Squares Formula</title>
+    <p permid="Ndz">
+      How can we remove the radical from the denominator of <m>\frac{1}{\sqrt{2}+1}</m>?
+      Let's try multiplying the numerator and denominator by <m>\sqrt{2}</m>:
+      <md permid="xUB">
+        <mrow>\frac{1}{\sqrt{2}+1}\amp=\frac{1}{\left(\sqrt{2}+1\right)}\multiplyright{\frac{\sqrt{2}}{\sqrt{2}}}</mrow>
+        <mrow>\amp=\frac{\sqrt{2}}{\sqrt{2}\cdot\highlight{\sqrt{2}}+1\cdot\highlight{\sqrt{2}}}</mrow>
+        <mrow>\amp=\frac{\sqrt{2}}{2+\sqrt{2}}</mrow>
+      </md>
+      We removed one radical from the denominator, but created another.
+      We need to find another method.
+      The difference of squares formula will help:
+      <me permid="ZrR">
+        (a+b)(a-b)=a^2-b^2
+      </me>
+      Those two squares in <m>a^2-b^2</m> can remove square roots.
+      To remove the radical from the denominator of <m>\frac{1}{\sqrt{2}+1}</m>,
+      we multiply the numerator and denominator by <m>\sqrt{2}-1</m>:
+      <md permid="ebK">
+        <mrow>\frac{1}{\sqrt{2}+1}\amp=\frac{1}{\left(\sqrt{2}+1\right)}\multiplyright{\frac{\left(\sqrt{2}-1\right)}{\left(\sqrt{2}-1\right)}}</mrow>
+        <mrow>\amp=\frac{\sqrt{2}-1}{\left(\sqrt{2}\right)^2-(1)^2}</mrow>
+        <mrow>\amp=\frac{\sqrt{2}-1}{2-1}</mrow>
+        <mrow>\amp=\frac{\sqrt{2}-1}{1}</mrow>
+        <mrow>\amp=\sqrt{2}-1</mrow>
+      </md>
+      Let's look at a few more examples.
+    </p>
+    <example permid="VNr">
+      <statement>
+        <p permid="oAP">
+          Rationalize the denominator in <m>\frac{\sqrt{7}-\sqrt{2}}{\sqrt{5}+\sqrt{3}}</m>.
+        </p>
+      </statement>
+      <solution permid="uqb">
+        <p permid="wfo">
+          To remove radicals in <m>\sqrt{5}+\sqrt{3}</m> with the difference of squares formula,
+          we multiply it with <m>\sqrt{5}-\sqrt{3}</m>.
+          <md permid="KiT">
+            <mrow>\frac{\sqrt{7}-\sqrt{2}}{\sqrt{5}+\sqrt{3}}\amp=\frac{\sqrt{7}-\sqrt{2}}{\sqrt{5}+\sqrt{3}}\multiplyright{\frac{\left(\sqrt{5}-\sqrt{3}\right)}{\left(\sqrt{5}-\sqrt{3}\right)}}</mrow>
+            <mrow>\amp=\frac{\sqrt{7}\multiplyright{\sqrt{5}}-\sqrt{7}\multiplyright{\sqrt{3}}-\sqrt{2}\multiplyright{\sqrt{5}}-\sqrt{2}\multiplyright{-\sqrt{3}}}{\left(\sqrt{5}\right)^2-\left(\sqrt{3}\right)^2}</mrow>
+            <mrow>\amp=\frac{\sqrt{35}-\sqrt{21}-\sqrt{10}+\sqrt{6}}{5-3}</mrow>
+            <mrow>\amp=\frac{\sqrt{35}-\sqrt{21}-\sqrt{10}+\sqrt{6}}{2}</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+    <example permid="BUA">
+      <statement>
+        <p permid="UHY">
+          Rationalize the denominator in <m>\frac{\sqrt{3}}{3-2\sqrt{3}}</m>.
+        </p>
+      </statement>
+      <solution permid="axk">
+        <p permid="cmx">
+          To remove the radical in <m>3-2\sqrt{3}</m> with the difference of squares formula,
+          we multiply it with <m>3+2\sqrt{3}</m>.
+          <md permid="qqc">
+            <mrow>\frac{\sqrt{3}}{3-2\sqrt{3}}\amp=\frac{\sqrt{3}}{(3-2\sqrt{3})}\multiplyright{\frac{(3+2\sqrt{3})}{(3+2\sqrt{3})}}</mrow>
+            <mrow>\amp=\frac{\multiplyleft{3}\sqrt{3}+\multiplyleft{2\sqrt{3}}\sqrt{3}}{(3)^2-\left(2\sqrt{3}\right)^2}</mrow>
+            <mrow>\amp=\frac{3\sqrt{3}+2\cdot 3}{9-2^2\left(\sqrt{3}\right)^2}</mrow>
+            <mrow>\amp=\frac{3\sqrt{3}+6}{9-4(3)}</mrow>
+            <mrow>\amp=\frac{3\left(\sqrt{3}+2\right)}{9-12}</mrow>
+            <mrow>\amp=\frac{3\left(\sqrt{3}+2\right)}{-3}</mrow>
+            <mrow>\amp=\frac{\sqrt{3}+2}{-1}</mrow>
+            <mrow>\amp=-\sqrt{3}-2</mrow>
+          </md>
+        </p>
+      </solution>
+    </example>
+<!--  <example>
+<statement>
+<p>Rationalize the denominator in <m>\frac{\sqrt{m}+\sqrt{n}}{\sqrt{m}-\sqrt{n}}</m>. Assume all variables are positive.</p>
+</statement>
+<solution>
+<p>To remove radicals in <m>\sqrt{m}-\sqrt{n}</m> with the difference of squares formula, we multiply it with <m>\sqrt{m}+\sqrt{n}</m>. The solution is:<md> <mrow>\frac{\sqrt{m}+\sqrt{n}}{\sqrt{m}-\sqrt{n}}\amp=\frac{(\sqrt{m}+\sqrt{n})\multiplyright{(\sqrt{m}+\sqrt{n})}}{(\sqrt{m}-\sqrt{n})\multiplyright{(\sqrt{m}+\sqrt{n})}}</mrow> <mrow>\amp=\frac{\sqrt{m}\cdot\sqrt{m}+\sqrt{m}\cdot\sqrt{n}+\sqrt{n}\cdot\sqrt{m}+\sqrt{n}\cdot\sqrt{n}}{(\sqrt{m})^2-(\sqrt{n})^2}</mrow> <mrow>\amp=\frac{m+\sqrt{mn}+\sqrt{mn}+n}{m-n}</mrow> <mrow>\amp=\frac{m+2\sqrt{mn}+n}{m-n}</mrow> </md></p>
+</solution>
+</example> -->
+  </subsection>
+  <exercises permid="mbI">
+    <exercisegroup cols="2" permid="SiR">
+      <title>Review and Warmup</title>
+      <exercise permid="KEs">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg" />
+      </exercise>
+      <exercise permid="qLB">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg" />
+      </exercise>
+      <exercise permid="WSK">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator60.pg" />
+      </exercise>
+      <exercise permid="CZT">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator60.pg" />
+      </exercise>
+      <exercise permid="jhc">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator70.pg" />
+      </exercise>
+      <exercise permid="Pol">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator70.pg" />
+      </exercise>
+      <exercise permid="vvu">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
+      </exercise>
+      <exercise permid="bCD">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
+      </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2" permid="yqa">
+      <title>Further Rationalizing a Denominator</title>
+      <exercise permid="HJM">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator35.pg" />
+      </exercise>
+      <exercise permid="nQV">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator35.pg" />
+      </exercise>
+<!-- <exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator36.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator37.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator81.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator82.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator83.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator84.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator85.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator86.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator87.pg" />
+</exercise> -->
+<!--       <exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg" />
+</exercise> -->
+      <exercise permid="TYe">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator110.pg" />
+      </exercise>
+      <exercise permid="Afn">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator110.pg" />
+      </exercise>
+      <exercise permid="gmw">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator130.pg" />
+      </exercise>
+      <exercise permid="MtF">
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator130.pg" />
+      </exercise>
+<!--  <exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator140.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator150.pg" />
+--> <!--  </exercise> -->
+    </exercisegroup>
+    <exercisegroup cols="2" permid="exj">
+      <title>Rationalizing the Denominator Using the Difference of Squares Formula</title>
+      <exercise permid="sAO">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
+      </exercise>
+      <exercise permid="YHX">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
+      </exercise>
+      <exercise permid="EPg">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
+      </exercise>
+      <exercise permid="kWp">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals24.pg" />
+      </exercise>
+      <exercise permid="Rdy">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
+      </exercise>
+      <exercise permid="xkH">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
+      </exercise>
+      <exercise permid="drQ">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
+      </exercise>
+      <exercise permid="JyZ">
+        <webwork source="Math95/SimplifyRadicals/SimplifyRadicals26.pg" />
+      </exercise>
+<!-- ugly multiple choice questions -->
+<!-- <exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator160.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator160.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator165.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator165.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator170.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator170.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator180.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator180.pg" />
+</exercise> -->
+<!-- <exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator190.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator200.pg" />
+</exercise>
+<exercise>
+<webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator210.pg" />
+</exercise> -->
+    </exercisegroup>
+<!-- <exercise>
+<webwork source="Math95/SimplifyRadicals/SimplifyRadicals25.pg" />
+</exercise> -->
+  </exercises>
 </section>
