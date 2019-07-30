@@ -15,9 +15,9 @@
       In this section,
       we will learn how to solve some specific types of quadratic equations using the
       <term>square root property</term>.
-      We will also learn how to use the
+      We will also revisit how to use the
       <term>Pythagorean Theorem</term>
-      to find the length of one side of a right triangle when the other two lengths are known.
+      to find the length of one side of a right triangle when the other two lengths are known, but we will solve the resulting equation using the square root property, rather than factoring.
     </p>
   </introduction>
   <subsection permid="Vwf">
@@ -338,19 +338,18 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
       Right triangles have an important property called the
       <term>Pythagorean Theorem</term>.
     </p>
-    <theorem xml:id="theorem-pythagorean-theorem-revisited" permid="lYR">
-      <title>The Pythagorean Theorem</title>
-      <idx><h>Pythagorean theorem</h></idx>
-      <p permid="rsE">
-        For any right triangle,
+
+      <sidebyside widths="50% 25%" margins="10%" valign="center">
+      <p permid="lYR">
+      The Pythagorean Theorem states that for any right triangle,
         the lengths of the three sides have the following relationship:
         <m>a^2+b^2=c^2</m>.
         The sides <m>a</m> and <m>b</m> are called <term>legs</term>
         and the longest side <m>c</m> is called the <term>hypotenuse</term>.
       </p>
       <figure permid="XzN">
-        <caption>In a right triangle, the length of its three sides satisfy the equation <m>a^2+b^2=c^2</m></caption>
-        <image width="25%" permid="HVq">
+        <caption></caption>
+        <image permid="HVq">
           <description>a right triangle with sides labeled a, b, and c; side c is the hypotenuse</description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
@@ -360,9 +359,12 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
 </latex-image>
         </image>
       </figure>
-    </theorem>
+    </sidebyside>
+    <p>Let's look at some applications of the Pythaogrean Theorem in the following examples.</p>
+    <newpage/>
     <example permid="Sga">
-      <sidebyside widths="65% 29%" margins="0%" permid="WPT">
+      <sidebyside widths="55% 24%" margins="5%" permid="WPT">
+        <stack>
         <p permid="cjG">
           Keisha is designing a wooden frame in the shape of a right triangle,
           as shown in <xref ref="figure-wooden-frame">Figure</xref>.
@@ -377,23 +379,7 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
           How long should she make the diagonal side?
           Use the Pythagorean Theorem to find the length of the hypotenuse.
         </p>
-        <figure xml:id="figure-wooden-frame" permid="UFh">
-          <caption />
-          <image permid="ocz">
-            <description>a right triangle with a base labeled a=3 ft; the height is labeled b=4 ft; the hypotenuse is labeled c</description>
-<latex-image>
-<![CDATA[\begin{tikzpicture}
-\draw (0,0) node[below left]{$B$} -- node[pos=0.5,below]{$a=3\,\text{ft}$}
-(3,0) node[below right]{$C$} -- node[pos=0.5,right]{$b=4\,\text{ft}$}
-(3,4) node[above right]{$A$} -- node[pos=0.5,above,sloped]{$c$}
-cycle;
-\draw (3,0.2) -- (2.8,0.2) -- (2.8,0);
-\end{tikzpicture}]]>
-</latex-image>
-          </image>
-        </figure>
-      </sidebyside>
-      <p permid="IqP">
+        <p permid="IqP">
         According to Pythagorean Theorem, we have:
         <md permid="Dlx">
           <mrow>c^2\amp=a^2+b^2</mrow>
@@ -410,6 +396,24 @@ cycle;
         </quantity>
         long.
       </p>
+    </stack>
+        <figure xml:id="figure-wooden-frame" permid="UFh">
+          <caption />
+          <image permid="ocz">
+            <description>a right triangle with a base labeled a=3 ft; the height is labeled b=4 ft; the hypotenuse is labeled c</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\draw (0,0) node[below left]{$B$} -- node[pos=0.5,below]{$a=3\,\text{ft}$}
+(3,0) node[below right]{$C$} -- node[pos=0.5,right]{$b=4\,\text{ft}$}
+(3,4) node[above right]{$A$} -- node[pos=0.5,above,sloped]{$c$}
+cycle;
+\draw (3,0.2) -- (2.8,0.2) -- (2.8,0);
+\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+      
       <p permid="oxY">
         Note that <m>-5</m> is also a solution of <m>c^2=25</m> because <m>(-5)^2=25</m>,
         but a length cannot be a negative number.
@@ -422,7 +426,7 @@ cycle;
         The distance from the base of the ladder to the wall is <m>4.5</m> feet.
         How high on the wall can the ladder reach?
       </p>
-      <sidebyside widths="59% 35%" margins="0%" permid="CXc">
+      <sidebyside widths="54% 20%" margins="5%" permid="CXc">
         <p permid="gTz">
           The Pythagorean Theorem says:
           <md permid="jsG">
@@ -432,28 +436,27 @@ cycle;
             <intertext>Now we need to isolate <m>b^2</m> in order to solve for <m>b</m>:</intertext>
             <mrow>20.25+b^2\subtractright{20.25}\amp=272.25\subtractright{20.25}</mrow>
             <mrow>b^2\amp=252</mrow>
-            <intertext>To remove the square, we use the square root property. Because this is a geometric situation we only need to use the principal root:</intertext>
-            <mrow>b\amp=\sqrt{252}</mrow>
-            <intertext>Now simplify this radical and then approximate it:</intertext>
-            <mrow>b\amp=\sqrt{36\cdot 7}</mrow>
-            <mrow>b\amp=6\sqrt{7}</mrow>
-            <mrow>b\amp\approx 15.87</mrow>
-          </md>
-        </p>
+            </md></p>
         <figure permid="thR">
           <caption>Leaning Ladder</caption>
           <image width="35%" permid="UjI">
             <description>a right angle with a diagonal line for the ladder; the base of the triangle is labeled a=4.5 ft;the height of the triangle is labeled b; the hypotenuse is labeled c=16.5 ft</description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
-\draw (-9,0) -- (-4.5,0) --node[pos=0.5,below]{$a=4.5\,\text{ft}$} (0,0) --node[pos=0.5,right]{$b$}  (0,15.9) -- (0,18);
-\draw[ultra thick] (-4.5,0) --node[sloped,pos=0.5,above]{$c=16.5\,\text{ft}$} (0,15.9);
+\draw (-4.5,0) -- (-2.25,0) --node[pos=0.5,below]{$a=4.5\,\text{ft}$} (0,0) --node[pos=0.5,right]{$b$}  (0,7.95) -- (0,9);
+\draw[ultra thick] (-2.25,0) --node[sloped,pos=0.5,above]{$c=16.5\,\text{ft}$} (0,7.95);
 \draw (-0.6,0) -- (-0.6,0.6) -- (0,0.6);
 \end{tikzpicture}]]>
 </latex-image>
           </image>
         </figure>
       </sidebyside>
+    <p>To remove the square, we use the square root property. Because this is a geometric situation we only need to use the principal root:<md>
+            <mrow>b\amp=\sqrt{252}</mrow>
+            <intertext>Now we approximate it:</intertext>
+            <mrow>b\amp\approx 15.87</mrow>
+          </md>
+        </p>
       <p permid="NaI">
         The ladder can reach about <m>15.87</m> feet high on the wall.
       </p>
@@ -587,10 +590,11 @@ cycle;
         <p permid="xRK">
           Luca wanted to make a bench.
         </p>
+        <sidebyside width="50%">
         <figure permid="Kgc">
           <caption>Sketch of a Bench with Highlighted Back</caption>
 <!-- TODO: make the bench wider or the backrest shorter so that the backrest could be 48x3 inches. I was having trouble visualizing the next images because the proportion is different  -->
-          <image width="47%" permid="sMs">
+          <image permid="sMs">
             <description>a sketch of a bench with an arc drawn on the backrest of the bench</description>
 <latex-image>
 <![CDATA[\begin{tikzpicture}
@@ -604,7 +608,8 @@ cycle;
 </latex-image>
           </image>
         </figure>
-        <sidebyside widths="47% 47%" margins="0%" permid="jel">
+      </sidebyside>
+        <sidebyside widths="37% 37%" margins="10%" permid="jel">
           <p permid="dYT">
             He wanted the top of the bench back to be a perfect portion of a circle,
             in the shape of an arc,
@@ -639,6 +644,7 @@ cycle;
           The circle should go through the bottom corners of the board and just barely touch the top of the board.
           That means that the line from the middle of the bottom of the board to the center of the circle will be <m>3</m> inches shorter than the radius.
         </p>
+        <sidebyside width="35%">
         <figure permid="SPU">
           <caption>Bench Back Board Diagram</caption>
           <image width="47%" permid="FaK">
@@ -659,6 +665,7 @@ cycle;
 </latex-image>
           </image>
         </figure>
+      </sidebyside>
         <p permid="mIL">
           Now we can set up the Pythagorean Theorem based on the scenario.
           The equation <m>a^2+b^2=c^2</m> turns into<ellipsis/>
@@ -676,6 +683,7 @@ cycle;
       </solution>
     </example>
   </subsection>
+  
 <!--Review and Warmup omitted due to previous section-->
   <exercises permid="hKx">
     <exercisegroup cols="3" permid="NRG">
@@ -734,6 +742,8 @@ cycle;
       <exercise permid="gFe">
         <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg" />
       </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2">
       <exercise permid="MMn">
         <webwork source="BasicAlgebra/QuadraticEquations/solveQuad75.pg" />
       </exercise>
@@ -823,11 +833,11 @@ cycle;
         <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem70.pg" />
       </exercise>
     </exercisegroup>
-    <exercisegroup permid="afY">
+    <!-- <exercisegroup permid="afY">
       <title>Challenge</title>
-      <exercise permid="cFf">
+      <exercise permid="cFf"> -->
 <!-- Kara's challenge problem -->
-        <webwork>
+        <!-- <webwork>
             <setup>
 <pg-code>
 $west = random(2,8,1);
@@ -870,6 +880,6 @@ $answer = Formula("sqrt($north**2+$factor**2)");
             </solution>
         </webwork>
       </exercise>
-    </exercisegroup>
+    </exercisegroup> -->
   </exercises>
 </section>

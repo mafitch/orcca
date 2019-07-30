@@ -15,10 +15,7 @@
       we covered the definition of the <xref ref="definition-cartesian-coordinate-system" text="title">Cartesian Coordinate System</xref>
       and how to plot points using the <m>x</m> and <m>y</m>-axes.
     </p>
-<!-- <paragraphs>
-<title>Cartesian Coordinate System</title>
-<p>The Cartesian coordinate system identifies the location of every point in a plane with an ordered pair. The first coordinate is the horizontal, <m>x</m>, distance and the second coordinate is the vertical, <m>y</m>, distance.</p>
-</paragraphs> -->
+
     <example permid="utJ">
       <statement>
         <p permid="itM">
@@ -28,6 +25,7 @@
         </p>
       </statement>
       <solution permid="toq">
+        <sidebyside width="35%">
         <figure permid="Jhi">
           <caption>A Cartesian grid with the four points plotted.</caption>
           <image permid="dou">
@@ -44,6 +42,7 @@
 </latex-image>
           </image>
         </figure>
+      </sidebyside>
       </solution>
     </example>
   </subsection>
@@ -57,6 +56,7 @@
       plotting the <m>(x,y)</m>-pairs as points and connecting the points with a smooth curve,
       to produce a graph of the equation.
     </p>
+    
     <example permid="aAS">
       <statement>
         <p permid="OAV">
@@ -154,7 +154,7 @@
         </p>
         <figure permid="BCJ">
           <caption>Graphing the Equation <m>y=-2x+5</m></caption>
-          <sidebyside widths="47% 47%" margins="0%" permid="mPk">
+          <sidebyside widths="37% 37%" margins="10%" permid="mPk">
             <figure permid="Qqi">
               <caption>Use points from the table</caption>
               <image permid="JvD">
@@ -322,13 +322,13 @@ minor ytick=,]
       There is also the <xref ref="equation-slope-formula" text="title">slope formula</xref>
       which helps find the slope through any two points.
     </p>
-<!-- <p>When <m>x</m> and <m>y</m> are two variables where the rate of change between any two points is always the same, we call this common rate of change the <term>slope</term>. Since having a constant rate of change means the graph will be a straight line, it's also called the <term>slope of the line</term>.</p>
-<p>We can find a line's slope by drawing a slope-triangle on the line's graph, and then using the formula<men>m=\frac{\text{change in $y$}}{\text{change in $x$}}=\frac{\Delta y}{\Delta x}</men></p> -->
+
     <example permid="LrU">
       <statement>
         <p permid="aPn">
           Find the slope of the line in the following graph.
         </p>
+        <sidebyside width="35%">
         <figure permid="GWw">
           <caption>The line with two points indicated.</caption>
           <image width="47%" permid="VJV">
@@ -353,9 +353,10 @@ clip=false]
 </latex-image>
           </image>
         </figure>
+      </sidebyside>
       </statement>
       <solution permid="lJR">
-        <sidebyside widths="47% 47%" margins="0%" permid="XGm">
+        <sidebyside widths="35% 30%" margins="10%" permid="XGm">
           <figure permid="SAU">
             <caption>The line with a slope triangle drawn.</caption>
             <image permid="BRe">
@@ -520,7 +521,7 @@ minor ytick={-9,-8,...,9},
     </paragraphs>
     <example permid="jUE">
       <statement>
-        <sidebyside widths="47% 47%" margins="0%" permid="wiW">
+        <sidebyside widths="37% 37%" margins="10%" permid="wiW">
           <p permid="zrX">
             Find the equation of the line in the graph.
           </p>
@@ -544,7 +545,7 @@ minor ytick={-2,-1,...,16},
         </sidebyside>
       </statement>
       <solution permid="efs">
-        <sidebyside widths="47% 47%" margins="0%" permid="cqf">
+        <sidebyside widths="37% 37%" margins="10%" permid="cqf">
           <figure permid="DrW">
             <caption>Identify the line's <m>y</m>-intercept, <m>10</m>.</caption>
             <image permid="GAX">
@@ -745,7 +746,7 @@ minor ytick={0,1,...,20}]
           With both the intercepts' and the checkpoint's coordinates,
           we can graph the line:
         </p>
-        <sidebyside widths="47% 47%" margins="0%" permid="ASP">
+        <sidebyside widths="37% 37%" margins="10%" permid="ASP">
           <figure permid="MLI">
             <caption>Graph of <m>2x-3y=-6</m></caption>
             <image permid="SPp">
@@ -1285,6 +1286,7 @@ $eq=Formula("y=$f")->reduce;
         <webwork source="BasicAlgebra/LinearEquationApplications/FindLineEquationApplication80.pg" />
       </exercise>
     </exercisegroup>
+    
     <exercisegroup permid="HdA">
       <exercise permid="bGl">
         <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts70.pg" />
@@ -1324,106 +1326,13 @@ $eq=Formula("y=$f")->reduce;
       <exercise permid="JCH">
         <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular140.pg" />
       </exercise>
-      <exercise permid="pJQ">
+      <!-- <exercise permid="pJQ">
         <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular200.pg" />
       </exercise>
       <exercise permid="VQZ">
         <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular200.pg" />
-      </exercise>
-      <exercise permid="BYi">
-        <statement>
-          <p permid="tCL">
-            Graph the linear inequality <m>y\gt \frac{4}{3}x+1</m>.
-          </p>
-        </statement>
-        <answer permid="HrV">
-          <sidebyside permid="nUD">
-            <image permid="thm">
-<latex-image>
-<![CDATA[
-\begin{tikzpicture}
-\begin{axis}[]
-\addplot+[dashed,domain=-6:4.5] {4/3*x+1};
-\addplot[white,fill=firstcolor,fill opacity=0.2]
-coordinates{(-9,-11) (-9,13) (9,13)};
-\end{axis}
-\end{tikzpicture}
-]]>
-</latex-image>
-            </image>
-          </sidebyside>
-        </answer>
-      </exercise>
-      <exercise permid="ifr">
-        <statement>
-          <p permid="ZJU">
-            Graph the linear inequality <m>y\leq -\frac{1}{2}x-3</m>.
-          </p>
-        </statement>
-        <answer permid="nze">
-          <sidebyside permid="UbM">
-            <image permid="LkQ">
-<latex-image>
-<![CDATA[
-\begin{tikzpicture}
-\begin{axis}[]
-\addplot+[domain=-7:7] {-1/2*x-3};
-\addplot[white,fill=firstcolor,fill opacity=0.2]
-coordinates{(-8,1) (-8,-8) (8,-8) (8,-7)};
-\end{axis}
-\end{tikzpicture}
-]]>
-</latex-image>
-            </image>
-          </sidebyside>
-        </answer>
-      </exercise>
-      <exercise permid="OmA">
-        <statement>
-          <p permid="FRd">
-            Graph the linear inequality <m>y\geq 3</m>.
-          </p>
-        </statement>
-        <answer permid="TGn">
-          <sidebyside permid="AiV">
-            <image permid="rrZ">
-<latex-image>
-<![CDATA[
-\begin{tikzpicture}
-\begin{axis}[]
-\addplot+[domain=-7:7] {3};
-\addplot[white,fill=firstcolor,fill opacity=0.2]
-coordinates{(-8,3) (-8,8) (8,8) (8,3)};
-\end{axis}
-\end{tikzpicture}
-]]>
-</latex-image>
-            </image>
-          </sidebyside>
-        </answer>
-      </exercise>
-<!-- <exercise>
-<statement>
-<p>Graph the linear inequality <m>3x+2y\lt -6</m>.</p>
-</statement>
-<solution>
-<sidebyside>
-<image>
-<latex-image>
-<![CDATA[
-\begin{tikzpicture}
-\begin{axis}[]
-\addplot+[dashed,domain=-6.667:2.667] {-3/2*x-3};
-\addplot[white,fill=firstcolor,fill opacity=0.2]
-coordinates{(-8,9) (-8,-11) (8,-15) };
-\end{axis}
-\end{tikzpicture}
-]]>
-</latex-image>
-</image>
-</sidebyside>
-</solution>
-</exercise> -->
+      </exercise> -->
+  
     </exercisegroup>
   </exercises>
 </section>

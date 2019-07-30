@@ -14,17 +14,14 @@
         <idx><h>Cartesian coodrinate system</h></idx>
     This section covers the basic vocabulary and ideas that come with the Cartesian coordinate system.
   </p>
-  <aside permid="oml">
-    <title>René Descartes</title>
-    <idx><h>Cartesian coodrinate system</h><h>René Descartes</h></idx>
-    <p permid="NyP">
-      Several conventions used in mathematics are attributed to (or at least named after)
+  <p permid="oml">
+  <idx><h>Cartesian coordinate system</h><h>René Descartes</h></idx> Several conventions used in mathematics are attributed to (or at least named after)
       <url href="https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes">René Descartes</url><fn>
       <url href="https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes">en.wikipedia.org/wiki/René<underscore/>Descartes</url>
       </fn>.
       The Cartesian coordinate system is one of these.
     </p>
-  </aside>
+  
   <p permid="BUr">
     The Cartesian coordinate system identifies the location of every point in a plane.
     Basically, the system gives every point in a plane its own
@@ -35,6 +32,7 @@
     The map also shows some nearby businesses.
     Assume each unit in the grid represents one city block.
   </p>
+  <sidebyside width="47%">
   <figure xml:id="figure-carls-neighborhood" permid="GEk">
     <caption>Carl's neighborhood</caption>
     <image permid="SSC">
@@ -62,6 +60,7 @@ clip=false]
 </latex-image>
     </image>
   </figure>
+</sidebyside>
   <p permid="ibA">
     If Carl has an out-of-town guest who asks him how to get to the restaurant, Carl could say:
   </p>
@@ -71,7 +70,7 @@ clip=false]
       then go <m>3</m> blocks north.</q>
     </p>
   </blockquote>
-  <sidebyside widths="47% 47%" margins="0%" permid="PJB">
+  <sidebyside widths="37% 37%" margins="10%" permid="PJB">
 <!-- <p>So two numbers are needed to locate the restaurant. Using a Cartesian coordinate system, the way to write these numbers is: <m>(2,3)</m>. Note that the first number, <m>2</m>, represents the location in the east-west direction (<abbr>a.k.a.</abbr> left-right or horizontal), and the second number, <m>3</m>, represents the location in north-south direction (<abbr>a.k.a.</abbr> down-up or vertical).</p> -->
     <p permid="IOW">
       Carl uses two numbers to locate the restaurant.
@@ -121,7 +120,7 @@ clip=false]
     he would go <m>3</m> blocks west,
     and then <m>2</m> blocks north.
   </p>
-  <sidebyside widths="47% 47%" margins="0%" permid="vQK">
+  <sidebyside widths="37% 37%" margins="10%" permid="vQK">
 <!-- <p>We think of rightward and upward as <em>positive</em> directions, and leftward and downward as <em>negative</em> directions. So the three units westward is three units in a negative direction, and the number <m>-3</m> will represent that travel. The pet shop's location would be <m>(-3,2)</m> in a Cartesian coordinate system.</p> -->
     <p permid="Vdo">
       In the Cartesian coordinate system,
@@ -212,6 +211,7 @@ $carls=Point("(0,0)");
     </webwork>
   </exercise>
 <!-- <p>It's traditional to use the variable <m>x</m> to represent numbers on the left-right axis, so we call that axis the <term><m>x</m>-axis</term>.<idx><h sortby="x"><m>x</m>-axis</h></idx> For similar reasons we call the down-up axis the <term><m>y</m>-axis</term>.<idx><h sortby="y"><m>y</m>-axis</h></idx> The point <m>(0,0)</m> is where the two axes meet, and we call it the <term>origin</term>.<idx><h>origin</h></idx> We use an <term>ordered pair</term>, like <m>(2,3)</m>, to represent the location of a point.<idx><h>ordered pair</h></idx> We are ready for a formal definition of the <term>Cartesian Coordinate System</term> and several associated vocabulary terms.</p> -->
+  <newpage/>
   <aside permid="Utu">
 <!-- <title>Coordinates <abbr>vs.</abbr> Intervals</title> -->
 <!-- <p>Unfortunately, the way we write ordered pairs looks exactly like the way we write open intervals in interval notation. It's up to you to use <em>context</em> to understand if something like <m>(2,3)</m> is the point <m>2</m> units right of the origin and <m>3</m> units up, or if it's the interval of all numbers between <m>2</m> and <m>3</m>.</p> -->
@@ -238,10 +238,12 @@ $carls=Point("(0,0)");
     <term>ordered pair</term>, <m>(x,y)</m>.
         <idx><h>ordered pair</h></idx>
   </p>
+  
   <p permid="axb">
     In a Cartesian coordinate system,
-    the map of Carl's neighborhood would look like this:
+    the map of Carl's neighborhood would look like this (see graph on the left):
   </p>
+  <sidebyside widths="37% 37%" margins="10%">
   <figure permid="mLt">
     <caption>Carl's Neighborhood in a Cartesian Coordinate System</caption>
     <image permid="Lod">
@@ -263,6 +265,23 @@ ytick={-4,4}]
 </latex-image>
     </image>
   </figure>
+  <figure xml:id="figure-quadrants" permid="Qtv">
+        <caption>A Cartesian grid with four quadrants marked</caption>
+        <image width="50%" permid="rvm">
+          <description>a Cartesian grid with Quadrant I marked in the top right section, Quadrant II marked in the top left section, Quadrant III marked in the bottom left section, Quadrant IV marked in the bottom right section.</description>
+<latex-image>
+<![CDATA[\begin{tikzpicture}
+\begin{axis}[]
+\addplot[mark=none] coordinates {(3.5,3.5)} node[] {Quadrant I};
+\addplot[mark=none] coordinates {(-3.5, 3.5)} node[] {Quadrant II};
+\addplot[mark=none] coordinates {(-3.5, -3.5)} node[] {Quadrant III};
+\addplot[mark=none] coordinates {(3.5, -3.5)} node[] {Quadrant IV};
+\end{axis}
+\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </figure>
+    </sidebyside>
   <definition xml:id="definition-cartesian-coordinate-system" permid="Xoa">
     <title>Cartesian Coordinate System</title>
     <idx><h>Cartesian Coordinate System</h></idx>
@@ -302,25 +321,10 @@ ytick={-4,4}]
             <idx><h>quadrant</h></idx>
         The quadrants are traditionally labeled with Roman numerals.
       </p>
-      <figure xml:id="figure-quadrants" permid="Qtv">
-        <caption>A Cartesian grid with four quadrants marked</caption>
-        <image width="50%" permid="rvm">
-          <description>a Cartesian grid with Quadrant I marked in the top right section, Quadrant II marked in the top left section, Quadrant III marked in the bottom left section, Quadrant IV marked in the bottom right section.</description>
-<latex-image>
-<![CDATA[\begin{tikzpicture}
-\begin{axis}[]
-\addplot[mark=none] coordinates {(3.5,3.5)} node[] {Quadrant I};
-\addplot[mark=none] coordinates {(-3.5, 3.5)} node[] {Quadrant II};
-\addplot[mark=none] coordinates {(-3.5, -3.5)} node[] {Quadrant III};
-\addplot[mark=none] coordinates {(3.5, -3.5)} node[] {Quadrant IV};
-\end{axis}
-\end{tikzpicture}]]>
-</latex-image>
-        </image>
-      </figure>
+      
     </statement>
   </definition>
-  <todo>Make next example have a sidebyside, with a video right next to the tikz picture. The video will be an overhead of someone doing this by hand on real paper.</todo>
+  
   <example xml:id="example-cartesian-points" permid="Dvj">
     <statement>
       <p permid="wAE">
@@ -330,7 +334,7 @@ ytick={-4,4}]
       </p>
     </statement>
     <solution permid="gHM">
-      <sidebyside widths="47% 47%" margins="0%" permid="bXT">
+      <sidebyside widths="37% 37%" margins="10%" permid="bXT">
         <image permid="XCv">
           <description>a Cartesian grid with arrows drawn to plot each point;(3,2) is right 3, up 2;(-5,-1) is left 5, down 1;(0,-3) is down 3 on the y-axis;(4,0) is right 4 on the x-axis</description>
 <latex-image>
@@ -491,6 +495,7 @@ Context("Point");
 <webwork source="Library/Mizzou/Algebra/graph_basics/match_points_01.pg" />
 </exercise> -->
     </exercisegroup>
+    <newpage/>
     <exercisegroup cols="2" permid="FFV">
       <title>Creating Sketches of Graphs</title>
       <exercise permid="Ytt">
@@ -772,6 +777,29 @@ coordinates{(0,-10) (0,0) (10,0) (10,-10)};
         </answer>
       </exercise>
     </exercisegroup>
+   
+    
+    <exercisegroup permid="RUn">
+      <title>Regions in the Cartesian Plane</title>
+      <exercise permid="GpP">
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant10.pg" />
+      </exercise>
+      <exercise permid="mwY">
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant10.pg" />
+      </exercise>
+<!-- seeds set to guarantee distinct versions -->
+      <exercise permid="SEh">
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant30.pg" seed="3"/>
+      </exercise>
+      <exercise permid="yLq">
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant30.pg" seed="7"/>
+      </exercise>
+      <!-- <exercise permid="eSz">
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant20.pg" />
+      </exercise> -->
+      
+    </exercisegroup>
+    <newpage/>
     <exercisegroup cols="2" permid="lNe">
       <title>Cartesian Plots in Context</title>
       <exercise permid="ubx">
@@ -929,27 +957,6 @@ for my$i(@x){$gr->stamps(closed_circle($i,$f{$i},'blue','large'));};
             </statement>
         </webwork>
       </exercise>
-    </exercisegroup>
-    <exercisegroup permid="RUn">
-      <title>Regions in the Cartesian Plane</title>
-      <exercise permid="GpP">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant10.pg" />
-      </exercise>
-      <exercise permid="mwY">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant10.pg" />
-      </exercise>
-<!-- seeds set to guarantee distinct versions -->
-      <exercise permid="SEh">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant30.pg" seed="3"/>
-      </exercise>
-      <exercise permid="yLq">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant30.pg" seed="7"/>
-      </exercise>
-      <exercise permid="eSz">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/Quadrant20.pg" />
-      </exercise>
-      <todo>Placing a
-      <webwork /> here to preserve seed numbering following removal of an exercise.</todo>
     </exercisegroup>
     <exercisegroup permid="ybw">
       <title>Plotting Points and Choosing a Scale</title>

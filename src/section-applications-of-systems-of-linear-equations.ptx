@@ -506,6 +506,7 @@ return $return;
         </li>
       </dl></p>
     </example>
+    <newpage/>
     <example permid="PBK">
       <statement>
         <p permid="LnD">
@@ -1747,12 +1748,12 @@ $answer2=1;
       </statement>
       <solution permid="yRU">
         <p permid="slK">
-          A diagram is useful in helping us visualize the situation.</p>
-          <figure permid="hMF">
-            <image source="images/CNX_ElemAlg_Figure_05_04_011_img.jpg" width="50%" permid="GpC">
+          A diagram is useful in helping us visualize the situation.
+          
+            <image source="images/CNX_ElemAlg_Figure_05_04_011_img.jpg" width="40%" permid="GpC">
               <description>A diagram showing two arrows pointing in opposite directions, to represent a jet traveling one direction for a distance of 1095 miles and then traveling back in the opposite direction for a distance of 987 miles. Then one blue arrow represents the direction of the wind, with the time of 3 hours labeled on that arrow, representing the time traveled by the jet in both directions. There are also expressions of "j+w" labeling the arrow that represents the 1095-mile trip and "j-w" labeling the arrow that represents the 987-mile trip.</description>
             </image>
-          </figure>
+          </p>
         
         <p permid="YsT">
           <em>Identify and name</em> what we are looking for.
@@ -2628,7 +2629,6 @@ $answer2=150;
             <mrow>168-0.02m+0.025m\amp=178</mrow>
             <mrow>168+0.005m\amp=178</mrow>
             <mrow>0.005m\amp=10</mrow>
-            <mrow>\divideunder{0.005m}{0.005}\amp=\divideunder{10}{0.005}</mrow>
             <mrow>m\amp=2000</mrow>
           </md>
           Lastly, we can determine the value of <m>v</m> by using the earlier equation where we isolated <m>v</m>:
@@ -2686,7 +2686,7 @@ $answer2=150;
             $name = RandomName(sex=>$sex);
         </pg-code>
         </setup>
-        <statement><p><var name="$name"/> invested a total of <var name="$cInit"/> in two accounts. After a year, one account lost <var name="$p1"/>%, while the other account gained <var name="$p2"/>%. In total, <var name="$name"/> lost <var name="$cTotalInt"/>. How much money did <var name="$pronoun"/> invest in each account?</p>
+        <statement><p><var name="$name"/> invested a total of <m><var name="$cInit"/></m> in two accounts. After a year, one account lost <var name="$p1"/>%, while the other account gained <var name="$p2"/>%. In total, <var name="$name"/> lost <m><var name="$cTotalInt"/></m>. How much money did <var name="$pronoun"/> invest in each account?</p>
 
         <p>Write and solve a system of equations to answer the following questions.</p>
 
@@ -2697,7 +2697,7 @@ $answer2=150;
 
         <solution><p>Assume <var name="$name"/> invested <m>x</m> dollars in the account with <var name="$p1"/>% loss, and <m>y</m> dollars in the account with <var name="$p2"/>% gain.</p>
 
-        <p>It's given that the total amount of investment was <var name="$cInit"/>, so we have:
+        <p>It's given that the total amount of investment was <m><var name="$cInit"/></m>, so we have:
 
             <me>x+y=<var name="$rInit"/></me>
 
@@ -2705,7 +2705,7 @@ $answer2=150;
 
         <p>Similarly, since the second account gained <var name="$p2"/>% for <m>y</m> dollars, the amount of gain was <m><var name="$dp2"/>y</m> dollars.</p>
 
-        <p>It's given that the total amount of loss was <var name="$cTotalInt"/>, so we have:
+        <p>It's given that the total amount of loss was <m><var name="$cTotalInt"/></m>, so we have:
 
             <me>-<var name="$dp1"/>x+<var name="$dp2"/>y= -<var name="$rTotalInt"/></me></p>
 
@@ -2736,7 +2736,7 @@ $answer2=150;
             <mrow>y\amp=<var name="$rInit"/>-\substitute{<var name="$rFund1"/>}</mrow>
             <mrow>y\amp=<var name="$rFund2"/></mrow></md></p>
 
-        <p>The solution to the system of equations is <m>x=<var name="$rFund1"/></m>, <m>y=<var name="$rFund2"/></m>. This implies that <var name="$name"/> invested <var name="$cFund1"/> in the account with <var name="$p1"/>% loss and <var name="$cFund2"/> in the account with <var name="$p2"/>% gain.</p>
+        <p>The solution to the system of equations is <m>x=<var name="$rFund1"/></m>, <m>y=<var name="$rFund2"/></m>. This implies that <var name="$name"/> invested <m><var name="$cFund1"/></m> in the account with <var name="$p1"/>% loss and <m><var name="$cFund2"/></m> in the account with <var name="$p2"/>% gain.</p>
     </solution>
 </webwork>
 </exercise>
