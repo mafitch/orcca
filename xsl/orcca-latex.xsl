@@ -32,9 +32,14 @@
 
 <!-- This version has color, etc -->
 <xsl:param name="latex.preamble.early" select="document('latex-preamble/latex.preamble.xml')//latex-preamble-early" />
-<xsl:param name="latex.preamble.late" select="document('latex-preamble/latex.preamble.xml')//latex-preamble-late">
-    <xsl:text>\setcounter{tocdepth}{2}</xsl:text>
-</xsl:param>
+<xsl:param name="latex.preamble.late" select="document('latex-preamble/latex.preamble.xml')//latex-preamble-late" />
+    
+
+
+<!-- Temporary page break option -->
+<xsl:template match="newpage">
+  <xsl:text>\newpage%&#xa;</xsl:text>
+</xsl:template>
 
 
 <!--If all exercises are webwork, and if they all open with the same p, then print that p after the introduction. -->
