@@ -116,17 +116,19 @@ lanepdf:
 	install -d $(IMAGESSRC)
 	-rm $(PDFOUT)/images/*
 	-rm $(PDFOUT)/*.*
-	cp -a $(IMAGESOUT) $(PDFOUT)
-	cp -a $(WWOUT)/*0-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*1-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*2-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*3-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*4-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*5-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*6-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*7-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*8-image-*.png $(PDFOUT)/images
-	cp -a $(WWOUT)/*9-image-*.png $(PDFOUT)/images
+# 	cp -a $(IMAGESOUT) $(PDFOUT)
+# 	cp -a $(WWOUT)/*0-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*1-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*2-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*3-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*4-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*5-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*6-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*7-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*8-image-*.png $(PDFOUT)/images
+# 	cp -a $(WWOUT)/*9-image-*.png $(PDFOUT)/images
+	cd $(WWOUT); \
+	rsync -r --include='*.png' --exclude='*' . $(PDFOUT)/images
 	cp -a $(IMAGESSRC) $(PDFOUT)
 	cd $(PDFOUT); \
 	xsltproc -xinclude --stringparam toc.level 2 --stringparam latex.print 'yes' --stringparam latex.pageref 'no' --stringparam latex.sides 'two' --stringparam latex.geometry 'total={6.5in,8in}'  --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(PRJXSL)/orcca-latex.xsl $(OUTPUT)/merge.xml > orcca.tex; \
@@ -465,9 +467,12 @@ html:
 	install -d $(HTMLOUT)/images
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cp -a $(IMAGESSRC) $(HTMLOUT)
-	cp -a $(WWOUT)/*.png $(HTMLOUT)/images/
+# 	cp -a $(WWOUT)/*.png $(HTMLOUT)/images/
+	cd $(WWOUT); \
+	rsync -r --include='*.png' --exclude='*' . $(HTMLOUT)/images
 	cp $(CSS) $(HTMLOUT)
 	cd $(HTMLOUT); \
+	
 	xsltproc -xinclude --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no --stringparam exercise.text.hint no --stringparam exercise.text.answer no --stringparam exercise.text.solution no --stringparam html.knowl.exercise.inline no --stringparam html.knowl.example no --stringparam html.css.extra orcca.css $(PRJXSL)/orcca-html.xsl $(OUTPUT)/merge.xml
 
 # make all the image files in svg format
