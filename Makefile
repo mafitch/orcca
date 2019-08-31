@@ -94,8 +94,9 @@ SERVER = "(https://webwork.pcc.edu,orcca,orcca,anonymous,orcca)"
 
 webwork-extraction:
 	install -d $(WWOUT)
-	-rm $(WWOUT) webwork-extraction.xml
-	$(MB)/script/mbx -vv -c webwork -d $(WWOUT) -s $(SERVER) $(MAINFILE)
+	-rm -r $(WWOUT)
+	install -d $(WWOUT)
+	$(MB)/script/mbx -vv -a -c webwork -d $(WWOUT) -s $(SERVER) $(MAINFILE)
 
 merge:
 	cd $(OUTPUT); \
