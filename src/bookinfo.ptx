@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -8,12 +8,12 @@
 <!-- *********************************************************************-->
 <docinfo>
 <!-- Thumbnail for HTML -->
-  <brandlogo url="http://www.pcc.edu/ORCCA" source="images/orca3.png" />
+  <brandlogo url="http://www.pcc.edu/ORCCA" source="images/orca3.png"/>
 <!-- For title into HTML head, then tabs, bookmarks, etc -->
   <initialism>ORCCA</initialism>
-  <cross-references text="global" />
-  <rename element="solution" lang="en-US">Explanation</rename>
-  <rename element="algorithm" lang="en-US">Process</rename>
+  <cross-references text="global"/>
+  <rename element="solution" xml:lang="en-US">Explanation</rename>
+  <rename element="algorithm" xml:lang="en-US">Process</rename>
 <latex-preamble>
 <package>cancel</package>
 </latex-preamble>
@@ -138,16 +138,16 @@
 %
 %
 %Emoji characters
-\newcommand{\apple}{\text{&#x1F34E;}}
-\newcommand{\banana}{\text{&#x1F34C;}}
-\newcommand{\pear}{\text{&#x1F350;}}
-\newcommand{\cat}{\text{&#128049;}}
-\newcommand{\dog}{\text{&#128054;}}
+\newcommand{\apple}{\text{🍎}}
+\newcommand{\banana}{\text{🍌}}
+\newcommand{\pear}{\text{🍐}}
+\newcommand{\cat}{\text{🐱}}
+\newcommand{\dog}{\text{🐶}}
 </macros>
 <!-- For LaTeX-based images; inserted both into tex preamble, -->
 <!-- and into standalone preambles for svg production         -->
 <latex-image-preamble>
-<![CDATA[
+
 \usepackage{pgfplots}
 \usepackage{pifont}                                         %needed for symbols, s.a. airplane symbol
 \usetikzlibrary{positioning,fit,backgrounds}                %needed for nested diagrams
@@ -174,8 +174,8 @@
 \pgfplotsset{quaternarycurve/.style= {color=fourthcolor, mark=none, line width=1pt, {Kite}-{Kite}, dotted}}        % quaternary style for curves
 \pgfplotsset{fifthcurve/.style     = {color=fifthcolor,  mark=none, line width=1pt, {Kite}-{Kite}, dashed}}        % fifth style for curves
 \pgfplotsset{highlightcurve/.style  = {color=highlightcolor,  mark=none, line width=5pt, -, opacity=0.3}}        % thick, opaque curve for highlighting
-\pgfplotsset{asymptote/.style      = {color=gray, mark=none, line width=1pt, <->, dashed}}
-\pgfplotsset{symmetryaxis/.style   = {color=gray, mark=none, line width=1pt, <->, dashed}}
+\pgfplotsset{asymptote/.style      = {color=gray, mark=none, line width=1pt, &lt;-&gt;, dashed}}
+\pgfplotsset{symmetryaxis/.style   = {color=gray, mark=none, line width=1pt, &lt;-&gt;, dashed}}
 \pgfplotsset{guideline/.style      = {color=gray, mark=none, line width=1pt, -}}
 \tikzset{guideline/.style          = {color=gray, mark=none, line width=1pt, -}}
 \pgfplotsset{altitude/.style       = {dashed, color=gray, thick, mark=none, -}}
@@ -186,7 +186,7 @@
 \tikzset{closedboundary/.style     = {color=black, mark=none, line width=1pt, {Kite}-{Kite},solid}}
 \pgfplotsset{openboundary/.style   = {color=black, mark=none, line width=1pt, {Kite}-{Kite},dashed}}
 \tikzset{openboundary/.style       = {color=black, mark=none, line width=1pt, {Kite}-{Kite},dashed}}
-\tikzset{verticallinetest/.style   = {color=gray, mark=none, line width=1pt, <->,dashed}}
+\tikzset{verticallinetest/.style   = {color=gray, mark=none, line width=1pt, &lt;-&gt;,dashed}}
 \pgfplotsset{soliddot/.style       = {color=firstcolor,  mark=*, only marks}}
 \pgfplotsset{hollowdot/.style      = {color=firstcolor,  mark=*, only marks, fill=yellow!30}} %this color is set to match axis background/.style
 \pgfplotsset{blankgraph/.style     = {xmin=-10, xmax=10,
@@ -242,7 +242,7 @@ fifthcurve\\%
 \pgfplotsset{every axis/.append style={
 axis x line=middle,    % put the x axis in the middle
 axis y line=middle,    % put the y axis in the middle
-axis line style={<->}, % arrows on the axis
+axis line style={&lt;-&gt;}, % arrows on the axis
 scaled ticks=false,
 tick label style={/pgf/number format/fixed},
 xlabel={$x$},          % default put x on x-axis
@@ -263,7 +263,7 @@ tick label style={font=\footnotesize},
 %label style={font=\scriptsize},
 legend cell align=left,
 %legend style={font=\scriptsize},
-%width = {ifthenelse(.9\linewidth>.45\textwidth,0.45\textwidth,.9\linewidth)},
+%width = {ifthenelse(.9\linewidth&gt;.45\textwidth,0.45\textwidth,.9\linewidth)},
 grid = both,
 grid style = {solid,gray!40},
 axis background/.style={fill=yellow!30},
@@ -273,7 +273,7 @@ axis background/.style={fill=yellow!30},
 }}
 %\tikzset{axisnode/.style={font=\scriptsize,text=black}}
 % arrow style
-\tikzset{>=stealth}
+\tikzset{&gt;=stealth}
 % framing the graphs
 \pgfplotsset{framed/.style={axis background/.style ={draw=gray}}}
 % next line is a bit more colorful
@@ -310,7 +310,7 @@ fit=(circle-\invc)(set-\invcplusone)] {};
 }
 \end{scope}
 }
-]]>
+
 </latex-image-preamble>
 <!--     <search>
 <google>

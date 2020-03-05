@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -99,7 +99,7 @@
       </p>
       <sidebyside widths="40% 34%" margins="10%" permid="Qsn">
         <table permid="MVe">
-          <caption>Table for <m>y=-2x+1</m></caption>
+          <title>Table for <m>y=-2x+1</m></title>
           <tabular permid="lxO">
             <col halign="center"/>
             <col halign="left"/>
@@ -141,14 +141,14 @@
           <image permid="iYH">
             <description>This is a graph of the line y=-2x+1. The following points on the line are plotted: (-2,5),(-1,3),(0,1),(1,-1),(2,-3).</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-3,xmax=3,
 ymin=-6,ymax=6]
 \addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
 \addplot[soliddot] coordinates {(-2, 5) (-1, 3) (0, 1) (1, -1) (2, -3)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -170,21 +170,21 @@ ymin=-6,ymax=6]
         <figure permid="kzz">
           <caption>Marking a point and some slope triangles</caption>
           <image permid="PfQ">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-3,xmax=3,
 ymin=-6,ymax=6]
 \addplot[soliddot] coordinates {(0, 1)} node[below left] {$(0,1)$};
 \addplot[soliddot] coordinates {(-2, 5) (-1, 3) (1, -1) (2, -3)};
 \addplot[guideline] coordinates {(0,1) (1,1)} node[pos=0.5,above] {$1$};
-\addplot[guideline,->] coordinates {(1,1) (1,-1)} node[pos=0.5,right] {$2$};
-\addplot[guideline,->] coordinates {(1,-1) (2,-1) (2,-3)};
-\addplot[guideline,->] coordinates {(0,1) (-1,1) (-1,3)};
-\addplot[guideline,->] coordinates {(-1,3) (-2,3) (-2,5)};
+\addplot[guideline,-&gt;] coordinates {(1,1) (1,-1)} node[pos=0.5,right] {$2$};
+\addplot[guideline,-&gt;] coordinates {(1,-1) (2,-1) (2,-3)};
+\addplot[guideline,-&gt;] coordinates {(0,1) (-1,1) (-1,3)};
+\addplot[guideline,-&gt;] coordinates {(-1,3) (-2,3) (-2,5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -193,18 +193,18 @@ ymin=-6,ymax=6]
           <image permid="vmZ">
             <description>This is a graph of the line y=-2x+1. The following points on the line are plotted: (-2,5),(-1,3),( 0,1),(1,-1),(2,-3). There are a few slope triangles. One starts at (-2,5), passes (-1,5), and ends at (-1,3). One    starts at (-1,3), passes (0,3), and ends at (0,1). One starts at (0,1), passes (1,1), and ends at (1,-1). One starts   at (1,-1), passes (2,-1), and ends at (2,-3).</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-3,xmax=3,
 ymin=-6,ymax=6]
 \addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
 \addplot[soliddot] coordinates {(-2, 5) (-1, 3) (0, 1) (1, -1) (2, -3)};
-\addplot[guideline,->] coordinates {(0,1) (1,1) (1,-1)};
-\addplot[guideline,->] coordinates {(1,-1) (2,-1) (2,-3)};
-\addplot[guideline,->] coordinates {(0,1) (-1,1) (-1,3)};
-\addplot[guideline,->] coordinates {(-1,3) (-2,3) (-2,5)};
+\addplot[guideline,-&gt;] coordinates {(0,1) (1,1) (1,-1)};
+\addplot[guideline,-&gt;] coordinates {(1,-1) (2,-1) (2,-3)};
+\addplot[guideline,-&gt;] coordinates {(0,1) (-1,1) (-1,3)};
+\addplot[guideline,-&gt;] coordinates {(-1,3) (-2,3) (-2,5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -273,25 +273,25 @@ ymin=-6,ymax=6]
         <figure permid="BxK">
           <caption>Marking intercepts</caption>
           <image permid="bui">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-3,xmax=3,
 ymin=-6,ymax=6]
 \addplot[soliddot] coordinates {(0, 1)} node[above right] {$(0,1)$};
 \addplot[soliddot] coordinates {(0.5, 0)} node[above right] {$\left(\frac{1}{2},0\right)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
         <figure permid="hET">
           <caption>Using slope triangles</caption>
           <image permid="HBr">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-3,xmax=3,
 ymin=-6,ymax=6]
 \addplot+[domain = -2.5:3]{-2*x+1} node[pos=0.25,sloped,above] {$y=-2x+1$};
@@ -299,7 +299,7 @@ ymin=-6,ymax=6]
 \addplot[soliddot] coordinates {(0.5, 0)} node[above right] {$\left(\frac{1}{2},0\right)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -418,7 +418,7 @@ ymin=-6,ymax=6]
       </p>
       <sidebyside widths="42% 37%" margins="5%" permid="ZLZ">
         <table permid="tcn">
-          <caption>Intercepts of <m>3x+4y=12</m></caption>
+          <title>Intercepts of <m>3x+4y=12</m></title>
           <tabular permid="xMg">
             <col halign="left"/>
             <col halign="center"/>
@@ -449,7 +449,7 @@ ymin=-6,ymax=6]
           <image permid="nIA">
             <description>This is a grid with the graph of line 3x+4y=12. The following points are plotted: (0,3), (4,0).</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-1,xmax=6,
 ymin=-1,ymax=4]
 \addplot+[domain = -1:5.3333]{-3/4*x+3} node[pos=0.5,above,sloped] {$3x+4y=12$};
@@ -457,7 +457,7 @@ ymin=-1,ymax=4]
 \addplot[soliddot] coordinates {(4, 0)} node[color=red, above right] {$(4,0)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -490,18 +490,18 @@ ymin=-1,ymax=4]
         <image width="47%" permid="TPJ">
           <description>This is a graph of the line 3x+4y=12. The following points on the line are plotted: (-4,6),(0,3),(4,0). There  are  two slope triangles. One starts at (-4,6), passes (0,6), and ends at (0,3). One starts at (0,3), passes (4,3), and  ends at   (4,0).</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-5,xmax=5,
 ymin=-2,ymax=7]
 \addplot+[domain = -5:5]{-3/4*x+3} node[pos=0.25,sloped,above] {$3x+4y=12$};
 \addplot[soliddot] coordinates {(-4, 6) (4, 0)};
 \addplot[soliddot] coordinates {(0,3)} node[above right] {$(0,3)$};
-\addplot[guideline,->] coordinates {(0,3) (-4,3) (-4,6)};
+\addplot[guideline,-&gt;] coordinates {(0,3) (-4,3) (-4,6)};
 \addplot[guideline,-] coordinates {(0,3) (4,3)} node[above] {$4$};
-\addplot[guideline,->] coordinates {(4,3) (4,0)} node[right] {$-3$};
+\addplot[guideline,-&gt;] coordinates {(4,3) (4,0)} node[right] {$-3$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -512,7 +512,7 @@ ymin=-2,ymax=7]
         but shows more points with slope triangles,
         and thus a more accurate graph.
         Also sometimes
-        (as with <xref ref="example-graph-standard-c-zero">Example</xref>)
+        (as with <xref ref="example-graph-standard-c-zero" />)
         when we graph a standard form equation like
         <m>2x-3y=0\text{,}</m> the intercepts method doesn't work because both intercepts are actually at the same point,
         and we have to resort to something else like slope triangles anyway.
@@ -553,18 +553,18 @@ ymin=-2,ymax=7]
       <image width="47%" permid="zWS">
         <description>This is a graph of the line y-3=2/3(x+1). The following points on the line are plotted: (-4,1),(-1,3),(2,5). There are two slope triangles. One starts at (-4,1), passes (-1,1), and ends at (-1,3). One starts at (-1,3), passes (2,3), and ends at (2,5).</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-5,xmax=3,
 ymin=-1,ymax=6]
 \addplot+[domain = -5:3]{2/3*(x+1)+3} node[pos=0.25,sloped,below] {$y=\frac{2}{3}(x+1)+3$};
 \addplot[soliddot] coordinates {(-4, 1) (2, 5)};
 \addplot[soliddot] coordinates {(-1, 3)} node[above left] {$(-1,3)$};
-\addplot[guideline,->] coordinates {(-1,3) (-4,3) (-4,1)};
+\addplot[guideline,-&gt;] coordinates {(-1,3) (-4,3) (-4,1)};
 \addplot[guideline] coordinates {(-1,3) (2,3)} node[pos=0.5,above] {$3$};
-\addplot[guideline,->] coordinates {(2,3) (2,5)} node[pos=0.5,right] {$2$};
+\addplot[guideline,-&gt;] coordinates {(2,3) (2,5)} node[pos=0.5,right] {$2$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -578,7 +578,7 @@ ymin=-1,ymax=6]
   <subsection permid="ZxE">
     <title>Graphing Horizontal and Vertical Lines</title>
     <p permid="FMe">
-      We learned in <xref ref="section-horizontal-vertical-parallel-and-perpendicular-lines">Section</xref>
+      We learned in <xref ref="section-horizontal-vertical-parallel-and-perpendicular-lines" />
       that equations in the form <m>x=h</m> and <m>y=k</m> make vertical and horizontal lines.
       But perhaps you will one day find yourself not remembering which is which.
       Making a table and plotting points can quickly remind you which type of equation makes which type of line.
@@ -586,7 +586,7 @@ ymin=-1,ymax=6]
     </p>
     <sidebyside margins="0%" permid="mar">
       <table permid="Zjw">
-        <caption>Table of Data for <m>y=2</m></caption>
+        <title>Table of Data for <m>y=2</m></title>
         <tabular permid="dTp">
           <col halign="center"/>
           <col halign="center"/>
@@ -609,7 +609,7 @@ ymin=-1,ymax=6]
         </tabular>
       </table>
       <table permid="FqF">
-        <caption>Table of Data for <m>x=-3</m></caption>
+        <title>Table of Data for <m>x=-3</m></title>
         <tabular permid="Kay">
           <col halign="center"/>
           <col halign="center"/>
@@ -641,7 +641,7 @@ ymin=-1,ymax=6]
       <image width="47%" permid="geb">
         <description>This is a graph of y=2 and x=-3. For y=2, the points (0,2) and (1,2) are plotted. For x=-3, the points (-3,0) and (-3,1) are plotted.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-4,xmax=4,
 ymin=-3,ymax=3]
 \addplot+[] coordinates {(-4,2) (4,2)} node[pos=0.5,above] {$y=2$};
@@ -652,7 +652,7 @@ ymin=-3,ymax=3]
 \addplot[soliddot, color=secondcolor] coordinates {(-3, 1)} node[above right] {$(-3,1)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -672,13 +672,13 @@ ymin=-3,ymax=3]
           <sidebyside permid="qvP">
             <image permid="Mlk">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {4*x+3};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -694,13 +694,13 @@ ymin=-3,ymax=3]
           <sidebyside permid="WCY">
             <image permid="sst">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-5*x-1};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -716,13 +716,13 @@ ymin=-3,ymax=3]
           <sidebyside permid="CKh">
             <image permid="YzC">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-3/4*x-1};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -738,13 +738,13 @@ ymin=-3,ymax=3]
           <sidebyside permid="iRq">
             <image permid="EGL">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {5/3*x+3};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -765,14 +765,14 @@ ymin=-3,ymax=3]
           <sidebyside permid="nBj">
             <image permid="kNU">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-20:5] {-4/5*x-1};
 \addplot[soliddot] coordinates {(0,-18) (-15,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -793,7 +793,7 @@ ymin=-3,ymax=3]
               <image permid="QVd">
                 <description>a coordinate grid with the graph of line 2x-3y=-6; the x-intercept is (-3,0) and the y-intercept is (0,2)</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-5,xmax=2,
 ymin=-1,ymax=4,
 minor xtick=,
@@ -806,7 +806,7 @@ ytick={1,2,3}]
 \addplot[soliddot] coordinates {(-1, 1.33333)} node[above left] {$(-1,\frac{4}{3})$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
               </image>
             </figure>
@@ -825,14 +825,14 @@ ytick={1,2,3}]
           <sidebyside permid="zPB">
             <image permid="xcm">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-10.66:2.66] {-3*x-9};
 \addplot[soliddot] coordinates {(0,-9) (-3,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -850,14 +850,14 @@ ytick={1,2,3}]
           <sidebyside permid="fWK">
             <image permid="djv">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {5*x-1};
 \addplot[soliddot] coordinates {(0,-1) (1/5,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -875,14 +875,14 @@ ytick={1,2,3}]
           <sidebyside permid="MdT">
             <image permid="JqE">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-4/3*x-1};
 \addplot[soliddot] coordinates {(0,-1) (-3/4,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -900,14 +900,14 @@ ytick={1,2,3}]
           <sidebyside permid="slc">
             <image permid="pxN">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-4/5*x-1};
 \addplot[soliddot] coordinates {(0,-1) (-5/4,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -925,14 +925,14 @@ ytick={1,2,3}]
           <sidebyside permid="Ysl">
             <image permid="VEW">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {5/3*x};
 \addplot[soliddot] coordinates {(0,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -950,14 +950,14 @@ ytick={1,2,3}]
           <sidebyside permid="Ezu">
             <image permid="BMf">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-2/9*x};
 \addplot[soliddot] coordinates {(0,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -977,14 +977,14 @@ ytick={1,2,3}]
           <sidebyside permid="hLX">
             <image permid="hTo">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-5*x};
 \addplot[soliddot] coordinates {(0,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1001,14 +1001,14 @@ ytick={1,2,3}]
           <sidebyside permid="NTg">
             <image permid="Oax">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {3*x-6};
 \addplot[soliddot] coordinates {(0,-6)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1025,14 +1025,14 @@ ytick={1,2,3}]
           <sidebyside permid="uap">
             <image permid="uhG">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7.66:3.66] {2/5*x+2};
 \addplot[soliddot] coordinates {(0,2)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1049,14 +1049,14 @@ ytick={1,2,3}]
           <sidebyside permid="ahy">
             <image permid="aoP">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7.66:3.66] {10/3*x-3};
 \addplot[soliddot] coordinates {(0,-3)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1075,13 +1075,13 @@ ytick={1,2,3}]
           <sidebyside permid="eRr">
             <image permid="GvY">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {1};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1097,13 +1097,13 @@ ytick={1,2,3}]
           <sidebyside permid="KYA">
             <image permid="mDh">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {-4};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1119,13 +1119,13 @@ ytick={1,2,3}]
           <sidebyside permid="rfJ">
             <image permid="SKq">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve] coordinates {(-8,-7) (8,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1141,13 +1141,13 @@ ytick={1,2,3}]
           <sidebyside permid="XmS">
             <image permid="yRz">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve] coordinates {(5,-7) (5,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1166,13 +1166,13 @@ ytick={1,2,3}]
           <sidebyside permid="bWL">
             <image permid="eYI">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {2*x+2};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1188,13 +1188,13 @@ ytick={1,2,3}]
           <sidebyside permid="IdU">
             <image permid="LfR">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-3*x+6};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1210,13 +1210,13 @@ ytick={1,2,3}]
           <sidebyside permid="old">
             <image permid="rna">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-3/4*x-1};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1232,13 +1232,13 @@ ytick={1,2,3}]
           <sidebyside permid="Usm">
             <image permid="Xuj">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {5/3*x-3};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1254,13 +1254,13 @@ ytick={1,2,3}]
           <sidebyside permid="Azv">
             <image permid="DBs">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-9.66:2.66] {-3/4*x+23/4};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1276,13 +1276,13 @@ ytick={1,2,3}]
           <sidebyside permid="gGE">
             <image permid="jIB">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-2.66:9.66] {2/5*x-13/5};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1298,13 +1298,13 @@ ytick={1,2,3}]
           <sidebyside permid="MNN">
             <image permid="PPK">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-6.66:4.66] {3/2*x+3};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1320,13 +1320,13 @@ ytick={1,2,3}]
           <sidebyside permid="sUW">
             <image permid="vWT">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:7.66] {5/4*x-2};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1342,13 +1342,13 @@ ytick={1,2,3}]
           <sidebyside permid="Zcf">
             <image permid="cec">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {3/4*x};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1364,13 +1364,13 @@ ytick={1,2,3}]
           <sidebyside permid="Fjo">
             <image permid="Ill">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.66:3.66] {-3/2*x};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1386,13 +1386,13 @@ ytick={1,2,3}]
           <sidebyside permid="lqx">
             <image permid="osu">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve] coordinates {(-3,-7) (3,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1408,13 +1408,13 @@ ytick={1,2,3}]
           <sidebyside permid="RxG">
             <image permid="UzD">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve] coordinates {(2,-7) (2,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1430,13 +1430,13 @@ ytick={1,2,3}]
           <sidebyside permid="xEP">
             <image permid="AGM">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {-7};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1452,13 +1452,13 @@ ytick={1,2,3}]
           <sidebyside permid="dLY">
             <image permid="gNV">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {5};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>

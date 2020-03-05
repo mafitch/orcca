@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -116,7 +116,7 @@
   <exercise permid="wgb">
     <introduction permid="PYS">
       <p permid="XRM">
-        Solve each equation from <xref ref="example-translate-percent-statement-to-equation">Example</xref>.
+        Solve each equation from <xref ref="example-translate-percent-statement-to-equation" />.
       </p>
     </introduction>
     <webwork>
@@ -144,7 +144,7 @@ $b=Compute("30%");
                   </me>
                 </p>
                 <p permid="VsF">
-                  <m>x</m> is <var name="$a" width="10" />.
+                  <m>x</m> is <var name="$a" width="10"/>.
                 </p>
               </li>
               <li permid="TDs">
@@ -157,7 +157,7 @@ $b=Compute("30%");
                   </me>
                 </p>
                 <p permid="NOg">
-                  <m>P</m> is <var name="$b" width="10" />.
+                  <m>P</m> is <var name="$b" width="10"/>.
                 </p>
               </li>
               <li permid="zKB">
@@ -170,7 +170,7 @@ $b=Compute("30%");
                   </me>
                 </p>
                 <p permid="GjH">
-                  <m>x</m> is <var name="$c" width="10" />.
+                  <m>x</m> is <var name="$c" width="10"/>.
                 </p>
               </li>
             </ol>
@@ -211,7 +211,7 @@ $b=Compute("30%");
         <sidebyside widths="50% 44%" margins="0%" permid="LoZ">
           <p permid="uFj">
             In Fall 2016, Portland Community College had <m>89{,}900</m> enrolled students.
-            According to <xref ref="figure-pcc-race-demographics">Figure</xref>,
+            According to <xref ref="figure-pcc-race-demographics" />,
             how many black students were enrolled at PCC in Fall 2016?
           </p>
           <figure xml:id="figure-pcc-race-demographics" permid="aMs">
@@ -219,7 +219,7 @@ $b=Compute("30%");
             <image permid="HDv">
               <description>a pie chart that indicates white students are 68%; Hispanic students are 11%; Asian students are 8%; black students are 6%; and students of other ethnicities make up 7%</description>
 <latex-image>
-<![CDATA[
+
 {\def\angle{0}
 \def\radius{2.5}
 \def\cyclelist{{"firstcolor","secondcolor","thirdcolor","fourthcolor","fifthcolor"}}
@@ -236,7 +236,7 @@ $b=Compute("30%");
 \ifx\percent\empty\else               % If \percent is empty, do nothing
 \global\advance\cyclecount by 1     % Advance cyclecount
 \global\advance\ind by 1            % Advance list index
-\ifnum4<\cyclecount                 % If cyclecount is larger than list
+\ifnum4&lt;\cyclecount                 % If cyclecount is larger than list
 \global\cyclecount=0              %   reset cyclecount and
 \global\ind=0                     %   reset list index
 \fi
@@ -252,7 +252,7 @@ at (\angle+90+0.5*\percent*3.6:\radius) {};
 \xdef\angle{\pgfmathresult}         %   and store in \angle
 \fi
 };
-\end{tikzpicture}}]]>
+\end{tikzpicture}}
 </latex-image>
             </image>
           </figure>
@@ -285,7 +285,7 @@ at (\angle+90+0.5*\percent*3.6:\radius) {};
       <statement>
         <sidebyside margins="0%" widths="50% 44%" permid="rwi">
           <p permid="GTB">
-            The bar graph in <xref ref="figure-school-class-sizes">Figure</xref>
+            The bar graph in <xref ref="figure-school-class-sizes" />
             displays how many students are in each class at a local high school.
             According to the bar graph,
             what percentage of the school's student population is freshman?
@@ -295,7 +295,7 @@ at (\angle+90+0.5*\percent*3.6:\radius) {};
             <image width="60%" permid="nKE">
               <description>a bar graph indicating there are 134 freshmen, 103 sophomores, 96 juniors, and 86 seniors</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[
 xtick={},
@@ -307,7 +307,7 @@ ymin=0,ymax={},
 grid = none,
 %axis x line = bottom,
 axis y line = left,
-axis line style={->}, % arrows on the axis
+axis line style={-&gt;}, % arrows on the axis
 yticklabel style={},
 y label style={at={(axis description cs:-0.1,.5)},rotate=90,anchor=south},
 ybar,
@@ -326,7 +326,7 @@ bar width=1cm,
 \addplot coordinates {(freshman,134) (sophomore,103) (junior,96) (senior,86)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -373,7 +373,7 @@ bar width=1cm,
         When solving equations that do <em>not</em>
         have context we state the solution set.
         However, when solving an equation or inequality that arises in an application problem
-        (such as the context of the high school in <xref ref="example-high-school-classes">Example</xref>),
+        (such as the context of the high school in <xref ref="example-high-school-classes" />),
         it makes more sense to summarize our result with a sentence,
         using the context of the application.
         This allows us to communicate the full result,
@@ -444,7 +444,7 @@ bar width=1cm,
           <setup>
 <pg-code>
 Context("Currency");
-Context()->flags->set(tolerance=>3);
+Context()-&gt;flags-&gt;set(tolerance=&gt;3);
 $sales=Currency(7857.14);
 </pg-code>
           </setup>
@@ -456,7 +456,7 @@ $sales=Currency(7857.14);
               How much total sales profit does she need to bring in for the dealership?
             </p>
             <p permid="Qnn">
-              Alexis needs to bring in <var name="$sales" width="10" /> in sales profit.
+              Alexis needs to bring in <var name="$sales" width="10"/> in sales profit.
             </p>
           </statement>
           <solution permid="ROf">
@@ -505,7 +505,7 @@ $sales=Currency(7857.14);
             <image width="60%" permid="TRN">
               <description>a plot over time indicating average textbook price was $62.00 in 2009; $65.11 in 2010; $68.87 in 2011; $72.11 in 2012; and $79.00 in 2013</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[
 xtick={},
@@ -517,7 +517,7 @@ ymin=0,ymax={},
 grid = none,
 %axis x line = bottom,
 axis y line = left,
-axis line style={->}, % arrows on the axis
+axis line style={-&gt;}, % arrows on the axis
 yticklabel style={},
 y label style={at={(axis description cs:-0.1,.5)},rotate=90,anchor=south},
 %ybar,
@@ -545,7 +545,7 @@ x tick label style={rotate=45,anchor=east},
 \addplot[soliddot] coordinates {(2012,72.11)} node [below] {\$72.00};
 \addplot[soliddot] coordinates {(2013,79)} node [above] {\$79.00};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -590,7 +590,7 @@ $cost=Currency(4.80);
               By how much, in dollars, has the cost of a full tank gone up?
             </p>
             <p permid="cBF">
-              A full tank of gas now costs <var name="$cost" width="10" /> more than it did last month.
+              A full tank of gas now costs <var name="$cost" width="10"/> more than it did last month.
             </p>
           </statement>
           <solution permid="xVo">
@@ -649,28 +649,28 @@ $cost=Currency(4.80);
     <exercisegroup cols="4" permid="vRG">
       <title>Review and Warmup</title>
       <exercise permid="Uuq">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion10.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion10.pg"/>
       </exercise>
       <exercise permid="ABz">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion10.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion10.pg"/>
       </exercise>
       <exercise permid="gII">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion20.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion20.pg"/>
       </exercise>
       <exercise permid="MPR">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion20.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion20.pg"/>
       </exercise>
       <exercise permid="sXa">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion30.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion30.pg"/>
       </exercise>
       <exercise permid="Zej">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion30.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion30.pg"/>
       </exercise>
       <exercise permid="Fls">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion50.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion50.pg"/>
       </exercise>
       <exercise permid="lsB">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion50.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion50.pg"/>
       </exercise>
 <!--omitted, too many for review-->
 <!--             <exercise>
@@ -687,181 +687,181 @@ $cost=Currency(4.80);
 </exercise>
 -->
       <exercise permid="RzK">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion70.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion70.pg"/>
       </exercise>
       <exercise permid="xGT">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion70.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion70.pg"/>
       </exercise>
       <exercise permid="dOc">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion80.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion80.pg"/>
       </exercise>
       <exercise permid="JVl">
-        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion80.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/PercentDecimalConversion80.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="bYP">
       <title>Basic Percentage Calculation</title>
       <exercise permid="qcu">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_10.pg"/>
       </exercise>
       <exercise permid="WjD">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_10.pg"/>
       </exercise>
       <exercise permid="CqM">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_20.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_20.pg"/>
       </exercise>
       <exercise permid="ixV">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_20.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_20.pg"/>
       </exercise>
       <exercise permid="OFe">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_30.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_30.pg"/>
       </exercise>
       <exercise permid="uMn">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_30.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType1_30.pg"/>
       </exercise>
       <exercise permid="aTw">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_10.pg"/>
       </exercise>
       <exercise permid="HaF">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_10.pg"/>
       </exercise>
       <exercise permid="nhO">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_40.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_40.pg"/>
       </exercise>
       <exercise permid="ToX">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_40.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_40.pg"/>
       </exercise>
       <exercise permid="zwg">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_50.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_50.pg"/>
       </exercise>
       <exercise permid="fDp">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_50.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType2_50.pg"/>
       </exercise>
       <exercise permid="LKy">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_10.pg"/>
       </exercise>
       <exercise permid="rRH">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_10.pg"/>
       </exercise>
       <exercise permid="XYQ">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_20.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_20.pg"/>
       </exercise>
       <exercise permid="EfZ">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_20.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_20.pg"/>
       </exercise>
       <exercise permid="kni">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_30.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_30.pg"/>
       </exercise>
       <exercise permid="Qur">
-        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_30.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentOfNumberType3_30.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="IfY">
       <title>Applications</title>
       <exercise permid="wBA">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_70.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_70.pg"/>
       </exercise>
       <exercise permid="cIJ">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_70.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_70.pg"/>
       </exercise>
       <exercise permid="IPS">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_80.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_80.pg"/>
       </exercise>
       <exercise permid="oXb">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_80.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_80.pg"/>
       </exercise>
       <exercise permid="Vek">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_90.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_90.pg"/>
       </exercise>
       <exercise permid="Blt">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_90.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_90.pg"/>
       </exercise>
       <exercise permid="hsC">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_100.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_100.pg"/>
       </exercise>
       <exercise permid="NzL">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_100.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_100.pg"/>
       </exercise>
       <exercise permid="tGU">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_10.pg"/>
       </exercise>
       <exercise permid="ZOd">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_10.pg"/>
       </exercise>
       <exercise permid="FVm">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_30.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_30.pg"/>
       </exercise>
       <exercise permid="mcv">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_30.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_30.pg"/>
       </exercise>
       <exercise permid="SjE">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_120.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_120.pg"/>
       </exercise>
       <exercise permid="yqN">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_120.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType1_120.pg"/>
       </exercise>
       <exercise permid="exW">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_20.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_20.pg"/>
       </exercise>
       <exercise permid="KFf">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_20.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_20.pg"/>
       </exercise>
       <exercise permid="qMo">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_60.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_60.pg"/>
       </exercise>
       <exercise permid="WTx">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_60.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_60.pg"/>
       </exercise>
       <exercise permid="DaG">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_80.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_80.pg"/>
       </exercise>
       <exercise permid="jhP">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_80.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_80.pg"/>
       </exercise>
       <exercise permid="PoY">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_50.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_50.pg"/>
       </exercise>
       <exercise permid="vwh">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_50.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_50.pg"/>
       </exercise>
       <exercise permid="bDq">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_110.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_110.pg"/>
       </exercise>
       <exercise permid="HKz">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_110.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_110.pg"/>
       </exercise>
       <exercise permid="nRI">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_40.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_40.pg"/>
       </exercise>
       <exercise permid="TYR">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_40.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType3_40.pg"/>
       </exercise>
       <exercise permid="Aga">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_70.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_70.pg"/>
       </exercise>
       <exercise permid="gnj">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_70.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_70.pg"/>
       </exercise>
       <exercise permid="Mus">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_120.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_120.pg"/>
       </exercise>
       <exercise permid="sBB">
-        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_120.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentApplicationType2_120.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="onh">
       <title>Percent Increase/Decrease</title>
       <exercise permid="YIK">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease10.pg"/>
       </exercise>
       <exercise permid="EPT">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease10.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease10.pg"/>
       </exercise>
       <exercise permid="kXc">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease30.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease30.pg"/>
       </exercise>
       <exercise permid="Rel">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease30.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease30.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease50.pg" />
@@ -870,28 +870,28 @@ $cost=Currency(4.80);
 <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease50.pg" />
 </exercise> -->
       <exercise permid="xlu">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease70.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease70.pg"/>
       </exercise>
       <exercise permid="dsD">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease70.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease70.pg"/>
       </exercise>
       <exercise permid="JzM">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease110.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease110.pg"/>
       </exercise>
       <exercise permid="pGV">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease110.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease110.pg"/>
       </exercise>
       <exercise permid="VOe">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease95.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease95.pg"/>
       </exercise>
       <exercise permid="BVn">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease95.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease95.pg"/>
       </exercise>
       <exercise permid="icw">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease130.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease130.pg"/>
       </exercise>
       <exercise permid="OjF">
-        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease130.pg" />
+        <webwork source="BasicMath/Percent/MTH20PercentIncreaseDecrease130.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>

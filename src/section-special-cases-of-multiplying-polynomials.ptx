@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -117,7 +117,7 @@
     </p>
     <remark permid="rHz">
       <p permid="veV">
-        Notice that when both <m>(a+b)^2</m> and <m>(a-b)^2</m> are expanded in <xref ref="example-deriving-formulas-for-squaring-binomials">Example</xref>,
+        Notice that when both <m>(a+b)^2</m> and <m>(a-b)^2</m> are expanded in <xref ref="example-deriving-formulas-for-squaring-binomials" />,
         the last term was a <em>positive</em> <m>b^2</m> in both.
         This is because any number or expression,
         regardless of its sign, is positive after it is squared.
@@ -143,7 +143,7 @@
     </example>
     <remark permid="Qkj">
       <p permid="bme">
-        While we rely on the formula for squaring a binomial in <xref ref="example-squaring-binomial-using-formula">Example</xref>,
+        While we rely on the formula for squaring a binomial in <xref ref="example-squaring-binomial-using-formula" />,
         we will often omit the step of formally writing the formula and jump to the simplification,
         in this way:
         <me permid="GnU">
@@ -375,7 +375,7 @@
 <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar130.pg" seed="2"/>
 </exercise>-->
     <list xml:id="list-special-cases-of-multiplication-formulas" permid="UUc">
-      <caption>Special Cases of Multiplication Formulas</caption>
+      <title>Special Cases of Multiplication Formulas</title>
       <idx><h>special cases of multiplication formulas</h></idx>
       <introduction permid="Bbl">
         <p permid="Htn">
@@ -481,28 +481,28 @@
     <exercisegroup cols="4" permid="AMQ">
       <title>Review and Warmup</title>
       <exercise permid="lDS">
-        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication25.pg" />
+        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication25.pg"/>
       </exercise>
       <exercise permid="RLb">
-        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication25.pg" />
+        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication25.pg"/>
       </exercise>
       <exercise permid="xSk">
-        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication23.pg" />
+        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication23.pg"/>
       </exercise>
       <exercise permid="dZt">
-        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication23.pg" />
+        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication23.pg"/>
       </exercise>
       <exercise permid="KgC">
-        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication45.pg" />
+        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication45.pg"/>
       </exercise>
       <exercise permid="qnL">
-        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication45.pg" />
+        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication45.pg"/>
       </exercise>
       <exercise permid="WuU">
-        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication50.pg" />
+        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication50.pg"/>
       </exercise>
       <exercise permid="CCd">
-        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication50.pg" />
+        <webwork source="BasicAlgebra/Exponents/exponentsMultiplication50.pg"/>
       </exercise>
     </exercisegroup>
     <newpage/>
@@ -512,11 +512,11 @@
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->noreduce('(-x)+y','(-x)-y');
-Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-Context()->operators->set(
-'+' => {class => 'bizarro::BOP::add', isCommand => 1},
-'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+Context()-&gt;noreduce('(-x)+y','(-x)-y');
+Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real',z=&gt;'Real',t=&gt;'Real',s=&gt;'Real');
+Context()-&gt;operators-&gt;set(
+'+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
+'-' =&gt; {class =&gt; 'bizarro::BOP::subtract', isCommand =&gt; 1},
 );
 @termcount = (2,2,2,2,2,2,2,2)[NchooseK(8,4)];
 for $i (0..3) {
@@ -530,7 +530,7 @@ do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] !
 push(@vars,$nextvar);
 push(@exps,$nextexp);
 $string = non_zero_random(-9,9,1).$vars[$j-1].'^'.$exps[$j-1];
-$expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
+$expression[$i] = Compute("$expression[$i]+$string")-&gt;reduce-&gt;reduce;
 }
 }
 $exp0=$expression[0];
@@ -538,29 +538,29 @@ $exp1=$expression[1];
 $exp2=$expression[2];
 $exp3=$expression[3];
 for $i (0..3) {
-$answers[$i] = Formula($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'+'.
-$expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'x+'.
-$expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'y+'.
-$expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'z+'.
-$expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'s+'.
-$expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'t+'.
-$expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2x^2+'.
-$expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2y^2+'.
-$expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2z^2+'.
-$expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2s^2+'.
-$expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2t^2')->reduce->reduce;
-$evaluator[$i] = $answers[$i] -> cmp(
-checker=>sub{
+$answers[$i] = Formula($expression[$i]-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'+'.
+$expression[$i]-&gt;D('x')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'x+'.
+$expression[$i]-&gt;D('y')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'y+'.
+$expression[$i]-&gt;D('z')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'z+'.
+$expression[$i]-&gt;D('s')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'s+'.
+$expression[$i]-&gt;D('t')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'t+'.
+$expression[$i]-&gt;D('x')-&gt;D('x')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2x^2+'.
+$expression[$i]-&gt;D('y')-&gt;D('y')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2y^2+'.
+$expression[$i]-&gt;D('z')-&gt;D('z')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2z^2+'.
+$expression[$i]-&gt;D('s')-&gt;D('t')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2s^2+'.
+$expression[$i]-&gt;D('t')-&gt;D('s')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2t^2')-&gt;reduce-&gt;reduce;
+$evaluator[$i] = $answers[$i] -&gt; cmp(
+checker=&gt;sub{
 my ( $correct, $student, $ansHash ) = @_;
-return 0 if $ansHash->{isPreview} || $correct != $student;
-$student = $ansHash->{student_formula};
-$correct = $correct->{original_formula} if defined $correct->{original_formula};
+return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
+$student = $ansHash-&gt;{student_formula};
+$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
 $student = Formula("$student"); $correct = Formula("$correct");
 return 0 unless ($correct == $student);
-Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
-delete $correct->{test_values}, $student->{test_values};
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;1,bizarroSub=&gt;1);
+delete $correct-&gt;{test_values}, $student-&gt;{test_values};
 my $OK = (($correct == $student) or ($student == $correct));
-Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;0,bizarroSub=&gt;0);
 Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
 return $OK;
 });
@@ -578,34 +578,34 @@ return $OK;
                 <ol label="a." permid="gdb">
                   <li permid="mCh">
                     <p permid="pbo">
-                      <m><var name="$exp0" /></m>
+                      <m><var name="$exp0"/></m>
                     </p>
                     <p permid="Vix">
-                      <var name="$evaluator[0]" width="25" />
+                      <var name="$evaluator[0]" width="25"/>
                     </p>
                   </li>
                   <li permid="SJq">
                     <p permid="BpG">
-                      <m><var name="$exp1" /></m>
+                      <m><var name="$exp1"/></m>
                     </p>
                     <p permid="hwP">
-                      <var name="$evaluator[1]" width="25" />
+                      <var name="$evaluator[1]" width="25"/>
                     </p>
                   </li>
                   <li permid="yQz">
                     <p permid="NDY">
-                      <m><var name="$exp2" /></m>
+                      <m><var name="$exp2"/></m>
                     </p>
                     <p permid="tLh">
-                      <var name="$evaluator[2]" width="25" />
+                      <var name="$evaluator[2]" width="25"/>
                     </p>
                   </li>
                   <li permid="eXI">
                     <p permid="ZSq">
-                      <m><var name="$exp3" /></m>
+                      <m><var name="$exp3"/></m>
                     </p>
                     <p permid="FZz">
-                      <var name="$evaluator[3]" width="25" />
+                      <var name="$evaluator[3]" width="25"/>
                     </p>
                   </li>
                 </ol>
@@ -618,11 +618,11 @@ return $OK;
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->noreduce('(-x)+y','(-x)-y');
-Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-Context()->operators->set(
-'+' => {class => 'bizarro::BOP::add', isCommand => 1},
-'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+Context()-&gt;noreduce('(-x)+y','(-x)-y');
+Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real',z=&gt;'Real',t=&gt;'Real',s=&gt;'Real');
+Context()-&gt;operators-&gt;set(
+'+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
+'-' =&gt; {class =&gt; 'bizarro::BOP::subtract', isCommand =&gt; 1},
 );
 @termcount = (2,2,2,2,2,2,2,2)[NchooseK(8,4)];
 for $i (0..3) {
@@ -636,7 +636,7 @@ do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] !
 push(@vars,$nextvar);
 push(@exps,$nextexp);
 $string = non_zero_random(-9,9,1).$vars[$j-1].'^'.$exps[$j-1];
-$expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
+$expression[$i] = Compute("$expression[$i]+$string")-&gt;reduce-&gt;reduce;
 }
 }
 $exp0=$expression[0];
@@ -644,29 +644,29 @@ $exp1=$expression[1];
 $exp2=$expression[2];
 $exp3=$expression[3];
 for $i (0..3) {
-$answers[$i] = Formula($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'+'.
-$expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'x+'.
-$expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'y+'.
-$expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'z+'.
-$expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'s+'.
-$expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'t+'.
-$expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2x^2+'.
-$expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2y^2+'.
-$expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2z^2+'.
-$expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2s^2+'.
-$expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2t^2')->reduce->reduce;
-$evaluator[$i] = $answers[$i] -> cmp(
-checker=>sub{
+$answers[$i] = Formula($expression[$i]-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'+'.
+$expression[$i]-&gt;D('x')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'x+'.
+$expression[$i]-&gt;D('y')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'y+'.
+$expression[$i]-&gt;D('z')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'z+'.
+$expression[$i]-&gt;D('s')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'s+'.
+$expression[$i]-&gt;D('t')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'t+'.
+$expression[$i]-&gt;D('x')-&gt;D('x')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2x^2+'.
+$expression[$i]-&gt;D('y')-&gt;D('y')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2y^2+'.
+$expression[$i]-&gt;D('z')-&gt;D('z')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2z^2+'.
+$expression[$i]-&gt;D('s')-&gt;D('t')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2s^2+'.
+$expression[$i]-&gt;D('t')-&gt;D('s')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2t^2')-&gt;reduce-&gt;reduce;
+$evaluator[$i] = $answers[$i] -&gt; cmp(
+checker=&gt;sub{
 my ( $correct, $student, $ansHash ) = @_;
-return 0 if $ansHash->{isPreview} || $correct != $student;
-$student = $ansHash->{student_formula};
-$correct = $correct->{original_formula} if defined $correct->{original_formula};
+return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
+$student = $ansHash-&gt;{student_formula};
+$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
 $student = Formula("$student"); $correct = Formula("$correct");
 return 0 unless ($correct == $student);
-Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
-delete $correct->{test_values}, $student->{test_values};
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;1,bizarroSub=&gt;1);
+delete $correct-&gt;{test_values}, $student-&gt;{test_values};
 my $OK = (($correct == $student) or ($student == $correct));
-Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;0,bizarroSub=&gt;0);
 Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
 return $OK;
 });
@@ -684,34 +684,34 @@ return $OK;
                 <ol label="a." permid="Mkk">
                   <li permid="LeR">
                     <p permid="mgI">
-                      <m><var name="$exp0" /></m>
+                      <m><var name="$exp0"/></m>
                     </p>
                     <p permid="SnR">
-                      <var name="$evaluator[0]" width="25" />
+                      <var name="$evaluator[0]" width="25"/>
                     </p>
                   </li>
                   <li permid="rma">
                     <p permid="yva">
-                      <m><var name="$exp1" /></m>
+                      <m><var name="$exp1"/></m>
                     </p>
                     <p permid="eCj">
-                      <var name="$evaluator[1]" width="25" />
+                      <var name="$evaluator[1]" width="25"/>
                     </p>
                   </li>
                   <li permid="Xtj">
                     <p permid="KJs">
-                      <m><var name="$exp2" /></m>
+                      <m><var name="$exp2"/></m>
                     </p>
                     <p permid="qQB">
-                      <var name="$evaluator[2]" width="25" />
+                      <var name="$evaluator[2]" width="25"/>
                     </p>
                   </li>
                   <li permid="DAs">
                     <p permid="WXK">
-                      <m><var name="$exp3" /></m>
+                      <m><var name="$exp3"/></m>
                     </p>
                     <p permid="DeT">
-                      <var name="$evaluator[3]" width="25" />
+                      <var name="$evaluator[3]" width="25"/>
                     </p>
                   </li>
                 </ol>
@@ -725,11 +725,11 @@ return $OK;
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->noreduce('(-x)+y','(-x)-y');
-Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-Context()->operators->set(
-'+' => {class => 'bizarro::BOP::add', isCommand => 1},
-'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+Context()-&gt;noreduce('(-x)+y','(-x)-y');
+Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real',z=&gt;'Real',t=&gt;'Real',s=&gt;'Real');
+Context()-&gt;operators-&gt;set(
+'+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
+'-' =&gt; {class =&gt; 'bizarro::BOP::subtract', isCommand =&gt; 1},
 );
 @termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
 for $i (0..3) {
@@ -743,7 +743,7 @@ do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] !
 push(@vars,$nextvar);
 push(@exps,$nextexp);
 $string = non_zero_random(-9,9,1).$vars[$j-1].'^'.$exps[$j-1];
-$expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
+$expression[$i] = Compute("$expression[$i]+$string")-&gt;reduce-&gt;reduce;
 }
 }
 $exp0=$expression[0];
@@ -751,29 +751,29 @@ $exp1=$expression[1];
 $exp2=$expression[2];
 $exp3=$expression[3];
 for $i (0..3) {
-$answers[$i] = Formula($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'+'.
-$expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'x+'.
-$expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'y+'.
-$expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'z+'.
-$expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'s+'.
-$expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'t+'.
-$expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2x^2+'.
-$expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2y^2+'.
-$expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2z^2+'.
-$expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2s^2+'.
-$expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2t^2')->reduce->reduce;
-$evaluator[$i] = $answers[$i] -> cmp(
-checker=>sub{
+$answers[$i] = Formula($expression[$i]-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'+'.
+$expression[$i]-&gt;D('x')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'x+'.
+$expression[$i]-&gt;D('y')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'y+'.
+$expression[$i]-&gt;D('z')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'z+'.
+$expression[$i]-&gt;D('s')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'s+'.
+$expression[$i]-&gt;D('t')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'t+'.
+$expression[$i]-&gt;D('x')-&gt;D('x')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2x^2+'.
+$expression[$i]-&gt;D('y')-&gt;D('y')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2y^2+'.
+$expression[$i]-&gt;D('z')-&gt;D('z')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2z^2+'.
+$expression[$i]-&gt;D('s')-&gt;D('t')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2s^2+'.
+$expression[$i]-&gt;D('t')-&gt;D('s')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2t^2')-&gt;reduce-&gt;reduce;
+$evaluator[$i] = $answers[$i] -&gt; cmp(
+checker=&gt;sub{
 my ( $correct, $student, $ansHash ) = @_;
-return 0 if $ansHash->{isPreview} || $correct != $student;
-$student = $ansHash->{student_formula};
-$correct = $correct->{original_formula} if defined $correct->{original_formula};
+return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
+$student = $ansHash-&gt;{student_formula};
+$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
 $student = Formula("$student"); $correct = Formula("$correct");
 return 0 unless ($correct == $student);
-Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
-delete $correct->{test_values}, $student->{test_values};
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;1,bizarroSub=&gt;1);
+delete $correct-&gt;{test_values}, $student-&gt;{test_values};
 my $OK = (($correct == $student) or ($student == $correct));
-Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;0,bizarroSub=&gt;0);
 Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
 return $OK;
 });
@@ -791,34 +791,34 @@ return $OK;
                 <ol label="a." permid="srt">
                   <li permid="jHB">
                     <p permid="jmc">
-                      <m><var name="$exp0" /></m>
+                      <m><var name="$exp0"/></m>
                     </p>
                     <p permid="Ptl">
-                      <var name="$evaluator[0]" width="25" />
+                      <var name="$evaluator[0]" width="25"/>
                     </p>
                   </li>
                   <li permid="POK">
                     <p permid="vAu">
-                      <m><var name="$exp1" /></m>
+                      <m><var name="$exp1"/></m>
                     </p>
                     <p permid="bHD">
-                      <var name="$evaluator[1]" width="25" />
+                      <var name="$evaluator[1]" width="25"/>
                     </p>
                   </li>
                   <li permid="vVT">
                     <p permid="HOM">
-                      <m><var name="$exp2" /></m>
+                      <m><var name="$exp2"/></m>
                     </p>
                     <p permid="nVV">
-                      <var name="$evaluator[2]" width="25" />
+                      <var name="$evaluator[2]" width="25"/>
                     </p>
                   </li>
                   <li permid="cdc">
                     <p permid="Ude">
-                      <m><var name="$exp3" /></m>
+                      <m><var name="$exp3"/></m>
                     </p>
                     <p permid="Akn">
-                      <var name="$evaluator[3]" width="25" />
+                      <var name="$evaluator[3]" width="25"/>
                     </p>
                   </li>
                 </ol>
@@ -831,11 +831,11 @@ return $OK;
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->noreduce('(-x)+y','(-x)-y');
-Context()->variables->are(x=>'Real',y=>'Real',z=>'Real',t=>'Real',s=>'Real');
-Context()->operators->set(
-'+' => {class => 'bizarro::BOP::add', isCommand => 1},
-'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
+Context()-&gt;noreduce('(-x)+y','(-x)-y');
+Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real',z=&gt;'Real',t=&gt;'Real',s=&gt;'Real');
+Context()-&gt;operators-&gt;set(
+'+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
+'-' =&gt; {class =&gt; 'bizarro::BOP::subtract', isCommand =&gt; 1},
 );
 @termcount = (2,2,2,3,3,3,4,4)[NchooseK(8,4)];
 for $i (0..3) {
@@ -849,7 +849,7 @@ do {$nextexp = list_random(@exps,@exps,@exps,0,1,1,1,2,2);} until ($exps[$j-2] !
 push(@vars,$nextvar);
 push(@exps,$nextexp);
 $string = non_zero_random(-9,9,1).$vars[$j-1].'^'.$exps[$j-1];
-$expression[$i] = Compute("$expression[$i]+$string")->reduce->reduce;
+$expression[$i] = Compute("$expression[$i]+$string")-&gt;reduce-&gt;reduce;
 }
 }
 $exp0=$expression[0];
@@ -857,29 +857,29 @@ $exp1=$expression[1];
 $exp2=$expression[2];
 $exp3=$expression[3];
 for $i (0..3) {
-$answers[$i] = Formula($expression[$i]->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'+'.
-$expression[$i]->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'x+'.
-$expression[$i]->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'y+'.
-$expression[$i]->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'z+'.
-$expression[$i]->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'s+'.
-$expression[$i]->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'t+'.
-$expression[$i]->D('x')->D('x')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2x^2+'.
-$expression[$i]->D('y')->D('y')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2y^2+'.
-$expression[$i]->D('z')->D('z')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2z^2+'.
-$expression[$i]->D('s')->D('t')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2s^2+'.
-$expression[$i]->D('t')->D('s')->eval(x=>0,y=>0,z=>0,t=>0,s=>0).'/2t^2')->reduce->reduce;
-$evaluator[$i] = $answers[$i] -> cmp(
-checker=>sub{
+$answers[$i] = Formula($expression[$i]-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'+'.
+$expression[$i]-&gt;D('x')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'x+'.
+$expression[$i]-&gt;D('y')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'y+'.
+$expression[$i]-&gt;D('z')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'z+'.
+$expression[$i]-&gt;D('s')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'s+'.
+$expression[$i]-&gt;D('t')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'t+'.
+$expression[$i]-&gt;D('x')-&gt;D('x')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2x^2+'.
+$expression[$i]-&gt;D('y')-&gt;D('y')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2y^2+'.
+$expression[$i]-&gt;D('z')-&gt;D('z')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2z^2+'.
+$expression[$i]-&gt;D('s')-&gt;D('t')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2s^2+'.
+$expression[$i]-&gt;D('t')-&gt;D('s')-&gt;eval(x=&gt;0,y=&gt;0,z=&gt;0,t=&gt;0,s=&gt;0).'/2t^2')-&gt;reduce-&gt;reduce;
+$evaluator[$i] = $answers[$i] -&gt; cmp(
+checker=&gt;sub{
 my ( $correct, $student, $ansHash ) = @_;
-return 0 if $ansHash->{isPreview} || $correct != $student;
-$student = $ansHash->{student_formula};
-$correct = $correct->{original_formula} if defined $correct->{original_formula};
+return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
+$student = $ansHash-&gt;{student_formula};
+$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
 $student = Formula("$student"); $correct = Formula("$correct");
 return 0 unless ($correct == $student);
-Context()->flags->set(bizarroAdd=>1,bizarroSub=>1);
-delete $correct->{test_values}, $student->{test_values};
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;1,bizarroSub=&gt;1);
+delete $correct-&gt;{test_values}, $student-&gt;{test_values};
 my $OK = (($correct == $student) or ($student == $correct));
-Context()->flags->set(bizarroAdd=>0,bizarroSub=>0);
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;0,bizarroSub=&gt;0);
 Value::Error("Your answer is not in the expected form. It might not be fully simplified.") unless $OK;
 return $OK;
 });
@@ -897,34 +897,34 @@ return $OK;
                 <ol label="a." permid="YyC">
                   <li permid="Ikl">
                     <p permid="grw">
-                      <m><var name="$exp0" /></m>
+                      <m><var name="$exp0"/></m>
                     </p>
                     <p permid="MyF">
-                      <var name="$evaluator[0]" width="25" />
+                      <var name="$evaluator[0]" width="25"/>
                     </p>
                   </li>
                   <li permid="oru">
                     <p permid="sFO">
-                      <m><var name="$exp1" /></m>
+                      <m><var name="$exp1"/></m>
                     </p>
                     <p permid="YMX">
-                      <var name="$evaluator[1]" width="25" />
+                      <var name="$evaluator[1]" width="25"/>
                     </p>
                   </li>
                   <li permid="UyD">
                     <p permid="EUg">
-                      <m><var name="$exp2" /></m>
+                      <m><var name="$exp2"/></m>
                     </p>
                     <p permid="lbp">
-                      <var name="$evaluator[2]" width="25" />
+                      <var name="$evaluator[2]" width="25"/>
                     </p>
                   </li>
                   <li permid="AFM">
                     <p permid="Riy">
-                      <m><var name="$exp3" /></m>
+                      <m><var name="$exp3"/></m>
                     </p>
                     <p permid="xpH">
-                      <var name="$evaluator[3]" width="25" />
+                      <var name="$evaluator[3]" width="25"/>
                     </p>
                   </li>
                 </ol>
@@ -1075,180 +1075,180 @@ $no=PopUp(['?','True', 'False'],2);
     <exercisegroup cols="3" permid="tir">
       <title>Perfect Square Trinomial Formula</title>
       <exercise permid="TAo">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication190.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication190.pg"/>
       </exercise>
       <exercise permid="zHx">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication190.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication190.pg"/>
       </exercise>
       <exercise permid="fOG">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication195.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication195.pg"/>
       </exercise>
       <exercise permid="LVP">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication195.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication195.pg"/>
       </exercise>
       <exercise permid="scY">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication200.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication200.pg"/>
       </exercise>
       <exercise permid="Ykh">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication200.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication200.pg"/>
       </exercise>
       <exercise permid="Erq">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication205.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication205.pg"/>
       </exercise>
       <exercise permid="kyz">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication205.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication205.pg"/>
       </exercise>
       <exercise permid="QFI">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication210.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication210.pg"/>
       </exercise>
       <exercise permid="wMR">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication210.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication210.pg"/>
       </exercise>
       <exercise permid="cUa">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication215.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication215.pg"/>
       </exercise>
       <exercise permid="Jbj">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication215.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication215.pg"/>
       </exercise>
       <exercise permid="pis">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar100.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar100.pg"/>
       </exercise>
       <exercise permid="VpB">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar100.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar100.pg"/>
       </exercise>
       <exercise permid="BwK">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar105.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar105.pg"/>
       </exercise>
       <exercise permid="hDT">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar105.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar105.pg"/>
       </exercise>
       <exercise permid="NLc">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar110.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar110.pg"/>
       </exercise>
       <exercise permid="tSl">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar110.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar110.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="ZpA">
       <title>Difference of Squares Formula</title>
       <exercise permid="ZZu">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication160.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication160.pg"/>
       </exercise>
       <exercise permid="GgD">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication160.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication160.pg"/>
       </exercise>
       <exercise permid="mnM">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication165.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication165.pg"/>
       </exercise>
       <exercise permid="SuV">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication165.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication165.pg"/>
       </exercise>
       <exercise permid="yCe">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication170.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication170.pg"/>
       </exercise>
       <exercise permid="eJn">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication170.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication170.pg"/>
       </exercise>
       <exercise permid="KQw">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication175.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication175.pg"/>
       </exercise>
       <exercise permid="qXF">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication175.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication175.pg"/>
       </exercise>
       <exercise permid="XeO">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication180.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication180.pg"/>
       </exercise>
       <exercise permid="DlX">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication180.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication180.pg"/>
       </exercise>
       <exercise permid="jtg">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication185.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication185.pg"/>
       </exercise>
       <exercise permid="PAp">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication185.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication185.pg"/>
       </exercise>
       <exercise permid="vHy">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar115.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar115.pg"/>
       </exercise>
       <exercise permid="bOH">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar115.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar115.pg"/>
       </exercise>
       <exercise permid="HVQ">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar120.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar120.pg"/>
       </exercise>
       <exercise permid="ocZ">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar120.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar120.pg"/>
       </exercise>
       <exercise permid="Uki">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication161.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication161.pg"/>
       </exercise>
       <exercise permid="Arr">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication161.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication161.pg"/>
       </exercise>
       <exercise permid="gyA">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication166.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication166.pg"/>
       </exercise>
       <exercise permid="MFJ">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication166.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication166.pg"/>
       </exercise>
       <exercise permid="sMS">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication191.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication191.pg"/>
       </exercise>
       <exercise permid="YUb">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication191.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication191.pg"/>
       </exercise>
       <exercise permid="Fbk">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication196.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication196.pg"/>
       </exercise>
       <exercise permid="lit">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication196.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication196.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2">
       <exercise permid="RpC">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar125.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar125.pg"/>
       </exercise>
       <exercise permid="xwL">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar125.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar125.pg"/>
       </exercise>
       <exercise permid="dDU">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar130.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar130.pg"/>
       </exercise>
       <exercise permid="JLd">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar130.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar130.pg"/>
       </exercise>
       <exercise permid="pSm">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar135.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar135.pg"/>
       </exercise>
       <exercise permid="VZv">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar135.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/polyMultVar135.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="FwJ">
       <title>Binomials Raised to Other Powers</title>
       <exercise permid="CgE">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication230.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication230.pg"/>
       </exercise>
       <exercise permid="inN">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication230.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication230.pg"/>
       </exercise>
       <exercise permid="OuW">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication235.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication235.pg"/>
       </exercise>
       <exercise permid="uCf">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication235.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication235.pg"/>
       </exercise>
       <exercise permid="aJo">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication240.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication240.pg"/>
       </exercise>
       <exercise permid="GQx">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication240.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication240.pg"/>
       </exercise>
       <exercise permid="mXG">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication245.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication245.pg"/>
       </exercise>
       <exercise permid="TeP">
-        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication245.pg" />
+        <webwork source="BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication245.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>

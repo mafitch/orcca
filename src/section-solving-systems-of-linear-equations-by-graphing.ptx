@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -28,11 +28,11 @@
             but Fabiana is running faster.
             We want to determine when Fabiana will catch up with David.
             Let's start by looking at the graph of each runner's distance over time,
-            in <xref ref="figure-solving-systems-by-graphing-intro">Figure</xref>.
+            in <xref ref="figure-solving-systems-by-graphing-intro" />.
           </p>
           <p permid="oFC">
             Each of the two lines has an equation,
-            as discussed in <xref ref="chapter-graphing-lines">Chapter</xref>.
+            as discussed in <xref ref="chapter-graphing-lines" />.
             The line representing David appears to have <m>y</m>-intercept <m>(0,4)</m> and slope <m>\frac{4}{3}</m>,
             so its equation is <m>y=\frac{4}{3}t+4</m>.
             The line representing Fabiana appears to have <m>y</m>-intercept <m>(0,0)</m> and slope <m>2</m>,
@@ -44,7 +44,7 @@
           <image permid="vtd">
             <description>a coordinate plane with a line for David and a line for Fabiana; the horizontal scale is 1 second and the vertical scale is 2 meters; David's line has a y-intercept of (0,4) and Fabiana's line has a y-intercept of (0,0); the lines cross at the point (6,12)</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={$t$, time (in seconds)},
 ylabel={$y$, distance (in meters)},
 xmin=-1,xmax=10,
@@ -54,13 +54,13 @@ minor xtick={1,2,...,9},
 ytick={2,4,...,14},
 minor ytick={2,4,...,14},
 ]
-\addplot[primarycurve,domain = 0:8.25,->]{4/3*x+4} node[pos=0.15,sloped,above] {David};
+\addplot[primarycurve,domain = 0:8.25,-&gt;]{4/3*x+4} node[pos=0.15,sloped,above] {David};
 \addplot[soliddot,color=firstcolor] coordinates {(0,4)};
-\addplot[secondarycurve,domain = 0:7.5,->]{2*x} node[pos=0.2,sloped,above] {Fabiana};
+\addplot[secondarycurve,domain = 0:7.5,-&gt;]{2*x} node[pos=0.2,sloped,above] {Fabiana};
 \addplot[soliddot,color=secondcolor] coordinates {(0,0)};
 \addplot[soliddot,color=thirdcolor] coordinates {(6, 12)} node[pos=0.25,below right] {$(6,12)$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -76,7 +76,7 @@ minor ytick={2,4,...,14},
         not one equation that was somehow algebraically manipulated into an equivalent equation.
       </p>
       <p permid="ATU">
-        As we can see in <xref ref="figure-solving-systems-by-graphing-intro">Figure</xref>,
+        As we can see in <xref ref="figure-solving-systems-by-graphing-intro" />,
         the graphs of the two equations cross at the point <m>(6,12)</m>.
         It's important to check to see if this is correct,
         because when making a hand-drawn graph,
@@ -103,7 +103,7 @@ minor ytick={2,4,...,14},
     <example permid="VDJ">
       <statement>
         <p permid="tpv">
-          Determine the solution to the system of equations graphed in <xref ref="figure-solve-using-graph">Figure</xref>.
+          Determine the solution to the system of equations graphed in <xref ref="figure-solve-using-graph" />.
         </p>
         <sidebyside width="35%">
         <figure xml:id="figure-solve-using-graph" permid="ZwE">
@@ -111,12 +111,12 @@ minor ytick={2,4,...,14},
           <image width="47%" permid="bAm">
             <description>A Cartesian plot with two intersecting lines; One line has a y-intercept of -2 and a slope of -1/4; the other line has a y-intercept of 5 and a slope of 2</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve]expression[domain=-7:7]{-1/3*x-2};
 \addplot[secondarycurve]expression[domain=-6:1]{2*x+5};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -132,7 +132,7 @@ minor ytick={2,4,...,14},
     </example>
     <remark permid="anC">
       <p permid="THs">
-        In <xref ref="example-solving-systems-by-graphing-intro">Example</xref>,
+        In <xref ref="example-solving-systems-by-graphing-intro" />,
         we stated that the solution was the point <m>(6,12)</m>.
         It makes sense to write this as an ordered pair when we're given a graph.
         In some cases when we have no graph,
@@ -151,25 +151,25 @@ minor ytick={2,4,...,14},
           <setup>
 <pg-code>
 $gr = init_graph(-7,-7,7,7,
-axes=>[0,0],
-grid=>[14,14],
-size=>[240,240]);
-$gr->lb('reset');
+axes=&gt;[0,0],
+grid=&gt;[14,14],
+size=&gt;[240,240]);
+$gr-&gt;lb('reset');
 for $j (-6..6) {
-$gr->lb( new Label($j,0,$j,'black','center','top','large'));
+$gr-&gt;lb( new Label($j,0,$j,'black','center','top','large'));
 }
 for $j (-6..6) {
 if (Real($j) == 0) {next;}
-$gr->lb( new Label(0,$j,$j,'black','right','middle','large'));
+$gr-&gt;lb( new Label(0,$j,$j,'black','right','middle','large'));
 }
-$gr->moveTo(3,2);
-$gr->arrowTo(7,6,'blue',1);
-$gr->moveTo(3,2);
-$gr->arrowTo(-6,-7,'blue',1);
-$gr->moveTo(3,2);
-$gr->arrowTo(7,-2,'red',1);
-$gr->moveTo(3,2);
-$gr->arrowTo(-2,7,'red',1);
+$gr-&gt;moveTo(3,2);
+$gr-&gt;arrowTo(7,6,'blue',1);
+$gr-&gt;moveTo(3,2);
+$gr-&gt;arrowTo(-6,-7,'blue',1);
+$gr-&gt;moveTo(3,2);
+$gr-&gt;arrowTo(7,-2,'red',1);
+$gr-&gt;moveTo(3,2);
+$gr-&gt;arrowTo(-2,7,'red',1);
 Context("Point");
 </pg-code>
           </setup>
@@ -178,10 +178,10 @@ Context("Point");
               Determine the solution to the system of equations graphed below.
             </p>
             <sidebyside widths="32%" permid="mBU">
-              <image permid="HHv" pg-name="$gr" />
+              <image permid="HHv" pg-name="$gr"/>
             </sidebyside>
             <p permid="Yrl">
-              The solution is the point <var name="'(3,2)'" width="20" />.
+              The solution is the point <var name="'(3,2)'" width="20"/>.
             </p>
           </statement>
           <solution permid="gMI">
@@ -230,14 +230,14 @@ Context("Point");
           <image permid="jOF">
             <description>A Cartesian grid with two intersecting lines; one line has a y-intercept of 4 and a slope of 1/2; the other line has a y-intercept of -5 and a slope of -1</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve]expression[domain=-7:6]{1/2*x+4} node[pos=0.25,sloped,above] {$y=\frac{1}{2}x+4$};
 \addplot[secondarycurve]expression[domain=-7:2]{-1*x-5} node[pos=0.5,sloped,below] {$y=-x-5$};
 \addplot[soliddot,color=firstcolor] coordinates {(0,4) (2,5) (-2,3) };
 \addplot[soliddot,color=secondcolor] coordinates {(0,-5) (1,-6) (-1,-4)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -314,7 +314,7 @@ Context("Point");
           <image width="47%" permid="nOE">
             <description>a Cartesian plot with two intersecting lines; one line has a y-intercept of 4 and an x-intercept of -12; the other line has a y-intercept of 1 and an x-intercept of 3/2</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xmin=-15,xmax=15,
 ymin=-7,ymax=7,
@@ -329,7 +329,7 @@ minor ytick={-7,-6,...,7},
 \addplot[soliddot,color=secondcolor] coordinates {(1.5,0) (0,1) (6,-3)};
 \addplot[soliddot,color=thirdcolor] coordinates {(-3,3)} node[pos=0.25,above] {$(-3,3)$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -399,7 +399,7 @@ minor ytick={-7,-6,...,7},
           <image width="50%" permid="TVN">
             <description>a coordinate plot with two intersecting lines; the North campus line has a y-intercept of 18 and a slope of -4/5; the South campus line has a y-intercept of 4 and a slope of 3/5</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={$t$, years},
 ylabel={$y$, number of students (in thousands)},
 xmin=-1,xmax=12,
@@ -409,13 +409,13 @@ minor xtick={1,2,...,11},
 ytick={2,4,...,20},
 minor ytick={2,4,...,20},
 ]
-\addplot[primarycurve,domain = 0:12,->]{-4/5*x+18} node[pos=0.25,sloped,above] {North};
+\addplot[primarycurve,domain = 0:12,-&gt;]{-4/5*x+18} node[pos=0.25,sloped,above] {North};
 \addplot[soliddot,color=firstcolor] coordinates {(0,18)};
-\addplot[secondarycurve,domain = 0:12,->]{3/5*x+4} node[pos=0.25,sloped,above] {South};
+\addplot[secondarycurve,domain = 0:12,-&gt;]{3/5*x+4} node[pos=0.25,sloped,above] {South};
 \addplot[soliddot,color=secondcolor] coordinates {(0,4)};
 \addplot[soliddot,color=thirdcolor] coordinates {(10, 10)} node[above] {$(10,10)$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -461,7 +461,7 @@ minor ytick={2,4,...,20},
           <image width="47%" permid="AcW">
             <description>a Cartesian plot with two intersecting lines; one line passes through the point (2,1) with a slope of 3; the other line passes through the point (-1,-1) with a slope of -1/2.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xmin=-7,xmax=7,
 ymin=-7,ymax=7,
@@ -476,7 +476,7 @@ minor ytick={-7,-6,...,7},
 \addplot[soliddot,color=secondcolor] coordinates {(-1,-1)};
 \addplot[soliddot,color=thirdcolor] coordinates {(1,-2)} node[right] {$(1,-2)$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -533,14 +533,14 @@ minor ytick={-7,-6,...,7},
         <image width="50%" permid="gkf">
           <description>a coordinate grid with two parallel lines; one line has a y-intercept of -4 and the other has a y-intercept of 1; they both have a slope of 2</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -1.5:5.5]{2*x-4} node[pos=0.75,sloped,below] {$y=2x-4$};
 \addplot[soliddot,color=firstcolor] coordinates {(0,-4) (1,-2) (2,0)};
 \addplot[secondarycurve,domain = -4:3]{2*x+1} node[pos=0.75,sloped,below] {$y=2x+1$};
 \addplot[soliddot,color=secondcolor] coordinates {(0,1) (1,3) (2,5)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -583,7 +583,7 @@ minor ytick={-7,-6,...,7},
         can either be graphed by solving for <m>y</m> and using the slope-intercept form or by finding the intercepts.
         If we use the intercept method,
         we'll find that this line has an <m>x</m>-intercept of <m>(2,0)</m> and a <m>y</m>-intercept of <m>(0,-4)</m>.
-        When we graph both lines we get <xref ref="figure-coinciding-lines">Figure</xref>.
+        When we graph both lines we get <xref ref="figure-coinciding-lines" />.
       </p>
       <sidebyside widths="45% 32%" margins="10%" valign="bottom" permid="vVG">
         <p permid="Hta">
@@ -603,14 +603,14 @@ minor ytick={-7,-6,...,7},
           <image width="50%" permid="Mro">
             <description>a coordinate plot of two lines that are coinciding; they both have a y-intercept of (0,-4) and a slope of 2</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -1.5:5.5]{2*x-4.1} node[pos=0.75,sloped,below] {$y=2x-4$};
 \addplot[secondarycurve,domain = -1.5:5.5]{2*x-4} node[pos=0.75,sloped,above] {$6x-3y=12$};
 \addplot[soliddot,color=firstcolor] coordinates {(0,-4.1) (1,-2.1) (2,-0.1)};
 \addplot[soliddot,color=secondcolor] coordinates {(0,-4) (2,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -618,7 +618,7 @@ minor ytick={-7,-6,...,7},
     </example>
     <remark permid="jHo">
       <p permid="zOB">
-        In <xref ref="example-solving-systems-by-graphing-equivalent-equations">Example</xref>,
+        In <xref ref="example-solving-systems-by-graphing-equivalent-equations" />,
         what would have happened if we had decided to convert the second line equation into slope-intercept form?
         <md permid="qJk">
           <mrow>6x-3y\amp=12</mrow>
@@ -635,7 +635,7 @@ minor ytick={-7,-6,...,7},
     </remark>
     <warning permid="ITS">
       <p permid="crk">
-        Notice that for a system of equations with infinite solutions like <xref ref="example-solving-systems-by-graphing-equivalent-equations">Example</xref>,
+        Notice that for a system of equations with infinite solutions like <xref ref="example-solving-systems-by-graphing-equivalent-equations" />,
         we didn't say that <em>every</em> point was a solution.
         Rather, every point that falls on that line is a solution.
         It would be incorrect to state this solution set as
@@ -645,7 +645,7 @@ minor ytick={-7,-6,...,7},
       </p>
     </warning>
     <list xml:id="list-summary-of-types-of-systems" permid="POx">
-      <caption>A summary of the three types of systems of equations and their solution sets</caption>
+      <title>A summary of the three types of systems of equations and their solution sets</title>
       <dl permid="pbb">
         <li permid="Vik">
           <title>Intersecting Lines:</title>
@@ -677,28 +677,28 @@ minor ytick={-7,-6,...,7},
     <exercisegroup cols="2" permid="mnz">
       <title>Warmup and Review</title>
       <exercise permid="XeB">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg"/>
       </exercise>
       <exercise permid="DlK">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg"/>
       </exercise>
       <exercise permid="jsT">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg"/>
       </exercise>
       <exercise permid="PAc">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg"/>
       </exercise>
       <exercise permid="vHl">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg"/>
       </exercise>
       <exercise permid="bOu">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg"/>
       </exercise>
       <exercise permid="HVD">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept60.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept60.pg"/>
       </exercise>
       <exercise permid="ocM">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept60.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept60.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="SuI">
@@ -712,14 +712,14 @@ minor ytick={-7,-6,...,7},
           <sidebyside permid="UjV">
             <image permid="syx">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-2.33:2.33] {-3*x};
 \addplot[soliddot] coordinates {(0,0) (1,-3)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -735,14 +735,14 @@ minor ytick={-7,-6,...,7},
           <sidebyside permid="Are">
             <image permid="YFG">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {1/4*x};
 \addplot[soliddot] coordinates {(0,0) (4,1)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -758,14 +758,14 @@ minor ytick={-7,-6,...,7},
           <sidebyside permid="gyn">
             <image permid="EMP">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:4.5] {2/3*x+4};
 \addplot[soliddot] coordinates {(0,4) (3,6)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -781,14 +781,14 @@ minor ytick={-7,-6,...,7},
           <sidebyside permid="MFw">
             <image permid="kTY">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-1:6] {-2*x+5};
 \addplot[soliddot] coordinates {(0,5) (1,3)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -806,21 +806,21 @@ $C = $B*non_zero_random(-19,19,1);
 Context("Fraction");
 $b = Fraction($C,$B);
 $m = Fraction(-$A,$B);
-Context()->flags->set(reduceConstants=>0);
-Context()->variables->are(x=>'Real',y=>'Real');
-Context()->noreduce('(-x)-y');
-parser::Assignment->Allow;
-$left = Formula("$A x+$B y")->reduce;
-$right = Formula("$C")->reduce;
-$answer = Formula("y=$m x + $b")->reduce->reduce;
-$leftsteps[0] = Formula("$left-$A x")->reduce;
-$leftsteps[1] = Formula("$B y")->reduce;
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
+Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
+Context()-&gt;noreduce('(-x)-y');
+parser::Assignment-&gt;Allow;
+$left = Formula("$A x+$B y")-&gt;reduce;
+$right = Formula("$C")-&gt;reduce;
+$answer = Formula("y=$m x + $b")-&gt;reduce-&gt;reduce;
+$leftsteps[0] = Formula("$left-$A x")-&gt;reduce;
+$leftsteps[1] = Formula("$B y")-&gt;reduce;
 $leftsteps[2] = $leftsteps[1]/Formula("$B");
 $leftsteps[3] = Formula("y");
-$rightsteps[0] = Formula("$right-$A x")->reduce;
+$rightsteps[0] = Formula("$right-$A x")-&gt;reduce;
 $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
-$rightsteps[3] = Formula("$m x + $b")->reduce;
+$rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
@@ -837,11 +837,11 @@ $rightsteps[3] = Formula("$m x + $b")->reduce;
             <solution permid="lwB">
               <p permid="lbc">
                 <md permid="WQt">
-                  <mrow><var name="$left" /> \amp = <var name="$right" /></mrow>
-                  <mrow><var name="$leftsteps[0]" /> \amp = <var name="$rightsteps[0]" /></mrow>
-                  <mrow><var name="$leftsteps[1]" /> \amp = <var name="$rightsteps[1]" /></mrow>
-                  <mrow><var name="$leftsteps[2]" /> \amp = <var name="$rightsteps[2]" /></mrow>
-                  <mrow><var name="$leftsteps[3]" /> \amp = <var name="$rightsteps[3]" /></mrow>
+                  <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
+                  <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
+                  <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
+                  <mrow><var name="$leftsteps[2]"/> \amp = <var name="$rightsteps[2]"/></mrow>
+                  <mrow><var name="$leftsteps[3]"/> \amp = <var name="$rightsteps[3]"/></mrow>
                 </md>
               </p>
             </solution>
@@ -857,21 +857,21 @@ $C = $B*non_zero_random(-19,19,1);
 Context("Fraction");
 $b = Fraction($C,$B);
 $m = Fraction(-$A,$B);
-Context()->flags->set(reduceConstants=>0);
-Context()->variables->are(x=>'Real',y=>'Real');
-Context()->noreduce('(-x)-y');
-parser::Assignment->Allow;
-$left = Formula("$A x+$B y")->reduce;
-$right = Formula("$C")->reduce;
-$answer = Formula("y=$m x + $b")->reduce->reduce;
-$leftsteps[0] = Formula("$left-$A x")->reduce;
-$leftsteps[1] = Formula("$B y")->reduce;
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
+Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
+Context()-&gt;noreduce('(-x)-y');
+parser::Assignment-&gt;Allow;
+$left = Formula("$A x+$B y")-&gt;reduce;
+$right = Formula("$C")-&gt;reduce;
+$answer = Formula("y=$m x + $b")-&gt;reduce-&gt;reduce;
+$leftsteps[0] = Formula("$left-$A x")-&gt;reduce;
+$leftsteps[1] = Formula("$B y")-&gt;reduce;
 $leftsteps[2] = $leftsteps[1]/Formula("$B");
 $leftsteps[3] = Formula("y");
-$rightsteps[0] = Formula("$right-$A x")->reduce;
+$rightsteps[0] = Formula("$right-$A x")-&gt;reduce;
 $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
-$rightsteps[3] = Formula("$m x + $b")->reduce;
+$rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
@@ -888,11 +888,11 @@ $rightsteps[3] = Formula("$m x + $b")->reduce;
             <solution permid="RDK">
               <p permid="Ril">
                 <md permid="CXC">
-                  <mrow><var name="$left" /> \amp = <var name="$right" /></mrow>
-                  <mrow><var name="$leftsteps[0]" /> \amp = <var name="$rightsteps[0]" /></mrow>
-                  <mrow><var name="$leftsteps[1]" /> \amp = <var name="$rightsteps[1]" /></mrow>
-                  <mrow><var name="$leftsteps[2]" /> \amp = <var name="$rightsteps[2]" /></mrow>
-                  <mrow><var name="$leftsteps[3]" /> \amp = <var name="$rightsteps[3]" /></mrow>
+                  <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
+                  <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
+                  <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
+                  <mrow><var name="$leftsteps[2]"/> \amp = <var name="$rightsteps[2]"/></mrow>
+                  <mrow><var name="$leftsteps[3]"/> \amp = <var name="$rightsteps[3]"/></mrow>
                 </md>
               </p>
             </solution>
@@ -908,21 +908,21 @@ $C = $B*non_zero_random(-19,19,1);
 Context("Fraction");
 $b = Fraction($C,$B);
 $m = Fraction(-$A,$B);
-Context()->flags->set(reduceConstants=>0);
-Context()->variables->are(x=>'Real',y=>'Real');
-Context()->noreduce('(-x)-y');
-parser::Assignment->Allow;
-$left = Formula("$A x+$B y")->reduce;
-$right = Formula("$C")->reduce;
-$answer = Formula("y=$m x + $b")->reduce->reduce;
-$leftsteps[0] = Formula("$left-$A x")->reduce;
-$leftsteps[1] = Formula("$B y")->reduce;
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
+Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
+Context()-&gt;noreduce('(-x)-y');
+parser::Assignment-&gt;Allow;
+$left = Formula("$A x+$B y")-&gt;reduce;
+$right = Formula("$C")-&gt;reduce;
+$answer = Formula("y=$m x + $b")-&gt;reduce-&gt;reduce;
+$leftsteps[0] = Formula("$left-$A x")-&gt;reduce;
+$leftsteps[1] = Formula("$B y")-&gt;reduce;
 $leftsteps[2] = $leftsteps[1]/Formula("$B");
 $leftsteps[3] = Formula("y");
-$rightsteps[0] = Formula("$right-$A x")->reduce;
+$rightsteps[0] = Formula("$right-$A x")-&gt;reduce;
 $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
-$rightsteps[3] = Formula("$m x + $b")->reduce;
+$rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
@@ -939,11 +939,11 @@ $rightsteps[3] = Formula("$m x + $b")->reduce;
             <solution permid="xKT">
               <p permid="xpu">
                 <md permid="jeL">
-                  <mrow><var name="$left" /> \amp = <var name="$right" /></mrow>
-                  <mrow><var name="$leftsteps[0]" /> \amp = <var name="$rightsteps[0]" /></mrow>
-                  <mrow><var name="$leftsteps[1]" /> \amp = <var name="$rightsteps[1]" /></mrow>
-                  <mrow><var name="$leftsteps[2]" /> \amp = <var name="$rightsteps[2]" /></mrow>
-                  <mrow><var name="$leftsteps[3]" /> \amp = <var name="$rightsteps[3]" /></mrow>
+                  <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
+                  <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
+                  <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
+                  <mrow><var name="$leftsteps[2]"/> \amp = <var name="$rightsteps[2]"/></mrow>
+                  <mrow><var name="$leftsteps[3]"/> \amp = <var name="$rightsteps[3]"/></mrow>
                 </md>
               </p>
             </solution>
@@ -959,21 +959,21 @@ $C = $B*non_zero_random(-19,19,1);
 Context("Fraction");
 $b = Fraction($C,$B);
 $m = Fraction(-$A,$B);
-Context()->flags->set(reduceConstants=>0);
-Context()->variables->are(x=>'Real',y=>'Real');
-Context()->noreduce('(-x)-y');
-parser::Assignment->Allow;
-$left = Formula("$A x+$B y")->reduce;
-$right = Formula("$C")->reduce;
-$answer = Formula("y=$m x + $b")->reduce->reduce;
-$leftsteps[0] = Formula("$left-$A x")->reduce;
-$leftsteps[1] = Formula("$B y")->reduce;
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
+Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
+Context()-&gt;noreduce('(-x)-y');
+parser::Assignment-&gt;Allow;
+$left = Formula("$A x+$B y")-&gt;reduce;
+$right = Formula("$C")-&gt;reduce;
+$answer = Formula("y=$m x + $b")-&gt;reduce-&gt;reduce;
+$leftsteps[0] = Formula("$left-$A x")-&gt;reduce;
+$leftsteps[1] = Formula("$B y")-&gt;reduce;
 $leftsteps[2] = $leftsteps[1]/Formula("$B");
 $leftsteps[3] = Formula("y");
-$rightsteps[0] = Formula("$right-$A x")->reduce;
+$rightsteps[0] = Formula("$right-$A x")-&gt;reduce;
 $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
-$rightsteps[3] = Formula("$m x + $b")->reduce;
+$rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
@@ -990,11 +990,11 @@ $rightsteps[3] = Formula("$m x + $b")->reduce;
             <solution permid="dSc">
               <p permid="dwD">
                 <md permid="PlU">
-                  <mrow><var name="$left" /> \amp = <var name="$right" /></mrow>
-                  <mrow><var name="$leftsteps[0]" /> \amp = <var name="$rightsteps[0]" /></mrow>
-                  <mrow><var name="$leftsteps[1]" /> \amp = <var name="$rightsteps[1]" /></mrow>
-                  <mrow><var name="$leftsteps[2]" /> \amp = <var name="$rightsteps[2]" /></mrow>
-                  <mrow><var name="$leftsteps[3]" /> \amp = <var name="$rightsteps[3]" /></mrow>
+                  <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
+                  <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
+                  <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
+                  <mrow><var name="$leftsteps[2]"/> \amp = <var name="$rightsteps[2]"/></mrow>
+                  <mrow><var name="$leftsteps[3]"/> \amp = <var name="$rightsteps[3]"/></mrow>
                 </md>
               </p>
             </solution>
@@ -1004,22 +1004,22 @@ $rightsteps[3] = Formula("$m x + $b")->reduce;
     <exercisegroup cols="2" permid="eJa">
       <title>Checking Solutions for System of Equations</title>
       <exercise permid="pRZ">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem10.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem10.pg"/>
       </exercise>
       <exercise permid="VZi">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem10.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem10.pg"/>
       </exercise>
       <exercise permid="Cgr">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem20.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem20.pg"/>
       </exercise>
       <exercise permid="inA">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem20.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem20.pg"/>
       </exercise>
       <exercise permid="OuJ">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem30.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem30.pg"/>
       </exercise>
       <exercise permid="uBS">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem30.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem30.pg"/>
       </exercise>
     </exercisegroup>
     <newpage/>
@@ -1042,7 +1042,7 @@ $rightsteps[3] = Formula("$m x + $b")->reduce;
           <sidebyside permid="aJb">
             <image permid="Rbh">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
 ymin=-10,ymax=10,
 xtick={-8,-6,...,8},
@@ -1054,7 +1054,7 @@ minor ytick={-9,-8,...,9},
 \addplot[secondarycurve,domain = -3.8:0.2]{5*x+9} node[pos=0,sloped,above right] {$y=5x+9$};
 \addplot[soliddot,color=thirdcolor] coordinates {(-2,-1)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1077,7 +1077,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="GQk">
             <image permid="xiq">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
 ymin=-12,ymax=8,
 xtick={-8,-6,...,8},
@@ -1089,7 +1089,7 @@ minor ytick={-11,-10,...,7},
 \addplot[secondarycurve,domain = -9.5:0.5]{-2*x-11} node[pos=0.5,sloped,below right] {$y=-2x-11$};
 \addplot[soliddot,color=thirdcolor] coordinates {(-6,1)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1112,7 +1112,7 @@ minor ytick={-11,-10,...,7},
           <sidebyside permid="mXt">
             <image permid="dpz">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
 ymin=-10,ymax=10,
 xtick={-8,-6,...,8},
@@ -1124,7 +1124,7 @@ minor ytick={-9,-8,...,9},
 \addplot[secondarycurve,domain = -6:0.6]{-3*x-8} node[pos=0.25,sloped,above] {$3x+y=-8$};
 \addplot[soliddot,color=thirdcolor] coordinates {(-1,-5)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1147,7 +1147,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="TeC">
             <image permid="JwI">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
 ymin=-10,ymax=10,
 xtick={-8,-6,...,8},
@@ -1159,7 +1159,7 @@ minor ytick={-9,-8,...,9},
 \addplot[secondarycurve,domain = -0.5:4.5]{-4*x+8} node[pos=0.25,sloped,above] {$4x+y=8$};
 \addplot[soliddot,color=thirdcolor] coordinates {(3,-4)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1182,7 +1182,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="zlL">
             <image permid="pDR">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
 ymin=-10,ymax=10,
 xtick={-8,-6,...,8},
@@ -1194,7 +1194,7 @@ minor ytick={-9,-8,...,9},
 \addplot[secondarycurve,domain = -0.6:6]{3*x-8} node[pos=1,sloped,below left] {$3x-y=8$};
 \addplot[soliddot,color=thirdcolor] coordinates {(2,-2)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1217,13 +1217,13 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="fsU">
             <image permid="VLa">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -2.5:4.5]{2*x-2} node[pos=0.25,sloped,above] {$4x-2y=4$};
 \addplot[secondarycurve,domain = -7:7]{-1/2*x+3} node[pos=0.25,sloped,above] {$x+2y=6$};
 \addplot[soliddot,color=thirdcolor] coordinates {(2,2)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1246,13 +1246,13 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="LAd">
             <image permid="BSj">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -0.5:3]{4*x-5} node[pos=1,sloped,below left] {$y=4x-5$};
 \addplot[secondarycurve,domain = -7:7]{-1} node[pos=0.25,sloped,below] {$y=-1$};
 \addplot[soliddot,color=thirdcolor] coordinates {(1,-1)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1275,7 +1275,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="rHm">
             <image permid="hZs">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
 ymin=-10,ymax=10,
 xtick={-8,-6,...,8},
@@ -1287,7 +1287,7 @@ minor ytick={-9,-8,...,9},
 \addplot[secondarycurve,domain = -10:10]{3} node[pos=0.25,sloped,above] {$y=3$};
 \addplot[soliddot,color=thirdcolor] coordinates {(8,3)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1310,13 +1310,13 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="XOv">
             <image permid="OgB">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -7:6]{-x-1} node[pos=0.25,sloped,above] {$x+y=-1$};
 \addplot[secondarycurve] coordinates {(2,-7) (2,7)} node[pos=1,sloped,below left] {$x=2$};
 \addplot[soliddot,color=thirdcolor] coordinates {(2,-3)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1339,13 +1339,13 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="DVE">
             <image permid="unK">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -7:7]{1/2*x+2} node[pos=1,sloped,below left] {$x-2y=-4$};
 \addplot[secondarycurve] coordinates {(-4,-7) (-4,7)} node[pos=0.25,sloped,above] {$x=-4$};
 \addplot[soliddot,color=thirdcolor] coordinates {(-4,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1368,7 +1368,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="kcN">
             <image permid="auT">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain=-4:3]{2*(x+3)-5} node[pos=0.25,sloped,above] {$y=2(x+3)-5$};
 \addplot[soliddot,color=firstcolor] coordinates {(-3,-5)};
@@ -1376,7 +1376,7 @@ minor ytick={-9,-8,...,9},
 \addplot[soliddot,color=secondcolor] coordinates {(4,-1)};
 \addplot[soliddot,color=thirdcolor] coordinates {(1,3)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1399,7 +1399,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="QjW">
             <image permid="GCc">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain=-7:7]{-1/2*(x-1)+2} node[pos=0.3,sloped,above] {$y=-\frac{1}{2}(x-1)+2$};
 \addplot[soliddot,color=firstcolor] coordinates {(1,2)};
@@ -1407,7 +1407,7 @@ minor ytick={-9,-8,...,9},
 \addplot[soliddot,color=secondcolor] coordinates {(6,-2)};
 \addplot[soliddot,color=thirdcolor] coordinates {(-3,4)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1430,7 +1430,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="wrf">
             <image permid="mJl">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain=-1.25:2.25]{4*(x+1)-6} node[pos=0.3,sloped,above] {$y=4(x+1)-6$};
 \addplot[soliddot,color=firstcolor] coordinates {(-1,-6)};
@@ -1438,7 +1438,7 @@ minor ytick={-9,-8,...,9},
 \addplot[soliddot,color=secondcolor] coordinates {(6,4)};
 \addplot[soliddot,color=thirdcolor] coordinates {(2,6)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1461,7 +1461,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="cyo">
             <image permid="SQu">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain=-7:7]{5/6*(x-6)+4} node[pos=0.3,sloped,below] {$y=\frac{5}{6}(x-6)+4$};
 \addplot[soliddot,color=firstcolor] coordinates {(6,4)};
@@ -1469,7 +1469,7 @@ minor ytick={-9,-8,...,9},
 \addplot[soliddot,color=secondcolor] coordinates {(-1,4)};
 \addplot[soliddot,color=thirdcolor] coordinates {(-6,-6)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1492,7 +1492,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="IFx">
             <image permid="yXD">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
 ymin=-10,ymax=10,
 xtick={-8,-6,...,8},
@@ -1503,7 +1503,7 @@ minor ytick={-9,-8,...,9},
 \addplot[primarycurve,domain = -2.5:10]{-4/5*x+8} node[pos=0.5,sloped,above] {$y=-\frac{4}{5}x+8$};
 \addplot[secondarycurve,domain = -10:3.75]{-4/5*x-7} node[pos=0.5,sloped,below] {$4x+5y=-35$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1525,12 +1525,12 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="oMG">
             <image permid="feM">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -7:7]{2/7*x-4} node[pos=1,sloped,below left] {$2x-7y=28$};
 \addplot[secondarycurve,domain = -7:7]{2/7*x-3} node[pos=0.25,sloped,above] {$y=\frac{2}{7}x-3$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1552,12 +1552,12 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="UTP">
             <image permid="LlV">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -7:4.5]{2/3*x+4} node[pos=0.25,sloped,above] {$-10x+15y=60$};
 \addplot[secondarycurve,domain = -4.5:7]{2/3*x-4} node[pos=0.25,sloped,above] {$6x-9y=36$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1579,12 +1579,12 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="BaY">
             <image permid="rte">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -4:7]{3/4*x-4} node[pos=0.25,sloped,above] {$6x-8y=32$};
 \addplot[secondarycurve,domain = -7:7]{3/4*x-1} node[pos=1,sloped,above left] {$9x-12y=12$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1606,7 +1606,7 @@ minor ytick={-9,-8,...,9},
           <sidebyside permid="hih">
             <image permid="XAn">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
 ymin=-10,ymax=10,
 xtick={-8,-6,...,8},
@@ -1616,7 +1616,7 @@ minor ytick={-9,-8,...,9},]
 \addplot[primarycurve,domain = -5:10]{-3/5*x+7} node[pos=0.7,sloped,above] {$y=-\frac{3}{5}x+7$};
 \addplot[secondarycurve,domain = -5:10]{-3/5*x+7.1} node[pos=0.7,sloped,below] {$9x+15y=105$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1642,12 +1642,12 @@ minor ytick={-9,-8,...,9},]
           <sidebyside permid="Npq">
             <image permid="DHw">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain = -6.75:3.75]{4/3*x+2} node[pos=1,sloped,below left] {$9y-12x=18$};
 \addplot[secondarycurve,domain = -6.75:3.75]{4/3*x+2.1} node[pos=0.25,sloped,above] {$y=\frac{4}{3}x+2$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -1665,28 +1665,28 @@ minor ytick={-9,-8,...,9},]
     <exercisegroup cols="2" permid="qXs">
       <title>Determining the Number of Solutions in a System of Equations</title>
       <exercise permid="srg">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem10.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem10.pg"/>
       </exercise>
       <exercise permid="Yyp">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem10.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem10.pg"/>
       </exercise>
       <exercise permid="EFy">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem20.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem20.pg"/>
       </exercise>
       <exercise permid="kMH">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem20.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem20.pg"/>
       </exercise>
       <exercise permid="QTQ">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem30.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem30.pg"/>
       </exercise>
       <exercise permid="xaZ">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem30.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem30.pg"/>
       </exercise>
       <exercise permid="dii">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem40.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem40.pg"/>
       </exercise>
       <exercise permid="Jpr">
-        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem40.pg" />
+        <webwork source="BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem40.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>

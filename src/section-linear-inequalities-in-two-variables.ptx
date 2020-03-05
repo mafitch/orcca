@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -14,7 +14,7 @@
   </p>
   <figure permid="EAl">
     <caption>Alternative Video Lesson</caption>
-    <video youtubelist="PLmuZCPhWPt-dQUZT8clRiiwu0R5usBhru" />
+    <video youtubelist="PLmuZCPhWPt-dQUZT8clRiiwu0R5usBhru"/>
   </figure>
   <example xml:id="example-stapler-marker" permid="NFC">
     <title>Office Supplies</title>
@@ -49,14 +49,14 @@
         <mrow>x\amp=7 \amp y\amp=76</mrow>
       </md>
       So the intercepts are <m>(7,0)</m> and <m>(0,76)</m>,
-      and we can plot the line in <xref ref="figure-staples-markers">Figure</xref>.
+      and we can plot the line in <xref ref="figure-staples-markers" />.
     </p>
     <figure xml:id="figure-staples-markers" permid="IAk">
       <caption><m>19x+1.75y=133</m></caption>
       <image permid="prn">
         <description>a Cartesian graph of a line with an x-intercept of (7,0) and a y-intercept of (0,76); the x-axis represents the number of staplers and the y-axis represents the number of markers</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xlabel={number of staplers}, ylabel={number of markers},
 xmin=-2,xmax=10,ymin=-10,ymax=100,
@@ -67,13 +67,13 @@ xtick={-1,0,...,9},ytick={0,10,...,90}
 \addplot[soliddot] coordinates {(7,0) (0,76) };
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
     <p permid="wlS">
       The points <em>on</em> this line represent ways in which Isabel can spend exactly all of the <m>\$133</m>.
-      But what does a point like <m>(2,40)</m> in <xref ref="figure-staples-markers-inequality-a">Figure</xref>,
+      But what does a point like <m>(2,40)</m> in <xref ref="figure-staples-markers-inequality-a" />,
       which is not on the line, mean in this context?
       That would mean Isabel bought <m>2</m> staplers and <m>40</m> markers,
       spending <m>19\cdot2+1.75\cdot40=108</m> dollars.
@@ -81,11 +81,11 @@ xtick={-1,0,...,9},ytick={0,10,...,90}
     </p>
     <p permid="ctb">
       In fact, any point on the lower left side of this line represents a total purchase within Isabel's budget.
-      The shading in <xref ref="figure-staples-markers-inequality-b">Figure</xref> captures <em>all</em>
+      The shading in <xref ref="figure-staples-markers-inequality-b" /> captures <em>all</em>
       solutions to <m>19x+1.75y\leq133</m>.
       Some of those solutions have negative <m>x</m>- and <m>y</m>-values,
       which make no sense in context.
-      So in <xref ref="figure-staples-markers-inequality-c">Figure</xref>,
+      So in <xref ref="figure-staples-markers-inequality-c" />,
       we restrict the shading to solutions which make physical sense.
     </p>
     <sidebyside widths="31% 31% 31%" margins="0%" permid="mim">
@@ -94,7 +94,7 @@ xtick={-1,0,...,9},ytick={0,10,...,90}
         <image permid="Vyw">
           <description>the previous graph of the line 19x+1.75y=133 with the point (2,40) added; the point is below the line indicating it is within his budget</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xlabel={number of staplers}, ylabel={number of markers},
 xmin=-2,xmax=10,ymin=-10,ymax=100,
@@ -105,7 +105,7 @@ xtick={-1,0,...,9},ytick={0,10,...,90}
 \addplot[soliddot] coordinates {(2,40)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -114,7 +114,7 @@ xtick={-1,0,...,9},ytick={0,10,...,90}
         <image permid="BFF">
           <description>the previous graph of the line 19x+1.75y=133 with all of the points below the line shaded; these are solutions to the inequality</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xlabel={number of staplers}, ylabel={number of markers},
 xmin=-2,xmax=10,ymin=-10,ymax=100,
@@ -127,7 +127,7 @@ xtick={-1,0,...,9},ytick={0,10,...,90}
 fill between[of=f and bottom];
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -136,7 +136,7 @@ fill between[of=f and bottom];
         <image permid="hMO">
           <description>the previous graph of the line line 19x+1.75y=133 with only the points in the first quadrant that are below the line shaded</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xlabel={number of staplers}, ylabel={number of markers},
 xmin=-2,xmax=10,ymin=-10,ymax=100,
@@ -150,7 +150,7 @@ xtick={-1,0,...,9},ytick={0,10,...,90}
 fill between[of=f and bottom];
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -216,12 +216,12 @@ fill between[of=f and bottom];
           <image permid="NTX">
             <description>A coordinate plane with y=2x+1 graphed as a dashed line.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[dashed,domain=-4:3] {2*x+1};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -230,14 +230,14 @@ fill between[of=f and bottom];
           <image permid="ubg">
             <description>A coordinate plane with y=2x+1 graphed as a dashed line and the region above the line is shaded.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[dashed,domain=-4:3] {2*x+1};
 \addplot[white,fill=firstcolor,fill opacity=0.2]
 coordinates{(4,9) (-8,9) (-8,-9) (-5,-9)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -279,12 +279,12 @@ coordinates{(4,9) (-8,9) (-8,-9) (-5,-9)};
           <image permid="aip">
             <description>A coordinate plane with y=-5/3x+2 graphed as a solid line.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3:5.4] {-5/3*x+2};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -293,14 +293,14 @@ coordinates{(4,9) (-8,9) (-8,-9) (-5,-9)};
           <image permid="Gpy">
             <description>A coordinate plane with y=-5/3x+2 graphed as a solid line; the region below the line is shaded.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3:5.4] {-5/3*x+2};
 \addplot[white,fill=firstcolor,fill opacity=0.2]
 coordinates{(-6,12) (-8,12) (-8,-8) (6,-8)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -334,28 +334,28 @@ coordinates{(-6,12) (-8,12) (-8,-8) (6,-8)};
     <exercisegroup cols="2" permid="Frj">
       <title>Review and Warmup</title>
       <exercise permid="xMK">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg"/>
       </exercise>
       <exercise permid="dTT">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg"/>
       </exercise>
       <exercise permid="Kbc">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept20.pg"/>
       </exercise>
       <exercise permid="qil">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept20.pg"/>
       </exercise>
       <exercise permid="Wpu">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg"/>
       </exercise>
       <exercise permid="CwD">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg"/>
       </exercise>
       <exercise permid="iDM">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg"/>
       </exercise>
       <exercise permid="OKV">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg"/>
       </exercise>
 <!--TODO: Alex: add 2-4 exercises from section-isolating-a-linear-variable.ptx that involve solving 2x+3y=6 for y-->
     </exercisegroup>
@@ -371,7 +371,7 @@ coordinates{(-6,12) (-8,12) (-8,-8) (6,-8)};
           <sidebyside permid="uSe">
             <image permid="mwH">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-1.75:1.75] {-4*x};
@@ -379,7 +379,7 @@ coordinates{(-6,12) (-8,12) (-8,-8) (6,-8)};
 coordinates{(-4,16) (8,16) (8,-16) (4,-16)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -395,7 +395,7 @@ coordinates{(-4,16) (8,16) (8,-16) (4,-16)};
           <sidebyside permid="aZn">
             <image permid="SDQ">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {-1/2*x-3};
@@ -403,7 +403,7 @@ coordinates{(-4,16) (8,16) (8,-16) (4,-16)};
 coordinates{(-8,1) (-8,-8) (8,-8) (8,-7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -419,7 +419,7 @@ coordinates{(-8,1) (-8,-8) (8,-8) (8,-7)};
           <sidebyside permid="Hgw">
             <image permid="yKZ">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[dashed,domain=-4:0.667] {3*x+5};
@@ -427,7 +427,7 @@ coordinates{(-8,1) (-8,-8) (8,-8) (8,-7)};
 coordinates{(-6,-13) (8,-13) (8,17) (4,17)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -443,7 +443,7 @@ coordinates{(-6,-13) (8,-13) (8,17) (4,17)};
           <sidebyside permid="nnF">
             <image permid="eSi">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[dashed,domain=-6:4.5] {4/3*x+1};
@@ -451,7 +451,7 @@ coordinates{(-6,-13) (8,-13) (8,17) (4,17)};
 coordinates{(-9,-11) (-9,13) (9,13)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -467,7 +467,7 @@ coordinates{(-9,-11) (-9,13) (9,13)};
           <sidebyside permid="TuO">
             <image permid="KZr">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-2:5] {-2*x+3};
@@ -475,7 +475,7 @@ coordinates{(-9,-11) (-9,13) (9,13)};
 coordinates{(-3,9) (8,9) (8,-13)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -491,7 +491,7 @@ coordinates{(-3,9) (8,9) (8,-13)};
           <sidebyside permid="zBX">
             <image permid="rgA">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[dashed,domain=-6.667:2.667] {-3/2*x-3};
@@ -499,7 +499,7 @@ coordinates{(-3,9) (8,9) (8,-13)};
 coordinates{(-8,9) (-8,-11) (8,-15) };
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -515,7 +515,7 @@ coordinates{(-8,9) (-8,-11) (8,-15) };
           <sidebyside permid="fJg">
             <image permid="XnJ">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {3};
@@ -523,7 +523,7 @@ coordinates{(-8,9) (-8,-11) (8,-15) };
 coordinates{(-8,3) (-8,8) (8,8) (8,3)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -539,7 +539,7 @@ coordinates{(-8,3) (-8,8) (8,8) (8,3)};
           <sidebyside permid="LQp">
             <image permid="DuS">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot[firstcolor,dashed,line width=1pt, {Kite}-{Kite}] coordinates{(-1,-7) (-1,7)};
@@ -547,7 +547,7 @@ coordinates{(-8,3) (-8,8) (8,8) (8,3)};
 coordinates{(-1,8) (-8,8) (-8,-8) (-1,-8)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -597,7 +597,7 @@ coordinates{(-1,8) (-8,8) (-8,-8) (-1,-8)};
                 </p>
                 <sidebyside permid="pcS">
                   <image permid="jCb">
-                     <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ xlabel={$q$}, ylabel={$d$}, xmin=-20,xmax=140,ymin=-50,ymax=350, minor xtick={0,10,...,120}, minor ytick={0,25,...,300}, xtick={0,20,...,120},ytick={0,50,...,300} ] \addplot+[ domain = 0:120, -, smooth, dashed, color = firstcolor, ]{10*(30-0.25*x)}; \addplot[fill=firstcolor,fill opacity=0.2] coordinates{(0,300) (0,0) (120,0)}; \end{axis} \end{tikzpicture} ]]> </latex-image>
+                     <latex-image> \begin{tikzpicture} \begin{axis}[ xlabel={$q$}, ylabel={$d$}, xmin=-20,xmax=140,ymin=-50,ymax=350, minor xtick={0,10,...,120}, minor ytick={0,25,...,300}, xtick={0,20,...,120},ytick={0,50,...,300} ] \addplot+[ domain = 0:120, -, smooth, dashed, color = firstcolor, ]{10*(30-0.25*x)}; \addplot[fill=firstcolor,fill opacity=0.2] coordinates{(0,300) (0,0) (120,0)}; \end{axis} \end{tikzpicture}  </latex-image>
                   </image>
                 </sidebyside>
               </li>
@@ -645,7 +645,7 @@ coordinates{(-1,8) (-8,8) (-8,-8) (-1,-8)};
                 </p>
                 <sidebyside permid="Vkb">
                   <image permid="PJk">
-                     <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ xlabel={$r$ (in dollars)}, ylabel={$c$ (in dollars)}, xmin=-500,xmax=8500,ymin=-500,ymax=8500, minor xtick={0,500,...,8500}, minor ytick={0,500,...,8500}, xtick={0,2000,...,8000},ytick={0,2000,...,8000} ] \addplot+[ domain = 0:8000, -, smooth, color = firstcolor, ]{8000-x}; \addplot[fill=firstcolor,fill opacity=0.2] coordinates{(0,8000) (0,0) (8000,0)}; \addplot[soliddot] coordinates {(0,8000) (8000,0)}; \end{axis} \end{tikzpicture} ]]> </latex-image>
+                     <latex-image> \begin{tikzpicture} \begin{axis}[ xlabel={$r$ (in dollars)}, ylabel={$c$ (in dollars)}, xmin=-500,xmax=8500,ymin=-500,ymax=8500, minor xtick={0,500,...,8500}, minor ytick={0,500,...,8500}, xtick={0,2000,...,8000},ytick={0,2000,...,8000} ] \addplot+[ domain = 0:8000, -, smooth, color = firstcolor, ]{8000-x}; \addplot[fill=firstcolor,fill opacity=0.2] coordinates{(0,8000) (0,0) (8000,0)}; \addplot[soliddot] coordinates {(0,8000) (8000,0)}; \end{axis} \end{tikzpicture}  </latex-image>
                   </image>
                 </sidebyside>
               </li>

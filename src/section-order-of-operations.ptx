@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -82,7 +82,7 @@
         <image permid="LaE">
           <description>two squares, side by side; each square is labeled as 3 yd wide and 3 yd high, and labeled as having area 9 yd^2</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \draw[black,fill=green!70!black] (0,3) -- (0,0) -- (6,0) -- (6,3) -- cycle; %top
 \draw[red,dashed] (3,0) -- (3,3) ; %top
 \node at (1.5,1.5) {$9$ yd$^2$};
@@ -91,7 +91,7 @@
 \node[below] at (4.5,0) {$3$ yd};
 \node[right] at (6,1.5) {$3$ yd};
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -103,7 +103,7 @@
         <image permid="rhN">
           <description>a square whose width is labeled as 2*3 yd = 6 yd wide and whose hight is also 6 yd; the square's area is labeled as being area 36 yd^2</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \draw[fill=green!70!black] (0,6) -- (0,0) -- (6,0) -- (6,6) -- cycle; %top
 \draw[red,dashed] (3,0) -- (3,0.5) ; %top
 \draw[red,dashed] (5.5,3) -- (6,3) ; %top
@@ -111,7 +111,7 @@
 \node [below] at (3,0) {$2\cdot3\text{ yd }=6$ yd};
 \node [right] at (6,3) {$6$ yd};
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -183,7 +183,7 @@ Context("LimitedNumeric");
       is nothing more than an agreement that we all have made to prioritize the arithmetic operations in a certain order.
     </p>
     <list xml:id="list-order-of-operations" permid="ThG">
-      <caption>Order of Operations</caption>
+      <title>Order of Operations</title>
       <dl permid="jay">
         <li permid="Inc">
           <title>(P)arentheses and other grouping symbols</title>
@@ -335,7 +335,7 @@ Context("LimitedNumeric");
         We can use the symbols <m>\cdot</m>,
         <m>\times</m>, and <m>*</m> to denote multiplication.
         We can also use parentheses to denote multiplication,
-        as we've seen in <xref ref="example-order-of-operations">Example</xref>,
+        as we've seen in <xref ref="example-order-of-operations" />,
         <xref ref="item-parenthetical-multiplication">Item</xref>.
         Once we start working with variables,
         there is even another way.
@@ -348,63 +348,63 @@ Context("LimitedNumeric");
       <webwork>
           <setup>
 <pg-code>
-Context()->operators->set(
-'+' => {class => 'bizarro::BOP::add', isCommand => 1},
-'-' => {class => 'bizarro::BOP::subtract', isCommand => 1},
-'*' => {class => 'bizarro::BOP::multiply', isCommand => 1},
-' *' => {class => 'bizarro::BOP::multiply', isCommand => 1},
-'* ' => {class => 'bizarro::BOP::multiply', isCommand => 1},
-'/' => {class => 'bizarro::BOP::divide', isCommand => 1},
-' /' => {class => 'bizarro::BOP::divide', isCommand => 1},
-'/ ' => {class => 'bizarro::BOP::divide', isCommand => 1},
-'//' => {class => 'bizarro::BOP::divide', isCommand => 1},
-'**' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
-'^' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+Context()-&gt;operators-&gt;set(
+'+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
+'-' =&gt; {class =&gt; 'bizarro::BOP::subtract', isCommand =&gt; 1},
+'*' =&gt; {class =&gt; 'bizarro::BOP::multiply', isCommand =&gt; 1},
+' *' =&gt; {class =&gt; 'bizarro::BOP::multiply', isCommand =&gt; 1},
+'* ' =&gt; {class =&gt; 'bizarro::BOP::multiply', isCommand =&gt; 1},
+'/' =&gt; {class =&gt; 'bizarro::BOP::divide', isCommand =&gt; 1},
+' /' =&gt; {class =&gt; 'bizarro::BOP::divide', isCommand =&gt; 1},
+'/ ' =&gt; {class =&gt; 'bizarro::BOP::divide', isCommand =&gt; 1},
+'//' =&gt; {class =&gt; 'bizarro::BOP::divide', isCommand =&gt; 1},
+'**' =&gt; {class =&gt; 'bizarro::BOP::power', isCommand =&gt; 1, perl=&gt;undef},
+'^' =&gt; {class =&gt; 'bizarro::BOP::power', isCommand =&gt; 1, perl=&gt;undef},
 );
-Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,reduceConstantFunctions=&gt;0);
 $step[0]=Formula("5-3(3)^2");
 $step[1]=Formula("5-3(9)");
 $step[2]=Formula("5-27");
 $msg = "Just apply one step at a time from the order of operations";
-$ev[0]=$step[0]->cmp(checker=>sub{
+$ev[0]=$step[0]-&gt;cmp(checker=&gt;sub{
 my ( $correct, $student, $ansHash ) = @_;
-return 0 if $ansHash->{isPreview} || $correct != $student;
-$student = $ansHash->{student_formula};
-$correct = $correct->{original_formula} if defined $correct->{original_formula};
+return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
+$student = $ansHash-&gt;{student_formula};
+$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
 $student = Formula("$student"); $correct = Formula("$correct");
 return 0 unless ($correct == $student);
-Context()->flags->set(bizarroSub=>1,bizarroPow=>1);
-delete $correct->{test_values}, $student->{test_values};
+Context()-&gt;flags-&gt;set(bizarroSub=&gt;1,bizarroPow=&gt;1);
+delete $correct-&gt;{test_values}, $student-&gt;{test_values};
 my $OK = (($correct == $student) or ($student == $correct));
-Context()->flags->set(bizarroSub=>0,bizarroPow=>0);
+Context()-&gt;flags-&gt;set(bizarroSub=&gt;0,bizarroPow=&gt;0);
 Value::Error("$msg") unless $OK;
 return $OK;
 });
-$ev[1]=$step[1]->cmp(checker=>sub{
+$ev[1]=$step[1]-&gt;cmp(checker=&gt;sub{
 my ( $correct, $student, $ansHash ) = @_;
-return 0 if $ansHash->{isPreview} || $correct != $student;
-$student = $ansHash->{student_formula};
-$correct = $correct->{original_formula} if defined $correct->{original_formula};
+return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
+$student = $ansHash-&gt;{student_formula};
+$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
 $student = Formula("$student"); $correct = Formula("$correct");
 return 0 unless ($correct == $student);
-Context()->flags->set(bizarroMul=>1,bizarroPow=>1);
-delete $correct->{test_values}, $student->{test_values};
+Context()-&gt;flags-&gt;set(bizarroMul=&gt;1,bizarroPow=&gt;1);
+delete $correct-&gt;{test_values}, $student-&gt;{test_values};
 my $OK = (($correct == $student) or ($student == $correct));
-Context()->flags->set(bizarroMul=>0,bizarroPow=>0);
+Context()-&gt;flags-&gt;set(bizarroMul=&gt;0,bizarroPow=&gt;0);
 Value::Error("$msg") unless $OK;
 return $OK;
 });
-$ev[2]=$step[2]->cmp(checker=>sub{
+$ev[2]=$step[2]-&gt;cmp(checker=&gt;sub{
 my ( $correct, $student, $ansHash ) = @_;
-return 0 if $ansHash->{isPreview} || $correct != $student;
-$student = $ansHash->{student_formula};
-$correct = $correct->{original_formula} if defined $correct->{original_formula};
+return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
+$student = $ansHash-&gt;{student_formula};
+$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
 $student = Formula("$student"); $correct = Formula("$correct");
 return 0 unless ($correct == $student);
-Context()->flags->set(bizarroMul=>1,bizarroSub=>1);
-delete $correct->{test_values}, $student->{test_values};
+Context()-&gt;flags-&gt;set(bizarroMul=&gt;1,bizarroSub=&gt;1);
+delete $correct-&gt;{test_values}, $student-&gt;{test_values};
 my $OK = (($correct == $student) or ($student == $correct));
-Context()->flags->set(bizarroMul=>0,bizarroSub=>0);
+Context()-&gt;flags-&gt;set(bizarroMul=&gt;0,bizarroSub=&gt;0);
 Value::Error("$msg") unless $OK;
 return $OK;
 });
@@ -418,16 +418,16 @@ $step[3]=Formula("-22");
               using the order of operations.
             </p>
             <p permid="mTt">
-              <m>5-3(7-4)^2={}</m><var name="$step[0]" evaluator="$ev[0]" width="15" />
+              <m>5-3(7-4)^2={}</m><var name="$step[0]" evaluator="$ev[0]" width="15"/>
             </p>
             <p permid="TaC">
-              <m>\phantom{5-3(7-4)^2}={}</m><var name="$step[1]" evaluator="$ev[1]" width="15" />
+              <m>\phantom{5-3(7-4)^2}={}</m><var name="$step[1]" evaluator="$ev[1]" width="15"/>
             </p>
             <p permid="zhL">
-              <m>\phantom{5-3(7-4)^2}={}</m><var name="$step[2]" evaluator="$ev[2]" width="15" />
+              <m>\phantom{5-3(7-4)^2}={}</m><var name="$step[2]" evaluator="$ev[2]" width="15"/>
             </p>
             <p permid="foU">
-              <m>\phantom{5-3(7-4)^2}={}</m><var name="$step[3]" width="15" />
+              <m>\phantom{5-3(7-4)^2}={}</m><var name="$step[3]" width="15"/>
             </p>
           </statement>
           <solution permid="hll">
@@ -670,18 +670,18 @@ Context("LimitedNumeric");
               <ol label="a." permid="voQ">
                 <li permid="BNW">
                   <p permid="rYL">
-                    <m>-3^4=</m><var name="-81" width="10" /> and <m>(-3)^4=</m><var name="81" width="10" />
+                    <m>-3^4=</m><var name="-81" width="10"/> and <m>(-3)^4=</m><var name="81" width="10"/>
                   </p>
                 </li>
                 <li permid="hVf">
                   <p permid="YfU">
-                    <m>-4^3=</m><var name="-64" width="10" /> and <m>(-4)^3=</m><var name="-64" width="10" />
+                    <m>-4^3=</m><var name="-64" width="10"/> and <m>(-4)^3=</m><var name="-64" width="10"/>
                   </p>
                 </li>
                 <li permid="Oco">
                   <p permid="End">
-                    <m>-1.1^2=</m><var name="-1.21" width="10" /> and
-                    <m>(-1.1)^2=</m><var name="1.21" width="10" />
+                    <m>-1.1^2=</m><var name="-1.21" width="10"/> and
+                    <m>(-1.1)^2=</m><var name="1.21" width="10"/>
                   </p>
                 </li>
               </ol>
@@ -725,7 +725,7 @@ Context("LimitedNumeric");
       </p>
     </remark>
     <p permid="TKw">
-      As was discussed in <xref ref="subsection-powers">Subsection</xref>,
+      As was discussed in <xref ref="subsection-powers" />,
       if the base of a power is negative,
       then whether or not the result is positive or negative depends on if the exponent is even or odd.
       It depends on whether or not the factors can all be paired up to
@@ -772,7 +772,7 @@ Context("LimitedNumeric");
               Simplify <m>24\div(15\div 3+1)+2</m>.
             </p>
             <p permid="jYN">
-              <var name="6" width="10" />
+              <var name="6" width="10"/>
             </p>
           </statement>
           <solution permid="ZGM">
@@ -831,7 +831,7 @@ $ans=Fraction(-1,2);
               Simplify <m>(20-4^2)\div(4-6)^3</m>.
             </p>
             <p permid="wnf">
-              <var name="$ans" width="10" />
+              <var name="$ans" width="10"/>
             </p>
           </statement>
           <solution permid="FNV">
@@ -860,7 +860,7 @@ $ans=Fraction(-1,2);
               Simplify <m>\dfrac{2\abs{9-15}+1}{\sqrt{(-5)^2+12^2}}</m>.
             </p>
             <p permid="IBx">
-              <var name="1" width="10" />
+              <var name="1" width="10"/>
             </p>
           </statement>
           <solution permid="lVe">
@@ -888,16 +888,16 @@ $ans=Fraction(-1,2);
     <exercisegroup cols="2" permid="RdY">
       <title>Review and Warmup</title>
       <exercise permid="Jzz">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/MultiplyWithNegativeIntegers10.pg"  />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/MultiplyWithNegativeIntegers10.pg"/>
       </exercise>
       <exercise permid="pGI">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/MultiplyWithNegativeIntegers10.pg"  />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/MultiplyWithNegativeIntegers10.pg"/>
       </exercise>
       <exercise permid="VNR">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/MultiplyWithNegativeIntegers20.pg"  />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/MultiplyWithNegativeIntegers20.pg"/>
       </exercise>
       <exercise permid="BVa">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/MultiplyWithNegativeIntegers20.pg"  />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/MultiplyWithNegativeIntegers20.pg"/>
       </exercise>
 <!-- The following two exercises need solutions -->
       <exercise permid="icj">
@@ -921,34 +921,34 @@ $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
                 <ol label="a." permid="bvZ">
                   <li permid="mEY">
                     <p permid="cPN">
-                      Compute <m><var name="$exp[0]" /></m>.
+                      Compute <m><var name="$exp[0]"/></m>.
                     </p>
                     <p permid="IWW">
-                      <var name="$ans[0]" width="10" />
+                      <var name="$ans[0]" width="10"/>
                     </p>
                   </li>
                   <li permid="SMh">
                     <p permid="pef">
-                      Calculate the power <m><var name="$exp[1]" /></m>.
+                      Calculate the power <m><var name="$exp[1]"/></m>.
                     </p>
                     <p permid="Vlo">
-                      <var name="$ans[1]" width="10" />
+                      <var name="$ans[1]" width="10"/>
                     </p>
                   </li>
                   <li permid="yTq">
                     <p permid="Bsx">
-                      Find <m><var name="$exp[2]" /></m>.
+                      Find <m><var name="$exp[2]"/></m>.
                     </p>
                     <p permid="hzG">
-                      <var name="$ans[2]" width="10" />
+                      <var name="$ans[2]" width="10"/>
                     </p>
                   </li>
                   <li permid="faz">
                     <p permid="NGP">
-                      Calculate <m><var name="$exp[3]" /></m>.
+                      Calculate <m><var name="$exp[3]"/></m>.
                     </p>
                     <p permid="tNY">
-                      <var name="$ans[3]" width="10" />
+                      <var name="$ans[3]" width="10"/>
                     </p>
                   </li>
                 </ol>
@@ -977,34 +977,34 @@ $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
                 <ol label="a." permid="HDi">
                   <li permid="LhI">
                     <p permid="ZVh">
-                      Compute <m><var name="$exp[0]" /></m>.
+                      Compute <m><var name="$exp[0]"/></m>.
                     </p>
                     <p permid="Gcq">
-                      <var name="$ans[0]" width="10" />
+                      <var name="$ans[0]" width="10"/>
                     </p>
                   </li>
                   <li permid="roR">
                     <p permid="mjz">
-                      Calculate the power <m><var name="$exp[1]" /></m>.
+                      Calculate the power <m><var name="$exp[1]"/></m>.
                     </p>
                     <p permid="SqI">
-                      <var name="$ans[1]" width="10" />
+                      <var name="$ans[1]" width="10"/>
                     </p>
                   </li>
                   <li permid="Xwa">
                     <p permid="yxR">
-                      Find <m><var name="$exp[2]" /></m>.
+                      Find <m><var name="$exp[2]"/></m>.
                     </p>
                     <p permid="eFa">
-                      <var name="$ans[2]" width="10" />
+                      <var name="$ans[2]" width="10"/>
                     </p>
                   </li>
                   <li permid="DDj">
                     <p permid="KMj">
-                      Calculate <m><var name="$exp[3]" /></m>.
+                      Calculate <m><var name="$exp[3]"/></m>.
                     </p>
                     <p permid="qTs">
-                      <var name="$ans[3]" width="10" />
+                      <var name="$ans[3]" width="10"/>
                     </p>
                   </li>
                 </ol>
@@ -1028,16 +1028,16 @@ $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
 <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations22.pg" />
 </exercise> -->
       <exercise permid="uqB">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations23.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations23.pg"/>
       </exercise>
       <exercise permid="axK">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations23.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations23.pg"/>
       </exercise>
       <exercise permid="GET">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations24.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations24.pg"/>
       </exercise>
       <exercise permid="mMc">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations24.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations24.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations25.pg" />
@@ -1046,40 +1046,40 @@ $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
 <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations25.pg" />
 </exercise> -->
       <exercise permid="STl">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations26.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations26.pg"/>
       </exercise>
       <exercise permid="zau">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations26.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations26.pg"/>
       </exercise>
       <exercise permid="fhD">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations27.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations27.pg"/>
       </exercise>
       <exercise permid="LoM">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations27.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations27.pg"/>
       </exercise>
       <exercise permid="rvV">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations28.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations28.pg"/>
       </exercise>
       <exercise permid="XDe">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations28.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations28.pg"/>
       </exercise>
       <exercise permid="DKn">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations29.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations29.pg"/>
       </exercise>
       <exercise permid="jRw">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations29.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations29.pg"/>
       </exercise>
       <exercise permid="PYF">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations30.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations30.pg"/>
       </exercise>
       <exercise permid="wfO">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations30.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations30.pg"/>
       </exercise>
       <exercise permid="cmX">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations40.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations40.pg"/>
       </exercise>
       <exercise permid="Iug">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations40.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations40.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations46.pg" />
@@ -1095,194 +1095,194 @@ $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
 </exercise>
 -->
       <exercise permid="oBp">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations50.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations50.pg"/>
       </exercise>
       <exercise permid="UIy">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations50.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations50.pg"/>
       </exercise>
       <exercise permid="APH">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations51.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations51.pg"/>
       </exercise>
       <exercise permid="gWQ">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations51.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations51.pg"/>
       </exercise>
       <exercise permid="NdZ">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations52.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations52.pg"/>
       </exercise>
       <exercise permid="tli">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations52.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations52.pg"/>
       </exercise>
       <exercise permid="Zsr">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations53.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations53.pg"/>
       </exercise>
       <exercise permid="FzA">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations53.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations53.pg"/>
       </exercise>
       <exercise permid="lGJ">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations54.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations54.pg"/>
       </exercise>
       <exercise permid="RNS">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations54.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations54.pg"/>
       </exercise>
       <exercise permid="xVb">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations108.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations108.pg"/>
       </exercise>
       <exercise permid="eck">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations108.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations108.pg"/>
       </exercise>
       <exercise permid="Kjt">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations109.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations109.pg"/>
       </exercise>
       <exercise permid="qqC">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations109.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations109.pg"/>
       </exercise>
       <exercise permid="WxL">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations120.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations120.pg"/>
       </exercise>
       <exercise permid="CEU">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations120.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations120.pg"/>
       </exercise>
       <exercise permid="iMd">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations130.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations130.pg"/>
       </exercise>
       <exercise permid="OTm">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations130.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations130.pg"/>
       </exercise>
       <exercise permid="vav">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations140.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations140.pg"/>
       </exercise>
       <exercise permid="bhE">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations140.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations140.pg"/>
       </exercise>
       <exercise permid="HoN">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations165.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations165.pg"/>
       </exercise>
       <exercise permid="nvW">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations165.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations165.pg"/>
       </exercise>
       <exercise permid="TDf">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations170.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations170.pg"/>
       </exercise>
       <exercise permid="zKo">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations170.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations170.pg"/>
       </exercise>
       <exercise permid="fRx">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations180.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations180.pg"/>
       </exercise>
       <exercise permid="LYG">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations180.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations180.pg"/>
       </exercise>
       <exercise permid="sfP">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations190.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations190.pg"/>
       </exercise>
       <exercise permid="YmY">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations190.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations190.pg"/>
       </exercise>
       <exercise permid="Euh">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations199.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations199.pg"/>
       </exercise>
       <exercise permid="kBq">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations199.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations199.pg"/>
       </exercise>
       <exercise permid="QIz">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations202.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations202.pg"/>
       </exercise>
       <exercise permid="wPI">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations202.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations202.pg"/>
       </exercise>
       <exercise permid="cWR">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations210.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations210.pg"/>
       </exercise>
       <exercise permid="Jea">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations210.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations210.pg"/>
       </exercise>
       <exercise permid="plj">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations220.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations220.pg"/>
       </exercise>
       <exercise permid="Vss">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations220.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations220.pg"/>
       </exercise>
       <exercise permid="BzB">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations240.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations240.pg"/>
       </exercise>
       <exercise permid="hGK">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations240.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations240.pg"/>
       </exercise>
       <exercise permid="NNT">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations241.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations241.pg"/>
       </exercise>
       <exercise permid="tVc">
-        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations241.pg" />
+        <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations241.pg"/>
       </exercise>
       <exercise permid="acl">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations245.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations245.pg"/>
       </exercise>
       <exercise permid="Gju">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations245.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations245.pg"/>
       </exercise>
       <exercise permid="mqD">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations250.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations250.pg"/>
       </exercise>
       <exercise permid="SxM">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations250.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations250.pg"/>
       </exercise>
       </exercisegroup>
     <exercisegroup cols="2">
       <exercise permid="yEV">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations260.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations260.pg"/>
       </exercise>
       <exercise permid="eMe">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations260.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations260.pg"/>
       </exercise>
       <exercise permid="KTn">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations270.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations270.pg"/>
       </exercise>
       <exercise permid="raw">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations270.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations270.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3">
       <exercise permid="XhF">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations280.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations280.pg"/>
       </exercise>
       <exercise permid="DoO">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations280.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations280.pg"/>
       </exercise>
       <exercise permid="jvX">
-        <webwork source="BasicAlgebra/OrderOfOperations/OOOFractions10.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/OOOFractions10.pg"/>
       </exercise>
       <exercise permid="PDg">
-        <webwork source="BasicAlgebra/OrderOfOperations/OOOFractions10.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/OOOFractions10.pg"/>
       </exercise>
       <exercise permid="vKp">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot10.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot10.pg"/>
       </exercise>
       <exercise permid="bRy">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot10.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot10.pg"/>
       </exercise>
       <exercise permid="HYH">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot15.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot15.pg"/>
       </exercise>
       <exercise permid="ofQ">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot15.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot15.pg"/>
       </exercise>
       <exercise permid="UmZ">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot20.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot20.pg"/>
       </exercise>
       <exercise permid="Aui">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot20.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot20.pg"/>
       </exercise>
       <exercise permid="gBr">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot25.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot25.pg"/>
       </exercise>
       <exercise permid="MIA">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot25.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot25.pg"/>
       </exercise>
       <exercise permid="sPJ">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot40.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot40.pg"/>
       </exercise>
       <exercise permid="YWS">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot40.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot40.pg"/>
       </exercise>
       <exercise permid="Feb">
         <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot50.pg" seed="21"/>
@@ -1291,28 +1291,28 @@ $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
         <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot50.pg" seed="22"/>
       </exercise>
       <exercise permid="Rst">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot60.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot60.pg"/>
       </exercise>
       <exercise permid="xzC">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot60.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot60.pg"/>
       </exercise>
       <exercise permid="dGL">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot70.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot70.pg"/>
       </exercise>
       <exercise permid="JNU">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot70.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperationsSquareRoot70.pg"/>
       </exercise>
       <exercise permid="pVd">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations150.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations150.pg"/>
       </exercise>
       <exercise permid="Wcm">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations150.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations150.pg"/>
       </exercise>
       <exercise permid="Cjv">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations160.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations160.pg"/>
       </exercise>
       <exercise permid="iqE">
-        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations160.pg" />
+        <webwork source="BasicAlgebra/OrderOfOperations/orderOfOperations160.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/OrderOfOperations_More/orderOfOperations09.pg" />
@@ -1454,12 +1454,12 @@ $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
                 <ol label="a." permid="nKr">
                   <li permid="jKs">
                     <p permid="XaB">
-                      The greatest value that it is possible to create under these conditions is <var name="36" width="10" />.
+                      The greatest value that it is possible to create under these conditions is <var name="36" width="10"/>.
                     </p>
                   </li>
                   <li permid="PRB">
                     <p permid="DhK">
-                      The least value that it is possible to create under these conditions is <var name="-23" width="10" />.
+                      The least value that it is possible to create under these conditions is <var name="-23" width="10"/>.
                     </p>
                   </li>
                 </ol>

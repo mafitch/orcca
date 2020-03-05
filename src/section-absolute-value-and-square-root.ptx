@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -41,7 +41,7 @@
       <image width="47%" permid="vBc">
         <description>a number line marking the values -2 and 2 as being 2 units from the value 0</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=-3,xmax=3,
 xtick={-3,-2,...,3},
@@ -56,10 +56,10 @@ samples=120,
 postaction={decorate,decoration={text along path,text align=center,
 transform={yshift=1ex},text={distance 2 from 0}}}] ({2*cos(x)},{2*sin(x)});
 \addplot[soliddot] coordinates {(-2,0) (2,0)};
-\addplot[guideline,|->] coordinates {(0,0) (2,0)} node[pos=0.5,above] {dist.~$2$};
-\addplot[guideline,|->] coordinates {(0,0) (-2,0)} node[pos=0.5,above] {dist.~$2$};
+\addplot[guideline,|-&gt;] coordinates {(0,0) (2,0)} node[pos=0.5,above] {dist.~$2$};
+\addplot[guideline,|-&gt;] coordinates {(0,0) (-2,0)} node[pos=0.5,above] {dist.~$2$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
       </image>
     </figure>
@@ -104,17 +104,17 @@ Context("LimitedNumeric");
               <ol label="a." cols="3" permid="mYo">
                 <li permid="rIh">
                   <p permid="EGt">
-                    <m>\abs{57}=</m><var name="57" width="5" />
+                    <m>\abs{57}=</m><var name="57" width="5"/>
                   </p>
                 </li>
                 <li permid="XPq">
                   <p permid="kNC">
-                    <m>\abs{-43}=</m><var name="43" width="5" />
+                    <m>\abs{-43}=</m><var name="43" width="5"/>
                   </p>
                 </li>
                 <li permid="DWz">
                   <p permid="QUL">
-                    <m>\abs{\frac{2}{-5}}=</m><var name="2/5" width="5" />
+                    <m>\abs{\frac{2}{-5}}=</m><var name="2/5" width="5"/>
                   </p>
                 </li>
               </ol>
@@ -177,17 +177,17 @@ Context("LimitedNumeric");
       If you have learned your basic multiplication table, you know:
     </p>
     <table xml:id="table-perfect-squares" permid="bIl">
-      <caption>Multiplication table with squares</caption>
+      <title>Multiplication table with squares</title>
       <tabular top="major" bottom="minor" left="major" right="minor" halign="center" permid="HPu">
-        <col right="medium" />
-        <col />
-        <col />
-        <col />
-        <col />
-        <col />
-        <col />
-        <col />
-        <col />
+        <col right="medium"/>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
         <col right="major"/>
         <row bottom="medium">
           <cell><m>\times</m></cell>
@@ -428,17 +428,17 @@ $a[2]=Fraction(9,11);
               <ol label="a." cols="3" permid="Tfx">
                 <li permid="czj">
                   <p permid="pxv">
-                    <m>\sqrt{\dfrac{1}{25}}=</m><var name="$a[0]" width="5" />
+                    <m>\sqrt{\dfrac{1}{25}}=</m><var name="$a[0]" width="5"/>
                   </p>
                 </li>
                 <li permid="IGs">
                   <p permid="VEE">
-                    <m>\sqrt{\dfrac{4}{9}}=</m><var name="$a[1]" width="5" />
+                    <m>\sqrt{\dfrac{4}{9}}=</m><var name="$a[1]" width="5"/>
                   </p>
                 </li>
                 <li permid="oNB">
                   <p permid="BLN">
-                    <m>\sqrt{\dfrac{81}{121}}=</m><var name="$a[2]" width="5" />
+                    <m>\sqrt{\dfrac{81}{121}}=</m><var name="$a[2]" width="5"/>
                   </p>
                 </li>
               </ol>
@@ -518,7 +518,7 @@ $a[2]=Fraction(9,11);
                       <m>1^2</m>
                     </p>
                     <p permid="GvG">
-                      <var name="1" width="10" />
+                      <var name="1" width="10"/>
                     </p>
                   </li>
                   <li permid="txu">
@@ -526,7 +526,7 @@ $a[2]=Fraction(9,11);
                       <m>3^2</m>
                     </p>
                     <p permid="SJY">
-                      <var name="9" width="10" />
+                      <var name="9" width="10"/>
                     </p>
                   </li>
                   <li permid="ZED">
@@ -534,7 +534,7 @@ $a[2]=Fraction(9,11);
                       <m>5^2</m>
                     </p>
                     <p permid="eYq">
-                      <var name="25" width="10" />
+                      <var name="25" width="10"/>
                     </p>
                   </li>
                   <li permid="FLM">
@@ -542,7 +542,7 @@ $a[2]=Fraction(9,11);
                       <m>7^2</m>
                     </p>
                     <p permid="rmI">
-                      <var name="49" width="10" />
+                      <var name="49" width="10"/>
                     </p>
                   </li>
                   <li permid="lSV">
@@ -550,7 +550,7 @@ $a[2]=Fraction(9,11);
                       <m>9^2</m>
                     </p>
                     <p permid="DBa">
-                      <var name="81" width="10" />
+                      <var name="81" width="10"/>
                     </p>
                   </li>
                   <li permid="Sae">
@@ -558,7 +558,7 @@ $a[2]=Fraction(9,11);
                       <m>11^2</m>
                     </p>
                     <p permid="PPs">
-                      <var name="121" width="10" />
+                      <var name="121" width="10"/>
                     </p>
                   </li>
                 </ol>
@@ -614,7 +614,7 @@ $a[2]=Fraction(9,11);
                       <m>2^2</m>
                     </p>
                     <p permid="MUM">
-                      <var name="4" width="10" />
+                      <var name="4" width="10"/>
                     </p>
                   </li>
                   <li permid="Pfy">
@@ -622,7 +622,7 @@ $a[2]=Fraction(9,11);
                       <m>4^2</m>
                     </p>
                     <p permid="Zje">
-                      <var name="16" width="10" />
+                      <var name="16" width="10"/>
                     </p>
                   </li>
                   <li permid="vmH">
@@ -630,7 +630,7 @@ $a[2]=Fraction(9,11);
                       <m>6^2</m>
                     </p>
                     <p permid="lxw">
-                      <var name="36" width="10" />
+                      <var name="36" width="10"/>
                     </p>
                   </li>
                   <li permid="btQ">
@@ -638,7 +638,7 @@ $a[2]=Fraction(9,11);
                       <m>8^2</m>
                     </p>
                     <p permid="xLO">
-                      <var name="64" width="10" />
+                      <var name="64" width="10"/>
                     </p>
                   </li>
                   <li permid="HAZ">
@@ -646,7 +646,7 @@ $a[2]=Fraction(9,11);
                       <m>10^2</m>
                     </p>
                     <p permid="Kag">
-                      <var name="100" width="10" />
+                      <var name="100" width="10"/>
                     </p>
                   </li>
                   <li permid="nIi">
@@ -654,7 +654,7 @@ $a[2]=Fraction(9,11);
                       <m>12^2</m>
                     </p>
                     <p permid="Woy">
-                      <var name="144" width="10" />
+                      <var name="144" width="10"/>
                     </p>
                   </li>
                 </ol>
@@ -702,128 +702,128 @@ $a[2]=Fraction(9,11);
     <exercisegroup cols="3" permid="WvC">
       <title>Absolute Value</title>
       <exercise permid="uYm">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue10.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue10.pg"/>
       </exercise>
       <exercise permid="bfv">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue10.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue10.pg"/>
       </exercise>
       <exercise permid="HmE">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue12.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue12.pg"/>
       </exercise>
 <!-- seed set to force a negative input -->
       <exercise permid="ntN">
         <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue12.pg" seed="20"/>
       </exercise>
       <exercise permid="TAW">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue14.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue14.pg"/>
       </exercise>
       <exercise permid="zIf">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue14.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue14.pg"/>
       </exercise>
       <exercise permid="fPo">
-        <webwork source="BasicMath/IntegerAndSquareRoot/AbsoluteValue11.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/AbsoluteValue11.pg"/>
       </exercise>
       <exercise permid="LWx">
-        <webwork source="BasicMath/IntegerAndSquareRoot/AbsoluteValue11.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/AbsoluteValue11.pg"/>
       </exercise>
       <exercise permid="sdG">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue20.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue20.pg"/>
       </exercise>
       <exercise permid="YkP">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue20.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue20.pg"/>
       </exercise>
       <exercise permid="ErY">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue30.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue30.pg"/>
       </exercise>
       <exercise permid="kzh">
-        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue30.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/AbsoluteValue30.pg"/>
       </exercise>
     </exercisegroup>
     <exercise permid="Rqk">
-      <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers10.pg" />
+      <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers10.pg"/>
     </exercise>
     <exercise permid="xxt">
-      <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers10.pg" />
+      <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers10.pg"/>
     </exercise>
     <exercisegroup cols="3" permid="CCL">
       <title>Square Roots</title>
       <exercise permid="QGq">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg"/>
       </exercise>
       <exercise permid="wNz">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg"/>
       </exercise>
       <exercise permid="cUI">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg"/>
       </exercise>
       <exercise permid="JbR">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg"/>
       </exercise>
       <exercise permid="pja">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg"/>
       </exercise>
       <exercise permid="Vqj">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg"/>
       </exercise>
       <exercise permid="Bxs">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers50.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers50.pg"/>
       </exercise>
       <exercise permid="hEB">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers50.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers50.pg"/>
       </exercise>
       <exercise permid="NLK">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers60.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers60.pg"/>
       </exercise>
       <exercise permid="tST">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers60.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers60.pg"/>
       </exercise>
       <exercise permid="aac">
-        <webwork source="BasicAlgebra/Calculator/CalculateRadical10.pg" />
+        <webwork source="BasicAlgebra/Calculator/CalculateRadical10.pg"/>
       </exercise>
       <exercise permid="Ghl">
-        <webwork source="BasicAlgebra/Calculator/CalculateRadical10.pg" />
+        <webwork source="BasicAlgebra/Calculator/CalculateRadical10.pg"/>
       </exercise>
       <exercise permid="mou">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg"/>
       </exercise>
       <exercise permid="SvD">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg"/>
       </exercise>
       <exercise permid="yCM">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg"/>
       </exercise>
       <exercise permid="eJV">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg"/>
       </exercise>
       <exercise permid="KRe">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg"/>
       </exercise>
       <exercise permid="qYn">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg"/>
       </exercise>
       <exercise permid="Xfw">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot40.pg"/>
       </exercise>
       <exercise permid="DmF">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot40.pg"/>
       </exercise>
       <exercise permid="jtO">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot50.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot50.pg"/>
       </exercise>
       <exercise permid="PAX">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot50.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot50.pg"/>
       </exercise>
       <exercise permid="vIg">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot60.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot60.pg"/>
       </exercise>
       <exercise permid="bPp">
         <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot60.pg" seed="1"/>
       </exercise>
       <exercise permid="HWy">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator10.pg"/>
       </exercise>
       <exercise permid="odH">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator10.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>

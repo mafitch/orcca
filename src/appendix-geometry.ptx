@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -37,7 +37,7 @@
       <image width="47%" permid="ghA">
         <description>a 2x3 cm rectangle on the left and a 2x2 cm square on the right</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \fill[blue!20!white] (0,0) rectangle (3,2);
 \fill[blue!20!white] (4,0) rectangle (6,2);
@@ -47,7 +47,7 @@
 \node at (5,0) [below] {length=$2$ cm};
 \node at (6,1) [right] {length=$2$ cm};
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -118,7 +118,7 @@
       of a two-dimensional shape is the number of unit squares that can be contained within it
       (possible after morphing them into non-square shapes).
       A unit square is a square with a side length of <m>1</m> unit.
-      In <xref ref="figure-rectangle-square">Figure</xref>,
+      In <xref ref="figure-rectangle-square" />,
       the rectangle has <m>6</m> unit squares in it,
       so its area is <m>6</m> square centimeters;
       the square has <m>4</m> unit square in it,
@@ -127,7 +127,7 @@
     <p permid="Glc">
       To calculate the area of a rectangle,
       we usually use multiplication.
-      The rectangle in <xref ref="figure-rectangle-square">Figure</xref>
+      The rectangle in <xref ref="figure-rectangle-square" />
       has two rows of <m>3</m> unit squares,
       so its area is <m>3\text{ cm}\cdot2\text{ cm}=6\text{ cm}^2</m>.
       In general, the area formula of rectangles and squares are:
@@ -169,7 +169,7 @@
       <image width="60%" permid="MoJ">
         <description>a parallelogram slanted to the right;the base is 3cm, the width is 1.7 cm; the height perpendicular to the base is 2 cm</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \fill[blue!20!white] (0,0) -- (3,0) -- (4,2) -- (1,2) -- (0,0);
 \draw[step=1cm,gray,very thin] (-1,-1) grid (5,3);
@@ -179,12 +179,12 @@
 \node at (0.5,1) [left] {width=$1.7$ cm};
 \node at (1,1) [right, red] {height=$2$ cm};
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
     <p permid="Szu">
-      The shape in <xref ref="figure-parallelogram">Figure</xref>
+      The shape in <xref ref="figure-parallelogram" />
       is called a <term>parallelogram</term>.
           <idx><h>parallelogram</h></idx>
       It is a quadrilateral (<m>4</m>-sided polygon) with two pairs of parallel sides,
@@ -206,17 +206,17 @@
       <image width="60%" permid="svS">
         <description>A triangle is drawn around the slanted part on the right side of the parallelogram;this area is moved to the left side of the figure which makes a rectangle</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \fill[blue!20!white] (0,0) -- (3,0) -- (3,2) -- (0,2) -- (0,0);
 \draw[step=1cm,gray,very thin] (-1,-1) grid (5,3);
 \draw [red,dashed,thick] (0,0) -- (0,2) -- (1,2) -- (0,0);
 \draw [red,dashed,thick] (3,0) -- (3,2) -- (4,2) -- (3,0);
-\draw [red,->] (3.5,2.2) to [out=150,in=30] (0.5,2.2);
+\draw [red,-&gt;] (3.5,2.2) to [out=150,in=30] (0.5,2.2);
 \node at (1.5,0) [below] {base=$3$ cm};
 \node at (0,1) [left] {height=$2$ cm};
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -255,22 +255,22 @@ $sideU = NumberWithUnits("$side $unit");
 @y = (($ymax-$height)/2,($ymax+$height)/2);
 $cornersize = min(($x[1]-$x[0]),($y[1]-$y[0]))/10;
 $picture = init_graph($xmin,$ymin,$xmax,$ymax,
-pixels=>[400,400]);
-$picture->lb( new Label(($x[0]+$x[1]-$extension)/2, $y[0]-0.5,"$baseU",'black','center','middle'));
-$picture->lb( new Label($x[0]+$extension+0.5,($y[0]+$y[1])/2,"$heightU",'black','left','middle'));
-$picture->lb( new Label($x[0]+$extension/2-0.5,($y[0]+$y[1])/2,"$sideU",'black','right','middle'));
-$picture->new_color("lightblue", 200,200,255); # RGB
-$picture->new_color("darkblue",  100,100,255);
-$picture->moveTo($x[0],$y[0]);
-$picture->lineTo($x[1]-$extension,$y[0], darkblue,3);
-$picture->lineTo($x[1],$y[1], darkblue,3);
-$picture->lineTo($x[0]+$extension,$y[1], darkblue,3);
-$picture->lineTo($x[0],$y[0], darkblue,3);
-$picture->moveTo($x[0]+$extension,$y[1]);
-$picture->lineTo($x[0]+$extension,$y[0], black,1,dashed);
-$picture->moveTo($x[0]+$extension,$y[0]+$cornersize);
-$picture->lineTo($x[0]+$extension+$cornersize,$y[0]+$cornersize, darkblue,3);
-$picture->lineTo($x[0]+$extension+$cornersize,$y[0], darkblue,3);
+pixels=&gt;[400,400]);
+$picture-&gt;lb( new Label(($x[0]+$x[1]-$extension)/2, $y[0]-0.5,"$baseU",'black','center','middle'));
+$picture-&gt;lb( new Label($x[0]+$extension+0.5,($y[0]+$y[1])/2,"$heightU",'black','left','middle'));
+$picture-&gt;lb( new Label($x[0]+$extension/2-0.5,($y[0]+$y[1])/2,"$sideU",'black','right','middle'));
+$picture-&gt;new_color("lightblue", 200,200,255); # RGB
+$picture-&gt;new_color("darkblue",  100,100,255);
+$picture-&gt;moveTo($x[0],$y[0]);
+$picture-&gt;lineTo($x[1]-$extension,$y[0], darkblue,3);
+$picture-&gt;lineTo($x[1],$y[1], darkblue,3);
+$picture-&gt;lineTo($x[0]+$extension,$y[1], darkblue,3);
+$picture-&gt;lineTo($x[0],$y[0], darkblue,3);
+$picture-&gt;moveTo($x[0]+$extension,$y[1]);
+$picture-&gt;lineTo($x[0]+$extension,$y[0], black,1,dashed);
+$picture-&gt;moveTo($x[0]+$extension,$y[0]+$cornersize);
+$picture-&gt;lineTo($x[0]+$extension+$cornersize,$y[0]+$cornersize, darkblue,3);
+$picture-&gt;lineTo($x[0]+$extension+$cornersize,$y[0], darkblue,3);
 $alt = "a parallelogram with a base of $baseU, a height of $heightU, and a side length of $sideU";
 $perimeter = 2*($base+$side);
 $area = $base*$height;
@@ -284,15 +284,15 @@ $ansA = NumberWithUnits("$area $unit^2");
             </p>
             <sidebyside widths="40%" permid="ltW">
               <image pg-name="$picture" permid="YDb">
-                <description><var name="$alt" /></description>
+                <description><var name="$alt"/></description>
               </image>
             </sidebyside>
             <p permid="OUU">
-              Its perimeter is <var name="$ansP" width="8" /> and its area is <var name="$ansA" width="8" />.
+              Its perimeter is <var name="$ansP" width="8"/> and its area is <var name="$ansA" width="8"/>.
             </p>
             <p permid="vcd">
-              (Use <m>\text{ft}</m> for <var name="$unit" /> and
-              <m>\text{ft}^2</m> for square <var name="$unit" />.)
+              (Use <m>\text{ft}</m> for <var name="$unit"/> and
+              <m>\text{ft}^2</m> for square <var name="$unit"/>.)
             </p>
           </statement>
           <solution permid="njj">
@@ -300,16 +300,16 @@ $ansA = NumberWithUnits("$area $unit^2");
               A parallelogram's opposite sides are always congruent,
               so we can calculate its perimeter by:
               <md permid="Nuc">
-                <mrow>\text{parallelogram perimeter}\amp=2(<var name="$baseU" />+<var name="$sideU" />)</mrow>
-                <mrow>\amp= <var name="$ansP" /></mrow>
+                <mrow>\text{parallelogram perimeter}\amp=2(<var name="$baseU"/>+<var name="$sideU"/>)</mrow>
+                <mrow>\amp= <var name="$ansP"/></mrow>
               </md>
             </p>
             <p permid="kYx">
               A parallelogram's area can be calculated by this formula:
               <md permid="tBl">
                 <mrow>\text{parallelogram area}\amp= \text{base} \cdot \text{height}</mrow>
-                <mrow>\amp= <var name="$baseU" /> \cdot <var name="$heightU" /></mrow>
-                <mrow>\amp = <var name="$ansA" /></mrow>
+                <mrow>\amp= <var name="$baseU"/> \cdot <var name="$heightU"/></mrow>
+                <mrow>\amp = <var name="$ansA"/></mrow>
               </md>
             </p>
           </solution>
@@ -323,7 +323,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       <image width="100%" permid="EKk">
         <description>three triangles are shown from left to right;an acute triangle, a right triangle and an obtuse triangle;the height of the obtuse triangle is shown outside the triangle perpendicular to the base</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \fill[blue!20!white] (0,0) -- (3,0) -- (2,2) -- (0,0);
 \node at (1.5,0) [below] {base=$3$ cm};
@@ -342,12 +342,12 @@ $ansA = NumberWithUnits("$area $unit^2");
 \node at (12,1) [right, red] {height=$2$ cm};
 \draw[step=1cm,gray,very thin] (-1,-1) grid (13,3);
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
     <p permid="rce">
-      In <xref ref="figure-triangles">Figure</xref>,
+      In <xref ref="figure-triangles" />,
       there are <m>3</m> triangles.
       From left to right, there is an acute triangle,
       a right triangle and an obtuse triangle.
@@ -365,7 +365,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       <image width="100%" permid="kRt">
         <description>the same three triangles are shown, and each is reflected across one of the sides so that its area is doubled; The doubled shape forms a paralellogram or a rectangle; the area of the triangle is half of the paralellogram or rectangle</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \fill[blue!20!white] (0,0) -- (3,0) -- (2,2) -- (0,0);
 \draw [dashed,red,thick] (0,0) -- (-1,2) -- (2,2);
@@ -375,7 +375,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \draw [dashed,red,thick] (8,0) -- (9,2) -- (12,2);
 \draw[step=1cm,gray,very thin] (-2,-1) grid (13,3);
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -403,7 +403,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       <image width="60%" permid="QYC">
         <description>a trapezoid with a lower base of 5 cm, an upper base of 2 cm and a height of 2 cm</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \fill[blue!20!white] (0,0) -- (5,0) -- (4,2) -- (2,2) -- (0,0);
 \draw[step=1cm,gray,very thin] (-1,-1) grid (6,3);
@@ -413,7 +413,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \draw [red] (4,0.2) -- (4.2,0.2) -- (4.2,0);
 \node at (4,1) [left, red] {height=$2$ cm};
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -430,7 +430,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       <image width="80%" permid="xfL">
         <description>the same trapezoid is shown, with an identical trapezoid upside down next to it;this forms a parallelogram with a length of base1 + base2</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \fill[blue!20!white] (0,0) -- (5,0) -- (4,2) -- (2,2) -- (0,0);
 \draw [dashed,red,thick] (0,0) -- (-2,0) -- (-3,2) -- (2,2);
@@ -443,7 +443,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \draw [red] (4,0.2) -- (4.2,0.2) -- (4.2,0);
 \node at (4,1) [left, red] {height=$2$ cm};
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -480,22 +480,22 @@ $heightU = NumberWithUnits("$height $unit");
 @y = (($ymax-$height)/2,($ymax+$height)/2);
 $cornersize = min(($x[1]-$x[0]),($y[1]-$y[0]))/5;
 $picture = init_graph($xmin,$ymin,$xmax,$ymax,
-pixels=>[240,240*$height/$base1]);
-$picture->lb( new Label(($x[0]+$x[3])/2, $y[0]-0.5,"$base1U",'black','center','middle'));
-$picture->lb( new Label(($x[1]+$x[2])/2, $y[1]+0.5,"$base2U",'black','center','middle'));
-$picture->lb( new Label($x[1]+0.5,($y[0]+$y[1])/2,"$heightU",'black','left','middle'));
-$picture->new_color("lightblue", 200,200,255); # RGB
-$picture->new_color("darkblue",  100,100,255);
-$picture->moveTo($x[0],$y[0]);
-$picture->lineTo($x[3],$y[0], darkblue,3);
-$picture->lineTo($x[2],$y[1], darkblue,3);
-$picture->lineTo($x[1],$y[1], darkblue,3);
-$picture->lineTo($x[0],$y[0], darkblue,3);
-$picture->moveTo($x[1],$y[1]);
-$picture->lineTo($x[1],$y[0], black,1,dashed);
-$picture->moveTo($x[1],$y[0]+$cornersize);
-$picture->lineTo($x[1]+$cornersize,$y[0]+$cornersize, black,3);
-$picture->lineTo($x[1]+$cornersize,$y[0], black,3);
+pixels=&gt;[240,240*$height/$base1]);
+$picture-&gt;lb( new Label(($x[0]+$x[3])/2, $y[0]-0.5,"$base1U",'black','center','middle'));
+$picture-&gt;lb( new Label(($x[1]+$x[2])/2, $y[1]+0.5,"$base2U",'black','center','middle'));
+$picture-&gt;lb( new Label($x[1]+0.5,($y[0]+$y[1])/2,"$heightU",'black','left','middle'));
+$picture-&gt;new_color("lightblue", 200,200,255); # RGB
+$picture-&gt;new_color("darkblue",  100,100,255);
+$picture-&gt;moveTo($x[0],$y[0]);
+$picture-&gt;lineTo($x[3],$y[0], darkblue,3);
+$picture-&gt;lineTo($x[2],$y[1], darkblue,3);
+$picture-&gt;lineTo($x[1],$y[1], darkblue,3);
+$picture-&gt;lineTo($x[0],$y[0], darkblue,3);
+$picture-&gt;moveTo($x[1],$y[1]);
+$picture-&gt;lineTo($x[1],$y[0], black,1,dashed);
+$picture-&gt;moveTo($x[1],$y[0]+$cornersize);
+$picture-&gt;lineTo($x[1]+$cornersize,$y[0]+$cornersize, black,3);
+$picture-&gt;lineTo($x[1]+$cornersize,$y[0], black,3);
 $alt = "a trapezoid with a bottom base of $base1U, a top base of $base2U, and a height of $heightU";
 $area = ($base1+$base2)*$height/2;
 $ansA = NumberWithUnits("$area $unit^2");
@@ -507,15 +507,15 @@ $ansA = NumberWithUnits("$area $unit^2");
             </p>
             <sidebyside widths="40%" permid="RBf">
               <image pg-name="$picture" permid="dmU">
-                <description><var name="$alt" /></description>
+                <description><var name="$alt"/></description>
               </image>
             </sidebyside>
             <p permid="Hqv">
-              Its area is <var name="$ansA" width="8" />.
+              Its area is <var name="$ansA" width="8"/>.
             </p>
             <p permid="nxE">
-              (Use <m>\text{cm}</m> for <var name="$unit" /> and
-              <m>\text{cm}^2</m> for square <var name="$unit" />.)
+              (Use <m>\text{cm}</m> for <var name="$unit"/> and
+              <m>\text{cm}^2</m> for square <var name="$unit"/>.)
             </p>
           </statement>
           <solution permid="Tqs">
@@ -523,8 +523,8 @@ $ansA = NumberWithUnits("$area $unit^2");
               A trapezoid's area can be calculated by this formula:
               <md permid="ZIu">
                 <mrow>\text{trapezoid area}\amp= \frac{1}{2}(\text{base1}+\text{base2})cdot\text{height}</mrow>
-                <mrow>\amp= \frac{1}{2}(<var name="$base1U" />+<var name="$base2U" />)(<var name="$heightU" />)</mrow>
-                <mrow>\amp = <var name="$ansA" /></mrow>
+                <mrow>\amp= \frac{1}{2}(<var name="$base1U"/>+<var name="$base2U"/>)(<var name="$heightU"/>)</mrow>
+                <mrow>\amp = <var name="$ansA"/></mrow>
               </md>
             </p>
           </solution>
@@ -538,7 +538,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       <image width="60%" permid="Jud">
         <description>a circle is shown with a radius from the center to the edge of 3 cm;the diameter of 6cm is also shown</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \draw[fill=blue!20!white] (0,0) circle [radius=3];
 \draw[step=1cm,gray,very thin] (-4,-4) grid (4,4);
@@ -547,7 +547,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \draw [brown] (1,2.83) -- (-1,-2.83);
 \node at (0.5,1.5) [left, brown] {diameter=$6$ cm};
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -692,7 +692,7 @@ $ansA = NumberWithUnits("$area $unit^2");
           <image width="47%" permid="pBm">
             <description>a shape made from a 10 ft wide by 6 ft high rectangle with the upper left corner cut out;the base is 10 ft, the right side is 6 ft high, the top width is 7 ft, the side with the cutout is 4 ft high. The remaining two sides are unlabeled</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}[x=0.6cm,y=0.6cm]
 \draw[fill=blue!20!white] (0,0) -- (10,0) -- (10,6) -- (3,6) -- (3,2) -- (0,2) -- (0,0);
 \draw [red] (0,0.4) -- (0.4,0.4) -- (0.4,0);
@@ -706,7 +706,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \node at (3,4) [right] {$4$ ft};
 \node at (10,3) [right] {$6$ ft};
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -722,7 +722,7 @@ $ansA = NumberWithUnits("$area $unit^2");
           <image width="47%" permid="VIv">
             <description>the previous shape with calculations for the two missing sides;to find the left side remaining after the cutout subtract 6-4=2;to find the top side remaining after the cutout subtract 10-7=3</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}[x=0.6cm,y=0.6cm]
 \draw[fill=blue!20!white] (0,0) -- (10,0) -- (10,6) -- (3,6) -- (3,2) -- (0,2) -- (0,0);
 \draw [red] (0,0.4) -- (0.4,0.4) -- (0.4,0);
@@ -738,7 +738,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \node [red] at (1,2) [above] {$10-7=3$ ft};
 \node [red] at (0,1) [left] {$6-4=2$ ft};
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -759,7 +759,7 @@ $ansA = NumberWithUnits("$area $unit^2");
           <image width="47%" permid="BPE">
             <description>the previous shape is divided into two rectangles;along the bottom there is a 10 ft by 4 ft rectangle;sitting on top to the right is a 4 ft by 7 ft rectangle;a second way to calculate the area is shown with the larger 10 ft by 6 ft rectangle and the cutout which is 4 ft by 3 ft</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}[x=0.6cm,y=0.6cm]
 \draw[fill=blue!20!white] (0,0) -- (10,0) -- (10,6) -- (3,6) -- (3,2) -- (0,2) -- (0,0);
 \draw [red] (0,0.4) -- (0.4,0.4) -- (0.4,0);
@@ -781,7 +781,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \node at (1.5,4.3) [red] {$(3\text{ ft})\cdot(4\text{ ft})$};
 \node at (1.5,3.8) [red] {$=12\text{ ft}^2$};
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -820,7 +820,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       <image width="47%" permid="hWN">
         <description>a rectangular box made of 1 inch cubes;it is 5 cubes wide, 4 cubes deep and 3 cubes high</description>
 <latex-image>
-<![CDATA[
+
 \newcommand{\drawbox}[4]{
 \pgfmathsetmacro \angle {30}
 \pgfmathsetmacro \xd {{2/3*cos(\angle)}}
@@ -851,7 +851,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \node at (0,1.5) [left] {$3$ in};
 \node at (7,0.5) {$4$ in};
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -874,7 +874,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       <image width="47%" permid="OdW">
         <description>the same rectangular prism without the cubes drawn in;the prism is 5 inches wide, 4 inches deep and 3 inches high</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \draw (0,0) -- (5,0) -- (5,3) -- (0,3) -- (0,0);
 \draw (5,0) -- (7,2) -- (7,5) -- (5,3);
@@ -885,7 +885,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \node at (6,1) [right] {$4\text{ in}$};
 \node at (0,1.5) [left] {$3\text{ in}$};
 \end{tikzpicture}
-]]>
+
 </latex-image>
       </image>
     </figure>
@@ -902,7 +902,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       <m>B</m> for base area, and <m>h</m> for height.
     </p>
     <p permid="YYA">
-      Now we can use the formula to calculate the prism's volume in <xref ref="figure-rectangular-prism">Figure</xref>:
+      Now we can use the formula to calculate the prism's volume in <xref ref="figure-rectangular-prism" />:
       <md permid="esn">
         <mrow>V\amp=Bh</mrow>
         <mrow>\amp=(4\text{ in})(5\text{ in})(3\text{ in})</mrow>
@@ -927,7 +927,7 @@ $ansA = NumberWithUnits("$area $unit^2");
           <image width="30%" permid="ulf">
             <description>the shape of a can or cylinder is shown;the radius of the top and bottom is 3 meters;the height is 10 meters</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \draw (0,0) ellipse (1.25 and 0.5);
 \draw (-1.25,0) -- (-1.25,-3.5);
@@ -939,7 +939,7 @@ $ansA = NumberWithUnits("$area $unit^2");
 \node at (-1.25,-1.75) [red,left] {$10$ m};
 \fill [gray,opacity=0.5] (-1.25,0) -- (-1.25,-3.5) arc (180:360:1.25 and 0.5) -- (1.25,0) arc (0:180:1.25 and -0.5);
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -1040,7 +1040,7 @@ $ansA = NumberWithUnits("$area $unit^2");
         </p>
       </introduction>
       <exercise permid="hPw">
-        <webwork source="BasicAlgebra/Geometry/RectanglePerimeterArea10.pg" />
+        <webwork source="BasicAlgebra/Geometry/RectanglePerimeterArea10.pg"/>
       </exercise>
       <exercise permid="NWF">
         <webwork>
@@ -1063,10 +1063,10 @@ $ansAE = NumberWithUnits("$area/144 ft^2");
             </setup>
             <statement>
               <p permid="TEN">
-                Find the perimeter and area of a rectangular table top with a length of <m><var name="$baseFU" /></m> and a width of <m><var name="$heightIU" /></m>.
+                Find the perimeter and area of a rectangular table top with a length of <m><var name="$baseFU"/></m> and a width of <m><var name="$heightIU"/></m>.
               </p>
               <p permid="zLW">
-                Its perimeter is <var name="$ansP" width="8" /> and its area is <var name="$ansA" width="8" />.
+                Its perimeter is <var name="$ansP" width="8"/> and its area is <var name="$ansA" width="8"/>.
               </p>
               <instruction>
                 (Use <c>in</c> for inches and <c>in^2</c> for square inches.)
@@ -1080,36 +1080,36 @@ $ansAE = NumberWithUnits("$area/144 ft^2");
                 we will convert feet to inches to avoid inaccurate answers.
               </p>
               <p permid="fjl">
-                The rectangle's length <m><var name="$baseFU" /></m> can be converted to:
+                The rectangle's length <m><var name="$baseFU"/></m> can be converted to:
                 <me permid="wvR">
-                  <var name="$baseFU" />\cdot\frac{12\text{ in}}{1\text{ ft}}=<var name="$baseIU" />
+                  <var name="$baseFU"/>\cdot\frac{12\text{ in}}{1\text{ ft}}=<var name="$baseIU"/>
                 </me>
               </p>
               <p permid="Lqu">
                 Now we can calculate the rectangle's perimeter by its perimeter formula:
                 <md permid="jcg">
-                  <mrow>\text{rectangle perimeter}\amp=2(<var name="$baseIU" />+<var name="$heightIU" />)</mrow>
-                  <mrow>\amp= <var name="$ansP" /></mrow>
+                  <mrow>\text{rectangle perimeter}\amp=2(<var name="$baseIU"/>+<var name="$heightIU"/>)</mrow>
+                  <mrow>\amp= <var name="$ansP"/></mrow>
                 </md>
-                An equivalent answer is <m><var name="$ansPE" /></m>.
+                An equivalent answer is <m><var name="$ansPE"/></m>.
               </p>
               <p permid="rxD">
                 We will calculate the rectangle's area by its area formula:
                 <md permid="Pjp">
-                  <mrow>\text{rectangle area}\amp= (<var name="$baseIU" />) \cdot (<var name="$heightIU" />)</mrow>
-                  <mrow>\amp = <var name="$ansA" /></mrow>
+                  <mrow>\text{rectangle area}\amp= (<var name="$baseIU"/>) \cdot (<var name="$heightIU"/>)</mrow>
+                  <mrow>\amp = <var name="$ansA"/></mrow>
                 </md>
-                The rectangular table top's area is <m><var name="$ansA" /></m>.
-                An equivalent answer is <m><var name="$ansAE" /></m>.
+                The rectangular table top's area is <m><var name="$ansA"/></m>.
+                An equivalent answer is <m><var name="$ansAE"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
       <exercise permid="udO">
-        <webwork source="BasicMath/Miscellaneous/SquarePerimeterArea10.pg" />
+        <webwork source="BasicMath/Miscellaneous/SquarePerimeterArea10.pg"/>
       </exercise>
       <exercise permid="akX">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Numeric");
@@ -1133,22 +1133,22 @@ $sideU = NumberWithUnits("$side $unit");
 @y = (($ymax-$height)/2,($ymax+$height)/2);
 $cornersize = min(($x[1]-$x[0]),($y[1]-$y[0]))/10;
 $picture = init_graph($xmin,$ymin,$xmax,$ymax,
-pixels=>[240,240*$height/$base]);
-$picture->lb( new Label(($x[0]+$x[1]-$extension)/2, $y[0]-0.5,"$baseU",'black','center','middle'));
-$picture->lb( new Label($x[0]+$extension+0.5,($y[0]+$y[1])/2,"$heightU",'black','left','middle'));
-$picture->lb( new Label($x[0]+$extension/2-0.5,($y[0]+$y[1])/2,"$sideU",'black','right','middle'));
-$picture->new_color("lightblue", 200,200,255); # RGB
-$picture->new_color("darkblue",  100,100,255);
-$picture->moveTo($x[0],$y[0]);
-$picture->lineTo($x[1]-$extension,$y[0], darkblue,3);
-$picture->lineTo($x[1],$y[1], darkblue,3);
-$picture->lineTo($x[0]+$extension,$y[1], darkblue,3);
-$picture->lineTo($x[0],$y[0], darkblue,3);
-$picture->moveTo($x[0]+$extension,$y[1]);
-$picture->lineTo($x[0]+$extension,$y[0], black,1,dashed);
-$picture->moveTo($x[0]+$extension,$y[0]+$cornersize);
-$picture->lineTo($x[0]+$extension+$cornersize,$y[0]+$cornersize, darkblue,3);
-$picture->lineTo($x[0]+$extension+$cornersize,$y[0], darkblue,3);
+pixels=&gt;[240,240*$height/$base]);
+$picture-&gt;lb( new Label(($x[0]+$x[1]-$extension)/2, $y[0]-0.5,"$baseU",'black','center','middle'));
+$picture-&gt;lb( new Label($x[0]+$extension+0.5,($y[0]+$y[1])/2,"$heightU",'black','left','middle'));
+$picture-&gt;lb( new Label($x[0]+$extension/2-0.5,($y[0]+$y[1])/2,"$sideU",'black','right','middle'));
+$picture-&gt;new_color("lightblue", 200,200,255); # RGB
+$picture-&gt;new_color("darkblue",  100,100,255);
+$picture-&gt;moveTo($x[0],$y[0]);
+$picture-&gt;lineTo($x[1]-$extension,$y[0], darkblue,3);
+$picture-&gt;lineTo($x[1],$y[1], darkblue,3);
+$picture-&gt;lineTo($x[0]+$extension,$y[1], darkblue,3);
+$picture-&gt;lineTo($x[0],$y[0], darkblue,3);
+$picture-&gt;moveTo($x[0]+$extension,$y[1]);
+$picture-&gt;lineTo($x[0]+$extension,$y[0], black,1,dashed);
+$picture-&gt;moveTo($x[0]+$extension,$y[0]+$cornersize);
+$picture-&gt;lineTo($x[0]+$extension+$cornersize,$y[0]+$cornersize, darkblue,3);
+$picture-&gt;lineTo($x[0]+$extension+$cornersize,$y[0], darkblue,3);
 $alt = "a parallelogram with a base of $baseU, a height of $heightU, and a side length of $sideU";
 $perimeter = 2*($base+$side);
 $area = $base*$height;
@@ -1162,11 +1162,11 @@ $ansA = NumberWithUnits("$area $unit^2");
           </p>
           <sidebyside widths="40%" permid="ptV">
             <image pg-name="$picture" permid="aso">
-              <description><var name="$alt" /></description>
+              <description><var name="$alt"/></description>
             </image>
           </sidebyside>
           <p permid="Mao">
-            Its perimeter is <var name="$ansP" width="8" /> and its area is <var name="$ansA" width="8" />.
+            Its perimeter is <var name="$ansP" width="8"/> and its area is <var name="$ansA" width="8"/>.
           </p>
           <instruction>
             (Use <c>ft</c> for feet and <c>ft^2</c> for square feet.)
@@ -1177,29 +1177,29 @@ $ansA = NumberWithUnits("$area $unit^2");
             A parallelogram's opposite sides are always congruent,
             so we can calculate its perimeter by:
             <md permid="vqy">
-              <mrow>\text{parallelogram perimeter}\amp=2(<var name="$baseU" />+<var name="$sideU" />)</mrow>
-              <mrow>\amp= <var name="$ansP" /></mrow>
+              <mrow>\text{parallelogram perimeter}\amp=2(<var name="$baseU"/>+<var name="$sideU"/>)</mrow>
+              <mrow>\amp= <var name="$ansP"/></mrow>
             </md>
           </p>
           <p permid="DLV">
             A parallelogram's area can be calculated by this formula:
             <md permid="bxH">
               <mrow>\text{parallelogram area}\amp= \text{base} \cdot \text{height}</mrow>
-              <mrow>\amp= <var name="$baseU" /> \cdot <var name="$heightU" /></mrow>
-              <mrow>\amp = <var name="$ansA" /></mrow>
+              <mrow>\amp= <var name="$baseU"/> \cdot <var name="$heightU"/></mrow>
+              <mrow>\amp = <var name="$ansA"/></mrow>
             </md>
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="Gsg">
-        <webwork source="BasicAlgebra/Geometry/TrianglePerimeterArea10.pg" />
+        <webwork source="BasicAlgebra/Geometry/TrianglePerimeterArea10.pg"/>
       </exercise>
       <exercise permid="mzp">
-        <webwork source="BasicAlgebra/Geometry/TrianglePerimeterArea20.pg" />
+        <webwork source="BasicAlgebra/Geometry/TrianglePerimeterArea20.pg"/>
       </exercise>
       <exercise permid="SGy">
-        <webwork source="BasicAlgebra/Geometry/TrianglePerimeterArea30.pg" />
+        <webwork source="BasicAlgebra/Geometry/TrianglePerimeterArea30.pg"/>
       </exercise>
       <exercise permid="yNH">
         <webwork>
@@ -1219,10 +1219,10 @@ $ansAE = NumberWithUnits("$area*10000 cm^2");
             </setup>
             <statement>
               <p permid="shx">
-                Find the area of a triangular flag with a base of <m><var name="$baseMU" /></m> and a height of <m><var name="$heightCMU" /></m>.
+                Find the area of a triangular flag with a base of <m><var name="$baseMU"/></m> and a height of <m><var name="$heightCMU"/></m>.
               </p>
               <p permid="YoG">
-                Its area is <var name="$ansA" width="8" />.
+                Its area is <var name="$ansA" width="8"/>.
               </p>
               <instruction>
                 (Use <c>m</c> for meters and <c>m^2</c> for square meters.)
@@ -1236,26 +1236,26 @@ $ansAE = NumberWithUnits("$area*10000 cm^2");
                 we will convert centimeters to meters to avoid big numbers.
               </p>
               <p permid="Qan">
-                The triangle's height <m><var name="$heightCMU" /></m> can be converted to:
+                The triangle's height <m><var name="$heightCMU"/></m> can be converted to:
                 <me permid="cDa">
-                  <var name="$heightCMU" />\cdot\frac{1\text{ m}}{100\text{ cm}}=<var name="$heightMU" />
+                  <var name="$heightCMU"/>\cdot\frac{1\text{ m}}{100\text{ cm}}=<var name="$heightMU"/>
                 </me>
               </p>
               <p permid="whw">
                 We will calculate the triangular flag's area by its area formula:
                 <md permid="HEQ">
                   <mrow>\text{triangle area}\amp= \frac{1}{2}bh</mrow>
-                  <mrow>\amp=\frac{1}{2}(<var name="$baseMU" />) \cdot (<var name="$heightMU" />)</mrow>
-                  <mrow>\amp = <var name="$ansA" /></mrow>
+                  <mrow>\amp=\frac{1}{2}(<var name="$baseMU"/>) \cdot (<var name="$heightMU"/>)</mrow>
+                  <mrow>\amp = <var name="$ansA"/></mrow>
                 </md>
-                The flag's area is <m><var name="$ansA" /></m>.
-                An equivalent answer is <m><var name="$ansAE" /></m>
+                The flag's area is <m><var name="$ansA"/></m>.
+                An equivalent answer is <m><var name="$ansAE"/></m>
               </p>
             </solution>
         </webwork>
       </exercise>
       <exercise permid="eUQ">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Numeric");
@@ -1276,22 +1276,22 @@ $heightU = NumberWithUnits("$height $unit");
 @y = (($ymax-$height)/2,($ymax+$height)/2);
 $cornersize = min(($x[1]-$x[0]),($y[1]-$y[0]))/5;
 $picture = init_graph($xmin,$ymin,$xmax,$ymax,
-pixels=>[240,240*$height/$base1]);
-$picture->lb( new Label(($x[0]+$x[3])/2, $y[0],"$base1U",'black','center','top'));
-$picture->lb( new Label(($x[1]+$x[2])/2, $y[1]+0.5,"$base2U",'black','center','middle'));
-$picture->lb( new Label($x[1]+0.5,($y[0]+$y[1])/2,"$heightU",'black','left','middle'));
-$picture->new_color("lightblue", 200,200,255); # RGB
-$picture->new_color("darkblue",  100,100,255);
-$picture->moveTo($x[0],$y[0]);
-$picture->lineTo($x[3],$y[0], darkblue,3);
-$picture->lineTo($x[2],$y[1], darkblue,3);
-$picture->lineTo($x[1],$y[1], darkblue,3);
-$picture->lineTo($x[0],$y[0], darkblue,3);
-$picture->moveTo($x[1],$y[1]);
-$picture->lineTo($x[1],$y[0], black,1,dashed);
-$picture->moveTo($x[1],$y[0]+$cornersize);
-$picture->lineTo($x[1]+$cornersize,$y[0]+$cornersize, black,3);
-$picture->lineTo($x[1]+$cornersize,$y[0], black,3);
+pixels=&gt;[240,240*$height/$base1]);
+$picture-&gt;lb( new Label(($x[0]+$x[3])/2, $y[0],"$base1U",'black','center','top'));
+$picture-&gt;lb( new Label(($x[1]+$x[2])/2, $y[1]+0.5,"$base2U",'black','center','middle'));
+$picture-&gt;lb( new Label($x[1]+0.5,($y[0]+$y[1])/2,"$heightU",'black','left','middle'));
+$picture-&gt;new_color("lightblue", 200,200,255); # RGB
+$picture-&gt;new_color("darkblue",  100,100,255);
+$picture-&gt;moveTo($x[0],$y[0]);
+$picture-&gt;lineTo($x[3],$y[0], darkblue,3);
+$picture-&gt;lineTo($x[2],$y[1], darkblue,3);
+$picture-&gt;lineTo($x[1],$y[1], darkblue,3);
+$picture-&gt;lineTo($x[0],$y[0], darkblue,3);
+$picture-&gt;moveTo($x[1],$y[1]);
+$picture-&gt;lineTo($x[1],$y[0], black,1,dashed);
+$picture-&gt;moveTo($x[1],$y[0]+$cornersize);
+$picture-&gt;lineTo($x[1]+$cornersize,$y[0]+$cornersize, black,3);
+$picture-&gt;lineTo($x[1]+$cornersize,$y[0], black,3);
 $alt = "a trapezoid with a bottom base of $base1U, a top base of $base2U, and a height of $heightU";
 $area = ($base1+$base2)*$height/2;
 $ansA = NumberWithUnits("$area $unit^2");
@@ -1303,11 +1303,11 @@ $ansA = NumberWithUnits("$area $unit^2");
           </p>
           <sidebyside widths="40%" permid="VBe">
             <image pg-name="$picture" permid="Gzx">
-              <description><var name="$alt" /></description>
+              <description><var name="$alt"/></description>
             </image>
           </sidebyside>
           <p permid="kCY">
-            Its area is <var name="$ansA" width="8" />.
+            Its area is <var name="$ansA" width="8"/>.
           </p>
           <instruction>
             (Use <c>cm</c> for centimeters and <c>cm^2</c> for square centimeters.)
@@ -1318,30 +1318,30 @@ $ansA = NumberWithUnits("$area $unit^2");
             A trapezoid's area can be calculated by this formula:
             <md permid="nLZ">
               <mrow>\text{trapezoid area}\amp= \frac{1}{2}(\text{base1}+\text{base2})cdot\text{height}</mrow>
-              <mrow>\amp= \frac{1}{2}(<var name="$base1U" />+<var name="$base2U" />)(<var name="$heightU" />)</mrow>
-              <mrow>\amp = <var name="$ansA" /></mrow>
+              <mrow>\amp= \frac{1}{2}(<var name="$base1U"/>+<var name="$base2U"/>)(<var name="$heightU"/>)</mrow>
+              <mrow>\amp = <var name="$ansA"/></mrow>
             </md>
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="LbZ">
-        <webwork source="BasicAlgebra/Geometry/CircleCircumferenceArea10.pg" />
+        <webwork source="BasicAlgebra/Geometry/CircleCircumferenceArea10.pg"/>
       </exercise>
       <exercise permid="rji">
-        <webwork source="BasicAlgebra/Geometry/CircleCircumferenceArea20.pg" />
+        <webwork source="BasicAlgebra/Geometry/CircleCircumferenceArea20.pg"/>
       </exercise>
       <exercise permid="Xqr">
-        <webwork source="BasicAlgebra/Geometry/RectanglePerimeterArea40.pg" />
+        <webwork source="BasicAlgebra/Geometry/RectanglePerimeterArea40.pg"/>
       </exercise>
       <exercise permid="DxA">
-        <webwork source="BasicAlgebra/Geometry/RectanglePerimeterArea50.pg" />
+        <webwork source="BasicAlgebra/Geometry/RectanglePerimeterArea50.pg"/>
       </exercise>
       <exercise permid="jEJ">
-        <webwork source="BasicAlgebra/Geometry/PolygonPerimeterArea10.pg" />
+        <webwork source="BasicAlgebra/Geometry/PolygonPerimeterArea10.pg"/>
       </exercise>
       <exercise permid="PLS">
-        <webwork source="BasicAlgebra/Geometry/PolygonPerimeterArea20.pg" />
+        <webwork source="BasicAlgebra/Geometry/PolygonPerimeterArea20.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup permid="JmM">
@@ -1351,13 +1351,13 @@ $ansA = NumberWithUnits("$area $unit^2");
         </p>
       </introduction>
       <exercise permid="cak">
-        <webwork source="BasicAlgebra/Geometry/RectangularPrismVolume10.pg" />
+        <webwork source="BasicAlgebra/Geometry/RectangularPrismVolume10.pg"/>
       </exercise>
       <exercise permid="Iht">
-        <webwork source="BasicAlgebra/Geometry/RectangularPrismVolume20.pg" />
+        <webwork source="BasicAlgebra/Geometry/RectangularPrismVolume20.pg"/>
       </exercise>
       <exercise permid="ooC">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Numeric");
@@ -1376,12 +1376,12 @@ $volumeFU = NumberWithUnits("$volumeI/12**3 ft^3");
         </setup>
         <statement>
           <p permid="QKh">
-            A shoe box's base is <m><var name="$base1FU" /></m> by <m><var name="$base2IU" /></m>,
-            and its height is <m><var name="$heightIU" /></m>.
+            A shoe box's base is <m><var name="$base1FU"/></m> by <m><var name="$base2IU"/></m>,
+            and its height is <m><var name="$heightIU"/></m>.
             Find the shoe box's volume.
           </p>
           <p permid="wRq">
-            Its volume is <var name="$volumeIU" width="8" />.
+            Its volume is <var name="$volumeIU" width="8"/>.
           </p>
           <instruction>
             (Use <c>in</c> for inches and <c>in^3</c> for cubic inches.)
@@ -1395,38 +1395,38 @@ $volumeFU = NumberWithUnits("$volumeI/12**3 ft^3");
             we will convert feet to inches to avoid inaccurate answers.
           </p>
           <p permid="oCX">
-            The length <m><var name="$base1FU" /></m> can be converted to:
+            The length <m><var name="$base1FU"/></m> can be converted to:
             <me permid="IKj">
-              <var name="$base1FU" />\cdot\frac{12\text{ in}}{1\text{ ft}}=<var name="$base1IU" />
+              <var name="$base1FU"/>\cdot\frac{12\text{ in}}{1\text{ ft}}=<var name="$base1IU"/>
             </me>
           </p>
           <p permid="UKg">
             We will calculate the show box's volume by a rectangular prism's volume formula:
             <md permid="TTi">
               <mrow>\text{volume}\amp= \text{base area}\cdot\text{height}</mrow>
-              <mrow>\amp=(<var name="$base1IU" />)\cdot(<var name="$base2IU" />) \cdot (<var name="$heightIU" />)</mrow>
-              <mrow>\amp = <var name="$volumeIU" /></mrow>
+              <mrow>\amp=(<var name="$base1IU"/>)\cdot(<var name="$base2IU"/>) \cdot (<var name="$heightIU"/>)</mrow>
+              <mrow>\amp = <var name="$volumeIU"/></mrow>
             </md>
-            The shoe box's volume is <m><var name="$volumeIU" /></m>.
-            An equivalent number is <m><var name="$volumeFU" /></m>.
+            The shoe box's volume is <m><var name="$volumeIU"/></m>.
+            An equivalent number is <m><var name="$volumeFU"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="UvL">
-        <webwork source="BasicAlgebra/Geometry/CylinderVolume10.pg" />
+        <webwork source="BasicAlgebra/Geometry/CylinderVolume10.pg"/>
       </exercise>
       <exercise permid="ACU">
-        <webwork source="BasicAlgebra/Geometry/CylinderVolume20.pg" />
+        <webwork source="BasicAlgebra/Geometry/CylinderVolume20.pg"/>
       </exercise>
       <exercise permid="gKd">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Numeric");
-Context()->flags->set(
-tolerance => 0.005,
-tolType => "absolute",
+Context()-&gt;flags-&gt;set(
+tolerance =&gt; 0.005,
+tolType =&gt; "absolute",
 );
 $radiusCM = random(5,10,1);
 $radiusM = $radiusCM/100;
@@ -1445,12 +1445,12 @@ $volumeMU = NumberWithUnits("$volumeCM/10000 m^3");
         <statement>
           <p permid="cYz">
             There is a cylindrical tube used to hold scrolls.
-            Its radius is <m><var name="$radiusCMU" /></m>,
-            and its height is <m><var name="$heightMU" /></m>.
+            Its radius is <m><var name="$radiusCMU"/></m>,
+            and its height is <m><var name="$heightMU"/></m>.
             Find the tube's volume.
           </p>
           <p permid="JfI">
-            Its volume is <var name="$volumeCMU" width="8" />.
+            Its volume is <var name="$volumeCMU" width="8"/>.
           </p>
           <instruction>
             (Use <c>cm</c> for centimeters and <c>cm^3</c> for cubic centimeters.)
@@ -1464,20 +1464,20 @@ $volumeMU = NumberWithUnits("$volumeCM/10000 m^3");
             we will convert meters to centimeters to avoid very small decimals.
           </p>
           <p permid="gYy">
-            The height <m><var name="$heightMU" /></m> can be converted to:
+            The height <m><var name="$heightMU"/></m> can be converted to:
             <me permid="oRs">
-              <var name="$heightMU" />\cdot\frac{100\text{ cm}}{1\text{ m}}=<var name="$heightCMU" />
+              <var name="$heightMU"/>\cdot\frac{100\text{ cm}}{1\text{ m}}=<var name="$heightCMU"/>
             </me>
           </p>
           <p permid="NfH">
             We will calculate the tube's volume by a cylinder's volume formula:
             <md permid="Aar">
               <mrow>\text{volume}\amp= \text{base area}\cdot\text{height}</mrow>
-              <mrow>\amp=\pi(<var name="$radiusCMU" />)^2\cdot(<var name="$heightCMU" />)</mrow>
-              <mrow>\amp \approx <var name="$volumeCMU" /></mrow>
+              <mrow>\amp=\pi(<var name="$radiusCMU"/>)^2\cdot(<var name="$heightCMU"/>)</mrow>
+              <mrow>\amp \approx <var name="$volumeCMU"/></mrow>
             </md>
-            The tube's volume is approximately <m><var name="$volumeCMU" /></m>.
-            An equivalent number is <m><var name="$volumeMU" /></m>.
+            The tube's volume is approximately <m><var name="$volumeCMU"/></m>.
+            An equivalent number is <m><var name="$volumeMU"/></m>.
           </p>
         </solution>
         </webwork>

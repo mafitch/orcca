@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -60,9 +60,9 @@
       <figure xml:id="figure-rational-function-intro-drug-concentration" permid="ker">
         <caption>Graph of <m>C(t)=\frac{3t}{t^2+8}</m></caption>
         <image permid="kOl">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 ymin=-0.25,ymax=1,xmin=-1,xmax=12,
 ytick={0,0.25,0.5,0.75},
@@ -75,7 +75,7 @@ xlabel={$t$, time in hours},ylabel={$y$, concentration (mg per liter)}]
 \addplot [soliddot] coordinates {(2.828,0.53)} node [above] {(2.828,0.53)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -86,7 +86,7 @@ xlabel={$t$, time in hours},ylabel={$y$, concentration (mg per liter)}]
         we will evaluate <m>C</m> at <m>t=10</m>.
         After <m>10</m> hours, the concentration will be about
         <quantity>
-          <mag>0.2777</mag><unit prefix="milli" base="gram" /><per base="liter" />
+          <mag>0.2777</mag><unit prefix="milli" base="gram"/><per base="liter"/>
         </quantity>.
       </p>
       <p permid="wsJ">
@@ -101,7 +101,7 @@ xlabel={$t$, time in hours},ylabel={$y$, concentration (mg per liter)}]
       Using the graph,
       we can see that the maximum concentration of the drug will be
       <quantity>
-        <mag>0.53</mag><unit prefix="milli" base="gram" /><per base="liter" />
+        <mag>0.53</mag><unit prefix="milli" base="gram"/><per base="liter"/>
       </quantity>
       and will occur after about <m>2.828</m> hours.
     </p>
@@ -109,7 +109,7 @@ xlabel={$t$, time in hours},ylabel={$y$, concentration (mg per liter)}]
       The approximate points of intersection <m>(1.066,0.35)</m> and
       <m>(7.506,0.35)</m> tell us that the concentration of the drug will reach
       <quantity>
-        <mag>0.35</mag><unit prefix="milli" base="gram" /><per base="liter" />
+        <mag>0.35</mag><unit prefix="milli" base="gram"/><per base="liter"/>
       </quantity>
       after about <m>1.066</m> hours and again after about <m>7.506</m> hours.
       Given the rising, then falling shape of the graph,
@@ -121,12 +121,12 @@ xlabel={$t$, time in hours},ylabel={$y$, concentration (mg per liter)}]
       Exploring further,
       we can see both numerically and graphically that for larger and larger values of <m>t</m>,
       the function values get closer and closer to zero.
-      This is shown in <xref ref="table-rational-function-intro-injection-large-t">Table</xref>
-      and <xref ref="figure-rational-function-intro-injection-large-t">Figure</xref>.
+      This is shown in <xref ref="table-rational-function-intro-injection-large-t" />
+      and <xref ref="figure-rational-function-intro-injection-large-t" />.
     </p>
     <sidebyside widths="47% 47%" permid="tFh">
       <table xml:id="table-rational-function-intro-injection-large-t" permid="SKH">
-        <caption>Numerical Values for <m>C(t)=\frac{3t}{t^2+8}</m></caption>
+        <title>Numerical Values for <m>C(t)=\frac{3t}{t^2+8}</m></title>
         <tabular permid="jIS">
           <col halign="center"/>
           <col halign="left"/>
@@ -159,9 +159,9 @@ xlabel={$t$, time in hours},ylabel={$y$, concentration (mg per liter)}]
       <figure xml:id="figure-rational-function-intro-injection-large-t" permid="czS">
         <caption>Graph of <m>C(t)=\frac{3t}{t^2+8}</m></caption>
         <image permid="QVu">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 ymin=-0.25,ymax=1,xmin=-10,xmax=120,
 ytick={0,0.25,0.5,0.75},
@@ -171,7 +171,7 @@ xlabel={$t$, time in hours},ylabel={concentration (mg per liter)}]
 \addplot+[domain=-10:120,samples=200] {3*x/(x^2+8)} node[pos=0.1, above right] {$y=C(t)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -179,7 +179,7 @@ xlabel={$t$, time in hours},ylabel={concentration (mg per liter)}]
 <!--         <p>We can see this rational function's graph is a smooth curve. In this context, only positive values make sense, so we focus on the first quadrant. Since the drug is injected, its concentration in the bloodstream increases, and starts to decrease at about <m>3</m> hours. We need to find out when the concentration will become <m>\frac{1}{3}</m> milligrams per liter, so we substitute <m>C(t)</m> in the function with <m>\frac{1}{3}</m> and solve for <m>t</m>:<md> <mrow>C(t)\amp=\frac{3t}{t^2+8}</mrow> <mrow>\frac{1}{3}\amp=\frac{3t}{t^2+8}</mrow> <mrow>1(t^2+8)\amp=3(3t)\amp\text{cross multiply}</mrow> <mrow>t^2+8\amp=9t</mrow> <mrow>t^2-9t+8\amp=0</mrow> <mrow>(t-1)(t-8)\amp=0</mrow> <mrow>t-1\amp=0\text{ or }t-8=0</mrow> <mrow>t\amp=1\text{ or }t=8</mrow> </md>The concentration will be <m>\frac{1}{3}</m> milligrams per liter at <m>1</m> hour since the injection, and then at <m>8</m> hours again. We can verify those two solutions by <m>(1,\frac{1}{3})</m> and <m>(8,\frac{1}{3})</m> on the curve.</p>
 <p>The patient should receive a second injection <m>8</m> hours since the first injection.</p>-->
     <p permid="buz">
-      In <xref ref="section-solving-rational-equations">Section</xref>,
+      In <xref ref="section-solving-rational-equations" />,
       we'll explore how to algebraically solve <m>C(t)=0.35</m>.
       For now, we just relied on technology to make the graph and determine intersection points.
     </p>
@@ -198,7 +198,7 @@ xlabel={$t$, time in hours},ylabel={concentration (mg per liter)}]
           </me>
           where <m>P</m> and <m>Q</m> are polynomial functions,
           but <m>Q</m> is not the constant zero function.
-              <idx><h>rational function</h><h></h></idx>
+              <idx><h>rational function</h><h/></idx>
         </p>
       </statement>
     </definition>
@@ -278,7 +278,7 @@ $no=PopUp(['?','is', 'is not'],2);
       </webwork>
     </exercise>
     <p permid="nIR">
-      A rational function's graph is not always smooth like the one shown in <xref ref="figure-rational-function-intro-drug-concentration">Example</xref>.
+      A rational function's graph is not always smooth like the one shown in <xref ref="figure-rational-function-intro-drug-concentration" />.
       It could have breaks, as we'll see now.
     </p>
     <example xml:id="example-introduction-to-rational-functions" permid="IOf">
@@ -294,7 +294,7 @@ $no=PopUp(['?','is', 'is not'],2);
         </p>
         <sidebyside widths="47% 47%" permid="ZMq">
           <table xml:id="table-rational-function-intro-initial-table" permid="yRQ">
-            <caption>Initial Values of <m>f(x)=\frac{1}{x-2}</m></caption>
+            <title>Initial Values of <m>f(x)=\frac{1}{x-2}</m></title>
             <tabular permid="PQb">
               <col halign="center"/>
               <col halign="left"/>
@@ -332,7 +332,7 @@ $no=PopUp(['?','is', 'is not'],2);
               <row>
                 <cell><m>2</m></cell>
                 <cell>undefined</cell>
-                <cell></cell>
+                <cell/>
               </row>
               <row>
                 <cell><m>3</m></cell>
@@ -349,20 +349,20 @@ $no=PopUp(['?','is', 'is not'],2);
           <figure permid="Tgg">
             <caption>Initial Points for <m>f(x)=\frac{1}{x-2}</m></caption>
             <image permid="xcD">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot [soliddot,color=firstcolor] coordinates {(-6,-0.125) (-4,-0.167) (-2,-0.25) (0,-0.5) (1,-1) (3,1) (4,0.5) (6,0.25)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
         </sidebyside>
         <p permid="ipe">
-          Note that extra points were chosen near <m>x=2</m> in the <xref ref="table-rational-function-intro-initial-table">Table</xref>,
+          Note that extra points were chosen near <m>x=2</m> in the <xref ref="table-rational-function-intro-initial-table" />,
           but it's still not clear on the graph what happens really close to <m>x=2</m>.
           It will be essential that we include at least one <m>x</m>-value between <m>1</m> and <m>2</m> and also between <m>2</m> and <m>3</m>.
         </p>
@@ -386,7 +386,7 @@ $no=PopUp(['?','is', 'is not'],2);
         </p>
         <sidebyside widths="47% 47%" valign="middle" permid="FTz">
           <table permid="eYZ">
-            <caption>Values of <m>f(x)=\frac{1}{x-2}</m></caption>
+            <title>Values of <m>f(x)=\frac{1}{x-2}</m></title>
             <tabular permid="vXk">
               <col halign="center"/>
               <col halign="left"/>
@@ -434,7 +434,7 @@ $no=PopUp(['?','is', 'is not'],2);
               <row>
                 <cell><m>2</m></cell>
                 <cell>undefined</cell>
-                <cell></cell>
+                <cell/>
               </row>
               <row>
                 <cell><m>2.1</m></cell>
@@ -461,9 +461,9 @@ $no=PopUp(['?','is', 'is not'],2);
           <figure xml:id="figure-rational-function-intro-full-graph" permid="znp">
             <caption>Full Graph of <m>f(x)=\frac{1}{x-2}</m></caption>
             <image permid="djM">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot [asymptote] coordinates {(2,-7) (2,7)};
 \addplot [asymptote] coordinates {(-7,0.05) (7,0.05)};
@@ -472,13 +472,13 @@ $no=PopUp(['?','is', 'is not'],2);
 \addplot [soliddot,color=firstcolor] coordinates {(-6,-0.125) (-4,-0.167) (-2,-0.25) (0,-0.5) (1,-1) (1.5,-2) (2.5,2) (3,1) (4,0.5) (6,0.25)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
         </sidebyside>
         <p permid="aKF">
-          Note that in <xref ref="figure-rational-function-intro-full-graph">Figure</xref>,
+          Note that in <xref ref="figure-rational-function-intro-full-graph" />,
           the line <m>y=0</m> was also drawn as a dashed line.
           This is because the values of <m>y=f(x)</m> will get closer and closer to zero as the inputs become more and more positive
           (or negative).
@@ -498,7 +498,7 @@ $no=PopUp(['?','is', 'is not'],2);
     </example>
     <remark permid="BjG">
       <p permid="XPZ">
-        The line <m>x=2</m> in <xref ref="example-introduction-to-rational-functions">Example</xref>
+        The line <m>x=2</m> in <xref ref="example-introduction-to-rational-functions" />
         is referred to as a <term>vertical asymptote</term>.
             <idx><h>vertical asymptote</h></idx>
         The line <m>y=0</m> is referred to as a
@@ -623,7 +623,7 @@ xlabel={x},ylabel={f}]
         </p>
         <sidebyside widths="47% 47%" margins="0%" valign="bottom" permid="maI">
           <table permid="Lgi">
-            <caption>Numerical Values for <m>g</m></caption>
+            <title>Numerical Values for <m>g</m></title>
             <tabular permid="cet">
               <col halign="center"/>
               <col halign="left"/>
@@ -720,9 +720,9 @@ xlabel={x},ylabel={f}]
           <figure permid="jux">
             <caption>Initial Set-Up to Graph <m>g</m></caption>
             <image permid="JqV">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-15,ymax=15,xmin=-12,xmax=12,
 ytick={-16,-12,...,16},
 minor ytick={-15,-14,...,15},
@@ -731,7 +731,7 @@ minor xtick={-11,-9,...,11}]
 \addplot [soliddot,color=firstcolor] coordinates {(-10,3.125) (-9,3.24) (-8,3.486) (-7,3.769) (-6,4.5) (-5,6.818) (-3,-3) (-2,-0.75) (-1,-0.143) (0,0) (1,-0.12) (2,-0.5) (3,-1.286) (4,-3) (5,-8.333) (7,13.364) (8,8) (9,6.231) (10,5.357)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -747,7 +747,7 @@ minor xtick={-11,-9,...,11}]
         </p>
         <sidebyside widths="47% 47%" margins="0%" permid="ShR">
           <table permid="rnr">
-            <caption>Values for Large Positive <m>x</m></caption>
+            <title>Values for Large Positive <m>x</m></title>
             <tabular permid="IlC">
               <col halign="center"/>
               <col halign="left"/>
@@ -774,7 +774,7 @@ minor xtick={-11,-9,...,11}]
             </tabular>
           </table>
           <table permid="XuA">
-            <caption>Values for Large Negative <m>x</m></caption>
+            <title>Values for Large Negative <m>x</m></title>
             <tabular permid="osL">
               <col halign="center"/>
               <col halign="left"/>
@@ -815,9 +815,9 @@ minor xtick={-11,-9,...,11}]
           <figure permid="PBG">
             <caption>Asymptotes Added for Graphing <m>g(x)=\frac{3x^2}{x^2-2x-24}</m></caption>
             <image permid="pye">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-15,ymax=15,xmin=-12,xmax=12,
 ytick={-16,-12,...,16},
 minor ytick={-15,-14,...,15},
@@ -829,16 +829,16 @@ minor xtick={-11,-9,...,11}]
 \addplot [soliddot,color=firstcolor] coordinates {(-10,3.125) (-9,3.24) (-8,3.486) (-7,3.769) (-6,4.5) (-5,6.818) (-3,-3) (-2,-0.75) (-1,-0.143) (0,0) (1,-0.12) (2,-0.5) (3,-1.286) (4,-3) (5,-8.333) (7,13.364) (8,8) (9,6.231) (10,5.357)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
           <figure permid="vIP">
             <caption>Full Graph of <m>g(x)=\frac{3x^2}{x^2-2x-24}</m></caption>
             <image permid="VFn">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-15,ymax=15,xmin=-12,xmax=12,
 ytick={-16,-12,...,16},
 minor ytick={-15,-14,...,15},
@@ -853,7 +853,7 @@ minor xtick={-11,-9,...,11}]
 \addplot [soliddot,color=firstcolor] coordinates {(-10,3.125) (-9,3.24) (-8,3.486) (-7,3.769) (-6,4.5) (-5,6.818) (-3,-3) (-2,-0.75) (-1,-0.143) (0,0) (1,-0.12) (2,-0.5) (3,-1.286) (4,-3) (5,-8.333) (7,13.364) (8,8) (9,6.231) (10,5.357)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -910,9 +910,9 @@ minor xtick={-11,-9,...,11}]
         <figure permid="oeq">
           <caption>Graph of <m>\bar{C}(x)=\frac{30x+300000}{x}</m></caption>
           <image width="47%" permid="BMw">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-2000,ymax=2000,xmin=-2000,xmax=2000,
 ytick={-1000,1000},
 minor ytick={-1000,1000},
@@ -923,7 +923,7 @@ xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}]
 \addplot [primarycurve, domain=153:2000, samples=150] {(30*x+300000)/x};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -980,8 +980,8 @@ xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}]
               <figure permid="QGZ">
                 <caption>Intersection of <m>\bar{C}(x)=\frac{30x+300000}{x}</m> and <m>y=50</m></caption>
                 <image width="47%" permid="hTF">
-                  <description></description>
-                   <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ymin=-50,ymax=100,xmin=-1000,xmax=20000, ytick={}, minor ytick={}, xtick={}, minor xtick={}, xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}] \addplot [primarycurve,domain=4286:20000] {(30*x+300000)/x}; \addplot [secondarycurve,domain=0:20000] {50}; \addplot [soliddot, above] coordinates {(15000,50)} node{$(15000,50)$}; \end{axis} \end{tikzpicture} ]]> </latex-image>
+                  <description/>
+                   <latex-image> \begin{tikzpicture} \begin{axis}[ymin=-50,ymax=100,xmin=-1000,xmax=20000, ytick={}, minor ytick={}, xtick={}, minor xtick={}, xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}] \addplot [primarycurve,domain=4286:20000] {(30*x+300000)/x}; \addplot [secondarycurve,domain=0:20000] {50}; \addplot [soliddot, above] coordinates {(15000,50)} node{$(15000,50)$}; \end{axis} \end{tikzpicture}  </latex-image>
                 </image>
               </figure>
               <p permid="kzQ">
@@ -999,7 +999,7 @@ xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}]
                 and use technology to create a table of values:
               </p>
               <table permid="DBJ">
-                <caption>Values for Large Positive <m>x</m></caption>
+                <title>Values for Large Positive <m>x</m></title>
                 <tabular permid="UzU">
                   <col halign="left"/>
                   <col halign="left"/>
@@ -1043,25 +1043,25 @@ xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}]
     <exercisegroup cols="2" permid="mwh">
       <title>Identify Rational Functions</title>
       <exercise permid="rga">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDefinition10.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDefinition10.pg"/>
       </exercise>
       <exercise permid="Xnj">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDefinition10.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDefinition10.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="SDq">
       <title>Rational Functions in Context</title>
       <exercise permid="Dus">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication10.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication10.pg"/>
       </exercise>
       <exercise permid="jBB">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication10.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication10.pg"/>
       </exercise>
       <exercise permid="PIK">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication20.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication20.pg"/>
       </exercise>
       <exercise permid="vPT">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication20.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionApplication20.pg"/>
       </exercise>
     </exercisegroup>
 <!--The topic of asymptotes is currently beyond the MTH 95 CCOGs -->
@@ -1080,72 +1080,72 @@ xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}]
     <exercisegroup cols="3" permid="yKz">
       <title>Domain</title>
       <exercise permid="bXc">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions200.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions200.pg"/>
       </exercise>
       <exercise permid="Iel">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions200.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions200.pg"/>
       </exercise>
       <exercise permid="olu">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions211.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions211.pg"/>
       </exercise>
       <exercise permid="UsD">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions211.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions211.pg"/>
       </exercise>
       <exercise permid="AzM">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions212.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions212.pg"/>
       </exercise>
       <exercise permid="gGV">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions212.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions212.pg"/>
       </exercise>
       <exercise permid="MOe">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions213.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions213.pg"/>
       </exercise>
       <exercise permid="sVn">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions213.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions213.pg"/>
       </exercise>
       <exercise permid="Zcw">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain10.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain10.pg"/>
       </exercise>
       <exercise permid="FjF">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain10.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain10.pg"/>
       </exercise>
       <exercise permid="lqO">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain20.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain20.pg"/>
       </exercise>
       <exercise permid="RxX">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain20.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain20.pg"/>
       </exercise>
       <exercise permid="xFg">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain30.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain30.pg"/>
       </exercise>
       <exercise permid="dMp">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain30.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain30.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="eRI">
       <exercise permid="JTy">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain40.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain40.pg"/>
       </exercise>
       <exercise permid="qaH">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain40.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain40.pg"/>
       </exercise>
       <exercise permid="WhQ">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain50.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain50.pg"/>
       </exercise>
       <exercise permid="CoZ">
-        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain50.pg" />
+        <webwork source="BasicAlgebra/RationalFunctions/rationalFunctionDomain50.pg"/>
       </exercise>
       <exercise permid="iwi">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph50.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph50.pg"/>
       </exercise>
       <exercise permid="ODr">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph50.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph50.pg"/>
       </exercise>
       <exercise permid="uKA">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph60.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph60.pg"/>
       </exercise>
       <exercise permid="aRJ">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph60.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph60.pg"/>
       </exercise>
 <!-- Following problem(s) need to be restructured for PTX output compatibility -->
 <!--             <exercise>
@@ -1161,46 +1161,46 @@ xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}]
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->add(t => 'Real');
-Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
-Context()->noreduce("(-x)-y","(-x)+y");
+Context()-&gt;variables-&gt;add(t =&gt; 'Real');
+Context()-&gt;flags-&gt;set(showExtraParens=&gt;0, reduceConstants=&gt;0);
+Context()-&gt;noreduce("(-x)-y","(-x)+y");
 $init = random(30,100,10);
 $b2 = random(2,9,1);
 $b1 = $init*$b2;
 $horizontal = random(200,500,50);
 $m2 = random(0.1,0.9,0.1);
 $m1 = $horizontal*$m2;
-$func = Compute("($m1*t+$b1)/($m2*t+$b2)")->reduce;
-$funcX = Compute("($m1*x+$b1)/($m2*x+$b2)")->reduce;
+$func = Compute("($m1*t+$b1)/($m2*t+$b2)")-&gt;reduce;
+$funcX = Compute("($m1*x+$b1)/($m2*x+$b2)")-&gt;reduce;
 $t1 = random(10,30,5);
-$f1 = $func->eval(t=>$t1);
+$f1 = $func-&gt;eval(t=&gt;$t1);
 $f1R = int($f1+0.5);
 $alt="This picture shows the graph of a rational function f(t)=$func. The point ($t1,$f1) is labeled.";
 ($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$t1],[$f1,0]);
 @xticks = @$xticks_ref;
 @yticks = @$yticks_ref;
 $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-axes=>[0,0],
-grid=>[$ticknum[0],$ticknum[1]],
-size=>[xPixels(),yPixels()]
+axes=&gt;[0,0],
+grid=&gt;[$ticknum[0],$ticknum[1]],
+size=&gt;[xPixels(),yPixels()]
 );
-$gr->lb('reset');
+$gr-&gt;lb('reset');
 for my $j (@xticks) {
 if (abs($j) &lt; 10**(-10)) {next;}
-$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+$gr-&gt;lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
 }
-$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
-$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, f,'black','left','middle'));
+$gr-&gt;lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
+$gr-&gt;lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, f,'black','left','middle'));
 for my $j (@yticks) {
 if (Real($j) == 0) {next;}
-$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+$gr-&gt;lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
 }
-add_functions($gr, "$funcX for x in &lt; 0,$max[0]> using color:red and weight:1");
+add_functions($gr, "$funcX for x in &lt; 0,$max[0]&gt; using color:red and weight:1");
 $hx = $t1/2;
-$hy = $func->eval(t=>$hx);
-$gr->lb( new Label($hx-$marksep[0]/8, $hy, "f(t)",'red','right','middle'));
-$gr->stamps( closed_circle($t1,$f1,'red') );
-$gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1)",'red','right','bottom'));
+$hy = $func-&gt;eval(t=&gt;$hx);
+$gr-&gt;lb( new Label($hx-$marksep[0]/8, $hy, "f(t)",'red','right','middle'));
+$gr-&gt;stamps( closed_circle($t1,$f1,'red') );
+$gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1)",'red','right','bottom'));
 </pg-code>
             </setup>
             <statement>
@@ -1213,7 +1213,7 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1)",'red','righ
               </p>
               <p permid="BcC">
                 After <var name="$t1"/> years,
-                there would be approximately <var name="$f1R" width="10" /> deer living in the forest.
+                there would be approximately <var name="$f1R" width="10"/> deer living in the forest.
               </p>
             </statement>
             <solution permid="jgc">
@@ -1222,7 +1222,7 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1)",'red','righ
               </p>
               <sidebyside permid="GYS">
                 <image pg-name="$gr" permid="OaO">
-                  <description><var name="$alt" /></description>
+                  <description><var name="$alt"/></description>
                 </image>
               </sidebyside>
               <p permid="AsI">
@@ -1239,12 +1239,12 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1)",'red','righ
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->add(t => 'Real');
-Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
-Context()->noreduce("(-x)-y","(-x)+y");
-Context()->flags->set(
-tolerance => 0.05,
-tolType => "absolute",
+Context()-&gt;variables-&gt;add(t =&gt; 'Real');
+Context()-&gt;flags-&gt;set(showExtraParens=&gt;0, reduceConstants=&gt;0);
+Context()-&gt;noreduce("(-x)-y","(-x)+y");
+Context()-&gt;flags-&gt;set(
+tolerance =&gt; 0.05,
+tolType =&gt; "absolute",
 );
 $init = random(30,100,10);
 $b2 = random(2,9,1);
@@ -1252,8 +1252,8 @@ $b1 = $init*$b2;
 $horizontal = random(200,500,50);
 $m2 = random(0.1,0.9,0.1);
 $m1 = $horizontal*$m2;
-$func = Compute("($m1*t+$b1)/($m2*t+$b2)")->reduce;
-$funcX = Compute("($m1*x+$b1)/($m2*x+$b2)")->reduce;
+$func = Compute("($m1*t+$b1)/($m2*t+$b2)")-&gt;reduce;
+$funcX = Compute("($m1*x+$b1)/($m2*x+$b2)")-&gt;reduce;
 $f1 = random($init+50,$horizontal-50,10);
 $t1 = ($b1-$f1*$b2)/($f1*$m2-$m1);
 $t1R = int($t1*10+0.5)/10;
@@ -1262,29 +1262,29 @@ $alt="This picture shows the graph of a rational function f(t)=$func and a horiz
 @xticks = @$xticks_ref;
 @yticks = @$yticks_ref;
 $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-axes=>[0,0],
-grid=>[$ticknum[0],$ticknum[1]],
-size=>[xPixels(),yPixels()]
+axes=&gt;[0,0],
+grid=&gt;[$ticknum[0],$ticknum[1]],
+size=&gt;[xPixels(),yPixels()]
 );
-$gr->lb('reset');
+$gr-&gt;lb('reset');
 for my $j (@xticks) {
 if (abs($j) &lt; 10**(-10)) {next;}
-$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+$gr-&gt;lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
 }
-$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
-$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, f,'black','left','middle'));
+$gr-&gt;lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
+$gr-&gt;lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, f,'black','left','middle'));
 for my $j (@yticks) {
 if (Real($j) == 0) {next;}
-$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+$gr-&gt;lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
 }
-add_functions($gr, "$funcX for x in &lt; 0,$max[0]> using color:red and weight:1");
-add_functions($gr, "$f1 for x in &lt; 0,$max[0]> using color:blue and weight:1");
-$gr->lb( new Label($marksep[0]/8, $f1+$marksep[1]/8, "y=$f1",'blue','left','bottom'));
+add_functions($gr, "$funcX for x in &lt; 0,$max[0]&gt; using color:red and weight:1");
+add_functions($gr, "$f1 for x in &lt; 0,$max[0]&gt; using color:blue and weight:1");
+$gr-&gt;lb( new Label($marksep[0]/8, $f1+$marksep[1]/8, "y=$f1",'blue','left','bottom'));
 $hx = $t1/2;
-$hy = $func->eval(t=>$hx);
-$gr->lb( new Label($hx-$marksep[0]/8, $hy, "f(t)",'red','right','middle'));
-$gr->stamps( closed_circle($t1,$f1,'red') );
-$gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1)",'red','right','bottom'));
+$hy = $func-&gt;eval(t=&gt;$hx);
+$gr-&gt;lb( new Label($hx-$marksep[0]/8, $hy, "f(t)",'red','right','middle'));
+$gr-&gt;stamps( closed_circle($t1,$f1,'red') );
+$gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1)",'red','right','bottom'));
 </pg-code>
             </setup>
             <statement>
@@ -1297,7 +1297,7 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1)",'red','rig
               </p>
               <p permid="NqU">
                 After <var name="$t1R" width="10"/> years,
-                there would be approximately <var name="$f1" /> deer living in the forest.
+                there would be approximately <var name="$f1"/> deer living in the forest.
               </p>
             </statement>
             <solution permid="Pnl">
@@ -1306,7 +1306,7 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1)",'red','rig
               </p>
               <sidebyside permid="ngb">
                 <image pg-name="$gr" permid="uhX">
-                  <description><var name="$alt" /></description>
+                  <description><var name="$alt"/></description>
                 </image>
               </sidebyside>
               <p permid="MHa">
@@ -1323,26 +1323,26 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1)",'red','rig
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->add(t => 'Real');
-Context()->noreduce("(-x)-y","(-x)+y");
+Context()-&gt;variables-&gt;add(t =&gt; 'Real');
+Context()-&gt;noreduce("(-x)-y","(-x)+y");
 $init = random(30,100,10);
 $b2 = random(2,9,1);
 $b1 = $init*$b2;
 $horizontal = random(200,500,50);
 $m2 = random(0.1,0.9,0.1);
 $m1 = $horizontal*$m2;
-$func = Compute("($m1*t+$b1)/($m2*t+$b2)")->reduce;
+$func = Compute("($m1*t+$b1)/($m2*t+$b2)")-&gt;reduce;
 $t1 = 100;
-$f1 = $func->eval(t=>$t1);
+$f1 = $func-&gt;eval(t=&gt;$t1);
 $f1R = int($f1+0.5);
 $t2 = 1000;
-$f2 = $func->eval(t=>$t2);
+$f2 = $func-&gt;eval(t=&gt;$t2);
 $f2R = int($f2+0.5);
 $t3 = 10000;
-$f3 = $func->eval(t=>$t3);
+$f3 = $func-&gt;eval(t=&gt;$t3);
 $f3R = int($f3+0.5);
 $t4 = 100000;
-$f4 = $func->eval(t=>$t4);
+$f4 = $func-&gt;eval(t=&gt;$t4);
 $f4R = int($f4+0.5);
 </pg-code>
             </setup>
@@ -1397,46 +1397,46 @@ $f4R = int($f4+0.5);
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->add(t => 'Real');
-Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
-Context()->noreduce("(-x)-y","(-x)+y");
-Context()->flags->set(
-tolerance => 0.005,
-tolType => "absolute",
+Context()-&gt;variables-&gt;add(t =&gt; 'Real');
+Context()-&gt;flags-&gt;set(showExtraParens=&gt;0, reduceConstants=&gt;0);
+Context()-&gt;noreduce("(-x)-y","(-x)+y");
+Context()-&gt;flags-&gt;set(
+tolerance =&gt; 0.005,
+tolType =&gt; "absolute",
 );
 $a = random(2,9,1);
 do {$b = random(2,9,1);} until ($a!=$b);
-$func = Compute("($a*t)/(t**2+$b)")->reduce;
-$funcX = Compute("($a*x)/(x**2+$b)")->reduce;
+$func = Compute("($a*t)/(t**2+$b)")-&gt;reduce;
+$funcX = Compute("($a*x)/(x**2+$b)")-&gt;reduce;
 $t1 = random(1,9,1);
-$f1 = $func->eval(t=>$t1);
+$f1 = $func-&gt;eval(t=&gt;$t1);
 $f1R = int($f1*100+0.5)/100;
 $alt="This picture shows the graph of a rational function C(t)=$func. The point ($t1,$f1R) is labeled.";
 ($min[0], $max[0], $min[1], $max[1], $ticknum[0], $ticknum[1], $xticks_ref, $yticks_ref, $marksep[0], $marksep[1]) = NiceGraphParameters([0,$t1],[$f1,0]);
 @xticks = @$xticks_ref;
 @yticks = @$yticks_ref;
 $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-axes=>[0,0],
-grid=>[$ticknum[0],$ticknum[1]],
-size=>[xPixels(),yPixels()]
+axes=&gt;[0,0],
+grid=&gt;[$ticknum[0],$ticknum[1]],
+size=&gt;[xPixels(),yPixels()]
 );
-$gr->lb('reset');
+$gr-&gt;lb('reset');
 for my $j (@xticks) {
 if (abs($j) &lt; 10**(-10)) {next;}
-$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+$gr-&gt;lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
 }
-$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
-$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, C,'black','left','middle'));
+$gr-&gt;lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
+$gr-&gt;lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, C,'black','left','middle'));
 for my $j (@yticks) {
 if (Real($j) == 0) {next;}
-$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+$gr-&gt;lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
 }
-add_functions($gr, "$funcX for x in &lt; 0,$max[0]> using color:red and weight:1");
+add_functions($gr, "$funcX for x in &lt; 0,$max[0]&gt; using color:red and weight:1");
 $hx = $t1/2;
-$hy = $func->eval(t=>$hx);
-$gr->lb( new Label($hx-$marksep[0]/8, $hy, "C(t)",'red','right','middle'));
-$gr->stamps( closed_circle($t1,$f1,'red') );
-$gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1R)",'red','right','bottom'));
+$hy = $func-&gt;eval(t=&gt;$hx);
+$gr-&gt;lb( new Label($hx-$marksep[0]/8, $hy, "C(t)",'red','right','middle'));
+$gr-&gt;stamps( closed_circle($t1,$f1,'red') );
+$gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1R)",'red','right','bottom'));
 </pg-code>
             </setup>
             <statement>
@@ -1449,7 +1449,7 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1R)",'red','rig
                 Round your answer to two decimal places if needed.
               </p>
               <p permid="lTE">
-                The drug's concentration after <var name="$t1" /> hours is <var name="$f1R" width="10"/> milligrams per liter.
+                The drug's concentration after <var name="$t1"/> hours is <var name="$f1R" width="10"/> milligrams per liter.
               </p>
             </statement>
             <solution permid="bBD">
@@ -1458,7 +1458,7 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1R)",'red','rig
               </p>
               <sidebyside permid="Tnk">
                 <image pg-name="$gr" permid="apg">
-                  <description><var name="$alt" /></description>
+                  <description><var name="$alt"/></description>
                 </image>
               </sidebyside>
               <p permid="FcB">
@@ -1475,21 +1475,21 @@ $gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1R)",'red','rig
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->add(t => 'Real');
-Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
-Context()->noreduce("(-x)-y","(-x)+y");
-Context()->flags->set(
-tolerance => 0.005,
-tolType => "absolute",
+Context()-&gt;variables-&gt;add(t =&gt; 'Real');
+Context()-&gt;flags-&gt;set(showExtraParens=&gt;0, reduceConstants=&gt;0);
+Context()-&gt;noreduce("(-x)-y","(-x)+y");
+Context()-&gt;flags-&gt;set(
+tolerance =&gt; 0.005,
+tolType =&gt; "absolute",
 );
 $a = random(2,9,1);
 do {$b = random(4,9,1);} until ($a!=$b);
-$func = Compute("($a*t)/(t**2+$b)")->reduce;
-$funcX = Compute("($a*x)/(x**2+$b)")->reduce;
+$func = Compute("($a*t)/(t**2+$b)")-&gt;reduce;
+$funcX = Compute("($a*x)/(x**2+$b)")-&gt;reduce;
 $tMax = sqrt($b);
-$fMax = $func->eval(t=>$tMax);
+$fMax = $func-&gt;eval(t=&gt;$tMax);
 $t11 = random(5,int($tMax*10)-5,1)/10;
-$f11 = $func->eval(t=>$t11);
+$f11 = $func-&gt;eval(t=&gt;$t11);
 $f11R = int($f11*100+0.5)/100;
 $a1 = $f11R;
 $b1 = -$a;
@@ -1499,7 +1499,7 @@ $t1 = (-$b1-sqrt($dis))/(2*$a1);
 $t2 = (-$b1+sqrt($dis))/(2*$a1);
 $t1R = int($t1*100+0.5)/100;
 $t2R = int($t2*100+0.5)/100;
-$f1 = $func->eval(t=>$t1);
+$f1 = $func-&gt;eval(t=&gt;$t1);
 $f1R = int($f1*100+0.5)/100;
 $ans = List($t1R,$t2R);
 $alt="This picture shows the graph of a rational function C(t)=$func and the line y=$f1. Their intersections ($t1R,$f1R) and ($t2R,$f1R) are labeled.";
@@ -1507,31 +1507,31 @@ $alt="This picture shows the graph of a rational function C(t)=$func and the lin
 @xticks = @$xticks_ref;
 @yticks = @$yticks_ref;
 $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-axes=>[0,0],
-grid=>[$ticknum[0],$ticknum[1]],
-size=>[xPixels(),yPixels()]
+axes=&gt;[0,0],
+grid=&gt;[$ticknum[0],$ticknum[1]],
+size=&gt;[xPixels(),yPixels()]
 );
-$gr->lb('reset');
+$gr-&gt;lb('reset');
 for my $j (@xticks) {
 if (abs($j) &lt; 10**(-10)) {next;}
-$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+$gr-&gt;lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
 }
-$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
-$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, C,'black','left','middle'));
+$gr-&gt;lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
+$gr-&gt;lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, C,'black','left','middle'));
 for my $j (@yticks) {
 if (Real($j) == 0) {next;}
-$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+$gr-&gt;lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
 }
-add_functions($gr, "$funcX for x in &lt; 0,$max[0]> using color:red and weight:1");
-add_functions($gr, "$f1R for x in &lt; 0,$max[0]> using color:red and weight:1");
-$gr->lb( new Label($tMax, $f1R-$marksep[1]/8, "y=$f1R",'red','center','top'));
+add_functions($gr, "$funcX for x in &lt; 0,$max[0]&gt; using color:red and weight:1");
+add_functions($gr, "$f1R for x in &lt; 0,$max[0]&gt; using color:red and weight:1");
+$gr-&gt;lb( new Label($tMax, $f1R-$marksep[1]/8, "y=$f1R",'red','center','top'));
 $hx = $tMax;
-$hy = $func->eval(t=>$tMax);
-$gr->lb( new Label($hx, $hy+$marksep[1]/8, "C(t)",'red','center','bottom'));
-$gr->stamps( closed_circle($t1,$f1,'red') );
-$gr->stamps( closed_circle($t2,$f1,'red') );
-$gr->lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1R)",'red','center','bottom'));
-$gr->lb( new Label($t2-$marksep[0]/8, $f1+$marksep[1]/8, "($t2R,$f1R)",'red','center','bottom'));
+$hy = $func-&gt;eval(t=&gt;$tMax);
+$gr-&gt;lb( new Label($hx, $hy+$marksep[1]/8, "C(t)",'red','center','bottom'));
+$gr-&gt;stamps( closed_circle($t1,$f1,'red') );
+$gr-&gt;stamps( closed_circle($t2,$f1,'red') );
+$gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1R)",'red','center','bottom'));
+$gr-&gt;lb( new Label($t2-$marksep[0]/8, $f1+$marksep[1]/8, "($t2R,$f1R)",'red','center','bottom'));
 </pg-code>
             </setup>
             <statement>
@@ -1547,7 +1547,7 @@ $gr->lb( new Label($t2-$marksep[0]/8, $f1+$marksep[1]/8, "($t2R,$f1R)",'red','ce
               </p>
               <p permid="yhW">
                 <var name="$ans" width="10"/> hours since injection,
-                the drug's concentration is <var name="$f1R" /> milligrams per liter.
+                the drug's concentration is <var name="$f1R"/> milligrams per liter.
               </p>
             </statement>
             <solution permid="HIM">
@@ -1558,7 +1558,7 @@ $gr->lb( new Label($t2-$marksep[0]/8, $f1+$marksep[1]/8, "($t2R,$f1R)",'red','ce
               </p>
               <sidebyside permid="zut">
                 <image pg-name="$gr" permid="Gwp">
-                  <description><var name="$alt" /></description>
+                  <description><var name="$alt"/></description>
                 </image>
               </sidebyside>
               <p permid="RqT">
@@ -1575,19 +1575,19 @@ $gr->lb( new Label($t2-$marksep[0]/8, $f1+$marksep[1]/8, "($t2R,$f1R)",'red','ce
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->add(t => 'Real');
-Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
-Context()->noreduce("(-x)-y","(-x)+y");
-Context()->flags->set(
-tolerance => 0.005,
-tolType => "absolute",
+Context()-&gt;variables-&gt;add(t =&gt; 'Real');
+Context()-&gt;flags-&gt;set(showExtraParens=&gt;0, reduceConstants=&gt;0);
+Context()-&gt;noreduce("(-x)-y","(-x)+y");
+Context()-&gt;flags-&gt;set(
+tolerance =&gt; 0.005,
+tolType =&gt; "absolute",
 );
 $a = random(2,9,1);
 do {$b = random(4,9,1);} until ($a!=$b);
-$func = Compute("($a*t)/(t**2+$b)")->reduce;
-$funcX = Compute("($a*x)/(x**2+$b)")->reduce;
+$func = Compute("($a*t)/(t**2+$b)")-&gt;reduce;
+$funcX = Compute("($a*x)/(x**2+$b)")-&gt;reduce;
 $tMax = sqrt($b);
-$fMax = $func->eval(t=>$tMax);
+$fMax = $func-&gt;eval(t=&gt;$tMax);
 $tMaxR = int($tMax*100+0.5)/100;
 $fMaxR = int($fMax*100+0.5)/100;
 $alt="This picture shows the graph of a rational function C(t)=$func. The point with the maximum y-value, ($tMax,$fMax), is labeled.";
@@ -1595,27 +1595,27 @@ $alt="This picture shows the graph of a rational function C(t)=$func. The point 
 @xticks = @$xticks_ref;
 @yticks = @$yticks_ref;
 $gr = init_graph($min[0],$min[1],$max[0],$max[1],
-axes=>[0,0],
-grid=>[$ticknum[0],$ticknum[1]],
-size=>[xPixels(),yPixels()]
+axes=&gt;[0,0],
+grid=&gt;[$ticknum[0],$ticknum[1]],
+size=&gt;[xPixels(),yPixels()]
 );
-$gr->lb('reset');
+$gr-&gt;lb('reset');
 for my $j (@xticks) {
 if (abs($j) &lt; 10**(-10)) {next;}
-$gr->lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
+$gr-&gt;lb( new Label($j, -$marksep[1]/8, $j,'black','center','top'));
 }
-$gr->lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
-$gr->lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, C,'black','left','middle'));
+$gr-&gt;lb( new Label($max[0]-$marksep[0]/2, $marksep[1]/8, t,'black','center','bottom'));
+$gr-&gt;lb( new Label($marksep[0]/8, $max[1]-$marksep[1]/2, C,'black','left','middle'));
 for my $j (@yticks) {
 if (Real($j) == 0) {next;}
-$gr->lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
+$gr-&gt;lb( new Label(-$marksep[0]/8, $j, $j,'black','right','middle'));
 }
-add_functions($gr, "$funcX for x in &lt; 0,$max[0]> using color:red and weight:1");
+add_functions($gr, "$funcX for x in &lt; 0,$max[0]&gt; using color:red and weight:1");
 $hx = ($tMax+$max[0])/2;
-$hy = $func->eval(t=>$hx);
-$gr->lb( new Label($hx-$marksep[0]/8, $hy, "C(t)",'red','right','middle'));
-$gr->stamps( closed_circle($tMax,$fMax,'red') );
-$gr->lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'red','center','bottom'));
+$hy = $func-&gt;eval(t=&gt;$hx);
+$gr-&gt;lb( new Label($hx-$marksep[0]/8, $hy, "C(t)",'red','right','middle'));
+$gr-&gt;stamps( closed_circle($tMax,$fMax,'red') );
+$gr-&gt;lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'red','center','bottom'));
 </pg-code>
             </setup>
             <statement>
@@ -1628,7 +1628,7 @@ $gr->lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'
                 Round your answer to two decimal places if needed.
               </p>
               <p permid="Kwo">
-                <var name="$tMaxR" width="10" /> hours since injection,
+                <var name="$tMaxR" width="10"/> hours since injection,
                 the drug's concentration is at the maximum value of <var name="$fMaxR" width="10"/> milligrams per liter.
               </p>
             </statement>
@@ -1640,7 +1640,7 @@ $gr->lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'
               </p>
               <sidebyside permid="fBC">
                 <image pg-name="$gr" permid="mDy">
-                  <description><var name="$alt" /></description>
+                  <description><var name="$alt"/></description>
                 </image>
               </sidebyside>
               <p permid="dFl">
@@ -1655,21 +1655,21 @@ $gr->lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->add(t => 'Real');
-Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
-Context()->noreduce("(-x)-y","(-x)+y");
+Context()-&gt;variables-&gt;add(t =&gt; 'Real');
+Context()-&gt;flags-&gt;set(showExtraParens=&gt;0, reduceConstants=&gt;0);
+Context()-&gt;noreduce("(-x)-y","(-x)+y");
 $a = random(4,9,1);
 do {$b = random(4,9,1);} until ($a!=$b);
-$func = Compute("($a*t)/(t**2+$b)")->reduce;
-$funcX = Compute("($a*x)/(x**2+$b)")->reduce;
+$func = Compute("($a*t)/(t**2+$b)")-&gt;reduce;
+$funcX = Compute("($a*x)/(x**2+$b)")-&gt;reduce;
 $t1 = 10;
-$f1 = $func->eval(t=>$t1);
+$f1 = $func-&gt;eval(t=&gt;$t1);
 $f1R = int($f1*100+0.5)/100;
 $t2 = 100;
-$f2 = $func->eval(t=>$t2);
+$f2 = $func-&gt;eval(t=&gt;$t2);
 $f2R = int($f2*100+0.5)/100;
 $t3 = 1000;
-$f3 = $func->eval(t=>$t3);
+$f3 = $func-&gt;eval(t=&gt;$t3);
 $f3R = int($f3*100+0.5)/100;
 $horizontal = 0;
 </pg-code>

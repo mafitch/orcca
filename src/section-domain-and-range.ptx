@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -20,7 +20,7 @@
       <p permid="JWc">
         Let <m>P</m> be the population of Portland as a function of the year.
         According to Google<fn>
-        <url href="https://www.google.com/publicdata/explore?ds=kf7tgg1uo9ude_&amp;met_y=population&amp;hl=en&amp;dl=en#!ctype=l&amp;strail=false&amp;bcs=d&amp;nselm=h&amp;met_y=population&amp;scale_y=lin&amp;ind_y=false&amp;rdim=country&amp;idim=place:4159000&amp;ifdim=country&amp;hl=en_US&amp;dl=en&amp;ind=false">https://www.google.com/publicdata/explore?ds=kf7tgg1uo9ude<underscore /><ampersand />met<underscore />y=population<ampersand />hl=en<ampersand />dl=en<hash />!ctype=l<ampersand />strail=false <ampersand />bcs=d<ampersand />nselm=h<ampersand />met<underscore />y=population<ampersand />scale<underscore />y=lin<ampersand />ind<underscore />y=false<ampersand />rdim=country<ampersand />idim=place:4159000<ampersand />ifdim=country <ampersand />hl=en<underscore />US<ampersand />dl=en<ampersand />ind=false</url>
+        <url href="https://www.google.com/publicdata/explore?ds=kf7tgg1uo9ude_&amp;met_y=population&amp;hl=en&amp;dl=en#!ctype=l&amp;strail=false&amp;bcs=d&amp;nselm=h&amp;met_y=population&amp;scale_y=lin&amp;ind_y=false&amp;rdim=country&amp;idim=place:4159000&amp;ifdim=country&amp;hl=en_US&amp;dl=en&amp;ind=false">https://www.google.com/publicdata/explore?ds=kf7tgg1uo9ude_&amp;met_y=population&amp;hl=en&amp;dl=en#!ctype=l&amp;strail=false &amp;bcs=d&amp;nselm=h&amp;met_y=population&amp;scale_y=lin&amp;ind_y=false&amp;rdim=country&amp;idim=place:4159000&amp;ifdim=country &amp;hl=en_US&amp;dl=en&amp;ind=false</url>
         </fn> we can say that:
         <md permid="jSA">
           <mrow>P(2016) \amp = 639863 \amp P(1990) \amp= 487849</mrow>
@@ -38,10 +38,10 @@
       <p permid="qdl">
         If <m>m</m> is a person's mass in
         <quantity>
-          <unit prefix="kilo" base="gram" />
+          <unit prefix="kilo" base="gram"/>
         </quantity>, let <m>w(m)</m> be their weight in
         <quantity>
-          <unit base="pound" />
+          <unit base="pound"/>
         </quantity>.
         There is an approximate formula for <m>w</m>:
         <me permid="LpQ">
@@ -53,18 +53,18 @@
         </md>,
         which tells us that a <m>50</m>-
         <quantity>
-          <unit prefix="kilo" base="gram" />
+          <unit prefix="kilo" base="gram"/>
         </quantity>
         person weighs
         <quantity>
-          <mag>110</mag><unit base="pound" />
+          <mag>110</mag><unit base="pound"/>
         </quantity>, and an <m>80</m>-
         <quantity>
-          <unit prefix="kilo" base="gram" />
+          <unit prefix="kilo" base="gram"/>
         </quantity>
         person weighs
         <quantity>
-          <mag>176</mag><unit base="pound" />
+          <mag>176</mag><unit base="pound"/>
         </quantity>.
       </p>
       <p permid="Wku">
@@ -72,7 +72,7 @@
         In the context of this example,
         we would be asking for the weight of a person whose mass is
         <quantity>
-          <mag>-100</mag><unit prefix="kilo" base="gram" />
+          <mag>-100</mag><unit prefix="kilo" base="gram"/>
         </quantity>.
         This is clearly nonsense.
         That means that <m>w(-100)</m> is <em>undefined</em>.
@@ -107,7 +107,7 @@
               find an input for <m>f</m> that would cause an undefined output.
             </p>
             <p permid="PpP">
-              The number <var name="'-8'" width="5" /> would cause an undefined output.
+              The number <var name="'-8'" width="5"/> would cause an undefined output.
             </p>
           </statement>
           <solution permid="rEd">
@@ -168,10 +168,10 @@
       Communicating the domain of a function can be wordy.
       In mathematics,
       we can communicate the same information using concise notation that is accepted for use almost everywhere.
-      <xref ref="figure-interval-notation">Figure</xref>
+      <xref ref="figure-interval-notation" />
       contains example functions from this section and their domains,
       and demonstrates <em>interval notation</em> for these domains.
-      Basic interval notation is covered in <xref ref="section-comparison-symbols-and-notation-for-intervals">Section</xref>,
+      Basic interval notation is covered in <xref ref="section-comparison-symbols-and-notation-for-intervals" />,
       but some of our examples here go beyond what that section covers.
     </p>
     <figure xml:id="figure-interval-notation" permid="ayO">
@@ -193,7 +193,7 @@
         </sidebyside>
         <sidebyside widths="24% 24% 24% 24%" halign="center" permid="PwT">
           <p permid="wCr">
-            <m>P</m> from <xref ref="example-portland-population">Example</xref>
+            <m>P</m> from <xref ref="example-portland-population" />
           </p>
           <p permid="cJA">
             all years 1851 and greater
@@ -202,7 +202,7 @@
             <description>a number line with a mark at 1851; a bracket opens to the right at 1851 and there is an arrow pointing to the right.</description>
 <latex-image>
 <!-- width set for PDF fitting -->
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=0,xmax=3000,
 xtick={0,1000,...,3000},
@@ -213,7 +213,7 @@ width=180pt,
 ]
 \addplot[closedinfiniteinterval] coordinates {(1851,0) (3000,0)} node[pos=0,above] {1851};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
           <p permid="IQJ">
@@ -222,7 +222,7 @@ width=180pt,
         </sidebyside>
         <sidebyside widths="24% 24% 24% 24%" halign="center" permid="vEc">
           <p permid="oXS">
-            <m>w</m> from <xref ref="example-weight">Example</xref>
+            <m>w</m> from <xref ref="example-weight" />
           </p>
           <p permid="Vfb">
             all real numbers greater than <m>0</m>
@@ -231,14 +231,14 @@ width=180pt,
             <description>a number line with a mark at 0; there is a parenthesis at 0 that opens to the right and a thick line overlays the number line and points to the right</description>
 <latex-image>
 <!-- width set for PDF fitting -->
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xlabel={$m$},
 width=180pt,
 ]
 \addplot[openinfiniteinterval] coordinates {(0,0) (10,0)} node[pos=0,above] {0};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
           <p permid="Bmk">
@@ -247,7 +247,7 @@ width=180pt,
         </sidebyside>
         <sidebyside widths="24% 24% 24% 24%" halign="center" permid="bLl">
           <p permid="htt">
-            <m>g</m> from <xref ref="example-context-free-domain">Example</xref>
+            <m>g</m> from <xref ref="example-context-free-domain" />
           </p>
           <p permid="NAC">
             all real numbers except <m>7</m>
@@ -256,14 +256,14 @@ width=180pt,
             <description>a number line with a mark at 7; there is a parenthesis opening to the left at 7 with an arrow pointing to the left; there is a parenthesis opening to the right at 7 with an arrow pointing to the right.</description>
 <latex-image>
 <!-- width set for PDF fitting -->
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 width=180pt,
 ]
 \addplot[openinfiniteinterval] coordinates {(7.1,0) (10,0)} node[pos=0,above] {7};
 \addplot[openinfiniteinterval] coordinates {(6.9,0) (-10,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
           <p permid="tHL">
@@ -273,13 +273,13 @@ width=180pt,
       </sbsgroup>
     </figure>
     <p permid="JAD">
-      Again, basic interval notation is covered in <xref ref="section-comparison-symbols-and-notation-for-intervals">Section</xref>,
-      but one thing appears in <xref ref="figure-interval-notation">Figure</xref>
+      Again, basic interval notation is covered in <xref ref="section-comparison-symbols-and-notation-for-intervals" />,
+      but one thing appears in <xref ref="figure-interval-notation" />
       that is not explained in that earlier section:
       the <m>\cup</m> symbol, which we see in the domain of <m>g</m>.
     </p>
     <p permid="pHM">
-      Occasionally there is a need to consider number line pictures such as <xref ref="figure-interval-union">Figure</xref>,
+      Occasionally there is a need to consider number line pictures such as <xref ref="figure-interval-union" />,
       where two or more intervals appear.
     </p>
     <figure xml:id="figure-interval-union" permid="GFX">
@@ -287,13 +287,13 @@ width=180pt,
       <image width="47%" permid="tmm">
         <description>a number line with marks at -5, 1, 4, and 7; there is a pair of brackets at -5 and 0 with a thick line between them. There is a parenthesis opening to the right at 4 and a bracket opening to the left at 7 with a thick line between them</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 ]
 \addplot[closedinterval] coordinates {(-5,0) (1,0)};
 \addplot[openclosedinterval] coordinates {(4,0) (7,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
       </image>
     </figure>
@@ -313,7 +313,7 @@ width=180pt,
       (which uses interval notation).
     </p>
     <p permid="BWe">
-      With the domain of <m>g</m> in <xref ref="figure-interval-notation">Figure</xref>,
+      With the domain of <m>g</m> in <xref ref="figure-interval-notation" />,
       the number line picture shows us another
       <q>union</q>
       of two intervals.
@@ -339,7 +339,7 @@ $domain=Interval("[0,inf)");
               If needed, use <c>inf</c> for <m>\infty</m> and <c>U</c> for <m>\cup</m>.
             </instruction>
             <p permid="bEh">
-              <var name="$domain" width="20" />
+              <var name="$domain" width="20"/>
             </p>
           </statement>
           <solution permid="XLm">
@@ -370,7 +370,7 @@ $domain=Interval("(-inf,3)U(3,inf)");
               If needed, use <c>inf</c> for <m>\infty</m> and <c>U</c> for <m>\cup</m>.
             </instruction>
             <p permid="nSz">
-              <var name="$domain" width="20" />
+              <var name="$domain" width="20"/>
             </p>
           </statement>
           <solution permid="DSv">
@@ -388,11 +388,11 @@ $domain=Interval("(-inf,3)U(3,inf)");
     <p permid="idn">
       Sometimes we will consider collections of only a short list of numbers.
       In those cases, we use <term>set notation</term>
-      (first introduced in <xref ref="section-set-notation-and-types-of-numbers">Section</xref>).
+      (first introduced in <xref ref="section-set-notation-and-types-of-numbers" />).
       With set notation, we have a list of numbers in mind,
       and we simply list all of those numbers.
       Curly braces are standard for surrounding the list.
-      <xref ref="figure-set-notation">Figure</xref>
+      <xref ref="figure-set-notation" />
       illustrates set notation in use.
     </p>
     <figure xml:id="figure-set-notation" permid="mNg">
@@ -410,13 +410,13 @@ $domain=Interval("(-inf,3)U(3,inf)");
           <image permid="Ztv">
             <description>a number line with marks at -2 and 3</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 ]
 \addplot[soliddot] coordinates {(-2,0)} node[above] {$-2$};
 \addplot[soliddot] coordinates {(3,0)} node[above] {$3$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
           <p permid="mdm">
@@ -427,7 +427,7 @@ $domain=Interval("(-inf,3)U(3,inf)");
           <image permid="FAE">
             <description>a number line with marks at -5, 1, 3 and 5</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 ]
 \addplot[soliddot] coordinates {(-5,0)} node[above] {$-5$};
@@ -435,7 +435,7 @@ $domain=Interval("(-inf,3)U(3,inf)");
 \addplot[soliddot] coordinates {(3,0)} node[above] {$3$};
 \addplot[soliddot] coordinates {(5,0)} node[above] {$5$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
           <p permid="Skv">
@@ -446,13 +446,13 @@ $domain=Interval("(-inf,3)U(3,inf)");
           <image permid="lHN">
             <description>a number line with a mark at -2; there is also a mark at 5; there is a parenthesis at 5 that opens to the right with an arrow pointing to the right</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 ]
 \addplot[soliddot] coordinates {(-2,0)} node[above] {$-2$};
 \addplot[openinfiniteinterval] coordinates {(5,0) (10,0)} node[pos=0,above] {$5$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
           <p permid="yrE">
@@ -478,7 +478,7 @@ $domain=Set("{1,2,5,10,20,50,100}");
               What is the domain of <m>f</m>?
             </p>
             <p permid="AgR">
-              <var name="$domain" width="20" />
+              <var name="$domain" width="20"/>
             </p>
           </statement>
           <solution permid="jZE">
@@ -496,7 +496,7 @@ $domain=Set("{1,2,5,10,20,50,100}");
       While most collections of numbers that we will encounter can be described using a combination of interval notation and set notation,
       there is another commonly used notation that is very useful in algebra:
       <term>set-builder notation</term>,
-      which was introduced in <xref ref="section-comparison-symbols-and-notation-for-intervals">Section</xref>.
+      which was introduced in <xref ref="section-comparison-symbols-and-notation-for-intervals" />.
       Set-builder notation also uses curly braces.
       Set-builder notation provides a template for what a number that is under consideration might look like,
       and then it gives you restrictions on how to use that template.
@@ -506,7 +506,7 @@ $domain=Set("{1,2,5,10,20,50,100}");
       </me>.
       Verbally, this is
       <q>the set of all <m>x</m> such that <m>x</m> is greater than or equal to <m>3</m>.</q>
-      <xref ref="figure-setbuilder">Figure</xref>
+      <xref ref="figure-setbuilder" />
       gives more examples of set-builder notation in use.
     </p>
     <figure xml:id="figure-setbuilder" permid="SUp">
@@ -524,12 +524,12 @@ $domain=Set("{1,2,5,10,20,50,100}");
           <image permid="ROW">
             <description>a number line with marks at -2 and 3; there is a parenthesis that opens to the right at -2 and a bracket that opens to the left at 3; there is a thick line in between them</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 ]
 \addplot[openclosedinterval] coordinates {(-2,0) (3,0)} node[pos=0,above] {$-2$} node[pos=1,above] {$3$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
           <p permid="qNf">
@@ -540,17 +540,17 @@ $domain=Set("{1,2,5,10,20,50,100}");
           <image permid="xWf">
             <description>a number line with marks at 1 and 3; there is a parenthesis that opens to the left at 1, with an arrow pointing to the left; there is a parenthesis that opens to the right at 3, with an arrow pointing to the right</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 ]
 \addplot[openinfiniteinterval] coordinates {(1,0) (-10,0)} node[pos=0,above] {$1$};
 \addplot[openinfiniteinterval] coordinates {(3,0) (10,0)} node[pos=0,above] {$3$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
           <p permid="WUo">
-            <m>\{x\mid x\lt1\text{ or }x>3\}</m>
+            <m>\{x\mid x\lt1\text{ or }x&gt;3\}</m>
           </p>
         </sidebyside>
       </sbsgroup>
@@ -561,7 +561,7 @@ $domain=Set("{1,2,5,10,20,50,100}");
 <pg-code>
 InequalitySetBuilder::UseVerticalSuchThat();
 Context("InequalitySetBuilder-Only");
-$domain = SetBuilder("{ x | x >= 0 }");
+$domain = SetBuilder("{ x | x &gt;= 0 }");
 </pg-code>
           </setup>
           <statement>
@@ -571,12 +571,12 @@ $domain = SetBuilder("{ x | x >= 0 }");
               using set-builder notation?
             </p>
             <instruction>
-              If needed, use <c>&lt;=</c> for <m>\leq</m>, <c>>=</c> for <m>\geq</m>, and <c>|</c>(which is usually above the <c>enter</c> key) for the
+              If needed, use <c>&lt;=</c> for <m>\leq</m>, <c>&gt;=</c> for <m>\geq</m>, and <c>|</c>(which is usually above the <c>enter</c> key) for the
               <q>such that</q>
               symbol.
             </instruction>
             <p permid="Mvj">
-              <var name="$domain" width="20" />
+              <var name="$domain" width="20"/>
             </p>
           </statement>
           <solution permid="QgN">
@@ -603,7 +603,7 @@ $domain = SetBuilder("{ x | x >= 0 }");
           <mrow>x^2 - 2x - 8\amp=0</mrow>
           <mrow>(x + 2)(x - 4)\amp=0</mrow>
         </md>
-        Here, we used a basic factoring technique from <xref ref="section-factoring-trinomials-with-leading-coefficient-one">Section</xref>.
+        Here, we used a basic factoring technique from <xref ref="section-factoring-trinomials-with-leading-coefficient-one" />.
         To continue, either
         <md permid="oCt">
           <mrow>x + 2\amp=0\amp\text{or}\amp\amp x-4\amp=0</mrow>
@@ -617,13 +617,13 @@ $domain = SetBuilder("{ x | x >= 0 }");
         <image permid="edo">
           <description>A number line with three intervals; the first one has a parenthesis that opens to the left at -2, with an arrow that point to the left; the second one has a pair of parentheses at -2 and 4 with a thick line in between; the third interval has a parenthesis that opens to the right on 4 with an arrow pointing to the right.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline]
 \addplot[openinfiniteinterval] coordinates {(-2.1,0) (-10,0)} node[above,pos=0] {$-2$};
 \addplot[openinfiniteinterval] coordinates {(4.1,0) (10,0)} node[above,pos=0] {$4$};
 \addplot[openinterval] coordinates {(-1.9,0) (3.9,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </sidebyside>
@@ -653,11 +653,11 @@ $domain = SetBuilder("{ x | x >= 0 }");
         <image permid="Kkx">
           <description>a number line, with a bracket at 7 that opens to the left, with an arrow pointing to the left</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline]
 \addplot[closedinfiniteinterval] coordinates {(7,0) (-10,0)} node[above,pos=0] {$7$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </sidebyside>
@@ -670,7 +670,7 @@ $domain = SetBuilder("{ x | x >= 0 }");
       which are summarized here.
     </p>
     <list xml:id="list-algebraic-domain-restrictions" permid="KNa">
-      <caption>Summary of Algebraic Domain Restrictions</caption>
+      <title>Summary of Algebraic Domain Restrictions</title>
       <dl permid="Nmh">
         <li permid="MgO">
           <title>Denominators</title>
@@ -680,7 +680,7 @@ $domain = SetBuilder("{ x | x >= 0 }");
             it will only be defined where that expression is not equal to zero.
           </p>
           <p permid="deZ">
-            <xref ref="example-domain-restriction-rational">Example</xref> demonstrates this.
+            <xref ref="example-domain-restriction-rational" /> demonstrates this.
           </p>
         </li>
         <li permid="snX">
@@ -692,7 +692,7 @@ $domain = SetBuilder("{ x | x >= 0 }");
             (This is actually true for any even <m>n</m>th radical.)
           </p>
           <p permid="ptr">
-            <xref ref="example-domain-restriction-radical">Example</xref> demonstrates this.
+            <xref ref="example-domain-restriction-radical" /> demonstrates this.
           </p>
         </li>
         <li permid="Yvg">
@@ -703,7 +703,7 @@ $domain = SetBuilder("{ x | x >= 0 }");
             then this may add additional restrictions on the input values.
           </p>
           <p permid="BHJ">
-            <xref ref="example-weight">Example</xref> demonstrates this.
+            <xref ref="example-weight" /> demonstrates this.
           </p>
         </li>
       </dl>
@@ -740,7 +740,7 @@ $domain = SetBuilder("{ x | x >= 0 }");
         <p permid="XpN">
           We would like to describe the collection of possible numbers that <m>f</m> can give as output.
           We will use a graphical approach.
-          <xref ref="figure-range">Figure</xref> displays a graph of <m>f</m>,
+          <xref ref="figure-range" /> displays a graph of <m>f</m>,
           and the visualization that reveals <m>f</m>'s range.
         </p>
         <figure xml:id="figure-range" permid="jEf">
@@ -749,38 +749,38 @@ $domain = SetBuilder("{ x | x >= 0 }");
             <image width="47%" permid="qrG">
               <description>A parabola with vertex at (0,0) that opens upward</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[domain=-2.64:2.64] {x^2};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
             <image width="47%" permid="WyP">
               <description>The same parabola is pictured with arrows pointing from each point toward the y-axis.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[domain=-2.64:2.64] {x^2};
-\addplot[guideline,->] coordinates {(1,1) (0,1)};
-\addplot[guideline,->] coordinates {(1.732,3) (0,3)};
-\addplot[guideline,->] coordinates {(2.236,5) (0,5)};
-\addplot[guideline,->] coordinates {(-1.414,2) (0,2)};
-\addplot[guideline,->] coordinates {(-2,4) (0,4)};
-\addplot[guideline,->] coordinates {(-2.449,6) (0,6)};
+\addplot[guideline,-&gt;] coordinates {(1,1) (0,1)};
+\addplot[guideline,-&gt;] coordinates {(1.732,3) (0,3)};
+\addplot[guideline,-&gt;] coordinates {(2.236,5) (0,5)};
+\addplot[guideline,-&gt;] coordinates {(-1.414,2) (0,2)};
+\addplot[guideline,-&gt;] coordinates {(-2,4) (0,4)};
+\addplot[guideline,-&gt;] coordinates {(-2.449,6) (0,6)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
             <image width="47%" permid="CFY">
               <description>The same parabola is pictured with the range indicated as an interval on the y-axis; there is a bracket at 0 pointing upward and an arrow that points upward along the y-axis.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[domain=-2.64:2.64] {x^2};
 \addplot[closedinfiniteinterval,color=secondcolor] coordinates {(0,0) (0,7)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </sidebyside>
@@ -808,7 +808,7 @@ $domain = SetBuilder("{ x | x >= 0 }");
     <example permid="VVZ">
       <statement>
         <p permid="fEg">
-          Given the function <m>g</m> graphed in <xref ref="figure-range-bell">Figure</xref>,
+          Given the function <m>g</m> graphed in <xref ref="figure-range-bell" />,
           find the domain and range of <m>g</m>.
         </p>
         <sidebyside width="40%">
@@ -817,7 +817,7 @@ $domain = SetBuilder("{ x | x >= 0 }");
           <image width="47%" permid="iNh">
             <description>A bell-shaped graph with a maximum at (0,3) that is above the x-axis; there is an arrow to the left that approaches the x-axis and an arrow to the right that approaches the x-axis</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xmin=-2,xmax=2,
 ymin=-0.5,ymax=3.5,
@@ -826,7 +826,7 @@ ytick={0,1,...,3},
 ]
 \addplot+[domain=-2:2, samples=50] {3*3^(-x^2)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -859,7 +859,7 @@ ytick={0,1,...,3},
             <image width="47%" permid="OUq">
               <description>The same bell-shaped graph with the x-axis highlighted and arrows pointing upward to the points on the graph</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xmin=-2,xmax=2,
 ymin=-0.5,ymax=3.5,
@@ -867,16 +867,16 @@ xtick={-1,0,...,1},
 ytick={0,1,...,3},
 ]
 \addplot+[domain=-2:2, samples=50] {3*3^(-x^2)};
-\addplot[guideline,<-] coordinates {(-1.5,0.253) (-1.5,0)};
-\addplot[guideline,<-] coordinates {(-1,1) (-1,0)};
-\addplot[guideline,<-] coordinates {(-0.5,2.279) (-0.5,0)};
-\addplot[guideline,<-] coordinates {(0,3) (0,0)};
-\addplot[guideline,<-] coordinates {(0.5,2.279) (0.5,0)};
-\addplot[guideline,<-] coordinates {(1,1) (1,0)};
-\addplot[guideline,<-] coordinates {(1.5,0.253) (1.5,0)};
+\addplot[guideline,&lt;-] coordinates {(-1.5,0.253) (-1.5,0)};
+\addplot[guideline,&lt;-] coordinates {(-1,1) (-1,0)};
+\addplot[guideline,&lt;-] coordinates {(-0.5,2.279) (-0.5,0)};
+\addplot[guideline,&lt;-] coordinates {(0,3) (0,0)};
+\addplot[guideline,&lt;-] coordinates {(0.5,2.279) (0.5,0)};
+\addplot[guideline,&lt;-] coordinates {(1,1) (1,0)};
+\addplot[guideline,&lt;-] coordinates {(1.5,0.253) (1.5,0)};
 \addplot[infiniteinterval,color=secondcolor] coordinates {(-1.8,0) (1.8,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -885,7 +885,7 @@ ytick={0,1,...,3},
             <image width="47%" permid="vbz">
               <description>The same bell-shaped graph with arrows going from points on the graph to the y-values on the y-axis; there is an interval on the y-axis indicating the range</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xmin=-2,xmax=2,
 ymin=-0.5,ymax=3.5,
@@ -893,23 +893,23 @@ xtick={-1,0,...,1},
 ytick={0,1,...,3},
 ]
 \addplot+[domain=-2:2, samples=50] {3*3^(-x^2)};
-\addplot[guideline,<-] coordinates {(0,0.2) (1.57,0.2)};
-\addplot[guideline,<-] coordinates {(0,0.6) (1.21,0.6)};
-\addplot[guideline,<-] coordinates {(0,1.0) (1,1.0)};
-\addplot[guideline,<-] coordinates {(0,1.4) (0.833,1.4)};
-\addplot[guideline,<-] coordinates {(0,1.8) (0.682,1.8)};
-\addplot[guideline,<-] coordinates {(0,2.2) (0.531,2.2)};
-\addplot[guideline,<-] coordinates {(0,2.6) (0.361,2.6)};
-\addplot[guideline,<-] coordinates {(0,0.4) (-1.354,0.4)};
-\addplot[guideline,<-] coordinates {(0,0.8) (-1.097,0.8)};
-\addplot[guideline,<-] coordinates {(0,1.2) (-0.913,1.2)};
-\addplot[guideline,<-] coordinates {(0,1.6) (-0.756,1.6)};
-\addplot[guideline,<-] coordinates {(0,2.0) (-0.608,2.0)};
-\addplot[guideline,<-] coordinates {(0,2.4) (-0.451,2.4)};
-\addplot[guideline,<-] coordinates {(0,2.8) (-0.251,2.8)};
+\addplot[guideline,&lt;-] coordinates {(0,0.2) (1.57,0.2)};
+\addplot[guideline,&lt;-] coordinates {(0,0.6) (1.21,0.6)};
+\addplot[guideline,&lt;-] coordinates {(0,1.0) (1,1.0)};
+\addplot[guideline,&lt;-] coordinates {(0,1.4) (0.833,1.4)};
+\addplot[guideline,&lt;-] coordinates {(0,1.8) (0.682,1.8)};
+\addplot[guideline,&lt;-] coordinates {(0,2.2) (0.531,2.2)};
+\addplot[guideline,&lt;-] coordinates {(0,2.6) (0.361,2.6)};
+\addplot[guideline,&lt;-] coordinates {(0,0.4) (-1.354,0.4)};
+\addplot[guideline,&lt;-] coordinates {(0,0.8) (-1.097,0.8)};
+\addplot[guideline,&lt;-] coordinates {(0,1.2) (-0.913,1.2)};
+\addplot[guideline,&lt;-] coordinates {(0,1.6) (-0.756,1.6)};
+\addplot[guideline,&lt;-] coordinates {(0,2.0) (-0.608,2.0)};
+\addplot[guideline,&lt;-] coordinates {(0,2.4) (-0.451,2.4)};
+\addplot[guideline,&lt;-] coordinates {(0,2.8) (-0.251,2.8)};
 \addplot[openclosedinterval,color=secondcolor] coordinates {(0,0) (0,3)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -929,11 +929,11 @@ size=&gt;[240,240]
 $graph[$i]-&gt;lb('reset');
 for my $j (-2..6) {
 if (abs($j)&lt;10**(-10)) {next;}
-$graph[$i]->lb( new Label($j,0, $j,'black','center','top','large'));
+$graph[$i]-&gt;lb( new Label($j,0, $j,'black','center','top','large'));
 }
 for my $j (-2..2) {
 if (abs($j)&lt;10**(-10)) {next;}
-$graph[$i]->lb( new Label(0, $j, $j,'black','right','middle','large'));
+$graph[$i]-&gt;lb( new Label(0, $j, $j,'black','right','middle','large'));
 }
 $xpixel = (7 - (-3))/240;
 $ypixel = (3 - (-3))/240;
@@ -987,11 +987,11 @@ $range = Compute("(-inf,0)U(0,inf)");
               getting arbitrarily close to the <m>y</m>-axis, but never touching it.
             </p>
             <sidebyside widths="47%" permid="uyJ">
-              <image permid="biI" pg-name="$graph[0]" />
-              <description></description>
+              <image permid="biI" pg-name="$graph[0]"/>
+              <description/>
             </sidebyside>
             <p permid="YJB">
-              The domain of <m>h</m> is <var name="$domain" width="20" /> and the range of <m>h</m> is <var name="$range" width="20" />.
+              The domain of <m>h</m> is <var name="$domain" width="20"/> and the range of <m>h</m> is <var name="$range" width="20"/>.
             </p>
           </statement>
           <solution permid="wnW">
@@ -1008,7 +1008,7 @@ $range = Compute("(-inf,0)U(0,inf)");
               we will be able to get an output for <m>h</m>.
             </p>
             <sidebyside widths="47%" permid="aFS">
-              <image pg-name="$graph[1]" />
+              <image pg-name="$graph[1]"/>
             </sidebyside>
             <p permid="ACq">
               The one <m>x</m>-value that doesn't behave is <m>x=2</m>.
@@ -1023,7 +1023,7 @@ $range = Compute("(-inf,0)U(0,inf)");
               So the range is <m>(-\infty,0)\cup(0,\infty)</m>.
             </p>
             <sidebyside widths="47%" permid="GNb">
-              <image pg-name="$graph[2]" />
+              <image pg-name="$graph[2]"/>
             </sidebyside>
           </solution>
       </webwork>
@@ -1041,11 +1041,11 @@ $range = Compute("(-inf,0)U(0,inf)");
     <example permid="Cdi">
       <statement>
         <p permid="rSy">
-          Consider the function <m>k</m> given in <xref ref="table-range">Table</xref>.
+          Consider the function <m>k</m> given in <xref ref="table-range" />.
           What is the domain and range of <m>k</m>?
         </p>
         <table xml:id="table-range" permid="HpR">
-          <caption/>
+          <title/>
           <tabular permid="nxa">
             <row bottom="major">
               <cell><m>x</m></cell>
@@ -1081,35 +1081,35 @@ $range = Compute("(-inf,0)U(0,inf)");
           (for the domain)
           and <m>y</m>-values
           (for the range).
-          Also note that we could graph the information that we have about <m>k</m> in <xref ref="figure-table-range">Figure</xref>,
+          Also note that we could graph the information that we have about <m>k</m> in <xref ref="figure-table-range" />,
           and the visualization of
           <q>sliding ink</q>
           to determine domain and range still works.
         </p>
         <figure xml:id="figure-table-range" permid="Zfa">
-          <caption />
+          <caption/>
           <image width="47%" permid="TEj">
             <description>a graph showing the three ordered pairs from the table; each point has an arrow pointing to it's x-value to indicate elements of the domain and an arrow pointing to it's y-value to indicate elements of the range</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xmin=0,xmax=12,
 ymin=0,ymax=6,
-axis line style=->,
+axis line style=-&gt;,
 xtick={0,1,...,11},
 ytick={0,1,...,5},
 grid=none,
 ]
-\addplot[guideline,->] coordinates {(3,0) (3,4) (0,4)};
-\addplot[guideline,->] coordinates {(8,0) (8,5) (0,5)};
-\addplot[guideline,->] coordinates {(10,0) (10,5) (0,5)};
+\addplot[guideline,-&gt;] coordinates {(3,0) (3,4) (0,4)};
+\addplot[guideline,-&gt;] coordinates {(8,0) (8,5) (0,5)};
+\addplot[guideline,-&gt;] coordinates {(10,0) (10,5) (0,5)};
 \addplot [soliddot] coordinates {(3,4)} node[above] {$(3,4)$};
 \addplot [soliddot] coordinates {(8,5)} node[above] {$(3,4)$};
 \addplot [soliddot] coordinates {(10,5)} node[above] {$(3,4)$};
 \addplot [soliddot,color=secondcolor] coordinates {(3,0) (8,0) (10,0)};
 \addplot [soliddot,color=secondcolor] coordinates {(0,4) (0,5)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -1120,16 +1120,16 @@ grid=none,
     <exercisegroup cols="2" permid="hmc">
       <title>Review and Warmup</title>
       <exercise permid="lVV">
-        <webwork source="BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation10.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation10.pg"/>
       </exercise>
       <exercise permid="Sde">
-        <webwork source="BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation30.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation30.pg"/>
       </exercise>
       <exercise permid="ykn">
-        <webwork source="BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation20.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation20.pg"/>
       </exercise>
       <exercise permid="erw">
-        <webwork source="BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation40.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation40.pg"/>
       </exercise>
     </exercisegroup>
     <newpage/>
@@ -1178,13 +1178,13 @@ grid=none,
         <webwork source="BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph70.pg"/>
        </exercise> -->
       <exercise permid="QXL">
-        <webwork source="Math95/Functions/Functions20.pg" />
+        <webwork source="Math95/Functions/Functions20.pg"/>
       </exercise>
       <exercise permid="xeU">
-        <webwork source="Math95/Functions/Functions20.pg" />
+        <webwork source="Math95/Functions/Functions20.pg"/>
       </exercise>
       <exercise permid="dmd">
-        <webwork source="Math95/Functions/Functions21.pg" />
+        <webwork source="Math95/Functions/Functions21.pg"/>
       </exercise>
       <!-- <exercise permid="Jtm">
         <webwork source="Math95/Functions/Functions21.pg" />
@@ -1192,22 +1192,22 @@ grid=none,
       </exercisegroup>
       <exercisegroup cols="3">
       <exercise permid="pAv">
-        <webwork source="Math95/Functions/Functions22.pg" />
+        <webwork source="Math95/Functions/Functions22.pg"/>
       </exercise>
       <exercise permid="VHE">
-        <webwork source="Math95/Functions/Functions22.pg" />
+        <webwork source="Math95/Functions/Functions22.pg"/>
       </exercise>
       <exercise permid="BON">
-        <webwork source="Math95/RadicalFunctions/RadicalFunctionsGraphically90.pg" />
+        <webwork source="Math95/RadicalFunctions/RadicalFunctionsGraphically90.pg"/>
       </exercise>
       <exercise permid="hVW">
-        <webwork source="Math95/RadicalFunctions/RadicalFunctionsGraphically130.pg" />
+        <webwork source="Math95/RadicalFunctions/RadicalFunctionsGraphically130.pg"/>
       </exercise>
       <exercise permid="Odf">
-        <webwork source="Math95/RadicalFunctions/RadicalFunctionsGraphically140.pg" />
+        <webwork source="Math95/RadicalFunctions/RadicalFunctionsGraphically140.pg"/>
       </exercise>
       <exercise permid="uko">
-        <webwork source="Math95/RadicalFunctions/RadicalFunctionsGraphically150.pg" />
+        <webwork source="Math95/RadicalFunctions/RadicalFunctionsGraphically150.pg"/>
       </exercise>
       <exercise permid="arx">
         <webwork source="BasicAlgebra/FunctionBasics/FunctionValuesByGraph40.pg"/>

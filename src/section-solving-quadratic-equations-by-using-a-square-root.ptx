@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -10,7 +10,7 @@
   <title>Solving Quadratic Equations by Using a Square Root</title>
   <introduction permid="Plu">
     <p permid="ben">
-      In <xref ref="section-solving-quadratic-equations-by-factoring">Section</xref>,
+      In <xref ref="section-solving-quadratic-equations-by-factoring" />,
       we learned how to solve quadratic equations by factoring.
       In this section,
       we will learn how to solve some specific types of quadratic equations using the
@@ -67,8 +67,8 @@
       </statement>
       <solution permid="vsD">
         <p permid="EMp">
-          While we could factor and use the <xref ref="fact-zero-product-property" text="title" />,
-          here we are demonstrating <xref ref="fact-square-root-property" text="title" /> instead.
+          While we could factor and use the <xref ref="fact-zero-product-property" text="title"/>,
+          here we are demonstrating <xref ref="fact-square-root-property" text="title"/> instead.
           We need to isolate the squared quantity.
           <md permid="phS">
             <mrow>y^2-49\amp=0</mrow>
@@ -95,7 +95,7 @@
     <remark permid="Nwh">
       <p permid="CBD">
         Every solution to a quadratic equation can be checked,
-        as shown in <xref ref="example-solve-using-square-root-property">Example</xref>.
+        as shown in <xref ref="example-solve-using-square-root-property" />.
         In general, the process of checking is omitted from this section.
       </p>
     </remark>
@@ -106,7 +106,7 @@
       </p>
       <p permid="OPV">
         For example,
-        we could have solved the quadratic equation in <xref ref="example-solve-using-square-root-property">Example</xref> by factoring in this way:
+        we could have solved the quadratic equation in <xref ref="example-solve-using-square-root-property" /> by factoring in this way:
         <md permid="hDt">
           <mrow>y^2-49\amp=0</mrow>
           <mrow>(y+7)(y-7)\amp=0</mrow>
@@ -117,7 +117,7 @@
         </md>
       </p>
       <p permid="uXe">
-        However, as we'll see in <xref ref="example-solve-using-square-root-property-irrational-cannot-factor">Example</xref>,
+        However, as we'll see in <xref ref="example-solve-using-square-root-property-irrational-cannot-factor" />,
         we <em>cannot</em> solve <m>2n^2-3=0</m> by factoring,
         but we <em>can</em> use the square root property.
       </p>
@@ -127,25 +127,25 @@
           <setup>
 <pg-code>
 Context("LimitedRadical");
-Context()->flags->set(reduceConstants=>0,
-reduceConstantFunctions=>0,
-formatStudentAnswer=>parsed,
-showExtraParens=>0);
-parser::Assignment->Allow;
-Context()->operators->redefine(',',using=>',',from=>'Numeric');
-Context()->operators->redefine('or',using=>',',from=>'Numeric');
-Context()->operators->set(
-','=>{string=>' or ', TeX=>'\hbox{ or }'},
-'or'=>{string=>' or ', TeX=>'\hbox{ or }'}
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,
+reduceConstantFunctions=&gt;0,
+formatStudentAnswer=&gt;parsed,
+showExtraParens=&gt;0);
+parser::Assignment-&gt;Allow;
+Context()-&gt;operators-&gt;redefine(',',using=&gt;',',from=&gt;'Numeric');
+Context()-&gt;operators-&gt;redefine('or',using=&gt;',',from=&gt;'Numeric');
+Context()-&gt;operators-&gt;set(
+','=&gt;{string=&gt;' or ', TeX=&gt;'\hbox{ or }'},
+'or'=&gt;{string=&gt;' or ', TeX=&gt;'\hbox{ or }'}
 );
-Context()->lists->set(List => {separator => 'or'});
-Context()->strings->add("no real solutions"=>{},
-"no real solution"=>{alias=>'no real solutions'},
-"none"=>{alias=>'no real solutions'},
+Context()-&gt;lists-&gt;set(List =&gt; {separator =&gt; 'or'});
+Context()-&gt;strings-&gt;add("no real solutions"=&gt;{},
+"no real solution"=&gt;{alias=&gt;'no real solutions'},
+"none"=&gt;{alias=&gt;'no real solutions'},
 );
-Context()->variables->are(z=>'Real');
+Context()-&gt;variables-&gt;are(z=&gt;'Real');
 $answer = List(Formula("z=-9/2"),Formula("z=9/2"));
-$evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
+$evaluator=$answer-&gt;cmp(list_checker =&gt; ~~&amp;radicalListCheck);
 </pg-code>
           </setup>
           <statement>
@@ -156,7 +156,7 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
               Enter multiple answers in the form <c>z=1 or z=-1</c>. If you need to use the square root symbol, as in <m>\sqrt{17}</m>, type it as <c>sqrt(17)</c>.
             </instruction>
             <p permid="nsF">
-              <var name="$answer" evaluator="$evaluator" width="20" />
+              <var name="$answer" evaluator="$evaluator" width="20"/>
             </p>
           </statement>
           <solution permid="MqO">
@@ -219,25 +219,25 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
           <setup>
 <pg-code>
 Context("LimitedRadical");
-Context()->flags->set(reduceConstants=>0,
-reduceConstantFunctions=>0,
-formatStudentAnswer=>parsed,
-showExtraParens=>0);
-parser::Assignment->Allow;
-Context()->operators->redefine(',',using=>',',from=>'Numeric');
-Context()->operators->redefine('or',using=>',',from=>'Numeric');
-Context()->operators->set(
-','=>{string=>' or ', TeX=>'\hbox{ or }'},
-'or'=>{string=>' or ', TeX=>'\hbox{ or }'}
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,
+reduceConstantFunctions=&gt;0,
+formatStudentAnswer=&gt;parsed,
+showExtraParens=&gt;0);
+parser::Assignment-&gt;Allow;
+Context()-&gt;operators-&gt;redefine(',',using=&gt;',',from=&gt;'Numeric');
+Context()-&gt;operators-&gt;redefine('or',using=&gt;',',from=&gt;'Numeric');
+Context()-&gt;operators-&gt;set(
+','=&gt;{string=&gt;' or ', TeX=&gt;'\hbox{ or }'},
+'or'=&gt;{string=&gt;' or ', TeX=&gt;'\hbox{ or }'}
 );
-Context()->lists->set(List => {separator => 'or'});
-Context()->strings->add("no real solutions"=>{},
-"no real solution"=>{alias=>'no real solutions'},
-"none"=>{alias=>'no real solutions'},
+Context()-&gt;lists-&gt;set(List =&gt; {separator =&gt; 'or'});
+Context()-&gt;strings-&gt;add("no real solutions"=&gt;{},
+"no real solution"=&gt;{alias=&gt;'no real solutions'},
+"none"=&gt;{alias=&gt;'no real solutions'},
 );
-Context()->variables->are(q=>'Real');
+Context()-&gt;variables-&gt;are(q=&gt;'Real');
 $answer = List(Formula("q=-2sqrt(3)-2"),Formula("q=2sqrt(3)-2"));
-$evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
+$evaluator=$answer-&gt;cmp(list_checker =&gt; ~~&amp;radicalListCheck);
 </pg-code>
           </setup>
           <statement>
@@ -248,7 +248,7 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
               Enter multiple answers in the form <c>q=1 or q=-1</c>. If you need to use the square root symbol, as in <m>\sqrt{17}</m>, type it as <c>sqrt(17)</c>.
             </instruction>
             <p permid="zGX">
-              <var name="$answer" evaluator="$evaluator" width="20" />
+              <var name="$answer" evaluator="$evaluator" width="20"/>
             </p>
           </statement>
           <solution permid="sxX">
@@ -283,7 +283,7 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
       </webwork>
     </exercise>
     <p permid="QFi">
-      Remember that if a square root is in the denominator then we need to rationalize it like we learned in <xref ref="section-square-root-properties">Section</xref>.
+      Remember that if a square root is in the denominator then we need to rationalize it like we learned in <xref ref="section-square-root-properties" />.
       We will need to rationalize the denominator in the next example.
     </p>
     <example xml:id="example-solve-using-square-root-property-irrational-cannot-factor" permid="VaG">
@@ -339,7 +339,7 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
       <term>Pythagorean Theorem</term>.
     </p>
 
-      <sidebyside widths="50% 25%" margins="10%" valign="center">
+      <sidebyside widths="50% 25%" margins="10%" valign="middle">
       <p permid="lYR">
       The Pythagorean Theorem states that for any right triangle,
         the lengths of the three sides have the following relationship:
@@ -348,14 +348,14 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
         and the longest side <m>c</m> is called the <term>hypotenuse</term>.
       </p>
       <figure permid="XzN">
-        <caption></caption>
+        <caption/>
         <image permid="HVq">
           <description>a right triangle with sides labeled a, b, and c; side c is the hypotenuse</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+\begin{tikzpicture}[x=0.5cm,y=0.5cm]
 \draw (0,0) -- node[pos=0.5,below]{$a$} (3,0) --node[pos=0.5,right]{$b$} (3,4) --node[pos=0.5,above,sloped]{$c$} cycle;
 \draw (3,0.2) -- (2.8,0.2) -- (2.8,0);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -367,7 +367,7 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
         <stack>
         <p permid="cjG">
           Keisha is designing a wooden frame in the shape of a right triangle,
-          as shown in <xref ref="figure-wooden-frame">Figure</xref>.
+          as shown in <xref ref="figure-wooden-frame" />.
           The legs of the triangle are
           <quantity>
             <mag>3</mag><unit base="foot"/>
@@ -398,17 +398,17 @@ $evaluator=$answer->cmp(list_checker => ~~&amp;radicalListCheck);
       </p>
     </stack>
         <figure xml:id="figure-wooden-frame" permid="UFh">
-          <caption />
+          <caption/>
           <image permid="ocz">
             <description>a right triangle with a base labeled a=3 ft; the height is labeled b=4 ft; the hypotenuse is labeled c</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \draw (0,0) node[below left]{$B$} -- node[pos=0.5,below]{$a=3\,\text{ft}$}
 (3,0) node[below right]{$C$} -- node[pos=0.5,right]{$b=4\,\text{ft}$}
 (3,4) node[above right]{$A$} -- node[pos=0.5,above,sloped]{$c$}
 cycle;
 \draw (3,0.2) -- (2.8,0.2) -- (2.8,0);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -442,11 +442,11 @@ cycle;
           <image width="35%" permid="UjI">
             <description>a right angle with a diagonal line for the ladder; the base of the triangle is labeled a=4.5 ft;the height of the triangle is labeled b; the hypotenuse is labeled c=16.5 ft</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+\begin{tikzpicture}[x=0.5cm,y=0.5cm]
 \draw (-4.5,0) -- (-2.25,0) --node[pos=0.5,below]{$a=4.5\,\text{ft}$} (0,0) --node[pos=0.5,right]{$b$}  (0,7.95) -- (0,9);
 \draw[ultra thick] (-2.25,0) --node[sloped,pos=0.5,above]{$c=16.5\,\text{ft}$} (0,7.95);
 \draw (-0.6,0) -- (-0.6,0.6) -- (0,0.6);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -475,10 +475,10 @@ cycle;
           <image width="47%" permid="AqR">
             <description>a right triangle with a base of 5 units and a hypotenuse of 10 units;the height is labeled x</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+\begin{tikzpicture}[x=0.5cm,y=0.5cm]
 \draw (-8.7,0) --node[pos=0.5,below]{$x$} (0,0) --node[pos=0.5,right]{$5$} (0,5) --node[pos=0.5,sloped,above]{$10$} cycle;
 \draw (-0.4,0) -- (-0.4,0.4) -- (0,0.4);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -510,13 +510,13 @@ cycle;
           <image width="50%" permid="gya">
             <description>a rectangle for the TV with a diagonal line drawn and labeled c=50 in; the base width of the TV is labeled a and the height is labeled b</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+\begin{tikzpicture}[x=0.5cm,y=0.5cm]
 \draw (0,0) rectangle (4,3);
 \draw (0,0) -- (4,3);
 \draw [below] (2,0) node {$a$};
 \draw [right] (4,1.5) node {$b$};
 \draw (2,1.5) node [above, rotate=36.9]{$c=50\,\text{in}$};
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -535,13 +535,13 @@ cycle;
           <image width="50%" permid="MFj">
             <description>The previous image of the TV with the height labeled b=x in and the base width labeled a=4/3x in</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+\begin{tikzpicture}[x=0.5cm,y=0.5cm]
 \draw (0,0) rectangle (4,3);
 \draw (0,0) -- (4,3);
 \draw [below] (2,0) node {$a=\frac{4}{3}x$ in};
 \draw [right] (4,1.5) node {$b=x$ in};
 \draw (2,1.5) node [above, rotate=36.9]{$c=50\,\text{in}$};
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -597,14 +597,14 @@ cycle;
           <image permid="sMs">
             <description>a sketch of a bench with an arc drawn on the backrest of the bench</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \draw[color=black, very thick] (0,0) -- (0,2) -- (1,2.5) -- (1,1.5) -- (0,1) -- (3,1) -- (3,0) -- (3,1) -- (3,2) -- (4,2.5) -- (4,0.5) -- (4,1.5) -- (3,1) -- (4,1.5) -- (4,3) --(1,3) -- (1,1.5) -- (3,1.5);
 \draw[color=blue, very thick,fill=gray!60!white] (1,2.5) -- (1,3) -- (4,3) -- (4,2.5) -- (1,2.5);
 \draw[color=black, dotted, very thick] (3,1.5) -- (4,1.5);
 \draw[color=black, dotted, very thick] (1,1.5) -- (1,1);
 \draw[color=black, very thick] (1,0.5) -- (1,1);
 \draw[dashed, thick, color=firstcolor] (1,2.5) arc (126.87:53.13:2.5);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -613,7 +613,7 @@ cycle;
           <p permid="dYT">
             He wanted the top of the bench back to be a perfect portion of a circle,
             in the shape of an arc,
-            as in <xref ref="figure-bench-back-board">Figure</xref>.
+            as in <xref ref="figure-bench-back-board" />.
             (Note that this won't be a half-circle,
             just a small portion of a circular edge.)
             He started with a rectangular board <m>3</m> inches wide and <m>48</m> inches long,
@@ -626,12 +626,12 @@ cycle;
             <image permid="YTB">
               <description>the bench backrest board labeled 48 in by 3 in and a large circle that makes the arc on the board;there is a dot in the center of the circle</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[x=1pt,y=1pt]
+\begin{tikzpicture}[x=1pt,y=1pt]
 \draw[color=black, fill=firstcolor!60!white] (88.92,-40) -- (97.5,-40) -- (97.5,40) --node[pos=0.5,above]{$3\,\text{in}$} (88.92,40) --node[pos=0.5,left]{$48\,\text{in}$} cycle;
 \node[draw,circle,fill=black,inner sep=2pt] at (0,0) {};
 \node[below] at (0,0) {circle center};
 \draw[dashed, thin, color=secondcolor] (97.5,0) arc (0:360:97.5);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -650,18 +650,18 @@ cycle;
           <image width="47%" permid="FaK">
             <description>a diagram using the radii of the circle to form a triangle with the bench back board; The base of the triangle is a radius that is horizontal from the center of the circle to the bottom of the backrest, labeled x-3; The hypotenuse is another radius from the center of the circle to the corner of the backrest, labeled x; the height of the triangle is labeled 24 in from the center to edge of the backrest</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[axis x line=none, axis y line=none, xmin=-10, xmax=100, ymin=-50, ymax=50]
 \addplot[color=black, fill=gray!60!white] coordinates{(88.92,-40)(97.5,-40)(97.5,40)(88.92,40)(88.92,-40)};
-\addplot[color=blue, dashed,<->] coordinates{(88.92,-40)(0,0)};
-\addplot[color=orange!70!black, thick, dashed,<->] coordinates{(0,0)(88.92,40)} node [below, pos=0.5, rotate=24.22,color=black]{$x$};
-\addplot[color=blue!70!black, thick, dashed,<->] coordinates{(0,0)(88.92,0)} node [above, pos=0.6]{$x-3$};
-\addplot[color=red!60!black, thick, dashed,<->] coordinates{(88.92,40)(88.92,0)} node [left, pos=0.5]{$24\,\text{in}$};
-\addplot[color=green!40!black, dashed,<->] coordinates{(97.5,0)(88.92,0)} node [above, pos=0.5]{$3\,\text{in}$};
+\addplot[color=blue, dashed,&lt;-&gt;] coordinates{(88.92,-40)(0,0)};
+\addplot[color=orange!70!black, thick, dashed,&lt;-&gt;] coordinates{(0,0)(88.92,40)} node [below, pos=0.5, rotate=24.22,color=black]{$x$};
+\addplot[color=blue!70!black, thick, dashed,&lt;-&gt;] coordinates{(0,0)(88.92,0)} node [above, pos=0.6]{$x-3$};
+\addplot[color=red!60!black, thick, dashed,&lt;-&gt;] coordinates{(88.92,40)(88.92,0)} node [left, pos=0.5]{$24\,\text{in}$};
+\addplot[color=green!40!black, dashed,&lt;-&gt;] coordinates{(97.5,0)(88.92,0)} node [above, pos=0.5]{$3\,\text{in}$};
 \addplot[color=black, only marks] coordinates{(0,0)(88.92,0)} node[pos=0, above]{center};
 \addplot[variable=\t, domain=0:360, samples=100, dashed, thin, color=blue]({97.5*cos(t)}, {97.5*sin(t)});
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -689,117 +689,117 @@ cycle;
     <exercisegroup cols="3" permid="NRG">
       <title>Solving Quadratic Equations with the Square Root Property</title>
       <exercise permid="Gnh">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad30.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad30.pg"/>
       </exercise>
       <exercise permid="muq">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad30.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad30.pg"/>
       </exercise>
       <exercise permid="SBz">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad35.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad35.pg"/>
       </exercise>
       <exercise permid="yII">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad35.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad35.pg"/>
       </exercise>
       <exercise permid="ePR">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad40.pg" seed="706" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad40.pg" seed="706"/>
       </exercise>
       <exercise permid="KXa">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad40.pg" seed="707" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad40.pg" seed="707"/>
       </exercise>
       <exercise permid="rej">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad45.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad45.pg"/>
       </exercise>
       <exercise permid="Xls">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad45.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad45.pg"/>
       </exercise>
       <exercise permid="DsB">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad50.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad50.pg"/>
       </exercise>
       <exercise permid="jzK">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad50.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad50.pg"/>
       </exercise>
       <exercise permid="PGT">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad55.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad55.pg"/>
       </exercise>
       <exercise permid="vOc">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad55.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad55.pg"/>
       </exercise>
       <exercise permid="bVl">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad60.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad60.pg"/>
       </exercise>
       <exercise permid="Icu">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad60.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad60.pg"/>
       </exercise>
       <exercise permid="ojD">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad70.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad70.pg"/>
       </exercise>
       <exercise permid="UqM">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad70.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad70.pg"/>
       </exercise>
       <exercise permid="AxV">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg"/>
       </exercise>
       <exercise permid="gFe">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad71.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2">
       <exercise permid="MMn">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad75.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad75.pg"/>
       </exercise>
       <exercise permid="sTw">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad75.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad75.pg"/>
       </exercise>
       <exercise permid="ZaF">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg"/>
       </exercise>
       <exercise permid="FhO">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad80.pg"/>
       </exercise>
       <exercise permid="loX">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad85.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad85.pg"/>
       </exercise>
       <exercise permid="Rwg">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad85.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad85.pg"/>
       </exercise>
       <exercise permid="xDp">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad81.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad81.pg"/>
       </exercise>
       <exercise permid="dKy">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad81.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad81.pg"/>
       </exercise>
       <exercise permid="JRH">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad90.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad90.pg"/>
       </exercise>
       <exercise permid="pYQ">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad90.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad90.pg"/>
       </exercise>
       <exercise permid="WfZ">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad115.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad115.pg"/>
       </exercise>
       <exercise permid="Cni">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad115.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad115.pg"/>
       </exercise>
       <exercise permid="iur">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad116.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad116.pg"/>
       </exercise>
       <exercise permid="OBA">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad116.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad116.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="tYP">
       <title>Pythagorean Theorem Applications</title>
       <exercise permid="uIJ">
-        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem10.pg" />
+        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem10.pg"/>
       </exercise>
       <exercise permid="aPS">
-        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem10.pg" />
+        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem10.pg"/>
       </exercise>
       <exercise permid="GXb">
-        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem20.pg" />
+        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem20.pg"/>
       </exercise>
       <exercise permid="nek">
-        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem20.pg" />
+        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem20.pg"/>
       </exercise>
 <!--Specified seeds give triangles wider than they are tall; better for PDF page fit -->
       <exercise permid="Tlt">
@@ -821,16 +821,16 @@ cycle;
         <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem50.pg" seed="10"/>
       </exercise>
       <exercise permid="Ecv">
-        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem60.pg" />
+        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem60.pg"/>
       </exercise>
       <exercise permid="kjE">
-        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem60.pg" />
+        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem60.pg"/>
       </exercise>
       <exercise permid="QqN">
-        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem70.pg" />
+        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem70.pg"/>
       </exercise>
       <exercise permid="wxW">
-        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem70.pg" />
+        <webwork source="BasicAlgebra/PythagoreanTheorem/pythagoreanTheorem70.pg"/>
       </exercise>
     </exercisegroup>
     <!-- <exercisegroup permid="afY">

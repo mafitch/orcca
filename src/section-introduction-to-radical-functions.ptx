@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -10,12 +10,12 @@
   <title>Introduction to Radical Functions</title>
   <introduction permid="BMj">
     <p permid="OoW">
-      We learned the basics of square roots in <xref ref="section-square-root-properties">Section</xref>.
+      We learned the basics of square roots in <xref ref="section-square-root-properties" />.
       The study of radicals is much broader than our first attempt covered and we need to expand our investigation.
-      To do so, we will first look at an example that makes use of a topic covered in <xref ref="section-solving-quadratic-equations-by-using-a-square-root">Section</xref>.
+      To do so, we will first look at an example that makes use of a topic covered in <xref ref="section-solving-quadratic-equations-by-using-a-square-root" />.
     </p>
     <p permid="uwf">
-      A <hash/>10 washer has a
+      A #10 washer has a
       <quantity>
         <mag>5.6</mag><unit base="meter" prefix="milli"/>
       </quantity>
@@ -31,11 +31,11 @@
     </p>
     <sidebyside width="37%">
     <figure permid="SYP">
-      <caption>A Diagram of a <hash/>10 Washer</caption>
+      <caption>A Diagram of a #10 Washer</caption>
       <image width="65%" permid="Mek">
-        <description></description>
+        <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[x=0.75cm,y=0.75cm]
+\begin{tikzpicture}[x=0.75cm,y=0.75cm]
 %label extensions
 \draw[dashed] (-9.2,-3) -- ++(0,3);
 \draw[dashed] (-3.6,-3) -- ++(0,3);
@@ -64,7 +64,7 @@
 %labels
 \draw[dashed] (-12.8,-3) -- ++(0,6) -- node[pos=0.5,above] {outer diameter $d$} ++(12.8,0) -- ++(0,-6);
 \draw[dashed] (-9.2,0) -- ++(0,2) -- node[pos=0.5,above] {inner diameter $5.6\,\text{mm}$} ++(5.6,0) -- ++(0,-2);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
       </image>
     </figure>
@@ -99,21 +99,21 @@
         </me>
  <!-- todo: fix this me to not be bold for some reason... --> This formula finds the diameter that the washer must be when you input the amount of steel used,
         <m>M</m>.
-        <xref ref="figure-steel-washer-diameter">Figure</xref>
+        <xref ref="figure-steel-washer-diameter" />
         shows a graph of this relationship.
       </p>
       <figure xml:id="figure-steel-washer-diameter" permid="pMm">
         <caption>A Graph of <m>d=\sqrt{\frac{M+238}{7.59}}</m></caption>
         <image width="47%" permid="slt">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis} [xlabel={$M$}, ylabel={$d$}, xmin=-400, xmax=1200, ymin=-3, ymax=15, xtick={-200,0,...,1000}, ytick={3,6,...,12}, minor xtick=, minor ytick=]
 \addplot[primarycurve,-{Kite}, variable=\t, domain=0:13.76] ({7.59*t^2-238},{t}) node[below, pos=0.5, sloped] {$d=\sqrt{\frac{M+238}{7.59}}$};
 \addplot[soliddot, color=firstcolor] coordinates{(-238,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -145,9 +145,9 @@
       <figure permid="CaE">
         <caption>A Revised Graph of <m>d=\sqrt{\frac{M+238}{7.59}}</m></caption>
         <image width="47%" permid="YsC">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis} [
 xlabel={$M$},
 ylabel={$d$},
@@ -164,7 +164,7 @@ minor ytick=]
 \addplot[soliddot, color=secondcolor] coordinates {(1000,12.77)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -250,7 +250,7 @@ minor ytick=]
                 and look at the graph of <m>l=\sqrt{A}</m>.
               </p>
               <table permid="VxW">
-                <caption>Values of <m>f(A)=\sqrt{A}</m></caption>
+                <title>Values of <m>f(A)=\sqrt{A}</m></title>
                 <tabular permid="hMo">
                   <col halign="center"/>
                   <col halign="center"/>
@@ -291,8 +291,8 @@ minor ytick=]
               <figure permid="iDm">
                 <caption>Graph of <m>l=\sqrt{A}</m></caption>
                 <image width="47%" permid="EzL">
-                  <description></description>
-                   <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ymin=-1,ymax=4,xmin=-1,xmax=10, ytick={0,1,...,3}, minor ytick={0,1,...,3}, xtick={0,1,...,9}, minor xtick={0,1,...,9}, xlabel={$A$}, ylabel={$l$}] \addplot [primarycurve, variable=\t, -{Kite}, domain=0:sqrt(10)] ({t^2},{t}); \addplot[soliddot, color=secondcolor] coordinates {(6.25,2.5)} node[above left] {$(6.25,2.5)$}; \addplot[soliddot] coordinates {(0,0) (1,1) (4,2) (9,3)}; \end{axis} \end{tikzpicture} ]]> </latex-image>
+                  <description/>
+                   <latex-image> \begin{tikzpicture} \begin{axis}[ymin=-1,ymax=4,xmin=-1,xmax=10, ytick={0,1,...,3}, minor ytick={0,1,...,3}, xtick={0,1,...,9}, minor xtick={0,1,...,9}, xlabel={$A$}, ylabel={$l$}] \addplot [primarycurve, variable=\t, -{Kite}, domain=0:sqrt(10)] ({t^2},{t}); \addplot[soliddot, color=secondcolor] coordinates {(6.25,2.5)} node[above left] {$(6.25,2.5)$}; \addplot[soliddot] coordinates {(0,0) (1,1) (4,2) (9,3)}; \end{axis} \end{tikzpicture}  </latex-image>
                 </image>
               </figure>
             </sidebyside>
@@ -354,9 +354,9 @@ minor ytick=]
           <figure permid="QzI">
             <caption>Graph of <m>g(x)=\sqrt{2x-4}+1</m></caption>
             <image permid="kGU">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-1,ymax=6,xmin=-1,xmax=10,
 ytick={0,1,...,5}, xtick={0,1,...,9}]
 \addplot [primarycurve, -, domain=2:3.1] {sqrt(2*x-4)+1};
@@ -364,7 +364,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 \addplot[soliddot] coordinates {(2,1)} node [below, color=firstcolor] {$(2,1)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -408,15 +408,15 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
           <figure permid="VjB">
             <caption>Graph of <m>h(x)=2-3\sqrt{8-5x}</m></caption>
             <image width="47%" permid="QOd">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-30,ymax=10,xmin=-20,xmax=10, ytick={-25,-20,-15,-10,-5,2,5}, xtick={-15,-10,...,5}, minor xtick=, minor ytick=]
 \addplot [primarycurve, variable=\t, {Kite}-, domain=-29.177:2] ({72-(2-t)^2)/45},{t});
 \addplot[soliddot] coordinates {(8/5,2)} node [above right, color=firstcolor] {$(8/5,2)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -511,7 +511,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
     <title>The Distance Formula</title>
     <p permid="zfY">
       A square root is used in calculating the distance between two points on a coordinate plane.
-      We learned the Pythagorean Theorem in <xref ref="subsection-pythagorean-theorem">Section</xref>.
+      We learned the Pythagorean Theorem in <xref ref="subsection-pythagorean-theorem" />.
       In a coordinate plane,
       we can use the Pythagorean Theorem to calculate the distance between any two points.
     </p>
@@ -529,9 +529,9 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
           <figure permid="ZTu">
             <caption>Calculating the Distance Between <m>(2,3)</m> and <m>(5,7)</m></caption>
             <image permid="wVm">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-1,ymax=9,xmin=-1,xmax=9, ytick={0,1,...,8}, xtick={0,1,...,8}]
 \draw [dashed, color=firstcolor] (axis cs: 2,3) -- (axis cs: 5,3) -- (axis cs: 5,7);
 \node[below, color=firstcolor] at (axis cs: 3.5,3) {$5-2=3$};
@@ -542,7 +542,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 \addplot [soliddot, color=secondcolor] coordinates {(5,7)} node[above right] {$(5,7)$};
 \draw [color=firstcolor, thin] (axis cs: 5,3.3) -- (axis cs: 4.7,3.3) -- (axis cs: 4.7,3);
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -591,9 +591,9 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
           <figure permid="SoV">
             <caption>Calculating the Distance Between <m>(2,3)</m> and <m>(5,7)</m></caption>
             <image width="70%" permid="dcv">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-1,ymax=9,xmin=-1,xmax=9, ytick={0,1,...,8}, xtick={0,1,...,8}]
 \draw [dashed, color=firstcolor] (axis cs: 2,3) -- (axis cs: 5,3) -- (axis cs: 5,7);
 \node[below, color=firstcolor] at (axis cs: 3.5,3) {$5-2=3$};
@@ -604,16 +604,16 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 \addplot [soliddot, color=secondcolor] coordinates {(5,7)} node[above right] {$(5,7)$};
 \draw [color=firstcolor, thin] (axis cs: 5,3.3) -- (axis cs: 4.7,3.3) -- (axis cs: 4.7,3);
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
           <figure permid="ywe">
             <caption>Calculating the Distance Between <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m></caption>
             <image width="70%" permid="JjE">
-              <description></description>
+              <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-1,ymax=9,xmin=-1,xmax=9, ytick=\empty, xtick=\empty, minor xtick=, minor ytick=]
 \draw [dashed, color=firstcolor] (axis cs: 2,3) -- (axis cs: 5,3) -- (axis cs: 5,7);
 \node[below, color=firstcolor] at (axis cs: 3.5,3) {$x_2-x_1$};
@@ -624,7 +624,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 \addplot [soliddot, color=secondcolor] coordinates {(5,7)} node[above right] {$(x_2,y_2)$};
 \draw [color=firstcolor, thin] (axis cs: 5,3.3) -- (axis cs: 4.7,3.3) -- (axis cs: 4.7,3);
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -744,7 +744,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         with a <em>reciprocal</em> power.
         For example, to calculate <m>\sqrt[3]{8}</m>,
         you may type <c>8^(1/3)</c>.
-        We will explain why <m>\sqrt[3]{8}=8^{\frac{1}{3}}</m> in <xref ref="section-radical-expressions-and-rational-exponents">Section</xref>.
+        We will explain why <m>\sqrt[3]{8}=8^{\frac{1}{3}}</m> in <xref ref="section-radical-expressions-and-rational-exponents" />.
         For now, just learn how to use a calculator to calculate the cube root of a given number.
       </p>
     </remark>
@@ -764,7 +764,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
     </p>
     <sidebyside widths="42% 37%" margins="5%" permid="QVh">
       <table permid="BFf">
-        <caption>Values of <m>g(x)=\sqrt[3]{x}</m></caption>
+        <title>Values of <m>g(x)=\sqrt[3]{x}</m></title>
         <tabular permid="NTx">
           <col halign="center"/>
           <col halign="center"/>
@@ -804,15 +804,15 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
       <figure permid="ihN">
         <caption>Graph of <m>g(x)=\sqrt[3]{x}</m></caption>
         <image permid="pqN">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-3,ymax=3,xmin=-10,xmax=10, ytick={-2,-1,...,2}, minor ytick=, xtick={-8,-6,...,8}, minor xtick=]
 \addplot [variable=\t, primarycurve, domain=-2.154:2.154] ({t^3},{t});
 \addplot[soliddot] coordinates {(-8,-2) (-1,-1) (0,0) (1,1) (8,2)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -1016,7 +1016,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         </p>
       </solution>
     </example>
-<!-- <p>In the following table, we will summarize the differences between <m>f(x)=x^m</m> where <m>m</m> is even and <m>g(x)=x^n</m> where <m>n</m> is an odd number. The content of this table is very similar to content in <xref ref="table-square-root-cube-root-comparison">Table</xref>.</p>
+<!-- <p>In the following table, we will summarize the differences between <m>f(x)=x^m</m> where <m>m</m> is even and <m>g(x)=x^n</m> where <m>n</m> is an odd number. The content of this table is very similar to content in <xref ref="table-square-root-cube-root-comparison" />.</p>
 <table>
 <caption>Differences of <m>f(x)=\sqrt[m]{x}</m> where <m>m</m> is even and <m>g(x)=\sqrt[n]{x}</m> where <m>n</m> is odd</caption>
 <tabular>
@@ -1103,67 +1103,67 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
     <exercisegroup cols="2" permid="xxP">
       <title>Review and Warmup</title>
       <exercise permid="Waz">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg"/>
       </exercise>
       <exercise permid="ChI">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg"/>
       </exercise>
       <exercise permid="ioR">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg"/>
       </exercise>
       <exercise permid="Owa">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg"/>
       </exercise>
       <exercise permid="uDj">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg"/>
       </exercise>
       <exercise permid="aKs">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg"/>
       </exercise>
       <exercise permid="GRB">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots10.pg"/>
       </exercise>
       <exercise permid="mYK">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots20.pg"/>
       </exercise>
       <exercise permid="TfT">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg"/>
       </exercise>
       <exercise permid="znc">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg"/>
       </exercise>
       <exercise permid="ful">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical20.pg"/>
       </exercise>
       <exercise permid="LBu">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical20.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="dEY">
       <title>Domain</title>
       <exercise permid="rID">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions225.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions225.pg"/>
       </exercise>
       <exercise permid="XPM">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions225.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions225.pg"/>
       </exercise>
       <exercise permid="DWV">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions235.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions235.pg"/>
       </exercise>
       <exercise permid="kee">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions235.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions235.pg"/>
       </exercise>
       <exercise permid="Qln">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions240.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions240.pg"/>
       </exercise>
       <exercise permid="wsw">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions240.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions240.pg"/>
       </exercise>
       <exercise permid="czF">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg"/>
       </exercise>
       <exercise permid="IGO">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions245.pg"/>
       </exercise>
 <!-- <exercise>
 <webwork source="BasicAlgebra/FunctionBasics/Functions217.pg" />
@@ -1173,16 +1173,16 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 </exercise> -->
 <!-- todo: ross thinks that all of the exercises below here are MTH111 problems and should be cut. -->
       <exercise permid="oNX">
-        <webwork source="Math95/RadicalFunctions/RadicalFunctions1.pg" />
+        <webwork source="Math95/RadicalFunctions/RadicalFunctions1.pg"/>
       </exercise>
       <exercise permid="UVg">
-        <webwork source="Math95/RadicalFunctions/RadicalFunctions1.pg" />
+        <webwork source="Math95/RadicalFunctions/RadicalFunctions1.pg"/>
       </exercise>
       <exercise permid="Bcp">
-        <webwork source="Math95/RadicalFunctions/RadicalFunctions2.pg" />
+        <webwork source="Math95/RadicalFunctions/RadicalFunctions2.pg"/>
       </exercise>
       <exercise permid="hjy">
-        <webwork source="Math95/RadicalFunctions/RadicalFunctions2.pg" />
+        <webwork source="Math95/RadicalFunctions/RadicalFunctions2.pg"/>
       </exercise>
 <!-- <exercise>
 <webwork source="Math95/RadicalFunctions/RadicalFunctions3.pg" />
@@ -1503,16 +1503,16 @@ $range = Compute("($c,inf)");
     <exercisegroup permid="JMh">
       <title>Applications</title>
       <exercise permid="NqH">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg"/>
       </exercise>
       <exercise permid="txQ">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg"/>
       </exercise>
       <exercise permid="ZEZ">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication20.pg"/>
       </exercise>
       <exercise permid="FMi">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication20.pg"/>
       </exercise>
 <!-- <exercise>
 <webwork >
@@ -1654,16 +1654,16 @@ $gr->lb( new Label($d1-$marksep[0]/8, $s1+$marksep[1]/8, "($d1R,$s1)",'red','rig
     <exercisegroup cols="2" permid="pTq">
       <title>Distance Formula</title>
       <exercise permid="lTr">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad135.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad135.pg"/>
       </exercise>
       <exercise permid="SaA">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad135.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad135.pg"/>
       </exercise>
       <exercise permid="yhJ">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad140.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad140.pg"/>
       </exercise>
       <exercise permid="eoS">
-        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad140.pg" />
+        <webwork source="BasicAlgebra/QuadraticEquations/solveQuad140.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>

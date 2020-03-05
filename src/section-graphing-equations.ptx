@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -15,17 +15,17 @@
   <p permid="nsJ">
     A <term>graph</term><idx><h>graph</h><h>of an equation</h></idx> of an equation is a picture of that equation's solution set.
     For example,
-    the graph of <m>y=-2x+3</m> is shown in <xref ref="figure-graph-line-full">Figure</xref>.
+    the graph of <m>y=-2x+3</m> is shown in <xref ref="figure-graph-line-full" />.
     The graph plots the ordered pairs whose coordinates make <m>y=-2x+3</m> true.
-    <xref ref="table-check-points-for-line">Table</xref>
+    <xref ref="table-check-points-for-line" />
     shows a few points that make the equation true.
   </p>
   <sidebyside widths="38% 56%" margins="0%" permid="GXf">
     <table xml:id="table-check-points-for-line" permid="vHc">
-      <caption />
+      <title/>
       <tabular permid="aIS">
-        <col halign="center" />
-        <col halign="center" />
+        <col halign="center"/>
+        <col halign="center"/>
         <row>
           <cell><m>y=-2x+3</m></cell>
           <cell><m>(x,y)</m></cell>
@@ -57,15 +57,15 @@
       </tabular>
     </table>
     <p permid="Llz">
-      <xref ref="table-check-points-for-line">Table</xref>
+      <xref ref="table-check-points-for-line" />
       tells us that the points <m>(-1,5)</m>,
       <m>(0,3)</m>, <m>(1,1)</m>, <m>(2,-1)</m>, <m>(3,-3)</m>,
       and <m>(4,-5)</m> are all solutions to the equation <m>y=-2x+3</m>,
       and so they should all be shaded as part of that equation's graph.
-      You can see them in <xref ref="figure-graph-line-sparse">Figure</xref>.
+      You can see them in <xref ref="figure-graph-line-sparse" />.
       But there are many more points that make the equation true.
-      More points are plotted in <xref ref="figure-graph-line-more">Figure</xref>.
-      Even more points are plotted in <xref ref="figure-graph-line-full">Figure</xref> <mdash /> so many,
+      More points are plotted in <xref ref="figure-graph-line-more" />.
+      Even more points are plotted in <xref ref="figure-graph-line-full" /> <mdash/> so many,
       that together the points look like a straight line.
     </p>
   </sidebyside>
@@ -77,7 +77,7 @@
         <image permid="YjL">
           <description>a Cartesian graph of the points listed in the text that are solutions to the equation y=-2x+3;</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[soliddot] coordinates {(-1,5)} node[rotate=30,left]{$(-1,5)$};
 \addplot[soliddot] coordinates {(0,3)} node[rotate=30,right]{$(0,3)$};
@@ -87,21 +87,21 @@
 \addplot[soliddot] coordinates {(4,-5)} node[rotate=30,right]{$(4,-5)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
       <figure xml:id="figure-graph-line-more" permid="XzR">
-        <caption>More points<ellipsis /></caption>
+        <caption>More points<ellipsis/></caption>
         <image permid="EqU">
           <description>a second Cartesian graph showing all of the points listed in the first graph and additional solutions to y=-2x+3 between those points</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[soliddot] coordinates {(-1.5,6) (-1.2,5.4) (-1,5) (-0.8,4.6) (-0.3, 3.6) (0,3) (0.4,2.2) (1,1) (1.1,0.8) (1.7,-0.4) (2,-1) (2.3,-1.6) (2.6,-2.2) (3,-3) (3.5,-4) (4,-5) (4.3,-5.6) (4.8,-6.6)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -110,12 +110,12 @@
         <image permid="kyd">
           <description>a third Cartesian graph showing so many points that are solutions of the line y=-2x+3 that they overlap and form a solid line</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-2:5,soliddot,samples=50] {-2*x+3};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -132,7 +132,7 @@
     <webwork>
         <setup>
 <pg-code>
-Context()->variables->add(y=>'Real');
+Context()-&gt;variables-&gt;add(y=&gt;'Real');
 $y=-5;
 $f=Compute("-2(4)+3");
 $truefalse=PopUp(['?','true','false'],'true');
@@ -140,28 +140,28 @@ $truefalse=PopUp(['?','true','false'],'true');
         </setup>
         <statement>
           <p permid="wcB">
-            The point <m>(4,-5)</m> is on the graph in <xref ref="figure-graph-line-full">Figure</xref>.
+            The point <m>(4,-5)</m> is on the graph in <xref ref="figure-graph-line-full" />.
             What happens when you substitute these values into the equation <m>y=-2x+3</m>?
           </p>
           <sidebyside permid="Tlx">
             <tabular permid="GQb">
-              <col halign="right" />
-              <col halign="center" />
-              <col halign="left" />
+              <col halign="right"/>
+              <col halign="center"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>y</m></cell>
                 <cell><m>=</m></cell>
                 <cell><m>-2x+3</m></cell>
               </row>
               <row>
-                <cell><var name="$y" width="1" /></cell>
+                <cell><var name="$y" width="1"/></cell>
                 <cell><m>=</m></cell>
-                <cell><var name="$f" width="10" /></cell>
+                <cell><var name="$f" width="10"/></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="cjK">
-            This equation is <var name="$truefalse" form="popup" />.
+            This equation is <var name="$truefalse" form="popup"/>.
           </p>
         </statement>
     </webwork>
@@ -170,12 +170,12 @@ $truefalse=PopUp(['?','true','false'],'true');
     <webwork>
         <setup>
 <pg-code>
-Context()->variables->add(y=>'Real');
+Context()-&gt;variables-&gt;add(y=&gt;'Real');
 @y=(-2,-7);
 @x=(5,-10);
-Context()->flags->set(reduceConstants=>0);
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
 $f=Compute("-(3/5)x+1");
-@right=map{$f->substitute(x=>Formula($x[$_]))}(0,1);
+@right=map{$f-&gt;substitute(x=&gt;Formula($x[$_]))}(0,1);
 @truefalse=(PopUp(['?','true','false'],1),PopUp(['?','true','false'],2));
 @shaded=(PopUp(['?','part of','not part of'],1),PopUp(['?','part of','not part of'],2));
 </pg-code>
@@ -190,47 +190,47 @@ $f=Compute("-(3/5)x+1");
           </p>
           <sidebyside permid="zsG">
             <tabular permid="mXk">
-              <col halign="right" />
-              <col halign="center" />
-              <col halign="left" />
+              <col halign="right"/>
+              <col halign="center"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>y</m></cell>
                 <cell><m>=</m></cell>
                 <cell><m>-\frac{3}{5}x+1</m></cell>
               </row>
               <row>
-                <cell><var name="$y[0]" width="1" /></cell>
+                <cell><var name="$y[0]" width="1"/></cell>
                 <cell><m>=</m></cell>
-                <cell><var name="$right[0]" width="10" /></cell>
+                <cell><var name="$right[0]" width="10"/></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="UFl">
-            This equation is <var name="$truefalse[0]" form="popup" /> and <m>(5,-2)</m> is <var name="$shaded[0]" form="popup" /> the graph of <m>y=-\frac{3}{5}x+1</m>.
+            This equation is <var name="$truefalse[0]" form="popup"/> and <m>(5,-2)</m> is <var name="$shaded[0]" form="popup"/> the graph of <m>y=-\frac{3}{5}x+1</m>.
           </p>
           <p permid="AMu">
             At <m>(-10,-7)</m>:
           </p>
           <sidebyside permid="fzP">
             <tabular permid="Tet">
-              <col halign="right" />
-              <col halign="center" />
-              <col halign="left" />
+              <col halign="right"/>
+              <col halign="center"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>y</m></cell>
                 <cell><m>=</m></cell>
                 <cell><m>-\frac{3}{5}x+1</m></cell>
               </row>
               <row>
-                <cell><var name="$y[1]" width="1" /></cell>
+                <cell><var name="$y[1]" width="1"/></cell>
                 <cell><m>=</m></cell>
-                <cell><var name="$right[1]" width="10" /></cell>
+                <cell><var name="$right[1]" width="10"/></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="gTD">
-            This equation is <var name="$truefalse[1]" form="popup" /> and
-            <m>(-10,-7)</m> is <var name="$shaded[1]" form="popup" /> the graph of <m>y=-\frac{3}{5}x+1</m>.
+            This equation is <var name="$truefalse[1]" form="popup"/> and
+            <m>(-10,-7)</m> is <var name="$shaded[1]" form="popup"/> the graph of <m>y=-\frac{3}{5}x+1</m>.
           </p>
         </statement>
         <solution permid="BhT">
@@ -272,7 +272,7 @@ $f=Compute("-(3/5)x+1");
       <caption>Making a table for <m>y=-2x+5</m></caption>
       <sidebyside widths="37% 37%" margins="10%" permid="LGY">
         <table permid="bOl">
-          <caption>Set up the table</caption>
+          <title>Set up the table</title>
           <tabular valign="top" bottom="minor" permid="zlC">
             <col halign="right" right="minor"/>
             <col halign="right" right="minor"/>
@@ -310,7 +310,7 @@ $f=Compute("-(3/5)x+1");
           </tabular>
         </table>
         <table permid="HVu">
-          <caption>Complete the table</caption>
+          <title>Complete the table</title>
           <tabular valign="top" bottom="minor" permid="fsL">
             <col halign="right" right="minor"/>
             <col halign="right" right="minor"/>
@@ -364,7 +364,7 @@ $f=Compute("-(3/5)x+1");
           <image permid="QFm">
             <description>a Cartesian grid with points (-2,9),(-1,7),(0,5),(1,3),(2,1)</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-1,ymax=10,
 xtick=,
 minor xtick=,
@@ -377,7 +377,7 @@ minor ytick=,]
 \addplot[soliddot] coordinates {(2,1)} node[left,rotate=30]{$(2,1)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -386,7 +386,7 @@ minor ytick=,]
           <image permid="wMv">
             <description>a Cartesian grid with points (-2,9),(-1,7),(0,5),(1,3),(2,1) connected with a solid line</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-1,ymax=10,
 xtick=,
 minor xtick=,
@@ -400,7 +400,7 @@ minor ytick=,]
 \addplot[soliddot] coordinates {(2,1)} node[left,rotate=30]{$(2,1)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -423,7 +423,7 @@ minor ytick=,]
       <p permid="GBG">
         The gas tank in Sofia's car holds
         <quantity>
-          <mag>14</mag><unit base="gallon" />
+          <mag>14</mag><unit base="gallon"/>
         </quantity>
         of fuel.
         Over the course of a long road trip,
@@ -448,7 +448,7 @@ minor ytick=,]
       </p>
       <sidebyside widths="37% 37%" margins="10%" permid="XVq">
         <table permid="ocD">
-          <caption>Make the table</caption>
+          <title>Make the table</title>
           <tabular valign="top" bottom="minor" permid="LzU">
             <col halign="right" right="minor"/>
             <col halign="center" right="minor"/>
@@ -490,7 +490,7 @@ minor ytick=,]
           <image permid="cTE">
             <description>a Cartesian graph of the points listed in the table; the points are connected by a solid line with an arrow to the right</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=250,
 ymin=0,ymax=20,
 xlabel={$x$ (miles)},
@@ -501,8 +501,8 @@ ytick=,
 minor ytick={0,1,...,20},
 clip=false,
 grid=major,
-axis line style={->}]
-\addplot+[domain=0:250,->] {14-0.032*x};
+axis line style={-&gt;}]
+\addplot+[domain=0:250,-&gt;] {14-0.032*x};
 \addplot[soliddot] coordinates {(20,13.36)} node[above right,rotate=30]{$(20,13.36)$};
 \addplot[soliddot] coordinates {(50,12.4)} node[above right,rotate=30]{$(50,12.4)$};
 \addplot[soliddot] coordinates {(80,11.44)} node[above right,rotate=30]{$(80,11.44)$};
@@ -510,7 +510,7 @@ axis line style={->}]
 \addplot[soliddot] coordinates {(200,7.6)} node[above right,rotate=30]{$(200,7.6)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -518,7 +518,7 @@ axis line style={->}]
     </solution>
   </example>
   <p permid="zHb">
-    In the graph from <xref ref="example-gas-mileage">Example</xref>,
+    In the graph from <xref ref="example-gas-mileage" />,
     notice how both axes indicate units that help describe the meaning of each variable.
     Whenever a graph has real-world context,
     be sure to label both axes clearly with both variable name
@@ -556,7 +556,7 @@ axis line style={->}]
         <caption>Making a table for <m>y=\frac{4}{3}x-4</m></caption>
         <sidebyside widths="37% 37%" margins="10%" permid="Ecz">
           <table permid="UjM">
-            <caption>Set up the table</caption>
+            <title>Set up the table</title>
             <tabular valign="top" bottom="minor" permid="rHd">
               <col halign="right" right="minor"/>
               <col halign="right" right="minor"/>
@@ -594,7 +594,7 @@ axis line style={->}]
             </tabular>
           </table>
           <table permid="AqV">
-            <caption>Complete the table</caption>
+            <title>Complete the table</title>
             <tabular valign="top" bottom="minor" permid="XOm">
               <col halign="right" right="minor"/>
               <col halign="right" right="minor"/>
@@ -648,7 +648,7 @@ axis line style={->}]
             <image permid="JaN">
               <description>a Cartesian grid with points (-6,-12),(-3,-8),(0,-4),(3,0),(6,4)</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-15,ymax=10,
 xtick={-6,-3,...,6},
 ytick=,
@@ -660,7 +660,7 @@ minor ytick={-15,-14,...,10}]
 \addplot[soliddot] coordinates {(6,4)} node[left,rotate=-30]{$(6,4)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -669,7 +669,7 @@ minor ytick={-15,-14,...,10}]
             <image permid="phW">
               <description>a Cartesian grid with points (-6,-12),(-3,-8),(0,-4),(3,0),(6,4) connected with a solid line</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-15,ymax=10,
 xtick={-6,-3,...,6},
 ytick=,
@@ -682,7 +682,7 @@ minor ytick={-15,-14,...,10}]
 \addplot[soliddot] coordinates {(6,4)} node[left,rotate=-30]{$(6,4)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -750,7 +750,7 @@ minor ytick={-15,-14,...,10}]
         <image permid="Vpf">
           <description>a Cartesian grid with points (-3,9),(-2,4),(-1,1),(0,0),(1,1),(2,4),(3,9); the points are connected with a smooth curve with arrows on both ends</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-2,ymax=10,
 ytick=,
 minor ytick={-2,-1,...,10},]
@@ -764,7 +764,7 @@ minor ytick={-2,-1,...,10},]
 \addplot[soliddot] coordinates {(3,9)} node[right]{$(3,9)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </sidebyside>
@@ -788,22 +788,22 @@ minor ytick={-2,-1,...,10},]
     <exercisegroup cols="3" permid="FDr">
       <title>Testing Points as Solutions</title>
       <exercise permid="egb">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot40.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot40.pg"/>
       </exercise>
       <exercise permid="Knk">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot40.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot40.pg"/>
       </exercise>
       <exercise permid="qut">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot50.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot50.pg"/>
       </exercise>
       <exercise permid="WBC">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot50.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot50.pg"/>
       </exercise>
       <exercise permid="CIL">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot140.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot140.pg"/>
       </exercise>
       <exercise permid="iPU">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot140.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot140.pg"/>
       </exercise>
       <!-- <exercise permid="OXd">
         <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot150.pg" />
@@ -816,58 +816,58 @@ minor ytick={-2,-1,...,10},]
     <exercisegroup cols="2" permid="lKA">
       <title>Tables for Equations</title>
       <exercise permid="blv">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg"/>
       </exercise>
       <exercise permid="HsE">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg"/>
       </exercise>
       <exercise permid="nzN">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine50.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine50.pg"/>
       </exercise>
       <exercise permid="TGW">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine50.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine50.pg"/>
       </exercise>
       <exercise permid="zOf">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine60.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine60.pg"/>
       </exercise>
       <exercise permid="fVo">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine60.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine60.pg"/>
       </exercise>
       <exercise permid="Mcx">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg"/>
       </exercise>
       <exercise permid="sjG">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg"/>
       </exercise>
       <exercise permid="YqP">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine120.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine120.pg"/>
       </exercise>
       <exercise permid="ExY">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine120.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine120.pg"/>
       </exercise>
       <exercise permid="kFh">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable10.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable10.pg"/>
       </exercise>
       <exercise permid="QMq">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable10.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable10.pg"/>
       </exercise>
       <exercise permid="wTz">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable20.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable20.pg"/>
       </exercise>
       <exercise permid="daI">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable20.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable20.pg"/>
       </exercise>
       <exercise permid="JhR">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable50.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable50.pg"/>
       </exercise>
       <exercise permid="ppa">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable50.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable50.pg"/>
       </exercise>
       <exercise permid="Vwj">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable60.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable60.pg"/>
       </exercise>
       <exercise permid="BDs">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable60.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable60.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup permid="RRJ">
@@ -892,7 +892,7 @@ minor ytick={-2,-1,...,10},]
           </p>
           <sidebyside margins="0%" permid="hKB">
             <table permid="gye">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="kcE">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -933,7 +933,7 @@ minor ytick={-2,-1,...,10},]
               <caption>The graph</caption>
               <image permid="Bwo">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=30,
 ymin=0,ymax=2000,
 xlabel={$x$ (months)},
@@ -943,8 +943,8 @@ minor xtick={0,1,...,30},
 ytick=,
 minor ytick={0,100,...,2000},
 clip=false,
-axis line style={->}]
-\addplot+[domain=0:30,->] {900+31*x};
+axis line style={-&gt;}]
+\addplot+[domain=0:30,-&gt;] {900+31*x};
 \addplot[soliddot] coordinates {(0,900)};% node[below right,rotate=-30]{$(0,900)$};
 \addplot[soliddot] coordinates {(1,931)} node[below right,rotate=-30]{$(1,931)$};
 \addplot[soliddot] coordinates {(6,1086)} node[below right,rotate=-30]{$(6,1086)$};
@@ -952,7 +952,7 @@ axis line style={->}]
 \addplot[soliddot] coordinates {(24,1644)} node[below right,rotate=-30]{$(24,1644)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
               </image>
             </figure>
@@ -982,7 +982,7 @@ axis line style={->}]
           </p>
           <sidebyside margins="0%" permid="NRK">
             <table permid="MFn">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="QjN">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1028,7 +1028,7 @@ axis line style={->}]
               <caption>The graph</caption>
               <image permid="hDx">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=72,
 ymin=0,ymax=2000,
 xlabel={$x$ (months)},
@@ -1039,7 +1039,7 @@ ytick={0,500,...,2000},
 yticklabels={0,5000,10000,15000,20000},
 minor ytick={0,100,...,2000},
 clip=false,
-axis line style={->}]
+axis line style={-&gt;}]
 \addplot+[domain=0:60,-] {1860-31*x};
 \addplot[soliddot] coordinates {(0,1860)};% node[above right,rotate=30]{$(0,18600)$};
 \addplot[soliddot] coordinates {(12,1488)} node[above right,rotate=30]{$(12,14880)$};
@@ -1049,7 +1049,7 @@ axis line style={->}]
 \addplot[soliddot] coordinates {(60,0)};% node[above right,rotate=30]{$(60,0)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
               </image>
             </figure>
@@ -1067,7 +1067,7 @@ axis line style={->}]
             </quantity>
             and the pressure and the pressure <m>P</m> is measured in
             <quantity>
-              <unit base="pound" /><per base="inch" exp="2" />
+              <unit base="pound"/><per base="inch" exp="2"/>
             </quantity>.
             Make a table of at least five values and plot a graph of this equation.
             Make sure to use <m>T</m>-values that make sense in context.
@@ -1076,7 +1076,7 @@ axis line style={->}]
         <answer permid="tDu">
           <sidebyside margins="0%" permid="tYT">
             <table permid="sMw">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="wqW">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1117,7 +1117,7 @@ axis line style={->}]
               <caption>The graph</caption>
               <image permid="NKG">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=120,
 ymin=0,ymax=120,
 xlabel={$T$ ($^\circ$F)},
@@ -1127,7 +1127,7 @@ minor xtick={0,5,...,120},
 ytick=,
 minor ytick={0,5,...,120},
 clip=false,
-axis line style={->}]
+axis line style={-&gt;}]
 \addplot+[domain=0:120] {0.1963*(x+459.67)};
 \addplot[soliddot] coordinates {(20,94.16)} node[below right,rotate=-30]{$(20,94.16)$};
 \addplot[soliddot] coordinates {(40,98.09)} node[below right,rotate=-30]{$(40,98.09)$};
@@ -1136,7 +1136,7 @@ axis line style={->}]
 \addplot[soliddot] coordinates {(100,109.9)} node[below right,rotate=-30]{$(100,109.9)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
               </image>
             </figure>
@@ -1159,7 +1159,7 @@ axis line style={->}]
         <answer permid="ZKD">
           <sidebyside margins="0%" permid="agc">
             <table permid="YTF">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="cyf">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1200,7 +1200,7 @@ axis line style={->}]
               <caption>The graph</caption>
               <image permid="tRP">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=40,
 ymin=0,ymax=1500,
 xlabel={$x$ (people)},
@@ -1210,7 +1210,7 @@ minor xtick={0,1,...,40},
 ytick=,
 minor ytick={0,100,...,1400},
 clip=false,
-axis line style={->}]
+axis line style={-&gt;}]
 \addplot+[domain=0:3.401,-] ({exp(x)},{1400*exp(-x)});
 \addplot[soliddot] coordinates {(1,1400)} node[below right,rotate=-30]{$(1,1400)$};
 \addplot[soliddot] coordinates {(5,280)} node[above right,rotate=30]{$(5,280)$};
@@ -1219,7 +1219,7 @@ axis line style={->}]
 \addplot[soliddot] coordinates {(30,46.67)} node[above right,rotate=30]{$(30,46.67)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
               </image>
             </figure>
@@ -1238,7 +1238,7 @@ axis line style={->}]
         <answer permid="FRM">
           <sidebyside widths="47% 47%" margins="0%" permid="ePV">
             <table permid="FaO">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="IFo">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1277,14 +1277,14 @@ axis line style={->}]
             </table>
             <image permid="ZYY">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-5:2] {2*x+3};
 \addplot[soliddot] coordinates {(-2,-1) (-1,1) (0,3) (1,5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1299,7 +1299,7 @@ axis line style={->}]
         <answer permid="lYV">
           <sidebyside widths="47% 47%" margins="0%" permid="KXe">
             <table permid="lhX">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="oMx">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1338,14 +1338,14 @@ axis line style={->}]
             </table>
             <image permid="Ggh">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-4:0.66] {3*x+5};
 \addplot[soliddot] coordinates {(-2,-1) (-1,2) (0,5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1360,7 +1360,7 @@ axis line style={->}]
         <answer permid="Sge">
           <sidebyside widths="47% 47%" margins="0%" permid="ren">
             <table permid="Rpg">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="UTG">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1399,14 +1399,14 @@ axis line style={->}]
             </table>
             <image permid="mnq">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-1.5:2] {-4*x+1};
 \addplot[soliddot] coordinates {(-1,5) (0,1) (1,-3) (2,-7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1421,7 +1421,7 @@ axis line style={->}]
         <answer permid="ynn">
           <sidebyside widths="47% 47%" margins="0%" permid="Xlw">
             <table permid="xwp">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="BaP">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1460,14 +1460,14 @@ axis line style={->}]
             </table>
             <image permid="Suz">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:3] {-1*x-4};
 \addplot[soliddot] coordinates {(-2,-2) (-1,-3) (0,-4) (1,-5) (2,-6)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1482,7 +1482,7 @@ axis line style={->}]
         <answer permid="euw">
           <sidebyside widths="47% 47%" margins="0%" permid="DsF">
             <table permid="dDy">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="hhY">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1521,14 +1521,14 @@ axis line style={->}]
             </table>
             <image permid="yBI">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-2.8:2.8] {5/2*x};
 \addplot[soliddot] coordinates {(-2,-5) (0,0) (2,5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1543,7 +1543,7 @@ axis line style={->}]
         <answer permid="KBF">
           <sidebyside widths="47% 47%" margins="0%" permid="jzO">
             <table permid="JKH">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="Nph">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1572,14 +1572,14 @@ axis line style={->}]
             </table>
             <image permid="eIR">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-5.25:5.25] {4/3*x};
 \addplot[soliddot] coordinates {(-3,-4) (0,0) (3,4)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1594,7 +1594,7 @@ axis line style={->}]
         <answer permid="qIO">
           <sidebyside widths="47% 47%" margins="0%" permid="PGX">
             <table permid="pRQ">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="twq">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1623,14 +1623,14 @@ axis line style={->}]
             </table>
             <image permid="KQa">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {-2/5*x-3};
 \addplot[soliddot] coordinates {(-5,-1) (0,-3) (5,-5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1645,7 +1645,7 @@ axis line style={->}]
         <answer permid="WPX">
           <sidebyside widths="47% 47%" margins="0%" permid="vOg">
             <table permid="VYZ">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="ZDz">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1674,14 +1674,14 @@ axis line style={->}]
             </table>
             <image permid="qXj">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-6.66:7] {-3/4*x+2};
 \addplot[soliddot] coordinates {(-4,5) (0,2) (4,-1)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1696,7 +1696,7 @@ axis line style={->}]
         <answer permid="CXg">
           <sidebyside widths="47% 47%" margins="0%" permid="bVp">
             <table permid="Cgi">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="FKI">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1735,14 +1735,14 @@ axis line style={->}]
             </table>
             <image permid="Xes">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-2.4:2.4] {x^2+1};
 \addplot[soliddot] coordinates {(-2,5) (-1,2) (0,1) (1,2) (2,5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1758,7 +1758,7 @@ axis line style={->}]
         <answer permid="jep">
           <sidebyside widths="47% 47%" margins="0%" permid="Icy">
             <table permid="inr">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="lRR">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1797,14 +1797,14 @@ axis line style={->}]
             </table>
             <image permid="DlB">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-0.6:4.6] {(x-2)^2};
 \addplot[soliddot] coordinates {(0,4) (1,1) (2,0) (3,1) (4,4)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1819,7 +1819,7 @@ axis line style={->}]
         <answer permid="Ply">
           <sidebyside widths="47% 47%" margins="0%" permid="ojH">
             <table permid="OuA">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="RZa">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1858,14 +1858,14 @@ axis line style={->}]
             </table>
             <image permid="jsK">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-1.5:1.5] {-3*x^2};
 \addplot[soliddot] coordinates {(-1,-3) (0,0) (1,-3)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1880,7 +1880,7 @@ axis line style={->}]
         <answer permid="vsH">
           <sidebyside widths="47% 47%" margins="0%" permid="UqQ">
             <table permid="uBJ">
-              <caption>A possible table</caption>
+              <title>A possible table</title>
               <tabular valign="top" bottom="minor" permid="ygj">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
@@ -1919,14 +1919,14 @@ axis line style={->}]
             </table>
             <image permid="PzT">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.2:1.2] {-1*x^2-2*x-3};
 \addplot[soliddot] coordinates {(-2,-3) (-1,-2) (0,-3) (1,-6)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>

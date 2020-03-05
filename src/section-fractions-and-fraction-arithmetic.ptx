@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -27,7 +27,7 @@
       </p>
       <sidebyside widths="47% 47%" margins="0%" permid="umB">
         <p permid="Aje">
-          In <xref ref="figure-fraction">Figure</xref>,
+          In <xref ref="figure-fraction" />,
           we see <m>1</m> whole divided into <m>7</m> parts.
           Since <m>3</m> parts are shaded,
           we have an illustration of the fraction <m>\frac{3}{7}</m>.
@@ -45,7 +45,7 @@
           <image permid="KWE">
             <description>a rectangle that is seven times as wide as it is tall; the entire rectangle is shaded; there is a 1 in the center of the rectangle; to its right, it is labeled 'one whole'; another rectangle of the same size is aligned directly below the first rectangle; it is subdivided equally into seven squares; the first three squares are shaded; there is a 1/7 in the center of each of the first three squares; to its right, it is labeled 'three sevenths'</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \draw[fill=red!20] (0,1.5) rectangle (7,2.5);
 \node at (3.5,2) {1};
 \node[right] at (7,2) {one whole};
@@ -61,7 +61,7 @@
 \node at (1.5,0.5) {$\frac{1}{7}$};
 \node at (2.5,0.5) {$\frac{1}{7}$};
 \node[right] at (7,0.5) {three sevenths};
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -72,8 +72,8 @@
             <statement>
               <p permid="OmJ">
                 To visualize the fraction <m>\frac{14}{35}</m>,
-                you might cut a rectangle into <var name="35" width="2" /> equal parts,
-                and then count up <var name="14" width="2" /> of them.
+                you might cut a rectangle into <var name="35" width="2"/> equal parts,
+                and then count up <var name="14" width="2"/> of them.
               </p>
             </statement>
             <solution permid="zGo">
@@ -88,7 +88,7 @@
         <p permid="Mxw">
           We can also locate fractions on number lines.
           When ticks are equally spread apart,
-          as in <xref ref="figure-fraction-number-line">Figure</xref>,
+          as in <xref ref="figure-fraction-number-line" />,
           each tick represents a fraction.
         </p>
         <figure xml:id="figure-fraction-number-line" permid="sEF">
@@ -96,7 +96,7 @@
           <image width="47%" permid="rdN">
             <description>a number line with a curved arrow emanating from 0 and landing to the right at 1/7, then again from 1/7 to 2/7, and again from 2/7 to 3/7</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=0,xmax=1,
 xtick={0,1},
@@ -107,9 +107,9 @@ xlabel={},
 ]
 \addplot[primarycurve, -, smooth] coordinates {(0,0) (0.071428,1) (0.142857,0)};
 \addplot[primarycurve, -, smooth] coordinates {(0.142857,0) (0.214228,1) (0.285714,0)};
-\addplot[primarycurve,->, smooth] coordinates {(0.285714,0) (0.35714,1) (0.42857,0)};
+\addplot[primarycurve,-&gt;, smooth] coordinates {(0.285714,0) (0.35714,1) (0.42857,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -119,15 +119,15 @@ xlabel={},
         <webwork>
             <setup>
 <pg-code>
-$numberline=init_graph(-1.5,-0.15,1.5,0.06,size=>[240,34]);
-$numberline->moveTo(-1.5,0);
-$numberline->lineTo(1.5,0,'black');
-for my$i(-12..12){$numberline->moveTo($i/8,-0.02);$numberline->lineTo($i/8,0.02,'black');};
-for my$i(-8,0,8){$numberline->moveTo($i/8,-0.05);$numberline->lineTo($i/8,0.05,'black');};
-$numberline->lb(new Label(0,-0.05,"0",'black','center','top','large'));
-$numberline->lb(new Label(1,-0.05,"1",'black','center','top','large'));
-$numberline->lb(new Label(-1,-0.05,"-1",'black','center','top','large'));
-$numberline->stamps(closed_circle(5/8,0,'blue'));
+$numberline=init_graph(-1.5,-0.15,1.5,0.06,size=&gt;[240,34]);
+$numberline-&gt;moveTo(-1.5,0);
+$numberline-&gt;lineTo(1.5,0,'black');
+for my$i(-12..12){$numberline-&gt;moveTo($i/8,-0.02);$numberline-&gt;lineTo($i/8,0.02,'black');};
+for my$i(-8,0,8){$numberline-&gt;moveTo($i/8,-0.05);$numberline-&gt;lineTo($i/8,0.05,'black');};
+$numberline-&gt;lb(new Label(0,-0.05,"0",'black','center','top','large'));
+$numberline-&gt;lb(new Label(1,-0.05,"1",'black','center','top','large'));
+$numberline-&gt;lb(new Label(-1,-0.05,"-1",'black','center','top','large'));
+$numberline-&gt;stamps(closed_circle(5/8,0,'blue'));
 Context("LimitedFraction");
 $ans=Fraction(5,8);
 </pg-code>
@@ -142,7 +142,7 @@ $ans=Fraction(5,8);
                 </image>
               </sidebyside>
               <p permid="aBb">
-                <var name="$ans" width="5" />
+                <var name="$ans" width="5"/>
               </p>
             </statement>
             <solution permid="fNx">
@@ -164,7 +164,7 @@ $ans=Fraction(5,8);
         <p permid="YLO">
           For example, we can view the fraction
           <m>\frac{3}{7}</m> as <m>3</m> divided into <m>7</m> equal parts,
-          as in <xref ref="figure-fraction-division">Figure</xref>.
+          as in <xref ref="figure-fraction-division" />.
           Just one of those parts represents <m>\frac{3}{7}</m>.
         </p>
         <figure xml:id="figure-fraction-division" permid="ESX">
@@ -172,7 +172,7 @@ $ans=Fraction(5,8);
           <image width="47%" permid="Dsf">
             <description>a number line with a ruler superimposed over the segment from 0 to 3; the ruler is subdivided into seven pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 3/7</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=-1,xmax=4,
 xtick={-1,0,...,4},
@@ -182,14 +182,14 @@ extra x tick labels={$\frac{3}{7}$},
 xlabel={},
 ]
 \addplot[guideline] coordinates {(0,0) (0,1) (3,1) (3,0)};
-\addplot[guideline,<-] coordinates {(0.428571,0) (0.428571,1)} node[above] {$3$ divided by $7$};
+\addplot[guideline,&lt;-] coordinates {(0.428571,0) (0.428571,1)} node[above] {$3$ divided by $7$};
 \addplot[guideline] coordinates {(0.857142,0.8) (0.857142,1)};
 \addplot[guideline] coordinates {(1.285714,0.8) (1.285714,1)};
 \addplot[guideline] coordinates {(1.71428,0.8) (1.71428,1)};
 \addplot[guideline] coordinates {(2.142857,0.8) (2.1428575,1)};
 \addplot[guideline] coordinates {(2.571428,0.8) (2.5714282,1)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -199,7 +199,7 @@ xlabel={},
         <webwork>
             <statement>
               <p permid="GIk">
-                The fraction <m>\frac{21}{40}</m> can be thought of as dividing the whole number <var name="21" width="5" /> into <var name="40" width="5" /> equal-sized parts.
+                The fraction <m>\frac{21}{40}</m> can be thought of as dividing the whole number <var name="21" width="5"/> into <var name="40" width="5"/> equal-sized parts.
               </p>
             </statement>
             <solution permid="LUG">
@@ -225,7 +225,7 @@ xlabel={},
         <image width="47%" permid="jzo">
           <description>one rectangle that is five times as wide as it is tall; the entire rectangle is shaded; there is a 1 in the center of the rectangle; a second rectangle that is also five times as wide as it is tall; it is subdivided equally into five squares; the first two squares are shaded; there is a 1/5 in the center of each of the first two squares; a third rectangle that is also five times as wide as it is tall; it is subdivided equally into fifteen adjacent rectangles; the first six of these smaller rectangles are shaded; there is a 1/15 in the center of each of the first six smaller rectangles</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 %\draw[fill=red!20] (0,1.5) rectangle (5,2.5);
 %\node at (2.5,2) {1};
 \draw (0,0) rectangle (5,1);
@@ -258,7 +258,7 @@ xlabel={},
 \node at (1.1667,-1) {$\frac{1}{15}$};
 \node at (1.5,-1) {$\frac{1}{15}$};
 \node at (1.8333,-1) {$\frac{1}{15}$};
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -267,7 +267,7 @@ xlabel={},
         <image width="47%" permid="PGx">
           <description>a number line with a curved arrow emanating from 0 and landing to the right at 1/5, then again from 1/5 to 2/5; there is a number line with a curved arrow emanating from 0 and landing to the right at 1/15, then again from 1/15 to 2/15, then again from 2/15 to 3/15, then again from 3/15 to 4/15, then again from 4/15 to 5/15, and then again from 5/15 to 6/15</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=0,xmax=1,
 xtick={0,1},
@@ -277,7 +277,7 @@ extra x tick labels={$\frac{2}{5}$},
 xlabel={},
 ]
 \addplot[primarycurve, -, smooth] coordinates {(0,0) (0.1,1) (0.2,0)};
-\addplot[primarycurve, ->, smooth] coordinates {(0.2,0) (0.3,1) (0.4,0)};
+\addplot[primarycurve, -&gt;, smooth] coordinates {(0.2,0) (0.3,1) (0.4,0)};
 \end{axis}
 \begin{axis}[numberline,
 at={(0,-2cm)},
@@ -293,9 +293,9 @@ xlabel={},
 \addplot[primarycurve, -, smooth] coordinates {(0.1333333,0) (0.1666667,1) (0.2,0)};
 \addplot[primarycurve, -, smooth] coordinates {(0.2,0) (0.2333333,1) (0.2666667,0)};
 \addplot[primarycurve, -, smooth] coordinates {(0.2666666,0) (0.3,1) (0.3333333,0)};
-\addplot[primarycurve,->, smooth] coordinates {(0.3333333,0) (0.3666667,1) (0.4,0)};
+\addplot[primarycurve,-&gt;, smooth] coordinates {(0.3333333,0) (0.3666667,1) (0.4,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -304,7 +304,7 @@ xlabel={},
         <image width="47%" permid="vNG">
           <description>a number line with a ruler superimposed over the segment from 0 to 2; the ruler is subdivided into five pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 2/5; there is a second number line with a ruler superimposed over the segment from 0 to 6; the ruler is subdivided into fifteen pieces; an arrow points down from the first ruler tick to a point on the number line that is marked 6/15</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=0,xmax=6,
 xtick={0,1,...,6},
@@ -315,7 +315,7 @@ xlabel={},
 x=0.8cm,
 ]
 \addplot[guideline] coordinates {(0,0) (0,1) (2,1) (2,0)};
-\addplot[guideline,<-] coordinates {(0.4,0) (0.4,1)} node[above] {$2$ divided by $5$};
+\addplot[guideline,&lt;-] coordinates {(0.4,0) (0.4,1)} node[above] {$2$ divided by $5$};
 \addplot[guideline] coordinates {(0.8,0.8) (0.8,1)};
 \addplot[guideline] coordinates {(1.2,0.8) (1.2,1)};
 \addplot[guideline] coordinates {(1.6,0.8) (1.6,1)};
@@ -331,7 +331,7 @@ xlabel={},
 x=0.8cm,
 ]
 \addplot[guideline] coordinates {(0,0) (0,1) (6,1) (6,0)};
-\addplot[guideline,<-] coordinates {(0.4,0) (0.4,1)} node[above] {$6$ divided by $15$};
+\addplot[guideline,&lt;-] coordinates {(0.4,0) (0.4,1)} node[above] {$6$ divided by $15$};
 \addplot[guideline] coordinates {(0.8,0.8) (0.8,1)};
 \addplot[guideline] coordinates {(1.2,0.8) (1.2,1)};
 \addplot[guideline] coordinates {(1.6,0.8) (1.6,1)};
@@ -346,7 +346,7 @@ x=0.8cm,
 \addplot[guideline] coordinates {(5.2,0.8) (5.2,1)};
 \addplot[guideline] coordinates {(5.6,0.8) (5.6,1)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -402,17 +402,17 @@ Context("LimitedFraction");
               <ol label="a." cols="3" permid="yAV">
                 <li permid="bNy">
                   <p permid="yfw">
-                    <m>\dfrac{14}{42}=</m><var name="$f[0]" width="5" />
+                    <m>\dfrac{14}{42}=</m><var name="$f[0]" width="5"/>
                   </p>
                 </li>
                 <li permid="HUH">
                   <p permid="emF">
-                    <m>\dfrac{8}{30}=</m><var name="$f[1]" width="5" />
+                    <m>\dfrac{8}{30}=</m><var name="$f[1]" width="5"/>
                   </p>
                 </li>
                 <li permid="obQ">
                   <p permid="KtO">
-                    <m>\dfrac{70}{90}=</m><var name="$f[2]" width="5" />
+                    <m>\dfrac{70}{90}=</m><var name="$f[2]" width="5"/>
                   </p>
                 </li>
               </ol>
@@ -467,7 +467,7 @@ $p=Formula("84/100");
               so that Sayid can understand what percent score he earned.
             </p>
             <p permid="zdL">
-              <var name="$p" width="10" />
+              <var name="$p" width="10"/>
             </p>
           </statement>
           <solution permid="YiY">
@@ -503,7 +503,7 @@ $p=Formula("84/100");
         <image permid="bUP">
           <description>four measuring cups, each filled two-thirds with liquid</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \foreach \x in {0,4,8,12} {
 \fill[color=blue!20] (\x,0) rectangle (2+\x,2.157);
 \draw (\x,0) rectangle (2+\x,3.236);
@@ -512,7 +512,7 @@ $p=Formula("84/100");
 \draw (\x,3.236) -- (\x-0.5,3.236) -- (\x,2.5);
 \draw (2+\x,3.236) --+ (1,0) --+ (1.5,-2) --+ (1.3,-2.2) --+ (0.8,-0.2) --+ (0,-0.2);
 }
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </sidebyside>
@@ -559,7 +559,7 @@ $p=Formula("84/100");
         <image permid="IbY">
           <description>a measuring cup divided evenly into three horizontal sections, but also evenly into five vertical sections; in total, there are fifteen sections; the two that correspond to the lower two-thirds and leftmost one-fifth are shaded</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \fill[color=blue!20] (0,0) rectangle (0.4,2.157);
 \fill[color=blue!05] (0.40,0) rectangle (2,2.157);
 \draw (0,0) rectangle (2,3.236);
@@ -568,7 +568,7 @@ $p=Formula("84/100");
 \draw (0,3.236) -- (-0.5,3.236) -- (0,2.5);
 \draw (2,3.236) --+ (1,0) --+ (1.5,-2) --+ (1.3,-2.2) --+ (0.8,-0.2) --+ (0,-0.2);
 \foreach \x in {0.4,0.8,1.2,1.6} \draw[dashed] (\x,0) -- (\x,3.236);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </sidebyside>
@@ -617,22 +617,22 @@ Context("LimitedFraction");
               <ol label="a." cols="2" permid="eIe">
                 <li permid="MEA">
                   <p permid="iWy">
-                    <m>\dfrac{1}{3}\cdot\dfrac{10}{7}=</m><var name="$f[0]" width="10" />
+                    <m>\dfrac{1}{3}\cdot\dfrac{10}{7}=</m><var name="$f[0]" width="10"/>
                   </p>
                 </li>
                 <li permid="sLJ">
                   <p permid="PdH">
-                    <m>\dfrac{12}{3}\cdot\dfrac{15}{3}=</m><var name="$f[1]" width="10" />
+                    <m>\dfrac{12}{3}\cdot\dfrac{15}{3}=</m><var name="$f[1]" width="10"/>
                   </p>
                 </li>
                 <li permid="YSS">
                   <p permid="vkQ">
-                    <m>-\dfrac{14}{5}\cdot\dfrac{2}{3}=</m><var name="$f[2]" width="10" />
+                    <m>-\dfrac{14}{5}\cdot\dfrac{2}{3}=</m><var name="$f[2]" width="10"/>
                   </p>
                 </li>
                 <li permid="Fab">
                   <p permid="brZ">
-                    <m>\dfrac{70}{27}\cdot\dfrac{12}{-20}=</m><var name="$f[3]" width="10" />
+                    <m>\dfrac{70}{27}\cdot\dfrac{12}{-20}=</m><var name="$f[3]" width="10"/>
                   </p>
                 </li>
               </ol>
@@ -778,22 +778,22 @@ Context("LimitedFraction");
               <ol label="a." cols="4" permid="KPn">
                 <li permid="GPo">
                   <p permid="dhm">
-                    <m>\dfrac{1}{3}\div\dfrac{10}{7}=</m><var name="$f[0]" width="10" />
+                    <m>\dfrac{1}{3}\div\dfrac{10}{7}=</m><var name="$f[0]" width="10"/>
                   </p>
                 </li>
                 <li permid="mWx">
                   <p permid="Jov">
-                    <m>\dfrac{12}{5}\div5=</m><var name="$f[1]" width="10" />
+                    <m>\dfrac{12}{5}\div5=</m><var name="$f[1]" width="10"/>
                   </p>
                 </li>
                 <li permid="TdG">
                   <p permid="pvE">
-                    <m>-14\div\dfrac{3}{2}=</m><var name="$f[2]" width="10" />
+                    <m>-14\div\dfrac{3}{2}=</m><var name="$f[2]" width="10"/>
                   </p>
                 </li>
                 <li permid="zkP">
                   <p permid="VCN">
-                    <m>\dfrac{70}{9}\div\dfrac{11}{-20}=</m><var name="$f[3]" width="10" />
+                    <m>\dfrac{70}{9}\div\dfrac{11}{-20}=</m><var name="$f[3]" width="10"/>
                   </p>
                 </li>
               </ol>
@@ -882,12 +882,12 @@ Context("LimitedFraction");
               <ol label="a." cols="2" permid="qWw">
                 <li permid="DUI">
                   <p permid="amG">
-                    <m>\frac{1}{3}+\frac{10}{3}=</m><var name="$f[0]" width="10" />
+                    <m>\frac{1}{3}+\frac{10}{3}=</m><var name="$f[0]" width="10"/>
                   </p>
                 </li>
                 <li permid="kbR">
                   <p permid="GtP">
-                    <m>\frac{13}{6}-\frac{5}{6}=</m><var name="$f[1]" width="10" />
+                    <m>\frac{13}{6}-\frac{5}{6}=</m><var name="$f[1]" width="10"/>
                   </p>
                 </li>
               </ol>
@@ -1003,7 +1003,7 @@ Context("LimitedFraction");
       <example xml:id="example-finding-the-LCD" permid="rrV">
         <statement>
           <p permid="qPs">
-            Consider the previous example <xref ref="example-Quarters-and-Dimes">Example</xref>,
+            Consider the previous example <xref ref="example-Quarters-and-Dimes" />,
             in which we added the fractions
             <m>\frac{3}{4}</m> and <m>\frac{2}{10}</m>.
             Notice that the common denominator used in that example was <m>100</m>.
@@ -1185,9 +1185,9 @@ Context("LimitedFraction");
           <title>Using Some Flour</title>
           <setup>
 <pg-code>
-Context()->flags->set(reduceConstants=>0);
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
 $flour=NumberWithUnits("13/24",'cup');
-$ev=$flour->cmp(correct_ans_latex_string => "\frac{13}{24}\text{ cup}");
+$ev=$flour-&gt;cmp(correct_ans_latex_string =&gt; "\frac{13}{24}\text{ cup}");
 </pg-code>
           </setup>
           <statement>
@@ -1195,7 +1195,7 @@ $ev=$flour->cmp(correct_ans_latex_string => "\frac{13}{24}\text{ cup}");
               A chef had <m>\frac{2}{3}</m> cups of flour and needed to use
               <m>\frac{1}{8}</m> cup to thicken a sauce.
               How much flour is left?
-              <var name="$flour" evaluator="$ev" width="15" />
+              <var name="$flour" evaluator="$ev" width="15"/>
             </p>
           </statement>
           <solution permid="wLI">
@@ -1309,19 +1309,19 @@ Context("Fraction");
 $a=Fraction(random(-33,-13,4),4);
 $xmin = -max(int(Real($a)*1.6), 10);
 $gr = init_graph($xmin,-1,-$xmin,1,
-axes=>[100,0],
-size=>[240,34]
+axes=&gt;[100,0],
+size=&gt;[240,34]
 );
 @ticks;
 for my $j (($xmin)..(-$xmin)) {push(@ticks,$j);};
-$gr->h_ticks(0,"black",@ticks);
-$gr->lb( new Label(0,-0.1,0,'black','center','top','large'));
-$gr->lb( new Label(1,-0.1,1,'black','center','top','large'));
+$gr-&gt;h_ticks(0,"black",@ticks);
+$gr-&gt;lb( new Label(0,-0.1,0,'black','center','top','large'));
+$gr-&gt;lb( new Label(1,-0.1,1,'black','center','top','large'));
 $j=0;
 @decoys = (Real($a), int(Real($a)/2), Real(-$a-2), -Real($a), );
 for $i (@decoys) {
-$gr->moveTo($i,-1);$gr->lineTo($i,0,'black',1);
-$gr->lb( new Label($i,0.05,$ALPHABET[$j],'black','center','bottom','large'));
+$gr-&gt;moveTo($i,-1);$gr-&gt;lineTo($i,0,'black',1);
+$gr-&gt;lb( new Label($i,0.05,$ALPHABET[$j],'black','center','bottom','large'));
 $j++;
 }
 $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'A');
@@ -1332,10 +1332,10 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'A');
                 Which letter is <var name="$a"/> on the number line?
               </p>
               <sidebyside widths="40%" margins="0%" permid="efo">
-                <image permid="ojh" pg-name="$gr" />
+                <image permid="ojh" pg-name="$gr"/>
               </sidebyside>
               <p permid="QbW">
-                <var name="$popup" form="popup" />
+                <var name="$popup" form="popup"/>
               </p>
             </statement>
         </webwork>
@@ -1348,19 +1348,19 @@ Context("Fraction");
 $a=Fraction(random(15,31,4),4);
 $xmin = -max(int(Real($a)*1.6), 10);
 $gr = init_graph($xmin,-1,-$xmin,1,
-axes=>[100,0],
-size=>[240,34]
+axes=&gt;[100,0],
+size=&gt;[240,34]
 );
 @ticks;
 for my $j (($xmin)..(-$xmin)) {push(@ticks,$j);};
-$gr->h_ticks(0,"black",@ticks);
-$gr->lb( new Label(0,-0.1,0,'black','center','top','large'));
-$gr->lb( new Label(1,-0.1,1,'black','center','top','large'));
+$gr-&gt;h_ticks(0,"black",@ticks);
+$gr-&gt;lb( new Label(0,-0.1,0,'black','center','top','large'));
+$gr-&gt;lb( new Label(1,-0.1,1,'black','center','top','large'));
 $j=0;
 @decoys = (Real(-$a-2), -Real($a), int(Real($a)/2), Real($a), );
 for $i (@decoys) {
-$gr->moveTo($i,-1);$gr->lineTo($i,0,'black',1);
-$gr->lb( new Label($i,0.05,$ALPHABET[$j],'black','center','bottom','large'));
+$gr-&gt;moveTo($i,-1);$gr-&gt;lineTo($i,0,'black',1);
+$gr-&gt;lb( new Label($i,0.05,$ALPHABET[$j],'black','center','bottom','large'));
 $j++;
 }
 $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
@@ -1374,91 +1374,91 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
                 <image pg-name="$gr"/>
               </sidebyside>
               <p permid="cqo">
-                <var name="$popup" form="popup" />
+                <var name="$popup" form="popup"/>
               </p>
             </statement>
         </webwork>
       </exercise>
       <exercise permid="CHY">
-        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine10.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine10.pg"/>
       </exercise>
       <exercise permid="iPh">
-        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine20.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine20.pg"/>
       </exercise>
       <exercise permid="OWq">
-        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine30.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine30.pg"/>
       </exercise>
       <exercise permid="vdz">
-        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine40.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/FractionOnNumberLine40.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="Nhd">
       <title>Reducing Fractions</title>
       <exercise permid="bkI">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction05.pg"  />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction05.pg"/>
       </exercise>
       <exercise permid="HrR">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction10.pg"  />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction10.pg"/>
       </exercise>
       <exercise permid="nza">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction20.pg"  />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction20.pg"/>
       </exercise>
       <exercise permid="TGj">
-        <webwork          source="BasicMath/FractionsCalculation/ReduceFraction25.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/ReduceFraction25.pg"/>
       </exercise>
       <exercise permid="zNs">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction30.pg"  />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction30.pg"/>
       </exercise>
       <exercise permid="fUB">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction40.pg"  />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction40.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="tom">
       <title>Building Fractions</title>
       <exercise permid="MbK">
-        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction10.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction10.pg"/>
       </exercise>
       <exercise permid="siT">
-        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction10.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction10.pg"/>
       </exercise>
       <exercise permid="Yqc">
-        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction20.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction20.pg"/>
       </exercise>
       <exercise permid="Exl">
-        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction20.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/EquivalentFraction20.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="Zvv">
       <title>Multiplying/Dividing Fractions</title>
       <exercise permid="kEu">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions10.pg"/>
       </exercise>
       <exercise permid="QLD">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions10.pg"/>
       </exercise>
       <exercise permid="wSM">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions20.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions20.pg"/>
       </exercise>
       <exercise permid="cZV">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions20.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions20.pg"/>
       </exercise>
       <exercise permid="Jhe">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"/>
       </exercise>
       <exercise permid="pon">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions30.pg"/>
       </exercise>
       <exercise permid="Vvw">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions40.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions40.pg"/>
       </exercise>
       <exercise permid="BCF">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions40.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions40.pg"/>
       </exercise>
       <exercise permid="hJO">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"/>
       </exercise>
       <exercise permid="NQX">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions50.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions60.pg"  />
@@ -1471,50 +1471,50 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 </exercise>
 -->
       <exercise permid="tYg">
-        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions10.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions10.pg"/>
       </exercise>
       <exercise permid="afp">
-        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions10.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions10.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions20.pg"  />
 </exercise> -->
       <exercise permid="Gmy">
-        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions30.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions30.pg"/>
       </exercise>
       <exercise permid="mtH">
-        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions30.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions30.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionsCalculation/MultiplyThreeFractions40.pg"  />
 </exercise>
 -->
       <exercise permid="SAQ">
-        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions10.pg"/>
       </exercise>
       <exercise permid="yHZ">
-        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions10.pg"/>
       </exercise>
       <exercise permid="ePi">
-        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions20.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions20.pg"/>
       </exercise>
       <exercise permid="KWr">
-        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions20.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions20.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions30.pg"  />
 </exercise> -->
       <exercise permid="rdA">
-        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions40.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions40.pg"/>
       </exercise>
       <exercise permid="XkJ">
-        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions40.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions40.pg"/>
       </exercise>
       <exercise permid="DrS">
-        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions50.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions50.pg"/>
       </exercise>
       <exercise permid="jzb">
-        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions50.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/DivideFractions50.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionsCalculation/DivideFractions11.pg"  />
@@ -1529,10 +1529,10 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicMath/FractionsCalculation/DivideFractions42.pg"  />
 </exercise> -->
       <exercise permid="PGk">
-        <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberMultiplication10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberMultiplication10.pg"/>
       </exercise>
       <exercise permid="vNt">
-        <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberMultiplication10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberMultiplication10.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/MixedNumberDivision10.pg"  />
@@ -1556,38 +1556,38 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicAlgebra/FractionArithmetic/AddFractions06.pg"  />
 </exercise> -->
       <exercise permid="bUC">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions08.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions08.pg"/>
       </exercise>
       <exercise permid="IbL">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions08.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions08.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/AddFractions09.pg"  />
 </exercise> -->
       <exercise permid="oiU">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions10.pg"/>
       </exercise>
       <exercise permid="Uqd">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions10.pg"/>
       </exercise>
       <exercise permid="Axm">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions12.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions12.pg"/>
       </exercise>
       <exercise permid="gEv">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions12.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions12.pg"/>
       </exercise>
       <exercise permid="MLE">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions20.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions20.pg"/>
       </exercise>
       <exercise permid="sSN">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions20.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions20.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/AddFractions22.pg"  />
 </exercise> -->
 <!-- seeds set so that problems are dissimilar -->
       <exercise permid="YZW">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions24.pg" seed="14" />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions24.pg" seed="14"/>
       </exercise>
       <exercise permid="Fhf">
         <webwork source="BasicAlgebra/FractionArithmetic/AddFractions24.pg" seed="15"/>
@@ -1599,37 +1599,37 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
         <webwork source="BasicAlgebra/FractionArithmetic/AddFractions26.pg" seed="17"/>
       </exercise>
       <exercise permid="xCG">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions30.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions30.pg"/>
       </exercise>
       <exercise permid="dJP">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions30.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions30.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/AddFractions40.pg"  />
 </exercise> -->
       <exercise permid="JQY">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions50.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions50.pg"/>
       </exercise>
       <exercise permid="pYh">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions50.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions50.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/AddFractions60.pg"  />
 </exercise> -->
       <exercise permid="Wfq">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions70.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions70.pg"/>
       </exercise>
       <exercise permid="Cmz">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions70.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions70.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/AddFractions80.pg"  />
 </exercise> -->
       <exercise permid="itI">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions90.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions90.pg"/>
       </exercise>
       <exercise permid="OAR">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions90.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddFractions90.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionsCalculation/AddThreeFractions10.pg"  />
@@ -1638,16 +1638,16 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicMath/FractionsCalculation/AddThreeFractions20.pg"  />
 </exercise> -->
       <exercise permid="uIa">
-        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions30.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions30.pg"/>
       </exercise>
       <exercise permid="aPj">
-        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions30.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions30.pg"/>
       </exercise>
       <exercise permid="GWs">
-        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions40.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions40.pg"/>
       </exercise>
       <exercise permid="ndB">
-        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions40.pg"  />
+        <webwork source="BasicMath/FractionsCalculation/AddThreeFractions40.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions01.pg"  />
@@ -1656,25 +1656,25 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions02.pg"  />
 </exercise> -->
       <exercise permid="TkK">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg"/>
       </exercise>
       <exercise permid="zrT">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions05.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions06.pg"  />
 </exercise> -->
       <exercise permid="fzc">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg"/>
       </exercise>
       <exercise permid="LGl">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions10.pg"/>
       </exercise>
       <exercise permid="rNu">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions30.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions30.pg"/>
       </exercise>
       <exercise permid="XUD">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions30.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions30.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions20.pg"  />
@@ -1689,10 +1689,10 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions60.pg"  />
 </exercise> -->
       <exercise permid="EbM">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions70.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions70.pg"/>
       </exercise>
       <exercise permid="kiV">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions70.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions70.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions80.pg"  />
@@ -1708,10 +1708,10 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions100.pg"  />
 </exercise> -->
       <exercise permid="cEw">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions110.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions110.pg"/>
       </exercise>
       <exercise permid="ILF">
-        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions110.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/SubtractFractions110.pg"/>
       </exercise>
     </exercisegroup>
 <!--         <exercisegroup>
@@ -1743,13 +1743,13 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
     <exercisegroup permid="lJN">
       <title>Applications</title>
       <exercise permid="oSO">
-        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems10.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems10.pg"/>
       </exercise>
       <exercise permid="UZX">
-        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems10.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems10.pg"/>
       </exercise>
       <exercise permid="Bhg">
-        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems20.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems20.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems30.pg"  />
@@ -1758,41 +1758,41 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems40.pg"  />
 </exercise> -->
       <exercise permid="hop">
-        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems60.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems60.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/FractionAdditionWordProblems70.pg"  />
 </exercise> -->
       <exercise permid="Nvy">
-        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems10.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems10.pg"/>
       </exercise>
       <exercise permid="tCH">
-        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems10.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems10.pg"/>
       </exercise>
       <exercise permid="ZJQ">
-        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems20.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems20.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems30.pg"  />
 </exercise>
 -->
       <exercise permid="FQZ">
-        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems30.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems30.pg"/>
       </exercise>
       <exercise permid="lYi">
-        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems70.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems70.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems40.pg"  />
 </exercise> -->
       <exercise permid="Sfr">
-        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems50.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems50.pg"/>
       </exercise>
       <exercise permid="ymA">
-        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems50.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems50.pg"/>
       </exercise>
       <exercise permid="etJ">
-        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems60.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems60.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems75.pg"  />
@@ -1801,19 +1801,19 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicMath/FractionApplication/FractionSubtractionWordProblems80.pg"  />
 </exercise> -->
       <exercise permid="KAS">
-        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems10.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems10.pg"/>
       </exercise>
       <exercise permid="qIb">
-        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems10.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems10.pg"/>
       </exercise>
       <exercise permid="WPk">
-        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems20.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems20.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems30.pg"  />
 </exercise> -->
       <exercise permid="CWt">
-        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems40.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems40.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/FractionMultiplicationWordProblems50.pg"  />
@@ -1828,28 +1828,28 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems20.pg"  />
 </exercise> -->
       <exercise permid="jdC">
-        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems30.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems30.pg"/>
       </exercise>
       <exercise permid="PkL">
-        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems40.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems40.pg"/>
       </exercise>
       <exercise permid="vrU">
-        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems50.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems50.pg"/>
       </exercise>
       <exercise permid="bzd">
-        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems60.pg"  />
+        <webwork source="BasicMath/FractionApplication/FractionDivisionWordProblems60.pg"/>
       </exercise>
       <exercise permid="HGm">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddingFractionsOfInches10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddingFractionsOfInches10.pg"/>
       </exercise>
       <exercise permid="nNv">
-        <webwork source="BasicAlgebra/FractionArithmetic/AddingFractionsOfInches10.pg"  />
+        <webwork source="BasicAlgebra/FractionArithmetic/AddingFractionsOfInches10.pg"/>
       </exercise>
       <exercise permid="TUE">
-        <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems10.pg"  />
+        <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems10.pg"/>
       </exercise>
       <exercise permid="AbN">
-        <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems20.pg"  />
+        <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems20.pg"/>
       </exercise>
 <!--            <exercise>
 <webwork source="BasicMath/FractionApplication/MixedNumberAdditionWordProblems20.pg"  />
@@ -1880,7 +1880,7 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems30.pg"  />
 </exercise> -->
       <exercise permid="giW">
-        <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems40.pg"  />
+        <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems40.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/MixedNumberSubtractionWordProblems50.pg"  />
@@ -1892,7 +1892,7 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems10.pg"  />
 </exercise> -->
       <exercise permid="Mqf">
-        <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems20.pg"  />
+        <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems20.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicMath/FractionApplication/MixedNumberMultiplicationWordProblems30.pg"  />
@@ -1942,28 +1942,28 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
         <answer permid="cSR">
           <sbsgroup permid="sxo">
             <sidebyside widths="47% 47%" permid="ELG">
-              <figure permid="kqm">
+              
                 <image source="images/two_thirds_on_numberline.png">
                   <description>a number line with tick marks, and labels at 0, 2/3, and 1</description>
                 </image>
-              </figure>
-              <figure permid="Qxv">
+              
+              
                 <image source="images/six_eighths_on_numberline.png" permid="Uqq">
                   <description>a number line with tick marks, and labels at 0, 6/8, and 1</description>
                 </image>
-              </figure>
+              
             </sidebyside>
             <sidebyside widths="47% 47%" permid="kSP">
-              <figure permid="wEE">
+              
                 <image source="images/five_fourths_on_numberline.png" permid="Axz">
                   <description>a number line with tick marks, and labels at 0, 1, and 5/4</description>
                 </image>
-              </figure>
-              <figure permid="cLN">
+              
+              
                 <image source="images/negative_four_fifths_on_numberline.png" permid="gEI">
                   <description>a number line with tick marks, and labels at -4/5, 0, and 1</description>
                 </image>
-              </figure>
+              
             </sidebyside>
           </sbsgroup>
         </answer>
@@ -2001,28 +2001,28 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
         <answer permid="Jaa">
           <sbsgroup permid="YEx">
             <sidebyside widths="47% 47%" permid="QZY">
-              <figure permid="ISW">
+              
                 <image source="images/one_sixth_on_numberline.png" permid="MLR">
                   <description>a number line with tick marks, and labels at 0, 1/6, and 1</description>
                 </image>
-              </figure>
-              <figure permid="paf">
+              
+              
                 <image source="images/three_ninths_on_numberline.png" permid="sTa">
                   <description>a number line with tick marks, and labels at 0, 3/9, and 1</description>
                 </image>
-              </figure>
+              
             </sidebyside>
             <sidebyside widths="47% 47%" permid="xhh">
-              <figure permid="Vho">
+              
                 <image source="images/seven_sixths_on_numberline.png" permid="Zaj">
                   <description>a number line with tick marks, and labels at 0, 1, and 7/6</description>
                 </image>
-              </figure>
-              <figure permid="Box">
+              
+              
                 <image source="images/eight_fifths_on_numberline.png" permid="Fhs">
                   <description>a number line with tick marks, and labels at 0, 1, and 8/5</description>
                 </image>
-              </figure>
+              
             </sidebyside>
           </sbsgroup>
         </answer>
@@ -2053,7 +2053,7 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->are(a=>'Real');
+Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $p = random(1,9,1);
 $q = random(1,9,1);
 $numerator = $p+$q;
@@ -2061,7 +2061,7 @@ $left = Formula("$p/a");
 $right = Formula("$q/a");
 $expression = $left + $right;
 Context("RationalFunction-Strict");
-Context()->variables->are(a=>'Real');
+Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $answer = Formula("$numerator/a");
 </pg-code>
             </setup>
@@ -2071,7 +2071,7 @@ $answer = Formula("$numerator/a");
                 simplify <m>\displaystyle{}<var name="$expression"/></m>.
               </p>
               <p permid="Nhq">
-                <var name="$answer" width="10" />
+                <var name="$answer" width="10"/>
               </p>
             </statement>
             <solution permid="phj">
@@ -2080,7 +2080,7 @@ $answer = Formula("$numerator/a");
                 we can just add numerators and keep that denominator.
                 <md permid="SBd">
                   <mrow><var name="$expression"/> \amp= \frac{<var name="$p"/>+<var name="$q"/>}{a}</mrow>
-                  <mrow>\amp = <var name="$answer" /></mrow>
+                  <mrow>\amp = <var name="$answer"/></mrow>
                 </md>
               </p>
             </solution>
@@ -2093,7 +2093,7 @@ $answer = Formula("$numerator/a");
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->are(a=>'Real');
+Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $p = random(1,9,1);
 $q = random(1,9,2);
 $p2 = 2*$p;
@@ -2102,7 +2102,7 @@ $left = Formula("$p/a");
 $right = Formula("$q/(2a)");
 $expression = $left + $right;
 Context("RationalFunction-Strict");
-Context()->variables->are(a=>'Real');
+Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $answer = Formula("$num/(2a)");
 </pg-code>
             </setup>
@@ -2112,7 +2112,7 @@ $answer = Formula("$num/(2a)");
                 simplify <m>\displaystyle{}<var name="$expression"/></m>.
               </p>
               <p permid="ZvI">
-                <var name="$answer" width="10" />
+                <var name="$answer" width="10"/>
               </p>
             </statement>
             <solution permid="Vos">
@@ -2123,7 +2123,7 @@ $answer = Formula("$num/(2a)");
                 <md permid="yIm">
                   <mrow><var name="$expression"/> \amp = <var name="$left"/>\cdot \frac{2}{2} + <var name="$right"/></mrow>
                   <mrow>\amp = \frac{<var name="$p2"/>}{2a} + <var name="$right"/></mrow>
-                  <mrow>\amp = <var name="$answer" /></mrow>
+                  <mrow>\amp = <var name="$answer"/></mrow>
                 </md>
               </p>
             </solution>
@@ -2136,7 +2136,7 @@ $answer = Formula("$num/(2a)");
             <setup>
 <pg-code>
 Context("Numeric");
-Context()->variables->are(a=>'Real');
+Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $p = random(1,9,1);
 $q = list_random(1..4,6..9);
 $numerator = (5*$p-$q);
@@ -2145,7 +2145,7 @@ $right = Formula("$q/(5a)");
 $expression = $left - $right;
 $p5 = 5*$p;
 Context("RationalFunction-Strict");
-Context()->variables->are(a=>'Real');
+Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $answer = Formula("$numerator/(5a)");
 </pg-code>
             </setup>
@@ -2155,7 +2155,7 @@ $answer = Formula("$numerator/(5a)");
                 simplify <m>\displaystyle{}<var name="$expression"/></m>.
               </p>
               <p permid="lKa">
-                <var name="$answer" width="10" />
+                <var name="$answer" width="10"/>
               </p>
             </statement>
             <solution permid="BvB">
@@ -2166,7 +2166,7 @@ $answer = Formula("$numerator/(5a)");
                 <md permid="ePv">
                   <mrow><var name="$expression"/> \amp = <var name="$left"/>\cdot \frac{5}{5} - <var name="$right"/></mrow>
                   <mrow>\amp = \frac{<var name="$p5"/>}{5a} - <var name="$right"/></mrow>
-                  <mrow>\amp = <var name="$answer" /></mrow>
+                  <mrow>\amp = <var name="$answer"/></mrow>
                 </md>
               </p>
             </solution>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -63,15 +63,15 @@
     number on both sides of an inequality:
     the direction reverses!
     To understand why,
-    consider <xref ref="figure-multiply-by-negative">Figure</xref>,
+    consider <xref ref="figure-multiply-by-negative" />,
     where the numbers <m>2</m> and <m>4</m> are multiplied by the negative number <m>-1</m>.
   </p>
   <figure xml:id="figure-multiply-by-negative" permid="xKg">
     <caption>Multiplying two numbers by a negative number, and how their relationship changes</caption>
     <image width="65%" permid="HdS">
-      <description>a number line with -4, -2, 2, and 4 marked; text indicated that 2 &lt; 4; arrows swing from 2 to -2 and 4 to -4, indicating multiplication by -1; text indicates that -2 > -4</description>
+      <description>a number line with -4, -2, 2, and 4 marked; text indicated that 2 &lt; 4; arrows swing from 2 to -2 and 4 to -4, indicating multiplication by -1; text indicates that -2 &gt; -4</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=-4,xmax=4,
 xtick={-4,-3,...,4},
@@ -81,18 +81,18 @@ y={},
 \addplot[guideline,
 domain=191:349,
 samples=60,
-<-,
+&lt;-,
 postaction={decorate,decoration={text along path,text align=center,transform={yshift=1ex},text={multiply by -1}}}] ({2*cos(x)},{2*sin(x)});
 \addplot[guideline,
 domain=186:354,
 samples=60,
-<-,
+&lt;-,
 postaction={decorate,decoration={text along path,text align=center,transform={yshift=1ex},text={multiply by -1}}}] ({4*cos(x)},{4*sin(x)});
 \addplot[soliddot] coordinates {(-2,0) (2,0) (-4,0) (4,0)};
 \addplot[mark=none] coordinates {(3,0)} node[above] {$2\lt4$};
 \addplot[mark=none] coordinates {(-3,0)} node[above] {$-2\gt-4$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
     </image>
   </figure>
@@ -122,7 +122,7 @@ postaction={decorate,decoration={text along path,text align=center,transform={ys
       <p permid="LdR">
         Solve the inequality <m>-2x\geq12</m>.
         State the solution set graphically, using interval notation,
-        and using set-builder notation. (Interval notation and set-builder notation are discussed in <xref ref="section-comparison-symbols-and-notation-for-intervals">Section</xref>.
+        and using set-builder notation. (Interval notation and set-builder notation are discussed in <xref ref="section-comparison-symbols-and-notation-for-intervals" />.
       </p>
     </statement>
     <solution permid="GPx">
@@ -156,7 +156,7 @@ postaction={decorate,decoration={text along path,text align=center,transform={ys
         <image permid="nlb">
           <description>a number line with a mark at -6; a thick line overlays the number line to the left of -6 with an arrow pointing left; there is a right bracket at -6</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=-10,xmax=10,
 xtick={-10,-8,...,10},
@@ -164,7 +164,7 @@ minor xtick={-9,-7,...,9},
 ]
 \addplot[infiniteclosedinterval] coordinates {(-10,0) (-6,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </sidebyside>
@@ -235,7 +235,7 @@ minor xtick={-9,-7,...,9},
         <image permid="Tsk">
           <description>a number line with a mark at -2; a thick line overlays the number line to the left of -2 with an arrow pointing left; there is a right parenthesis at -2</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline,
 xmin=-8,xmax=8,
 xtick={-8,-6,...,8},
@@ -244,7 +244,7 @@ xlabel={$t$}
 ]
 \addplot[infiniteopeninterval] coordinates {(-8,0) (-2,0)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </sidebyside>
@@ -274,20 +274,20 @@ Context("Interval");
 $interval=Interval("(1,inf)");
 InequalitySetBuilder::UseVerticalSuchThat();
 Context("InequalitySetBuilder-Only");
-$setbuilder = Compute("{ x | x>1}");
+$setbuilder = Compute("{ x | x&gt;1}");
 @ticks = ();
 for my $j (-5..5) {push(@ticks,$j);};
-$nl=init_graph(-6,-1,6,1,size=>[240,32]);
+$nl=init_graph(-6,-1,6,1,size=&gt;[240,32]);
 $pixel = 2*6/240;
-$nl->moveTo(0,0);
-$nl->arrowTo(5.5,0,'black',1);
-$nl->moveTo(0,0);
-$nl->arrowTo(-5.5,0,'black',1);
-for my$j(@ticks){$nl->lb(new Label($j,-0.2,$j,'black','center','top','large'));};
-$nl->h_ticks(0,"black",@ticks);
-$nl->moveTo(1,0.5);
-$nl->arrowTo(5,0.5,'blue',1);
-$nl->lb( new Label(1-2*$pixel,0.5,'(','blue','left','middle','giant'));
+$nl-&gt;moveTo(0,0);
+$nl-&gt;arrowTo(5.5,0,'black',1);
+$nl-&gt;moveTo(0,0);
+$nl-&gt;arrowTo(-5.5,0,'black',1);
+for my$j(@ticks){$nl-&gt;lb(new Label($j,-0.2,$j,'black','center','top','large'));};
+$nl-&gt;h_ticks(0,"black",@ticks);
+$nl-&gt;moveTo(1,0.5);
+$nl-&gt;arrowTo(5,0.5,'blue',1);
+$nl-&gt;lb( new Label(1-2*$pixel,0.5,'(','blue','left','middle','giant'));
 </pg-code>
         </setup>
         <statement>
@@ -300,11 +300,11 @@ $nl->lb( new Label(1-2*$pixel,0.5,'(','blue','left','middle','giant'));
           </instruction>
           <p permid="vUT">
             In interval notation,
-            the solution set is <var name="$interval" width="15" />.
+            the solution set is <var name="$interval" width="15"/>.
           </p>
           <p permid="ccc">
             In set-builder notation,
-            the solution set is <var name="$setbuilder" width="15" />.
+            the solution set is <var name="$setbuilder" width="15"/>.
           </p>
         </statement>
         <solution permid="TdP">
@@ -324,7 +324,7 @@ $nl->lb( new Label(1-2*$pixel,0.5,'(','blue','left','middle','giant'));
             Graphically, we represent this solution set as:
           </p>
           <sidebyside margins="0%" widths="40%" permid="imN">
-            <image pg-name="$nl" />
+            <image pg-name="$nl"/>
           </sidebyside>
           <p permid="NYx">
             Using interval notation, we write the solution set as <m>(1,\infty)</m>.
@@ -353,22 +353,22 @@ Context("Interval");
 $interval=Interval("(-inf,3.48]");
 InequalitySetBuilder::UseVerticalSuchThat();
 Context("InequalitySetBuilder-Only");
-Context()->variables->are(z=>'Real');
+Context()-&gt;variables-&gt;are(z=&gt;'Real');
 $setbuilder = Compute("{ z | z&lt;=3.48}");
 @ticks = ();
 for my $j (-5..5) {push(@ticks,$j);};
-$nl=init_graph(-6,-1,6,2,size=>[240,48]);
+$nl=init_graph(-6,-1,6,2,size=&gt;[240,48]);
 $pixel = 2*6/240;
-$nl->moveTo(0,0);
-$nl->arrowTo(5.5,0,'black',1);
-$nl->moveTo(0,0);
-$nl->arrowTo(-5.5,0,'black',1);
-for my$j(@ticks){$nl->lb(new Label($j,-0.2,$j,'black','center','top','large'));};
-$nl->h_ticks(0,"black",@ticks);
-$nl->moveTo(3.48,0.5);
-$nl->arrowTo(-5,0.5,'blue',1);
-$nl->lb( new Label(3.48+4*$pixel,0.5,']','blue','right','middle','giant'));
-$nl->lb( new Label(3.48,1,'3.48','blue','center','bottom','large'));
+$nl-&gt;moveTo(0,0);
+$nl-&gt;arrowTo(5.5,0,'black',1);
+$nl-&gt;moveTo(0,0);
+$nl-&gt;arrowTo(-5.5,0,'black',1);
+for my$j(@ticks){$nl-&gt;lb(new Label($j,-0.2,$j,'black','center','top','large'));};
+$nl-&gt;h_ticks(0,"black",@ticks);
+$nl-&gt;moveTo(3.48,0.5);
+$nl-&gt;arrowTo(-5,0.5,'blue',1);
+$nl-&gt;lb( new Label(3.48+4*$pixel,0.5,']','blue','right','middle','giant'));
+$nl-&gt;lb( new Label(3.48,1,'3.48','blue','center','bottom','large'));
 </pg-code>
         </setup>
         <statement>
@@ -381,11 +381,11 @@ $nl->lb( new Label(3.48,1,'3.48','blue','center','bottom','large'));
           </instruction>
           <p permid="oqu">
             In interval notation,
-            the solution set is <var name="$interval" width="15" />.
+            the solution set is <var name="$interval" width="15"/>.
           </p>
           <p permid="UxD">
             In set-builder notation,
-            the solution set is <var name="$setbuilder" width="15" />.
+            the solution set is <var name="$setbuilder" width="15"/>.
           </p>
         </statement>
         <solution permid="zkY">
@@ -430,40 +430,40 @@ $nl->lb( new Label(3.48,1,'3.48','blue','center','bottom','large'));
     <exercisegroup cols="3" permid="dYt">
       <title>Review and Warmup</title>
       <exercise permid="CBd">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers10.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers10.pg"/>
       </exercise>
       <exercise permid="iIm">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers10.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers10.pg"/>
       </exercise>
       <exercise permid="OPv">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers20.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers20.pg"/>
       </exercise>
       <exercise permid="uWE">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers20.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers20.pg"/>
       </exercise>
       <exercise permid="bdN">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers30.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers30.pg"/>
       </exercise>
       <exercise permid="HkW">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers30.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/AdditionWithNegativeNumbers30.pg"/>
       </exercise>
       <exercise permid="nsf">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/DivideWithNegativeIntegers10.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/DivideWithNegativeIntegers10.pg"/>
       </exercise>
       <exercise permid="Tzo">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/DivideWithNegativeIntegers10.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/DivideWithNegativeIntegers10.pg"/>
       </exercise>
       <exercise permid="zGx">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg" />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg"/>
       </exercise>
       <exercise permid="fNG">
-        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg" />
+        <webwork source="BasicAlgebra/FractionArithmetic/MultiplyFractions80.pg"/>
       </exercise>
       <exercise permid="LUP">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/DivideWithNegativeIntegers20.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/DivideWithNegativeIntegers20.pg"/>
       </exercise>
       <exercise permid="sbY">
-        <webwork source="BasicAlgebra/SignedNumbersArithemtic/DivideWithNegativeIntegers20.pg" />
+        <webwork source="BasicAlgebra/SignedNumbersArithemtic/DivideWithNegativeIntegers20.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="KfC">
@@ -476,10 +476,10 @@ $nl->lb( new Label(3.48,1,'3.48','blue','center','bottom','large'));
         </p>
       </introduction>
       <exercise permid="Eqq">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality10.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality10.pg"/>
       </exercise>
       <exercise permid="kxz">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality10.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality10.pg"/>
       </exercise>
       <exercise permid="QEI">
         <webwork source="BasicAlgebra/LinearInequalities/SolveInequality20.pg"/>
@@ -510,88 +510,88 @@ $nl->lb( new Label(3.48,1,'3.48','blue','center','bottom','large'));
         </p>
       </introduction>
       <exercise permid="hCT">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality50.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality50.pg"/>
       </exercise>
       <exercise permid="NKc">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality50.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality50.pg"/>
       </exercise>
       <exercise permid="tRl">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality60.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality60.pg"/>
       </exercise>
       <exercise permid="ZYu">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality60.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality60.pg"/>
       </exercise>
       <exercise permid="GfD">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality70.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality70.pg"/>
       </exercise>
       <exercise permid="mmM">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality70.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality70.pg"/>
       </exercise>
       <exercise permid="StV">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality80.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality80.pg"/>
       </exercise>
       <exercise permid="yBe">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality80.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality80.pg"/>
       </exercise>
       <exercise permid="eIn">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality90.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality90.pg"/>
       </exercise>
       <exercise permid="KPw">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality90.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality90.pg"/>
       </exercise>
       <exercise permid="qWF">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality100.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality100.pg"/>
       </exercise>
       <exercise permid="XdO">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality100.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality100.pg"/>
       </exercise>
       <exercise permid="DkX">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality110.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality110.pg"/>
       </exercise>
       <exercise permid="jsg">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality110.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality110.pg"/>
       </exercise>
       <exercise permid="Pzp">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality120.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality120.pg"/>
       </exercise>
       <exercise permid="vGy">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality120.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality120.pg"/>
       </exercise>
       <exercise permid="bNH">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality130.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality130.pg"/>
       </exercise>
       <exercise permid="HUQ">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality130.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality130.pg"/>
       </exercise>
       <exercise permid="obZ">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality140.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality140.pg"/>
       </exercise>
       <exercise permid="Uji">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality140.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality140.pg"/>
       </exercise>
       <exercise permid="Aqr">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality150.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality150.pg"/>
       </exercise>
       <exercise permid="gxA">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality150.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality150.pg"/>
       </exercise>
       <exercise permid="MEJ">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality160.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality160.pg"/>
       </exercise>
       <exercise permid="sLS">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality160.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequality160.pg"/>
       </exercise>
       <exercise permid="YTb">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction40.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction40.pg"/>
       </exercise>
       <exercise permid="Fak">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction40.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction40.pg"/>
       </exercise>
       <exercise permid="lht">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction50.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction50.pg"/>
       </exercise>
       <exercise permid="RoC">
-        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction50.pg" />
+        <webwork source="BasicAlgebra/LinearInequalities/SolveInequalityWithFraction50.pg"/>
       </exercise>
     </exercisegroup>
     <!-- <exercisegroup permid="WtU">

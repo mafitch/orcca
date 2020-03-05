@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -20,7 +20,7 @@
     <title>The Basics of Scientific Notation</title>
     <p permid="izv">
       An October 3, 2016 CBS News headline<fn>
-      <url href="http://www.cnsnews.com/news/article/terence-p-jeffrey/federal-debt-fy-2016-jumped-142282704745246" />
+      <url href="http://www.cnsnews.com/news/article/terence-p-jeffrey/federal-debt-fy-2016-jumped-142282704745246"/>
       </fn> read:
     </p>
     <blockquote permid="RIo">
@@ -75,7 +75,7 @@
       Here's a chart for some of the most common numbers we see and use in the world around us:
     </p>
     <table xml:id="table-positive-powers-of-ten" permid="AhA">
-      <caption>Whole Number Powers of <m>10</m></caption>
+      <title>Whole Number Powers of <m>10</m></title>
       <tabular permid="MvS">
         <row>
           <cell>Number</cell>
@@ -140,7 +140,7 @@
       humanity became increasingly aware of very large numbers and very small measurements.
       As one example, the star that is nearest to our sun is
       <url href="https://imagine.gsfc.nasa.gov/features/cosmic/nearest_star_info.html">Proxima Centauri</url><fn>
-      <url href="https://imagine.gsfc.nasa.gov/features/cosmic/nearest_star_info.html">imagine.gsfc.nasa.gov/features/cosmic/nearest<underscore/>star<underscore/>info.html</url>
+      <url href="https://imagine.gsfc.nasa.gov/features/cosmic/nearest_star_info.html">imagine.gsfc.nasa.gov/features/cosmic/nearest_star_info.html</url>
       </fn>.
       Proxima Centauri is about <m>25{,}000{,}000{,}000{,}000</m> miles from our sun.
       Again, many will find the descriptive language easier to digest: Proxima Centauri is about <m>25</m> trillion miles from our sun.
@@ -167,18 +167,18 @@ Context("LimitedNumeric");
                     Multiply <m>5.7</m> by <m>10</m>.
                   </p>
                   <p permid="fqu">
-                    <var name="'57'" width="5" />
+                    <var name="'57'" width="5"/>
                   </p>
                 </li>
                 <li permid="IYw">
                   <p permid="LxD">
                     Multiply <m>3.1</m> by <m>10{,}000</m>.
                   </p>
-                  <instruction>
+                  <p>
                     Do not use any commas in your answer.
-                  </instruction>
+                  </p>
                   <p permid="rEM">
-                    <var name="'31000'" width="5" />
+                    <var name="'31000'" width="5"/>
                   </p>
                 </li>
               </ol>
@@ -372,7 +372,7 @@ $pop = Compute("7.418 x 10^9");
           <setup>
 <pg-code>
 Context("LimitedNumeric");
-Context()->{format}{number} = "%.4f#";
+Context()-&gt;{format}{number} = "%.4f#";
 $diam = Compute("12700000");
 $avog = Compute("12100000000000");
 </pg-code>
@@ -439,17 +439,17 @@ $avog = Compute("12100000000000");
     <title>Scientific Notation for Small Numbers</title>
     <p permid="Ehz">
       Scientific notation can also be useful when working with numbers smaller than <m>1</m>.
-      As we saw in <xref ref="table-positive-powers-of-ten">Table</xref>,
+      As we saw in <xref ref="table-positive-powers-of-ten" />,
       we can denote thousands, millions, billions, trillions,
       etc., with positive integer exponents on <m>10</m>.
       We can similarly denote numbers smaller than <m>1</m>
       (which are written as tenths, hundredths,
       thousandths, millionths, billionths, trillionths, etc.),
       with <em>negative</em> integer exponents on <m>10</m>.
-      This relationship is outlined in <xref ref="table-negative-powers-of-ten">Table</xref>.
+      This relationship is outlined in <xref ref="table-negative-powers-of-ten" />.
     </p>
     <table xml:id="table-negative-powers-of-ten" permid="goJ">
-      <caption>Negative Integer Powers of <m>10</m></caption>
+      <title>Negative Integer Powers of <m>10</m></title>
       <tabular permid="YKk">
         <row bottom="medium">
           <cell>Number</cell>
@@ -527,7 +527,7 @@ $avog = Compute("12100000000000");
       <p permid="ACZ">
         In quantum mechanics, there is an important value called the
         <url href="https://en.wikipedia.org/wiki/Planck_constant">Planck Constant</url><fn>
-        <url href="https://en.wikipedia.org/wiki/Planck_constant">en.wikipedia.org/wiki/Planck<underscore/>constant</url>
+        <url href="https://en.wikipedia.org/wiki/Planck_constant">en.wikipedia.org/wiki/Planck_constant</url>
         </fn>.
         Written as a decimal, the value of the Planck constant
         (rounded to 4 significant digits)
@@ -622,7 +622,7 @@ $gate= Compute("1.4 x 10^-8");
           <setup>
 <pg-code>
 Context("LimitedNumeric");
-Context()->{format}{number} = "%.4f#";
+Context()-&gt;{format}{number} = "%.4f#";
 $down = Compute("0.00753");
 $poppy = Compute("0.0000003");
 </pg-code>
@@ -691,36 +691,36 @@ $not = PopUp(['?','in scientific notation','not in scientific notation'],2);
           <statement>
             <p permid="Csm">
               Decide if the numbers are written in scientific notation or not.
-              Use <xref ref="definition-scientific-notation">Definition</xref>.
+              Use <xref ref="definition-scientific-notation" />.
               <ol label="a." cols="2" permid="EoD">
                 <li permid="vEL">
                   <p permid="nEN">
-                    The number <m>7 \times 10^{1.9}</m> is <var name="$scientific" form="popup" />.
+                    The number <m>7 \times 10^{1.9}</m> is <var name="$scientific" form="popup"/>.
                   </p>
                 </li>
                 <li permid="bLU">
                   <p permid="TLW">
-                    The number <m>2.6 \times 10^{-31}</m> is <var name="$scientific" form="popup" />.
+                    The number <m>2.6 \times 10^{-31}</m> is <var name="$scientific" form="popup"/>.
                   </p>
                 </li>
                 <li permid="HTd">
                   <p permid="zTf">
-                    The number <m>10 \times 7^4</m> is <var name="$scientific" form="popup" />.
+                    The number <m>10 \times 7^4</m> is <var name="$scientific" form="popup"/>.
                   </p>
                 </li>
                 <li permid="oam">
                   <p permid="gao">
-                    The number <m>0.93 \times 10^{3}</m> is <var name="$scientific" form="popup" />.
+                    The number <m>0.93 \times 10^{3}</m> is <var name="$scientific" form="popup"/>.
                   </p>
                 </li>
                 <li permid="Uhv">
                   <p permid="Mhx">
-                    The number <m>4.2 \times 10^0</m> is <var name="$scientific" form="popup" />.
+                    The number <m>4.2 \times 10^0</m> is <var name="$scientific" form="popup"/>.
                   </p>
                 </li>
                 <li permid="AoE">
                   <p permid="soG">
-                    The number <m>12.5 \times 10^{-6}</m> is <var name="$scientific" form="popup" />.
+                    The number <m>12.5 \times 10^{-6}</m> is <var name="$scientific" form="popup"/>.
                   </p>
                 </li>
               </ol>
@@ -836,7 +836,7 @@ $not = PopUp(['?','in scientific notation','not in scientific notation'],2);
               </p>
             </li>
           </ol>
-          The federal debt per capita in the US on September<nbsp />30th, 2016 was about <m>\$60{,}681.11</m> per person.
+          The federal debt per capita in the US on September<nbsp/>30th, 2016 was about <m>\$60{,}681.11</m> per person.
           Both calculations give us the same answer,
           but the calculation relying upon scientific notation has less room for error and allows us to perform the calculation as two smaller steps.
         </p>
@@ -991,139 +991,139 @@ $not = PopUp(['?','in scientific notation','not in scientific notation'],2);
     <exercisegroup cols="3" permid="Eai">
       <title>Converting To and From Scientific Notation</title>
       <exercise permid="IKb">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation60.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation60.pg"/>
       </exercise>
       <exercise permid="oRk">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation60.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation60.pg"/>
       </exercise>
       <exercise permid="UYt">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation60.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation60.pg"/>
       </exercise>
       <exercise permid="BfC">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation60.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation60.pg"/>
       </exercise>
       <exercise permid="hmL">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation70.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation70.pg"/>
       </exercise>
       <exercise permid="NtU">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation70.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation70.pg"/>
       </exercise>
       <exercise permid="tBd">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation70.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation70.pg"/>
       </exercise>
       <exercise permid="ZIm">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation70.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation70.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="khr">
       <exercise permid="FPv">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation10.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation10.pg"/>
       </exercise>
       <exercise permid="lWE">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation10.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation10.pg"/>
       </exercise>
       <exercise permid="SdN">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation20.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation20.pg"/>
       </exercise>
       <exercise permid="ykW">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation20.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation20.pg"/>
       </exercise>
       <exercise permid="esf">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation30.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation30.pg"/>
       </exercise>
       <exercise permid="Kzo">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation30.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation30.pg"/>
       </exercise>
       <exercise permid="qGx">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation40.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation40.pg"/>
       </exercise>
       <exercise permid="WNG">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation40.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation40.pg"/>
       </exercise>
       <exercise permid="CUP">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation50.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation50.pg"/>
       </exercise>
       <exercise permid="jbY">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation50.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation50.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="QoA">
       <title>Arithmetic with Scientific Notation</title>
       <exercise permid="Pjh">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg"/>
       </exercise>
       <exercise permid="vqq">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg"/>
       </exercise>
       <exercise permid="bxz">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg"/>
       </exercise>
       <exercise permid="HEI">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg"/>
       </exercise>
       <exercise permid="nLR">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg"/>
       </exercise>
       <exercise permid="TTa">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation80.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="wvJ">
       <exercise permid="Aaj">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation90.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation90.pg"/>
       </exercise>
       <exercise permid="ghs">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation90.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation90.pg"/>
       </exercise>
       <exercise permid="MoB">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation95.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation95.pg"/>
       </exercise>
       <exercise permid="svK">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation95.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation95.pg"/>
       </exercise>
       <exercise permid="YCT">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation100.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation100.pg"/>
       </exercise>
       <exercise permid="EKc">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation100.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation100.pg"/>
       </exercise>
       <exercise permid="kRl">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation105.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation105.pg"/>
       </exercise>
       <exercise permid="QYu">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation105.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation105.pg"/>
       </exercise>
       <exercise permid="xfD">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation110.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation110.pg"/>
       </exercise>
       <exercise permid="dmM">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation110.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation110.pg"/>
       </exercise>
       <exercise permid="JtV">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation115.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation115.pg"/>
       </exercise>
       <exercise permid="pBe">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation115.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation115.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="cCS">
       <exercise permid="VIn">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg"/>
       </exercise>
       <exercise permid="BPw">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg"/>
       </exercise>
       <exercise permid="hWF">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg"/>
       </exercise>
       <exercise permid="OdO">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg"/>
       </exercise>
       <exercise permid="ukX">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg"/>
       </exercise>
       <exercise permid="asg">
-        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/ScientificNotation120.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -10,7 +10,7 @@
   <title>Slope</title>
   <introduction permid="hQB">
     <p permid="dvd">
-      In <xref ref="section-exploring-two-variable-data-and-rate-of-change">Section</xref>,
+      In <xref ref="section-exploring-two-variable-data-and-rate-of-change" />,
       we observed that a constant rate of change between points produces a linear relationship,
       whose graph is a straight line.
       Such a constant rate of change has a special name,
@@ -25,7 +25,7 @@
           When the <term>rate of change</term>
           from point to point never changes,
           those points must fall on a straight line,
-          as in <xref ref="figure-constant-rate-of-change">Figure</xref>,
+          as in <xref ref="figure-constant-rate-of-change" />,
           and there is a <term>linear relationship</term>
           between the variables <m>x</m> and <m>y</m>.
         </p>
@@ -39,9 +39,9 @@
       <figure xml:id="figure-constant-rate-of-change" permid="ESt">
         <caption>Between successive points, the rate of change is always <m>1/2</m>.</caption>
         <image permid="xXO">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[clip=false]
 \addplot+[] {0.5*x+1};
 \addplot[] coordinates {(-6,-2) (-4,-1)} node[pos=0.50, pin=-60:{rate $\frac{1}{2}$}]{};
@@ -49,7 +49,7 @@
 \addplot[] coordinates {(0,1) (6,4)} node[pos=0.50, pin=80:{rate $\frac{3}{6}=\frac{1}{2}$}]{};
 \addplot[soliddot] coordinates {(-6,-2) (-4, -1) (0,1) (6,4)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -67,7 +67,7 @@
       </statement>
     </definition>
     <p permid="SVY">
-      Considering the definition for <xref ref="definition-rate-of-change">Definition</xref>,
+      Considering the definition for <xref ref="definition-rate-of-change" />,
       this means that when <m>x</m> and <m>y</m> are two variables where the rate of change between any two points is always the same,
       then you can calculate slope, <m>m</m>,
       by finding two distinct data points
@@ -112,7 +112,7 @@
             its rate of change in height is the same from year to year.
             So the height and time have a linear relationship where the <term>slope</term> is
             <quantity>
-              <mag>2.5</mag><unit base="foot" /><per base="year" />
+              <mag>2.5</mag><unit base="foot"/><per base="year"/>
             </quantity>.
           </p>
         </li>
@@ -127,10 +127,10 @@
         <li permid="DyF">
           <p permid="ZgJ">
             If Sakura is an adult who has stopped growing,
-            her rate of change in height is the same from year to year<mdash />it's zero.
+            her rate of change in height is the same from year to year<mdash/>it's zero.
             So the <term>slope</term> is
             <quantity>
-              <mag>0</mag><unit base="inch" /><per base="year" />
+              <mag>0</mag><unit base="inch"/><per base="year"/>
             </quantity>.
             Sakura's height is <term>constant</term> with respect to time.
             In a statistics course,
@@ -196,7 +196,7 @@
         We can also consider Yara's savings using a table.
       </p>
       <table xml:id="table-yaras-savings" permid="YpL">
-        <caption>Yara's savings</caption>
+        <title>Yara's savings</title>
         <tabular permid="EwU">
           <col halign="center"/>
           <col halign="center"/>
@@ -280,9 +280,9 @@
         <figure xml:id="figure-yaras-savings" permid="NCl">
           <caption>Yara's savings</caption>
           <image permid="eeX">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={weeks},
 ylabel={savings (in dollars)},
 xmin=-1,xmax=15,
@@ -292,17 +292,17 @@ minor xtick={1,2,...,15},
 ytick={100,200,300},
 minor ytick={20,40,...,320},
 ]
-\addplot+[domain = 0:13,->]{50+20*x};
+\addplot+[domain = 0:13,-&gt;]{50+20*x};
 \addplot[soliddot] coordinates {(0,50) (1,70) (2,90) (4,130) (7,190) (12,290)};
-\addplot[guideline,->] coordinates {(0,50) (1,50) (1,65)};
-\addplot[guideline,->] coordinates {(1,70) (2,70) (2,85)};
-\addplot[guideline,->] coordinates {(2,90) (4,90) (4,125)};
-\addplot[guideline,->] coordinates {(4,130) (7,130) (7,185)};
+\addplot[guideline,-&gt;] coordinates {(0,50) (1,50) (1,65)};
+\addplot[guideline,-&gt;] coordinates {(1,70) (2,70) (2,85)};
+\addplot[guideline,-&gt;] coordinates {(2,90) (4,90) (4,125)};
+\addplot[guideline,-&gt;] coordinates {(4,130) (7,130) (7,185)};
 \addplot[guideline,-] coordinates {(7,190) (12,190)} node[pos=0.5,below] {$5$ weeks};
-\addplot[guideline,->] coordinates {(12,190) (12,285)} node[pos=0.5,below,rotate=90] {$\$100$};
+\addplot[guideline,-&gt;] coordinates {(12,190) (12,285)} node[pos=0.5,below,rotate=90] {$\$100$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -334,9 +334,9 @@ minor ytick={20,40,...,320},
         <figure permid="tJu">
           <caption>Yara's savings</caption>
           <image permid="Kmg">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={weeks},
 ylabel={savings (in dollars)},
 xmin=-1,xmax=15,
@@ -346,13 +346,13 @@ minor xtick={1,2,...,15},
 ytick={100,200,300},
 minor ytick={20,40,...,320},
 ]
-\addplot+[domain = 0:13,->]{50+20*x};
+\addplot+[domain = 0:13,-&gt;]{50+20*x};
 \addplot[soliddot] coordinates {(0,50) (1,70) (2,90) (4,130) (7,190) (12,290)};
 \addplot[guideline,-] coordinates {(7,190) (7,290)} node[pos=0.5,above,rotate=90] {$\$100$};
-\addplot[guideline,->] coordinates {(7,290) (11.5,290)} node[pos=0.5,below] {$5$ weeks};
+\addplot[guideline,-&gt;] coordinates {(7,290) (11.5,290)} node[pos=0.5,below] {$5$ weeks};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -364,7 +364,7 @@ minor ytick={20,40,...,320},
           but it focuses on vertical change before horizontal change.
           For consistency with mathematical conventions,
           we will generally draw slope triangles showing horizontal change followed by vertical change,
-          as in <xref ref="figure-yaras-savings">Figure</xref>.
+          as in <xref ref="figure-yaras-savings" />.
         </p>
       </sidebyside>
     </example>
@@ -381,7 +381,7 @@ minor ytick={20,40,...,320},
           <image width="50%" permid="qtp">
             <description>This is a grid with a line, passing the points (3,8),(6,6),(9,4)...</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={hours},
 ylabel={gas in gallons},
 xmin=-1,xmax=11,
@@ -393,7 +393,7 @@ ytick=]
 \addplot+[domain=1:8]{-2/3*x+10};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -414,7 +414,7 @@ ytick=]
             <image permid="WAy">
               <description>This is a grid with a line, passing the points (3,8),(6,6),(9,4)...There is a slope triangle starting from (3,8), passing (6,8) and ending at (6,6). The label from (3,8) to (6,8) is "3 hours"; and the label from (6,8) to (6,6) is "-2 gallons".</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={hours},
 ylabel={gas in gallons},
 xmin=-1,xmax=11,
@@ -426,10 +426,10 @@ ytick=]
 \addplot+[domain=1:8]{-2/3*x+10};
 \addplot[soliddot] coordinates {(3,8) (6,6)};
 \addplot[guideline,-] coordinates {(3,8) (6,8)} node[pos=0.5,above] {$3$ hours};
-\addplot[guideline,->] coordinates {(6,8) (6,6.3)} node[pos=0.5,right] {$-2$ gallon};
+\addplot[guideline,-&gt;] coordinates {(6,8) (6,6.3)} node[pos=0.5,right] {$-2$ gallon};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -445,12 +445,12 @@ ytick=]
         </sidebyside>
         <p permid="JXL">
           With units, the slope is <m>-\frac{2}{3}</m><quantity>
-            <unit base="gallon" /><per base="hour" />
+            <unit base="gallon"/><per base="hour"/>
           </quantity>.
           In the given context,
           this slope implies gas in the tank is <em>decreasing</em>
           at the rate of <m>\frac{2}{3}</m><quantity>
-            <unit base="gallon" /><per base="hour" />
+            <unit base="gallon"/><per base="hour"/>
           </quantity>.
           Since this slope is written as a fraction,
           there is another way to understand it:
@@ -467,26 +467,26 @@ ytick=]
 <pg-code>
 Context("Fraction");
 $slope = Fraction(3,4);
-$gr = init_graph(-5,-5,7,7,axes=>[0,0],grid=>[12,12],size=>[240,240]);
+$gr = init_graph(-5,-5,7,7,axes=&gt;[0,0],grid=&gt;[12,12],size=&gt;[240,240]);
 $pixel = 12/240;
-$gr -> lb('reset');
-$gr->h_ticks(0,"black",-4..6);
-$gr->v_ticks(0,"black",-4..6);
+$gr -&gt; lb('reset');
+$gr-&gt;h_ticks(0,"black",-4..6);
+$gr-&gt;v_ticks(0,"black",-4..6);
 for my $i (-4,-2,2,4,6) {
-$gr->lb(new Label($i,-0.5,$i,'black','center','middle','small'));
-$gr->lb(new Label(-0.5,$i,$i,'black','center','middle','small'));
+$gr-&gt;lb(new Label($i,-0.5,$i,'black','center','middle','small'));
+$gr-&gt;lb(new Label(-0.5,$i,$i,'black','center','middle','small'));
 };
-$gr->lb(new Label(7,-0.5,'x','black','center','middle','small'));
-$gr->lb(new Label(-0.5,7,'y','black','center','middle','small'));
+$gr-&gt;lb(new Label(7,-0.5,'x','black','center','middle','small'));
+$gr-&gt;lb(new Label(-0.5,7,'y','black','center','middle','small'));
 ($start,$stop) = (num_sort(-5,7,(-5-2)/(3/4),(7-2)/(3/4)))[1,2];
-$gr->moveTo(0,2);
-$gr->arrowTo($start,3/4*$start+2,'blue',1);
-$gr->moveTo(0,2);
-$gr->arrowTo($stop,3/4*$stop+2,'blue',1);
-for my$i(-2..5){$gr->stamps(closed_circle($i,$slope*$i+2,'blue'));};
-$gr->moveTo(0,2-$pixel);
-$gr->lineTo(4+$pixel,2-$pixel,'red',1);
-$gr->arrowTo(4+$pixel,5,'red',1);
+$gr-&gt;moveTo(0,2);
+$gr-&gt;arrowTo($start,3/4*$start+2,'blue',1);
+$gr-&gt;moveTo(0,2);
+$gr-&gt;arrowTo($stop,3/4*$stop+2,'blue',1);
+for my$i(-2..5){$gr-&gt;stamps(closed_circle($i,$slope*$i+2,'blue'));};
+$gr-&gt;moveTo(0,2-$pixel);
+$gr-&gt;lineTo(4+$pixel,2-$pixel,'red',1);
+$gr-&gt;arrowTo(4+$pixel,5,'red',1);
 </pg-code>
           </setup>
           <statement>
@@ -496,7 +496,7 @@ $gr->arrowTo(4+$pixel,5,'red',1);
               Use the plot to determine the slope of this line.
             </p>
             <p permid="VQE">
-              <var name="$slope" width="10" />
+              <var name="$slope" width="10"/>
             </p>
           </statement>
           <solution permid="amc">
@@ -560,7 +560,7 @@ $gr->arrowTo(4+$pixel,5,'red',1);
               This table lets us plot the graph and identify a slope triangle that is easy to work with.
             </p>
             <sidebyside widths="40%" permid="TMW">
-              <image permid="CHH" pg-name="$gr" />
+              <image permid="CHH" pg-name="$gr"/>
             </sidebyside>
             <p permid="iAv">
               Since the slope triangle runs <m>4</m> units and then rises <m>3</m> units,
@@ -578,7 +578,7 @@ $gr->arrowTo(4+$pixel,5,'red',1);
     <example permid="spG">
       <p permid="meV">
         Effie, Iva, and Cleo are in a foot race.
-        <xref ref="figure-foot-race">Figure</xref>
+        <xref ref="figure-foot-race" />
         models the distance each has traveled in the first few seconds.
         Each runner takes a second to accelerate up to their running speed,
         but then runs at a constant speed.
@@ -591,9 +591,9 @@ $gr->arrowTo(4+$pixel,5,'red',1);
       <figure xml:id="figure-foot-race" permid="KHF">
         <caption>A three-way foot race</caption>
         <image width="50%" permid="QLm">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={time (s)},
 ylabel={distance (m)},
 xmin=-1,xmax=5,
@@ -602,15 +602,15 @@ minor ytick={0,1,...,15},
 minor xtick=,
 xtick={0,1,...,5},
 ytick={0,5,...,15}]
-\addplot+[domain=1:5,->]{8/3*(x-1)+1} node[pos=0.5,sloped,below] {Effie};
-\addplot+[domain=1:5,->]{3.5*(x-1)+1} node[pos=0.5,sloped] {Ivan};
-\addplot+[domain=1:4.25,->]{4*(x-1)+2} node[pos=0.5,sloped,above] {Cleo};
+\addplot+[domain=1:5,-&gt;]{8/3*(x-1)+1} node[pos=0.5,sloped,below] {Effie};
+\addplot+[domain=1:5,-&gt;]{3.5*(x-1)+1} node[pos=0.5,sloped] {Ivan};
+\addplot+[domain=1:4.25,-&gt;]{4*(x-1)+2} node[pos=0.5,sloped,above] {Cleo};
 \addplot[primarycurve,-,domain=0:1]{x^(10/3)};
 \addplot[secondarycurve,-,domain=0:1]{x^3.5};
 \addplot[tertiarycurve,-,domain=0:1]{2*x^2};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -622,9 +622,9 @@ ytick={0,5,...,15}]
         <caption>Find the Slope of Each Line</caption>
         <sidebyside widths="32% 32% 32%" margins="0%" permid="EDY">
           <image permid="iOQ">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={time (s)},
 ylabel={distance (m)},
 xmin=-1,xmax=5,
@@ -633,20 +633,20 @@ minor ytick={0,1,...,15},
 minor xtick=,
 xtick={0,1,...,5},
 ytick={0,5,...,15}]
-\addplot[primarycurve,domain=1:5,->]{8/3*(x-1)+1} node[pos=0.25,sloped,above] {Effie};
+\addplot[primarycurve,domain=1:5,-&gt;]{8/3*(x-1)+1} node[pos=0.25,sloped,above] {Effie};
 \addplot[primarycurve,-,domain=0:1]{x^(10/3)};
 \addplot[soliddot]coordinates{(1,1) (4,9)};
 \addplot[guideline]coordinates{(1,1) (4,1)} node[pos=0.5,above]{$3$ seconds};
-\addplot[guideline,->]coordinates{(4,1) (4,8.7)} node[pos=0.5,rotate=90,below]{$8$ meters};
+\addplot[guideline,-&gt;]coordinates{(4,1) (4,8.7)} node[pos=0.5,rotate=90,below]{$8$ meters};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
           <image permid="OVZ">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={time (s)},
 ylabel={distance (m)},
 xmin=-1,xmax=5,
@@ -655,20 +655,20 @@ minor ytick={0,1,...,15},
 minor xtick=,
 xtick={0,1,...,5},
 ytick={0,5,...,15}]
-\addplot[secondarycurve,domain=1:5,->]{3.5*(x-1)+1} node[pos=0.25,sloped,above] {Ivan};
+\addplot[secondarycurve,domain=1:5,-&gt;]{3.5*(x-1)+1} node[pos=0.25,sloped,above] {Ivan};
 \addplot[secondarycurve,-,domain=0:1]{x^3.5};
 \addplot[soliddot]coordinates{(1,1) (3,8)};
 \addplot[guideline]coordinates{(1,1) (3,1)} node[pos=0.5,above]{$2$ seconds};
-\addplot[guideline,->]coordinates{(3,1) (3,7.7)} node[pos=0.5,rotate=90,below]{$7$ meters};
+\addplot[guideline,-&gt;]coordinates{(3,1) (3,7.7)} node[pos=0.5,rotate=90,below]{$7$ meters};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
           <image permid="vdi">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={time (s)},
 ylabel={distance (m)},
 xmin=-1,xmax=5,
@@ -677,14 +677,14 @@ minor ytick={0,1,...,15},
 minor xtick=,
 xtick={0,1,...,5},
 ytick={0,5,...,15}]
-\addplot[tertiarycurve,domain=1:5,->]{4*(x-1)+2} node[pos=0.25,sloped,above] {Cleo};
+\addplot[tertiarycurve,domain=1:5,-&gt;]{4*(x-1)+2} node[pos=0.25,sloped,above] {Cleo};
 \addplot[tertiarycurve,-,domain=0:1]{2*x^2};
 \addplot[soliddot]coordinates{(1,2) (3,10)};
 \addplot[guideline]coordinates{(1,2) (3,2)} node[pos=0.5,above]{$2$ seconds};
-\addplot[guideline,->]coordinates{(3,2) (3,9.7)} node[pos=0.5,rotate=90,below]{$8$ meters};
+\addplot[guideline,-&gt;]coordinates{(3,2) (3,9.7)} node[pos=0.5,rotate=90,below]{$8$ meters};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </sidebyside>
@@ -717,7 +717,7 @@ ytick={0,5,...,15}]
         This means that, numerically,
         we can tell that Cleo is the fastest runner
         (and Effie is the slowest)
-        just by comparing the slopes <m>4>3.5>2.667</m>.
+        just by comparing the slopes <m>4&gt;3.5&gt;2.667</m>.
       </p>
     </example>
     <exercise xml:id="exercise-jogging-on-mt-hood" permid="wZz">
@@ -750,24 +750,24 @@ $gr-&gt;lineTo(23,0,'blue',2);
             </p>
             <sidebyside widths="40%" permid="kLh">
               <image pg-name="$gr" permid="bkr">
-                <description></description>
+                <description/>
               </image>
             </sidebyside>
             <p permid="ieW">
               <ol label="a," cols="3" permid="eVV">
                 <li permid="UwQ">
                   <p permid="FnS">
-                    The first segment has slope <var name="$s[0]" width="10" />.
+                    The first segment has slope <var name="$s[0]" width="10"/>.
                   </p>
                 </li>
                 <li permid="ADZ">
                   <p permid="lvb">
-                    The second segment has slope <var name="$s[1]" width="10" />.
+                    The second segment has slope <var name="$s[1]" width="10"/>.
                   </p>
                 </li>
                 <li permid="gLi">
                   <p permid="RCk">
-                    The third segment has slope <var name="$s[2]" width="10" />.
+                    The third segment has slope <var name="$s[2]" width="10"/>.
                   </p>
                 </li>
               </ol>
@@ -842,50 +842,50 @@ $gr-&gt;lineTo(23,0,'blue',2);
       </p>
     </fact>
     <p permid="DNa">
-      These properties are summarized graphically in <xref ref="comparing-positive-negative-slope">Figure</xref>.
+      These properties are summarized graphically in <xref ref="comparing-positive-negative-slope" />.
     </p>
     <figure xml:id="comparing-positive-negative-slope" permid="jUj">
-      <caption></caption>
+      <caption/>
       <sidebyside widths="32% 32% 32%" margins="0%" permid="QSq">
         <figure xml:id="figure-positive-slope" permid="kZC">
           <caption>A line with positive slope</caption>
           <image permid="HrA">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain=-6.25:7]{4/5*x-2};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
         <figure xml:id="figure-negative-slope" permid="RgL">
           <caption>A line with negative slope</caption>
           <image permid="nyJ">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain=-4.2:5.6]{-10/7*x+1};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
         <figure xml:id="figure-zero-slope" permid="xnU">
           <caption>A line with a slope of zero</caption>
           <image permid="TFS">
-            <description></description>
+            <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve,domain=-7:7]{2.35};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -911,14 +911,14 @@ $gr-&gt;lineTo(23,0,'blue',2);
         it has been growing at a constant rate.
         By the end of the third year, the tree was
         <quantity>
-          <mag>15</mag><unit base="foot" />
+          <mag>15</mag><unit base="foot"/>
         </quantity>
         tall; by the end of the sixth year, the tree was
         <quantity>
-          <mag>27</mag><unit base="foot" />
+          <mag>27</mag><unit base="foot"/>
         </quantity>
         tall.
-        What's the tree's rate of growth (<ie /> the slope)?
+        What's the tree's rate of growth (<ie/> the slope)?
       </p>
       <p permid="Ddg">
         We <em>could</em> sketch a graph for this scenario,
@@ -931,7 +931,7 @@ $gr-&gt;lineTo(23,0,'blue',2);
           <image permid="zNb">
             <description>This is a grid with a line, passing the points (3,15) and (6,27). A slope triangle is drawn, starting at (3,15), passing (6,15), and ends at (6,27). The label from (3,15) to (6,15) is "6-3=3 years"; the label from (6,15) to (6,27) is "27-15=12 feet".</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={years since planting},
 ylabel={height (ft)},
 xmin=-1,xmax=9,
@@ -945,10 +945,10 @@ clip=false]
 \addplot[soliddot] coordinates {(3, 15)} node[above left] {$(3,15)$};
 \addplot[soliddot] coordinates {(6, 27)} node[above left] {$(6,27)$};
 \addplot[guideline] coordinates {(3,15) (6,15)} node[pos=0.5,below] {$3$ years};
-\addplot[guideline,->] coordinates {(6,15) (6,27)} node[pos=0.5,below,rotate=90] {$12$ ft};
+\addplot[guideline,-&gt;] coordinates {(6,15) (6,27)} node[pos=0.5,below,rotate=90] {$12$ ft};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -961,7 +961,7 @@ clip=false]
           </md>
           So the tree is growing at a rate of
           <quantity>
-            <mag>4</mag><unit base="foot" /><per base="year" />
+            <mag>4</mag><unit base="foot"/><per base="year"/>
           </quantity>.
         </p>
       </sidebyside>
@@ -981,10 +981,10 @@ clip=false]
         Here is a picture-free approach.
         We know that after
         <quantity>
-          <mag>3</mag><unit base="year" />
+          <mag>3</mag><unit base="year"/>
         </quantity>, the height is
         <quantity>
-          <mag>15</mag><unit base="foot" />
+          <mag>15</mag><unit base="foot"/>
         </quantity>.
         As an ordered pair, that information gives us the point <m>(3,15)</m>,
         which we can label as <m>(\overset{x_1}{3},\overset{y_1}{15})</m>.
@@ -1015,7 +1015,7 @@ clip=false]
           <image permid="Mbt">
             <description>This is a grid with a line, passing the points (3,15) and (6,27). A slope triangle is drawn, starting at (3,15), passing (6,15), and ends at (6,27). The label from (3,15) to (6,15) is "6-3=3 years"; the label from (6,15) to (6,27) is "27-15=12 feet".</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={years since planting},
 ylabel={height (ft)},
 xmin=-1,xmax=9,
@@ -1029,16 +1029,16 @@ clip=false]
 \addplot[soliddot] coordinates {(3, 15)} node[above left] {$(3,15)$};
 \addplot[soliddot] coordinates {(6, 27)} node[above left] {$(6,27)$};
 \addplot[guideline] coordinates {(3,15) (6,15)} node[pos=0.5,below,align=left] {$6-3$\\${}=3$ years};
-\addplot[guideline,->] coordinates {(6,15) (6,27)} node[pos=0.5,below,rotate=90,align=left] {$27-15$\\${}=12$ ft};
+\addplot[guideline,-&gt;] coordinates {(6,15) (6,27)} node[pos=0.5,below,rotate=90,align=left] {$27-15$\\${}=12$ ft};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
           <image permid="siC">
             <description>This is a grid with a line, passing the points (3,15) and (6,27). A slope triangle is drawn, starting at (3,15), passing (6,15), and ends at (6,27). The label from (3,15) to (6,15) is "x2-x1"; the label from (6,15) to (6,27) is "y2-y1".</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-1,xmax=9,
 ymin=-3,ymax=30,
 minor ytick=,
@@ -1050,10 +1050,10 @@ clip=false]
 \addplot[soliddot] coordinates {(3, 15)} node[above left] {$(x_1,y_1)$};
 \addplot[soliddot] coordinates {(6, 27)} node[above left] {$(x_2,y_2)$};
 \addplot[guideline] coordinates {(3,15) (6,15)} node[pos=0.5,below,align=left] {$x_2-x_1$};
-\addplot[guideline,->] coordinates {(6,15) (6,27)} node[pos=0.5,below,rotate=90,align=left] {$y_2-y_1$};
+\addplot[guideline,-&gt;] coordinates {(6,15) (6,27)} node[pos=0.5,below,rotate=90,align=left] {$y_2-y_1$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </sidebyside>
@@ -1101,146 +1101,146 @@ clip=false]
       </solution>
     </example>
     <exercise permid="BJs">
-      <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula70.pg" />
+      <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula70.pg"/>
     </exercise>
   </subsection>
   <exercises permid="hCg">
     <exercisegroup cols="3" permid="NJp">
       <title>Review and Warmup</title>
       <exercise permid="yAr">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction05.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction05.pg"/>
       </exercise>
       <exercise permid="eHA">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction05.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction05.pg"/>
       </exercise>
       <exercise permid="KOJ">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction10.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction10.pg"/>
       </exercise>
       <exercise permid="qVS">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction10.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction10.pg"/>
       </exercise>
       <exercise permid="Xdb">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction20.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction20.pg"/>
       </exercise>
       <exercise permid="Dkk">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction20.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction20.pg"/>
       </exercise>
       <exercise permid="jrt">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction30.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction30.pg"/>
       </exercise>
       <exercise permid="PyC">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction30.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction30.pg"/>
       </exercise>
       <exercise permid="vFL">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction40.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction40.pg"/>
       </exercise>
       <exercise permid="bMU">
-        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction40.pg" />
+        <webwork source="BasicAlgebra/FractionMixedNumbersBasics/ReduceFraction40.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="tQy">
       <title>Slope and Points</title>
       <exercise permid="HUd">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula10.pg"/>
       </exercise>
       <exercise permid="obm">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula10.pg"/>
       </exercise>
       <exercise permid="Uiv">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula20.pg"/>
       </exercise>
       <exercise permid="ApE">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula20.pg"/>
       </exercise>
       <exercise permid="gwN">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula30.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula30.pg"/>
       </exercise>
       <exercise permid="MDW">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula30.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula30.pg"/>
       </exercise>
       <exercise permid="sLf">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula40.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula40.pg"/>
       </exercise>
       <exercise permid="YSo">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula40.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula40.pg"/>
       </exercise>
       <exercise permid="EZx">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula50.pg"/>
       </exercise>
       <exercise permid="lgG">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula50.pg"/>
       </exercise>
       <exercise permid="RnP">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula60.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula60.pg"/>
       </exercise>
       <exercise permid="xuY">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula60.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula60.pg"/>
       </exercise>
       <exercise permid="dCh">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula70.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula70.pg"/>
       </exercise>
       <exercise permid="JJq">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula70.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula70.pg"/>
       </exercise>
       <exercise permid="pQz">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula80.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula80.pg"/>
       </exercise>
       <exercise permid="VXI">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula80.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula80.pg"/>
       </exercise>
       <exercise permid="CeR">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula90.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula90.pg"/>
       </exercise>
       <exercise permid="ima">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula90.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula90.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="ZXH">
       <title>Slope and Graphs</title>
       <exercise permid="Otj">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph10.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph10.pg"/>
       </exercise>
       <exercise permid="uAs">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph10.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph10.pg"/>
       </exercise>
       <exercise permid="aHB">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph20.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph20.pg"/>
       </exercise>
       <exercise permid="GOK">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph20.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph20.pg"/>
       </exercise>
       <exercise permid="mVT">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph30.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph30.pg"/>
       </exercise>
       <exercise permid="Tdc">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph30.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph30.pg"/>
       </exercise>
       <exercise permid="zkl">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph40.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph40.pg"/>
       </exercise>
       <exercise permid="fru">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph40.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph40.pg"/>
       </exercise>
       <exercise permid="LyD">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph50.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph50.pg"/>
       </exercise>
       <exercise permid="rFM">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph50.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph50.pg"/>
       </exercise>
       <exercise permid="XMV">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph60.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph60.pg"/>
       </exercise>
       <exercise permid="DUe">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph60.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindSlopeByGraph60.pg"/>
       </exercise>
       <exercise permid="kbn">
-        <webwork source="Math95/LinearEquations/LinearEquations3.pg" />
+        <webwork source="Math95/LinearEquations/LinearEquations3.pg"/>
       </exercise>
       <exercise permid="Qiw">
-        <webwork source="Math95/LinearEquations/LinearEquations3.pg" />
+        <webwork source="Math95/LinearEquations/LinearEquations3.pg"/>
       </exercise>
       <exercise permid="wpF">
-        <webwork source="Math95/LinearEquations/LinearEquations4.pg" />
+        <webwork source="Math95/LinearEquations/LinearEquations4.pg"/>
       </exercise>
       <!-- <exercise permid="cwO">
         <webwork source="Math95/LinearEquations/LinearEquations4.pg" />
@@ -1265,33 +1265,33 @@ clip=false]
 <webwork source="Library/NewHampshire/NECAP/grade7/gr7-2005/n7-2005-14s.pg" />
 </exercise> -->
       <exercise permid="IDX">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication10.pg"/>
       </exercise>
       <exercise permid="oLg">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication10.pg"/>
       </exercise>
       <exercise permid="USp">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication20.pg"/>
       </exercise>
       <exercise permid="AZy">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication20.pg"/>
       </exercise>
       <exercise permid="hgH">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication30.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication30.pg"/>
       </exercise>
       <exercise permid="NnQ">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication30.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication30.pg"/>
       </exercise>
       <exercise permid="tuZ">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication40.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication40.pg"/>
       </exercise>
       <exercise permid="ZCi">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication40.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeApplication40.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="mlZ">
       <exercise permid="RXJ">
-        <webwork source="Library/NewHampshire/NECAP/grade11/gr11-2008/n11-2008-23.pg" />
+        <webwork source="Library/NewHampshire/NECAP/grade11/gr11-2008/n11-2008-23.pg"/>
       </exercise>
       <exercise permid="yeS">
         <webwork>
@@ -1299,24 +1299,24 @@ clip=false]
 <pg-code>
 @x=(1999..2013);
 @y=(17599,17446,17847,17887,17559,18499,18682,19112,19376,20370,19909,19727,20636,20035,20458);
-$m=Real(244.064)->with(tolType=>'absolute',tolerance=>100);
+$m=Real(244.064)-&gt;with(tolType=&gt;'absolute',tolerance=&gt;100);
 for my$j(0,1){
-$gr[$j] = init_graph(1998,-2000,2017,25000,axes=>[1999,0],grid=>[19,27],size=>[240,240]);
+$gr[$j] = init_graph(1998,-2000,2017,25000,axes=&gt;[1999,0],grid=&gt;[19,27],size=&gt;[240,240]);
 $xpixel = 19/240;
 $ypoxel = 27/240;
-$gr[$j] -> lb('reset');
-$gr[$j]->h_ticks(0,"black",2000,2005,2010);
-$gr[$j]->v_ticks(1999,"black",5000,10000,15000,20000);
-for my$i(2002,2005,2008,2011,2014){$gr[$j]->moveTo($i,-500);$gr[$j]->lineTo($i,500,'black',3);$gr[$j]->lb(new Label($i,1000,$i,'black','center','bottom','small'));};
-for my$i(5000,10000,15000,20000){$gr[$j]->moveTo(1998.7,$i);$gr[$j]->lineTo(1999.3,$i,'black',3);$gr[$j]->lb(new Label(1999.5,$i,$i,'black','left','middle','small'));};
-$gr[$j]->lb(new Label(2016,-1000,'year','black','right','middle','small'));
-$gr[$j]->lb(new Label(1999.5,24000,'diagnoses','black','left','top','small'));
-add_functions($gr[$j], "$m*x-470583 for x in &lt;1998,2017> using color:blue and weight:1");
-for my$i(0..14){$gr[$j]->stamps(closed_circle($x[$i],$y[$i],'blue'));};
+$gr[$j] -&gt; lb('reset');
+$gr[$j]-&gt;h_ticks(0,"black",2000,2005,2010);
+$gr[$j]-&gt;v_ticks(1999,"black",5000,10000,15000,20000);
+for my$i(2002,2005,2008,2011,2014){$gr[$j]-&gt;moveTo($i,-500);$gr[$j]-&gt;lineTo($i,500,'black',3);$gr[$j]-&gt;lb(new Label($i,1000,$i,'black','center','bottom','small'));};
+for my$i(5000,10000,15000,20000){$gr[$j]-&gt;moveTo(1998.7,$i);$gr[$j]-&gt;lineTo(1999.3,$i,'black',3);$gr[$j]-&gt;lb(new Label(1999.5,$i,$i,'black','left','middle','small'));};
+$gr[$j]-&gt;lb(new Label(2016,-1000,'year','black','right','middle','small'));
+$gr[$j]-&gt;lb(new Label(1999.5,24000,'diagnoses','black','left','top','small'));
+add_functions($gr[$j], "$m*x-470583 for x in &lt;1998,2017&gt; using color:blue and weight:1");
+for my$i(0..14){$gr[$j]-&gt;stamps(closed_circle($x[$i],$y[$i],'blue'));};
 };
-$gr[1]->stamps(closed_circle(2006,19000,'red'));
-$gr[1]->stamps(closed_circle(2014,21000,'red'));
-$gr[1]->moveTo(2006,19000-$ypixel);$gr[1]->lineTo(2014-$xpixel,19000-$ypixel,'red',1);$gr[1]->arrowTo(2014-$xpixel,21000,'red',1);
+$gr[1]-&gt;stamps(closed_circle(2006,19000,'red'));
+$gr[1]-&gt;stamps(closed_circle(2014,21000,'red'));
+$gr[1]-&gt;moveTo(2006,19000-$ypixel);$gr[1]-&gt;lineTo(2014-$xpixel,19000-$ypixel,'red',1);$gr[1]-&gt;arrowTo(2014-$xpixel,21000,'red',1);
 </pg-code>
             </setup>
             <statement>
@@ -1325,7 +1325,7 @@ $gr[1]->moveTo(2006,19000-$ypixel);$gr[1]->lineTo(2014-$xpixel,19000-$ypixel,'re
                 and a trend-line has been drawn.
               </p>
               <sidebyside widths="40%" permid="FJr">
-                <image pg-name="$gr[0]" />
+                <image pg-name="$gr[0]"/>
               </sidebyside>
               <p permid="uto">
                 Estimate the slope of the trend-line.
@@ -1333,7 +1333,7 @@ $gr[1]->moveTo(2006,19000-$ypixel);$gr[1]->lineTo(2014-$xpixel,19000-$ypixel,'re
                 the units are provided.
               </p>
               <p permid="aAx">
-                <var name="$m" width="10" /><m>\,\frac{\text{diagnoses}}{\text{year}}</m>
+                <var name="$m" width="10"/><m>\,\frac{\text{diagnoses}}{\text{year}}</m>
               </p>
             </statement>
             <solution permid="mAu">
@@ -1343,7 +1343,7 @@ $gr[1]->moveTo(2006,19000-$ypixel);$gr[1]->lineTo(2014-$xpixel,19000-$ypixel,'re
                 it seems <m>(2006,19000)</m> and <m>(2014,21000)</m> are two such points.
               </p>
               <sidebyside widths="40%" permid="lQA">
-                <image pg-name="$gr[1]" />
+                <image pg-name="$gr[1]"/>
               </sidebyside>
               <p permid="zyG">
                 <me permid="NgM">

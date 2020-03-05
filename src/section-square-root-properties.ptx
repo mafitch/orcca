@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -41,7 +41,7 @@
       For example, since <m>4^2=16</m>, then <m>\sqrt{16}=4</m>.
       Both <m>\sqrt{2}</m> and <m>3\sqrt{2}</m> are radical expressions.
       In both expressions, the number <m>2</m> is the radicand.
-      You can review the square root basics in <xref ref="section-absolute-value-and-square-root">Section</xref>.
+      You can review the square root basics in <xref ref="section-absolute-value-and-square-root" />.
     </p>
     <sidebyside widths="47% 30%" margins="5%" valign="bottom" permid="tLu">
       <p permid="wUv">
@@ -51,7 +51,7 @@
         <q>on the fringes</q>
         when used in politics, sports, and other places.
         It actually has that same meaning in math,
-        when you consider a square with area <m>A</m> as in <xref ref="figure-radical">Figure</xref>.
+        when you consider a square with area <m>A</m> as in <xref ref="figure-radical" />.
       </p>
       <figure xml:id="figure-radical" permid="dbE">
         <caption>
@@ -62,12 +62,12 @@
         <image permid="yoj">
           <description>A drawing of a square labeled with area A; the side lengths are labeled the square root of A</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \draw [fill=firstcolor!30] (0,0) rectangle (5,5);
 \node at (2.5,2.5) {area $A$};
 \node[right] at (5,2.5) {$\sqrt{A}$};
 \node[below] at (2.5,0) {side length $\sqrt{A}$};
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -109,7 +109,7 @@
           <setup>
 <pg-code>
 Context("LimitedNumeric");
-Context()->flags->set(tolType=>'absolute',tolerance=>'0.15');
+Context()-&gt;flags-&gt;set(tolType=&gt;'absolute',tolerance=&gt;'0.15');
 </pg-code>
           </setup>
           <statement>
@@ -117,7 +117,7 @@ Context()->flags->set(tolType=>'absolute',tolerance=>'0.15');
               Estimate <m>\sqrt{19}</m> without a calculator.
             </p>
             <p permid="BEo">
-              <var name="'4.35'" width="5" />
+              <var name="'4.35'" width="5"/>
             </p>
           </statement>
           <solution permid="Udr">
@@ -186,7 +186,7 @@ Context()->flags->set(tolType=>'absolute',tolerance=>'0.15');
     </p>
     <p permid="jAK">
       Now let's look at division.
-      When we learned how to find the square root of a fraction in <xref ref="section-absolute-value-and-square-root">Section</xref>,
+      When we learned how to find the square root of a fraction in <xref ref="section-absolute-value-and-square-root" />,
       we saw that the numerators and denominators could be simplified separately.
       We multiply the numerators and denominators independently.
       Here is an example of two different ways to simplify a fraction in a square root:
@@ -244,7 +244,7 @@ Context()->flags->set(tolType=>'absolute',tolerance=>'0.15');
     </p>
     <p permid="Idu">
       First, we will make a table of factor pairs for the number <m>12</m>,
-      as we did in <xref ref="section-factoring-trinomials-with-leading-coefficient-one">Section</xref>.
+      as we did in <xref ref="section-factoring-trinomials-with-leading-coefficient-one" />.
       <md permid="OCA">
         <mrow>1\amp\cdot12</mrow>
         <mrow>2\amp\cdot6</mrow>
@@ -312,7 +312,7 @@ $answer=Formula("5sqrt(5)");
               To type <m>\sqrt{\phantom{x}}</m>, use <c>sqrt( )</c>.
             </instruction>
             <p permid="NSG">
-              <var name="$answer" width="10" />
+              <var name="$answer" width="10"/>
             </p>
           </statement>
           <solution permid="AkA">
@@ -354,7 +354,7 @@ $answer=Formula("5sqrt(5)");
       </solution>
     </example>
     <p permid="UrM">
-      We can also use <xref ref="item-division-property-of-square-roots" text="title" /> to simplify expressions.
+      We can also use <xref ref="item-division-property-of-square-roots" text="title"/> to simplify expressions.
     </p>
     <example permid="Hff">
       <statement>
@@ -379,7 +379,7 @@ $answer=Formula("5sqrt(5)");
             <li permid="dxd">
               <p permid="aCx">
                 For the first expression,
-                we will use the <xref ref="item-division-property-of-square-roots" text="title" />:
+                we will use the <xref ref="item-division-property-of-square-roots" text="title"/>:
                 <md permid="fAL">
                   <mrow>\sqrt{\frac{9}{16}}\amp=\frac{\sqrt{9}}{\sqrt{16}}</mrow>
                   <mrow>\amp=\frac{3}{4}</mrow>
@@ -405,7 +405,7 @@ $answer=Formula("5sqrt(5)");
   <subsection permid="ZZH">
     <title>Multiplying Square Root Expressions</title>
     <p permid="AyV">
-      If we use the <xref ref="item-multiplication-property-of-square-roots" text="title" /> and the <xref ref="item-division-property-of-square-roots" text="title" /> in the reverse order as
+      If we use the <xref ref="item-multiplication-property-of-square-roots" text="title"/> and the <xref ref="item-division-property-of-square-roots" text="title"/> in the reverse order as
       <md permid="rPd">
         <mrow>\sqrt{x}\cdot\sqrt{y}\amp=\sqrt{xy}\amp\amp \text{and}\amp \frac{\sqrt{x}}{\sqrt{y}}\amp=\sqrt{\frac{x}{y}}</mrow>
       </md>,
@@ -462,7 +462,7 @@ $answer=Formula("42sqrt(3)");
               To type <m>\sqrt{\phantom{x}}</m>, use <c>sqrt( )</c>.
             </instruction>
             <p permid="agY">
-              <var name="$answer" width="10" />
+              <var name="$answer" width="10"/>
             </p>
           </statement>
           <solution permid="grJ">
@@ -563,7 +563,7 @@ $answer=Formula("-10sqrt(3)");
               To type <m>\sqrt{\phantom{x}}</m>, use <c>sqrt( )</c>.
             </instruction>
             <p permid="mvq">
-              <var name="$answer" width="10" />
+              <var name="$answer" width="10"/>
             </p>
           </statement>
           <solution permid="MyS">
@@ -635,7 +635,7 @@ $answer=Formula("-10sqrt(3)");
       Let's see how we can remove the square root symbol from the denominator in <m>\frac{1}{\sqrt{5}}</m>.
       If we multiply a radical by itself,
       the result is the radicand,
-      by <xref ref="definition-square-root">Definition</xref>.
+      by <xref ref="definition-square-root" />.
       As an example:
       <me permid="JSH">
         \sqrt{5}\cdot\sqrt{5}=5
@@ -687,7 +687,7 @@ $answer=Formula("sqrt(10)/5");
               To type <m>\sqrt{\phantom{x}}</m>, use <c>sqrt( )</c>.
             </instruction>
             <p permid="yJI">
-              <var name="$answer" width="10" />
+              <var name="$answer" width="10"/>
             </p>
           </statement>
           <solution permid="sGb">
@@ -725,7 +725,7 @@ $answer=Formula("sqrt(10)/5");
   <subsection xml:id="subsection-more-complicated-square-root-operations" permid="Svi">
     <title>More Complicated Square Root Operations</title>
     <p permid="FiO">
-      In <xref ref="section-multiplying-polynomials">Section</xref>,
+      In <xref ref="section-multiplying-polynomials" />,
       we learned how to multiply polynomials like <m>2(x+3)</m> and <m>(x+2)(x+3)</m>.
       All the methods we learned apply when we multiply square root expressions.
       We will look at a few examples done with different methods.
@@ -818,7 +818,7 @@ $answer=Formula("sqrt(10)/5");
 <!--Note that double-dashes in tikz code have been split for this XML comment
 <subsection>
 <title>Trigonometry Ratios</title>
-<p>In <xref ref="section-right-triangle-trigonometric-ratios">Section</xref>, we learned how to find trigonometry ratios in a right triangle when all side lengths are whole numbers. Now that we learned how to rationalize denominator, we can handle lengths with square root symbols. Let's look at the next example.</p>
+<p>In <xref ref="section-right-triangle-trigonometric-ratios" />, we learned how to find trigonometry ratios in a right triangle when all side lengths are whole numbers. Now that we learned how to rationalize denominator, we can handle lengths with square root symbols. Let's look at the next example.</p>
 <example>
 <statement>
 <p>In right triangle <m>\Delta ABC</m>, find the values of <m>\sin{A}, \cos{A}, \tan{A}, \sin{B}, \cos{B}</m> and <m>\tan{B}</m>.</p>
@@ -864,115 +864,115 @@ $answer=Formula("sqrt(10)/5");
     <exercisegroup permid="eJA">
       <title>Review and Warmup</title>
       <exercise permid="odm">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers10.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers10.pg"/>
       </exercise>
       <exercise permid="Ukv">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers10.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers10.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="KQJ">
       <exercise permid="ArE">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg"/>
       </exercise>
       <exercise permid="gyN">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg"/>
       </exercise>
       <exercise permid="MFW">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg"/>
       </exercise>
       <exercise permid="sNf">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg"/>
       </exercise>
       <exercise permid="YUo">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg"/>
       </exercise>
       <exercise permid="Fbx">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg"/>
       </exercise>
       <exercise permid="liG">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers50.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers50.pg"/>
       </exercise>
       <exercise permid="RpP">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers50.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers50.pg"/>
       </exercise>
       <exercise permid="xwY">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers60.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers60.pg"/>
       </exercise>
       <exercise permid="dEh">
-        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers60.pg" />
+        <webwork source="BasicMath/IntegerAndSquareRoot/identifySquareNumbers60.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="qXS">
       <exercise permid="JLq">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg"/>
       </exercise>
       <exercise permid="pSz">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="Xfb">
       <title>Simplify Radical Expressions</title>
       <exercise permid="VZI">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg"/>
       </exercise>
       <exercise permid="CgR">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg"/>
       </exercise>
       <exercise permid="ioa">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg"/>
       </exercise>
       <exercise permid="Ovj">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg"/>
       </exercise>
       <exercise permid="uCs">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg"/>
       </exercise>
       <exercise permid="aJB">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg"/>
       </exercise>
       <exercise permid="GQK">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot40.pg"/>
       </exercise>
       <exercise permid="mXT">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot40.pg"/>
       </exercise>
       <exercise permid="Tfc">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot50.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot50.pg"/>
       </exercise>
       <exercise permid="zml">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot50.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot50.pg"/>
       </exercise>
       <exercise permid="ftu">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot60.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot60.pg"/>
       </exercise>
       <exercise permid="LAD">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot60.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot60.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="4" permid="Dmk">
       <exercise permid="rHM">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty10.pg"/>
       </exercise>
       <exercise permid="XOV">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty10.pg"/>
       </exercise>
       <exercise permid="DWe">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty20.pg"/>
       </exercise>
       <exercise permid="kdn">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty20.pg"/>
       </exercise>
       <exercise permid="Qkw">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals04.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals04.pg"/>
       </exercise>
       <exercise permid="wrF">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals04.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals04.pg"/>
       </exercise>
       <exercise permid="cyO">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals06.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals06.pg"/>
       </exercise>
       <exercise permid="IFX">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals06.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals06.pg"/>
       </exercise>
       <exercise permid="oNg">
         <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals02.pg" seed="602"/>
@@ -984,221 +984,221 @@ $answer=Formula("sqrt(10)/5");
     <exercisegroup cols="3" permid="jtt">
       <title>Multiplying Square Root Expressions</title>
       <exercise permid="Bby">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals10.pg"/>
       </exercise>
       <exercise permid="hiH">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals10.pg"/>
       </exercise>
       <exercise permid="NpQ">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals20.pg"/>
       </exercise>
       <exercise permid="twZ">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals20.pg"/>
       </exercise>
       <exercise permid="ZEi">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals30.pg"/>
       </exercise>
       <exercise permid="FLr">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals30.pg"/>
       </exercise>
       <exercise permid="lSA">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals40.pg"/>
       </exercise>
       <exercise permid="RZJ">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals40.pg"/>
       </exercise>
       <exercise permid="ygS">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty30.pg"/>
       </exercise>
       <exercise permid="eob">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty30.pg"/>
       </exercise>
       <exercise permid="Kvk">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty40.pg"/>
       </exercise>
       <exercise permid="qCt">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty40.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="PAC">
       <title>Adding and Subtracting Square Root Expressions</title>
       <exercise permid="WJC">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals20.pg"/>
       </exercise>
       <exercise permid="CQL">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals20.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals20.pg"/>
       </exercise>
       <exercise permid="iXU">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals30.pg"/>
       </exercise>
       <exercise permid="Pfd">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals30.pg"/>
       </exercise>
       <exercise permid="vmm">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals50.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals50.pg"/>
       </exercise>
       <exercise permid="btv">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals50.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals50.pg"/>
       </exercise>
       <exercise permid="HAE">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals70.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals70.pg"/>
       </exercise>
       <exercise permid="nHN">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals70.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals70.pg"/>
       </exercise>
       <exercise permid="TOW">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals60.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals60.pg"/>
       </exercise>
       <exercise permid="zWf">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals60.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals60.pg"/>
       </exercise>
       <exercise permid="gdo">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals90.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals90.pg"/>
       </exercise>
       <exercise permid="Mkx">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals90.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals90.pg"/>
       </exercise>
     </exercisegroup>
     <newpage/>
     <exercisegroup cols="2" permid="vHL">
       <title>Rationalizing the Denominator</title>
       <exercise permid="srG">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator10.pg"/>
       </exercise>
       <exercise permid="YyP">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator10.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator10.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="4" permid="bOU">
       <exercise permid="EFY">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg"/>
       </exercise>
       <exercise permid="kNh">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator30.pg"/>
       </exercise>
       <exercise permid="QUq">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator40.pg"/>
       </exercise>
       <exercise permid="xbz">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator40.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator40.pg"/>
       </exercise>
       <exercise permid="diI">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator45.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator45.pg"/>
       </exercise>
       <exercise permid="JpR">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator45.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator45.pg"/>
       </exercise>
       <exercise permid="pxa">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator50.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator50.pg"/>
       </exercise>
       <exercise permid="VEj">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator50.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator50.pg"/>
       </exercise>
       <exercise permid="BLs">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator60.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator60.pg"/>
       </exercise>
       <exercise permid="hSB">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator60.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator60.pg"/>
       </exercise>
       <exercise permid="NZK">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator70.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator70.pg"/>
       </exercise>
       <exercise permid="ugT">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator70.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator70.pg"/>
       </exercise>
       <exercise permid="aoc">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg"/>
       </exercise>
       <exercise permid="Gvl">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator80.pg"/>
       </exercise>
       <exercise permid="mCu">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator90.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator90.pg"/>
       </exercise>
       <exercise permid="SJD">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator90.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator90.pg"/>
       </exercise>
 <!-- seed set to guarantee distinct versions -->
       <exercise permid="yQM">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator100.pg" seed="214" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator100.pg" seed="214"/>
       </exercise>
       <exercise permid="eXV">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator100.pg" seed="215" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator100.pg" seed="215"/>
       </exercise>
       <exercise permid="Lfe">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator110.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator110.pg"/>
       </exercise>
       <exercise permid="rmn">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator110.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator110.pg"/>
       </exercise>
       <exercise permid="Xtw">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator120.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator120.pg"/>
       </exercise>
       <exercise permid="DAF">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator120.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/RationalizeDenominator120.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="HWd">
       <title>More Complicated Square Root Operations</title>
       <exercise permid="jHO">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals100.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals100.pg"/>
       </exercise>
       <exercise permid="POX">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals100.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals100.pg"/>
       </exercise>
       <exercise permid="vWg">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals120.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals120.pg"/>
       </exercise>
       <exercise permid="cdp">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals120.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals120.pg"/>
       </exercise>
       <exercise permid="Iky">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals130.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals130.pg"/>
       </exercise>
       <exercise permid="orH">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals130.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals130.pg"/>
       </exercise>
       <exercise permid="UyQ">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals137.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals137.pg"/>
       </exercise>
       <exercise permid="AFZ">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals137.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals137.pg"/>
       </exercise>
       <exercise permid="gNi">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals138.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals138.pg"/>
       </exercise>
       <exercise permid="MUr">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals138.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals138.pg"/>
       </exercise>
       <exercise permid="tbA">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals139.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals139.pg"/>
       </exercise>
       <exercise permid="ZiJ">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals139.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals139.pg"/>
       </exercise>
       <exercise permid="FpS">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals140.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals140.pg"/>
       </exercise>
       <exercise permid="lxb">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals140.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals140.pg"/>
       </exercise>
       <exercise permid="REk">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical1.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical1.pg"/>
       </exercise>
       <exercise permid="xLt">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical1.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical1.pg"/>
       </exercise>
       <exercise permid="dSC">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical2.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical2.pg"/>
       </exercise>
       <exercise permid="JZL">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical2.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical2.pg"/>
       </exercise>
       <exercise permid="qgU">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical3.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical3.pg"/>
       </exercise>
       <exercise permid="Wod">
-        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical3.pg" />
+        <webwork source="BasicAlgebra/RadicalsAndRationalExponents/FOILradical3.pg"/>
       </exercise>
     </exercisegroup>
 <!-- <exercisegroup>

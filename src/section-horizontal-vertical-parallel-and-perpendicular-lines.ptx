@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -21,13 +21,13 @@
         <image permid="BiT">
           <description>the graph of a horizontal line passing through the point (0,3)</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[axis equal]
 \addplot+[domain=-8:8]{3};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -36,13 +36,13 @@
         <image permid="hqc">
           <description>the graph of a vertical line passing through the point (3,0)</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[axis equal]
 \addplot+[] coordinates {(3,-7) (3,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -53,14 +53,14 @@
         <image permid="Nxl">
           <description>the graph of two parallel slanted lines</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[axis equal]
 \addplot+[domain=-8:8]{1/4*x+1};
 \addplot+[domain=-8:8]{1/4*x-3};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -69,14 +69,14 @@
         <image permid="tEu">
           <description>the graph of a slanted line and the line that crosses it at a 90 degree angle</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[axis equal]
 \addplot+[domain=-3.25:0.25]{-4*(x+1)-2};
 \addplot+[domain=-8:8]{1/4*(x+1)-2};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -85,7 +85,7 @@
   <subsection permid="EGc">
     <title>Horizontal Lines and Vertical Lines</title>
     <p permid="pZU">
-      We learned in <xref ref="section-standard-form">Section</xref>
+      We learned in <xref ref="section-standard-form" />
       that all lines can be written in <xref ref="equation-standard-form" text="title">standard form</xref>.
       When either <m>A</m> or <m>B</m> equal <m>0</m>,
       we end up with a horizontal or vertical line, as we will soon see.
@@ -146,18 +146,18 @@
           <image permid="ZLD">
             <description>a horizontal line at y=3</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}
-\addplot[guideline,->] coordinates {(4,0) (5,0) (5,3)};
-\addplot[guideline,->] coordinates {(0,0) (1,0) (1,3)};
-\addplot[guideline,->] coordinates {(-1,0) (-2,0) (-2,3)};
-\addplot[guideline,->] coordinates {(-5,0) (-6,0) (-6,3)};
+\addplot[guideline,-&gt;] coordinates {(4,0) (5,0) (5,3)};
+\addplot[guideline,-&gt;] coordinates {(0,0) (1,0) (1,3)};
+\addplot[guideline,-&gt;] coordinates {(-1,0) (-2,0) (-2,3)};
+\addplot[guideline,-&gt;] coordinates {(-5,0) (-6,0) (-6,3)};
 \addplot[soliddot] coordinates {(5,3) (1,3) (-2,3) (-6,3)};
 \addplot[primarycurve]{3};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -192,18 +192,18 @@
           <image permid="FSM">
             <description>a vertical line at x=5</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}
-\addplot[guideline,->] coordinates {(0,0) (5,0) (5,5)};
-\addplot[guideline,->] coordinates {(0,0) (5,0) (5,1)};
-\addplot[guideline,->] coordinates {(0,0) (5,0) (5,-2)};
-\addplot[guideline,->] coordinates {(0,0) (5,0) (5,-6)};
+\addplot[guideline,-&gt;] coordinates {(0,0) (5,0) (5,5)};
+\addplot[guideline,-&gt;] coordinates {(0,0) (5,0) (5,1)};
+\addplot[guideline,-&gt;] coordinates {(0,0) (5,0) (5,-2)};
+\addplot[guideline,-&gt;] coordinates {(0,0) (5,0) (5,-6)};
 \addplot[soliddot] coordinates {(5,5) (5,1) (5,-2) (5,-6)};
 \addplot[primarycurve] coordinates {(5,-7) (5,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -237,29 +237,29 @@
 <pg-code>
 @x=(-2..2);
 @y=(-4.25)x5;
-$pts=MultiAnswer(map{($_%2==0)?$x[$_/2]:$y[($_-1)/2]}(0..9))->with(
-singleResult => 1,
-allowBlankAnswers => 1,
-checker => sub {
+$pts=MultiAnswer(map{($_%2==0)?$x[$_/2]:$y[($_-1)/2]}(0..9))-&gt;with(
+singleResult =&gt; 1,
+allowBlankAnswers =&gt; 1,
+checker =&gt; sub {
 my ($correct,$student,$self) = @_;
 my @sx = @{$student}[0,2,4,6,8];
 my @sy = @{$student}[1,3,5,7,9];
 my $OK=1;
 if ($sy[0]!=-4.25) {
-$self->setMessage(1,"This point is not on the line.");
-$self->setMessage(2,"This point is not on the line.");
+$self-&gt;setMessage(1,"This point is not on the line.");
+$self-&gt;setMessage(2,"This point is not on the line.");
 $OK=0;
 }
 for my $i(1..4){
 if ($sy[$i]!=-4.25) {
-$self->setMessage(2*$i+1,"This point is not on the line.");
-$self->setMessage(2*$i+2,"This point is not on the line.");
+$self-&gt;setMessage(2*$i+1,"This point is not on the line.");
+$self-&gt;setMessage(2*$i+2,"This point is not on the line.");
 $OK=0;
 }
 for my $j(0..$i-1){
 if ($sy[$i]==-4.25 and $sx[$i]==$sx[$j]) {
-$self->setMessage(2*$i+1,"This point was already used.");
-$self->setMessage(2*$i+2,"This point was already used.");
+$self-&gt;setMessage(2*$i+1,"This point was already used.");
+$self-&gt;setMessage(2*$i+2,"This point was already used.");
 $OK=0;
 }
 }
@@ -267,19 +267,19 @@ $OK=0;
 return $OK;
 }
 );
-$gr = init_graph(-7,-7,7,7,axes=>[0,0],grid=>[14,14],size=>[240,240]);
-$gr->lb('reset');
+$gr = init_graph(-7,-7,7,7,axes=&gt;[0,0],grid=&gt;[14,14],size=&gt;[240,240]);
+$gr-&gt;lb('reset');
 for $j (-6..-1,1..6) {
-$gr->lb( new Label($j,   0,  $j,'black','center','top'  ,'large'));
-$gr->lb( new Label( 0,  $j,  $j,'black','right','middle','large'));
+$gr-&gt;lb( new Label($j,   0,  $j,'black','center','top'  ,'large'));
+$gr-&gt;lb( new Label( 0,  $j,  $j,'black','right','middle','large'));
 };
-$gr->lb( new Label(7, 0, "x ",'black','right','bottom','large'));
-$gr->lb( new Label(0, 7, " y",'black','left','top','large'));
-for my $i(-2..2){$gr->stamps( closed_circle($i,-4.25,'blue') );}
-$gr->moveTo(0,-4.25);
-$gr->arrowTo(-7,-4.25,'blue',1);
-$gr->moveTo(0,-4.25);
-$gr->arrowTo(7,-4.25,'blue',1);
+$gr-&gt;lb( new Label(7, 0, "x ",'black','right','bottom','large'));
+$gr-&gt;lb( new Label(0, 7, " y",'black','left','top','large'));
+for my $i(-2..2){$gr-&gt;stamps( closed_circle($i,-4.25,'blue') );}
+$gr-&gt;moveTo(0,-4.25);
+$gr-&gt;arrowTo(-7,-4.25,'blue',1);
+$gr-&gt;moveTo(0,-4.25);
+$gr-&gt;arrowTo(7,-4.25,'blue',1);
 </pg-code>
           </setup>
           <statement>
@@ -297,24 +297,24 @@ $gr->arrowTo(7,-4.25,'blue',1);
                   <cell><m>y</m></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
               </tabular>
             </sidebyside>
@@ -357,7 +357,7 @@ $gr->arrowTo(7,-4.25,'blue',1);
               The reason we made a table was to help with plotting the line.
             </p>
             <sidebyside widths="40%" permid="vAL">
-              <image permid="lZV" pg-name="$gr" />
+              <image permid="lZV" pg-name="$gr"/>
             </sidebyside>
           </solution>
       </webwork>
@@ -366,7 +366,7 @@ $gr->arrowTo(7,-4.25,'blue',1);
       <title>Undefined Slope</title>
       <p permid="bmv">
         What is the slope of a vertical line?
-        <xref ref="figure-vertical-lines">Figure</xref>
+        <xref ref="figure-vertical-lines" />
         shows three lines passing through the origin,
         each steeper than the last.
         In each graph, you can see a slope triangle that uses a
@@ -374,12 +374,12 @@ $gr->arrowTo(7,-4.25,'blue',1);
         of <m>4</m> each time.
       </p>
       <figure xml:id="figure-vertical-lines" permid="THW">
-        <caption />
+        <caption/>
         <sidebyside widths="31% 31% 31%" permid="bHU">
           <image permid="ENt">
             <description>a line with a slope of 4/4=1</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[xmin=-1,
 ymin=-1,]
@@ -388,13 +388,13 @@ ymin=-1,]
 \addplot[guideline] coordinates {(4,0) (4,4)} node[right,pos=0.5] {$4$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
           <image permid="She">
             <description>a line with a slope of 4/2=2, which is steeper than the first line</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[xmin=-1,
 ymin=-1,]
@@ -403,13 +403,13 @@ ymin=-1,]
 \addplot[guideline] coordinates {(2,0) (2,4)} node[right,pos=0.5] {$4$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
           <image permid="yon">
             <description>a linw with a slope of 4/1=4, which is steeper than the previous two lines</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[xmin=-1,
 ymin=-1,]
@@ -418,7 +418,7 @@ ymin=-1,]
 \addplot[guideline] coordinates {(1,0) (1,4)} node[right,pos=0.5] {$4$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </sidebyside>
@@ -460,29 +460,29 @@ ymin=-1,]
 <pg-code>
 @x=(3.14)x5;
 @y=(-2..2);
-$pts=MultiAnswer(map{($_%2==0)?$x[$_/2]:$y[($_-1)/2]}(0..9))->with(
-singleResult => 1,
-allowBlankAnswers => 1,
-checker => sub {
+$pts=MultiAnswer(map{($_%2==0)?$x[$_/2]:$y[($_-1)/2]}(0..9))-&gt;with(
+singleResult =&gt; 1,
+allowBlankAnswers =&gt; 1,
+checker =&gt; sub {
 my ($correct,$student,$self) = @_;
 my @sx = @{$student}[0,2,4,6,8];
 my @sy = @{$student}[1,3,5,7,9];
 my $OK=1;
 if ($sx[0]!=3.14) {
-$self->setMessage(1,"This point is not on the line.");
-$self->setMessage(2,"This point is not on the line.");
+$self-&gt;setMessage(1,"This point is not on the line.");
+$self-&gt;setMessage(2,"This point is not on the line.");
 $OK=0;
 }
 for my $i(1..4){
 if ($sx[$i]!=3.14) {
-$self->setMessage(2*$i+1,"This point is not on the line.");
-$self->setMessage(2*$i+2,"This point is not on the line.");
+$self-&gt;setMessage(2*$i+1,"This point is not on the line.");
+$self-&gt;setMessage(2*$i+2,"This point is not on the line.");
 $OK=0;
 }
 for my $j(0..$i-1){
 if ($sx[$i]==3.14 and $sy[$i]==$sy[$j]) {
-$self->setMessage(2*$i+1,"This point was already used.");
-$self->setMessage(2*$i+2,"This point was already used.");
+$self-&gt;setMessage(2*$i+1,"This point was already used.");
+$self-&gt;setMessage(2*$i+2,"This point was already used.");
 $OK=0;
 }
 }
@@ -490,19 +490,19 @@ $OK=0;
 return $OK;
 }
 );
-$gr = init_graph(-7,-7,7,7,axes=>[0,0],grid=>[14,14],size=>[240,240]);
-$gr->lb('reset');
+$gr = init_graph(-7,-7,7,7,axes=&gt;[0,0],grid=&gt;[14,14],size=&gt;[240,240]);
+$gr-&gt;lb('reset');
 for $j (-6..-1,1..6) {
-$gr->lb( new Label($j,   0,  $j,'black','center','top'  ,'large'));
-$gr->lb( new Label( 0,  $j,  $j,'black','right','middle','large'));
+$gr-&gt;lb( new Label($j,   0,  $j,'black','center','top'  ,'large'));
+$gr-&gt;lb( new Label( 0,  $j,  $j,'black','right','middle','large'));
 };
-$gr->lb( new Label(7, 0, "x ",'black','right','bottom','large'));
-$gr->lb( new Label(0, 7, " y",'black','left','top','large'));
-for my $i(-2..2){$gr->stamps( closed_circle(3.14,$i,'blue') );}
-$gr->moveTo(3.14,0);
-$gr->arrowTo(3.14,7,'blue',1);
-$gr->moveTo(3.14,0);
-$gr->arrowTo(3.14,-7,'blue',1);
+$gr-&gt;lb( new Label(7, 0, "x ",'black','right','bottom','large'));
+$gr-&gt;lb( new Label(0, 7, " y",'black','left','top','large'));
+for my $i(-2..2){$gr-&gt;stamps( closed_circle(3.14,$i,'blue') );}
+$gr-&gt;moveTo(3.14,0);
+$gr-&gt;arrowTo(3.14,7,'blue',1);
+$gr-&gt;moveTo(3.14,0);
+$gr-&gt;arrowTo(3.14,-7,'blue',1);
 </pg-code>
           </setup>
           <statement>
@@ -518,24 +518,24 @@ $gr->arrowTo(3.14,-7,'blue',1);
                   <cell><m>y</m></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
                 <row>
-                  <cell><var name="$pts" width="10" /></cell>
-                  <cell><var name="$pts" width="10" /></cell>
+                  <cell><var name="$pts" width="10"/></cell>
+                  <cell><var name="$pts" width="10"/></cell>
                 </row>
               </tabular>
             </sidebyside>
@@ -582,7 +582,7 @@ $gr->arrowTo(3.14,-7,'blue',1);
               The reason we made a table was to help with plotting the line.
             </p>
             <sidebyside widths="40%" permid="Udv">
-              <image permid="evw" pg-name="$gr" />
+              <image permid="evw" pg-name="$gr"/>
             </sidebyside>
           </solution>
       </webwork>
@@ -602,14 +602,14 @@ $gr->arrowTo(3.14,-7,'blue',1);
           it could theoretically be as low as <m>0</m> or it could be anything larger than that.
           If we graph this scenario, we have to graph the equation <m>x=650</m>,
           which we now know to give a vertical line,
-          and we get <xref ref="figure-television">Figure</xref>.
+          and we get <xref ref="figure-television" />.
         </p>
         <figure xml:id="figure-television" permid="Mdx">
           <caption>New TV: hours watched versus purchase price; negative <m>y</m>-values omitted since they make no sense in context</caption>
           <image permid="kUC">
             <description>the vertical line x=650, starting at the point (650,0) with an arrow pointing upward</description>
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[xmin=-100,xmax=1000,
 ymin=-100,ymax=1000,
@@ -620,11 +620,11 @@ minor ytick={100,300,...,900},
 ylabel={hours watched},
 xlabel={purchase price},
 ]
-\addplot+[->] coordinates {(650,0) (650,1000)};
+\addplot+[-&gt;] coordinates {(650,0) (650,1000)};
 \addplot[soliddot] coordinates {(650,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -632,11 +632,10 @@ xlabel={purchase price},
     </example>
     <paragraphs permid="diM">
       <title>Summary of Horizontal and Vertical Line Equations</title>
-      <statement>
         <sidebyside permid="FZQ">
           <tabular valign="top" bottom="minor" permid="YGk">
             <col width="47%" right="medium"/>
-            <col width="47%" />
+            <col width="47%"/>
             <row bottom="medium">
               <cell>Horizontal Lines</cell>
               <cell>Vertical Lines</cell>
@@ -712,7 +711,6 @@ xlabel={purchase price},
             </row>
           </tabular>
         </sidebyside>
-      </statement>
     </paragraphs>
   </subsection>
   <subsection xml:id="subsection-parallel-lines" permid="kNl">
@@ -721,7 +719,7 @@ xlabel={purchase price},
       <sidebyside widths="37% 37%" margins="10%" permid="EUx">
         <p permid="skG">
           Two trees were planted in the same year,
-          and their growth over time is modeled by the two lines in <xref ref="figure-trees">Figure</xref>.
+          and their growth over time is modeled by the two lines in <xref ref="figure-trees" />.
           Use linear equations to model each tree's growth,
           and interpret their meanings in this context.
         </p>
@@ -730,25 +728,25 @@ xlabel={purchase price},
           <image width="47%" permid="KCF">
             <description>This is a Cartesian grid with two parallel lines. Tree 1 has a slope triangle from (0,2) to (3,4) for a slope of 2/3. Tree 2 has a slope triangle from (0,5) to (3.7) for a slope of 2/3.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 xlabel={$x$ time in years},ylabel={$y$ height in feet},
 xmin=-1,xmax=5,ymin=-1,ymax=9,
 minor ytick=,
 xtick={-1,0,...,4},ytick={-1,0,...,8}]
-\addplot+[domain = 0:5,->]{2/3*x+2} node[pos=0.3,sloped,above] {Tree 1};
-\addplot+[domain = 0:5,->]{2/3*x+5} node[pos=0.3,sloped,above] {Tree 2};
+\addplot+[domain = 0:5,-&gt;]{2/3*x+2} node[pos=0.3,sloped,above] {Tree 1};
+\addplot+[domain = 0:5,-&gt;]{2/3*x+5} node[pos=0.3,sloped,above] {Tree 2};
 \addplot[soliddot] coordinates {(0,2)} node[below right] {$(0,2)$};
 \addplot[soliddot] coordinates {(3,4)} node[below right] {$(3,4)$};
 \addplot[guideline] coordinates {(0,2) (3,2)} node[pos=0.5] {$3$};
-\addplot[guideline,->] coordinates {(3,2) (3,3.7)} node[pos=0.5,right] {$2$};
+\addplot[guideline,-&gt;] coordinates {(3,2) (3,3.7)} node[pos=0.5,right] {$2$};
 \addplot[soliddot] coordinates {(0,5)} node[below right] {$(0,5)$};
 \addplot[soliddot] coordinates {(3,7)} node[below right] {$(3,7)$};
 \addplot[guideline] coordinates {(0,5) (3,5)} node[pos=0.5] {$3$};
-\addplot[guideline,->] coordinates {(3,5) (3,6.7)} node[pos=0.5,right] {$2$};
+\addplot[guideline,-&gt;] coordinates {(3,5) (3,6.7)} node[pos=0.5,right] {$2$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -785,8 +783,8 @@ xtick={-1,0,...,4},ytick={-1,0,...,8}]
       <webwork>
           <setup>
 <pg-code>
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $line=Formula("y=17.2x+128.2");
 </pg-code>
           </setup>
@@ -797,7 +795,7 @@ $line=Formula("y=17.2x+128.2");
               What is an equation for <m>\ell</m>?
             </p>
             <p permid="AyZ">
-              <var name="$line" width="20" />
+              <var name="$line" width="20"/>
             </p>
           </statement>
           <solution permid="mQT">
@@ -818,8 +816,8 @@ $line=Formula("y=17.2x+128.2");
       <webwork>
           <setup>
 <pg-code>
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $line=Formula("y=-3.5(x+12)+23");
 </pg-code>
           </setup>
@@ -830,7 +828,7 @@ $line=Formula("y=-3.5(x+12)+23");
               What is an equation for <m>\kappa</m>?
             </p>
             <p permid="MNr">
-              <var name="$line" width="20" />
+              <var name="$line" width="20"/>
             </p>
           </statement>
           <solution permid="SYc">
@@ -854,7 +852,7 @@ $line=Formula("y=-3.5(x+12)+23");
       The slopes of two perpendicular lines have a special relationship too.
     </p>
     <p permid="OCE">
-      <xref ref="figure-perpendicular-lines">Figure</xref>
+      <xref ref="figure-perpendicular-lines" />
       walks you through an explanation of this realationship.
     </p>
     <figure xml:id="figure-perpendicular-lines" permid="GYf">
@@ -865,7 +863,7 @@ $line=Formula("y=-3.5(x+12)+23");
           <image permid="qJO">
             <description>the graph of two perpendicular lines, where one has a slope of m</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-2,
 ymin=-2,
 ticks=none,
@@ -876,7 +874,7 @@ axis equal,
 \addplot+[domain=-1:3.5]{-2*x+5};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -889,7 +887,7 @@ axis equal,
           <image permid="WQX">
             <description>the previous graph with a slope triangle added; the rise is m and the run is 1</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-2,
 ymin=-2,
 ticks=none,
@@ -902,7 +900,7 @@ axis equal,
 \addplot[guideline] coordinates {(5,3) (5,5)} node[right,pos=0.5] {$m$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
@@ -911,7 +909,7 @@ axis equal,
           <image permid="CYg">
             <description>the previous graph with the perpendicular line and its slope triangle added; the perpendicular line has a rise of -1 and a run of m, which gives a slope of -1/m</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-2,
 ymin=-2,
 ticks=none,
@@ -926,14 +924,14 @@ axis equal,
 \addplot[guideline] coordinates {(3,3) (3,-1)} node[right,pos=0.5] {$-1$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
           </image>
         </figure>
       </sidebyside>
     </figure>
     <p permid="uJN">
-      The second line in <xref ref="figure-perpendicular-lines">Figure</xref> has slope
+      The second line in <xref ref="figure-perpendicular-lines" /> has slope
       <me permid="QrR">
         \frac{\Delta y}{\Delta x}=\frac{-1}{m}=-\frac{1}{m}\text{.}
       </me>
@@ -964,13 +962,13 @@ axis equal,
         <image permid="jfp">
           <description>the graph of lines y=2x-2 and y=-1/2x+2 showing that they are perpendicular lines.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[axis equal]
 \addplot+[domain = -2.5:4.5]{2*x-2} node[pos=0.15,sloped,above]{$y=2x-2$};
 \addplot+[domain = -7:7]{-0.5*x+2} node[pos=0.15,sloped,above]{$y=-\frac{1}{2}x+2$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -979,13 +977,13 @@ axis equal,
         <image permid="Pmy">
           <description>the graph of lines y=-3x+4 and y=1/3x-3 showing that they are perpendicular.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[axis equal]
 \addplot+[domain = -1:3.666]{-3*x+4} node[pos=0.3,sloped,above]{$y=-3x+4$};
 \addplot+[domain = -7:7]{1/3*x-3} node[pos=0.2,sloped,above]{$y=\frac{1}{3}x-3$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -994,13 +992,13 @@ axis equal,
         <image permid="vtH">
           <description>the graph of lines y=x and y=-x showing that they are perpendicular</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[axis equal]
 \addplot+[domain = -7:7]{x} node[pos=0.2,sloped,above]{$y=x$};
 \addplot+[domain = -7:7]{-x} node[pos=0.2,sloped,above]{$y=-x$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -1038,8 +1036,8 @@ axis equal,
       <webwork>
           <setup>
 <pg-code>
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $line=Formula("y=3/2(x-4)-3");
 </pg-code>
           </setup>
@@ -1051,7 +1049,7 @@ $line=Formula("y=3/2(x-4)-3");
               <m>(4,-3)\text{.}</m> Find an equation for Line <m>B</m>.
             </p>
             <p permid="ZbJ">
-              <var name="$line" width="20" />
+              <var name="$line" width="20"/>
             </p>
           </statement>
           <solution permid="zfl">
@@ -1084,96 +1082,96 @@ $line=Formula("y=3/2(x-4)-3");
     <exercisegroup cols="2" permid="JpV">
       <title>Review and Warmup</title>
       <exercise permid="Gvp">
-        <webwork source="BasicMath/MultiplicationDivision/DivideByZero10.pg" />
+        <webwork source="BasicMath/MultiplicationDivision/DivideByZero10.pg"/>
       </exercise>
       <exercise permid="mCy">
-        <webwork source="BasicMath/MultiplicationDivision/DivideByZero10.pg" />
+        <webwork source="BasicMath/MultiplicationDivision/DivideByZero10.pg"/>
       </exercise>
       <exercise permid="SJH">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula80.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula80.pg"/>
       </exercise>
       <exercise permid="yQQ">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula80.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula80.pg"/>
       </exercise>
       <exercise permid="eXZ">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula90.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula90.pg"/>
       </exercise>
       <exercise permid="Lfi">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula90.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/SlopeFormula90.pg"/>
       </exercise>
       <exercise permid="rmr">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot90.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot90.pg"/>
       </exercise>
       <exercise permid="XtA">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot90.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot90.pg"/>
       </exercise>
       <exercise permid="DAJ">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot100.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot100.pg"/>
       </exercise>
       <exercise permid="jHS">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot100.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot100.pg"/>
       </exercise>
     </exercisegroup>
     
     <exercisegroup cols="2" permid="pxe">
       <title>Tables for Horizontal and Vertical Lines</title>
       <exercise permid="PPb">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine70.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine70.pg"/>
       </exercise>
       <exercise permid="vWk">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine70.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine70.pg"/>
       </exercise>
       <exercise permid="cdt">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine80.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine80.pg"/>
       </exercise>
       <exercise permid="IkC">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine80.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine80.pg"/>
       </exercise>
     </exercisegroup>
    
     <exercisegroup cols="2" permid="VEn">
       <title>Line Equations</title>
       <exercise permid="MUv">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/TwoPointsFindEquationSpecial10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/TwoPointsFindEquationSpecial10.pg"/>
       </exercise>
       <exercise permid="tbE">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/TwoPointsFindEquationSpecial10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/TwoPointsFindEquationSpecial10.pg"/>
       </exercise>
       <exercise permid="ZiN">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/TwoPointsFindEquationSpecial20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/TwoPointsFindEquationSpecial20.pg"/>
       </exercise>
       <exercise permid="FpW">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/TwoPointsFindEquationSpecial20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/TwoPointsFindEquationSpecial20.pg"/>
       </exercise>
       <exercise permid="orL">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph50.pg"/>
       </exercise>
       <exercise permid="UyU">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph50.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2">
       <exercise permid="AGd">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph60.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph60.pg"/>
       </exercise>
       <exercise permid="gNm">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph60.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/WriteEquationByGraph60.pg"/>
       </exercise>
       
     </exercisegroup>
     <exercisegroup permid="BLw">
       <title>Intercepts</title>
       <exercise permid="lxf">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts130.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts130.pg"/>
       </exercise>
       <exercise permid="REo">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts130.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts130.pg"/>
       </exercise>
       <exercise permid="xLx">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts140.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts140.pg"/>
       </exercise>
       <exercise permid="dSG">
-        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts140.pg" />
+        <webwork source="BasicAlgebra/GraphingPointsAndLines/FindXYIntercepts140.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="hSF">
@@ -1188,13 +1186,13 @@ $line=Formula("y=3/2(x-4)-3");
           <sidebyside permid="JZP">
             <image permid="bAQ">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {1};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1210,13 +1208,13 @@ $line=Formula("y=3/2(x-4)-3");
           <sidebyside permid="qgY">
             <image permid="HHZ">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-7:7] {-5};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1232,13 +1230,13 @@ $line=Formula("y=3/2(x-4)-3");
           <sidebyside permid="Woh">
             <image permid="nPi">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve] coordinates {(2,-7) (2,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1254,13 +1252,13 @@ $line=Formula("y=3/2(x-4)-3");
           <sidebyside permid="Cvq">
             <image permid="TWr">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot[primarycurve] coordinates {(3,-7) (3,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1270,67 +1268,67 @@ $line=Formula("y=3/2(x-4)-3");
     <exercisegroup cols="2" permid="NZO">
       <title>Parallel or Perpendicular?</title>
       <exercise permid="Hfj">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular10.pg"/>
       </exercise>
       <exercise permid="nms">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular30.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular30.pg"/>
       </exercise>
       <exercise permid="TtB">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular50.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular50.pg"/>
       </exercise>
       <exercise permid="zAK">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular70.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular70.pg"/>
       </exercise>
       <exercise permid="fHT">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular80.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular80.pg"/>
       </exercise>
       <exercise permid="LPc">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular130.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular130.pg"/>
       </exercise>
       <exercise permid="rWl">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular140.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular140.pg"/>
       </exercise>
       <exercise permid="Ydu">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular140.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelPerpendicular140.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="ugX">
       <title>Parallel and Perpendicular Line Equations</title>
       <exercise permid="EkD">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelFindEquationSpecial10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelFindEquationSpecial10.pg"/>
       </exercise>
       <exercise permid="krM">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelFindEquationSpecial10.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelFindEquationSpecial10.pg"/>
       </exercise>
       <exercise permid="QyV">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelFindEquationSpecial20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelFindEquationSpecial20.pg"/>
       </exercise>
       <exercise permid="wGe">
-        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelFindEquationSpecial20.pg" />
+        <webwork source="BasicAlgebra/SlopeAndY-InterceptCalculations/ParallelFindEquationSpecial20.pg"/>
       </exercise>
       <exercise permid="cNn">
-        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular150.pg" />
+        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular150.pg"/>
       </exercise>
       <exercise permid="IUw">
-        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular150.pg" />
+        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular150.pg"/>
       </exercise>
       <exercise permid="pbF">
-        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular160.pg" />
+        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular160.pg"/>
       </exercise>
       <exercise permid="ViO">
-        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular160.pg" />
+        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicular160.pg"/>
       </exercise>
       <exercise permid="BpX">
-        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicularORCCA170.pg" />
+        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicularORCCA170.pg"/>
       </exercise>
       <exercise permid="hxg">
-        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicularORCCA190.pg" />
+        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicularORCCA190.pg"/>
       </exercise>
       <exercise permid="NEp">
-        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicularORCCA200.pg" />
+        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicularORCCA200.pg"/>
       </exercise>
       <exercise permid="tLy">
-        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicularORCCA210.pg" />
+        <webwork source="BasicAlgebra/PointSlopeForm/ParallelPerpendicularORCCA210.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup permid="aog">

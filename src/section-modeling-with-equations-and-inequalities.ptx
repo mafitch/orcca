@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -51,9 +51,9 @@
             </p>
           </stack>
           <table xml:id="table-savings-pattern" permid="ZUu">
-            <caption>Amount in Savings Account</caption>
+            <title>Amount in Savings Account</title>
             <tabular permid="eEn">
-              <col halign="center" />
+              <col halign="center"/>
               <col halign="left"/>
               <row bottom="medium">
                 <cell>
@@ -98,8 +98,8 @@
     </example>
     <remark permid="Fdo">
       <p permid="FrJ">
-        To determine the solution to the equation in <xref ref="example-savings-pattern">Example</xref>,
-        we could continue the pattern in <xref ref="table-savings-pattern">Table</xref>:
+        To determine the solution to the equation in <xref ref="example-savings-pattern" />,
+        we could continue the pattern in <xref ref="table-savings-pattern" />:
       </p>
       <sidebyside margins="0%" widths="47% 47%" permid="RrG">
         <p permid="lyS">
@@ -108,9 +108,9 @@
           <m>\$1{,}700</m> if <m>\$150</m> is saved each month.
         </p>
         <table xml:id="table-savings-pattern-continued" permid="GbD">
-          <caption>Amount in Savings Account</caption>
+          <title>Amount in Savings Account</title>
           <tabular permid="KLw">
-            <col halign="center" />
+            <col halign="center"/>
             <col halign="left"/>
             <row bottom="medium">
               <cell>
@@ -181,9 +181,9 @@
             To determine this equation, we'll start by making a table of values:
           </p>
           <table xml:id="table-bathtub-pattern" permid="miM">
-            <caption>Amount of Water in the Bathtub</caption>
+            <title>Amount of Water in the Bathtub</title>
             <tabular permid="qSF">
-              <col halign="center" />
+              <col halign="center"/>
               <col halign="left"/>
               <row bottom="medium">
                 <cell>
@@ -240,7 +240,7 @@
   <subsection permid="pFV">
     <title>Setting Up Equations for Percent Problems</title>
     <p permid="Tvo">
-      <xref ref="section-percentages">Section</xref>
+      <xref ref="section-percentages" />
       reviewed some basics of working with percentages,
       and even solved some one-step equations that were set up using percentages.
       Here we look at some scenarios where there is an equation to set up based on percentages,
@@ -282,9 +282,9 @@
           <setup>
 <pg-code>
 Context("ImplicitPlane");
-Context()->variables->are(x=>'Real');
+Context()-&gt;variables-&gt;are(x=&gt;'Real');
 $equation = ImplicitPlane("x+0.19x=150");
-$evaluator = $equation->cmp(correct_ans_latex_string=>'x+0.19x=150');
+$evaluator = $equation-&gt;cmp(correct_ans_latex_string=&gt;'x+0.19x=150');
 </pg-code>
           </setup>
           <statement>
@@ -299,7 +299,7 @@ $evaluator = $equation->cmp(correct_ans_latex_string=>'x+0.19x=150');
               Use <c>x</c> for any variable you define and use.
             </instruction>
             <p permid="KbC">
-              <var name="$equation" evaluator="$evaluator" width="25" />
+              <var name="$equation" evaluator="$evaluator" width="25"/>
             </p>
           </statement>
           <solution permid="kfe">
@@ -353,9 +353,9 @@ $evaluator = $equation->cmp(correct_ans_latex_string=>'x+0.19x=150');
           <setup>
 <pg-code>
 Context("ImplicitPlane");
-Context()->variables->are(x=>'Real');
+Context()-&gt;variables-&gt;are(x=&gt;'Real');
 $equation = ImplicitPlane("x-0.2x=51");
-$evaluator = $equation->cmp(correct_ans_latex_string=>'x-0.2x=51');
+$evaluator = $equation-&gt;cmp(correct_ans_latex_string=&gt;'x-0.2x=51');
 </pg-code>
           </setup>
           <statement>
@@ -368,7 +368,7 @@ $evaluator = $equation->cmp(correct_ans_latex_string=>'x-0.2x=51');
               Use <c>x</c> for the variable.
             </instruction>
             <p permid="WpU">
-              <var name="$equation" evaluator="$evaluator" width="25" />
+              <var name="$equation" evaluator="$evaluator" width="25"/>
             </p>
           </statement>
           <solution permid="Qmn">
@@ -392,19 +392,19 @@ $evaluator = $equation->cmp(correct_ans_latex_string=>'x-0.2x=51');
       With geometry problems and algebra,
       there is often the possibility to draw some picture to help understand the scenario better.
       Additionally it is often necessary to rely on some formula from geometry,
-      such as the formulas from <xref ref="subsection-perimeter-and-area">Subsection</xref>.
+      such as the formulas from <xref ref="subsection-perimeter-and-area" />.
     </p>
     <example permid="CiI">
       <statement>
         <p permid="MWi">
           An Olympic-size swimming pool is rectangular and
           <quantity>
-            <mag>50</mag><unit base="meter" />
+            <mag>50</mag><unit base="meter"/>
           </quantity>
           in length.
           We don't know its width, but we do know that it required
           <quantity>
-            <mag>150</mag><unit base="meter" />
+            <mag>150</mag><unit base="meter"/>
           </quantity>
           of painter's tape to outline the edge of the pool during recent renovations.
           Use this information to set up an equation that models the width of the pool.
@@ -414,10 +414,10 @@ $evaluator = $equation->cmp(correct_ans_latex_string=>'x-0.2x=51');
         <sidebyside widths="59% 35%" margins="0%" permid="ipR">
           <p permid="SLu">
             Since the pool's shape is a rectangle,
-            it helps to sketch a rectangle representing the pool as in <xref ref="figure-olympic-pool">Figure</xref>.
+            it helps to sketch a rectangle representing the pool as in <xref ref="figure-olympic-pool" />.
             Since we know its length is
             <quantity>
-              <mag>50</mag><unit base="meter" />
+              <mag>50</mag><unit base="meter"/>
             </quantity>, it is a good idea to label that in the sketch.
             The width is our unknown quantity,
             so we can use <m>w</m> as a variable to represent the pool's width in meters and label that too.
@@ -438,15 +438,15 @@ $evaluator = $equation->cmp(correct_ans_latex_string=>'x-0.2x=51');
         <p permid="ySD">
           Since it required
           <quantity>
-            <mag>150</mag><unit base="meter" />
+            <mag>150</mag><unit base="meter"/>
           </quantity>
           of painter's tape to outline the pool,
           we know the perimeter of the pool is
           <quantity>
-            <mag>150</mag><unit base="meter" />
+            <mag>150</mag><unit base="meter"/>
           </quantity>.
           This suggests using the perimeter formula for a rectangle:
-          <m>P=2(\ell+w)</m>. (This formula was discussed in <xref ref="subsection-perimeter-and-area">Subsection</xref>).
+          <m>P=2(\ell+w)</m>. (This formula was discussed in <xref ref="subsection-perimeter-and-area" />).
         </p>
         <p permid="eZM">
           With this formula,
@@ -463,17 +463,17 @@ $evaluator = $equation->cmp(correct_ans_latex_string=>'x-0.2x=51');
           <setup>
 <pg-code>
 Context("ImplicitPlane");
-Context()->flags->set(reduceConstants=>0);
-Context()->variables->are(h=>'Real');
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
+Context()-&gt;variables-&gt;are(h=&gt;'Real');
 $equation = ImplicitPlane("125=1/2(10)h");
-$evaluator = $equation->cmp(correct_ans_latex_string=>'125=\frac{1}{2}(10)h');
-$triangle = init_graph(-1,-2,11.5,26.2,size=>[48,120]);
-$triangle->moveTo(1,1);
-$triangle->lineTo(11,1,'black',1);
-$triangle->lineTo(1,26,'black',1);
-$triangle->lineTo(1,1,'black',1);
-$triangle->lb( new Label(6,1,'10','black','center','top','large'));
-$triangle->lb( new Label(1,13,'h','black','right','middle','large'));
+$evaluator = $equation-&gt;cmp(correct_ans_latex_string=&gt;'125=\frac{1}{2}(10)h');
+$triangle = init_graph(-1,-2,11.5,26.2,size=&gt;[48,120]);
+$triangle-&gt;moveTo(1,1);
+$triangle-&gt;lineTo(11,1,'black',1);
+$triangle-&gt;lineTo(1,26,'black',1);
+$triangle-&gt;lineTo(1,1,'black',1);
+$triangle-&gt;lb( new Label(6,1,'10','black','center','top','large'));
+$triangle-&gt;lb( new Label(1,13,'h','black','right','middle','large'));
 </pg-code>
           </setup>
           <statement>
@@ -487,7 +487,7 @@ $triangle->lb( new Label(1,13,'h','black','right','middle','large'));
               Use <c>h</c> as the variable representing the sail's height.
             </instruction>
             <p permid="iEm">
-              <var name="$equation" evaluator="$evaluator" width="25" />
+              <var name="$equation" evaluator="$evaluator" width="25"/>
             </p>
           </statement>
           <solution permid="wtw">
@@ -581,7 +581,7 @@ $triangle->lb( new Label(1,13,'h','black','right','middle','large'));
             <mag>275</mag><unit base="gallon"/>
           </quantity>, we set this equation up as:
           <me permid="BrK">
-            700t >275
+            700t &gt;275
           </me>
         </p>
       </solution>
@@ -593,7 +593,7 @@ $triangle->lb( new Label(1,13,'h','black','right','middle','large'));
       The following table shows how to translate common phrases into mathematical expressions:
     </p>
     <table permid="SpV">
-      <caption>Translating English Phrases into Math Expressions</caption>
+      <title>Translating English Phrases into Math Expressions</title>
       <tabular valign="top" permid="WZO">
         <col halign="left"/>
         <col halign="center"/>
@@ -695,7 +695,7 @@ $triangle->lb( new Label(1,13,'h','black','right','middle','large'));
       etc.
     </p>
     <table permid="yxe">
-      <caption>Translating English Sentences into Math Equations</caption>
+      <title>Translating English Sentences into Math Equations</title>
       <tabular valign="top" permid="DgX">
         <col halign="left"/>
         <col halign="center"/>
@@ -756,19 +756,19 @@ $triangle->lb( new Label(1,13,'h','black','right','middle','large'));
         <webwork>
             <setup>
 <pg-code>
-Context()->variables->are();
+Context()-&gt;variables-&gt;are();
 for my $i (1..26) {
-Context()->variables->add($ALPHABET[$i-1]=>'Real');
-Context()->variables->add(lc($ALPHABET[$i-1])=>'Real');
+Context()-&gt;variables-&gt;add($ALPHABET[$i-1]=&gt;'Real');
+Context()-&gt;variables-&gt;add(lc($ALPHABET[$i-1])=&gt;'Real');
 };
-Context()->strings->add('years'=>{});
-Context()->strings->add('year'=>{alias=>'years'}, 'yrs'=>{alias=>'years'}, 'yr'=>{alias=>'years'}, 'y'=>{alias=>'years'}, 'yrs.'=>{alias=>'years'}, 'yr.'=>{alias=>'years'}, 'y.'=>{alias=>'years'});
-Context()->strings->add('hours'=>{});
-Context()->strings->add('hour'=>{alias=>'hours'}, 'hrs'=>{alias=>'hours'}, 'hr'=>{alias=>'hours'}, 'h'=>{alias=>'hours'}, 'hrs.'=>{alias=>'hours'}, 'hr.'=>{alias=>'hours'}, 'h.'=>{alias=>'hours'});
-Context()->strings->add('miles'=>{});
-Context()->strings->add('mile'=>{alias=>'miles'}, 'mis'=>{alias=>'miles'}, 'mi'=>{alias=>'miles'}, 'm'=>{alias=>'miles'}, 'mis.'=>{alias=>'hours'}, 'mi.'=>{alias=>'miles'}, 'm.'=>{alias=>'miles'});
-Context()->strings->add('ft^2'=>{});
-Context()->strings->add('square feet'=>{alias=>'ft^2'}, 'feet squared'=>{alias=>'ft^2'}, 'feet square'=>{alias=>'ft^2'}, 'sq ft'=>{alias=>'ft^2'}, 'sqft'=>{alias=>'ft^2'}, 'sq. ft.'=>{alias=>'ft^2'}, 'ft.^2'=>{alias=>'ft^2'});
+Context()-&gt;strings-&gt;add('years'=&gt;{});
+Context()-&gt;strings-&gt;add('year'=&gt;{alias=&gt;'years'}, 'yrs'=&gt;{alias=&gt;'years'}, 'yr'=&gt;{alias=&gt;'years'}, 'y'=&gt;{alias=&gt;'years'}, 'yrs.'=&gt;{alias=&gt;'years'}, 'yr.'=&gt;{alias=&gt;'years'}, 'y.'=&gt;{alias=&gt;'years'});
+Context()-&gt;strings-&gt;add('hours'=&gt;{});
+Context()-&gt;strings-&gt;add('hour'=&gt;{alias=&gt;'hours'}, 'hrs'=&gt;{alias=&gt;'hours'}, 'hr'=&gt;{alias=&gt;'hours'}, 'h'=&gt;{alias=&gt;'hours'}, 'hrs.'=&gt;{alias=&gt;'hours'}, 'hr.'=&gt;{alias=&gt;'hours'}, 'h.'=&gt;{alias=&gt;'hours'});
+Context()-&gt;strings-&gt;add('miles'=&gt;{});
+Context()-&gt;strings-&gt;add('mile'=&gt;{alias=&gt;'miles'}, 'mis'=&gt;{alias=&gt;'miles'}, 'mi'=&gt;{alias=&gt;'miles'}, 'm'=&gt;{alias=&gt;'miles'}, 'mis.'=&gt;{alias=&gt;'hours'}, 'mi.'=&gt;{alias=&gt;'miles'}, 'm.'=&gt;{alias=&gt;'miles'});
+Context()-&gt;strings-&gt;add('ft^2'=&gt;{});
+Context()-&gt;strings-&gt;add('square feet'=&gt;{alias=&gt;'ft^2'}, 'feet squared'=&gt;{alias=&gt;'ft^2'}, 'feet square'=&gt;{alias=&gt;'ft^2'}, 'sq ft'=&gt;{alias=&gt;'ft^2'}, 'sqft'=&gt;{alias=&gt;'ft^2'}, 'sq. ft.'=&gt;{alias=&gt;'ft^2'}, 'ft.^2'=&gt;{alias=&gt;'ft^2'});
 $a=OneOf('a','A');
 $t=OneOf('t','T');
 </pg-code>
@@ -780,20 +780,20 @@ $t=OneOf('t','T');
                 <ol label="a." permid="hky">
                   <li permid="tyQ">
                     <p permid="PgU">
-                      Let <var name="$a" width="1" /> be the area of a house,
-                      measured in <var name="'ft^2'" width="5" />.
+                      Let <var name="$a" width="1"/> be the area of a house,
+                      measured in <var name="'ft^2'" width="5"/>.
                     </p>
                   </li>
                   <li permid="ZFZ">
                     <p permid="vod">
-                      Let <var name="$a" width="1" /> be the age of a dog,
-                      measured in <var name="'years'" width="5" />.
+                      Let <var name="$a" width="1"/> be the age of a dog,
+                      measured in <var name="'years'" width="5"/>.
                     </p>
                   </li>
                   <li permid="FNi">
                     <p permid="bvm">
-                      Let <var name="$t" width="1" /> be the amount of time passed since a driver left Seattle, Washington,
-                      bound for Portland, Oregon, measured in <var name="'hours'" width="5" />.
+                      Let <var name="$t" width="1"/> be the amount of time passed since a driver left Seattle, Washington,
+                      bound for Portland, Oregon, measured in <var name="'hours'" width="5"/>.
                     </p>
                   </li>
                 </ol>
@@ -843,19 +843,19 @@ $t=OneOf('t','T');
         <webwork>
             <setup>
 <pg-code>
-Context()->variables->are();
+Context()-&gt;variables-&gt;are();
 for my $i (1..26) {
-Context()->variables->add($ALPHABET[$i-1]=>'Real');
-Context()->variables->add(lc($ALPHABET[$i-1])=>'Real');
+Context()-&gt;variables-&gt;add($ALPHABET[$i-1]=&gt;'Real');
+Context()-&gt;variables-&gt;add(lc($ALPHABET[$i-1])=&gt;'Real');
 };
-Context()->strings->add('years'=>{});
-Context()->strings->add('year'=>{alias=>'years'}, 'yrs'=>{alias=>'years'}, 'yr'=>{alias=>'years'}, 'y'=>{alias=>'years'}, 'yrs.'=>{alias=>'years'}, 'yr.'=>{alias=>'years'}, 'y.'=>{alias=>'years'});
-Context()->strings->add('hours'=>{});
-Context()->strings->add('hour'=>{alias=>'hours'}, 'hrs'=>{alias=>'hours'}, 'hr'=>{alias=>'hours'}, 'h'=>{alias=>'hours'}, 'hrs.'=>{alias=>'hours'}, 'hr.'=>{alias=>'hours'}, 'h.'=>{alias=>'hours'});
-Context()->strings->add('miles'=>{});
-Context()->strings->add('mile'=>{alias=>'miles'}, 'mis'=>{alias=>'miles'}, 'mi'=>{alias=>'miles'}, 'm'=>{alias=>'miles'}, 'mis.'=>{alias=>'hours'}, 'mi.'=>{alias=>'miles'}, 'm.'=>{alias=>'miles'});
-Context()->strings->add('ft^2'=>{});
-Context()->strings->add('square feet'=>{alias=>'ft^2'}, 'feet squared'=>{alias=>'ft^2'}, 'feet square'=>{alias=>'ft^2'}, 'sq ft'=>{alias=>'ft^2'}, 'sqft'=>{alias=>'ft^2'}, 'sq. ft.'=>{alias=>'ft^2'}, 'ft.^2'=>{alias=>'ft^2'});
+Context()-&gt;strings-&gt;add('years'=&gt;{});
+Context()-&gt;strings-&gt;add('year'=&gt;{alias=&gt;'years'}, 'yrs'=&gt;{alias=&gt;'years'}, 'yr'=&gt;{alias=&gt;'years'}, 'y'=&gt;{alias=&gt;'years'}, 'yrs.'=&gt;{alias=&gt;'years'}, 'yr.'=&gt;{alias=&gt;'years'}, 'y.'=&gt;{alias=&gt;'years'});
+Context()-&gt;strings-&gt;add('hours'=&gt;{});
+Context()-&gt;strings-&gt;add('hour'=&gt;{alias=&gt;'hours'}, 'hrs'=&gt;{alias=&gt;'hours'}, 'hr'=&gt;{alias=&gt;'hours'}, 'h'=&gt;{alias=&gt;'hours'}, 'hrs.'=&gt;{alias=&gt;'hours'}, 'hr.'=&gt;{alias=&gt;'hours'}, 'h.'=&gt;{alias=&gt;'hours'});
+Context()-&gt;strings-&gt;add('miles'=&gt;{});
+Context()-&gt;strings-&gt;add('mile'=&gt;{alias=&gt;'miles'}, 'mis'=&gt;{alias=&gt;'miles'}, 'mi'=&gt;{alias=&gt;'miles'}, 'm'=&gt;{alias=&gt;'miles'}, 'mis.'=&gt;{alias=&gt;'hours'}, 'mi.'=&gt;{alias=&gt;'miles'}, 'm.'=&gt;{alias=&gt;'miles'});
+Context()-&gt;strings-&gt;add('ft^2'=&gt;{});
+Context()-&gt;strings-&gt;add('square feet'=&gt;{alias=&gt;'ft^2'}, 'feet squared'=&gt;{alias=&gt;'ft^2'}, 'feet square'=&gt;{alias=&gt;'ft^2'}, 'sq ft'=&gt;{alias=&gt;'ft^2'}, 'sqft'=&gt;{alias=&gt;'ft^2'}, 'sq. ft.'=&gt;{alias=&gt;'ft^2'}, 'ft.^2'=&gt;{alias=&gt;'ft^2'});
 $a=OneOf('a','A');
 $t=OneOf('t','T');
 </pg-code>
@@ -867,20 +867,20 @@ $t=OneOf('t','T');
                 <ol label="a." permid="NrH">
                   <li permid="epS">
                     <p permid="stx">
-                      Let <var name="$a" width="1" /> be the age of a person,
-                      measured in <var name="'years'" width="5" />.
+                      Let <var name="$a" width="1"/> be the age of a person,
+                      measured in <var name="'years'" width="5"/>.
                     </p>
                   </li>
                   <li permid="Kxb">
                     <p permid="YAG">
-                      Let <var name="$m" width="1" /> be the distance traveled by a driver that left Portland, Oregon,
-                      bound for Boise, Idaho, measured in <var name="'miles'" width="5" />.
+                      Let <var name="$m" width="1"/> be the distance traveled by a driver that left Portland, Oregon,
+                      bound for Boise, Idaho, measured in <var name="'miles'" width="5"/>.
                     </p>
                   </li>
                   <li permid="qEk">
                     <p permid="EHP">
-                      Let <var name="$a" width="1" /> be the surface area of the walls of a room,
-                      measured in <var name="'ft^2'" width="5" />.
+                      Let <var name="$a" width="1"/> be the surface area of the walls of a room,
+                      measured in <var name="'ft^2'" width="5"/>.
                     </p>
                   </li>
                 </ol>
@@ -930,214 +930,214 @@ $t=OneOf('t','T');
     <exercisegroup cols="2" permid="awX">
       <title>Modeling with Linear Equations</title>
       <exercise permid="LnZ">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation10.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation10.pg"/>
       </exercise>
       <exercise permid="rvi">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation10.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation10.pg"/>
       </exercise>
       <exercise permid="XCr">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation20.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation20.pg"/>
       </exercise>
       <exercise permid="DJA">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation20.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation20.pg"/>
       </exercise>
       <exercise permid="jQJ">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation30.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation30.pg"/>
       </exercise>
       <exercise permid="PXS">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation30.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation30.pg"/>
       </exercise>
       <exercise permid="wfb">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation40.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation40.pg"/>
       </exercise>
       <exercise permid="cmk">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation40.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation40.pg"/>
       </exercise>
       <exercise permid="Itt">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation50.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation50.pg"/>
       </exercise>
       <exercise permid="oAC">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation50.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation50.pg"/>
       </exercise>
       <exercise permid="UHL">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation60.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation60.pg"/>
       </exercise>
       <exercise permid="AOU">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation60.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation60.pg"/>
       </exercise>
       <exercise permid="gWd">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation70.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation70.pg"/>
       </exercise>
       <exercise permid="Ndm">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation70.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation70.pg"/>
       </exercise>
       <exercise permid="tkv">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation100.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation100.pg"/>
       </exercise>
       <exercise permid="ZrE">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation100.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithEquation100.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="GEg">
       <title>Modeling with Linear Inequalities</title>
       <exercise permid="FyN">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality110.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality110.pg"/>
       </exercise>
       <exercise permid="lFW">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality110.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality110.pg"/>
       </exercise>
       <exercise permid="RNf">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality120.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality120.pg"/>
       </exercise>
       <exercise permid="xUo">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality120.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality120.pg"/>
       </exercise>
       <exercise permid="ebx">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality130.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality130.pg"/>
       </exercise>
       <exercise permid="KiG">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality130.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality130.pg"/>
       </exercise>
       <exercise permid="qpP">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality140.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality140.pg"/>
       </exercise>
       <exercise permid="WwY">
-        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality140.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/ModelingWithInequality140.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="mLp">
       <title>Translating English Phrases into Math Expressions and Equations</title>
       <exercise permid="CEh">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath10.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath10.pg"/>
       </exercise>
       <exercise permid="iLq">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath10.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath10.pg"/>
       </exercise>
       <exercise permid="OSz">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath20.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath20.pg"/>
       </exercise>
       <exercise permid="uZI">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath20.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath20.pg"/>
       </exercise>
       <exercise permid="bgR">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath25.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath25.pg"/>
       </exercise>
       <exercise permid="Hoa">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath25.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath25.pg"/>
       </exercise>
       <exercise permid="nvj">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath30.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath30.pg"/>
       </exercise>
       <exercise permid="TCs">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath30.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath30.pg"/>
       </exercise>
       <exercise permid="zJB">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath40.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath40.pg"/>
       </exercise>
       <exercise permid="fQK">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath40.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath40.pg"/>
       </exercise>
       <exercise permid="LXT">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath45.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath45.pg"/>
       </exercise>
       <exercise permid="sfc">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath45.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath45.pg"/>
       </exercise>
       <exercise permid="Yml">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath50.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath50.pg"/>
       </exercise>
       <exercise permid="Etu">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath50.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath50.pg"/>
       </exercise>
       <exercise permid="kAD">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath65.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath65.pg"/>
       </exercise>
       <exercise permid="QHM">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath65.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath65.pg"/>
       </exercise>
       <exercise permid="wOV">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath70.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath70.pg"/>
       </exercise>
       <exercise permid="cWe">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath70.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath70.pg"/>
       </exercise>
       <exercise permid="Jdn">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath80.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath80.pg"/>
       </exercise>
       <exercise permid="pkw">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath80.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath80.pg"/>
       </exercise>
       <exercise permid="VrF">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath82.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath82.pg"/>
       </exercise>
       <exercise permid="ByO">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath82.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath82.pg"/>
       </exercise>
       <exercise permid="hFX">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath84.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath84.pg"/>
       </exercise>
       <exercise permid="NNg">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath84.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath84.pg"/>
       </exercise>
       <exercise permid="tUp">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath90.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath90.pg"/>
       </exercise>
       <exercise permid="aby">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath90.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath90.pg"/>
       </exercise>
       <exercise permid="GiH">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath100.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath100.pg"/>
       </exercise>
       <exercise permid="mpQ">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath100.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath100.pg"/>
       </exercise>
       <exercise permid="SwZ">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath110.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath110.pg"/>
       </exercise>
       <exercise permid="yEi">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath110.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath110.pg"/>
       </exercise>
       <exercise permid="eLr">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath120.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath120.pg"/>
       </exercise>
       <exercise permid="KSA">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath120.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath120.pg"/>
       </exercise>
       <exercise permid="qZJ">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath130.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath130.pg"/>
       </exercise>
       <exercise permid="XgS">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath130.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath130.pg"/>
       </exercise>
       <exercise permid="Dob">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath140.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath140.pg"/>
       </exercise>
       <exercise permid="jvk">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath140.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath140.pg"/>
       </exercise>
       <exercise permid="PCt">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath150.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath150.pg"/>
       </exercise>
       <exercise permid="vJC">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath150.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath150.pg"/>
       </exercise>
       <exercise permid="bQL">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath160.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath160.pg"/>
       </exercise>
       <exercise permid="HXU">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath160.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath160.pg"/>
       </exercise>
       <exercise permid="ofd">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath170.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath170.pg"/>
       </exercise>
       <exercise permid="Umm">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath170.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath170.pg"/>
       </exercise>
       <exercise permid="Atv">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath180.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath180.pg"/>
       </exercise>
       <exercise permid="gAE">
-        <webwork source="BasicAlgebra/EnglishToMath/englishToMath180.pg" />
+        <webwork source="BasicAlgebra/EnglishToMath/englishToMath180.pg"/>
       </exercise>
     </exercisegroup>
     

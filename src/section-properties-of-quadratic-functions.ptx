@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -46,7 +46,7 @@
     </p>
     <sidebyside widths="47% 47%" margins="0%" valign="middle" permid="KcP">
       <table xml:id="table-basic-quadratic-function" permid="nwJ">
-        <caption>Function values and points for <m>f(t)=-16t^2+64t</m></caption>
+        <title>Function values and points for <m>f(t)=-16t^2+64t</m></title>
         <tabular valign="top" bottom="minor" permid="mrq">
           <col halign="right" right="minor"/>
           <col halign="left" right="minor"/>
@@ -88,7 +88,7 @@
         <image permid="Lpz">
           <description>a coordinate plane with a u-shaped graph that opens downward. The parabola starts at (0,0) and goes up through the point (1,48) until it reaches (2,64) when it starts going down through (3,48) and stops at (4,0)</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xmin=-2,xmax=6,ymin=-15,ymax=75,
 ytick=,
 minor ytick={-10,0,...,70},
@@ -101,14 +101,14 @@ xlabel={$t$}]
 \addplot[soliddot] coordinates {(4,0)} node[above right]{$(4,0)$};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
     </sidebyside>
     <p permid="Dbg">
-      Now that we have <xref ref="table-basic-quadratic-function">Table</xref>
-      and <xref ref="figure-basic-quadratic-function">Figure</xref>,
+      Now that we have <xref ref="table-basic-quadratic-function" />
+      and <xref ref="figure-basic-quadratic-function" />,
       we can see the features of this parabola.
       Notice the symmetry in the shape of the graph and the <m>y</m>-values in the table.
       Consecutive <m>y</m>-values do not increase by a constant amount in the way that linear functions do.
@@ -126,12 +126,12 @@ xlabel={$t$}]
         <image permid="rwI">
           <description>a u-shaped graph opening upward</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-1.45:3.45] {x^2-2*x+2};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -140,12 +140,12 @@ xlabel={$t$}]
         <image permid="XDR">
           <description>a wide u-shaped graph that opens downward</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-6.29:4.29] {-1/4*x^2-1/2*x-1/4};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -154,12 +154,12 @@ xlabel={$t$}]
         <image permid="DLa">
           <description>a narrow u-shaped graph that opens upward</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=1.12:4.87] {3*x^2-18*x+23.5};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -175,7 +175,7 @@ xlabel={$t$}]
       </p>
     </fact>
     <exercise permid="OMI">
-      <webwork >
+      <webwork>
       <setup>
 <pg-code>
 $up = PopUp(['?','upward','downward'],1);
@@ -251,7 +251,7 @@ $down = PopUp(['?','upward','downward'],2);
           <idx><h>vertex</h></idx>
           <idx><h>parabola</h><h>vertex</h></idx>
       is the highest or lowest point on the graph.
-      In <xref ref="figure-basic-quadratic-function">Figure</xref>,
+      In <xref ref="figure-basic-quadratic-function" />,
       the vertex is <m>(2,64)</m>.
       This tells us that Hannah's rocket reached its maximum height of <m>64</m> feet after <m>2</m> seconds.
       If the parabola opens downward, as in the rocket example,
@@ -269,13 +269,13 @@ $down = PopUp(['?','upward','downward'],2);
           <idx><h>parabola</h><h>axis of symmetry</h></idx>
       is a vertical line that passes through the vertex, dividing it in half.
       The vertex is the only point that does not have a symmetric point.
-      We write the axis of symmetry as an equation of a vertical line so it always starts with "<m>x=</m>." In <xref ref="figure-basic-quadratic-function">Figure</xref>,
+      We write the axis of symmetry as an equation of a vertical line so it always starts with "<m>x=</m>." In <xref ref="figure-basic-quadratic-function" />,
       the equation for the axis of symmetry is <m>x=2</m>.
     </p>
     <p permid="bDQ">
       The <term>vertical intercept</term><idx><h>parabola</h><h>vertical intercept</h></idx> is the point where the parabola crosses the vertical axis.
       The vertical intercept is the <m>y</m>-intercept if the axes are labeled <m>x</m> and <m>y</m>.
-      In <xref ref="figure-basic-quadratic-function">Figure</xref>,
+      In <xref ref="figure-basic-quadratic-function" />,
       the point <m>(0,0)</m> is the starting point of the rocket.
       The <m>y</m>-value of <m>0</m> means the rocket started on the ground.
     </p>
@@ -299,13 +299,13 @@ $down = PopUp(['?','upward','downward'],2);
         <image permid="jSj">
           <description>a u-shaped graph that opens upward and is above the x-axis; there are no horizontal intercepts</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-1.45:3.45] {x^2-2*x+2};
 \addplot[symmetryaxis] coordinates {(1,-7) (1,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -314,14 +314,14 @@ $down = PopUp(['?','upward','downward'],2);
         <image permid="PZs">
           <description>a wide u-shaped graph that opens downward and has its vertex on the x-axis so there is one x-intercept</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-6.29:4.29] {-1/4*x^2-1/2*x-1/4};
 \addplot[symmetryaxis] coordinates {(-1,-7) (-1,7)};
 \addplot[soliddot] coordinates {(-1,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -330,7 +330,7 @@ $down = PopUp(['?','upward','downward'],2);
         <image permid="wgB">
           <description>a narrow u-shaped graph that has its vertex below the x-axis and opens upward so there are two x-intercepts</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=1.12:4.87] {3*x^2-18*x+23.5};
 \addplot[symmetryaxis] coordinates {(3,-7) (3,7)};
@@ -338,7 +338,7 @@ $down = PopUp(['?','upward','downward'],2);
 \addplot[soliddot] coordinates {(4.08,0)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
         </image>
       </figure>
@@ -347,7 +347,7 @@ $down = PopUp(['?','upward','downward'],2);
       Here is a summary of the properties of quadratic functions:
     </p>
     <list xml:id="list-properties-of-quadratic-functions-visual" permid="dVG">
-      <caption>Summary of Properties of Quadratic Functions</caption>
+      <title>Summary of Properties of Quadratic Functions</title>
       <dl permid="sJf">
         <li xml:id="item-direction" permid="fpu">
           <title>Direction</title>
@@ -388,7 +388,7 @@ $down = PopUp(['?','upward','downward'],2);
       <statement>
         <p permid="bZp">
           Identify the key features of the quadratic function
-          <m>y=x^2-2x-8</m> shown in <xref ref="figure-quadratic-function-graph-properties">Figure</xref>.
+          <m>y=x^2-2x-8</m> shown in <xref ref="figure-quadratic-function-graph-properties" />.
         </p>
       </statement>
       <solution permid="cQn">
@@ -413,7 +413,7 @@ $down = PopUp(['?','upward','downward'],2);
             <image width="47%" permid="cnK">
               <description>the graph of a parabola that opens upward, has a vertex at (-1,9), a y-intercept at (0,-8) and x-intercepts at (-2,0) and (4,0)</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-10,ymax=10,xmin=-10,xmax=10,
 ytick={-8,-6,...,8},
 minor xtick={-10,-9,...,10},
@@ -427,7 +427,7 @@ minor ytick={-10,-9,...,10}]
 \addplot[soliddot] coordinates {(0,-8)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -435,25 +435,25 @@ minor ytick={-10,-9,...,10}]
       </solution>
     </example>
     <exercise permid="uTR">
-      <webwork >
+      <webwork>
       <setup>
 <pg-code>
 Context("Point");
 $vertex=Point("(-2,1)");
 $xintercept=Compute("None");
 $yintercept=Point("(0,5)");
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $axisofsymmetry=Formula("x=-2");
-$gr = init_graph(-7,-7,7,7,axes=>[0,0],grid=>[14,14],size=>[240,240]);
-$gr->lb('reset');
+$gr = init_graph(-7,-7,7,7,axes=&gt;[0,0],grid=&gt;[14,14],size=&gt;[240,240]);
+$gr-&gt;lb('reset');
 for my $j (-6,-4,-2,2,4,6) {
-$gr->lb( new Label($j, 0, $j,'black','center','top','large'));
+$gr-&gt;lb( new Label($j, 0, $j,'black','center','top','large'));
 }
 for my $j (-6,-4,-2,2,4,6) {
-$gr->lb( new Label(0, $j, $j,'black','right','middle','large'));
+$gr-&gt;lb( new Label(0, $j, $j,'black','right','middle','large'));
 }
-add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and weight:1");
+add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45&gt;  using color:blue and weight:1");
 </pg-code>
       </setup>
       <statement>
@@ -461,32 +461,32 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
           Use the graph to answer the following questions.
         </p>
         <sidebyside widths="40%" permid="iFz">
-          <image permid="IuT" pg-name="$gr" />
+          <image permid="IuT" pg-name="$gr"/>
         </sidebyside>
         <p permid="nio">
           <ol label="a." permid="EXx">
             <li permid="ika">
               <p permid="lOA">
                 What are the coordinates of the vertex?
-                <var name="$vertex" width="10" />
+                <var name="$vertex" width="10"/>
               </p>
             </li>
             <li permid="Orj">
               <p permid="RVJ">
                 What is the equation of the axis of symmetry?
-                <var name="$axisofsymmetry" width="10" />
+                <var name="$axisofsymmetry" width="10"/>
               </p>
             </li>
             <li permid="uys">
               <p permid="ycS">
                 What are the coordinates of the <m>x</m>-intercept(s)?
-                <var name="$xintercept" width="10" />
+                <var name="$xintercept" width="10"/>
               </p>
             </li>
             <li permid="aFB">
               <p permid="ekb">
                 What are the coordinates of the <m>y</m>-intercept?
-                <var name="$yintercept" width="10" />
+                <var name="$yintercept" width="10"/>
               </p>
             </li>
           </ol>
@@ -641,16 +641,16 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
           Now we know that our axis of symmetry is the line <m>x=-1</m> and the vertex is the point <m>(-1,4)</m>.
           We will set up our table with two values on each side of <m>x=-1</m>.
           We choose <m>x=-3, -2, -1, 0</m>,
-          and <m>1</m> as shown in <xref ref="table-quadratic-function-x-values">Table</xref>.
+          and <m>1</m> as shown in <xref ref="table-quadratic-function-x-values" />.
         </p>
         <p permid="snG">
-          Next, we'll determine the <m>y</m>-coordinates by replacing <m>x</m> with each value and we have the complete table as shown in <xref ref="table-quadratic-function-complete">Table</xref>.
+          Next, we'll determine the <m>y</m>-coordinates by replacing <m>x</m> with each value and we have the complete table as shown in <xref ref="table-quadratic-function-complete" />.
           Notice that each pair of <m>y</m>-values on either side of the vertex match.
           This helps us to check that our vertex and <m>y</m>-values are correct.
         </p>
         <sidebyside widths="44% 50%" margins="0%" permid="fKT">
           <table xml:id="table-quadratic-function-x-values" permid="TDS">
-            <caption>Setting up the table for <m>y=-x^2-2x+3</m></caption>
+            <title>Setting up the table for <m>y=-x^2-2x+3</m></title>
             <tabular valign="top" bottom="minor" permid="Syz">
               <col halign="right" right="minor"/>
               <col halign="left" right="minor"/>
@@ -662,33 +662,33 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
               </row>
               <row>
                 <cell><m>-3</m></cell>
-                <cell></cell>
-                <cell></cell>
+                <cell/>
+                <cell/>
               </row>
               <row>
                 <cell><m>-2</m></cell>
-                <cell></cell>
-                <cell></cell>
+                <cell/>
+                <cell/>
               </row>
               <row>
                 <cell><m>-1</m></cell>
-                <cell></cell>
-                <cell></cell>
+                <cell/>
+                <cell/>
               </row>
               <row>
                 <cell><m>0</m></cell>
-                <cell></cell>
-                <cell></cell>
+                <cell/>
+                <cell/>
               </row>
               <row bottom="none">
                 <cell><m>1</m></cell>
-                <cell></cell>
-                <cell></cell>
+                <cell/>
+                <cell/>
               </row>
             </tabular>
           </table>
           <table xml:id="table-quadratic-function-complete" permid="zLb">
-            <caption>Function values and points for <m>y=-x^2-2x+3</m></caption>
+            <title>Function values and points for <m>y=-x^2-2x+3</m></title>
             <tabular valign="top" bottom="minor" permid="yFI">
               <col halign="right" right="minor"/>
               <col halign="left" right="minor"/>
@@ -728,8 +728,8 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
         </sidebyside>
         <p permid="YuP">
           Now that we have our table,
-          we will plot the points and draw in the axis of symmetry as shown in <xref ref="figure-quadratic-function-points">Figure</xref>.
-          We complete the graph by drawing a smooth curve through the points and drawing an arrow on each end as shown in <xref ref="figure-quadratic-function-graph-using-vertex-and-table">Figure</xref>
+          we will plot the points and draw in the axis of symmetry as shown in <xref ref="figure-quadratic-function-points" />.
+          We complete the graph by drawing a smooth curve through the points and drawing an arrow on each end as shown in <xref ref="figure-quadratic-function-graph-using-vertex-and-table" />
         </p>
         <sidebyside widths="37% 37%" margins="10%" permid="LSc">
           <figure xml:id="figure-quadratic-function-points" permid="EBY">
@@ -737,13 +737,13 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
             <image permid="llX">
               <description>a coordinate plane with the points from the table plotted; the axis of symmetry is drawn as a vertical dotted line through the vertex</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[soliddot] coordinates { (-3,0) (-2,3) (-1,4) (0,3) (1,0) } ;
 \addplot[symmetryaxis] coordinates {(-1,-7) (-1,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -752,14 +752,14 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
             <image permid="oCc">
               <description>the points from the previous graph are connected to make a smooth u-shaped parabola opening downward</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-4.32:2.32] {-x^2-2*x+3};
 \addplot[soliddot] coordinates { (-3,0) (-2,3) (-1,4) (0,3) (1,0) } ;
 \addplot[symmetryaxis] coordinates {(-1,-7) (-1,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -805,7 +805,7 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
         </p>
         <sidebyside widths="37% 37%" margins="10%" valign="middle" permid="rZl">
           <table xml:id="table-quadratic-function-graph-using-vertex-and-table-non-integer-vertex" permid="fSk">
-            <caption>Function values and points for <m>y=2x^2-3x-4</m></caption>
+            <title>Function values and points for <m>y=2x^2-3x-4</m></title>
             <tabular valign="top" bottom="minor" permid="eMR">
               <col halign="right" right="minor"/>
               <col halign="center" right="minor"/>
@@ -847,24 +847,24 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
             <image permid="UJl">
               <description>A coordinate plot with the points from the table plotted; the points are (-1,1), (0,-4), (0.75,-5.125), (1,-5), (2,-2); the axis of symmetry is drawn as a dotted line at y=0.75</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[soliddot] coordinates { (-1,1) (0,-4) (0.75,-5.125) (1,-5) (2,-2) } ;
 \addplot[symmetryaxis] coordinates {(0.75,-7) (0.75,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
         </sidebyside>
         <p permid="deI">
-          The points graphed in <xref ref="figure-quadratic-function-graph-using-vertex-and-table-non-integer-vertex">Figure</xref>
+          The points graphed in <xref ref="figure-quadratic-function-graph-using-vertex-and-table-non-integer-vertex" />
           don't have the symmetry we'd expect from a parabola.
           This is because the vertex occurs at an <m>x</m>-value that is not an integer,
           and all of the chosen values in the table are integers.
           We can use the axis of symmetry to determine more points on the graph
-          (as shown in <xref ref="figure-quadratic-function-graph-using-vertex-and-table-with-axis-of-symmetry">Figure</xref>),
+          (as shown in <xref ref="figure-quadratic-function-graph-using-vertex-and-table-with-axis-of-symmetry" />),
           which will give it the symmetry we expect.
           From there, we can complete the sketch of this graph.
         </p>
@@ -874,14 +874,14 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
             <image permid="AQu">
               <description>The previous plot with symmetric points added; The points are (2.5,1), (1.5,-4), (0.5,-5), (-0.5,-2)</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[soliddot] coordinates { (-1,1) (0,-4) (0.75,-5.125) (1,-5) (2,-2) } ;
 \addplot[soliddot,color=secondcolor] coordinates {(2.5,1) (1.5,-4) (0.5,-5) (-0.5,-2) } ;
 \addplot[symmetryaxis] coordinates {(0.75,-7) (0.75,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -890,7 +890,7 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
             <image permid="gXD">
               <description>The previous plot with all of the points connected by a smooth, u-shaped curve</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[]
 \addplot[soliddot] coordinates { (-1,1) (0,-4) (0.75,-5.125) (1,-5) (2,-2) } ;
 \addplot[soliddot] coordinates { (2.5,1) (1.5,-4) (0.5,-5) (-0.5,-2) } ;
@@ -898,7 +898,7 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
 \addplot[domain=-1.712:3.212] {2*x^2-3*x-4};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -919,8 +919,8 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
       <statement>
         <p permid="ltb">
           We looked at the quadratic function
-          <m>R=(13+0.25x)(1500-50x)</m> in <xref ref="example-revenue">Example</xref>
-          of <xref ref="section-multiplying-polynomials">Section</xref>,
+          <m>R=(13+0.25x)(1500-50x)</m> in <xref ref="example-revenue" />
+          of <xref ref="section-multiplying-polynomials" />,
           where <m>R</m> was the revenue
           (in dollars)
           for <m>x</m> 25-cent price increases.
@@ -970,11 +970,11 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
           The first thing they did with it was to sight the scope at a certain distance so the pellets consistently hit where the cross hairs are pointed.
           In
           <url href="https://en.wikipedia.org/wiki/ISSF_10_meter_air_rifle">Olympic <m>10</m>-meter air rifle shooting</url><fn>
-          <url href="https://en.wikipedia.org/wiki/ISSF_10_meter_air_rifle">en.wikipedia.org/wiki/ISSF<underscore/>10<underscore/>meter<underscore/>air<underscore/>rifle</url>
+          <url href="https://en.wikipedia.org/wiki/ISSF_10_meter_air_rifle">en.wikipedia.org/wiki/ISSF_10_meter_air_rifle</url>
           </fn>,
           the bulls-eye is a
           <quantity>
-            <mag>0.5</mag><unit base="meter" prefix="milli" />
+            <mag>0.5</mag><unit base="meter" prefix="milli"/>
           </quantity>
           diameter dot,
           about the size of the head of a pin, so accuracy is key.
@@ -990,16 +990,16 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
           Jae then shoots at the targets with the cross-hairs directly on the bulls-eye and measures the distance that the pellet hit above or below the bulls-eye when shot at those distances.
         </p>
         <table xml:id="table-shooting-distance" permid="LZt">
-          <caption>Shooting Distance vs Pellet Rise/Fall</caption>
+          <title>Shooting Distance vs Pellet Rise/Fall</title>
           <tabular top="major" bottom="minor" halign="center" permid="KUa">
-            <col halign="left" />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
+            <col halign="left"/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
             <row>
               <cell>Distance to Target in Yards</cell>
               <cell><m>5</m></cell>
@@ -1062,7 +1062,7 @@ add_functions($gr, "(x+2)**2+1 for x in &lt;-4.45,0.45>  using color:blue and we
             <image width="47%" permid="NeM">
               <description>a Cartesian grid with points (5,-0.1), (10,0.6),(20,1.1),(30,0.6),(35,0),(40,-0.8),(50,-3.2); the points are connected with a smooth u-shaped curve that opens downward</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-7,ymax=3,xmin=-10,xmax=60,
 xtick={0,10,...,50},
 minor xtick={-10,0,...,60},
@@ -1078,7 +1078,7 @@ minor ytick={-7,-6,...,3}]
 \addplot[soliddot] coordinates {(50,-3.2)} ;
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </figure>
@@ -1139,7 +1139,7 @@ minor ytick={-7,-6,...,3}]
       </solution>
     </example>
 <!-- <p>Returning to the domain and range, we will look at the path of Hannah's toy rocket in <xref ref="figure-basic-quadratic-function">Graph</xref>. Looking horizontally, the <m>t</m>-values make sense from <m>0</m> seconds, when the rocket is fired, until <m>4</m> seconds, when it comes back to the ground. This give us a domain of <m>\{t\mid 0 \le t \le 4\}</m> or <m>[0,4]</m>. For the range, the height of the rocket goes from <m>0</m> feet on the ground and reaches a maximum height of <m>64</m> feet. The range is <m>\{f(t)\mid 0 \le f(t) \le 64\}</m> or <m>[0,64]</m>.</p>
-<p>In the air-rifle application in <xref ref="example-pellet-trajectory-application">Example</xref>, the <m>x</m>-values are connected from <m>5</m> to <m>50</m> yards. If we assume that Jae will never be competing in target shoots beyond <m>50</m> yards, the domain will be <m>[5,50]</m>. The <m>y</m>-values go from <m>-3.2</m> to <m>1.1</m> inches so the range is <m>[-3.2,1.1]</m>.</p>
+<p>In the air-rifle application in <xref ref="example-pellet-trajectory-application" />, the <m>x</m>-values are connected from <m>5</m> to <m>50</m> yards. If we assume that Jae will never be competing in target shoots beyond <m>50</m> yards, the domain will be <m>[5,50]</m>. The <m>y</m>-values go from <m>-3.2</m> to <m>1.1</m> inches so the range is <m>[-3.2,1.1]</m>.</p>
 <p>In order to find the domain and range for many applications we need to know how to find the vertical and horizontal intercepts. We will look at that in the next section.</p> -->
   </subsection>
   <exercises permid="ire">
@@ -1152,93 +1152,93 @@ minor ytick={-7,-6,...,3}]
     <exercisegroup cols="2" permid="Oyn">
       <title>Review and Warmup</title>
       <exercise permid="zpp">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg"/>
       </exercise>
       <exercise permid="fwy">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg"/>
       </exercise>
       <exercise permid="LDH">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg"/>
       </exercise>
       <exercise permid="rKQ">
-        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg" />
+        <webwork source="BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="uFw">
       <exercise permid="XRZ">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg"/>
       </exercise>
       <exercise permid="DZi">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg"/>
       </exercise>
       <exercise permid="kgr">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg"/>
       </exercise>
       <exercise permid="QnA">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="aMF">
       <title>Algebraically Determining the Vertex and Axis of Symmetry of Quadratic Functions</title>
       <exercise permid="wuJ">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex50.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex50.pg"/>
       </exercise>
       <exercise permid="cBS">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex50.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex50.pg"/>
       </exercise>
       <exercise permid="IJb">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex60.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex60.pg"/>
       </exercise>
       <exercise permid="oQk">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex60.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex60.pg"/>
       </exercise>
       <exercise permid="UXt">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex70.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex70.pg"/>
       </exercise>
       <exercise permid="BeC">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex70.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex70.pg"/>
       </exercise>
       <exercise permid="hlL">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex80.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex80.pg"/>
       </exercise>
       <exercise permid="NsU">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex80.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex80.pg"/>
       </exercise>
       <exercise permid="tAd">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex90.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex90.pg"/>
       </exercise>
       <exercise permid="ZHm">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex90.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex90.pg"/>
       </exercise>
       <exercise permid="FOv">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex100.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex100.pg"/>
       </exercise>
       <exercise permid="lVE">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex100.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex100.pg"/>
       </exercise>
       <exercise permid="ScN">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex110.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex110.pg"/>
       </exercise>
       <exercise permid="yjW">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex110.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex110.pg"/>
       </exercise>
       <exercise permid="erf">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex40.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex40.pg"/>
       </exercise>
       <exercise permid="Kyo">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex40.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex40.pg"/>
       </exercise>
       <exercise permid="qFx">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex20.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex20.pg"/>
       </exercise>
       <exercise permid="WMG">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex20.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex20.pg"/>
       </exercise>
       <exercise permid="CTP">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex10.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex10.pg"/>
       </exercise>
       <exercise permid="jaY">
-        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex10.pg" />
+        <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex10.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/GraphingQuadratics/IdentifyAxisVertex30.pg" />
@@ -1260,7 +1260,7 @@ minor ytick={-7,-6,...,3}]
         <answer permid="GcQ">
           <sidebyside widths="47% 47%" margins="0%" permid="Pih">
             <table permid="sgC">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="rbj">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1300,14 +1300,14 @@ minor ytick={-7,-6,...,3}]
             </table>
             <image permid="tlV">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-2.236:2.236] {x^2+2};
 \addplot[soliddot] coordinates {(-2,6) (-1,3) (0,2) (1,3) (2,6)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1326,7 +1326,7 @@ minor ytick={-7,-6,...,3}]
         <answer permid="mjZ">
           <sidebyside widths="47% 47%" margins="0%" permid="vpq">
             <table permid="YnL">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="Xis">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1366,14 +1366,14 @@ minor ytick={-7,-6,...,3}]
             </table>
             <image permid="Zte">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-2.449:2.449] {x^2+1};
 \addplot[soliddot] coordinates {(-2,5) (-1,2) (0,1) (1,2) (2,5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1392,7 +1392,7 @@ minor ytick={-7,-6,...,3}]
         <answer permid="Sri">
           <sidebyside widths="47% 47%" margins="0%" permid="bwz">
             <table permid="EuU">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="DpB">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1432,14 +1432,14 @@ minor ytick={-7,-6,...,3}]
             </table>
             <image permid="FAn">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.464:3.464] {x^2-5};
 \addplot[soliddot] coordinates {(-3,4) (-2,-1) (-1,-4) (0,-5) (1,-4) (2,-1) (3,4)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1458,7 +1458,7 @@ minor ytick={-7,-6,...,3}]
         <answer permid="yyr">
           <sidebyside widths="47% 47%" margins="0%" permid="HDI">
             <table permid="kCd">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="jwK">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1498,14 +1498,14 @@ minor ytick={-7,-6,...,3}]
             </table>
             <image permid="lHw">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-3.162:3.162] {x^2-3};
 \addplot[soliddot] coordinates {(-3,6) (-2,1) (-1,-2) (0,-3) (1,-2) (2,1) (3,6)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1524,7 +1524,7 @@ minor ytick={-7,-6,...,3}]
         <answer permid="eFA">
           <sidebyside widths="47% 47%" margins="0%" permid="nKR">
             <table permid="QJm">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="PDT">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1564,14 +1564,14 @@ minor ytick={-7,-6,...,3}]
             </table>
             <image permid="ROF">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-0.464:4.464] {(x-2)^2};
 \addplot[soliddot] coordinates { (0,4) (1,1) (2,0) (3,1) (4,4)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1590,7 +1590,7 @@ minor ytick={-7,-6,...,3}]
         <answer permid="KMJ">
           <sidebyside widths="47% 47%" margins="0%" permid="TSa">
             <table permid="wQv">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="vLc">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1630,7 +1630,7 @@ minor ytick={-7,-6,...,3}]
             </table>
             <image permid="xVO">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[xmin=-5,xmax=10,
 xtick={-4,-2,...,8},
@@ -1642,7 +1642,7 @@ minor ytick={-5,-4,...,20}]
 \addplot[soliddot] coordinates {(1,9) (2,4) (3,1) (4,0) (5,1) (6,4) (7,9)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1661,7 +1661,7 @@ minor ytick={-5,-4,...,20}]
         <answer permid="qTS">
           <sidebyside widths="47% 47%" margins="0%" permid="zZj">
             <table permid="cXE">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="bSl">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1701,14 +1701,14 @@ minor ytick={-5,-4,...,20}]
             </table>
             <image permid="ecX">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[ymin=-5,ymax=10,ytick={-4,-2,...,8},minor ytick={-5,-4,...,10}]
 \addplot+[domain=-6.16:0.16] {(x+3)^2};
 \addplot[soliddot] coordinates { (-6,9) (-5,4) (-4,1) (-3,0) (-2,1) (-1,4) (0,9)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1727,7 +1727,7 @@ minor ytick={-5,-4,...,20}]
         <answer permid="Xbb">
           <sidebyside widths="47% 47%" margins="0%" permid="ggs">
             <table permid="JeN">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="HZu">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1767,14 +1767,14 @@ minor ytick={-5,-4,...,20}]
             </table>
             <image permid="Kkg">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-4.464:0.464] {(x+2)^2};
 \addplot[soliddot] coordinates { (-4,4) (-3,1) (-2,0) (-1,1) (0,4)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1797,7 +1797,7 @@ minor ytick={-5,-4,...,20}]
           </p>
           <sidebyside widths="47% 47%" margins="0%" permid="JsV">
             <table permid="plW">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="ogD">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1829,7 +1829,7 @@ minor ytick={-5,-4,...,20}]
             </table>
             <image permid="qrp">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[ymin=-5,ymax=20,
 ytick={-4,0,...,16},
@@ -1838,7 +1838,7 @@ minor ytick={-5,-4,...,20}]
 \addplot[soliddot] coordinates { (-1,17) (0,5) (1,1) (2,5) (3,17)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1858,7 +1858,7 @@ minor ytick={-5,-4,...,20}]
           </p>
           <sidebyside widths="47% 47%" margins="0%" permid="pAe">
             <table permid="Vtf">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="UnM">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1890,7 +1890,7 @@ minor ytick={-5,-4,...,20}]
             </table>
             <image permid="Wyy">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[ymin=-5,ymax=20,
 ytick={-4,0,...,16},
@@ -1899,7 +1899,7 @@ minor ytick={-5,-4,...,20}]
 \addplot[soliddot] coordinates { (-3,13) (-2,7) (-1,5) (0,7) (1,13)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1919,7 +1919,7 @@ minor ytick={-5,-4,...,20}]
           </p>
           <sidebyside widths="47% 47%" margins="0%" permid="VHn">
             <table permid="BAo">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="AuV">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -1959,14 +1959,14 @@ minor ytick={-5,-4,...,20}]
             </table>
             <image permid="CFH">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-1.606:5.606] {-1*x^2+4*x+2};
 \addplot[soliddot] coordinates { (-1,-3) (0,2) (1,5) (2,6) (3,5) (4,2) (5,-3)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -1986,7 +1986,7 @@ minor ytick={-5,-4,...,20}]
           </p>
           <sidebyside widths="47% 47%" margins="0%" permid="BOw">
             <table permid="hHx">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="gCe">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -2026,7 +2026,7 @@ minor ytick={-5,-4,...,20}]
             </table>
             <image permid="iMQ">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[ymin=-10,ymax=10,
 ytick={-8,-6,...,8},
@@ -2035,7 +2035,7 @@ minor ytick={-10,-9,...,10}]
 \addplot[soliddot] coordinates { (-1,-8) (0,-5) (1,-4) (2,-5) (3,-8)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -2055,7 +2055,7 @@ minor ytick={-10,-9,...,10}]
           </p>
           <sidebyside widths="47% 47%" margins="0%" permid="hVF">
             <table permid="NOG">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="MJn">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -2087,14 +2087,14 @@ minor ytick={-10,-9,...,10}]
             </table>
             <image permid="OTZ">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[]
 \addplot+[domain=-0.702:5.702] {x^2-5*x+3};
 \addplot[soliddot] coordinates { (0,3) (1,-1) (2,-3) (2.5,-3.25) (3,-3) (4,-1) (5,3)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -2114,7 +2114,7 @@ minor ytick={-10,-9,...,10}]
           </p>
           <sidebyside widths="47% 47%" margins="0%" permid="OcO">
             <table permid="tVP">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="sQw">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -2166,7 +2166,7 @@ minor ytick={-10,-9,...,10}]
             </table>
             <image permid="vbi">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=5,ymin=-15,ymax=10,
 xtick={-8,-6,...,4},
@@ -2177,7 +2177,7 @@ minor ytick={-15,-14,...,10}]
 \addplot[soliddot] coordinates { (-8,7) (-7,-1) (-6,-7) (-5,-11) (-4,-13) (-3.5,-13.25) (-3,-13) (-2,-11) (-1,-7) (0,-1) (1,7)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -2198,7 +2198,7 @@ minor ytick={-15,-14,...,10}]
           </p>
           <sidebyside widths="47% 47%" margins="0%" permid="ujX">
             <table permid="acY">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="YXF">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -2230,7 +2230,7 @@ minor ytick={-15,-14,...,10}]
             </table>
             <image permid="bir">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[ymin=-5,ymax=10,
 ytick={-4,-2,...,8},
@@ -2240,7 +2240,7 @@ minor ytick={-4,-3,...,9}]
 \addplot[soliddot] coordinates { (0.5,3) (-0.5,8) (-1.5,9) (-2.5,6) (-3.5,-1)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -2261,7 +2261,7 @@ minor ytick={-4,-3,...,9}]
           </p>
           <sidebyside widths="47% 47%" margins="0%" permid="arg">
             <table permid="Gkh">
-              <caption></caption>
+              <title/>
               <tabular valign="top" bottom="minor" permid="FeO">
                 <col halign="right" right="minor"/>
                 <col halign="right"/>
@@ -2301,7 +2301,7 @@ minor ytick={-4,-3,...,9}]
             </table>
             <image permid="HpA">
 <latex-image>
-<![CDATA[
+
 \begin{tikzpicture}
 \begin{axis}[ymin=-15,ymax=15,
 ytick={-12,-8,...,12},
@@ -2311,7 +2311,7 @@ minor ytick={-14,-13,...,14}]
 \addplot[soliddot] coordinates { (5.5,11) (4.5,0) (3.5,-7) (2.5,-10) (1.5,-9) (0.5,-4) (5,5)};
 \end{axis}
 \end{tikzpicture}
-]]>
+
 </latex-image>
             </image>
           </sidebyside>
@@ -2343,41 +2343,41 @@ minor ytick={-14,-13,...,14}]
     <exercisegroup permid="Tig">
       <title>Finding Maximum and Minimum Values for Applications of Quadratic Functions</title>
       <exercise permid="DDJ">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication10.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication10.pg"/>
       </exercise>
       <exercise permid="jKS">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication10.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication10.pg"/>
       </exercise>
       <exercise permid="PSb">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication20.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication20.pg"/>
       </exercise>
       <exercise permid="vZk">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication20.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication20.pg"/>
       </exercise>
       <exercise permid="cgt">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg"/>
       </exercise>
       <exercise permid="InC">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg"/>
       </exercise>
       <exercise permid="ouL">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg"/>
       </exercise>
       <exercise permid="UBU">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication30.pg"/>
       </exercise>
       <exercise permid="AJd">
 <!-- TODO: Double and quadruple pen exercises seem too hard. Are there more single pen problems? -->
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication40.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication40.pg"/>
       </exercise>
       <exercise permid="gQm">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication40.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication40.pg"/>
       </exercise>
       <exercise permid="MXv">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication50.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication50.pg"/>
       </exercise>
       <exercise permid="teE">
-        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication50.pg" />
+        <webwork source="BasicAlgebra/QuadraticApplications/MaxMinApplication50.pg"/>
       </exercise>
       <exercise permid="ZlN">
 <!-- TODO: These revenue problems also seem really hard. Should we take them out?-->

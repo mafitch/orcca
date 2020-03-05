@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -10,10 +10,10 @@
   <title>Technical Definition of a Function</title>
   <introduction permid="gsw">
     <p permid="yoW">
-      In <xref ref="section-function-basics">Section</xref>,
-      we discussed a conceptual understanding of functions and <xref ref="definition-function-informal">Definition</xref>.
+      In <xref ref="section-function-basics" />,
+      we discussed a conceptual understanding of functions and <xref ref="definition-function-informal" />.
       In this section we'll start with a more technical definition of what is a function,
-      consistent with the ideas from <xref ref="section-function-basics">Section</xref>.
+      consistent with the ideas from <xref ref="section-function-basics" />.
     </p>
   </introduction>
   <subsection xml:id="definition-function-technical" permid="WoQ">
@@ -28,7 +28,7 @@
       </statement>
     </definition>
     <p permid="jfY">
-      How is this definition consistent with the informal <xref ref="definition-function-informal">Definition</xref>,
+      How is this definition consistent with the informal <xref ref="definition-function-informal" />,
       which describes a function as a <em>process</em>?
       Well, if you have a collection of ordered pairs <m>(x,y)</m>,
       you can choose to view the left number as an input and the right value as the output.
@@ -41,7 +41,7 @@
     </p>
     <example xml:id="example-function-technical" permid="tMh">
       <p permid="CoV">
-        Using <xref ref="definition-function-technical">Definition</xref>,
+        Using <xref ref="definition-function-technical" />,
         a function <m>f</m> could be given by
         <me permid="gls">
           \left\{(1,4), (2,3), (5,3), (6,1)\right\}
@@ -70,23 +70,23 @@
       </p>
     </example>
     <p permid="Pnh">
-      Let's spend some time seeing how this new definition applies to things that we already understand as functions from <xref ref="section-function-basics">Section</xref>.
+      Let's spend some time seeing how this new definition applies to things that we already understand as functions from <xref ref="section-function-basics" />.
     </p>
     <example xml:id="example-function-technical-table" permid="ZTq">
       <title>A Function Given as a Table</title>
       <sidebyside widths="47% 47%" margins="0%" permid="SoR">
         <p permid="iwe">
-          Consider the function <m>g</m> expressed by <xref ref="table-technical">Table</xref>.
+          Consider the function <m>g</m> expressed by <xref ref="table-technical" />.
           How is this
           <q>a collection of ordered pairs?</q>
           With tables the connection is most easily apparent.
           Pair off each <m>x</m>-value with its <m>y</m>-value.
         </p>
         <table xml:id="table-technical" permid="GDp">
-          <caption/>
+          <title/>
           <tabular halign="center" permid="mKy">
-            <col right="minor" />
-            <col />
+            <col right="minor"/>
+            <col/>
             <row bottom="major">
               <cell><m>x</m></cell>
               <cell><m>g(x)</m></cell>
@@ -142,8 +142,8 @@
         <m>(2.1,4.41)</m> is part of the collection.
       </p>
       <p permid="nfX">
-        The collection is so large that we cannot literally list all the ordered pairs as was done in <xref ref="example-function-technical">Example</xref>
-        and <xref ref="example-function-technical-table">Example</xref>.
+        The collection is so large that we cannot literally list all the ordered pairs as was done in <xref ref="example-function-technical" />
+        and <xref ref="example-function-technical-table" />.
         We just have to imagine this giant collection of ordered pairs.
         And if it helps to conceptualize it,
         we know that the ordered pairs <m>(2,4)</m> and <m>(2.1,4.41)</m> are included.
@@ -152,8 +152,8 @@
     <example permid="mhI">
       <title>A Function Given as a Graph</title>
       <p permid="Tng">
-        Consider the functions <m>p</m> and <m>q</m> expressed in <xref ref="figure-discrete-graph">Figure</xref>
-        and <xref ref="figure-continuous-graph">Figure</xref>.
+        Consider the functions <m>p</m> and <m>q</m> expressed in <xref ref="figure-discrete-graph" />
+        and <xref ref="figure-continuous-graph" />.
         How is each of these
         <q>a collection of ordered pairs?</q>
       </p>
@@ -162,11 +162,11 @@
           <caption><m>y=p(x)</m></caption>
           <image permid="YGT">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[soliddot] coordinates {(1,4) (2,3) (5,3) (6,1)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -174,17 +174,17 @@
           <caption><m>y=q(x)</m></caption>
           <image permid="EOc">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[smooth] {x+sin(90*x)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
       </sidebyside>
       <p permid="zup">
-        In <xref ref="figure-discrete-graph">Figure</xref>,
+        In <xref ref="figure-discrete-graph" />,
         we see that <m>p(1)=4</m>, <m>p(2)=3</m>,
         <m>p(5)=3</m>, and <m>p(6)=1</m>.
         The graph <em>literally is</em> the collection
@@ -193,7 +193,7 @@
         </me>.
       </p>
       <p permid="fBy">
-        In <xref ref="figure-continuous-graph">Figure</xref>,
+        In <xref ref="figure-continuous-graph" />,
         we can see a few whole number function values,
         like <m>q(0)=0</m> and <m>q(1)=2</m>.
         But the entire curve has infinitely many points on it and we'd never be able to list them all.
@@ -211,24 +211,24 @@
       <webwork>
           <setup>
 <pg-code>
-Context()->lists->set(List => {open => "{", close => "}"});
-Context()->parens->set("{" => {type => "List", close => "}"});
+Context()-&gt;lists-&gt;set(List =&gt; {open =&gt; "{", close =&gt; "}"});
+Context()-&gt;parens-&gt;set("{" =&gt; {type =&gt; "List", close =&gt; "}"});
 $gr = init_graph(-7,-7,7,7,
-axes=>[0,0],
-grid=>[14,14],
-size=>[240,240]
+axes=&gt;[0,0],
+grid=&gt;[14,14],
+size=&gt;[240,240]
 );
-$gr->lb('reset');
+$gr-&gt;lb('reset');
 for my $j (-6,-4,-2,2,4,6) {
-$gr->lb( new Label($j, -0, $j,'black','center','top','large'));
-$gr->lb( new Label(0, $j, $j,'black','right','middle','large'));
+$gr-&gt;lb( new Label($j, -0, $j,'black','center','top','large'));
+$gr-&gt;lb( new Label(0, $j, $j,'black','right','middle','large'));
 }
-$gr->stamps( closed_circle(-5,2,'blue') );
-$gr->stamps( closed_circle(-2,-3,'blue') );
-$gr->stamps( closed_circle(4,3,'blue') );
+$gr-&gt;stamps( closed_circle(-5,2,'blue') );
+$gr-&gt;stamps( closed_circle(-2,-3,'blue') );
+$gr-&gt;stamps( closed_circle(4,3,'blue') );
 $answer=List("{(-5,2),(-2,-3),(4,3)}");
-$evaluator = $answer->cmp(requireParenMatch=>1)->withPostFilter(AnswerHints(
-List(Point(-5,2),Point(-2,-3),Point(4,3)) => "You need to enclose the set in braces.",
+$evaluator = $answer-&gt;cmp(requireParenMatch=&gt;1)-&gt;withPostFilter(AnswerHints(
+List(Point(-5,2),Point(-2,-3),Point(4,3)) =&gt; "You need to enclose the set in braces.",
 ));
 </pg-code>
           </setup>
@@ -237,7 +237,7 @@ List(Point(-5,2),Point(-2,-3),Point(4,3)) => "You need to enclose the set in bra
               The graph below is of <m>y=f(x)</m>.
             </p>
             <sidebyside widths="40%" permid="eDj">
-              <image permid="kVl" pg-name="$gr" />
+              <image permid="kVl" pg-name="$gr"/>
             </sidebyside>
             <p permid="KDo">
               Write the function <m>f</m> as a set of ordered pairs.
@@ -246,7 +246,7 @@ List(Point(-5,2),Point(-2,-3),Point(4,3)) => "You need to enclose the set in bra
               Since it is a <em>set</em>, the answer should be in curly braces. Each ordered pair has a comma inside <em>and</em> the ordered pairs themselves should be separated by commas.
             </instruction>
             <p permid="qKx">
-              <var name="$answer" evaluator="$evaluator" width="30" />
+              <var name="$answer" evaluator="$evaluator" width="30"/>
             </p>
           </statement>
           <solution permid="EVg">
@@ -497,11 +497,11 @@ $c = PopUp(['?','does','does not'],1);
             <caption/>
             <image permid="Lni">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[soliddot] coordinates {(2,4) (-5,-5) (3, 4) (0,4) (4,0) (-3,1) (-3,-2)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -509,11 +509,11 @@ $c = PopUp(['?','does','does not'],1);
             <caption/>
             <image permid="Rcu">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[domain=0:360,-] ({4*cos(x)+2},{3*sin(x)+1});
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -521,11 +521,11 @@ $c = PopUp(['?','does','does not'],1);
             <caption/>
             <image permid="xjD">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[] {x^2/10-sin(45*x)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -535,13 +535,13 @@ $c = PopUp(['?','does','does not'],1);
             <caption/>
             <image permid="dqM">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[] {0.5*x+2};
 \addplot[hollowdot] coordinates {(-4,0) (2,3) (6, 5)};
 \addplot[soliddot] coordinates {(-4,4) (2,1)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -549,7 +549,7 @@ $c = PopUp(['?','does','does not'],1);
             <caption/>
             <image permid="JxV">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[primarycurve, samples=29,smooth] {cos(45*x)};
 \addplot[primarycurve, samples=29,smooth] {sin(90*x)+3};
@@ -557,7 +557,7 @@ $c = PopUp(['?','does','does not'],1);
 \addplot[primarycurve, samples=29,smooth] {sqrt(sin(90*x)+1)+5};
 \addplot[primarycurve, samples=29,smooth] {exp(sin(120*x))-6};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -565,11 +565,11 @@ $c = PopUp(['?','does','does not'],1);
             <caption/>
             <image permid="pFe">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[] ({x^2/10-sin(45*x)},{x});
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -577,26 +577,26 @@ $c = PopUp(['?','does','does not'],1);
       </statement>
       <solution permid="sGO">
         <p permid="Zcs">
-          The graph in <xref ref="figure-is-it-a-function-1">Figure</xref> does <em>not</em>
+          The graph in <xref ref="figure-is-it-a-function-1" /> does <em>not</em>
           make <m>y</m> a function of <m>x</m>.
           Two ordered pairs on that graph are <m>(-3,1)</m> and <m>(-3,-2)</m>,
           so an input value is used twice with different output values.
         </p>
         <p permid="FjB">
-          The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em>
+          The graph in <xref ref="figure-is-it-a-function-2" /> does <em>not</em>
           make <m>y</m> a function of <m>x</m>.
           There are many ordered pairs with the same input value,
           but different output values.
           For example, <m>(2,-2)</m> and <m>(2,4)</m>.
         </p>
         <p permid="lqK">
-          The graph in <xref ref="figure-is-it-a-function-3">Figure</xref> <em>does</em>
+          The graph in <xref ref="figure-is-it-a-function-3" /> <em>does</em>
           make <m>y</m> a function of <m>x</m>.
           It appears that no matter what <m>x</m>-value you choose on the <m>x</m>-axis,
           there is exactly one <m>y</m>-value paired up with it on the graph.
         </p>
         <p permid="RxT">
-          The graph in <xref ref="figure-is-it-a-function-4">Figure</xref> <em>does</em>
+          The graph in <xref ref="figure-is-it-a-function-4" /> <em>does</em>
           make <m>y</m> a function of <m>x</m>, but we should discuss.
           The hollow dots on the line indicate that the line goes right up to that point,
           but never reaches it.
@@ -612,7 +612,7 @@ $c = PopUp(['?','does','does not'],1);
           so this graph does make <m>y</m> a function of <m>x</m>
         </p>
         <p permid="xFc">
-          The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em>
+          The graph in <xref ref="figure-is-it-a-function-2" /> does <em>not</em>
           make <m>y</m> a function of <m>x</m>.
           There are many ordered pairs with the same input value,
           but different output values.
@@ -620,7 +620,7 @@ $c = PopUp(['?','does','does not'],1);
           <m>(0,5)</m>, and <m>(0,-6)</m> all use <m>x=0</m>.
         </p>
         <p permid="dMl">
-          The graph in <xref ref="figure-is-it-a-function-2">Figure</xref> does <em>not</em>
+          The graph in <xref ref="figure-is-it-a-function-2" /> does <em>not</em>
           make <m>y</m> a function of <m>x</m>.
           There are many ordered pairs with the same input value,
           but different output values.
@@ -633,7 +633,7 @@ $c = PopUp(['?','does','does not'],1);
     </example>
     <p permid="nPR">
       This last set of examples might reveal something to you.
-      For instance in <xref ref="figure-is-it-a-function-2">Figure</xref>,
+      For instance in <xref ref="figure-is-it-a-function-2" />,
       the issue is that there are places on the graph with the same <m>x</m>-value,
       but different <m>y</m>-values.
       Visually, what that means is there are places on the graph that are directly above/below each other.
@@ -655,21 +655,21 @@ $c = PopUp(['?','does','does not'],1);
     <newpage/>
     <example permid="DfT">
       <p permid="Vct">
-        In each graph from <xref ref="example-is-it-a-function">Example</xref>,
-        we can apply the <xref ref="fact-vertical-line-test" text="title" />.
+        In each graph from <xref ref="example-is-it-a-function" />,
+        we can apply the <xref ref="fact-vertical-line-test" text="title"/>.
       </p>
       <sidebyside widths="32% 32% 32%" margins="0%" permid="HPM">
         <figure permid="BjC">
           <caption>A vertical line touching the graph twice makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
           <image permid="VMn">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(-3,-7) (-3,7)};
 \addplot[soliddot] coordinates {(2,4) (-5,-5) (3, 4) (0,4) (4,0) (-3,1) (-3,-2)};
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-3,1) (-3,-2)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -677,13 +677,13 @@ $c = PopUp(['?','does','does not'],1);
           <caption>A vertical line touching the graph twice makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
           <image permid="BTw">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(2,-7) (2,7)};
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(2,-2) (2,4)};
 \addplot[primarycurve,domain=0:360,-] ({4*cos(x)+2},{3*sin(x)+1});
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -691,7 +691,7 @@ $c = PopUp(['?','does','does not'],1);
           <caption>All vertical lines only touch the graph once, so this graph does give <m>y</m> as a function of <m>x</m>.</caption>
           <image permid="iaF">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(-5,-7) (-5,7)};
 \addplot[verticallinetest] coordinates {(-3,-7) (-3,7)};
@@ -702,7 +702,7 @@ $c = PopUp(['?','does','does not'],1);
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-5,1.79) (-3,1.6) (-1,0.8) (1,-0.6) (3,0.19) (5,3.2)};
 \addplot[primarycurve] {x^2/10-sin(45*x)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -712,7 +712,7 @@ $c = PopUp(['?','does','does not'],1);
           <caption>All vertical lines only touch the graph once, or not at all, so this graph does give <m>y</m> as a function of <m>x</m>.</caption>
           <image permid="OhO">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(-6,-7) (-6,7)};
 \addplot[verticallinetest] coordinates {(-4,-7) (-4,7)};
@@ -725,7 +725,7 @@ $c = PopUp(['?','does','does not'],1);
 \addplot[soliddot] coordinates {(-4,4) (2,1)};
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-6,-1) (-4,4) (-2,1) (0,2) (2,1) (4,4)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -733,7 +733,7 @@ $c = PopUp(['?','does','does not'],1);
           <caption>A vertical line touching the graph more than once makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
           <image permid="uoX">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(-4,-7) (-4,7)};
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-4,6) (-4,3) (-4,-1) (-4,-3) (-4,-5.6)};
@@ -743,7 +743,7 @@ $c = PopUp(['?','does','does not'],1);
 \addplot[primarycurve, samples=29,smooth] {sqrt(sin(90*x)+1)+5};
 \addplot[primarycurve, samples=29,smooth] {exp(sin(120*x))-6};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -751,13 +751,13 @@ $c = PopUp(['?','does','does not'],1);
           <caption>A vertical line touching the graph more than once makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
           <image permid="awg">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(2,-7) (2,7)};
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(2,4.25) (2,-5.4)};
 \addplot[primarycurve] ({x^2/10-sin(45*x)},{x});
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -810,7 +810,7 @@ $c = PopUp(['?','does','does not'],1);
                 <ol label="i." permid="DIJ">
                   <li permid="XBA">
                     <p permid="rur">
-                      You recognize that the graph of this equation would be a non-vertical line and so it would pass the <xref ref="fact-vertical-line-test" text="title" />.
+                      You recognize that the graph of this equation would be a non-vertical line and so it would pass the <xref ref="fact-vertical-line-test" text="title"/>.
                     </p>
                   </li>
                   <li permid="FFa">
@@ -874,7 +874,7 @@ $c = PopUp(['?','does','does not'],1);
                   </li>
                   <li permid="ehK">
                     <p permid="KYN">
-                      You recognize that the graph of this equation would be a circle with radius <m>3</m> and so it would not pass the <xref ref="fact-vertical-line-test" text="title" />.
+                      You recognize that the graph of this equation would be a circle with radius <m>3</m> and so it would not pass the <xref ref="fact-vertical-line-test" text="title"/>.
                     </p>
                   </li>
                 </ol>
@@ -901,7 +901,7 @@ $no=PopUp(['?','does','does not'],2);
                     <m>5x^2-4y=12</m>
                   </p>
                   <p permid="Xnf">
-                    This equation <var name="$yes" form="popup" /> make <m>y</m> a function of <m>x</m>.
+                    This equation <var name="$yes" form="popup"/> make <m>y</m> a function of <m>x</m>.
                   </p>
                 </li>
                 <li permid="qwc">
@@ -909,7 +909,7 @@ $no=PopUp(['?','does','does not'],2);
                     <m>5x-4y^2=12</m>
                   </p>
                   <p permid="jBx">
-                    This equation <var name="$no" form="popup" /> make <m>y</m> a function of <m>x</m>.
+                    This equation <var name="$no" form="popup"/> make <m>y</m> a function of <m>x</m>.
                   </p>
                 </li>
                 <li permid="WDl">
@@ -917,7 +917,7 @@ $no=PopUp(['?','does','does not'],2);
                     <m>x=\sqrt{y}</m>
                   </p>
                   <p permid="vPP">
-                    This equation <var name="$yes" form="popup" /> make <m>y</m> a function of <m>x</m>.
+                    This equation <var name="$yes" form="popup"/> make <m>y</m> a function of <m>x</m>.
                   </p>
                 </li>
               </ol>
@@ -977,53 +977,53 @@ $no=PopUp(['?','does','does not'],2);
     <exercisegroup permid="OKr">
       <title>Determining If Sets of Ordered Pairs Are Functions</title>
       <exercise permid="Tuk">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition10.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition10.pg"/>
       </exercise>
       <exercise permid="zBt">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition10.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition10.pg"/>
       </exercise>
       <exercise permid="fIC">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg"/>
       </exercise>
       <exercise permid="LPL">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="uRA">
       <title>Domain and Range</title>
       <exercise permid="rWU">
-        <webwork source="Math95/Functions/Functions10.pg" />
+        <webwork source="Math95/Functions/Functions10.pg"/>
       </exercise>
       <exercise permid="rWU">
-        <webwork source="Math95/Functions/Functions10.pg" />
+        <webwork source="Math95/Functions/Functions10.pg"/>
       </exercise>
       <exercise permid="rWU">
-        <webwork source="Math95/Functions/Functions10.pg" />
+        <webwork source="Math95/Functions/Functions10.pg"/>
       </exercise>
       <exercise permid="Yed">
-        <webwork source="Math95/Functions/Functions11.pg" />
+        <webwork source="Math95/Functions/Functions11.pg"/>
       </exercise>
       <exercise permid="Yed">
-        <webwork source="Math95/Functions/Functions11.pg" />
+        <webwork source="Math95/Functions/Functions11.pg"/>
       </exercise>
       <exercise permid="Yed">
-        <webwork source="Math95/Functions/Functions11.pg" />
+        <webwork source="Math95/Functions/Functions11.pg"/>
       </exercise>
     </exercisegroup>
     <newpage/>
     <exercisegroup cols="2" permid="aYJ">
       <title>Determining If Graphs Are Functions</title>
       <exercise permid="Elm">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg"/>
       </exercise>
       <exercise permid="ksv">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph10.pg"/>
       </exercise>
       <exercise permid="QzE">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg"/>
       </exercise>
       <exercise permid="wGN">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg"/>
       </exercise>
 <!--         <exercise>
 <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph30.pg" />
@@ -1036,10 +1036,10 @@ $no=PopUp(['?','does','does not'],2);
     <exercisegroup cols="2" permid="HfS">
       <title>Determining If Equations Are Functions</title>
       <exercise permid="cNW">
-        <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations10.pg" />
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations10.pg"/>
       </exercise>
       <exercise permid="IVf">
-        <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations10.pg" />
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations10.pg"/>
       </exercise>
       <!-- <exercise permid="pco">
         <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations20.pg" />
@@ -1052,10 +1052,10 @@ $no=PopUp(['?','does','does not'],2);
     <exercisegroup cols="2" permid="nnb">
       <title>Determining If Tables Are Functions</title>
       <exercise permid="BqG">
-        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg" />
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg"/>
       </exercise>
       <exercise permid="hxP">
-        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg" />
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>

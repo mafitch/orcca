@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -28,21 +28,21 @@
     <figure xml:id="figure-top-one-percent" permid="Szq">
       <caption>Share of all income held by the top
       <quantity>
-        <mag>1</mag><unit base="percent" />
-      </quantity>, United States, 1990<ndash />2013 (
+        <mag>1</mag><unit base="percent"/>
+      </quantity>, United States, 1990<ndash/>2013 (
       <url href="http://www.epi.org/blog/new-data-show-top-1-percent-really-are-different-from-you-and-me/">www.epi.org</url>
       )</caption>
       <image width="50%" permid="CkZ">
         <description>a scatter plot about share of all income held by the top 1% in the US</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={year},
 ylabel={percentage},
 xmin=1989,xmax=2035,
 ymin=0,ymax=30,
 minor ytick=,
-x axis line style={->},
-y axis line style={->},
+x axis line style={-&gt;},
+y axis line style={-&gt;},
 xtick={1990,1995,...,2035},
 xticklabels={1990,1995,...,2035},
 xticklabel style={rotate=-45},
@@ -73,9 +73,9 @@ ytick={0,5,...,30}]
 (2012,22)
 (2013,20)
 };
-\addplot+[domain = 1990:2035,->]{0.34434783*x-670.71};
+\addplot+[domain = 1990:2035,-&gt;]{0.34434783*x-670.71};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
       </image>
     </figure>
@@ -89,12 +89,12 @@ ytick={0,5,...,30}]
       If we model data in the chart with the trend line,
       we can estimate the value to be
       <quantity>
-        <mag>28.6</mag><unit base="percent" />
+        <mag>28.6</mag><unit base="percent"/>
       </quantity>.
       This is one way math is used in real life.
     </p>
     <p permid="msh">
-      Does that trend line have an equation like those we looked at in <xref ref="section-graphing-equations">Section</xref>?
+      Does that trend line have an equation like those we looked at in <xref ref="section-graphing-equations" />?
       Is it even correct to look at this data set and decide that a straight line is a good model?
       These are some of the questions we want to consider as we begin this section.
       The answers will evolve through the next several sections.
@@ -111,10 +111,10 @@ ytick={0,5,...,30}]
         </p>
         <figure xml:id="table-patterns-non-math" permid="nSZ">
           <caption>Patterns in 3 tables</caption>
-          <sidebyside widths="32% 32% 32%"  margins="0%" permid="TbT">
+          <sidebyside widths="32% 32% 32%" margins="0%" permid="TbT">
             <tabular top="major" bottom="minor" left="major" right="minor" permid="ncb">
-              <col />
-              <col right="major" />
+              <col/>
+              <col right="major"/>
               <row>
                 <cell>black</cell>
                 <cell>white</cell>
@@ -133,8 +133,8 @@ ytick={0,5,...,30}]
               </row>
             </tabular>
             <tabular top="major" bottom="minor" left="major" right="minor" permid="Tjk">
-              <col />
-              <col right="major" />
+              <col/>
+              <col right="major"/>
               <row>
                 <cell>USA</cell>
                 <cell>Washington</cell>
@@ -153,8 +153,8 @@ ytick={0,5,...,30}]
               </row>
             </tabular>
             <tabular top="major" bottom="minor" left="major" right="minor" permid="zqt">
-              <col />
-              <col right="major" />
+              <col/>
+              <col right="major"/>
               <row>
                 <cell>1</cell>
                 <cell>2</cell>
@@ -180,8 +180,8 @@ ytick={0,5,...,30}]
           <caption>Patterns in 3 tables</caption>
           <sidebyside widths="32% 32% 32%" margins="0%" permid="zjc">
             <tabular top="major" bottom="minor" left="major" right="minor" permid="fxC">
-              <col />
-              <col right="major" />
+              <col/>
+              <col right="major"/>
               <row>
                 <cell>black</cell>
                 <cell>white</cell>
@@ -200,8 +200,8 @@ ytick={0,5,...,30}]
               </row>
             </tabular>
             <tabular top="major" bottom="minor" left="major" right="minor" permid="LEL">
-              <col />
-              <col right="major" />
+              <col/>
+              <col right="major"/>
               <row>
                 <cell>USA</cell>
                 <cell>Washington</cell>
@@ -220,8 +220,8 @@ ytick={0,5,...,30}]
               </row>
             </tabular>
             <tabular top="major" bottom="minor" left="major" right="minor" permid="rLU">
-              <col />
-              <col right="major" />
+              <col/>
+              <col right="major"/>
               <row>
                 <cell>1</cell>
                 <cell>2</cell>
@@ -285,12 +285,12 @@ ytick={0,5,...,30}]
         where <m>x</m> represents the input,
         and <m>y</m> represents the output.
         Labeling the table mathematically,
-        we have <xref ref="table-pattern-double">Table</xref>.
+        we have <xref ref="table-pattern-double" />.
       </p>
       <table xml:id="table-pattern-double" permid="GUS">
-        <caption>Table with a mathematical pattern</caption>
+        <title>Table with a mathematical pattern</title>
         <tabular permid="XTd">
-          <col halign="center" />
+          <col halign="center"/>
           <col halign="center"/>
           <row bottom="medium">
             <cell>
@@ -340,9 +340,9 @@ ytick={0,5,...,30}]
 <pg-code>
 @x=(0..3);
 $f=Formula("x+10");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
           </setup>
@@ -352,40 +352,40 @@ $eq=Formula("y=$f");
               <m>y=\ldots</m> suggested by the pattern in the table.
             </p>
             <sidebyside permid="Lxu">
-              <tabular  permid="Eam">
-                <col halign="right" />
-                <col halign="left" />
+              <tabular permid="Eam">
+                <col halign="right"/>
+                <col halign="left"/>
                 <row bottom="medium">
                   <cell><m>x</m></cell>
                   <cell><m>y</m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$y[0]" /></m></cell>
+                  <cell><m><var name="$x[0]"/></m></cell>
+                  <cell><m><var name="$y[0]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$y[1]" /></m></cell>
+                  <cell><m><var name="$x[1]"/></m></cell>
+                  <cell><m><var name="$y[1]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$y[2]" /></m></cell>
+                  <cell><m><var name="$x[2]"/></m></cell>
+                  <cell><m><var name="$y[2]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$y[3]" /></m></cell>
+                  <cell><m><var name="$x[3]"/></m></cell>
+                  <cell><m><var name="$y[3]"/></m></cell>
                 </row>
               </tabular>
             </sidebyside>
             <p permid="dtU">
-              <var name="$eq" width="20" />
+              <var name="$eq" width="20"/>
             </p>
           </statement>
           <solution permid="WGt">
             <p permid="ltS">
               Looking for a similar relationship in each row is one approach to pattern recognition.
               Here, the <m>y</m>-value in each row is <m>10</m> greater than its corresponding <m>x</m>-value.
-              So the equation <m><var name="$eq" /></m> describes the pattern.
+              So the equation <m><var name="$eq"/></m> describes the pattern.
               Of course, there are more complicated patterns to explore,
               as we'll see in the next exercise.
             </p>
@@ -398,10 +398,10 @@ $eq=Formula("y=$f");
 <pg-code>
 @x=(0..3);
 $f=Formula("-1+3x");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
-$eq=Formula("y=$f")->reduce;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
+$eq=Formula("y=$f")-&gt;reduce;
 </pg-code>
           </setup>
           <statement>
@@ -410,33 +410,33 @@ $eq=Formula("y=$f")->reduce;
               <m>y=\ldots</m> suggested by the pattern in the table.
             </p>
             <sidebyside permid="rED">
-              <tabular  permid="khv">
-                <col halign="right" />
-                <col halign="left" />
+              <tabular permid="khv">
+                <col halign="right"/>
+                <col halign="left"/>
                 <row bottom="medium">
                   <cell><m>x</m></cell>
                   <cell><m>y</m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$y[0]" /></m></cell>
+                  <cell><m><var name="$x[0]"/></m></cell>
+                  <cell><m><var name="$y[0]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$y[1]" /></m></cell>
+                  <cell><m><var name="$x[1]"/></m></cell>
+                  <cell><m><var name="$y[1]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$y[2]" /></m></cell>
+                  <cell><m><var name="$x[2]"/></m></cell>
+                  <cell><m><var name="$y[2]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$y[3]" /></m></cell>
+                  <cell><m><var name="$x[3]"/></m></cell>
+                  <cell><m><var name="$y[3]"/></m></cell>
                 </row>
               </tabular>
             </sidebyside>
             <p permid="pIm">
-              <var name="$eq" width="20" />
+              <var name="$eq" width="20"/>
             </p>
           </statement>
           <solution permid="CNC">
@@ -449,37 +449,37 @@ $eq=Formula("y=$f")->reduce;
               Also, the <m>y</m>-value increases by <m>3</m> from row to row.
             </p>
             <sidebyside permid="XLM">
-              <tabular  permid="QoE">
-                <col halign="right" />
-                <col halign="left" />
+              <tabular permid="QoE">
+                <col halign="right"/>
+                <col halign="left"/>
                 <row bottom="medium">
-                  <cell />
+                  <cell/>
                   <cell><m>x</m></cell>
                   <cell><m>y</m></cell>
-                  <cell />
+                  <cell/>
                 </row>
                 <row>
-                  <cell />
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$y[0]" /></m></cell>
-                  <cell />
+                  <cell/>
+                  <cell><m><var name="$x[0]"/></m></cell>
+                  <cell><m><var name="$y[0]"/></m></cell>
+                  <cell/>
                 </row>
                 <row>
                   <cell><m>{}+1\rightarrow</m></cell>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$y[1]" /></m></cell>
+                  <cell><m><var name="$x[1]"/></m></cell>
+                  <cell><m><var name="$y[1]"/></m></cell>
                   <cell><m>\leftarrow{}+3</m></cell>
                 </row>
                 <row>
                   <cell><m>{}+1\rightarrow</m></cell>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$y[2]" /></m></cell>
+                  <cell><m><var name="$x[2]"/></m></cell>
+                  <cell><m><var name="$y[2]"/></m></cell>
                   <cell><m>\leftarrow{}+3</m></cell>
                 </row>
                 <row>
                   <cell><m>{}+1\rightarrow</m></cell>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$y[3]" /></m></cell>
+                  <cell><m><var name="$x[3]"/></m></cell>
+                  <cell><m><var name="$y[3]"/></m></cell>
                   <cell><m>\leftarrow{}+3</m></cell>
                 </row>
               </tabular>
@@ -495,7 +495,7 @@ $eq=Formula("y=$f")->reduce;
               the output should increase by <m>\overbrace{3+3+\cdots+3}^{x\text{ times}}</m>,
               which is <m>3x</m>.
               So the output would be <m>-1+3x</m>.
-              So the equation is <m><var name="$eq" /></m>.
+              So the equation is <m><var name="$eq"/></m>.
             </p>
           </solution>
       </webwork>
@@ -506,9 +506,9 @@ $eq=Formula("y=$f")->reduce;
 <pg-code>
 @x=(0..3);
 $f=Formula("x^2");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
           </setup>
@@ -519,39 +519,39 @@ $eq=Formula("y=$f");
             </p>
             <sidebyside permid="DSV">
               <tabular permid="wvN">
-                <col halign="right" />
-                <col halign="left" />
+                <col halign="right"/>
+                <col halign="left"/>
                 <row bottom="medium">
                   <cell><m>x</m></cell>
                   <cell><m>y</m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$y[0]" /></m></cell>
+                  <cell><m><var name="$x[0]"/></m></cell>
+                  <cell><m><var name="$y[0]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$y[1]" /></m></cell>
+                  <cell><m><var name="$x[1]"/></m></cell>
+                  <cell><m><var name="$y[1]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$y[2]" /></m></cell>
+                  <cell><m><var name="$x[2]"/></m></cell>
+                  <cell><m><var name="$y[2]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$y[3]" /></m></cell>
+                  <cell><m><var name="$x[3]"/></m></cell>
+                  <cell><m><var name="$y[3]"/></m></cell>
                 </row>
               </tabular>
             </sidebyside>
             <p permid="BWE">
-              <var name="$eq" width="20" />
+              <var name="$eq" width="20"/>
             </p>
           </statement>
           <solution permid="iUL">
             <p permid="JWC">
               Looking for a relationship in each row here,
               we see that each <m>y</m>-value is the square of the corresponding <m>x</m>-value.
-              So the equation is <m><var name="$eq" /></m>.
+              So the equation is <m><var name="$eq"/></m>.
             </p>
             <p permid="qdL">
               What if we had tried the approach we used in the previous exercise,
@@ -559,38 +559,38 @@ $eq=Formula("y=$f");
             </p>
             <sidebyside permid="kae">
               <tabular permid="cCW">
-                <col halign="right" />
-                <col halign="right" />
-                <col halign="left" />
-                <col halign="left" />
+                <col halign="right"/>
+                <col halign="right"/>
+                <col halign="left"/>
+                <col halign="left"/>
                 <row bottom="medium">
-                  <cell />
+                  <cell/>
                   <cell><m>x</m></cell>
                   <cell><m>y</m></cell>
-                  <cell />
+                  <cell/>
                 </row>
                 <row>
-                  <cell />
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$y[0]" /></m></cell>
-                  <cell />
+                  <cell/>
+                  <cell><m><var name="$x[0]"/></m></cell>
+                  <cell><m><var name="$y[0]"/></m></cell>
+                  <cell/>
                 </row>
                 <row>
                   <cell><m>{}+1\rightarrow</m></cell>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$y[1]" /></m></cell>
+                  <cell><m><var name="$x[1]"/></m></cell>
+                  <cell><m><var name="$y[1]"/></m></cell>
                   <cell><m>\leftarrow{}+1</m></cell>
                 </row>
                 <row>
                   <cell><m>{}+1\rightarrow</m></cell>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$y[2]" /></m></cell>
+                  <cell><m><var name="$x[2]"/></m></cell>
+                  <cell><m><var name="$y[2]"/></m></cell>
                   <cell><m>\leftarrow{}+3</m></cell>
                 </row>
                 <row>
                   <cell><m>{}+1\rightarrow</m></cell>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$y[3]" /></m></cell>
+                  <cell><m><var name="$x[3]"/></m></cell>
+                  <cell><m><var name="$y[3]"/></m></cell>
                   <cell><m>\leftarrow{}+5</m></cell>
                 </row>
               </tabular>
@@ -638,7 +638,7 @@ $eq=Formula("y=$f");
       </p>
       <sidebyside valign="top" widths="37% 37%" margins="10%" permid="AYp">
         <tabular permid="IKf">
-          <col />
+          <col/>
           <col halign="center"/>
           <row bottom="medium">
             <cell>Year</cell>
@@ -708,16 +708,16 @@ $eq=Formula("y=$f");
           </row>
         </tabular>
         <image permid="isi">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={year},
 ylabel={count},
 ytick=,
 xmin=1995,xmax=2016,
 ymin=15000,ymax=21000,
-x axis line style={->},
-y axis line style={->},
+x axis line style={-&gt;},
+y axis line style={-&gt;},
 xtick={2000,2005,2010,2015},
 xticklabels={2000,2005,2010,2015},
 xticklabel style={rotate=-45},
@@ -740,7 +740,7 @@ axis y discontinuity=crunch,]
 (2013,20458)
 };
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </sidebyside>
@@ -773,26 +773,26 @@ axis y discontinuity=crunch,]
 <pg-code>
 @x=(1999..2013);
 @y=(17599,17446,17847,17887,17559,18499,18682,19112,19376,20370,19909,19727,20636,20035,20458);
-%f=map{$x[$_]=>$y[$_]}(0..14);
+%f=map{$x[$_]=&gt;$y[$_]}(0..14);
 $r[0]=($f{2002}-$f{1999})/(2002-1999);
 $r[1]=($f{2011}-$f{2003})/(2011-2003);
 </pg-code>
           </setup>
           <statement>
             <p permid="idN">
-              Use the data in <xref ref="example-cancer-data">Example</xref>
+              Use the data in <xref ref="example-cancer-data" />
               to find the rate of change in Oregon invasive cancer diagnoses between 1999 and 2002.
               Just give the numerical value;
               the units are provided.
             </p>
             <p permid="OkW">
-              <var name="$r[0]" width="10" /><m>\,\frac{\text{diagnoses}}{\text{year}}</m>
+              <var name="$r[0]" width="10"/><m>\,\frac{\text{diagnoses}}{\text{year}}</m>
             </p>
             <p permid="usf">
               And what was the rate of change between 2003 and 2011?
             </p>
             <p permid="azo">
-              <var name="$r[1]" width="10" /><m>\,\frac{\text{diagnoses}}{\text{year}}</m>
+              <var name="$r[1]" width="10"/><m>\,\frac{\text{diagnoses}}{\text{year}}</m>
             </p>
           </statement>
           <solution permid="PbU">
@@ -814,7 +814,7 @@ $r[1]=($f{2011}-$f{2003})/(2011-2003);
     <p permid="Dqs">
       We are ready to give a formal definition for
       <term>rate of change</term>.
-      Considering our work from <xref ref="example-cancer-data">Example</xref>
+      Considering our work from <xref ref="example-cancer-data" />
       and <xref ref="exercise-cancer-data">Checkpoint</xref>,
       we settle on:
     </p>
@@ -839,25 +839,25 @@ $r[1]=($f{2011}-$f{2003})/(2011-2003);
     </definition>
     <sidebyside widths="37% 37%" margins="10%" permid="hfy">
       <p permid="sCS">
-        In <xref ref="example-cancer-data">Example</xref>
+        In <xref ref="example-cancer-data" />
         and <xref ref="exercise-cancer-data">Checkpoint</xref>
         we found three rates of change.
-        <xref ref="figure-cancer-data">Figure</xref>
+        <xref ref="figure-cancer-data" />
         highlights the three pairs of points that were used to make these calculations.
       </p>
       <figure xml:id="figure-cancer-data" permid="YKb">
-        <caption />
+        <caption/>
         <image permid="Ozr">
-          <description></description>
+          <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={year},
 ylabel={count},
 ytick=,
 xmin=1995,xmax=2016,
 ymin=15000,ymax=21000,
-x axis line style={->},
-y axis line style={->},
+x axis line style={-&gt;},
+y axis line style={-&gt;},
 xtick={2000,2005,2010,2015},
 xticklabels={2000,2005,2010,2015},
 xticklabel style={rotate=-45},
@@ -884,7 +884,7 @@ clip=false]
 \addplot[primarycurve,-] coordinates {(1999,17599) (2002,17887)} node[pos=0.5, pin=120:{rate $96$}]{};
 \addplot[primarycurve,-] coordinates {(2003,17559) (2011,20636)} node[pos=0.25, pin=-45:{rate $384.6$}]{};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -925,17 +925,17 @@ clip=false]
       <term>rate of change</term>
       from one row to the next was constant:
       <m>3</m> units of increase in <m>y</m> for every <m>1</m> unit of increase in <m>x</m>.
-      Graphing this pattern in <xref ref="figure-linear-data">Figure</xref>,
+      Graphing this pattern in <xref ref="figure-linear-data" />,
       we see that every line segment here has the same steepness,
       so the entire graph is a line.
     </p>
     <sidebyside width="37%">
     <figure xml:id="figure-linear-data" permid="ohu">
-      <caption />
+      <caption/>
       <image width="50%" permid="uGA">
-        <description></description>
+        <description/>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-5,ymax=9,ytick={-4,2,...,8},minor ytick={-5,-4,...,9},]
 \addplot[only marks]coordinates{
 (0,-1)
@@ -945,7 +945,7 @@ clip=false]
 };
 \addplot[primarycurve,-] coordinates {(0,-1) (3,8)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
       </image>
     </figure>
@@ -978,32 +978,32 @@ $popup=PopUp(['?','The relationship is linear','The relationship is not linear']
             </p>
             <sidebyside permid="NmH">
               <tabular permid="oRo">
-                <col halign="right" />
-                <col halign="left" />
+                <col halign="right"/>
+                <col halign="left"/>
                 <row bottom="medium">
                   <cell><m>x</m></cell>
                   <cell><m>y</m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$y[0]" /></m></cell>
+                  <cell><m><var name="$x[0]"/></m></cell>
+                  <cell><m><var name="$y[0]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$y[1]" /></m></cell>
+                  <cell><m><var name="$x[1]"/></m></cell>
+                  <cell><m><var name="$y[1]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$y[2]" /></m></cell>
+                  <cell><m><var name="$x[2]"/></m></cell>
+                  <cell><m><var name="$y[2]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$y[3]" /></m></cell>
+                  <cell><m><var name="$x[3]"/></m></cell>
+                  <cell><m><var name="$y[3]"/></m></cell>
                 </row>
               </tabular>
             </sidebyside>
             <p permid="mNG">
-              <var name="$popup" form="popup" />
+              <var name="$popup" form="popup"/>
             </p>
           </statement>
           <solution permid="vjd">
@@ -1034,32 +1034,32 @@ $popup=PopUp(['?','The relationship is linear','The relationship is not linear']
             </p>
             <sidebyside permid="ttQ">
               <tabular permid="UYx">
-                <col halign="right" />
-                <col halign="left" />
+                <col halign="right"/>
+                <col halign="left"/>
                 <row bottom="medium">
                   <cell><m>x</m></cell>
                   <cell><m>y</m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$y[0]" /></m></cell>
+                  <cell><m><var name="$x[0]"/></m></cell>
+                  <cell><m><var name="$y[0]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$y[1]" /></m></cell>
+                  <cell><m><var name="$x[1]"/></m></cell>
+                  <cell><m><var name="$y[1]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$y[2]" /></m></cell>
+                  <cell><m><var name="$x[2]"/></m></cell>
+                  <cell><m><var name="$y[2]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$y[3]" /></m></cell>
+                  <cell><m><var name="$x[3]"/></m></cell>
+                  <cell><m><var name="$y[3]"/></m></cell>
                 </row>
               </tabular>
             </sidebyside>
             <p permid="zbY">
-              <var name="$popup" form="popup" />
+              <var name="$popup" form="popup"/>
             </p>
           </statement>
           <solution permid="bqm">
@@ -1087,32 +1087,32 @@ $popup=PopUp(['?','The relationship is linear','The relationship is not linear']
             </p>
             <sidebyside permid="ZAZ">
               <tabular permid="BfG">
-                <col halign="right" />
-                <col halign="left" />
+                <col halign="right"/>
+                <col halign="left"/>
                 <row bottom="medium">
                   <cell><m>x</m></cell>
                   <cell><m>y</m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[0]" /></m></cell>
-                  <cell><m><var name="$y[0]" /></m></cell>
+                  <cell><m><var name="$x[0]"/></m></cell>
+                  <cell><m><var name="$y[0]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[1]" /></m></cell>
-                  <cell><m><var name="$y[1]" /></m></cell>
+                  <cell><m><var name="$x[1]"/></m></cell>
+                  <cell><m><var name="$y[1]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[2]" /></m></cell>
-                  <cell><m><var name="$y[2]" /></m></cell>
+                  <cell><m><var name="$x[2]"/></m></cell>
+                  <cell><m><var name="$y[2]"/></m></cell>
                 </row>
                 <row>
-                  <cell><m><var name="$x[3]" /></m></cell>
-                  <cell><m><var name="$y[3]" /></m></cell>
+                  <cell><m><var name="$x[3]"/></m></cell>
+                  <cell><m><var name="$y[3]"/></m></cell>
                 </row>
               </tabular>
             </sidebyside>
             <p permid="Lqq">
-              <var name="$popup" form="popup" />
+              <var name="$popup" form="popup"/>
             </p>
           </statement>
           <solution permid="Hxv">
@@ -1133,7 +1133,7 @@ $popup=PopUp(['?','The relationship is linear','The relationship is not linear']
     </exercise>
     <p permid="bTc">
       Let's return to the data that we opened the section with,
-      in <xref ref="figure-top-one-percent">Figure</xref>.
+      in <xref ref="figure-top-one-percent" />.
       Is that data linear?
       Well, yes and no.
       To be completely honest, it's not linear.
@@ -1153,21 +1153,21 @@ $popup=PopUp(['?','The relationship is linear','The relationship is not linear']
       <figure permid="kYt">
         <caption>Share of all income held by the top
         <quantity>
-          <mag>1</mag><unit base="percent" />
-        </quantity>, United States, 1990<ndash />2013 (
+          <mag>1</mag><unit base="percent"/>
+        </quantity>, United States, 1990<ndash/>2013 (
         <url href="http://www.epi.org/blog/new-data-show-top-1-percent-really-are-different-from-you-and-me/">www.epi.org</url>
         )</caption>
         <image permid="aNJ">
           <description>a scatter plot about share of all income held by the top 1% in the US</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[xlabel={year},
 ylabel={percentage},
 xmin=1989,xmax=2035,
 ymin=0,ymax=30,
 minor ytick=,
-x axis line style={->},
-y axis line style={->},
+x axis line style={-&gt;},
+y axis line style={-&gt;},
 xtick={1990,1995,...,2035},
 xticklabels={1990,1995,...,2035},
 xticklabel style={rotate=-45},
@@ -1198,11 +1198,11 @@ ytick={0,5,...,30}]
 (2012,22)
 (2013,20)
 };
-\addplot+[domain = 1990:2035,->]{0.34434783*x-670.71};
+\addplot+[domain = 1990:2035,-&gt;]{0.34434783*x-670.71};
 \addplot[primarycurve,domain = 1991:2020,-,ultra thick]{0.34434783*x-670.71};
 \addplot[soliddot] coordinates {(1991,15) (2020,25)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
@@ -1223,15 +1223,15 @@ ytick={0,5,...,30}]
     <exercisegroup cols="4" permid="uUI">
       <title>Finding Patterns</title>
       <exercise permid="IYn">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=(-2..2);
 $m=random(2,6,1);
 $f=Formula("$m x");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1241,57 +1241,57 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="nqj">
-            <tabular  permid="hmP">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="hmP">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="XEI">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="nEE">
           <p permid="HbW">
-            Each <m>y</m>-value is <m><var name="$m" /></m> times what the corresponding <m>x</m>-value is.
-            So the equation is <m><var name="$eq" /></m>.
+            Each <m>y</m>-value is <m><var name="$m"/></m> times what the corresponding <m>x</m>-value is.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="pfw">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=(3..7);
 $m=random(2,6,1);
 $f=Formula("$m x");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1301,58 +1301,58 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="Txs">
-            <tabular  permid="NtY">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="NtY">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="jTa">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="TLN">
           <p permid="njf">
-            Each <m>y</m>-value is <m><var name="$m" /></m> times what the corresponding <m>x</m>-value is.
-            So the equation is <m><var name="$eq" /></m>.
+            Each <m>y</m>-value is <m><var name="$m"/></m> times what the corresponding <m>x</m>-value is.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="VmF">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 $x[0]=random(1,8,1);
 $b=random(4,9,1);
 @x=map{$x[0]+$_}(0..4);
 $f=Formula("x+$b");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1362,58 +1362,58 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="zEB">
-            <tabular  permid="tBh">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="tBh">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="whs">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="zSW">
           <p permid="Tqo">
-            Each <m>y</m>-value is <m><var name="$b" /></m> more than the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            Each <m>y</m>-value is <m><var name="$b"/></m> more than the corresponding <m>x</m>-value.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="BtO">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 $x[0]=random(1,8,1);
 $b=random(4,9,1);
 @x=map{$x[0]+$_}(0..4);
 $f=Formula("x+$b");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1423,60 +1423,60 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="fLK">
-            <tabular  permid="ZIq">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="ZIq">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="IvK">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="gaf">
           <p permid="zxx">
-            Each <m>y</m>-value is <m><var name="$b" /></m> more than the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            Each <m>y</m>-value is <m><var name="$b"/></m> more than the corresponding <m>x</m>-value.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="hAX">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=NchooseK(20,5);
 $b=non_zero_random(-9,9,1);
-$f=Formula("x+$b")->reduce;
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+$f=Formula("x+$b")-&gt;reduce;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 $absb=abs($b);
-$compstring=($b>0)?'more':'less';
+$compstring=($b&gt;0)?'more':'less';
 </pg-code>
         </setup>
         <statement>
@@ -1485,60 +1485,60 @@ $compstring=($b>0)?'more':'less';
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="LST">
-            <tabular  permid="FPz">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="FPz">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="UKc">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="Mho">
           <p permid="fEG">
-            Each <m>y</m>-value is <m><var name="$absb" /></m> <var name="$compstring" /> than the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            Each <m>y</m>-value is <m><var name="$absb"/></m> <var name="$compstring"/> than the corresponding <m>x</m>-value.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="tPp">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=NchooseK(20,5);
 $b=non_zero_random(-9,9,1);
-$f=Formula("x+$b")->reduce;
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+$f=Formula("x+$b")-&gt;reduce;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 $absb=abs($b);
-$compstring=($b>0)?'more':'less';
+$compstring=($b&gt;0)?'more':'less';
 </pg-code>
         </setup>
         <statement>
@@ -1547,56 +1547,56 @@ $compstring=($b>0)?'more':'less';
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="sac">
-            <tabular  permid="lWI">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="lWI">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="gYu">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="sox">
           <p permid="LLP">
-            Each <m>y</m>-value is <m><var name="$absb" /></m> <var name="$compstring" /> than the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            Each <m>y</m>-value is <m><var name="$absb"/></m> <var name="$compstring"/> than the corresponding <m>x</m>-value.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="ZWy">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=map{($_+1)**2}NchooseK(5,5);
 $f=Formula("sqrt(x)");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1606,56 +1606,56 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="Yhl">
-            <tabular  permid="SdR">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="SdR">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="tmM">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="YvG">
           <p permid="rSY">
             Each <m>y</m>-value is the square root of the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="GdH">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=(map{$_-5}(NchooseK(5,3)),map{$_+1}(NchooseK(5,2)));
 $f=Formula("abs(x)");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1665,49 +1665,49 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="Eou">
-            <tabular  permid="yla">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="yla">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="FBe">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="ECP">
           <p permid="Yah">
             Each <m>y</m>-value is the square root of the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="mkQ">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 $t=random(0,2,1);
@@ -1715,9 +1715,9 @@ $x[0]=random(0,7,1)/10**$t;
 $h=random(1,3,1)/10**$t;
 @x=map{$x[0]+$h*$_}(0..4);
 $f=Formula("x^2");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1727,49 +1727,49 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="kvD">
-            <tabular  permid="esj">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="esj">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="RPw">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="kJY">
           <p permid="Ehq">
             Each <m>y</m>-value is the square of the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="SrZ">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 $t=random(0,2,1);
@@ -1777,9 +1777,9 @@ $x[0]=random(0,7,1)/10**$t;
 $h=random(1,3,1)/10**$t;
 @x=map{$x[0]+$h*$_}(0..4);
 $f=Formula("x^2");
-@y=map{$f->eval(x=>$_)}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{$f-&gt;eval(x=&gt;$_)}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1789,57 +1789,57 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="QCM">
-            <tabular  permid="Kzs">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="Kzs">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="edO">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="QRh">
           <p permid="koz">
             Each <m>y</m>-value is the square of the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="yzi">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=map{$_+1}NchooseK(99,5);
 $f=Formula("1/x");
 Context("Fraction");
-@y=map{Fraction($f->eval(x=>$_))}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{Fraction($f-&gt;eval(x=&gt;$_))}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1849,57 +1849,57 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="wJV">
-            <tabular  permid="qGB">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="qGB">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="qsg">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="wYq">
           <p permid="QvI">
             Each <m>y</m>-value is the reciprocal of the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
       </exercise>
       <exercise permid="eGr">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=map{$_+1}NchooseK(99,5);
 $f=Formula("1/x");
 Context("Fraction");
-@y=map{Fraction($f->eval(x=>$_))}@x;
-Context("Numeric")->variables->add(y=>'Real');
-parser::Assignment->Allow;
+@y=map{Fraction($f-&gt;eval(x=&gt;$_))}@x;
+Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
+parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
         </setup>
@@ -1909,43 +1909,43 @@ $eq=Formula("y=$f");
             <m>y=\ldots</m> suggested by the pattern in the table.
           </p>
           <sidebyside permid="cRe">
-            <tabular  permid="WNK">
-              <col halign="right" />
-              <col halign="left" />
+            <tabular permid="WNK">
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell><m>x</m></cell>
                 <cell><m>y</m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[0]" /></m></cell>
-                <cell><m><var name="$y[0]" /></m></cell>
+                <cell><m><var name="$x[0]"/></m></cell>
+                <cell><m><var name="$y[0]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[1]" /></m></cell>
-                <cell><m><var name="$y[1]" /></m></cell>
+                <cell><m><var name="$x[1]"/></m></cell>
+                <cell><m><var name="$y[1]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[2]" /></m></cell>
-                <cell><m><var name="$y[2]" /></m></cell>
+                <cell><m><var name="$x[2]"/></m></cell>
+                <cell><m><var name="$y[2]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[3]" /></m></cell>
-                <cell><m><var name="$y[3]" /></m></cell>
+                <cell><m><var name="$x[3]"/></m></cell>
+                <cell><m><var name="$y[3]"/></m></cell>
               </row>
               <row>
-                <cell><m><var name="$x[4]" /></m></cell>
-                <cell><m><var name="$y[4]" /></m></cell>
+                <cell><m><var name="$x[4]"/></m></cell>
+                <cell><m><var name="$y[4]"/></m></cell>
               </row>
             </tabular>
           </sidebyside>
           <p permid="CGy">
-            <var name="$eq" width="20" />
+            <var name="$eq" width="20"/>
           </p>
         </statement>
         <solution permid="dfz">
           <p permid="wCR">
             Each <m>y</m>-value is the reciprocal of the corresponding <m>x</m>-value.
-            So the equation is <m><var name="$eq" /></m>.
+            So the equation is <m><var name="$eq"/></m>.
           </p>
         </solution>
         </webwork>
@@ -1961,7 +1961,7 @@ $m = random(2,9,1);
 $b = random(10,100,1);
 $f = Formula("$m x + $b");
 @x = (0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
@@ -1969,7 +1969,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="iNH">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$yes" form="popup" />
+                <var name="$yes" form="popup"/>
               </p>
               <sidebyside permid="KNA">
                 <tabular permid="CUT">
@@ -1978,28 +1978,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2007,7 +2007,7 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="JmI">
               <p permid="cKa">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-value increases by <m><var name="$m" /></m>.
+                the <m>y</m>-value increases by <m><var name="$m"/></m>.
                 So this table does show that <m>x</m> and <m>y</m> have a linear relationship.
               </p>
             </solution>
@@ -2021,7 +2021,7 @@ $m = random(2,9,1);
 $b = random(10,100,1);
 $f = Formula("$m x + $b");
 @x = (0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
@@ -2029,7 +2029,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="OUQ">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$yes" form="popup" />
+                <var name="$yes" form="popup"/>
               </p>
               <sidebyside permid="qUJ">
                 <tabular permid="jcc">
@@ -2038,28 +2038,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2067,7 +2067,7 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="ptR">
               <p permid="IRj">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-value increases by <m><var name="$m" /></m>.
+                the <m>y</m>-value increases by <m><var name="$m"/></m>.
                 So this table does show that <m>x</m> and <m>y</m> have a linear relationship.
               </p>
             </solution>
@@ -2083,7 +2083,7 @@ $b = random(50,100,1);
 $f = Formula("$m x + $b");
 $start = random(0,10,1);
 @x = map{$_+$start}(0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
@@ -2091,7 +2091,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="vbZ">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$yes" form="popup" />
+                <var name="$yes" form="popup"/>
               </p>
               <sidebyside permid="XbS">
                 <tabular permid="Pjl">
@@ -2100,28 +2100,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2129,7 +2129,7 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="VBa">
               <p permid="oYs">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-value decreases by <m><var name="$absm" /></m>.
+                the <m>y</m>-value decreases by <m><var name="$absm"/></m>.
                 So this table does show that <m>x</m> and <m>y</m> have a linear relationship.
               </p>
             </solution>
@@ -2145,7 +2145,7 @@ $b = random(50,100,1);
 $f = Formula("$m x + $b");
 $start = random(0,10,1);
 @x = map{$_+$start}(0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
@@ -2153,7 +2153,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="bji">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$yes" form="popup" />
+                <var name="$yes" form="popup"/>
               </p>
               <sidebyside permid="Djb">
                 <tabular permid="vqu">
@@ -2162,28 +2162,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2191,7 +2191,7 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="BIj">
               <p permid="VfB">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-value decreases by <m><var name="$absm" /></m>.
+                the <m>y</m>-value decreases by <m><var name="$absm"/></m>.
                 So this table does show that <m>x</m> and <m>y</m> have a linear relationship.
               </p>
             </solution>
@@ -2206,7 +2206,7 @@ $b = random(1,20,1);
 $f = Formula("$a^x + $b");
 $start = random(0,10,1);
 @x = map{$_+$start}(0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 for my $i (0..4) {
 $diff[$i] = $y[$i+1]-$y[$i];
 };
@@ -2217,7 +2217,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="Hqr">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$no" form="popup" />
+                <var name="$no" form="popup"/>
               </p>
               <sidebyside permid="jqk">
                 <tabular permid="bxD">
@@ -2226,28 +2226,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2255,11 +2255,11 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="hPs">
               <p permid="BmK">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-values increases by <m><var name="$diff[0]" /></m>,
-                then <m><var name="$diff[1]" /></m>,
-                then <m><var name="$diff[2]" /></m>,
-                then <m><var name="$diff[3]" /></m>,
-                then <m><var name="$diff[4]" /></m>.
+                the <m>y</m>-values increases by <m><var name="$diff[0]"/></m>,
+                then <m><var name="$diff[1]"/></m>,
+                then <m><var name="$diff[2]"/></m>,
+                then <m><var name="$diff[3]"/></m>,
+                then <m><var name="$diff[4]"/></m>.
                 So this table shows that <m>x</m> and <m>y</m> do not have a linear relationship.
               </p>
             </solution>
@@ -2274,7 +2274,7 @@ $b = random(1,20,1);
 $f = Formula("$a^x + $b");
 $start = random(0,10,1);
 @x = map{$_+$start}(0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 for my $i (0..4) {
 $diff[$i] = $y[$i+1]-$y[$i];
 };
@@ -2285,7 +2285,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="nxA">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$no" form="popup" />
+                <var name="$no" form="popup"/>
               </p>
               <sidebyside permid="Pxt">
                 <tabular permid="HEM">
@@ -2294,28 +2294,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2323,11 +2323,11 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="NWB">
               <p permid="htT">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-values increases by <m><var name="$diff[0]" /></m>,
-                then <m><var name="$diff[1]" /></m>,
-                then <m><var name="$diff[2]" /></m>,
-                then <m><var name="$diff[3]" /></m>,
-                then <m><var name="$diff[4]" /></m>.
+                the <m>y</m>-values increases by <m><var name="$diff[0]"/></m>,
+                then <m><var name="$diff[1]"/></m>,
+                then <m><var name="$diff[2]"/></m>,
+                then <m><var name="$diff[3]"/></m>,
+                then <m><var name="$diff[4]"/></m>.
                 So this table shows that <m>x</m> and <m>y</m> do not have a linear relationship.
               </p>
             </solution>
@@ -2342,7 +2342,7 @@ $b = random(1,20,1);
 $f = Formula("x^$a + $b");
 $start = random(0,2,1);
 @x = map{$_+$start}(0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 for my $i (0..4) {
 $diff[$i] = $y[$i+1]-$y[$i];
 };
@@ -2353,7 +2353,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="TEJ">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$no" form="popup" />
+                <var name="$no" form="popup"/>
               </p>
               <sidebyside permid="vEC">
                 <tabular permid="nLV">
@@ -2362,28 +2362,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2391,11 +2391,11 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="udK">
               <p permid="NBc">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-values increases by <m><var name="$diff[0]" /></m>,
-                then <m><var name="$diff[1]" /></m>,
-                then <m><var name="$diff[2]" /></m>,
-                then <m><var name="$diff[3]" /></m>,
-                then <m><var name="$diff[4]" /></m>.
+                the <m>y</m>-values increases by <m><var name="$diff[0]"/></m>,
+                then <m><var name="$diff[1]"/></m>,
+                then <m><var name="$diff[2]"/></m>,
+                then <m><var name="$diff[3]"/></m>,
+                then <m><var name="$diff[4]"/></m>.
                 So this table shows that <m>x</m> and <m>y</m> do not have a linear relationship.
               </p>
             </solution>
@@ -2410,7 +2410,7 @@ $b = random(1,20,1);
 $f = Formula("x^$a + $b");
 $start = random(0,2,1);
 @x = map{$_+$start}(0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 for my $i (0..4) {
 $diff[$i] = $y[$i+1]-$y[$i];
 };
@@ -2421,7 +2421,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="zLS">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$no" form="popup" />
+                <var name="$no" form="popup"/>
               </p>
               <sidebyside permid="bLL">
                 <tabular permid="TTe">
@@ -2430,28 +2430,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2459,11 +2459,11 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="akT">
               <p permid="tIl">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-values increases by <m><var name="$diff[0]" /></m>,
-                then <m><var name="$diff[1]" /></m>,
-                then <m><var name="$diff[2]" /></m>,
-                then <m><var name="$diff[3]" /></m>,
-                then <m><var name="$diff[4]" /></m>.
+                the <m>y</m>-values increases by <m><var name="$diff[0]"/></m>,
+                then <m><var name="$diff[1]"/></m>,
+                then <m><var name="$diff[2]"/></m>,
+                then <m><var name="$diff[3]"/></m>,
+                then <m><var name="$diff[4]"/></m>.
                 So this table shows that <m>x</m> and <m>y</m> do not have a linear relationship.
               </p>
             </solution>
@@ -2475,12 +2475,12 @@ $no = PopUp(['?','yes','no'],2);
 <pg-code>
 $m = non_zero_random(-5,5,0.01);
 $absm = abs($m);
-$incdec = ($m>0) ? 'increases' : 'decreases';
+$incdec = ($m&gt;0) ? 'increases' : 'decreases';
 $b = random(30,100,0.01);
 $f = Formula("$m*x + $b");
 $start = random(-10,10,1);
 @x = map{$_+$start}(0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
@@ -2488,7 +2488,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="fTb">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$yes" form="popup" />
+                <var name="$yes" form="popup"/>
               </p>
               <sidebyside permid="HSU">
                 <tabular permid="Aan">
@@ -2497,28 +2497,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2526,7 +2526,7 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="Gsc">
               <p permid="ZPu">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-value <var name="$incdec" /> by <m><var name="$absm" /></m>.
+                the <m>y</m>-value <var name="$incdec"/> by <m><var name="$absm"/></m>.
                 So this table does show that <m>x</m> and <m>y</m> have a linear relationship.
               </p>
             </solution>
@@ -2538,12 +2538,12 @@ $no = PopUp(['?','yes','no'],2);
 <pg-code>
 $m = non_zero_random(-5,5,0.01);
 $absm = abs($m);
-$incdec = ($m>0) ? 'increases' : 'decreases';
+$incdec = ($m&gt;0) ? 'increases' : 'decreases';
 $b = random(30,100,0.01);
 $f = Formula("$m*x + $b");
 $start = random(-10,10,1);
 @x = map{$_+$start}(0..5);
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
@@ -2551,7 +2551,7 @@ $no = PopUp(['?','yes','no'],2);
             <statement>
               <p permid="Mak">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$yes" form="popup" />
+                <var name="$yes" form="popup"/>
               </p>
               <sidebyside permid="oad">
                 <tabular permid="ghw">
@@ -2560,28 +2560,28 @@ $no = PopUp(['?','yes','no'],2);
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2589,7 +2589,7 @@ $no = PopUp(['?','yes','no'],2);
             <solution permid="mzl">
               <p permid="FWD">
                 As each <m>x</m>-value increases by <m>1</m>,
-                the <m>y</m>-value <var name="$incdec" /> by <m><var name="$absm" /></m>.
+                the <m>y</m>-value <var name="$incdec"/> by <m><var name="$absm"/></m>.
                 So this table does show that <m>x</m> and <m>y</m> have a linear relationship.
               </p>
             </solution>
@@ -2603,7 +2603,7 @@ $m = non_zero_random(2,9,1);
 $b = random(1,100,1);
 $f = Formula("$m*x + $b");
 @x = num_sort(NchooseK(20,6));
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 $ydiff = $y[1]-$y[0];
@@ -2613,7 +2613,7 @@ $xdiff = $x[1]-$x[0];
             <statement>
               <p permid="sht">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$yes" form="popup" />
+                <var name="$yes" form="popup"/>
               </p>
               <sidebyside permid="Uhm">
                 <tabular permid="MoF">
@@ -2622,28 +2622,28 @@ $xdiff = $x[1]-$x[0];
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2652,11 +2652,11 @@ $xdiff = $x[1]-$x[0];
               <p permid="mdM">
                 The <m>x</m>-values in this table jump erratically.
                 However, if we compute the rate of change between consecutive rows in the table,
-                the result is always <var name="$m" />.
+                the result is always <var name="$m"/>.
                 For example,
                 the rate of change between the first and second rows is
                 <me permid="FfF">
-                  \frac{<var name="$y[1]" />-<var name="$y[0]" />}{<var name="$x[1]" />-<var name="$x[0]" />}=\frac{<var name="$ydiff" />}{<var name="$xdiff" />}=<var name="$m" />
+                  \frac{<var name="$y[1]"/>-<var name="$y[0]"/>}{<var name="$x[1]"/>-<var name="$x[0]"/>}=\frac{<var name="$ydiff"/>}{<var name="$xdiff"/>}=<var name="$m"/>
                 </me>.
               </p>
             </solution>
@@ -2670,7 +2670,7 @@ $m = non_zero_random(2,9,1);
 $b = random(1,100,1);
 $f = Formula("$m*x + $b");
 @x = num_sort(NchooseK(20,6));
-@y = map{$f->eval(x=>$_)}(@x);
+@y = map{$f-&gt;eval(x=&gt;$_)}(@x);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 $ydiff = $y[1]-$y[0];
@@ -2680,7 +2680,7 @@ $xdiff = $x[1]-$x[0];
             <statement>
               <p permid="YoC">
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
-                <var name="$yes" form="popup" />
+                <var name="$yes" form="popup"/>
               </p>
               <sidebyside permid="Aov">
                 <tabular permid="svO">
@@ -2689,28 +2689,28 @@ $xdiff = $x[1]-$x[0];
                     <cell><m>y</m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[0]" /></m></cell>
-                    <cell><m><var name="$y[0]" /></m></cell>
+                    <cell><m><var name="$x[0]"/></m></cell>
+                    <cell><m><var name="$y[0]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[1]" /></m></cell>
-                    <cell><m><var name="$y[1]" /></m></cell>
+                    <cell><m><var name="$x[1]"/></m></cell>
+                    <cell><m><var name="$y[1]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[2]" /></m></cell>
-                    <cell><m><var name="$y[2]" /></m></cell>
+                    <cell><m><var name="$x[2]"/></m></cell>
+                    <cell><m><var name="$y[2]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[3]" /></m></cell>
-                    <cell><m><var name="$y[3]" /></m></cell>
+                    <cell><m><var name="$x[3]"/></m></cell>
+                    <cell><m><var name="$y[3]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[4]" /></m></cell>
-                    <cell><m><var name="$y[4]" /></m></cell>
+                    <cell><m><var name="$x[4]"/></m></cell>
+                    <cell><m><var name="$y[4]"/></m></cell>
                   </row>
                   <row>
-                    <cell><m><var name="$x[5]" /></m></cell>
-                    <cell><m><var name="$y[5]" /></m></cell>
+                    <cell><m><var name="$x[5]"/></m></cell>
+                    <cell><m><var name="$y[5]"/></m></cell>
                   </row>
                 </tabular>
               </sidebyside>
@@ -2719,11 +2719,11 @@ $xdiff = $x[1]-$x[0];
               <p permid="SkV">
                 The <m>x</m>-values in this table jump erratically.
                 However, if we compute the rate of change between consecutive rows in the table,
-                the result is always <var name="$m" />.
+                the result is always <var name="$m"/>.
                 For example,
                 the rate of change between the first and second rows is
                 <me permid="lmO">
-                  \frac{<var name="$y[1]" />-<var name="$y[0]" />}{<var name="$x[1]" />-<var name="$x[0]" />}=\frac{<var name="$ydiff" />}{<var name="$xdiff" />}=<var name="$m" />
+                  \frac{<var name="$y[1]"/>-<var name="$y[0]"/>}{<var name="$x[1]"/>-<var name="$x[0]"/>}=\frac{<var name="$ydiff"/>}{<var name="$xdiff"/>}=<var name="$m"/>
                 </me>.
               </p>
             </solution>
@@ -2734,12 +2734,12 @@ $xdiff = $x[1]-$x[0];
     <exercisegroup cols="2" permid="Hja">
       <title>Calculating Rate of Change</title>
       <exercise permid="aGs">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=(1990..2014);
 @y=(487849,491064,493754,497432,497659,498396,501646,503205,502945,503637,529922,535185,538803,539546,533120,534112,538091,546747,556442,566143,585261,593859,602954,609520,619360);
-%f=map{$x[$_]=>$y[$_]}(0..24);
+%f=map{$x[$_]=&gt;$y[$_]}(0..24);
 @year=num_sort(@x[NchooseK(25,4)]);
 @rate=map{Real(($f{$year[2*$_+1]}-$f{$year[2*$_]})/($year[2*$_+1]-$year[2*$_]))}(0,1);
 $declines=List(1997,2003);
@@ -2751,10 +2751,10 @@ $declines=List(1997,2003);
           </p>
           <sidebyside permid="CdI">
             <tabular permid="YCX">
-              <col halign="right" />
-              <col right="medium" halign="left" />
-              <col halign="right" />
-              <col halign="left" />
+              <col halign="right"/>
+              <col right="medium" halign="left"/>
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell>Year</cell>
                 <cell>Population</cell>
@@ -2840,18 +2840,18 @@ $declines=List(1997,2003);
             </tabular>
           </sidebyside>
           <p permid="kCU">
-            Find the rate of change in Portland population between <var name="$year[0]" /> and <var name="$year[1]" />.
+            Find the rate of change in Portland population between <var name="$year[0]"/> and <var name="$year[1]"/>.
             Just give the numerical value;
             the units are provided.
           </p>
           <p permid="QKd">
-            <var name="$rate[0]" width="10" /><m>\,\frac{\text{people}}{\text{year}}</m>
+            <var name="$rate[0]" width="10"/><m>\,\frac{\text{people}}{\text{year}}</m>
           </p>
           <p permid="wRm">
-            And what was the rate of change between <var name="$year[2]" /> and <var name="$year[3]" />?
+            And what was the rate of change between <var name="$year[2]"/> and <var name="$year[3]"/>?
           </p>
           <p permid="cYv">
-            <var name="$rate[1]" width="10" /><m>\,\frac{\text{people}}{\text{year}}</m>
+            <var name="$rate[1]" width="10"/><m>\,\frac{\text{people}}{\text{year}}</m>
           </p>
           <p permid="JfE">
             List all the years where there is a negative rate of change between that year and the next year.
@@ -2860,18 +2860,18 @@ $declines=List(1997,2003);
             (Use commas to separate your answers.)
           </instruction>
           <p permid="pmN">
-            <var name="$declines" width="20" />
+            <var name="$declines" width="20"/>
           </p>
         </statement>
         <solution permid="eUM">
           <p permid="yse">
-            To find the rate of change between <var name="$year[0]" /> and <var name="$year[1]" />, calculate
+            To find the rate of change between <var name="$year[0]"/> and <var name="$year[1]"/>, calculate
             <me permid="RtX">
               \frac{<var name="$f{$year[1]}"/>-<var name="$f{$year[0]}"/>}{<var name="$year[1]"/>-<var name="$year[0]"/>}=<var name="$rate[0]"/>\text{.}
             </me>
           </p>
           <p permid="ezn">
-            To find the rate of change between <var name="$year[2]" /> and <var name="$year[3]" />, calculate
+            To find the rate of change between <var name="$year[2]"/> and <var name="$year[3]"/>, calculate
             <me permid="xBg">
               \frac{<var name="$f{$year[3]}"/>-<var name="$f{$year[2]}"/>}{<var name="$year[3]"/>-<var name="$year[2]"/>}=<var name="$rate[1]"/>\text{.}
             </me>
@@ -2884,35 +2884,35 @@ $declines=List(1997,2003);
         </webwork>
       </exercise>
       <exercise permid="GNB">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @x=(1990..2014);
 @y=(487849,491064,493754,497432,497659,498396,501646,503205,502945,503637,529922,535185,538803,539546,533120,534112,538091,546747,556442,566143,585261,593859,602954,609520,619360);
-%f=map{$x[$_]=>$y[$_]}(0..24);
+%f=map{$x[$_]=&gt;$y[$_]}(0..24);
 @year=num_sort(@x[NchooseK(25,4)]);
 @rate=map{Real(($f{$year[2*$_+1]}-$f{$year[2*$_]})/($year[2*$_+1]-$year[2*$_]))}(0,1);
-Context()->flags->set(tolType=>'absolute',tolerance=>0.5);
+Context()-&gt;flags-&gt;set(tolType=&gt;'absolute',tolerance=&gt;0.5);
 $answer=List(1999,2001);
 Context("Numeric");
 $rate=($f{2001}-$f{1999})/2;
 for my$j(0,1){
-$graph[$j]=init_graph(1989,-100000,2015,700000,axes=>[1990,0],grid=>[26,8],size=>[240,240]);
-$graph[$j]->lb('reset');
-$graph[$j]->lb(new Label(2014,6000,'year','black','right','bottom','large'));
-$graph[$j]->lb(new Label(1990.5,690000,'population','black','left','top','large'));
-for my$i(0..24){$graph[$j]->moveTo($x[$i],-6000);$graph[$j]->lineTo($x[$i],6000);
-$graph[$j]->stamps(closed_circle($x[$i],$y[$i],'blue'));
+$graph[$j]=init_graph(1989,-100000,2015,700000,axes=&gt;[1990,0],grid=&gt;[26,8],size=&gt;[240,240]);
+$graph[$j]-&gt;lb('reset');
+$graph[$j]-&gt;lb(new Label(2014,6000,'year','black','right','bottom','large'));
+$graph[$j]-&gt;lb(new Label(1990.5,690000,'population','black','left','top','large'));
+for my$i(0..24){$graph[$j]-&gt;moveTo($x[$i],-6000);$graph[$j]-&gt;lineTo($x[$i],6000);
+$graph[$j]-&gt;stamps(closed_circle($x[$i],$y[$i],'blue'));
 };
-for my$i(1995,2000,2005,2010){$graph[$j]->moveTo($x[$i],-12000);$graph[$j]->lineTo($x[$i],12000);
-$graph[$j]->lb(new Label($i,-12000,$i,'black','center','top','large'));
+for my$i(1995,2000,2005,2010){$graph[$j]-&gt;moveTo($x[$i],-12000);$graph[$j]-&gt;lineTo($x[$i],12000);
+$graph[$j]-&gt;lb(new Label($i,-12000,$i,'black','center','top','large'));
 };
-for my$i(1..6){$graph[$j]->moveTo(1989.8,$i*10**5);$graph[$j]->lineTo(1990.2,$i*10**5);};
-for my$i(2,4,6){$graph[$j]->lb(new Label(1990.3,$i*100000,$i*100000,'black','left','middle','large'));};
+for my$i(1..6){$graph[$j]-&gt;moveTo(1989.8,$i*10**5);$graph[$j]-&gt;lineTo(1990.2,$i*10**5);};
+for my$i(2,4,6){$graph[$j]-&gt;lb(new Label(1990.3,$i*100000,$i*100000,'black','left','middle','large'));};
 };
 for my$i(1998,1999,2008,2009){
 $slope{$i}=($f{$i+2}-$f{$i})/2;
-add_functions($graph[1],"$slope{$i}*(x-$i)+$f{$i} for x in &lt;1989,2015> using color:black and weight:1");
+add_functions($graph[1],"$slope{$i}*(x-$i)+$f{$i} for x in &lt;1989,2015&gt; using color:black and weight:1");
 };
 </pg-code>
         </setup>
@@ -2922,10 +2922,10 @@ add_functions($graph[1],"$slope{$i}*(x-$i)+$f{$i} for x in &lt;1989,2015> using 
           </p>
           <sidebyside permid="ikR">
             <tabular permid="EKg">
-              <col halign="right" />
-              <col right="medium" halign="left" />
-              <col halign="right" />
-              <col halign="left" />
+              <col halign="right"/>
+              <col right="medium" halign="left"/>
+              <col halign="right"/>
+              <col halign="left"/>
               <row bottom="medium">
                 <cell>Year</cell>
                 <cell>Population</cell>
@@ -3011,7 +3011,7 @@ add_functions($graph[1],"$slope{$i}*(x-$i)+$f{$i} for x in &lt;1989,2015> using 
             </tabular>
           </sidebyside>
           <sidebyside widths="40%" permid="Osa">
-            <image pg-name="$graph[0]" />
+            <image pg-name="$graph[0]"/>
           </sidebyside>
           <p permid="BBf">
             Between what two years that are two years apart was the rate of change highest?
@@ -3020,7 +3020,7 @@ add_functions($graph[1],"$slope{$i}*(x-$i)+$f{$i} for x in &lt;1989,2015> using 
             (Use commas to separate your answers.)
           </instruction>
           <p permid="hIo">
-            <var name="$answer" width="20" />
+            <var name="$answer" width="20"/>
           </p>
           <p permid="NPx">
             What was that rate of change?
@@ -3028,7 +3028,7 @@ add_functions($graph[1],"$slope{$i}*(x-$i)+$f{$i} for x in &lt;1989,2015> using 
             the units are provided.
           </p>
           <p permid="tWG">
-            <var name="$rate" width="10" /><m>\,\frac{\text{people}}{\text{year}}</m>
+            <var name="$rate" width="10"/><m>\,\frac{\text{people}}{\text{year}}</m>
           </p>
         </statement>
         <solution permid="LbV">
@@ -3037,7 +3037,7 @@ add_functions($graph[1],"$slope{$i}*(x-$i)+$f{$i} for x in &lt;1989,2015> using 
             but the candidates periods start in 1998, 1999, 2008, and 2009.
           </p>
           <sidebyside permid="uzj">
-            <image pg-name="$graph[1]" />
+            <image pg-name="$graph[1]"/>
           </sidebyside>
           <p permid="WUO">
             Between 1998 and 2000:

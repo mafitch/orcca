@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -10,13 +10,12 @@
   <title>Applications of Systems of Linear Equations</title>
   <introduction permid="hTJ">
     <p permid="fuP">
-      <xref ref="example-system-of-equations-elimination-intro">Example</xref>
+      <xref ref="example-system-of-equations-elimination-intro" />
       below is an example of how a system of linear equations can be used to solve an application problem.
       In this section,
       we will look at several types of application problems that can be solved using a system of linear equations,
       while giving you some strategies for solving these problems.
     </p>
-  </introduction>
   <example xml:id="example-system-of-equations-elimination-intro" permid="VFr">
     <p permid="VcO">
       Alicia has <m>\$1000</m> to give to her two grandchildren for New Year's.
@@ -41,8 +40,8 @@
       </md>
     </p>
     <p permid="hrg">
-      We can solve this system by either substitution as we learned in <xref ref="section-substitution">Section</xref>
-      or by elimination as we learned in <xref ref="section-elimination">Section</xref>.
+      We can solve this system by either substitution as we learned in <xref ref="section-substitution" />
+      or by elimination as we learned in <xref ref="section-elimination" />.
       Notice that if we add together the <em>left</em>
       sides from the two equations,
       the variable <m>B</m> will be eliminated quite easily:
@@ -88,8 +87,8 @@
     using systems of linear equations:
   </p>
   <list xml:id="list-solve-applications-using-linear-systems" permid="BMA">
+    <title>A Problem Solving Strategy for Applications of Systems of Linear Equations</title>
     <idx><h>solving</h><h>applications</h><h>systems</h></idx>
-    <caption>A Problem Solving Strategy for Applications of Systems of Linear Equations</caption>
     <dl permid="IlG">
       <li permid="osP">
         <title>Step 1: Read</title>
@@ -138,6 +137,7 @@
       </li>
     </dl>
   </list>
+  </introduction>
   <subsection permid="PXj">
     <title>Translating to a System of Equations</title>
     <p permid="buQ">
@@ -247,15 +247,16 @@
             <p permid="iDD">
               This is a geometric problem involving the three sides of a rectangle - two widths and one length.
             </p>
-            
+
             <p permid="OKM">
               It will take a total of 125 feet of fencing to fence two widths and one length of the rectangular yard.
               The length of the yard must be 5 feet more than four times the width.</p>
-          </li>
-          <li><p>
-                <image source="images/CNX_ElemAlg_Figure_05_04_005a_img.jpg" width="30%" permid="Jki">
+            <p>
+                <sidebyside>
+                  <image source="images/CNX_ElemAlg_Figure_05_04_005a_img.jpg" width="30%" permid="Jki">
                   <description>A drawing of a house, from above, with a three-sided fence adjacent to the house.</description>
-                </image></p>
+                </image>
+              </sidebyside></p>
             </li>
           <li permid="KRR">
             <title>Step 2:</title><p>Identify what you are looking for.
@@ -285,11 +286,11 @@
               We will write one equation for each relationship described in Step 1.
             </p>
             <p permid="rXp">
-              It will take a total of 125 feet of fencing to fence 				two widths and one length of the rectangular yard.
+              It will take a total of 125 feet of fencing to fence two widths and one length of the rectangular yard.
               <me permid="XuR">
                 125=2W+L
               </me>
-              The length of the yard must be 5 feet 				more than four times the width.
+              The length of the yard must be 5 feet more than four times the width.
               <me permid="DCa">
                 L=4W+5
               </me>
@@ -311,14 +312,14 @@
           <setup>
 <pg-code>
 Context("ImplicitPlane");
-Context()->variables->are(m=>"Real",e=>"Real");
-Context()->flags->set(reduceConstants=>0);
-Context()->flags->set(showExtraParens=>0);
+Context()-&gt;variables-&gt;are(m=&gt;"Real",e=&gt;"Real");
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
+Context()-&gt;flags-&gt;set(showExtraParens=&gt;0);
 $ans[0] = Compute("m+e=35");
 $ans[1] = Compute("5m+10e=230");
-$system = MultiAnswer($ans[0], $ans[1])->with(
-singleResult => 0,
-checker => sub {
+$system = MultiAnswer($ans[0], $ans[1])-&gt;with(
+singleResult =&gt; 0,
+checker =&gt; sub {
 my ( $correct, $student, $self ) = @_;
 my @eqstu = @{$student};
 my @eqcor = @{$correct};
@@ -337,21 +338,21 @@ $return =  [0,0];
 }
 }
 for my $i (0,1) {
-$self->{cmp}->[$i]->{cmp_class} = "a linear equation",
-$self->{cmp}->[$i]->{rh_ans}->{correct_ans}
-= Parser::Formula(Context("Typeset") , $eqcor[$i])->string;
-$self->{cmp}->[$i]->{rh_ans}->{correct_ans_latex_string}
-= Parser::Formula(Context("Typeset") , $eqcor[$i])->TeX;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{cmp_class} = "a linear equation",
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{correct_ans}
+= Parser::Formula(Context("Typeset") , $eqcor[$i])-&gt;string;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{correct_ans_latex_string}
+= Parser::Formula(Context("Typeset") , $eqcor[$i])-&gt;TeX;
 $eqstu[$i] = Parser::Formula(
 Context("Typeset"),
-$self->{cmp}->[$i]->{rh_ans}->{original_student_ans}
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{original_student_ans}
 );
-$self->{cmp}->[$i]->{rh_ans}->{preview_text_string}
-= $eqstu[$i]->string;
-$self->{cmp}->[$i]->{rh_ans}->{preview_latex_string}
-= $eqstu[$i]->TeX;
-$self->{cmp}->[$i]->{rh_ans}->{student_ans}
-= $eqstu[$i]->string;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{preview_text_string}
+= $eqstu[$i]-&gt;string;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{preview_latex_string}
+= $eqstu[$i]-&gt;TeX;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{student_ans}
+= $eqstu[$i]-&gt;string;
 }
 return $return;
 }
@@ -380,16 +381,16 @@ return $return;
   </subsection>
   <subsection permid="wes">
     <title>Direct Translation Applications</title>
-    <introduction permid="znt">
+<!--    <introduction permid="znt"> -->
       <p permid="LBY">
         In the previous examples,
         we learned how to translate application problems into systems of linear equations,
         but we didn't actually solve those problems.
         Now we'll translate a situation to a system of equations and then solve the system,
-        using what we learned in <xref ref="section-substitution">Section</xref>
-        and <xref ref="section-elimination">Section</xref>.
+        using what we learned in <xref ref="section-substitution" />
+        and <xref ref="section-elimination" />.
       </p>
-    </introduction>
+<!--    </introduction> -->
     <example permid="juB">
       <p permid="TXv">
         Translate to a system of equations and then solve: Devon is 26 years older than his son Cooper.
@@ -661,7 +662,7 @@ return $return;
 
             </pg-code>
             </setup>
-            <statement><p>A test has <var name="$totalProblems"/> problems, which are worth a total of <var name="$totalPoints"/> points. There are two types of problems in the test. Each multiple-choice problem is worth <var name="$worthMulti"/> points, and each short-answer problem is worth <var name="$worthShort"/> points.</p> 
+            <statement><p>A test has <var name="$totalProblems"/> problems, which are worth a total of <var name="$totalPoints"/> points. There are two types of problems in the test. Each multiple-choice problem is worth <var name="$worthMulti"/> points, and each short-answer problem is worth <var name="$worthShort"/> points.</p>
 
             <p>Write and solve a system equation to answer the following questions.</p>
 
@@ -671,7 +672,7 @@ return $return;
 
             <p>It's given that there are a total of <var name="$totalProblems"/> problems, so we have:</p>
 
-                <me>x+y=<var name="$totalProblems"/></me>
+            <p><me>x+y=<var name="$totalProblems"/></me></p>
 
             <p>Since each multiple-choice problem is worth <var name="$worthMulti"/> points, <m>x</m> multiple-choice problems would be worth <m><var name="$worthMulti"/>x</m> points.</p>
 
@@ -875,7 +876,7 @@ return $return;
     <introduction permid="Pgl">
       <p permid="rJh">
         For geometry applications, you will often use a geometry formula,
-        which can be found in <xref ref="section-geometry-formulas">Section</xref>,
+        which can be found in <xref ref="section-geometry-formulas" />,
         to write at least one of the equations for your system.
         Here we will also use some new geometric concepts,
         which are not found in that section.
@@ -1116,10 +1117,11 @@ $answer2=42;
               She'd like the length of the garden to be five feet less than twice the width.</p>
               <p>Find the dimensions of the garden.
               Draw a diagram:</p></li>
-              <li>
-                <p><image source="images/diagram_for_geometry_example_in_5.4.jpg" width="25%" permid="prr">
+<!--              <li> -->
+                <p><sidebyside><image source="images/diagram_for_geometry_example_in_5.4.jpg" width="25%" permid="prr">
                   <description>A drawing of a rectangular garden, from above, with one short side marked as "width" and a long side marked as "length (five feet less than twice the width)".</description>
-                </image></p></li>
+                </image></sidebyside></p>
+<!--                </li> -->
           
           <li permid="lTI">
               <title>Step 2:</title><p>
@@ -1328,11 +1330,11 @@ $answer2=8;
       </p>
       <p permid="uZm">
         A diagram is useful in helping us visualize the situation.</p>
-        <figure permid="seG">
-          <image source="images/CNX_ElemAlg_Figure_05_04_006_img.jpg" width="50%" permid="VyA">
+        <sidebyside width="50%" permid="seG">
+          <image source="images/CNX_ElemAlg_Figure_05_04_006_img.jpg" permid="VyA">
             <description>A diagram with "Denver" on the left and "St. Louis" on the right. Then, two arrows pointing from St. Louis to Denver, one Labeled with "Joni" and the other with "Kelly (1/2 hour later)" and speeds of 65 mph and 78 mph labeled on each arrow respectively.</description>
           </image>
-        </figure>
+        </sidebyside>
       
       <p permid="bgv">
         <em>Identify and name</em> what we are looking for.
@@ -1346,11 +1348,11 @@ $answer2=8;
         Then, we can multiply the rates and times together to obtain an expression for each person's distance.
       </p>
       
-        <figure permid="YlP">
-          <image source="images/CNX_ElemAlg_Figure_05_04_013a_img.jpg" width="50%" permid="BFJ">
+        <sidebyside width="50%" permid="YlP">
+          <image source="images/CNX_ElemAlg_Figure_05_04_013a_img.jpg" permid="BFJ">
             <description>A table with column headings of type, rate, time, and distance. The types are Joni and Kelly. The rates are 65 and 78. The times are variables j and k. The distances are 65j and 78j.</description>
           </image>
-        </figure>
+        </sidebyside>
       
       <p permid="nuN">
         <em>Translate</em> into a system of equations.
@@ -1419,7 +1421,7 @@ $answer=1;
             <p permid="RTN">
               <em>Identify and name</em> what you are looking for.
               Make a table,
-              similar to the one we used in <xref ref="example-catch-up-driving">Example</xref>
+              similar to the one we used in <xref ref="example-catch-up-driving" />
               to help you organize the information.
               We are given the rates of both Charlie and Sally,
               and so you can enter them into your table.
@@ -1478,38 +1480,38 @@ $answer=1;
       the curent of the water is either slowing it down or speeding it up.
     </p>
     <p permid="kOC">
-      <xref ref="figure-downstream">Figure</xref>
-      and <xref ref="figure-upstream">Figure</xref>
+      <xref ref="figure-downstream" />
+      and <xref ref="figure-upstream" />
       show how a river current affects the speed at which a boat is actually traveling.
       We'll call the speed of the boat in still water <m>b</m> and the speed of the river current <m>c</m>.
     </p>
     <p permid="QVL">
-      In <xref ref="figure-downstream">Figure</xref> the boat is going downstream,
+      In <xref ref="figure-downstream" /> the boat is going downstream,
       in the same direction as the river current.
       The current helps push the boat,
       so the boat's actual speed is faster than its speed in still water.
       The actual speed at which the boat is moving is <m>b+c</m>.
     </p>
     
-      <figure xml:id="figure-downstream" permid="hTW">
-        <image source="images/CNX_ElemAlg_Figure_05_04_007_img.jpg" width="40%" permid="hMS">
+      <sidebyside width="40%" xml:id="figure-downstream" permid="hTW">
+        <image source="images/CNX_ElemAlg_Figure_05_04_007_img.jpg" permid="hMS">
           <description>A picture of a boat traveling downstream, with the current.</description>
         </image>
-      </figure>
+      </sidebyside>
     
     <p permid="dkd">
-      In <xref ref="figure-upstream">Figure</xref> the boat is going upstream,
+      In <xref ref="figure-upstream" /> the boat is going upstream,
       opposite the river current.
       The current is going against the boat,
       so the boat's actual speed is slower than its speed in still water.
       The actual speed of the boat is <m>b-c</m>.
     </p>
     
-      <figure xml:id="figure-upstream" permid="Obf">
-        <image source="images/CNX_ElemAlg_Figure_05_04_008_img.jpg" width="40%" permid="NUb">
+      <sidebyside width="40%" xml:id="figure-upstream" permid="Obf">
+        <image source="images/CNX_ElemAlg_Figure_05_04_008_img.jpg" permid="NUb">
           <description>A picture of a boat traveling upstream, against the current.</description>
         </image>
-      </figure>
+      </sidebyside>
     
     <p permid="pyv">
       We'll put some numbers to this situation in the next example.
@@ -1521,11 +1523,11 @@ $answer=1;
       </p>
       <p permid="kAh">
         A diagram is useful in helping us visualize the situation.</p>
-        <figure permid="SwD">
-          <image source="images/CNX_ElemAlg_Figure_05_04_009_img.jpg" width="50%" permid="ubk">
+        <sidebyside width="50%" permid="SwD">
+          <image source="images/CNX_ElemAlg_Figure_05_04_009_img.jpg" permid="ubk">
             <description>A diagram showing two arrows pointing in opposite directions, to represent a boat traveling one direction and then traveling back in the opposite direction the same distance. Then one blue arrow represents the direction of the current of the river.</description>
           </image>
-        </figure>
+        </sidebyside>
       
       <p permid="QHq">
         <em>Identify and name</em> what we are looking for.
@@ -1551,11 +1553,11 @@ $answer=1;
         We can now enter that information into the table as well.
       </p>
       
-        <figure permid="yDM">
-          <image source="images/CNX_ElemAlg_Figure_05_04_010a_img.jpg" width="50%" permid="ait">
+        <sidebyside width="50%" permid="yDM">
+          <image source="images/CNX_ElemAlg_Figure_05_04_010a_img.jpg" permid="ait">
             <description>A table with column headings of rate, time, and distance, as well as row headings of downstream and upstream. The rates are s+c and s-c. The times are 4 and 5. The distances are both 60.</description>
           </image>
-        </figure>
+        </sidebyside>
       
       <p permid="JcR">
         <em>Translate</em> into a system of equations.
@@ -1654,7 +1656,7 @@ $answer2=1;
           </statement>
           <solution permid="jIW">
             <p permid="WDG">
-              It may help to draw a diagram and a table similar to those found in <xref ref="example-river-cruise-ship">Example</xref>
+              It may help to draw a diagram and a table similar to those found in <xref ref="example-river-cruise-ship" />
               to help visualize the problem and organize the information that is given.
             </p>
             <p permid="CKP">
@@ -1750,9 +1752,9 @@ $answer2=1;
         <p permid="slK">
           A diagram is useful in helping us visualize the situation.
           
-            <image source="images/CNX_ElemAlg_Figure_05_04_011_img.jpg" width="40%" permid="GpC">
+            <sidebyside><image source="images/CNX_ElemAlg_Figure_05_04_011_img.jpg" width="40%" permid="GpC">
               <description>A diagram showing two arrows pointing in opposite directions, to represent a jet traveling one direction for a distance of 1095 miles and then traveling back in the opposite direction for a distance of 987 miles. Then one blue arrow represents the direction of the wind, with the time of 3 hours labeled on that arrow, representing the time traveled by the jet in both directions. There are also expressions of "j+w" labeling the arrow that represents the 1095-mile trip and "j-w" labeling the arrow that represents the 987-mile trip.</description>
-            </image>
+            </image></sidebyside>
           </p>
         
         <p permid="YsT">
@@ -1779,11 +1781,11 @@ $answer2=1;
           These expressions can then be entered into the table for each rate.
         </p>
         
-          <figure permid="NTO">
-            <image source="images/CNX_ElemAlg_Figure_05_04_012a_img.jpg" width="45%" permid="mwL">
+          <sidebyside width="45%" permid="NTO">
+            <image source="images/CNX_ElemAlg_Figure_05_04_012a_img.jpg" permid="mwL">
               <description>A table with column headings of rate, time, and distance, as well as row headings of tailwind and headwind. The rates are j+w and j-w. The times are both 3. The distances are 1095 for tailwind and 987 for headwind.</description>
             </image>
-          </figure>
+          </sidebyside>
         
         <p permid="QOu">
           <em>Translate</em> into a system of equations.
@@ -1860,7 +1862,7 @@ $answer2=24;
           </statement>
           <solution permid="PQf">
             <p permid="uaX">
-              It may help to draw a diagram and a table similar to those found in <xref ref="example-private-jet">Example</xref>
+              It may help to draw a diagram and a table similar to those found in <xref ref="example-private-jet" />
               to help visualize the problem and organize the information that is given.
             </p>
             <p permid="aig">
@@ -1965,11 +1967,11 @@ $answer2=24;
           Fill in the last column using <m>\text{Number of Pounds}\cdot\text{Value}=\text{Total Value}</m>:
         </p>
         
-          <figure permid="FjW">
-            <image source="images/CNX_ElemAlg_Figure_05_05_003a_img.jpg" width="45%" permid="SDU">
+          <sidebyside width="45%" permid="FjW">
+            <image source="images/CNX_ElemAlg_Figure_05_05_003a_img.jpg" permid="SDU">
               <description>A table with column headings type, number of pounds, value, and total value. The types are nuts, chocolate chips, and trail mix. The number of pounds are n, c, and 20. The values are 9.00, 2.00, and 7.60. The total values are 9n, 2c, and 7.60(20)=152.</description>
             </image>
-          </figure>
+          </sidebyside>
         
         <p permid="IeC">
           <em>Translate</em> into a system of equations.
@@ -2072,7 +2074,7 @@ $answer2=2;
             </p>
             <p permid="JTP">
               It may help to use a table,
-              similar to the one used in <xref ref="example-solving-systems-of-equations-trail-mix-application">Example</xref>
+              similar to the one used in <xref ref="example-solving-systems-of-equations-trail-mix-application" />
               to help organize your information.
               Then, place the <m>p</m> and <m>c</m> under the number of pounds for the types peanuts and cashews.
               For the type nut mix,
@@ -2153,11 +2155,11 @@ $answer2=2;
         of the <m>40\%</m> solution.
       </p>
       
-        <figure permid="FcS">
-          <image source="images/CNX_ElemAlg_Figure_05_05_004a_img.jpg" width="50%" permid="yLd">
+        <sidebyside width="50%" permid="FcS">
+          <image source="images/CNX_ElemAlg_Figure_05_05_004a_img.jpg" permid="yLd">
             <description>Diagram of a container marked with x and 25%, plus a container marked with y and 50%, both with arrows point down toward a third container marked with 40% and 200 ml.</description>
           </image>
-        </figure>
+        </sidebyside>
       
       <p permid="PBX">
         <em>Name</em> what we are looking for.
@@ -2184,11 +2186,11 @@ $answer2=2;
         (in decimal form).
       </p>
      
-        <figure permid="lkb">
-          <image source="images/CNX_ElemAlg_Figure_05_05_004b_img.jpg" width="45%" permid="eSm">
+        <sidebyside width="45%" permid="lkb">
+          <image source="images/CNX_ElemAlg_Figure_05_05_004b_img.jpg" permid="eSm">
             <description>A table with column headings of type, number of units, concentration(\%), and amount. For the types, there are 25\%, 50\%, and 40\%. The number of units are x, y, and 200. The amounts are 0.25x, 0.50y, and 0.40(200).</description>
           </image>
-        </figure>
+        </sidebyside>
       
       <p permid="oeH">
         <em>Translate</em> into a system of equations.
@@ -2327,7 +2329,7 @@ $answer2=150;
           <solution permid="cex">
             <p permid="GZj">
               <em>Read</em> the problem.
-              Drawing a figure similar to the one in <xref ref="example-solving-systems-of-equations-chemistry-solution-application">Example</xref>
+              Drawing a figure similar to the one in <xref ref="example-solving-systems-of-equations-chemistry-solution-application" />
               may help you visualize the situation.
               Then creating a table, similar to the table in that same example,
               can help you to organize the information.
@@ -2474,7 +2476,7 @@ $answer2=150;
         In these interest application problems,
         we'll use a table to organize the information,
         similar to uniform motion and mixture applications,
-        as you'll see in <xref ref="example-solving-system-of-equations-interest-application">Example</xref>.
+        as you'll see in <xref ref="example-solving-system-of-equations-interest-application" />.
       </p>
     </introduction>
     <example xml:id="example-solving-system-of-equations-interest-application" permid="xcH">
@@ -2509,11 +2511,11 @@ $answer2=150;
         Multiply: Principal <m>\cdot</m> Rate <m>\cdot</m> Time to get the Interest for each account as well as the total.
       </p>
       
-        <figure permid="Tgx">
-          <image source="images/CNX_ElemAlg_Figure_05_05_005a_img.png" width="50%" permid="KZv">
+        <sidebyside width="50%" permid="Tgx">
+          <image source="images/CNX_ElemAlg_Figure_05_05_005a_img.png" permid="KZv">
             <description>A table with column headings of Account, Principal, Rate, Time, and Interest, and row headings of Stock fund, Bonds, and Total. Under Principal are entries s, b, and 40,000. Under Rate are entries 0.08 and 0.03 (the last cell is blank). Under Time are entries 1 and 1 (the last cell is blank). Under Interest are entries 0.08s, 0.03b, and 2840.</description>
           </image>
-        </figure>
+        </sidebyside>
       
       <p permid="Cim">
         <em>Translate</em> into a system of equations.
@@ -2657,9 +2659,9 @@ $answer2=150;
         <setup>
         <pg-code>
             Context("Currency");
-            Context()->currency->addSymbol("dollars","dollar");
-            Context()->flags->set(trimTrailingZeros=>1);
-            Context()->operators->undefine('+','-');
+            Context()-&gt;currency-&gt;addSymbol("dollars","dollar");
+            Context()-&gt;flags-&gt;set(trimTrailingZeros=&gt;1);
+            Context()-&gt;operators-&gt;undefine('+','-');
 
             $rInit = random(10000,14000,1000);
             $cInit = Currency($rInit);
@@ -2683,7 +2685,7 @@ $answer2=150;
             $sex = list_random('male','female');
             $pronoun = 'he' if ($sex eq 'male');
             $pronoun = 'she' if ($sex eq 'female');
-            $name = RandomName(sex=>$sex);
+            $name = RandomName(sex=&gt;$sex);
         </pg-code>
         </setup>
         <statement><p><var name="$name"/> invested a total of <m><var name="$cInit"/></m> in two accounts. After a year, one account lost <var name="$p1"/>%, while the other account gained <var name="$p2"/>%. In total, <var name="$name"/> lost <m><var name="$cTotalInt"/></m>. How much money did <var name="$pronoun"/> invest in each account?</p>
@@ -2752,13 +2754,13 @@ $answer2=150;
             <setup>
 <pg-code>
 Context("ImplicitPlane");
-Context()->variables->are(p=>"Real",n=>"Real");
-Context()->flags->set(reduceConstants=>0);
-Context()->flags->set(showExtraParens=>0);
+Context()-&gt;variables-&gt;are(p=&gt;"Real",n=&gt;"Real");
+Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
+Context()-&gt;flags-&gt;set(showExtraParens=&gt;0);
 $ans[0] = Compute("p+n=400");
 $ans[1] = Compute("0.01p+0.05n=12");
-$system = MultiAnswer($ans[0], $ans[1])->with(singleResult => 0,
-checker => sub {
+$system = MultiAnswer($ans[0], $ans[1])-&gt;with(singleResult =&gt; 0,
+checker =&gt; sub {
 my ( $correct, $student, $self ) = @_;
 my @eqstu = @{$student};
 my @eqcor = @{$correct};
@@ -2777,21 +2779,21 @@ $return = [0,0];
 }
 }
 for my $i (0,1) {
-$self->{cmp}->[$i]->{cmp_class} = "a linear equation",
-$self->{cmp}->[$i]->{rh_ans}->{correct_ans}
-= Parser::Formula(Context("Typeset") , $eqcor[$i])->string;
-$self->{cmp}->[$i]->{rh_ans}->{correct_ans_latex_string}
-= Parser::Formula(Context("Typeset") , $eqcor[$i])->TeX;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{cmp_class} = "a linear equation",
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{correct_ans}
+= Parser::Formula(Context("Typeset") , $eqcor[$i])-&gt;string;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{correct_ans_latex_string}
+= Parser::Formula(Context("Typeset") , $eqcor[$i])-&gt;TeX;
 $eqstu[$i] = Parser::Formula(
 Context("Typeset"),
-$self->{cmp}->[$i]->{rh_ans}->{original_student_ans}
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{original_student_ans}
 );
-$self->{cmp}->[$i]->{rh_ans}->{preview_text_string}
-= $eqstu[$i]->string;
-$self->{cmp}->[$i]->{rh_ans}->{preview_latex_string}
-= $eqstu[$i]->TeX;
-$self->{cmp}->[$i]->{rh_ans}->{student_ans}
-= $eqstu[$i]->string;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{preview_text_string}
+= $eqstu[$i]-&gt;string;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{preview_latex_string}
+= $eqstu[$i]-&gt;TeX;
+$self-&gt;{cmp}-&gt;[$i]-&gt;{rh_ans}-&gt;{student_ans}
+= $eqstu[$i]-&gt;string;
 }
 return $return;
 }
@@ -2817,48 +2819,48 @@ return $return;
 <!-- Direct translation -->
 
       <exercise permid="tjM">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution20.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution20.pg"/>
       </exercise>
 
       <exercise permid="ZqV">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication80.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication80.pg"/>
       </exercise>
 
       <exercise permid="Fye">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication90.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication90.pg"/>
       </exercise>
 
       <exercise permid="lFn">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution10.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution10.pg"/>
       </exercise>
 
       <exercise permid="RMw">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication10.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication10.pg"/>
       </exercise>
 
       <exercise permid="xTF">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication60.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication60.pg"/>
       </exercise>
 
       <exercise permid="eaO">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication70.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication70.pg"/>
       </exercise>
 
       <exercise permid="KhX">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication80.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication80.pg"/>
       </exercise>
 
       <exercise permid="qpg">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication90.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication90.pg"/>
       </exercise>
 
       <exercise permid="Wwp">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/systemsWord0.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/systemsWord0.pg"/>
       </exercise>
 <!-- Geometry applications -->
-      2
+
       <exercise permid="CDy">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution05.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution05.pg"/>
       </exercise>
 
       <exercise permid="iKH">
@@ -2889,15 +2891,15 @@ return $return;
       </exercise>
 
       <exercise permid="uYZ">
-        <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg" />
+        <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg"/>
       </exercise>
 
       <exercise permid="bgi">
-        <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg" />
+        <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg"/>
       </exercise>
 
       <exercise permid="Hnr">
-        <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg" />
+        <webwork source="Library/Mizzou/Intermediate_Algebra/Word_Problems/Comp_Supp_Angles_Solve.pg"/>
       </exercise>
 <!-- Uniform Motion -->
 
@@ -2906,7 +2908,7 @@ return $return;
       </exercise>
 
       <exercise permid="TBJ">
-        <webwork source="Library/PCC/BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication100.pg" />
+        <webwork source="Library/PCC/BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication100.pg"/>
       </exercise>
 
       <exercise permid="zIS">
@@ -2914,12 +2916,12 @@ return $return;
       </exercise>
 
       <exercise permid="fQb">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication100.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication100.pg"/>
       </exercise>
 <!-- Mixture -->
 
       <exercise permid="LXk">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution60.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplicationBySubstitution60.pg"/>
       </exercise>
 
       <exercise permid="set">
@@ -2927,7 +2929,7 @@ return $return;
       </exercise>
 
       <exercise permid="YlC">
-        <webwork source="BasicAlgebra/LinearEquationApplications/MixedSolutionWordProblem20.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/MixedSolutionWordProblem20.pg"/>
       </exercise>
 
       <exercise permid="EsL">
@@ -2935,36 +2937,36 @@ return $return;
       </exercise>
 
       <exercise permid="kzU">
-        <webwork source="BasicAlgebra/LinearEquationApplications/MixedCoffeeProblem20.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/MixedCoffeeProblem20.pg"/>
       </exercise>
 
       <exercise permid="QHd">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication50.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication50.pg"/>
       </exercise>
 <!-- Interest -->
 
       <exercise permid="wOm">
-        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem10.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem10.pg"/>
       </exercise>
 
       <exercise permid="cVv">
-        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem20.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem20.pg"/>
       </exercise>
 
       <exercise permid="JcE">
-        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem30.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem30.pg"/>
       </exercise>
 
       <exercise permid="pjN">
-        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem40.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem40.pg"/>
       </exercise>
 
       <exercise permid="VqW">
-        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem50.pg" />
+        <webwork source="BasicAlgebra/LinearEquationApplications/InterestWordProblem50.pg"/>
       </exercise>
 
       <exercise permid="Byf">
-        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication20.pg" />
+        <webwork source="BasicAlgebra/SystemOfLinearEquationsApplications/SystemEquationApplication20.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>
@@ -2972,12 +2974,12 @@ return $return;
     <p permid="QlR">
       Some of this section is adapted from
       <pubtitle>Solve Applications with Systems of Equations</pubtitle><fn>
-      <url href="https://cnx.org/contents/8xG8nd5x@1.1:a81syPh0@1/Solve-Applications-with-Systems-of-Equations" />
+      <url href="https://cnx.org/contents/8xG8nd5x@1.1:a81syPh0@1/Solve-Applications-with-Systems-of-Equations"/>
       </fn> and
       <pubtitle>Solve Mixture Applications with Systems of Equations</pubtitle><fn>
-      <url href="https://cnx.org/contents/8xG8nd5x@1.1:jjvYxwLr@1/Solve-Mixture-Applications-with-Systems-of-Equations" />
+      <url href="https://cnx.org/contents/8xG8nd5x@1.1:jjvYxwLr@1/Solve-Mixture-Applications-with-Systems-of-Equations"/>
       </fn> by Wendy Lightheart, OpenStax CNX, which is licensed under CC BY 4.0<fn>
-      <url href="http://creativecommons.org/licenses/by/4.0" />
+      <url href="http://creativecommons.org/licenses/by/4.0"/>
       </fn>
     </p>
   </conclusion>

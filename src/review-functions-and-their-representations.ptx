@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -11,7 +11,7 @@
   <subsection permid="XyV">
     <title>Function Basics</title>
     <p permid="Jom">
-      In <xref ref="section-function-basics">Section</xref>
+      In <xref ref="section-function-basics" />
       we defined <xref ref="definition-function-informal">functions</xref> informally,
       as well as <xref ref="definition-function-notation">function notation</xref>.
       We saw functions in <xref ref="figure-rule-of-four-diagram">four forms</xref>:
@@ -69,14 +69,14 @@
         <sidebyside widths="32% 32% 32%" margins="0%" permid="yAM">
           <p permid="rGh">
             First we will set up a table with negative and positive inputs and calculate the function values.
-            The values are shown in <xref ref="table-x-squared-coordinates">Table</xref>,
-            which in turn gives us the graph in <xref ref="figure-x-squared">Figure</xref>.
+            The values are shown in <xref ref="table-x-squared-coordinates" />,
+            which in turn gives us the graph in <xref ref="figure-x-squared" />.
           </p>
           <table xml:id="table-x-squared-coordinates" permid="Uxl">
-            <caption/>
+            <title/>
             <tabular halign="center" permid="MSM">
-              <col right="minor" />
-              <col />
+              <col right="minor"/>
+              <col/>
               <row bottom="major">
                 <cell>input, <m>x</m></cell>
                 <cell>output, <m>\operatorname{f}(x)</m></cell>
@@ -116,7 +116,7 @@
             <image permid="eWq">
               <description>a graph of the points from the table connected with a dashed line</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[
 ymin=-3,
 ymax=11,
@@ -134,7 +134,7 @@ minor ytick={-3,-2,...,11}
 (3,9)
 };
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -158,14 +158,14 @@ minor ytick={-3,-2,...,11}
             we'll have to select some input <m>x</m>-values so we will choose some small negative and positive values that are easy to work with.
             Given the verbal description,
             we should be able to compute a column of output values.
-            <xref ref="table-rule-of-four-2">Table</xref>
+            <xref ref="table-rule-of-four-2" />
             is one possible table that we might end up with.
           </p>
           <table xml:id="table-rule-of-four-2" permid="AEu">
-            <caption />
+            <title/>
             <tabular permid="sZV">
-              <col right="minor" />
-              <col />
+              <col right="minor"/>
+              <col/>
               <row bottom="minor">
                 <cell><m>x</m></cell>
                 <cell><m>f(x)</m></cell>
@@ -197,7 +197,7 @@ minor ytick={-3,-2,...,11}
           <stack>
             <p permid="kbI">
               Once we have a table for <m>f</m>,
-              we can make a graph for <m>f</m> as in <xref ref="figure-rule-of-four-2">Figure</xref>,
+              we can make a graph for <m>f</m> as in <xref ref="figure-rule-of-four-2" />,
               using the table to plot points.
             </p>
             <p permid="QiR">
@@ -218,14 +218,14 @@ minor ytick={-3,-2,...,11}
             <image permid="Ldz">
               <description>a graph of the points listed in the table; the points are connected with a dotted line and form a parabola</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[ymin=-3,ymax=11,
 ytick={-2,0,...,10},
 minor ytick={-3,-2,...,11}]
 \addplot+[dashed,domain=-2.33:2.33] {3*x+4};
 \addplot[soliddot] coordinates{(-2,-2) (-1,1) (0,4) (1,7) (2,10)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -236,7 +236,7 @@ minor ytick={-3,-2,...,11}]
   <subsection permid="DGe">
     <title>Domain and Range</title>
     <p permid="pvv">
-      In <xref ref="section-domain-and-range">Section</xref>
+      In <xref ref="section-domain-and-range" />
       we saw the definition of <xref ref="definition-domain">domain</xref>
       and <xref ref="definition-range">range</xref>,
       and three types of <xref ref="list-algebraic-domain-restrictions">domain restrictions</xref>.
@@ -289,11 +289,11 @@ minor ytick={-3,-2,...,11}]
           <image permid="rkI">
             <description>a number line, with a bracket at 3/2 that opens to the right, with an arrow pointing to the right</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}[numberline]
 \addplot[closedinfiniteinterval] coordinates {(1.5,0) (10,0)} node[above,pos=0] {$3/2$};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </sidebyside>
@@ -307,19 +307,19 @@ minor ytick={-3,-2,...,11}]
       <statement>
         <sidebyside widths="37% 37%" margins="10%" permid="PyX">
           <p permid="iWp">
-            Find the range of the function <m>q</m> using its graph shown in <xref ref="figure-range-2">Figure</xref>.
+            Find the range of the function <m>q</m> using its graph shown in <xref ref="figure-range-2" />.
           </p>
           <figure xml:id="figure-range-2" permid="Pdy">
             <caption><m>y=q(x)</m>. The range is marked as an interval on the <m>y</m>-axis.</caption>
             <image permid="XrR">
               <description>A parabola that opens downward is pictured with the range indicated as an interval on the y-axis; there is a bracket at 1 and an arrow that points downward along the y-axis.</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot+[domain=0.172:5.828] {-1*(x-3)^2+1};
 \addplot[closedinfiniteinterval,color=secondcolor] coordinates {(0,1) (0,-7)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -328,7 +328,7 @@ minor ytick={-3,-2,...,11}]
       <solution permid="Rok">
         <p permid="USK">
           The range is the collection of possible numbers that <m>q</m> can give for output.
-          <xref ref="figure-range-2">Figure</xref> displays a graph of <m>q</m>,
+          <xref ref="figure-range-2" /> displays a graph of <m>q</m>,
           with the range shown as an interval on the <m>y</m>-axis.
         </p>
         <p permid="AZT">
@@ -340,7 +340,7 @@ minor ytick={-3,-2,...,11}]
   </subsection>
 <!-- <subsection>
 <title>Using Technology to Explore Functions</title>
-<p>In <xref ref="section-using-technology-to-explore-functions">Section</xref> we covered how to find a good graphing window and use it to identify all of the key features of a function. We also learned how to solve equations and inequalities using a graph. Here are some examples for review.</p>
+<p>In <xref ref="section-using-technology-to-explore-functions" /> we covered how to find a good graphing window and use it to identify all of the key features of a function. We also learned how to solve equations and inequalities using a graph. Here are some examples for review.</p>
 <example>
 <title>Finding an Appropriate Window</title>
 <statement>
@@ -456,7 +456,7 @@ minor ytick={-20,-15,...,100}]
   <subsection permid="jNn">
     <title>Simplifying Expressions with Function Notation</title>
     <p permid="VCE">
-      In <xref ref="section-simplifying-expressions-with-function-notation">Section</xref>
+      In <xref ref="section-simplifying-expressions-with-function-notation" />
       we learned about the difference between <m>f(-x)</m> and <m>-f(x)</m> and how to simplify them.
       We also learned how to simplify other changes to the input and output like <m>f(3x)</m> and <m>\frac{1}{3}f(x)</m>.
       Here are some examples.
@@ -512,7 +512,7 @@ minor ytick={-20,-15,...,100}]
   <subsection permid="PUw">
     <title>Technical Definition of a Function</title>
     <p permid="BJN">
-      In <xref ref="section-technical-definition-of-a-function">Section</xref>
+      In <xref ref="section-technical-definition-of-a-function" />
       we gave a formal definition of a <xref ref="definition-function-formal">function</xref>
       and learned to identify what is and is not a function with sets or ordered pairs,
       tables and graphs.
@@ -538,8 +538,8 @@ minor ytick={-20,-15,...,100}]
           <caption>The function <m>f</m> represented as a table.</caption>
           <table halign="center" permid="gLD">
             <tabular halign="center" permid="Zhe">
-              <col right="minor" />
-              <col />
+              <col right="minor"/>
+              <col/>
               <row bottom="major">
                 <cell><m>x</m></cell>
                 <cell><m>f(x)</m></cell>
@@ -571,11 +571,11 @@ minor ytick={-20,-15,...,100}]
           <caption>The function <m>f</m> represented as a graph.</caption>
           <image permid="Dza">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[soliddot] coordinates {(1,4) (2,4) (3,3) (4,6) (5,-2)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -589,38 +589,38 @@ minor ytick={-20,-15,...,100}]
         </p>
         <sidebyside widths="32% 32% 32%" margins="0%" permid="ApZ">
           <figure permid="sqb">
-            <caption></caption>
+            <caption/>
             <image permid="jGj">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[soliddot] coordinates {(1,4) (-5,-2) (4, 1) (4,3) (5,0) (-3,2) (0,-2)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
           <figure permid="Yxk">
-            <caption></caption>
+            <caption/>
             <image permid="PNs">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[primarycurve,domain=0:360,-] ({4*cos(x)+2},{3*sin(x)+1});
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
           <figure permid="EEt">
-            <caption></caption>
+            <caption/>
             <image permid="vUB">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[primarycurve] {x^2/10-sin(45*x)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -632,13 +632,13 @@ minor ytick={-20,-15,...,100}]
             <caption>A vertical line touching the graph twice makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
             <image permid="cbK">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(4,-7) (4,7)};
 \addplot[soliddot] coordinates {(1,4) (-5,-2) (4, 1) (4,3) (5,0) (-3,2) (0,-2)};
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(4,1) (4,3)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -646,13 +646,13 @@ minor ytick={-20,-15,...,100}]
             <caption>A vertical line touching the graph twice makes this graph not give <m>y</m> as a function of <m>x</m>.</caption>
             <image permid="IiT">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(2,-7) (2,7)};
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(2,-2) (2,4)};
 \addplot[primarycurve,domain=0:360,-] ({4*cos(x)+2},{3*sin(x)+1});
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -660,7 +660,7 @@ minor ytick={-20,-15,...,100}]
             <caption>All vertical lines only touch the graph once, so this graph does give <m>y</m> as a function of <m>x</m>.</caption>
             <image permid="oqc">
 <latex-image>
-<![CDATA[\begin{tikzpicture}
+\begin{tikzpicture}
 \begin{axis}
 \addplot[verticallinetest] coordinates {(-5,-7) (-5,7)};
 \addplot[verticallinetest] coordinates {(-3,-7) (-3,7)};
@@ -671,7 +671,7 @@ minor ytick={-20,-15,...,100}]
 \addplot[soliddot, color=secondcolor, mark=x, mark options={scale=3}, thick] coordinates {(-5,1.79) (-3,1.6) (-1,0.8) (1,-0.6) (3,0.19) (5,3.2)};
 \addplot[primarycurve] {x^2/10-sin(45*x)};
 \end{axis}
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
             </image>
           </figure>
@@ -683,10 +683,10 @@ minor ytick={-20,-15,...,100}]
     <exercisegroup cols="2" permid="ciO">
       <title>Function Basics</title>
       <exercise permid="MZQ">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg"/>
       </exercise>
       <exercise permid="tgZ">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg"/>
       </exercise>
       
 <!-- <exercise>
@@ -696,16 +696,16 @@ minor ytick={-20,-15,...,100}]
 <webwork source="BasicAlgebra/FunctionBasics/Functions100.pg" />
 </exercise> -->
       <exercise permid="Zoi">
-        <webwork source="Math95/Functions/Functions13.pg" />
+        <webwork source="Math95/Functions/Functions13.pg"/>
       </exercise>
       <exercise permid="Fvr">
-        <webwork source="Math95/Functions/Functions13.pg" />
+        <webwork source="Math95/Functions/Functions13.pg"/>
       </exercise>
       <exercise permid="Fvr">
-        <webwork source="Math95/Functions/Functions13.pg" />
+        <webwork source="Math95/Functions/Functions13.pg"/>
       </exercise>
       <exercise permid="Fvr">
-        <webwork source="Math95/Functions/Functions13.pg" />
+        <webwork source="Math95/Functions/Functions13.pg"/>
       </exercise>
 <!-- <exercise>
 <webwork source="BasicAlgebra/FunctionBasics/FunctionValuesByGraph20.pg" />
@@ -714,22 +714,22 @@ minor ytick={-20,-15,...,100}]
 <webwork source="BasicAlgebra/FunctionBasics/FunctionValuesByGraph20.pg" />
 </exercise> -->
       <exercise permid="lCA">
-        <webwork source="Math95/Functions/Functions15.pg" />
+        <webwork source="Math95/Functions/Functions15.pg"/>
       </exercise>
       <exercise permid="RJJ">
-        <webwork source="Math95/Functions/Functions15.pg" />
+        <webwork source="Math95/Functions/Functions15.pg"/>
       </exercise>
       <exercise permid="xQS">
-        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables10.pg" />
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables10.pg"/>
       </exercise>
       <exercise permid="dYb">
-        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables20.pg" />
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables20.pg"/>
       </exercise>
       <exercise permid="Kfk">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg"/>
       </exercise>
       <exercise permid="qmt">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg"/>
       </exercise>
 <!-- <exercise>
 <webwork source="CollegeAlgebra/FunctionBasics/FunctionApplication10.pg" />
@@ -746,10 +746,10 @@ minor ytick={-20,-15,...,100}]
     </exercisegroup>
     <exercisegroup cols="2" permid="IpX">
       <exercise permid="WtC">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionValuesByGraph45.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionValuesByGraph45.pg"/>
       </exercise>
       <exercise permid="CAL">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionValuesByGraph45.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionValuesByGraph45.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3" permid="oxg">
@@ -767,10 +767,10 @@ minor ytick={-20,-15,...,100}]
         <webwork source="BasicAlgebra/FunctionBasics/FunctionValuesByGraph40.pg"/>
       </exercise>
       <exercise permid="HkE">
-        <webwork source="Math95/Functions/Functions22.pg" />
+        <webwork source="Math95/Functions/Functions22.pg"/>
       </exercise>
       <exercise permid="nrN">
-        <webwork source="Math95/Functions/Functions22.pg" />
+        <webwork source="Math95/Functions/Functions22.pg"/>
       </exercise>
     </exercisegroup>
 <!-- <exercise>
@@ -1485,34 +1485,34 @@ $solutions = Interval("(-inf,inf)");
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
 <pg-code>
-$x = RandomVariableName(type=>'variable');
-$f = RandomVariableName(type=>'function');
-Context()->variables->are($x=>'Real');
-Context()->noreduce('(-x)+y', '(-x)-y');
+$x = RandomVariableName(type=&gt;'variable');
+$f = RandomVariableName(type=&gt;'function');
+Context()-&gt;variables-&gt;are($x=&gt;'Real');
+Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 $a = non_zero_random(1,9,1);
 $m = non_zero_random(-8,8,0.1);
 $b = non_zero_random(-8,8,1);
-$fofx = Formula("$b+$m $x")->reduce;
-$answer = Formula("$m $x + ($b + $a)")->reduce;
+$fofx = Formula("$b+$m $x")-&gt;reduce;
+$answer = Formula("$m $x + ($b + $a)")-&gt;reduce;
 Context("LimitedPolynomial-Strict");
-Context()->variables->are($x=>'Real');
+Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
               <p permid="kLC">
-                Simplify <m><var name="$f" />(<var name="$x" />)+<var name="$a" /></m>,
-                where <m><var name="$f" />(<var name="$x" />)=<var name="$fofx" /></m>.
+                Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
+                where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
               <p permid="QSL">
-                <var name="$answer" width="30" />
+                <var name="$answer" width="30"/>
               </p>
             </statement>
             <solution permid="pQU">
               <p permid="RYe">
                 <md permid="SHY">
-                  <mrow><var name="$f" />(<var name="$x" />)+<var name="$a" />\amp= <var name="$fofx" />+<var name="$a" /></mrow>
-                  <mrow>\amp=<var name="$answer" /></mrow>
+                  <mrow><var name="$f"/>(<var name="$x"/>)+<var name="$a"/>\amp= <var name="$fofx"/>+<var name="$a"/></mrow>
+                  <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
               </p>
             </solution>
@@ -1523,65 +1523,65 @@ $answer = Formula("$answer");
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
 <pg-code>
-$x = RandomVariableName(type=>'variable');
-$f = RandomVariableName(type=>'function');
-Context()->variables->are($x=>'Real');
-Context()->noreduce('(-x)+y', '(-x)-y');
+$x = RandomVariableName(type=&gt;'variable');
+$f = RandomVariableName(type=&gt;'function');
+Context()-&gt;variables-&gt;are($x=&gt;'Real');
+Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 $a = non_zero_random(1,9,1);
 $m = non_zero_random(-8,8,0.1);
 $b = non_zero_random(-8,8,1);
-$fofx = Formula("$b+$m $x")->reduce;
-$answer = Formula("$m $x + ($b + $a)")->reduce;
+$fofx = Formula("$b+$m $x")-&gt;reduce;
+$answer = Formula("$m $x + ($b + $a)")-&gt;reduce;
 Context("LimitedPolynomial-Strict");
-Context()->variables->are($x=>'Real');
+Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
               <p permid="wZU">
-                Simplify <m><var name="$f" />(<var name="$x" />)+<var name="$a" /></m>,
-                where <m><var name="$f" />(<var name="$x" />)=<var name="$fofx" /></m>.
+                Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
+                where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
               <p permid="dhd">
-                <var name="$answer" width="30" />
+                <var name="$answer" width="30"/>
               </p>
             </statement>
             <solution permid="VYd">
               <p permid="yfn">
                 <md permid="yPh">
-                  <mrow><var name="$f" />(<var name="$x" />)+<var name="$a" />\amp= <var name="$fofx" />+<var name="$a" /></mrow>
-                  <mrow>\amp=<var name="$answer" /></mrow>
+                  <mrow><var name="$f"/>(<var name="$x"/>)+<var name="$a"/>\amp= <var name="$fofx"/>+<var name="$a"/></mrow>
+                  <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
               </p>
             </solution>
         </webwork>
       </exercise>
       <exercise permid="EpY">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionComposition66.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionComposition66.pg"/>
       </exercise>
       <exercise permid="kxh">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionComposition66.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionComposition66.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="gSH">
       <title>Technical Definition of a Function</title>
       <exercise permid="QEq">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg"/>
       </exercise>
       <exercise permid="wLz">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionDefinition20.pg"/>
       </exercise>
       <exercise permid="cSI">
-        <webwork source="Math95/Functions/Functions10.pg" />
+        <webwork source="Math95/Functions/Functions10.pg"/>
       </exercise>
       <exercise permid="IZR">
-        <webwork source="Math95/Functions/Functions11.pg" />
+        <webwork source="Math95/Functions/Functions11.pg"/>
       </exercise>
       <exercise permid="pha">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg"/>
       </exercise>
       <exercise permid="Voj">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionOrNotByGraph20.pg"/>
       </exercise>
       <!-- <exercise permid="Bvs">
         <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations20.pg" />
@@ -1590,10 +1590,10 @@ $answer = Formula("$answer");
         <webwork source="CollegeAlgebra/FunctionBasics/FunctionRelations20.pg" />
       </exercise> -->
       <exercise permid="NJK">
-        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg" />
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg"/>
       </exercise>
       <exercise permid="tQT">
-        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg" />
+        <webwork source="CollegeAlgebra/FunctionBasics/FunctionTables30.pg"/>
       </exercise>
     </exercisegroup>
   </exercises>

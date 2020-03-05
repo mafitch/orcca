@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -86,11 +86,11 @@
 <pg-code>
 Context("Interval");
 $set=Set("{403,404,500}");
-$setev=$set->cmp(cmp_class=>'a set');
+$setev=$set-&gt;cmp(cmp_class=&gt;'a set');
 Context("Point");
-Context()->parens->set('{'=>{type=>'Set'});
+Context()-&gt;parens-&gt;set('{'=&gt;{type=&gt;'Set'});
 $ord=Point("(500,404,403)");
-$ordev=$ord->cmp(cmp_class=>'an ordered triple');
+$ordev=$ord-&gt;cmp(cmp_class=&gt;'an ordered triple');
 </pg-code>
           </setup>
           <statement>
@@ -106,7 +106,7 @@ $ordev=$ord->cmp(cmp_class=>'an ordered triple');
                     express this set mathematically.
                   </p>
                   <p permid="uGJ">
-                    <var name="$set" evaluator="$setev" width="30" />
+                    <var name="$set" evaluator="$setev" width="30"/>
                   </p>
                 </li>
                 <li permid="Szz">
@@ -118,7 +118,7 @@ $ordev=$ord->cmp(cmp_class=>'an ordered triple');
                     from most often to least often.
                   </p>
                   <p permid="GVb">
-                    <var name="$ord" evaluator="$ordev" width="30" />
+                    <var name="$ord" evaluator="$ordev" width="30"/>
                   </p>
                 </li>
               </ol>
@@ -130,13 +130,13 @@ $ordev=$ord->cmp(cmp_class=>'an ordered triple');
                 <li permid="yGI">
                   <p permid="nck">
                     Since we only have to describe a collection of three numbers and their order doesn't matter,
-                    we can write <var name="$set" />.
+                    we can write <var name="$set"/>.
                   </p>
                 </li>
                 <li permid="eNR">
                   <p permid="Tjt">
                     Now we must describe the same three numbers and we want readers to know that the order we are writing the numbers matters.
-                    We can write <var name="$ord" />.
+                    We can write <var name="$ord"/>.
                   </p>
                 </li>
               </ol>
@@ -350,7 +350,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The number of people in a math class that play the ukulele.
                   </p>
                   <p permid="tBq">
-                    This number is best considered as a <var name="$whole" form="popup" />.
+                    This number is best considered as a <var name="$whole" form="popup"/>.
                   </p>
                 </li>
                 <li permid="rcj">
@@ -358,7 +358,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The hypotenuse's length in a given right triangle.
                   </p>
                   <p permid="FPI">
-                    This number is best considered as a <var name="$real" form="popup" />.
+                    This number is best considered as a <var name="$real" form="popup"/>.
                   </p>
                 </li>
                 <li permid="Xjs">
@@ -366,7 +366,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The proportion of people in a math class that have a cat.
                   </p>
                   <p permid="Sea">
-                    This number is best considered as a <var name="$rational" form="popup" />.
+                    This number is best considered as a <var name="$rational" form="popup"/>.
                   </p>
                 </li>
                 <li permid="DqB">
@@ -374,7 +374,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The number of people in the room with you who have the same birthday as you.
                   </p>
                   <p permid="ess">
-                    This number is best considered as a <var name="$natural" form="popup" />.
+                    This number is best considered as a <var name="$natural" form="popup"/>.
                   </p>
                 </li>
                 <li permid="jxK">
@@ -384,7 +384,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     generated for ticket sales at a Timbers soccer game.
                   </p>
                   <p permid="qGK">
-                    This number is best considered as a <var name="$rational" form="popup" />.
+                    This number is best considered as a <var name="$rational" form="popup"/>.
                   </p>
                 </li>
               </ol>
@@ -485,7 +485,7 @@ Context("LimitedFraction");
                     Write the rational number <m>0.772772772\ldots</m> as a fraction.
                   </p>
                   <p permid="HEV">
-                    <var name="'772/999'" width="10" />
+                    <var name="'772/999'" width="10"/>
                   </p>
                 </li>
                 <li permid="AvV">
@@ -493,7 +493,7 @@ Context("LimitedFraction");
                     Write the rational number <m>0.69696969\ldots</m> as a fraction.
                   </p>
                   <p permid="TTn">
-                    <var name="'23/33'" width="10" />
+                    <var name="'23/33'" width="10"/>
                   </p>
                 </li>
               </ol>
@@ -563,40 +563,40 @@ Context("LimitedFraction");
     <exercisegroup cols="2" permid="JBm">
       <title>Review and Warmup</title>
       <exercise permid="Olf">
-        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction30.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction30.pg"/>
       </exercise>
       <exercise permid="uso">
-        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction30.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction30.pg"/>
       </exercise>
       <exercise permid="azx">
-        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction35.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction35.pg"/>
       </exercise>
       <exercise permid="GGG">
-        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction35.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction35.pg"/>
       </exercise>
       <exercise permid="mNP">
-        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction40.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction40.pg"/>
       </exercise>
       <exercise permid="SUY">
-        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction40.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/DecimalToFraction40.pg"/>
       </exercise>
       <exercise permid="zch">
-        <webwork source="BasicMath/FractionPercentDecimal/FractionToDecimal60.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/FractionToDecimal60.pg"/>
       </exercise>
       <exercise permid="fjq">
-        <webwork source="BasicMath/FractionPercentDecimal/FractionToDecimal60.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/FractionToDecimal60.pg"/>
       </exercise>
       <exercise permid="Lqz">
-        <webwork source="BasicMath/FractionPercentDecimal/FractionToDecimal70.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/FractionToDecimal70.pg"/>
       </exercise>
       <exercise permid="rxI">
-        <webwork source="BasicMath/FractionPercentDecimal/FractionToDecimal70.pg" />
+        <webwork source="BasicMath/FractionPercentDecimal/FractionToDecimal70.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="pIv">
       <title>Set Notation</title>
       <exercise permid="XER">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 $a=random(1,9,1);
@@ -604,8 +604,8 @@ $a=2 if ($envir{problemSeed}==1);
 $b=$a**2;
 Context("Interval");
 $set=Set("{-$a,$a}");
-$setev=$set->cmp(cmp_class=>'a set');
-Context()->parens->set('('=>{type=>'Point'});
+$setev=$set-&gt;cmp(cmp_class=&gt;'a set');
+Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
         </setup>
         <statement>
@@ -614,19 +614,19 @@ Context()->parens->set('('=>{type=>'Point'});
             Express this collection of two numbers using set notation.
           </p>
           <p permid="gRz">
-            <var name="$set" evaluator="$setev" width="30" />
+            <var name="$set" evaluator="$setev" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="DMa">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Interval");
 $set=Set("{2,4,6,8}");
-$setev=$set->cmp(cmp_class=>'a set');
-Context()->parens->set('('=>{type=>'Point'});
+$setev=$set-&gt;cmp(cmp_class=&gt;'a set');
+Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
         </setup>
         <statement>
@@ -635,19 +635,19 @@ Context()->parens->set('('=>{type=>'Point'});
             Express this collection of four numbers using set notation.
           </p>
           <p permid="tfR">
-            <var name="$set" evaluator="$setev" width="30" />
+            <var name="$set" evaluator="$setev" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="jTj">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Interval");
 $set=Set("{16,25,36,49,64,81}");
-$setev=$set->cmp(cmp_class=>'a set');
-Context()->parens->set('('=>{type=>'Point'});
+$setev=$set-&gt;cmp(cmp_class=&gt;'a set');
+Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
         </setup>
         <statement>
@@ -656,13 +656,13 @@ Context()->parens->set('('=>{type=>'Point'});
             Express this collection of six numbers using set notation.
           </p>
           <p permid="Fuj">
-            <var name="$set" evaluator="$setev" width="30" />
+            <var name="$set" evaluator="$setev" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="Qas">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 @a=map{$_+1}NchooseK(6,3);
@@ -670,8 +670,8 @@ Context()->parens->set('('=>{type=>'Point'});
 $sum=$a[0]**2+$a[1]**2+$a[2]**2;
 Context("Interval");
 $set=Set("{$a[0],$a[1],$a[2]}");
-$setev=$set->cmp(cmp_class=>'a set');
-Context()->parens->set('('=>{type=>'Point'});
+$setev=$set-&gt;cmp(cmp_class=&gt;'a set');
+Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
         </setup>
         <statement>
@@ -681,7 +681,7 @@ Context()->parens->set('('=>{type=>'Point'});
             Express this collection of three numbers using set notation.
           </p>
           <p permid="RIB">
-            <var name="$set" evaluator="$setev" width="30" />
+            <var name="$set" evaluator="$setev" width="30"/>
           </p>
         </statement>
         </webwork>
@@ -690,40 +690,40 @@ Context()->parens->set('('=>{type=>'Point'});
     <exercisegroup cols="2" permid="VPE">
       <title>Types of Numbers</title>
       <exercise permid="whB">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers10.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers10.pg"/>
       </exercise>
       <exercise permid="IvT">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers10.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers10.pg"/>
       </exercise>
       <exercise permid="oDc">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers20.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers20.pg"/>
       </exercise>
       <exercise permid="UKl">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers20.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers20.pg"/>
       </exercise>
       <exercise permid="ARu">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers30.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers30.pg"/>
       </exercise>
       <exercise permid="gYD">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers30.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers30.pg"/>
       </exercise>
       <exercise permid="NfM">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers40.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers40.pg"/>
       </exercise>
       <exercise permid="tmV">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers40.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers40.pg"/>
       </exercise>
       <exercise permid="Zue">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers50.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers50.pg"/>
       </exercise>
       <exercise permid="FBn">
-        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers50.pg" />
+        <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers50.pg"/>
       </exercise>
       <exercise permid="lIw">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Number_Systems/Determine_Number_Type_TF_01.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Number_Systems/Determine_Number_Type_TF_01.pg"/>
       </exercise>
       <exercise permid="RPF">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Number_Systems/Determine_Number_Type_TF_02.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Number_Systems/Determine_Number_Type_TF_02.pg"/>
       </exercise>
     </exercisegroup>
     <exercise permid="Mat">
@@ -749,7 +749,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The number of dogs a student has owned throughout their lifetime.
                   </p>
                   <p permid="svX">
-                    This number is best considered as a <var name="$whole" form="popup" />.
+                    This number is best considered as a <var name="$whole" form="popup"/>.
                   </p>
                 </li>
                 <li permid="YYF">
@@ -757,7 +757,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The difference between the projected annual expenditures and the actual annual expenditures for a given company.
                   </p>
                   <p permid="EKp">
-                    This number is best considered as a <var name="$rational" form="popup" />.
+                    This number is best considered as a <var name="$rational" form="popup"/>.
                   </p>
                 </li>
                 <li permid="FfO">
@@ -765,7 +765,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The length around swimming pool in the shape of a half circle with radius <m>10\,\text{ft}</m>.
                   </p>
                   <p permid="QYH">
-                    This number is best considered as a <var name="$irrational" form="popup" />.
+                    This number is best considered as a <var name="$irrational" form="popup"/>.
                   </p>
                 </li>
                 <li permid="lmX">
@@ -773,7 +773,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The proportion of students at a college who own a car.
                   </p>
                   <p permid="dmZ">
-                    This number is best considered as a <var name="$rational" form="popup" />.
+                    This number is best considered as a <var name="$rational" form="popup"/>.
                   </p>
                 </li>
                 <li permid="Rug">
@@ -781,7 +781,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The width of a sheet of paper, in inches.
                   </p>
                   <p permid="pBr">
-                    This number is best considered as a <var name="$rational" form="popup" />.
+                    This number is best considered as a <var name="$rational" form="popup"/>.
                   </p>
                 </li>
                 <li permid="xBp">
@@ -789,7 +789,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
                     The number of people eating in a non-empty restaurant.
                   </p>
                   <p permid="BPJ">
-                    This number is best considered as a <var name="$natural" form="popup" />.
+                    This number is best considered as a <var name="$natural" form="popup"/>.
                   </p>
                 </li>
               </ol>
@@ -798,7 +798,7 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
       </webwork>
     </exercise>
     <exercise permid="shC">
-      <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers60.pg" />
+      <webwork source="BasicAlgebra/NumberBasics/TypesOfNumbers60.pg"/>
     </exercise>
     <exercisegroup permid="BWN">
       <title>Writing Decimals as Fractions</title>
@@ -813,10 +813,10 @@ $f=Fraction($d);
             </setup>
             <statement>
               <p permid="Kec">
-                Write the rational number <m><var name="$d" /></m> as a fraction.
+                Write the rational number <m><var name="$d"/></m> as a fraction.
               </p>
               <p permid="qll">
-                <var name="$f" width="10" />
+                <var name="$f" width="10"/>
               </p>
             </statement>
         </webwork>
@@ -832,16 +832,16 @@ $f=Fraction($d);
             </setup>
             <statement>
               <p permid="Wsu">
-                Write the rational number <m><var name="$d" /></m> as a fraction.
+                Write the rational number <m><var name="$d"/></m> as a fraction.
               </p>
               <p permid="CzD">
-                <var name="$f" width="10" />
+                <var name="$f" width="10"/>
               </p>
             </statement>
         </webwork>
       </exercise>
       <exercise permid="Klg">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Fraction-NoDecimals");
@@ -851,16 +851,16 @@ $f=Fraction($n,99);
         </setup>
         <statement>
           <p permid="iGM">
-            Write the rational number <m>0.\overline{<var name="$n" />}=0.<var name="$n" /><var name="$n" />\ldots</m> as a fraction.
+            Write the rational number <m>0.\overline{<var name="$n"/>}=0.<var name="$n"/><var name="$n"/>\ldots</m> as a fraction.
           </p>
           <p permid="ONV">
-            <var name="$f" width="10" />
+            <var name="$f" width="10"/>
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="qsp">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Fraction-NoDecimals");
@@ -870,16 +870,16 @@ $f=Fraction($n,999);
         </setup>
         <statement>
           <p permid="uVe">
-            Write the rational number <m>0.\overline{<var name="$n" />}=0.<var name="$n" /><var name="$n" />\ldots</m> as a fraction.
+            Write the rational number <m>0.\overline{<var name="$n"/>}=0.<var name="$n"/><var name="$n"/>\ldots</m> as a fraction.
           </p>
           <p permid="bcn">
-            <var name="$f" width="10" />
+            <var name="$f" width="10"/>
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="Wzy">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Fraction-NoDecimals");
@@ -890,16 +890,16 @@ $f=Fraction($t+$n/99);
         </setup>
         <statement>
           <p permid="Hjw">
-            Write the rational number <m><var name="$t" />\overline{<var name="$n" />}=<var name="$t" /><var name="$n" /><var name="$n" />\ldots</m> as a fraction.
+            Write the rational number <m><var name="$t"/>\overline{<var name="$n"/>}=<var name="$t"/><var name="$n"/><var name="$n"/>\ldots</m> as a fraction.
           </p>
           <p permid="nqF">
-            <var name="$f" width="10" />
+            <var name="$f" width="10"/>
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="CGH">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Fraction-NoDecimals");
@@ -910,10 +910,10 @@ $f=Fraction($t+$n/999);
         </setup>
         <statement>
           <p permid="TxO">
-            Write the rational number <m><var name="$t" />\overline{<var name="$n" />}=<var name="$t" /><var name="$n" /><var name="$n" />\ldots</m> as a fraction.
+            Write the rational number <m><var name="$t"/>\overline{<var name="$n"/>}=<var name="$t"/><var name="$n"/><var name="$n"/>\ldots</m> as a fraction.
           </p>
           <p permid="zEX">
-            <var name="$f" width="10" />
+            <var name="$f" width="10"/>
           </p>
         </statement>
         </webwork>

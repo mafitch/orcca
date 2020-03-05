@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -32,7 +32,7 @@
       <image width="100%" permid="XfS">
         <description>a diagram with a circle for the first variable on the right and a circle for the second variable on the right; there are arrows going each way indicating that information passes back and forth, but possibly imperfectly</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[
+\begin{tikzpicture}[
 variables/.style={draw, text width=5em, text centered, minimum height=2.5em,drop shadow, circle},
 info/.style={text width=12em, text centered},
 connex/.style={{Kite}-{Kite}, ultra thick,color=thirdcolor,line width=0.5em}]
@@ -43,7 +43,7 @@ connex/.style={{Kite}-{Kite}, ultra thick,color=thirdcolor,line width=0.5em}]
 % Draw arrows between elements
 \draw[connex] (firstvar) to[out=45,in=135] (secondvar);
 \draw[connex] (firstvar) to[out=-45,in=-135] (secondvar);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
       </image>
     </figure>
@@ -93,7 +93,7 @@ connex/.style={{Kite}-{Kite}, ultra thick,color=thirdcolor,line width=0.5em}]
         is the color of that chicken's eggs.
         The relation's domain is the set of all of Mariana's chicken's names,
         and its range is the set of colors of her chicken's eggs.
-        <xref ref="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color">Figure</xref>
+        <xref ref="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color" />
         shows two inputs and their corresponding outputs.
       </p>
       <figure xml:id="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color" permid="DIA">
@@ -103,7 +103,7 @@ connex/.style={{Kite}-{Kite}, ultra thick,color=thirdcolor,line width=0.5em}]
         <image width="100%" permid="Dnb">
           <description>two diagrams representing the chicken-to-egg color relation; the relation is represented with a rectangle with a polygon for the input and a circle for the output; in the first diagram, the input is the chicken named Hazel and the output is the egg color Tan; in the second diagram the input is Yvonne and the output is the egg color Brown</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[
+\begin{tikzpicture}[
 input/.style={draw,font=\footnotesize, text centered, drop shadow, regular polygon,regular polygon sides=7, fill=firstcolor!30},
 output/.style={draw, font=\footnotesize, text centered,drop shadow, circle, fill=secondcolor!30},
 f/.style={draw, text width=3em, font=\footnotesize, text centered,fill=thirdcolor!60, minimum height=8em, drop shadow},
@@ -120,15 +120,15 @@ connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
 \draw[connex] (f) -- (tan);
 \draw[connex] (yvonne) -- (g);
 \draw[connex] (g) -- (brown);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
         </image>
       </figure>
       <sidebyside widths="47% 47%" margins="0%" permid="Duf">
         <p permid="rui">
-          It would not be convenient to make diagrams like the ones in <xref ref="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color">Figure</xref> for all five chickens.
+          It would not be convenient to make diagrams like the ones in <xref ref="figure-two-pairs-inputs-outputs-relation-chicken-to-egg-color" /> for all five chickens.
           There are too many inputs.
-          Instead, <xref ref="figure-chicken-to-egg-color">Figure</xref>
+          Instead, <xref ref="figure-chicken-to-egg-color" />
           represents the function graphically in a more concise way.
           The function's input variable is
           <q>chicken name,</q>
@@ -145,7 +145,7 @@ connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
           <image width="47%" permid="juk">
             <description>a diagram with two rectangles, one for the inputs and one for the outputs; each chicken is mapped to their egg color. There is an arrow from Hazel to Tan, Yvonne to Brown, Georgia to Brown, Isabella to White and Emma to Green</description>
 <latex-image>
-<![CDATA[\begin{tikzpicture}[
+\begin{tikzpicture}[
 input/.style={font=\footnotesize, text centered},
 dom/.style={draw, fill=firstcolor,  opacity=0.3},
 ran/.style={draw, fill=secondcolor, opacity=0.3},
@@ -168,7 +168,7 @@ connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
 \draw[connex] (georgia) -- (brown);
 \draw[connex] (isabella) -- (white);
 \draw[connex] (emma) -- (green);
-\end{tikzpicture}]]>
+\end{tikzpicture}
 </latex-image>
           </image>
         </figure>
@@ -193,7 +193,7 @@ connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
       </statement>
     </definition>
     <p permid="fPK">
-      In <xref ref="figure-chicken-to-egg-color">Figure</xref>,
+      In <xref ref="figure-chicken-to-egg-color" />,
       we can see each chicken's name (input) is related to exactly one output,
       so the relation
       <q>Chicken to Egg Color</q>
@@ -206,7 +206,7 @@ connex/.style={-{Kite}, ultra thick,color=thirdcolor}]
 <!-- <example>
 <p>Next, we will look at the <q>inverse</q> relation named <q>Egg Color to Chicken.</q> Here we consider the color of an egg to be the input, and want the output to be the name of a chicken. If the egg is green, we know it is Emma's. But what if the egg is brown?</p>
 <sidebyside widths="47% 47%" margins="0%">
-<p>In <xref ref="figure-egg-color-to-chicken">Figure</xref>, we can see the color brown (an input) is related to <em>two</em> outputs, Yvonne and Georgia. This disqualifies the relation <q>Egg Color to Chicken</q> from being a function. (It is still a <em>relation</em>, because in general knowing the egg color does give you <em>some</em> information about which chicken it may have come from.)</p>
+<p>In <xref ref="figure-egg-color-to-chicken" />, we can see the color brown (an input) is related to <em>two</em> outputs, Yvonne and Georgia. This disqualifies the relation <q>Egg Color to Chicken</q> from being a function. (It is still a <em>relation</em>, because in general knowing the egg color does give you <em>some</em> information about which chicken it may have come from.)</p>
 <figure xml:id="figure-egg-color-to-chicken">
 <caption>The relation <q>Egg Color to Chicken</q></caption>
 <image width="47%">
@@ -449,7 +449,7 @@ $no=PopUp(['?','is', 'is not'],2);
         </ol>
       </p>
       <p permid="Ist">
-        <ol label="a."  permid="CoM">
+        <ol label="a." permid="CoM">
           <li permid="EdZ">
             <p permid="bBq">
               We find <m>f(-2)</m> by replacing all the <m>x</m>'s in the formula for <m>f</m> with <m>-2</m> and then,
@@ -506,17 +506,17 @@ Context("LimitedNumeric");
               <ol label="a." cols="3" permid="uKn">
                 <li permid="wzA">
                   <p permid="TWR">
-                    <m>g(3)=</m><var name="40" width="5" />
+                    <m>g(3)=</m><var name="40" width="5"/>
                   </p>
                 </li>
                 <li permid="cGJ">
                   <p permid="Aea">
-                    <m>g(0)=</m><var name="4" width="5" />
+                    <m>g(0)=</m><var name="4" width="5"/>
                   </p>
                 </li>
                 <li permid="INS">
                   <p permid="glj">
-                    <m>g(-2)=</m><var name="30" width="5" />
+                    <m>g(-2)=</m><var name="30" width="5"/>
                   </p>
                 </li>
               </ol>
@@ -569,23 +569,23 @@ Context("LimitedNumeric");
       <title>Functions given in Table Form</title>
       <statement>
         <p permid="ozC">
-          Temperature readings for Portland, OR, on a given day are recorded in <xref ref="table-temperature">Table</xref>.
+          Temperature readings for Portland, OR, on a given day are recorded in <xref ref="table-temperature" />.
           Let <m>f(x)</m> be the temperature in degrees Fahrenheit <m>x</m> hours after midnight.
         </p>
         <table xml:id="table-temperature" permid="PBt">
-          <caption>Recorded Temperatures in Portland, OR, on a certain day</caption>
+          <title>Recorded Temperatures in Portland, OR, on a certain day</title>
           <tabular valign="top" bottom="medium" top="medium" left="medium" right="minor" halign="center" permid="HWU">
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
-            <col />
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
             <col right="medium"/>
             <row>
               <cell><m>x</m>, hours after midnight</cell>
@@ -604,7 +604,7 @@ Context("LimitedNumeric");
             <row>
               <cell><m>f(x)</m>, temperature in
                 <quantity>
-                  <unit base="fahrenheit" />
+                  <unit base="fahrenheit"/>
                 </quantity></cell>
               <cell><m>45</m></cell>
               <cell><m>44</m></cell>
@@ -649,7 +649,7 @@ Context("LimitedNumeric");
                 </me>.
                 Thus, at midnight the temperature was
                 <quantity>
-                  <mag>45</mag><unit base="fahrenheit" />
+                  <mag>45</mag><unit base="fahrenheit"/>
                 </quantity>.
               </p>
             </li>
@@ -662,7 +662,7 @@ Context("LimitedNumeric");
                 </me>.
                 In context, this means that at 9AM the temperature was
                 <quantity>
-                  <mag>50</mag><unit base="fahrenheit" />
+                  <mag>50</mag><unit base="fahrenheit"/>
                 </quantity>.
               </p>
             </li>
@@ -736,11 +736,11 @@ Context("LimitedNumeric");
               </p>
               <sidebyside permid="MNR">
                 <tabular halign="right" valign="top" bottom="medium" top="medium" left="medium" right="minor" permid="oed">
-                  <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
                   <col right="medium"/>
                   <row>
                     <cell><m>x</m></cell>
@@ -767,11 +767,11 @@ Context("LimitedNumeric");
               </p>
               <sidebyside permid="sVa">
                 <tabular halign="right" valign="top" bottom="medium" top="medium" left="medium" right="minor" permid="Ulm">
-                  <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
                   <col right="medium"/>
                   <row>
                     <cell><m>x</m></cell>
@@ -831,7 +831,7 @@ Context("LimitedNumeric");
 <!-- <example xml:id="example-identifying-domain-and-range-from-graphs">
 <title>Functions in Graphical Form</title>
 <statement>
-<p>Functions are graphed in <xref ref="figure-function-yes-no-1">Figure</xref> through <xref ref="figure-function-yes-no-3">Figure</xref>. For each one, find its domain and range. In previous examples the domain and range were finite sets and we used set notation braces to communicate them. In these examples, the domain and range will be intervals, and so we use interval notation.</p>
+<p>Functions are graphed in <xref ref="figure-function-yes-no-1" /> through <xref ref="figure-function-yes-no-3">Figure</xref>. For each one, find its domain and range. In previous examples the domain and range were finite sets and we used set notation braces to communicate them. In these examples, the domain and range will be intervals, and so we use interval notation.</p>
 <sidebyside widths="32% 32% 32%" margins="0%">
 <figure xml:id="figure-function-yes-no-1">
 <caption>Function <m>k</m></caption>
@@ -1278,10 +1278,10 @@ minor ytick={-9,-8,...,9}]
     <exercisegroup cols="3" permid="hch">
       <title>Evaluating Functions Algebraically</title>
       <exercise permid="ZxI">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction10.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction10.pg"/>
       </exercise>
       <exercise permid="FER">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction10.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction10.pg"/>
       </exercise>
       <!-- <exercise permid="lMa">
         <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction20.pg" />
@@ -1290,10 +1290,10 @@ minor ytick={-9,-8,...,9}]
         <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction20.pg" />
       </exercise> -->
       <exercise permid="yas">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction30.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction30.pg"/>
       </exercise>
       <exercise permid="ehB">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction30.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction30.pg"/>
       </exercise>
       <!-- <exercise permid="KoK">
         <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction40.pg" />
@@ -1302,58 +1302,58 @@ minor ytick={-9,-8,...,9}]
         <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction40.pg" />
       </exercise> -->
       <exercise permid="WDc">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction50.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction50.pg"/>
       </exercise>
       <exercise permid="CKl">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction50.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction50.pg"/>
       </exercise>
       <exercise permid="iRu">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction60.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction60.pg"/>
       </exercise>
       <exercise permid="OYD">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction60.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction60.pg"/>
       </exercise>
       <exercise permid="vfM">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction70.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction70.pg"/>
       </exercise>
       <exercise permid="bmV">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction70.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction70.pg"/>
       </exercise>
-      <exercise  permid="Hue">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction80.pg" />
+      <exercise permid="Hue">
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction80.pg"/>
       </exercise>
       <!-- <exercise  permid="nBn">
         <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction80.pg" /> -->
       <!-- </exercise> -->
-      <exercise  permid="TIw">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg" />
+      <exercise permid="TIw">
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg"/>
       </exercise>
-      <exercise  permid="zPF">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg" />
+      <exercise permid="zPF">
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction85.pg"/>
       </exercise>
       <exercise permid="fWO">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction100.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction100.pg"/>
       </exercise>
       <exercise permid="MdX">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction100.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction100.pg"/>
       </exercise>
       <exercise permid="slg">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction110.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction110.pg"/>
       </exercise>
       <exercise permid="Ysp">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction110.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction110.pg"/>
       </exercise>
       <exercise permid="Ezy">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction120.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction120.pg"/>
       </exercise>
       <exercise permid="kGH">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction120.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction120.pg"/>
       </exercise>
       <exercise permid="QNQ">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction130.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction130.pg"/>
       </exercise>
       <exercise permid="wUZ">
-        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction130.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/EvaluateFunction130.pg"/>
       </exercise>
     </exercisegroup>
 <!-- <exercisegroup cols="3">
@@ -1411,15 +1411,15 @@ minor ytick={-9,-8,...,9}]
     <exercisegroup permid="Njq">
       <title>Domain and Range</title>
       <exercise permid="dci">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Interval");
 $set1=Set("{-2,0,1,3}");
 $set2=Set("{5,7,9}");
-$setev1=$set1->cmp(cmp_class=>'a set');
-$setev2=$set2->cmp(cmp_class=>'a set');
-Context()->parens->set('('=>{type=>'Point'});
+$setev1=$set1-&gt;cmp(cmp_class=&gt;'a set');
+$setev2=$set2-&gt;cmp(cmp_class=&gt;'a set');
+Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
         </setup>
         <statement>
@@ -1428,24 +1428,24 @@ Context()->parens->set('('=>{type=>'Point'});
             Find the domain and range of <m>f</m>.
           </p>
           <p permid="RMf">
-            The domain of <m>f</m> is <var name="$set1" evaluator="$setev1" width="30" />.
+            The domain of <m>f</m> is <var name="$set1" evaluator="$setev1" width="30"/>.
           </p>
           <p permid="xTo">
-            The range of <m>f</m> is <var name="$set2" evaluator="$setev2" width="30" />.
+            The range of <m>f</m> is <var name="$set2" evaluator="$setev2" width="30"/>.
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="Jjr">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Interval");
 $set1=Set("{15,20,25,30}");
 $set2=Set("{-3,-4,-5,-6}");
-$setev1=$set1->cmp(cmp_class=>'a set');
-$setev2=$set2->cmp(cmp_class=>'a set');
-Context()->parens->set('('=>{type=>'Point'});
+$setev1=$set1-&gt;cmp(cmp_class=&gt;'a set');
+$setev2=$set2-&gt;cmp(cmp_class=&gt;'a set');
+Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
         </setup>
         <statement>
@@ -1454,24 +1454,24 @@ Context()->parens->set('('=>{type=>'Point'});
             Find the domain and range of <m>g</m>.
           </p>
           <p permid="KhG">
-            The domain of <m>g</m> is <var name="$set1" evaluator="$setev1" width="30" />.
+            The domain of <m>g</m> is <var name="$set1" evaluator="$setev1" width="30"/>.
           </p>
           <p permid="qoP">
-            The range of <m>g</m> is <var name="$set2" evaluator="$setev2" width="30" />.
+            The range of <m>g</m> is <var name="$set2" evaluator="$setev2" width="30"/>.
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="pqA">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Interval");
 $set1=Set("{-2,-1,0,1,2}");
 $set2=Set("{0,2,5,3,1}");
-$setev1=$set1->cmp(cmp_class=>'a set');
-$setev2=$set2->cmp(cmp_class=>'a set');
-Context()->parens->set('('=>{type=>'Point'});
+$setev1=$set1-&gt;cmp(cmp_class=&gt;'a set');
+$setev2=$set2-&gt;cmp(cmp_class=&gt;'a set');
+Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
         </setup>
         <statement>
@@ -1510,24 +1510,24 @@ Context()->parens->set('('=>{type=>'Point'});
             Find the domain and range of <m>F</m>.
           </p>
           <p permid="iKq">
-            The domain of <m>F</m> is <var name="$set1" evaluator="$setev1" width="30" />.
+            The domain of <m>F</m> is <var name="$set1" evaluator="$setev1" width="30"/>.
           </p>
           <p permid="ORz">
-            The range of <m>F</m> is <var name="$set2" evaluator="$setev2" width="30" />.
+            The range of <m>F</m> is <var name="$set2" evaluator="$setev2" width="30"/>.
           </p>
         </statement>
         </webwork>
       </exercise>
       <exercise permid="VxJ">
-        <webwork >
+        <webwork>
         <setup>
 <pg-code>
 Context("Interval");
 $set1=Set("{1,-10,-3,-6,-9}");
 $set2=Set("{2,-8,1,8,5}");
-$setev1=$set1->cmp(cmp_class=>'a set');
-$setev2=$set2->cmp(cmp_class=>'a set');
-Context()->parens->set('('=>{type=>'Point'});
+$setev1=$set1-&gt;cmp(cmp_class=&gt;'a set');
+$setev2=$set2-&gt;cmp(cmp_class=&gt;'a set');
+Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
         </setup>
         <statement>
@@ -1566,10 +1566,10 @@ Context()->parens->set('('=>{type=>'Point'});
             Find the domain and range of <m>G</m>.
           </p>
           <p permid="Hna">
-            The domain of <m>G</m> is <var name="$set1" evaluator="$setev1" width="30" />.
+            The domain of <m>G</m> is <var name="$set1" evaluator="$setev1" width="30"/>.
           </p>
           <p permid="nuj">
-            The range of <m>G</m> is <var name="$set2" evaluator="$setev2" width="30" />.
+            The range of <m>G</m> is <var name="$set2" evaluator="$setev2" width="30"/>.
           </p>
         </statement>
         </webwork>
@@ -1578,31 +1578,31 @@ Context()->parens->set('('=>{type=>'Point'});
     <exercisegroup permid="tqz">
       <title>Function Notation in Context</title>
       <exercise permid="BES">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions150.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions150.pg"/>
       </exercise>
       <exercise permid="hMb">
-        <webwork source="BasicAlgebra/FunctionBasics/Functions160.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/Functions160.pg"/>
       </exercise>
       <exercise permid="NTk">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext10.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext10.pg"/>
       </exercise>
       <exercise permid="uat">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext10.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext10.pg"/>
       </exercise>
       <exercise permid="ahC">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext20.pg"/>
       </exercise>
       <exercise permid="GoL">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext20.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext20.pg"/>
       </exercise>
       <exercise permid="mvU">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext30.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext30.pg"/>
       </exercise>
       <exercise permid="SDd">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext30.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext30.pg"/>
       </exercise>
       <exercise permid="yKm">
-        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg" />
+        <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg"/>
       </exercise>
       <!-- <exercise permid="eRv">
         <webwork source="BasicAlgebra/FunctionBasics/FunctionInContext40.pg" />

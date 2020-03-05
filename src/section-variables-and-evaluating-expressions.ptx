@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- *********************************************************************-->
 <!-- Copyright 2016-2018                                                  -->
 <!-- Portland Community College                                           -->
@@ -23,7 +23,7 @@
     </p>
     <p permid="JyV">
       In this section, we'll focus on variables and expressions.
-      In <xref ref="section-geometry-formulas">Section</xref>
+      In <xref ref="section-geometry-formulas" />
       we'll continue with a focus on geometry formulas.
       In the remainder of this chapter,
       we'll focus on mathematical <term>equations</term>
@@ -45,14 +45,14 @@
       represent a car's gas mileage.
       The mileage might be
       <quantity>
-        <mag>25</mag><unit base="milepergallon" />
+        <mag>25</mag><unit base="milepergallon"/>
       </quantity>,
       <quantity>
-        <mag>30</mag><unit base="milepergallon" />
+        <mag>30</mag><unit base="milepergallon"/>
       </quantity>, or some other quantity.
       If we agree to use
       <quantity>
-        <unit base="milepergallon" />
+        <unit base="milepergallon"/>
       </quantity>
       for the units of measure,
       <m>g</m> might be a place holder for <m>25</m>,
@@ -73,11 +73,11 @@
       For example, suppose you are working with <m>g=25</m>.
       A car whose gas mileage is
       <quantity>
-        <mag>25</mag><unit base="milepergallon" />
+        <mag>25</mag><unit base="milepergallon"/>
       </quantity>
       is very different from a car whose gas mileage is
       <quantity>
-        <mag>25</mag><unit base="kilometerpergallon" />
+        <mag>25</mag><unit base="kilometerpergallon"/>
       </quantity>
       (kilometers per gallon).
       So it would be important to tell readers that <m>g</m> represents gas mileage
@@ -87,19 +87,19 @@
       <webwork>
           <setup>
 <pg-code>
-Context()->variables->are();
+Context()-&gt;variables-&gt;are();
 for my $i (1..26) {
-Context()->variables->add($ALPHABET[$i-1]=>'Real');
-Context()->variables->add(lc($ALPHABET[$i-1])=>'Real');
+Context()-&gt;variables-&gt;add($ALPHABET[$i-1]=&gt;'Real');
+Context()-&gt;variables-&gt;add(lc($ALPHABET[$i-1])=&gt;'Real');
 };
-Context()->strings->add('years'=>{});
-Context()->strings->add('year'=>{alias=>'years'}, 'yrs'=>{alias=>'years'}, 'yr'=>{alias=>'years'}, 'y'=>{alias=>'years'}, 'yrs.'=>{alias=>'years'}, 'yr.'=>{alias=>'years'}, 'y.'=>{alias=>'years'});
-Context()->strings->add('hours'=>{});
-Context()->strings->add('hour'=>{alias=>'hours'}, 'hrs'=>{alias=>'hours'}, 'hr'=>{alias=>'hours'}, 'h'=>{alias=>'hours'}, 'hrs.'=>{alias=>'hours'}, 'hr.'=>{alias=>'hours'}, 'h.'=>{alias=>'hours'});
-Context()->strings->add('miles'=>{});
-Context()->strings->add('mile'=>{alias=>'miles'}, 'mis'=>{alias=>'miles'}, 'mi'=>{alias=>'miles'}, 'm'=>{alias=>'miles'}, 'mis.'=>{alias=>'hours'}, 'mi.'=>{alias=>'miles'}, 'm.'=>{alias=>'miles'});
-Context()->strings->add('ft^2'=>{});
-Context()->strings->add('square feet'=>{alias=>'ft^2'}, 'feet squared'=>{alias=>'ft^2'}, 'feet square'=>{alias=>'ft^2'}, 'sq ft'=>{alias=>'ft^2'}, 'sqft'=>{alias=>'ft^2'}, 'sq. ft.'=>{alias=>'ft^2'}, 'ft.^2'=>{alias=>'ft^2'});
+Context()-&gt;strings-&gt;add('years'=&gt;{});
+Context()-&gt;strings-&gt;add('year'=&gt;{alias=&gt;'years'}, 'yrs'=&gt;{alias=&gt;'years'}, 'yr'=&gt;{alias=&gt;'years'}, 'y'=&gt;{alias=&gt;'years'}, 'yrs.'=&gt;{alias=&gt;'years'}, 'yr.'=&gt;{alias=&gt;'years'}, 'y.'=&gt;{alias=&gt;'years'});
+Context()-&gt;strings-&gt;add('hours'=&gt;{});
+Context()-&gt;strings-&gt;add('hour'=&gt;{alias=&gt;'hours'}, 'hrs'=&gt;{alias=&gt;'hours'}, 'hr'=&gt;{alias=&gt;'hours'}, 'h'=&gt;{alias=&gt;'hours'}, 'hrs.'=&gt;{alias=&gt;'hours'}, 'hr.'=&gt;{alias=&gt;'hours'}, 'h.'=&gt;{alias=&gt;'hours'});
+Context()-&gt;strings-&gt;add('miles'=&gt;{});
+Context()-&gt;strings-&gt;add('mile'=&gt;{alias=&gt;'miles'}, 'mis'=&gt;{alias=&gt;'miles'}, 'mi'=&gt;{alias=&gt;'miles'}, 'm'=&gt;{alias=&gt;'miles'}, 'mis.'=&gt;{alias=&gt;'hours'}, 'mi.'=&gt;{alias=&gt;'miles'}, 'm.'=&gt;{alias=&gt;'miles'});
+Context()-&gt;strings-&gt;add('ft^2'=&gt;{});
+Context()-&gt;strings-&gt;add('square feet'=&gt;{alias=&gt;'ft^2'}, 'feet squared'=&gt;{alias=&gt;'ft^2'}, 'feet square'=&gt;{alias=&gt;'ft^2'}, 'sq ft'=&gt;{alias=&gt;'ft^2'}, 'sqft'=&gt;{alias=&gt;'ft^2'}, 'sq. ft.'=&gt;{alias=&gt;'ft^2'}, 'ft.^2'=&gt;{alias=&gt;'ft^2'});
 $a=OneOf('a','A');
 $t=OneOf('t','T');
 </pg-code>
@@ -112,20 +112,20 @@ $t=OneOf('t','T');
               <ol label="a." permid="ddr">
                 <li permid="hNk">
                   <p permid="xGc">
-                    Let <var name="$a" width="1" /> be the age of a student,
-                    measured in <var name="'years'" width="5" />.
+                    Let <var name="$a" width="1"/> be the age of a student,
+                    measured in <var name="'years'" width="5"/>.
                   </p>
                 </li>
                 <li permid="NUt">
                   <p permid="dNl">
-                    Let <var name="$t" width="1" /> be the amount of time passed since a driver left Portland, Oregon,
-                    bound for Boise, Idaho, measured in <var name="'hours'" width="5" />.
+                    Let <var name="$t" width="1"/> be the amount of time passed since a driver left Portland, Oregon,
+                    bound for Boise, Idaho, measured in <var name="'hours'" width="5"/>.
                   </p>
                 </li>
                 <li permid="ubC">
                   <p permid="JUu">
-                    Let <var name="$a" width="1" /> be the area of a two-bedroom apartment,
-                    measured in <var name="'ft^2'" width="5" />.
+                    Let <var name="$a" width="1"/> be the area of a two-bedroom apartment,
+                    measured in <var name="'ft^2'" width="5"/>.
                   </p>
                 </li>
               </ol>
@@ -187,7 +187,7 @@ $t=OneOf('t','T');
       if we're told that a car has used so many gallons of gas after traveling so many miles,
       then it suggests we should measure gas mileage in
       <quantity>
-        <unit base="milepergallon" />
+        <unit base="milepergallon"/>
       </quantity>.
     </p>
   </subsection>
@@ -224,7 +224,7 @@ $t=OneOf('t','T');
         <p permid="MtB">
           Let's convert the temperature
           <quantity>
-            <mag>89</mag><unit base="fahrenheit" />
+            <mag>89</mag><unit base="fahrenheit"/>
           </quantity>
           to the Celsius scale by evaluating the expression.
           <md permid="oAL">
@@ -236,11 +236,11 @@ $t=OneOf('t','T');
         <p permid="sAK">
           This shows us that
           <quantity>
-            <mag>89</mag><unit base="fahrenheit" />
+            <mag>89</mag><unit base="fahrenheit"/>
           </quantity>
           is equivalent to approximately
           <quantity>
-            <mag>31.67</mag><unit base="celsius" />
+            <mag>31.67</mag><unit base="celsius"/>
           </quantity>.
         </p>
       </statement>
@@ -248,12 +248,12 @@ $t=OneOf('t','T');
     <warning permid="zQO">
       <title>Evaluating Versus Solving</title>
       <p permid="TYa">
-        The steps in <xref ref="example-evaluate-temperature">Example</xref> are not considered
+        The steps in <xref ref="example-evaluate-temperature" /> are not considered
         <q>solving</q>
         anything.
         <q>Solving</q>
         is a word you might be tempted to use,
-        because in some sense the steps from <xref ref="example-evaluate-temperature">Example</xref> are
+        because in some sense the steps from <xref ref="example-evaluate-temperature" /> are
         <q>finding an answer.</q>
         There is a special meaning in algebra for words like
         <q>solve</q>
@@ -271,7 +271,7 @@ $t=OneOf('t','T');
           Try evaluating the temperature expression for yourself.
         </p>
       </introduction>
-      <webwork >
+      <webwork>
       <setup>
 <pg-code>
 Context("Numeric");
@@ -293,7 +293,7 @@ $celsius[1] = NumberWithUnits(-260/9,'degC');
                 If a temperature is <m>50{^\circ}\mathrm{F}</m> what is that temperature measured in Celsius?
               </p>
               <p permid="GZO">
-                <var name="$celsius[0]" width="20" />
+                <var name="$celsius[0]" width="20"/>
               </p>
             </li>
             <li permid="yLv">
@@ -301,7 +301,7 @@ $celsius[1] = NumberWithUnits(-260/9,'degC');
                 If a temperature is <m>-20{^\circ}\mathrm{F}</m> what is that temperature measured in Celsius?
               </p>
               <p permid="Tog">
-                <var name="$celsius[1]" width="20" />
+                <var name="$celsius[1]" width="20"/>
               </p>
             </li>
           </ol>
@@ -395,7 +395,7 @@ $celsius[1] = NumberWithUnits(-260/9,'degC');
       <webwork>
           <setup>
 <pg-code>
-Context()->flags->set(tolType=>'absolute',tolerance=>'1');
+Context()-&gt;flags-&gt;set(tolType=&gt;'absolute',tolerance=&gt;'1');
 $rate=Real(53/100*(220-56));
 </pg-code>
           </setup>
@@ -410,7 +410,7 @@ $rate=Real(53/100*(220-56));
             </p>
             <p permid="axg">
               At the <m>53\%</m> level,
-              the target heart rate for moderate exercise for someone who is <m>56</m> years old is <var name="$rate" width="3" /> beats per minute.
+              the target heart rate for moderate exercise for someone who is <m>56</m> years old is <var name="$rate" width="3"/> beats per minute.
             </p>
           </statement>
           <solution permid="boe">
@@ -438,11 +438,11 @@ $rate=Real(53/100*(220-56));
 $r=10.173;
 $b=974.78;
 Context("Currency");
-Context("Currency")->currency->addSymbol("dollars","dollar");
-Context()->flags->set(tolerance=>1);
-Context()->flags->set(trimTrailingZeros=>1);
+Context("Currency")-&gt;currency-&gt;addSymbol("dollars","dollar");
+Context()-&gt;flags-&gt;set(tolerance=&gt;1);
+Context()-&gt;flags-&gt;set(trimTrailingZeros=&gt;1);
 @rent=map{Currency($r*$_+$b)}(0,60);
-for my $i (0,1) {$rentev[$i]=$rent[$i]->cmp(cmp_class =>"an amount of money");};
+for my $i (0,1) {$rentev[$i]=$rent[$i]-&gt;cmp(cmp_class =&gt;"an amount of money");};
 </pg-code>
           </setup>
           <statement>
@@ -462,7 +462,7 @@ for my $i (0,1) {$rentev[$i]=$rent[$i]->cmp(cmp_class =>"an amount of money");};
                     what was the average rent of a one-bedroom apartment in Portland in January, 2011?
                   </p>
                   <p permid="cHS">
-                    <var name="$rent[0]" evaluator="$rentev[0]" width="10" />
+                    <var name="$rent[0]" evaluator="$rentev[0]" width="10"/>
                   </p>
                 </li>
                 <li permid="vQP">
@@ -471,7 +471,7 @@ for my $i (0,1) {$rentev[$i]=$rent[$i]->cmp(cmp_class =>"an amount of money");};
                     what was the average rent of a one-bedroom apartment in Portland in January, 2016?
                   </p>
                   <p permid="oWk">
-                    <var name="$rent[1]" evaluator="$rentev[1]" width="10" />
+                    <var name="$rent[1]" evaluator="$rentev[1]" width="10"/>
                   </p>
                 </li>
               </ol>
@@ -552,7 +552,7 @@ for my $i (0,1) {$rentev[$i]=$rent[$i]->cmp(cmp_class =>"an amount of money");};
           </quantity>
           is about
           <quantity>
-            <mag>17.15</mag><unit base="meter" /><per base="second" />
+            <mag>17.15</mag><unit base="meter"/><per base="second"/>
           </quantity>.
         </p>
       </solution>
@@ -595,7 +595,7 @@ $height2 = NumberWithUnits("5 ft");
                       <unit base="foot"/>
                     </quantity>
                     from the north side,
-                    the height will be <var name="$height1" width="10" />.
+                    the height will be <var name="$height1" width="10"/>.
                   </p>
                 </li>
                 <li permid="Utz">
@@ -604,7 +604,7 @@ $height2 = NumberWithUnits("5 ft");
                       <unit base="foot"/>
                     </quantity>
                     from the north side,
-                    the height will be <var name="$height2" width="10" />.
+                    the height will be <var name="$height2" width="10"/>.
                   </p>
                 </li>
               </ol>
@@ -732,17 +732,17 @@ $paymentev[$i]=$payment->cmp(cmp_class =>"an amount of money");
               <ol label="a." cols="3" permid="BGb">
                 <li permid="MPa">
                   <p permid="FUv">
-                    <m>x^3y^2=</m><var name="-500" width="3" />
+                    <m>x^3y^2=</m><var name="-500" width="3"/>
                   </p>
                 </li>
                 <li permid="sWj">
                   <p permid="mbE">
-                    <m>(-2x)^3=</m><var name="1000" width="3" />
+                    <m>(-2x)^3=</m><var name="1000" width="3"/>
                   </p>
                 </li>
                 <li permid="Zds">
                   <p permid="SiN">
-                    <m>-3x^2y=</m><var name="150" width="3" />
+                    <m>-3x^2y=</m><var name="150" width="3"/>
                   </p>
                 </li>
               </ol>
@@ -784,34 +784,34 @@ $paymentev[$i]=$payment->cmp(cmp_class =>"an amount of money");
     <exercisegroup cols="3" permid="nob">
       <title>Evaluating Expressions</title>
       <exercise permid="QAE">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate10.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate10.pg"/>
       </exercise>
       <exercise permid="wHN">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate10.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate10.pg"/>
       </exercise>
       <exercise permid="cOW">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate12.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate12.pg"/>
       </exercise>
       <exercise permid="IWf">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate12.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate12.pg"/>
       </exercise>
       <exercise permid="pdo">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate15.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate15.pg"/>
       </exercise>
       <exercise permid="Vkx">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate15.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate15.pg"/>
       </exercise>
       <exercise permid="BrG">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate18.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate18.pg"/>
       </exercise>
       <exercise permid="hyP">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate18.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate18.pg"/>
       </exercise>
       <exercise permid="NFY">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg"/>
       </exercise>
       <exercise permid="tNh">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate100.pg"/>
       </exercise>
 <!--             <exercise>
 <webwork source="BasicAlgebra/EvaluateExpressions/evaluate110.pg" />
@@ -820,10 +820,10 @@ $paymentev[$i]=$payment->cmp(cmp_class =>"an amount of money");
 <webwork source="BasicAlgebra/EvaluateExpressions/evaluate110.pg" />
 </exercise> -->
       <exercise permid="ZUq">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate120.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate120.pg"/>
       </exercise>
       <exercise permid="Gbz">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate120.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate120.pg"/>
       </exercise>
 <!-- seeds set to guarantee distinct versions -->
       <exercise permid="miI">
@@ -835,64 +835,64 @@ $paymentev[$i]=$payment->cmp(cmp_class =>"an amount of money");
     </exercisegroup>
     <exercisegroup cols="2" permid="Tvk">
       <exercise permid="yxa">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate20.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate20.pg"/>
       </exercise>
       <exercise permid="eEj">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate20.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate20.pg"/>
       </exercise>
       <exercise permid="KLs">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate80.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate80.pg"/>
       </exercise>
       <exercise permid="qSB">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate80.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate80.pg"/>
       </exercise>
       <exercise permid="WZK">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate50.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate50.pg"/>
       </exercise>
       <exercise permid="DgT">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate50.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate50.pg"/>
       </exercise>
       <exercise permid="joc">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate60.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate60.pg"/>
       </exercise>
       <exercise permid="Pvl">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate60.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate60.pg"/>
       </exercise>
       <exercise permid="vCu">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate90.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate90.pg"/>
       </exercise>
       <exercise permid="bJD">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate90.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate90.pg"/>
       </exercise>
       <exercise permid="HQM">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg"/>
       </exercise>
       <exercise permid="nXV">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-04-Expressions.pg"/>
       </exercise>
       <exercise permid="Ufe">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-06-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-06-Expressions.pg"/>
       </exercise>
       <exercise permid="Amn">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-06-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-06-Expressions.pg"/>
       </exercise>
       <exercise permid="gtw">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg"/>
       </exercise>
       <exercise permid="MAF">
-        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg" />
+        <webwork source="Library/FortLewis/Algebra/1-1-Expressions/MCH1-1-1-02-Expressions.pg"/>
       </exercise>
       <exercise permid="sHO">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate140.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate140.pg"/>
       </exercise>
       <exercise permid="YOX">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate140.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate140.pg"/>
       </exercise>
       <exercise permid="EWg">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg"/>
       </exercise>
       <exercise permid="ldp">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluate150.pg"/>
       </exercise>
 <!-- <exercise>
 <webwork source="BasicAlgebra/EvaluateExpressions/evaluate160.pg" />
@@ -907,40 +907,40 @@ $paymentev[$i]=$payment->cmp(cmp_class =>"an amount of money");
 <webwork source="Library/NewHampshire/unh_schoolib/Evaluation_by_Substitution/evssrs101.pg" />
 </exercise> -->
       <exercise permid="Rky">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_03.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_03.pg"/>
       </exercise>
       <exercise permid="xrH">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_03.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_03.pg"/>
       </exercise>
       <exercise permid="dyQ">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_01.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_01.pg"/>
       </exercise>
       <exercise permid="JFZ">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_01.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_01.pg"/>
       </exercise>
       <exercise permid="pNi">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Slope.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Slope.pg"/>
       </exercise>
       <exercise permid="VUr">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Slope.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Slope.pg"/>
       </exercise>
       <exercise permid="CbA">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Distance.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Distance.pg"/>
       </exercise>
       <exercise permid="iiJ">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Distance.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Distance.pg"/>
       </exercise>
       <exercise permid="OpS">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_04.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_04.pg"/>
       </exercise>
       <exercise permid="uxb">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_04.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_04.pg"/>
       </exercise>
       <exercise permid="aEk">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_02.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_02.pg"/>
       </exercise>
       <exercise permid="GLt">
-        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_02.pg" />
+        <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Simplifying_Algebraic_Expressions_02.pg"/>
       </exercise>
 <!-- <exercise>
 <webwork source="Library/MC/PreAlgebra/setPreAlgebraC01S03/EvalExpress02.pg" />
@@ -981,64 +981,64 @@ $paymentev[$i]=$payment->cmp(cmp_class =>"an amount of money");
     </exercisegroup>
     <exercisegroup cols="2" permid="zCt">
       <exercise permid="mSC">
-        <webwork source="BasicAlgebra/EvaluateExpressions/FahrenheitCelsius10.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/FahrenheitCelsius10.pg"/>
       </exercise>
       <exercise permid="SZL">
-        <webwork source="BasicAlgebra/EvaluateExpressions/FahrenheitCelsius10.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/FahrenheitCelsius10.pg"/>
       </exercise>
       <exercise permid="zgU">
-        <webwork source="BasicAlgebra/EvaluateExpressions/FahrenheitCelsius10.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/FahrenheitCelsius10.pg"/>
       </exercise>
       <exercise permid="fod">
-        <webwork source="BasicAlgebra/EvaluateExpressions/FahrenheitCelsius10.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/FahrenheitCelsius10.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="fJC">
       <exercise permid="Lvm">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext10.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext10.pg"/>
       </exercise>
       <exercise permid="rCv">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext10.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext10.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="LQL">
       <exercise permid="XJE">
-        <webwork source="BasicAlgebra/EvaluateExpressions/EvaluateFormula30.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/EvaluateFormula30.pg"/>
       </exercise>
       <exercise permid="DQN">
-        <webwork source="BasicAlgebra/EvaluateExpressions/EvaluateFormula30.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/EvaluateFormula30.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="rXU">
       <exercise permid="jXW">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext20.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext20.pg"/>
       </exercise>
       <exercise permid="Qff">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext20.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext20.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="Yfd">
       <exercise permid="wmo">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext30.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext30.pg"/>
       </exercise>
       <exercise permid="ctx">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext30.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext30.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="Emm">
       <exercise permid="IAG">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext50.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext50.pg"/>
       </exercise>
       <exercise permid="oHP">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext50.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext50.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2" permid="ktv">
       <exercise permid="UOY">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext40.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext40.pg"/>
       </exercise>
       <exercise permid="AWh">
-        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext40.pg" />
+        <webwork source="BasicAlgebra/EvaluateExpressions/evaluateInContext40.pg"/>
       </exercise>
 <!-- <exercise>
 <webwork source="Library/CollegeOfIdaho/setAlgebra_01_01_AlgebraicExpressions/11IntAlg_14_AlgebraicExpressions.pg" />
@@ -1048,8 +1048,7 @@ $paymentev[$i]=$payment->cmp(cmp_class =>"an amount of money");
 </exercise> -->
     </exercisegroup>
   </exercises>
-</section>
-<!--
+</section><!--
 <exercise>
 <statement>
 <p>The height inside a camping tent when you are <quantity><mag>d</mag><unit base="foot"/></quantity> from the edge of the tent is given by:<me>-1.5\abs{d-4}+6</me>Determine the height when you are:<ol> <li><p><quantity><mag>2</mag><unit base="foot"/></quantity> from the edge</p></li> <li><p><quantity><mag>6.5</mag><unit base="foot"/></quantity> from the edge</p></li> </ol></p>
