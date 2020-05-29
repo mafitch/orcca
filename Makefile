@@ -96,7 +96,7 @@ webwork-extraction:
 	install -d $(WWOUT)
 	-rm -r $(WWOUT)
 	install -d $(WWOUT)
-	$(MB)/script/mbx -vv -a -c webwork -d $(WWOUT) -s $(SERVER) $(MAINFILE)
+	$(MB)/pretext/pretext -vv -a -c webwork -d $(WWOUT) -s $(SERVER) $(MAINFILE)
 
 merge:
 	cd $(OUTPUT); \
@@ -480,15 +480,15 @@ laneimages:
 	install -d $(OUTPUT)
 	install -d $(IMAGESOUT)
 	-rm $(IMAGESOUT)/*.svg
-	$(MB)/script/mbx -vv -c latex-image -f svg -d $(IMAGESOUT) $(OUTPUT)/merge.xml
-#	$(MB)/script/mbx -c asymptote -f svg -d $(IMAGESOUT) $(OUTPUT)/merge.xml
+	$(MB)/pretext/pretext -vv -c latex-image -f svg -d $(IMAGESOUT) $(OUTPUT)/merge.xml
+#	$(MB)/pretext/pretext -c asymptote -f svg -d $(IMAGESOUT) $(OUTPUT)/merge.xml
 
 # run this to scrape thumbnail images from YouTube for any YouTube videos
 youtube:
 	install -d $(OUTPUT)
 	install -d $(IMAGESOUT)
 	-rm $(IMAGESOUT)/*.jpg
-	$(MB)/script/mbx -c youtube -d $(IMAGESOUT) $(MAINFILE)
+	$(MB)/pretext/pretext -c youtube -d $(IMAGESOUT) $(MAINFILE)
 
 
 ###########
