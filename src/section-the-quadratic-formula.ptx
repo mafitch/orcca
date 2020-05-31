@@ -340,13 +340,13 @@
         </p>
       </introduction>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $linear = PopUp(['?','linear','quadratic','neither'],1);
 $quadratic = PopUp(['?','linear','quadratic','neither'],2);
 $neither = PopUp(['?','linear','quadratic','neither'],3);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               <ol label="a.">
@@ -761,12 +761,12 @@ $neither = PopUp(['?','linear','quadratic','neither'],3);
     <exercise>
 <!-- Kara's challenge problem -->
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;variables-&gt;are(m=&gt;'Real',n=&gt;'Real',p=&gt;'Real');
 $answer = Compute("(-n-sqrt(n^2-4mp))/(2m),(-n+sqrt(n^2-4mp))/(2m)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Solve for <m>x</m> in the equation <m>mx^{2}+nx+p=0</m>.

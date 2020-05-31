@@ -111,12 +111,12 @@
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 $answer = Formula("(x+4)(x^2+2)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>x^3+4x^2+2x+8</m>.
@@ -172,13 +172,13 @@ $answer = Formula("(x+4)(x^2+2)");
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;variables-&gt;are(q=&gt;'Real');
 $answer = Formula("(2q-3)(3q^2-2)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>6q^3-9q^2-4q+6</m>.
@@ -222,13 +222,13 @@ $answer = Formula("(2q-3)(3q^2-2)");
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;variables-&gt;are(t=&gt;'Real');
 $answer = Formula("(2t^2+3)(3t^4+1)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>6t^6+9t^4+2t^2+3</m>.

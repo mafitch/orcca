@@ -591,7 +591,7 @@ xlabel={$x$, days},ylabel={$y$, number of zombies}]
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Interval");
 $set1=Set("{-13,-20,-6,-3,-7}");
@@ -600,7 +600,7 @@ $setev1=$set1-&gt;cmp(cmp_class=&gt;'a set');
 $setev2=$set2-&gt;cmp(cmp_class=&gt;'a set');
 Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             A function, <m>f</m> is defined by the ordered pairs <m>\{(-13,13),(-20,17),(-6,4),(-3,7),(-7,-5)\}</m>.
@@ -617,7 +617,7 @@ Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Interval");
 $set1=Set("{-17,-6,1,-1}");
@@ -626,7 +626,7 @@ $setev1=$set1-&gt;cmp(cmp_class=&gt;'a set');
 $setev2=$set2-&gt;cmp(cmp_class=&gt;'a set');
 Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             A function, <m>g</m> is defined by the ordered pairs <m>\{(-17,-13),(-6,3),(1,10),(-1,3)\}</m>.
@@ -718,7 +718,7 @@ Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()->variables->add(t => 'Real');
@@ -763,7 +763,7 @@ $gr->lb( new Label($hx-$marksep[0]/8, $hy, "C(t)",'red','right','middle'));
 $gr->stamps( closed_circle($tMax,$fMax,'red') );
 $gr->lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'red','center','bottom'));
 </pg-code>
-</setup>
+ 
 <statement>
 <p>The concentration of a drug in a patient's blood stream, in milligrams per liter, can be modeled by the function <m>C(t)=<var name="$func"/></m>, where <m>t</m> is the number of hours since the drug is injected. Answer the following question with technology. Round your answer to two decimal places if needed.</p>
 <p><var name="$tMaxR" width="10" /> hours since injection, the drug's concentration is at the maximum value of <var name="$fMaxR" width="10"/> milligrams per liter.</p>
@@ -784,7 +784,7 @@ $gr->lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()->variables->add(t => 'Real');
@@ -829,7 +829,7 @@ $gr->lb( new Label($hx-$marksep[0]/8, $hy, "C(t)",'red','right','middle'));
 $gr->stamps( closed_circle($tMax,$fMax,'red') );
 $gr->lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'red','center','bottom'));
 </pg-code>
-</setup>
+ 
 <statement>
 <p>The concentration of a drug in a patient's blood stream, in milligrams per liter, can be modeled by the function <m>C(t)=<var name="$func"/></m>, where <m>t</m> is the number of hours since the drug is injected. Answer the following question with technology. Round your answer to two decimal places if needed.</p>
 <p><var name="$tMaxR" width="10" /> hours since injection, the drug's concentration is at the maximum value of <var name="$fMaxR" width="10"/> milligrams per liter.</p>
@@ -1012,12 +1012,12 @@ $gr->lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer=30;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Jenn spent <m>2</m> hours exploring a mountain with a dirt bike.

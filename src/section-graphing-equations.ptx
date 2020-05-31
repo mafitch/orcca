@@ -130,14 +130,14 @@
   </remark>
   <exercise>
     <webwork>
-        <setup>
+ 
 <pg-code>
 Context()-&gt;variables-&gt;add(y=&gt;'Real');
 $y=-5;
 $f=Compute("-2(4)+3");
 $truefalse=PopUp(['?','true','false'],'true');
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             The point <m>(4,-5)</m> is on the graph in <xref ref="figure-graph-line-full" />.
@@ -168,7 +168,7 @@ $truefalse=PopUp(['?','true','false'],'true');
   </exercise>
   <exercise>
     <webwork>
-        <setup>
+ 
 <pg-code>
 Context()-&gt;variables-&gt;add(y=&gt;'Real');
 @y=(-2,-7);
@@ -179,7 +179,7 @@ $f=Compute("-(3/5)x+1");
 @truefalse=(PopUp(['?','true','false'],1),PopUp(['?','true','false'],2));
 @shaded=(PopUp(['?','part of','not part of'],1),PopUp(['?','part of','not part of'],2));
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Decide whether <m>(5,-2)</m> and

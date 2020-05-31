@@ -712,7 +712,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
@@ -755,7 +755,7 @@ $gr->lb( new Label($a, $b-$marksep[1]/8, "($a,$b)",'red','center','top'));
 Context("Interval");
 $range = Compute("[$b,inf)");
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Use the graph to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
 <instruction>If you need to enter <m>\infty</m>, you can type  <c>inf</c> or <c>infinity</c>.  If you need to union two (or more) intervals, use the letter <c>U</c>. For example: <c>(-inf,5) \cup (5, inf)</c>.</instruction>
@@ -777,7 +777,7 @@ $range = Compute("[$b,inf)");
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()->flags->set(showExtraParens=>0, reduceConstants=>0);
@@ -820,7 +820,7 @@ $gr->lb( new Label($a, $b-$marksep[1]/8, "($a,$b)",'red','center','top'));
 Context("Interval");
 $range = Compute("[$b,inf)");
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Use the graph to find the range of the function <m><var name="$fname" /></m> defined by <m><var name="$fname" />(x)=<var name="$func" /></m>.</p>
 <instruction>If you need to enter <m>\infty</m>, you can type  <c>inf</c> or <c>infinity</c>.  If you need to union two (or more) intervals, use the letter <c>U</c>. For example: <c>(-inf,5) \cup (5, inf)</c>.</instruction>
@@ -1025,7 +1025,7 @@ $range = Compute("[$b,inf)");
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 Context()->flags->remove("NumberCheck");
@@ -1072,7 +1072,7 @@ $gr->stamps( closed_circle($x, 0, 'red') );
 $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
 <!-- todo: change this code to not subtract the right side onto the left before graphing. -->
 <!-- </pg-code>
-</setup>
+ 
 <statement>
 <p>Solveolve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
 <instruction>Round your answers to two decimal places if needed.</instruction>
@@ -1095,7 +1095,7 @@ $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 Context()->flags->remove("NumberCheck");
@@ -1142,7 +1142,7 @@ $gr->stamps( closed_circle($x, 0, 'red') );
 $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom')); -->
 <!-- todo: change this code to not subtract the right side onto the left before graphing. -->
 <!-- </pg-code>
-</setup>
+ 
 <statement>
 <p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
 <instruction>Round your answers to two decimal places if needed.</instruction>

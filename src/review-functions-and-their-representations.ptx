@@ -811,7 +811,7 @@ minor ytick={-20,-15,...,100}]
 <!-- Use technology to make a table -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context()->noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=>'function');
@@ -873,7 +873,7 @@ Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
 $rs[$i] = $formula->substitute(x=>$x[$i]);
 }
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Make a table of values for the function <m><var name="$f" /></m> defined by <m><var name="$f" />(x)=<var name="$formula" /></m>.</p>
 <sidebyside>
@@ -959,7 +959,7 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
 </exercise>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context()->noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=>'function');
@@ -1021,7 +1021,7 @@ Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
 $rs[$i] = $formula->substitute(x=>$x[$i]);
 }
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Make a table of values for the function <m><var name="$f" /></m> defined by <m><var name="$f" />(x)=<var name="$formula" /></m>.</p>
 <sidebyside>
@@ -1108,7 +1108,7 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
 <!-- Determining an appropriate window -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("Interval");
 Context()->noreduce('(-x)-y','(-x)+y');
@@ -1178,7 +1178,7 @@ return 1;
 }
 );
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Choose an appropriate window for graphing the function <m>f</m> defined by <m>f(x)=<var name="$func"/></m> that shows its key features.</p>
 <instruction>Use interval notation. Many answers are possible.</instruction>
@@ -1188,7 +1188,7 @@ return 1;
 </exercise>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("Interval");
 Context()->noreduce('(-x)-y','(-x)+y');
@@ -1258,7 +1258,7 @@ return 1;
 }
 );
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Choose an appropriate window for graphing the function <m>f</m> defined by <m>f(x)=<var name="$func"/></m> that shows its key features.</p>
 <instruction>Use interval notation. Many answers are possible.</instruction>
@@ -1269,7 +1269,7 @@ return 1;
 <!-- Finding points of intersection -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context()->noreduce('(-x)-y','(-x)+y');
 @a = (non_zero_random(-9,9,1), 0);
@@ -1287,7 +1287,7 @@ else {$ans = 2;}
 else {$ans = 1;}
 $popup = PopUp(['?','zero times', 'one time', 'two times', 'three times'],$ans+1);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Use technology to determine how many times the equations <m>y=<var name="$f" /></m> and <m>y=<var name="$g" /></m> intersect. They intersect <var name="$popup" form="popup" />.</p>
 </statement>
@@ -1295,7 +1295,7 @@ $popup = PopUp(['?','zero times', 'one time', 'two times', 'three times'],$ans+1
 </exercise>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context()->noreduce('(-x)-y','(-x)+y');
 @a = (non_zero_random(-9,9,1), 0);
@@ -1313,7 +1313,7 @@ else {$ans = 2;}
 else {$ans = 1;}
 $popup = PopUp(['?','zero times', 'one time', 'two times', 'three times'],$ans+1);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Use technology to determine how many times the equations <m>y=<var name="$f" /></m> and <m>y=<var name="$g" /></m> intersect. They intersect <var name="$popup" form="popup" />.</p>
 </statement>
@@ -1322,7 +1322,7 @@ $popup = PopUp(['?','zero times', 'one time', 'two times', 'three times'],$ans+1
 <!-- Finding key features using technology. Not randomized -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("Point");
 $intercepts = List("(0,4)");
@@ -1331,7 +1331,7 @@ Context("Interval");
 $domain = Interval("(-inf,inf)");
 $range = Interval("[3.992,inf)");
 </pg-code>
-</setup>
+ 
 <statement>
 <p>For the function <m>L</m> defined by <m>L(x)=3000x^2+10x+4</m>, use technology to determine the following. Round answers as necessary. <ol label="a.'"> <li> <p>Any intercepts.</p> <p><var name="$intercepts" width="30" /></p> </li> <li> <p>The vertex.</p> <p><var name="$vertex" width="30" /></p> </li> <li> <p>The domain.</p> <instruction>Use interval notation.</instruction> <p><var name="$domain" width="30" /></p> </li> <li> <p>The range.</p> <instruction>Use interval notation.</instruction> <p><var name="$range" width="30" /></p> </li> </ol></p>
 </statement>
@@ -1342,7 +1342,7 @@ $range = Interval("[3.992,inf)");
 </exercise> -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("Point");
 $intercepts = List("(9.883,0), (0,-8702500)");
@@ -1351,7 +1351,7 @@ Context("Interval");
 $domain = Interval("(-inf,inf)");
 $range = Interval("(-inf,0]");
 </pg-code>
-</setup>
+ 
 <statement>
 <p>For the function <m>M</m> defined by <m>M(x)=-(300x-2950)^2</m>, use technology to determine the following. Round answers as necessary. <ol label="a.'"> <li> <p>Any intercepts.</p> <p><var name="$intercepts" width="30" /></p> </li> <li> <p>The vertex.</p> <p><var name="$vertex" width="30" /></p> </li> <li> <p>The domain.</p> <instruction>Use interval notation.</instruction> <p><var name="$domain" width="30" /></p> </li> <li> <p>The range.</p> <instruction>Use interval notation.</instruction> <p><var name="$range" width="30" /></p> </li> </ol></p>
 </statement>
@@ -1363,7 +1363,7 @@ $range = Interval("(-inf,0]");
 <!-- Solving equations graphically  -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("Point");
 $intersections = List("(-2,5), (0.75,5)");
@@ -1374,7 +1374,7 @@ Context("Interval");
 $ineq[0] = Interval("(-2,0.75)");
 $ineq[1] = Compute("R - $ineq[0]")->reduce->sort;
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Let <m>f(x)=4x^2+5x-1</m> and <m>g(x)=5</m>. Use graphing technology to determine the following. <ol label="a."> <li> <p>What are the points of intersection for these two functions?</p> <p><var name="$intersections" width="30" /></p> </li> <li> <p>Solve <m>f(x)=g(x)</m>.</p> <p><var name="$solutions" width="30" /></p> </li> <li> <p>Solve <m>f(x)\lt g(x)</m>.</p> <p><var name="$ineq[0]" width="30" /></p> </li> <li> <p>Solve <m>f(x)\geq g(x)</m>.</p> <p><var name="$ineq[1]" width="30" /></p> </li> </ol> </p>
 </statement>
@@ -1385,7 +1385,7 @@ $ineq[1] = Compute("R - $ineq[0]")->reduce->sort;
 </exercise> -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("Point");
 $intersections = List("(-0.5,7), (1,7)");
@@ -1396,7 +1396,7 @@ Context("Interval");
 $ineq[0] = Interval("(-0.5,1)");
 $ineq[1] = Compute("R - $ineq[0]")->reduce->sort;
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Let <m>p(x)=6x^2-3x+4</m> and <m>k(x)=7</m>. Use graphing technology to determine the following. <ol label="a."> <li> <p>What are the points of intersection for these two functions?</p> <p><var name="$intersections" width="30" /></p> </li> <li> <p>Solve <m>p(x)=k(x)</m>.</p> <p><var name="$solutions" width="30" /></p> </li> <li> <p>Solve <m>p(x)\lt k(x)</m>.</p> <p><var name="$ineq[0]" width="30" /></p> </li> <li> <p>Solve <m>p(x)\geq k(x)</m>.</p> <p><var name="$ineq[1]" width="30" /></p> </li> </ol> </p>
 </statement>
@@ -1408,13 +1408,13 @@ $ineq[1] = Compute("R - $ineq[0]")->reduce->sort;
 <!-- No solution -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 Context()->flags->remove("NumberCheck");
 $solutions = Compute("no solutions");
 </pg-code>
-</setup>
+ 
 <statement> --><!--0-->
 <!-- <p>Use graphing technology to solve the equation <m>-0.02 x^2 + 1.97 x - 51.5=0.05\left(x-50\right)^2-0.03\left(x-50\right)</m>. Approximate the solution(s) if necessary.</p>
 <p><var name="$solutions" width="30" /></p>
@@ -1426,13 +1426,13 @@ $solutions = Compute("no solutions");
 </exercise> -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 Context()->flags->remove("NumberCheck");
 $solutions = Compute("no solutions");
 </pg-code>
-</setup>
+ 
 <statement> --><!--0-->
 <!-- <p>Use graphing technology to solve the equation <m>-200x^2+60x-55=-20x-40</m>. Approximate the solution(s) if necessary.</p>
 <p><var name="$solutions" width="30" /></p>
@@ -1445,12 +1445,12 @@ $solutions = Compute("no solutions");
 <!-- All real numbers -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("Interval");
 $solutions = Interval("(-inf,inf)");
 </pg-code>
-</setup>
+ 
 <statement><!lt arn-->
 <!-- <p>Use graphing technology to solve the inequality <m>-15x^2-6\leq 10x-4</m>. State the solution set using interval notation, and approximate if necessary.</p>
 <p><var name="$solutions" width="30" /></p>
@@ -1462,12 +1462,12 @@ $solutions = Interval("(-inf,inf)");
 </exercise> -->
 <!-- <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 Context("Interval");
 $solutions = Interval("(-inf,inf)");
 </pg-code>
-</setup>
+ 
 <statement><!-gt arn-->
 <!-- <p>Use graphing technology to solve the inequality <m>\frac{1}{2}x^2+\frac{3}{2}x \geq \frac{1}{2}x-\frac{3}{2}</m>. State the solution set using interval notation, and approximate if necessary.</p>
 <p><var name="$solutions" width="30" /></p>
@@ -1483,7 +1483,7 @@ $solutions = Interval("(-inf,inf)");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1498,7 +1498,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
@@ -1521,7 +1521,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1536,7 +1536,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,

@@ -72,12 +72,12 @@
       </introduction>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 $answer = Formula("(x-7)(x+7)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>x^2-49</m>.
@@ -176,13 +176,13 @@ $answer = Formula("(x-7)(x+7)");
       </introduction>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;variables-&gt;are(z=&gt;'Real');
 $answer = Formula("(2z-3)(2z+3)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>4z^2-9</m>.
@@ -374,13 +374,13 @@ $answer = Formula("(2z-3)(2z+3)");
       </introduction>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;variables-&gt;are(q=&gt;'Real');
 $answer = Formula("(4q+7)^2");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>16q^2+56q+49</m>.
@@ -583,13 +583,13 @@ $answer = Formula("(4q+7)^2");
       </introduction>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;variables-&gt;are(y=&gt;'Real');
 $answer = Formula("(y+10)(y^2-10y+100)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>y^3+1000</m>.
@@ -681,13 +681,13 @@ $answer = Formula("(y+10)(y^2-10y+100)");
       </introduction>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;variables-&gt;are(x=&gt;'Real');
 $answer = Formula("3(x-1)(x^2+x+1)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>3x^3-3</m>.

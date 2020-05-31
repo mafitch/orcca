@@ -32,12 +32,12 @@
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $yes=PopUp(['?','is', 'is not'],1);
 $no=PopUp(['?','is', 'is not'],2);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Identify which of the items are quadratic equations.
@@ -841,13 +841,13 @@ minor ytick={-10,0,...,40}]
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=17;
 $answer2=8;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               A meditation garden is in the shape of a right triangle,
@@ -1588,12 +1588,12 @@ ytick={-20,-10,0},minor ytick={-20,-15,...,5}]
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer=6;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A bomb exploded and the path of the debris from the explosion can be modeled by the equation <m>h=96t-16t^2</m>,
@@ -1610,12 +1610,12 @@ $answer=6;
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer=5;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A bomb exploded and the path of the debris from the explosion can be modeled by the equation <m>h=80t-16t^2</m>,
@@ -1632,13 +1632,13 @@ $answer=5;
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=8;
 $answer2=6;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A pennant is shaped like a right triangle,
@@ -1658,14 +1658,14 @@ $answer2=6;
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=8;
 $answer2=15;
 $answer3=17;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A reflecting pool is shaped like a right triangle,
@@ -2138,7 +2138,7 @@ ytick={-5,0,...,35},minor ytick={-10,-9,...,40}]
       <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("ImplicitEquation");
 Context()-&gt;variables-&gt;are(x=&gt;'Real');
@@ -2162,7 +2162,7 @@ return ($correct == $student);
 }
 );
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Give an example of a cubic equation that has three solutions:
@@ -2188,7 +2188,7 @@ return ($correct == $student);
       <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 $a = list_random(2,3,5);
@@ -2199,7 +2199,7 @@ $smallexp = $exp - 2;
 $sqrt = Formula("sqrt($b)")-&gt;reduce;
 $answer = Formula("{0, 1/$sqrt, -1/$sqrt}");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve for <m>x</m> in the equation <m><var name="$c"/>x^{<var name="$exp"/>}-<var name="$a"/>x^{<var name="$smallexp"/>} = 0 </m>.

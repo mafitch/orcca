@@ -253,7 +253,7 @@
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextArbitraryString.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("ArbitraryString");
 $x = Compute("x");
@@ -278,7 +278,7 @@ $student = $student-&gt;value;
 $student =~ 's/\s//g';
 return $correct eq lc($student);});
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Suppose you see the sentence,
@@ -1344,11 +1344,11 @@ grid=major]
     <exercise xml:id="exercise-function-evaluation">
       <title>Evaluating a Function</title>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Find the given function values for a function <m>g</m> where <m>g(x)=3x+4</m>.
@@ -1514,14 +1514,14 @@ Context("LimitedNumeric");
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("Interval");
 $a = Set(2);
 $b = Set(7/4);
 $c = Set(-1);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Solve the equations below for a function <m>h</m> where <m>h(x)=-4x+7</m>.
@@ -1992,7 +1992,7 @@ $c = Set(-1);
     <exercisegroup cols="2">
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 @px=map{($_==0)?8:$_-8}(NchooseK(16,4));
 @py=map{($_==0)?8:$_-8}(NchooseK(16,4));
@@ -2021,7 +2021,7 @@ elsif ($px[$i]&gt;0 and $py[$i]&lt;0) {$gr-&gt;lb(new Label($px[$i]+0.3,$py[$i]-
 Context("Point");
 @ans=map{Compute("($px[$_],$py[$_])")}(0..3);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Locate each point in the graph:
@@ -2049,7 +2049,7 @@ Context("Point");
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 @px=map{($_==0)?8:$_-8}(NchooseK(16,4));
 @py=map{($_==0)?8:$_-8}(NchooseK(16,4));
@@ -2078,7 +2078,7 @@ elsif ($px[$i]&gt;0 and $py[$i]&lt;0) {$gr-&gt;lb(new Label($px[$i]+0.3,$py[$i]-
 Context("Point");
 @ans=map{Compute("($px[$_],$py[$_])")}(0..3);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Locate each point in the graph:

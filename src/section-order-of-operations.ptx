@@ -133,11 +133,11 @@
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Calculate the value of <m>30-((2+3)\cdot2)</m>,
@@ -346,7 +346,7 @@ Context("LimitedNumeric");
     <exercise>
       <title>Practice with order of operations</title>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -411,7 +411,7 @@ return $OK;
 Context("LimitedNumeric");
 $step[3]=Formula("-22");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Simplify this expression one step at a time,
@@ -658,11 +658,11 @@ $step[3]=Formula("-22");
     <exercise>
       <title>Negating and Raising to Powers</title>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Compute the following:</p>
@@ -820,12 +820,12 @@ Context("LimitedNumeric");
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFraction");
 $ans=Fraction(-1,2);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Simplify <m>(20-4^2)\div(4-6)^3</m>.
@@ -902,7 +902,7 @@ $ans=Fraction(-1,2);
 <!-- The following two exercises need solutions -->
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 @b=map{($_+1)*list_random(-1,1)}(NchooseK(8,4));
 for my $i (0..3) {
@@ -915,7 +915,7 @@ $exp[$i]=($b[$i]&lt;0)?"($b[$i])^{$p[$i]}":"-$b[$i]^{$p[$i]}";
 $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <ol label="a.">
@@ -958,7 +958,7 @@ $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 @b=map{($_+1)*list_random(-1,1)}(NchooseK(8,4));
 for my $i (0..3) {
@@ -971,7 +971,7 @@ $exp[$i]=($b[$i]&lt;0)?"($b[$i])^{$p[$i]}":"-$b[$i]^{$p[$i]}";
 $ans[$i]=($b[$i]&lt;0)?$b[$i]**$p[$i]:-$b[$i]**$p[$i];
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <ol label="a.">

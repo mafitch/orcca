@@ -401,13 +401,13 @@
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;variables-&gt;are(m=&gt;'Real');
 $answer = Formula("(m+4)(m-10)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>m^2-6m-40</m>.
@@ -614,13 +614,13 @@ $answer = Formula("(m+4)(m-10)");
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;variables-&gt;are(y=&gt;'Real');
 $answer = Formula("(y^3-25)(y^3+2)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor <m>y^6-23y^3-50</m>.
@@ -845,7 +845,7 @@ $answer = Formula("(y^3-25)(y^3+2)");
       </exercise>
       <exercise>
         <webwork seed="2">
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;noreduce('(-x)-y','(-x)+y');
@@ -865,7 +865,7 @@ $s2 = Compute("$var**2+$bPlusC*$var+$bc")-&gt;reduce;
 $problem = Compute("$a*($var+$b)*($var+$c)")-&gt;reduce;
 $ans = Compute("$a*$var**2+$d*$var+$e")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Multiply the polynomials.
@@ -896,7 +896,7 @@ $ans = Compute("$a*$var**2+$d*$var+$e")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork seed="4">
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;noreduce('(-x)-y','(-x)+y');
@@ -917,7 +917,7 @@ $s3 = Compute("$a*($var**2+$bPlusC*$var+$bc)")-&gt;reduce;
 $problem = Compute("$a*($var+$b)*($var+$c)")-&gt;reduce;
 $ans = Compute("$a*$var**2+$d*$var+$e")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Multiply the polynomials.
@@ -948,7 +948,7 @@ $ans = Compute("$a*$var**2+$d*$var+$e")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork seed="3">
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;noreduce('(-x)-y','(-x)+y');
@@ -968,7 +968,7 @@ $s2 = Compute("$var**2+$bPlusC*$var+$bc")-&gt;reduce;
 $problem = Compute("$a*($var+$b)*($var+$c)")-&gt;reduce;
 $ans = Compute("$a*$var**2+$d*$var+$e")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Multiply the polynomials.
@@ -999,7 +999,7 @@ $ans = Compute("$a*$var**2+$d*$var+$e")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork seed="5">
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;noreduce('(-x)-y','(-x)+y');
@@ -1020,7 +1020,7 @@ $s3 = Compute("$a*($var**2+$bPlusC*$var+$bc)")-&gt;reduce;
 $problem = Compute("$a*($var+$b)*($var+$c)")-&gt;reduce;
 $ans = Compute("$a*$var**2+$d*$var+$e")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Multiply the polynomials.
@@ -1359,7 +1359,7 @@ $ans = Compute("$a*$var**2+$d*$var+$e")-&gt;reduce;
       <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
-            <setup>
+ 
 <pg-code>
 $c = list_random(4,6,8,9,10,12,14,15,16,18,20)*random(-1,1,2);
 $absc = abs($c);
@@ -1382,7 +1382,7 @@ $answer = List(@b);
 Context()-&gt;variables-&gt;add(b=&gt;'Real');
 $expression = Formula("x^2+bx+$c")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 What integers can go in the place of <m>b</m> so that the quadratic expression <m><var name="$expression"/></m> is factorable?

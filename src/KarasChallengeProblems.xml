@@ -9,7 +9,7 @@
                     <pg-macros>
                         <macro-file>contextRationalFunction.pl</macro-file>
                     </pg-macros>
-                    <setup>
+ 
                         <pg-code>
                             Context("RationalFunction-Strict");
                             Context()-&gt;variables-&gt;are(a=&gt;'Real');
@@ -18,7 +18,7 @@
                             $num = $p+$q;
                             $answer = Formula("$num/a");
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 1.1-->
                         <p>Given that <m>a\neq0</m>, simplify the following <m>\frac{<var name="$p"/>}{a} + \frac{<var name="$q"/>}{a}</m>.</p>
@@ -38,7 +38,7 @@
                     <pg-macros>
                         <macro-file>contextRationalFunction.pl</macro-file>
                     </pg-macros>
-                    <setup>
+ 
                         <pg-code>
                             Context("RationalFunction-Strict");
                             Context()-&gt;variables-&gt;are(a=&gt;'Real');
@@ -47,7 +47,7 @@
                             $num = (2*$p+$q);
                             $answer = Formula("$num/(2a)");
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 1.1-->
                         <p>Given that <m>a\neq0</m>, simplify the following <m>\frac{<var name="$p"/>}{a} + \frac{<var name="$q"/>}{2a}</m>.</p>
@@ -69,7 +69,7 @@
                     <pg-macros>
                         <macro-file>contextRationalFunction.pl</macro-file>
                     </pg-macros>
-                    <setup>
+ 
                         <pg-code>
                             Context("RationalFunction-Strict");
                             Context()-&gt;variables-&gt;are(a=&gt;'Real');
@@ -78,7 +78,7 @@
                             $num = (5*$p-$q);
                             $answer = Formula("$num/(5a)");
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 1.1-->
                         <p>Given that <m>a\neq0</m>, simplify the following: <m>\frac{<var name="$p"/>}{a} - \frac{<var name="$q"/>}{5a}</m>.</p>
@@ -97,13 +97,13 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $sometimes = PopUp(['?','sometimes','always','never'], 1);
                             $always = PopUp(['?','sometimes','always','never'], 2);
                             $never = PopUp(['?','sometimes','always','never'], 3);
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 1.2-->
                         <p>Select the correct word to make each statement true.<ol label="a.">
@@ -142,12 +142,12 @@
 
             <exercise>
                 <webwork>
-                     <setup>
+ 
                         <pg-code>
                             $answer=Formula("36");
                             $small=Formula("-23");
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                     <!--Section 1.4-->
                         <p>In this challenge, your job is to create expressions, using addition, subtraction, multiplication, and parentheses.  You may use the numbers, <m>1, 2, 3,</m> and <m>4</m> in your expression, using each number only once.</p>
@@ -177,13 +177,13 @@
 
            <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $integer = PopUp(['?','integer','rational','irrational'], 1);
                             $rational = PopUp(['?','integer','rational','irrational'], 2);
                             $irrational = PopUp(['?','integer','rational','irrational'], 3);
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 1.5-->
                         <p>Section 1.5.  I am going to make up a number.  I am going to follow a pattern to create my number.  After the decimal point, I am going to write the natural numbers 1, 2, 3, 4, 5, etc.  The decimal digits will extend infinitely according to my pattern.
@@ -200,14 +200,14 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $question = PopUp(['?','&lt;','&gt;','='],0);
                             $less = PopUp(['?','&lt;','&gt;','='],1);
                             $more = PopUp(['?','&lt;','&gt;','='],2);
                             $equal = PopUp(['?','&lt;','&gt;','='],3);
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 2.1.-->
                         <p>Choose the correct inequality or equal sign to make the relation true.</p>
@@ -260,7 +260,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                         Context("ImplicitPlane");
                         Context()-&gt;variables-&gt;are(x=&gt;'Real');
@@ -285,7 +285,7 @@
                              }
                            );
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 2.3-->
                         <p>Write a linear equation whose solution is <m>x = 5</m>.</p>
@@ -299,12 +299,12 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                         $little = random(10,50,2);
                         $big = random(53,99,2);
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 2.3.-->
                         <p>Fill in the blanks with the numbers <var name="$little"/> and <var name="$big"/> (using each number only once) to create an equation where <m>x</m> has the greatest possible value.<ol label="a.">
@@ -330,7 +330,7 @@
                         <macro-file>contextPercent.pl</macro-file>
                         <macro-file>contextCurrency.pl</macro-file>
                     </pg-macros>
-                    <setup>
+ 
                         <pg-code>
                             Context("Percent");
                             $p = Percent(random(0.01,0.03,0.005));
@@ -342,7 +342,7 @@
                             $current = Currency(sprintf("%.2f",$original*(1+$p-&gt;value)*(1+$q-&gt;value)));
                             $original = Currency($current/(1+$p)/(1+$q));
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 2.6.-->
                         <p> Last year, Joan received a <var name="$p"/> raise.  This year, she received a <var name="$q"/> raise.  Her current wage is <var name="$current"/> an hour.  What was her wage before the two raises?</p>
@@ -357,7 +357,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $m = random(5,15,1);
                             $n = $m + random(10,20,1);
@@ -366,7 +366,7 @@
                             $q = random(500,2000,50);
                             $answerc = $q-1;
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 2.7-->
                         <p><ol label="a.">
@@ -399,7 +399,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $m = random(2,3,1);
                             $mraised = 100*$m;
@@ -413,7 +413,7 @@
                               $popup = ($m**$p &gt; $p**$m) ? $more : $less;
                             };
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 2.7.-->
                         <p>Choose the correct inequality or equal sign to make the relation true.</p>
@@ -427,7 +427,7 @@
 
            <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             do {
                               $a = random(-15,-1,2);
@@ -504,7 +504,7 @@
                               }
                             );
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 2.8.-->
                         <p> Fill in the blanks with algebraic expressions that make the equation true.  You may not use <m>0</m> or <m>1</m> in any of the blank spaces.</p>
@@ -569,7 +569,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                         Context("ImplicitPlane");
                         Context()-&gt;variables-&gt;are(x=&gt;'Real');
@@ -594,7 +594,7 @@
                              }
                            );
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 3.1-->
                         <p>Write a linear equation whose solution is <m>x = -9</m>.  </p>
@@ -608,7 +608,7 @@
 
         <exercise>
             <webwork>
-                <setup>
+ 
                     <pg-code>
                         $girl = random(2,6,2);
                         $boy = random(3,7,2);
@@ -616,7 +616,7 @@
                         $totalgirls = Real($girl*$factor);
                         $total = Real(($girl+$boy)*$factor);
                     </pg-code>
-                </setup>
+ 
                 <statement>
                         <!--Section 3.4.-->
                     <p> The ratio of girls to boys in a preschool is <var name="$girl"/> to <var name="$boy"/>.  If there are <var name="$total"/> kids in the school, how many girls are there in the preschool?</p>
@@ -632,14 +632,14 @@
 
         <exercise>
             <webwork>
-                <setup>
+ 
                     <pg-code>
                         $a = random(2,20,2);
                         $b = $a-1;
                         $answer = Formula("$a*(x+4)");
                         $answer2 = Formula("$b*x+($a*4+2)");
                     </pg-code>
-                </setup>
+ 
                 <statement>
                         <!--Section 3.5.-->
                     <p>Fill in the right side of the equation to create a linear equation with the properties listed.</p>
@@ -660,7 +660,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $fraction1 = random(3,9,2);
                             $fraction2 = random(4,10,2);
@@ -678,7 +678,7 @@
                                     $popup2 = $false
                                 };
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 4.4.-->
                         <p> Fill in the blank with true or false. </p>
@@ -737,7 +737,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $little = random(2,10,2);
                             $medium = $little+1;
@@ -746,7 +746,7 @@
                             $steepest = Formula("$big/$little");
                             $shallowest = Formula("$little/$big");
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 4.7.-->
                         <p>Fill in the variables <m>A, B,</m> and <m>C</m> in <m>Ax + By = C</m> with the numbers <m><var name="$little"/>, <var name="$medium"/></m> and <m><var name="$big"/></m>.  You may only use each number once.</p>
@@ -797,7 +797,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $p2 = random(2,6,2);
                             $q2 = random(-7,-3,2);
@@ -812,7 +812,7 @@
                             $exp2 = Formula("$p2 x - b y")-&gt;reduce;
                             $answer = Formula("-$q2");
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 5.3.-->
                         <p>Find the value of <m>b</m> so that the system of equations has an infinite number of solutions.<me>
@@ -832,7 +832,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             do {
                               $a = random(1,10,1);
@@ -881,7 +881,7 @@
                             );
                             $abs = abs($negexponent);
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 6.1a-->
                         <p> Here is an exponential expression:  <m> \frac {x^{a} \cdot x^{b}}{x^{c}}</m>.</p>
@@ -912,7 +912,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             do {
                               $a = random(1,10,1);
@@ -947,7 +947,7 @@
                             );
                             $abs = abs($negexponent);
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 6.1b-->
                         <p> Here is an exponential expression:  <m> \frac {x^{a} \cdot x^{b}}{x^{c}}</m>.</p>
@@ -979,7 +979,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             do {
                               $a = random(1,10,1);
@@ -1014,7 +1014,7 @@
                             $abs = abs($negexponent);
                             $answer = Compute("none");
                         </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 6.1c-->
                         <p> Here is an exponential expression:  <m> \frac {x^{a} \cdot x^{b}}{x^{c}}</m>.</p>
@@ -1047,7 +1047,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                         Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
 
@@ -1139,7 +1139,7 @@
                             );
 
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 6.3.-->
                         <p> Fill in the blanks with algebraic expressions that make the equation true.  You may not use <m>0</m> or <m>1</m> in any of the blank spaces.</p>
@@ -1178,7 +1178,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                           $c = list_random(4,6,8,9,10,12,14,15,16,18,20)*random(-1,1,2);
                           $absc = abs($c);
@@ -1202,7 +1202,7 @@
                           Context()-&gt;variables-&gt;add(b=&gt;'Real');
                           $expression = Formula("x^2+bx+$c")-&gt;reduce;
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 7.3.-->
                           <p>What integers can go in the place of <m>b</m> so that the quadratic expression is factorable?</p>
@@ -1221,7 +1221,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                           $c = list_random(2,4,5,7,8,10);
                           $threec = $c*3;
@@ -1245,7 +1245,7 @@
                           Context()-&gt;variables-&gt;add(b=&gt;'Real');
                           $expression = Formula("3x^2+bx+$c")-&gt;reduce;
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 7.4.-->
                           <p>What integers can go in the place of <m>b</m> so that the quadratic expression is factorable?</p>
@@ -1264,7 +1264,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $first = random(111,999,222);
                             $second = random(222,888,222);
@@ -1272,7 +1272,7 @@
                             $minus = $first-$second;
                             $answer = PopUp(['?',"$plus*$plus", "$plus*$minus","$minus*$minus",'none of the above'],2);
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 7.6 -->
                         <p>Select the expression below which is equivalent to the following expression: <m><var name="$first"/>^{2} - <var name="$second"/>^{2}</m></p>
@@ -1289,7 +1289,7 @@
 
               <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                         Context("ImplicitEquation");
                         Context()-&gt;variables-&gt;are(x=&gt;'Real');
@@ -1314,7 +1314,7 @@
                              }
                            );
                         </pg-code>
-                      </setup>
+ 
                       <statement>
                         <!--Section 8.1a-->
                         <p>Give an example of a cubic equation that has three solutions: one solution is <m>x = <var name="$a"/></m>, the second solution is <m>x= <var name="$b"/></m>, and the third solution is <m> x = \frac{2}{3} </m>.
@@ -1334,7 +1334,7 @@
                     <pg-macros>
                         <macro-file>contextFiniteSolutionSets.pl</macro-file>
                     </pg-macros>
-                    <setup>
+ 
                         <pg-code>
                         Context("FiniteSolutionSets");
                         $a = list_random(2,3,5);
@@ -1345,7 +1345,7 @@
                         $sqrt = Formula("sqrt($b)")-&gt;reduce;
                         $answer = Formula("{0, 1/$sqrt, -1/$sqrt}");
                         </pg-code>
-                      </setup>
+ 
                       <statement>
                         <!--Section 8.1b.-->
                         <p> Solve for x.  </p>
@@ -1361,7 +1361,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             $west = random(2,8,1);
                             $north = random(3,7,1);
@@ -1369,7 +1369,7 @@
                             $east = $west + $factor;
                             $answer = Formula("sqrt($north**2+$factor**2)");
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 8.3-->
                         <p>Imagine that you are in Math Land, where roads are perfectly straight, and Mathlanders can walk along a perfectly straight line between any 2 points.</p>
@@ -1387,12 +1387,12 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                         <pg-code>
                             Context()-&gt;variables-&gt;are(m=&gt;'Real',n=&gt;'Real',p=&gt;'Real');
                             $answer = Compute("(-n-sqrt(n^2-4mp))/(2m),(-n+sqrt(n^2-4mp))/(2m)");
                        </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 8.6-->
                         <p>Solve for x.</p>
@@ -1410,7 +1410,7 @@
 
             <exercise>
                 <webwork>
-                    <setup>
+ 
                       <pg-code>
                         Context("Point");
                         Context()-&gt;variables-&gt;are(n=&gt;'Real',p=&gt;'Real');
@@ -1418,7 +1418,7 @@
                         $yintanswer = Point(0,p);
                         $vertexanswer = Compute("(-n/2,(4p-n^2)/4)");
                       </pg-code>
-                    </setup>
+ 
                     <statement>
                         <!--Section 9.3.-->
                         <p> Consider the function <m>f(x) = x^{2}+nx+p</m>.  Let <m>n</m> and <m>p</m> be real numbers.  Give your answers as points, i.e. <m>(x, y)</m>. </p>

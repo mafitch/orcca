@@ -54,7 +54,7 @@
       <webwork>
           <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file>
           <macro-file>answerHints.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are(r=&gt;'Real',x=&gt;'Real',y=&gt;'Real');
@@ -67,7 +67,7 @@ $b = Formula("x^110");
 $c = Formula("81r^4");
 $d = Formula("9y^19");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               <ol label="a." cols="2">
@@ -289,7 +289,7 @@ $d = Formula("9y^19");
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file>
             <macro-file>answerHints.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedPolynomial");
 Context()-&gt;variables-&gt;are(p=&gt;'Real',r=&gt;'Real',w=&gt;'Real',x=&gt;'Real');
@@ -304,7 +304,7 @@ $b = Formula("p^6/64");
 $c = Formula("5^36w^27");
 $d = Formula("2r^11");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <ol label="a.">
@@ -604,7 +604,7 @@ $d = Formula("2r^11");
 -->
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '**' =&gt; {class =&gt; 'bizarro::BOP::power', isCommand =&gt; 1, perl=&gt;undef},
@@ -631,7 +631,7 @@ return $OK;
 );
 }
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Simplify the following expressions.
@@ -896,7 +896,7 @@ return $OK;
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '**' =&gt; {class =&gt; 'bizarro::BOP::power', isCommand =&gt; 1, perl=&gt;undef},
@@ -928,7 +928,7 @@ return $OK;
 });
 };
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               <ol label="a." cols="3">
@@ -1145,13 +1145,13 @@ return $OK;
     </warning>
     <exercise>
       <webwork>
-      <setup>
+ 
 <pg-code>
 Context()-&gt;variables-&gt;are();
 $true = PopUp(['?','true','false'],1);
 $false = PopUp(['?','true','false'],2);
 </pg-code>
-      </setup>
+ 
       <statement>
         <p>
           Decide whether each statements is true or false.
@@ -1351,7 +1351,7 @@ $false = PopUp(['?','true','false'],2);
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '**' =&gt; {class =&gt; 'bizarro::BOP::power', isCommand =&gt; 1, perl=&gt;undef},
@@ -1386,7 +1386,7 @@ return $OK;
 });
 };
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               <ol label="a." cols="2">
@@ -1937,7 +1937,7 @@ return $OK;
       <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
-            <setup>
+ 
 <pg-code>
 do {
 $a = random(1,10,1);
@@ -1977,7 +1977,7 @@ if ($dstu+$estu-$fstu != $negexponent) {return 0;} else {return 1};
 );
 $abs = abs($negexponent);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Consider the exponential expression
@@ -2048,7 +2048,7 @@ $abs = abs($negexponent);
       <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
-            <setup>
+ 
 <pg-code>
 do {
 $a = random(1,10,1);
@@ -2077,7 +2077,7 @@ if ($dstu+$estu-$fstu != $negexponent) {return 0;} else {return 1};
 );
 $abs = abs($negexponent);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Consider the exponential expression
@@ -2154,7 +2154,7 @@ $abs = abs($negexponent);
       <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
-            <setup>
+ 
 <pg-code>
 do {
 $a = random(1,10,1);
@@ -2183,7 +2183,7 @@ $negexponent = $d + $e - $f;
 $abs = abs($negexponent);
 $answer = Compute("none");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Consider the exponential expression

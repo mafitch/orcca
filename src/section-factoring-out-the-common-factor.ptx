@@ -87,11 +87,11 @@
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               <ol label="a.">
@@ -330,13 +330,13 @@ Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
     <exercise xml:id="example-factor-out-common-factor-trailing-9x">
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFactor");
 Context()-&gt;noreduce('(-x)-y','(-x)+y');
 $answer=Formula("4x(x^2+3x-3)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Factor the polynomial <m>4x^3+12x^2-12x</m>.

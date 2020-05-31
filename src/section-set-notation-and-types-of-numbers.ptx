@@ -82,7 +82,7 @@
         </p>
       </introduction>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("Interval");
 $set=Set("{403,404,500}");
@@ -92,7 +92,7 @@ Context()-&gt;parens-&gt;set('{'=&gt;{type=&gt;'Set'});
 $ord=Point("(500,404,403)");
 $ordev=$ord-&gt;cmp(cmp_class=&gt;'an ordered triple');
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               According to Google,
@@ -332,7 +332,7 @@ $ordev=$ord-&gt;cmp(cmp_class=&gt;'an ordered triple');
         </p>
       </introduction>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $natural=PopUp(['?','natural number','whole number','integer','rational number','irrational number','real number'],1);
 $whole=PopUp(['?','natural number','whole number','integer','rational number','irrational number','real number'],2);
@@ -341,7 +341,7 @@ $rational=PopUp(['?','natural number','whole number','integer','rational number'
 $irrational=PopUp(['?','natural number','whole number','integer','rational number','irrational number','real number'],5);
 $real=PopUp(['?','natural number','whole number','integer','rational number','irrational number','real number'],6);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               <ol label="a.">
@@ -472,11 +472,11 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFraction");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               <ol label="a.">
@@ -597,7 +597,7 @@ Context("LimitedFraction");
       <title>Set Notation</title>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 $a=random(1,9,1);
 $a=2 if ($envir{problemSeed}==1);
@@ -607,7 +607,7 @@ $set=Set("{-$a,$a}");
 $setev=$set-&gt;cmp(cmp_class=&gt;'a set');
 Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             There are two numbers that you can square to get <m><var name="$b"/></m>.
@@ -621,14 +621,14 @@ Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Interval");
 $set=Set("{2,4,6,8}");
 $setev=$set-&gt;cmp(cmp_class=&gt;'a set');
 Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             There are four positive, even, one-digit numbers.
@@ -642,14 +642,14 @@ Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Interval");
 $set=Set("{16,25,36,49,64,81}");
 $setev=$set-&gt;cmp(cmp_class=&gt;'a set');
 Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             There are six two-digit perfect square numbers.
@@ -663,7 +663,7 @@ Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @a=map{$_+1}NchooseK(6,3);
 @a=(1,2,5) if ($envir{problemSeed}==1);
@@ -673,7 +673,7 @@ $set=Set("{$a[0],$a[1],$a[2]}");
 $setev=$set-&gt;cmp(cmp_class=&gt;'a set');
 Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             There is a set of three small positive integers where you can square all three numbers,
@@ -728,7 +728,7 @@ Context()-&gt;parens-&gt;set('('=&gt;{type=&gt;'Point'});
     </exercisegroup>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $natural=PopUp(['?','natural number','whole number','integer','rational number','irrational number','real number'],1);
 $whole=PopUp(['?','natural number','whole number','integer','rational number','irrational number','real number'],2);
@@ -737,7 +737,7 @@ $rational=PopUp(['?','natural number','whole number','integer','rational number'
 $irrational=PopUp(['?','natural number','whole number','integer','rational number','irrational number','real number'],5);
 $real=PopUp(['?','natural number','whole number','integer','rational number','irrational number','real number'],6);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               In each situation, which number set do you think is most appropriate?
@@ -804,13 +804,13 @@ $real=PopUp(['?','natural number','whole number','integer','rational number','ir
       <title>Writing Decimals as Fractions</title>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Fraction-NoDecimals");
 $d=random(0.1,9.9,0.1)+random(1,9,1)/100;
 $f=Fraction($d);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Write the rational number <m><var name="$d"/></m> as a fraction.
@@ -823,13 +823,13 @@ $f=Fraction($d);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Fraction-NoDecimals");
 $d=random(10.1,99.9,0.01)+random(1,9,1)/1000;
 $f=Fraction($d);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Write the rational number <m><var name="$d"/></m> as a fraction.
@@ -842,13 +842,13 @@ $f=Fraction($d);
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Fraction-NoDecimals");
 $n=random(10,80,10)+random(1,9,1);
 $f=Fraction($n,99);
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write the rational number <m>0.\overline{<var name="$n"/>}=0.<var name="$n"/><var name="$n"/>\ldots</m> as a fraction.
@@ -861,13 +861,13 @@ $f=Fraction($n,99);
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Fraction-NoDecimals");
 $n=random(10,980,10)+random(1,9,1);
 $f=Fraction($n,999);
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write the rational number <m>0.\overline{<var name="$n"/>}=0.<var name="$n"/><var name="$n"/>\ldots</m> as a fraction.
@@ -880,14 +880,14 @@ $f=Fraction($n,999);
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Fraction-NoDecimals");
 $n=random(10,80,10)+random(1,9,1);
 $t=random(1,9,1)+random(1,9,1)/10;
 $f=Fraction($t+$n/99);
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write the rational number <m><var name="$t"/>\overline{<var name="$n"/>}=<var name="$t"/><var name="$n"/><var name="$n"/>\ldots</m> as a fraction.
@@ -900,14 +900,14 @@ $f=Fraction($t+$n/99);
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Fraction-NoDecimals");
 $n=random(100,800,10)+random(1,9,1);
 $t=random(1,9,1)+random(1,9,1)/10;
 $f=Fraction($t+$n/999);
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write the rational number <m><var name="$t"/>\overline{<var name="$n"/>}=<var name="$t"/><var name="$n"/><var name="$n"/>\ldots</m> as a fraction.
@@ -924,7 +924,7 @@ $f=Fraction($t+$n/999);
       <exercise> -->
 <!-- Kara's challenge problem -->
 <!--         <webwork>
-            <setup>
+            <setup> 
 <pg-code>
 $rational = PopUp(['?','rational','irrational'], 1);
 $irrational = PopUp(['?','rational','irrational'], 2);

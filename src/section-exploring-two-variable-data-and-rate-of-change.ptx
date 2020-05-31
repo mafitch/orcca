@@ -336,7 +336,7 @@ ytick={0,5,...,30}]
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 @x=(0..3);
 $f=Formula("x+10");
@@ -345,7 +345,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Write an equation in the form
@@ -394,7 +394,7 @@ $eq=Formula("y=$f");
     </exercise>
     <exercise xml:id="exercise-linear-data">
       <webwork>
-          <setup>
+ 
 <pg-code>
 @x=(0..3);
 $f=Formula("-1+3x");
@@ -403,7 +403,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f")-&gt;reduce;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Write an equation in the form
@@ -502,7 +502,7 @@ $eq=Formula("y=$f")-&gt;reduce;
     </exercise>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 @x=(0..3);
 $f=Formula("x^2");
@@ -511,7 +511,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Write an equation in the form
@@ -769,7 +769,7 @@ axis y discontinuity=crunch,]
     </p>
     <exercise xml:id="exercise-cancer-data">
       <webwork>
-          <setup>
+ 
 <pg-code>
 @x=(1999..2013);
 @y=(17599,17446,17847,17887,17559,18499,18682,19112,19376,20370,19909,19727,20636,20035,20458);
@@ -777,7 +777,7 @@ axis y discontinuity=crunch,]
 $r[0]=($f{2002}-$f{1999})/(2002-1999);
 $r[1]=($f{2011}-$f{2003})/(2011-2003);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Use the data in <xref ref="example-cancer-data" />
@@ -965,13 +965,13 @@ clip=false]
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 @x=(-8,-5,-2,1);
 @y=(3.1,2.1,1.1,0.1);
 $popup=PopUp(['?','The relationship is linear','The relationship is not linear'],1);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Is there a linear relationship in the table?
@@ -1021,13 +1021,13 @@ $popup=PopUp(['?','The relationship is linear','The relationship is not linear']
     </exercise>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 @x=(11,13,15,17);
 @y=(208,210,214,220);
 $popup=PopUp(['?','The relationship is linear','The relationship is not linear'],2);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Is there a linear relationship in the table?
@@ -1074,13 +1074,13 @@ $popup=PopUp(['?','The relationship is linear','The relationship is not linear']
     </exercise>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 @x=(3,6,8,12);
 @y=(-2,-8,-12,-20);
 $popup=PopUp(['?','The relationship is linear','The relationship is not linear'],1);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Is there a linear relationship in the table?
@@ -1224,7 +1224,7 @@ ytick={0,5,...,30}]
       <title>Finding Patterns</title>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=(-2..2);
 $m=random(2,6,1);
@@ -1234,7 +1234,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1284,7 +1284,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=(3..7);
 $m=random(2,6,1);
@@ -1294,7 +1294,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1344,7 +1344,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 $x[0]=random(1,8,1);
 $b=random(4,9,1);
@@ -1355,7 +1355,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1405,7 +1405,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 $x[0]=random(1,8,1);
 $b=random(4,9,1);
@@ -1416,7 +1416,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1466,7 +1466,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=NchooseK(20,5);
 $b=non_zero_random(-9,9,1);
@@ -1478,7 +1478,7 @@ $eq=Formula("y=$f");
 $absb=abs($b);
 $compstring=($b&gt;0)?'more':'less';
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1528,7 +1528,7 @@ $compstring=($b&gt;0)?'more':'less';
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=NchooseK(20,5);
 $b=non_zero_random(-9,9,1);
@@ -1540,7 +1540,7 @@ $eq=Formula("y=$f");
 $absb=abs($b);
 $compstring=($b&gt;0)?'more':'less';
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1590,7 +1590,7 @@ $compstring=($b&gt;0)?'more':'less';
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=map{($_+1)**2}NchooseK(5,5);
 $f=Formula("sqrt(x)");
@@ -1599,7 +1599,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1649,7 +1649,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=(map{$_-5}(NchooseK(5,3)),map{$_+1}(NchooseK(5,2)));
 $f=Formula("abs(x)");
@@ -1658,7 +1658,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1708,7 +1708,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 $t=random(0,2,1);
 $x[0]=random(0,7,1)/10**$t;
@@ -1720,7 +1720,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1770,7 +1770,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 $t=random(0,2,1);
 $x[0]=random(0,7,1)/10**$t;
@@ -1782,7 +1782,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1832,7 +1832,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=map{$_+1}NchooseK(99,5);
 $f=Formula("1/x");
@@ -1842,7 +1842,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1892,7 +1892,7 @@ $eq=Formula("y=$f");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=map{$_+1}NchooseK(99,5);
 $f=Formula("1/x");
@@ -1902,7 +1902,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Write an equation in the form
@@ -1955,7 +1955,7 @@ $eq=Formula("y=$f");
       <title>Linear Relationships</title>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $m = random(2,9,1);
 $b = random(10,100,1);
@@ -1965,7 +1965,7 @@ $f = Formula("$m x + $b");
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2015,7 +2015,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $m = random(2,9,1);
 $b = random(10,100,1);
@@ -2025,7 +2025,7 @@ $f = Formula("$m x + $b");
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2075,7 +2075,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $m = random(-9,-2,1);
 $absm = abs($m);
@@ -2087,7 +2087,7 @@ $start = random(0,10,1);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2137,7 +2137,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $m = random(-9,-2,1);
 $absm = abs($m);
@@ -2149,7 +2149,7 @@ $start = random(0,10,1);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2199,7 +2199,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $a = random(2,5,1);
 $b = random(1,20,1);
@@ -2213,7 +2213,7 @@ $diff[$i] = $y[$i+1]-$y[$i];
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2267,7 +2267,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $a = random(2,5,1);
 $b = random(1,20,1);
@@ -2281,7 +2281,7 @@ $diff[$i] = $y[$i+1]-$y[$i];
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2335,7 +2335,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $a = random(2,5,1);
 $b = random(1,20,1);
@@ -2349,7 +2349,7 @@ $diff[$i] = $y[$i+1]-$y[$i];
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2403,7 +2403,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $a = random(2,5,1);
 $b = random(1,20,1);
@@ -2417,7 +2417,7 @@ $diff[$i] = $y[$i+1]-$y[$i];
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2471,7 +2471,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $m = non_zero_random(-5,5,0.01);
 $absm = abs($m);
@@ -2484,7 +2484,7 @@ $start = random(-10,10,1);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2534,7 +2534,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $m = non_zero_random(-5,5,0.01);
 $absm = abs($m);
@@ -2547,7 +2547,7 @@ $start = random(-10,10,1);
 $yes = PopUp(['?','yes','no'],1);
 $no = PopUp(['?','yes','no'],2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2597,7 +2597,7 @@ $no = PopUp(['?','yes','no'],2);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $m = non_zero_random(2,9,1);
 $b = random(1,100,1);
@@ -2609,7 +2609,7 @@ $no = PopUp(['?','yes','no'],2);
 $ydiff = $y[1]-$y[0];
 $xdiff = $x[1]-$x[0];
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2664,7 +2664,7 @@ $xdiff = $x[1]-$x[0];
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $m = non_zero_random(2,9,1);
 $b = random(1,100,1);
@@ -2676,7 +2676,7 @@ $no = PopUp(['?','yes','no'],2);
 $ydiff = $y[1]-$y[0];
 $xdiff = $x[1]-$x[0];
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Does the following table show that <m>x</m> and <m>y</m> have a linear relationship?
@@ -2735,7 +2735,7 @@ $xdiff = $x[1]-$x[0];
       <title>Calculating Rate of Change</title>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=(1990..2014);
 @y=(487849,491064,493754,497432,497659,498396,501646,503205,502945,503637,529922,535185,538803,539546,533120,534112,538091,546747,556442,566143,585261,593859,602954,609520,619360);
@@ -2744,7 +2744,7 @@ $xdiff = $x[1]-$x[0];
 @rate=map{Real(($f{$year[2*$_+1]}-$f{$year[2*$_]})/($year[2*$_+1]-$year[2*$_]))}(0,1);
 $declines=List(1997,2003);
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             This table gives population estimates for Portland, Oregon from 1990 through 2014<!--  (<url href="https://www.google.com/publicdata/explore?ds=kf7tgg1uo9ude_&amp;met_y=population&amp;idim=place:4159000:5363000&amp;hl=en&amp;dl=en">www.google.com/publicdata</url> as of Oct 11, 2016; Google may update with better estimates) -->.
@@ -2885,7 +2885,7 @@ $declines=List(1997,2003);
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 @x=(1990..2014);
 @y=(487849,491064,493754,497432,497659,498396,501646,503205,502945,503637,529922,535185,538803,539546,533120,534112,538091,546747,556442,566143,585261,593859,602954,609520,619360);
@@ -2915,7 +2915,7 @@ $slope{$i}=($f{$i+2}-$f{$i})/2;
 add_functions($graph[1],"$slope{$i}*(x-$i)+$f{$i} for x in &lt;1989,2015&gt; using color:black and weight:1");
 };
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             This table and graph gives population estimates for Portland, Oregon from 1990 through 2014<!--  (<url href="https://www.google.com/publicdata/explore?ds=kf7tgg1uo9ude_&amp;met_y=population&amp;idim=place:4159000:5363000&amp;hl=en&amp;dl=en">www.google.com/publicdata</url> as of Oct 11, 2016; Google may update with better estimates) -->.

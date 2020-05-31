@@ -471,7 +471,7 @@ If a baby is about <m>0.6</m> meters long and their father is three times taller
         </p>
       </introduction>
       <webwork>
-          <setup>
+ 
 <pg-code>
 <!--  $symbol = '\dog'; # dog -->
 
@@ -479,7 +479,7 @@ If a baby is about <m>0.6</m> meters long and their father is three times taller
  
   
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               <ol label="a.">
@@ -732,12 +732,12 @@ If a baby is about <m>0.6</m> meters long and their father is three times taller
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Currency");
 $alot=Currency("80");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               How much money do we have if we walk away with <m>\$5.00\cdot2^4</m>?
@@ -896,7 +896,7 @@ $alot=Currency("80");
       </introduction>
       <exercise>
         <webwork seed="101">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 @num1 = ();
@@ -914,7 +914,7 @@ my %seen = ();
 } until (@duplicates == 0);
 @products = map{$num1[$_]*$num2[$_]} (0..9);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Multiplication Facts
@@ -983,7 +983,7 @@ my %seen = ();
       </exercise>
       <exercise>
         <webwork seed="100">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 @num1 = ();
@@ -1001,7 +1001,7 @@ my %seen = ();
 } until (@duplicates == 0);
 @products = map{$num1[$_]*$num2[$_]} (0..9);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Multiplication Facts
@@ -1070,7 +1070,7 @@ my %seen = ();
       </exercise>
       <exercise>
         <webwork seed="102">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 @num1 = ();
@@ -1088,7 +1088,7 @@ my %seen = ();
 } until (@duplicates == 0);
 @products = map{$num1[$_]*$num2[$_]} (0..9);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Division Facts
@@ -1152,7 +1152,7 @@ my %seen = ();
       </exercise>
       <exercise>
         <webwork seed="103">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 @num1 = ();
@@ -1170,7 +1170,7 @@ my %seen = ();
 } until (@duplicates == 0);
 @products = map{$num1[$_]*$num2[$_]} (0..9);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Division Facts
@@ -1241,7 +1241,7 @@ my %seen = ();
       </introduction>
       <exercise>
         <webwork seed="104">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 do {
@@ -1265,7 +1265,7 @@ $num42 = random(11,80,1);
 $ans4 = $num41+$num42;
 } until ( (int($num41/10)+int($num42/10)!=int($ans4/10)) &amp;&amp; ($ans4&lt;100) );
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Do the following additions without using a calculator.
@@ -1325,7 +1325,7 @@ $ans4 = $num41+$num42;
       </exercise>
       <exercise>
         <webwork seed="105">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 @a = ( );
@@ -1347,7 +1347,7 @@ $num22 = random(101,999,1);
 $ans2 = $num21+$num22;
 } until ($ans2&gt;1000);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Do the following additions without using a calculator.
@@ -1395,7 +1395,7 @@ $ans2 = $num21+$num22;
       </exercise>
       <exercise>
         <webwork seed="106">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 do {
@@ -1412,7 +1412,7 @@ $num31 = random(20,80,10);
 $num32 = random(1,9,1);
 $ans3 = $num31-$num32;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Do the following subtraction without using a calculator.
@@ -1462,7 +1462,7 @@ $ans3 = $num31-$num32;
       </exercise>
       <exercise>
         <webwork seed="107">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 @a = ( );
@@ -1487,7 +1487,7 @@ $num32 = random(101,999,1);
 $ans3 = $num31-$num32;
 } until ( ($ans3&gt;0) &amp;&amp; (int($num31/100)-int($num32/100)!=int($ans3/100)) );
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Do the following additions without using a calculator.
@@ -1543,7 +1543,7 @@ $ans3 = $num31-$num32;
       </exercise>
       <exercise>
         <webwork seed="108">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 #$decimal1 is like 1.23
@@ -1557,7 +1557,7 @@ $digit12 = random(1,9,1);
 $decimal1 = $digit10*10+$digit11+$digit12/10;
 $sum = $decimal0 + $decimal1;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Add these two decimals without using a calculator.
@@ -1582,7 +1582,7 @@ $sum = $decimal0 + $decimal1;
       </exercise>
       <exercise>
         <webwork seed="109">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $digit00 = random(1,9,1);
@@ -1597,7 +1597,7 @@ $digit13 = random(1,9,1);
 $decimal1 = $digit10*10+$digit11+$digit12/10+$digit13/100;
 $sum = $decimal0 + $decimal1;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Add these two decimals without using a calculator.
@@ -1622,7 +1622,7 @@ $sum = $decimal0 + $decimal1;
       </exercise>
       <exercise>
         <webwork seed="110">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $digit00 = random(5,9,1);
@@ -1634,7 +1634,7 @@ $digit12 = random(1,9,1);
 $decimal1 = $digit10+$digit11/10+$digit12/100;
 $dif = $decimal0 - $decimal1;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Subtract these two decimals without using a calculator.
@@ -1662,7 +1662,7 @@ $dif = $decimal0 - $decimal1;
       </exercise>
       <exercise>
         <webwork seed="111">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $digit00 = random(1,8,1);
@@ -1674,7 +1674,7 @@ $digit12 = random(1,9,1);
 $decimal1 = $digit10+$digit11/10+$digit12/100;
 $sum = $decimal0 + $decimal1;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Add these two decimals without using a calculator.
@@ -1703,7 +1703,7 @@ $sum = $decimal0 + $decimal1;
       </exercise>
       <exercise>
         <webwork seed="112">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $digit00 = random(1,8,1);
@@ -1715,7 +1715,7 @@ $digit12 = random(1,9,1);
 $decimal1 = $digit10+$digit11/10+$digit12/100;
 $dif = $decimal0 - $decimal1;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Subtract these two decimals without using a calculator.
@@ -1744,7 +1744,7 @@ $dif = $decimal0 - $decimal1;
       </exercise>
       <exercise>
         <webwork seed="113">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%9d";
@@ -1760,7 +1760,7 @@ if ($numZeroes==1) {$times = "once";}
 elsif ($numZeroes==2) {$times = "twice";}
 else {$times = "$numZeroes".' times';}
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -1794,7 +1794,7 @@ else {$times = "$numZeroes".' times';}
       </exercise>
       <exercise>
         <webwork seed="114">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%9d";
@@ -1812,7 +1812,7 @@ if ($numZeroes==1) {$times = "once";}
 elsif ($numZeroes==2) {$times = "twice";}
 else {$times = "$numZeroes".' times';}
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -1885,7 +1885,7 @@ else {$times = "$numZeroes".' times';}
       </exercise>
       <exercise>
         <webwork seed="115">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 #Context()-&gt;{format}{number} = "%9d";
@@ -1903,7 +1903,7 @@ else {$times = "$numZeroes".' times';}
 $place1 = $numZeroes+1;
 $place2 = $numZeroes+2;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -1934,7 +1934,7 @@ $place2 = $numZeroes+2;
       </exercise>
       <exercise>
         <webwork seed="116">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%9d";
@@ -1951,7 +1951,7 @@ if ($place1==1) {$times = "once";}
 elsif ($place1==2) {$times = "twice";}
 else {$times = "$place1".' times';}
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -1995,7 +1995,7 @@ else {$times = "$place1".' times';}
       </exercise>
       <exercise>
         <webwork seed="117">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%9d";
@@ -2010,7 +2010,7 @@ $ans1 = $dec/$divisor1;
 $ans2 = $ans1/10;
 $ans3 = $ans2/10;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2079,7 +2079,7 @@ $ans3 = $ans2/10;
       </exercise>
       <exercise>
         <webwork seed="118">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int = random(1,9,1);
@@ -2087,7 +2087,7 @@ $ans1 = $int/10;
 $ans2 = $int/100;
 $ans3 = $int/1000;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2157,7 +2157,7 @@ $ans3 = $int/1000;
       </exercise>
       <exercise>
         <webwork seed="119">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int = random(1,9,1)*10+random(1,9,1);
@@ -2165,7 +2165,7 @@ $ans1 = $int/10;
 $ans2 = $int/100;
 $ans3 = $int/1000;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2234,7 +2234,7 @@ $ans3 = $int/1000;
       </exercise>
       <exercise>
         <webwork seed="120">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $dec = random(11,99,1)+random(11,99,1)/100;
@@ -2242,7 +2242,7 @@ $ans1 = $dec/10;
 $ans2 = $dec/100;
 $ans3 = $dec/1000;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2311,7 +2311,7 @@ $ans3 = $dec/1000;
       </exercise>
       <exercise>
         <webwork seed="121">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int = random(1,9,1);
@@ -2319,7 +2319,7 @@ $ans1 = $int*0.1;
 $ans2 = $int*0.01;
 $ans3 = $int*0.001;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2371,7 +2371,7 @@ $ans3 = $int*0.001;
       </exercise>
       <exercise>
         <webwork seed="122">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int = random(1,9,1)*10+random(1,9,1);
@@ -2379,7 +2379,7 @@ $ans1 = $int*0.1;
 $ans2 = $int*0.01;
 $ans3 = $int*0.001;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2431,7 +2431,7 @@ $ans3 = $int*0.001;
       </exercise>
       <exercise>
         <webwork seed="123">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int = random(1,9,1)*10+random(1,9,1)+random(0,9,1)/10+random(1,9,1)/100;
@@ -2439,7 +2439,7 @@ $ans1 = $int*0.1;
 $ans2 = $int*0.01;
 $ans3 = $int*0.001;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2483,7 +2483,7 @@ $ans3 = $int*0.001;
       </exercise>
       <exercise>
         <webwork seed="124">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int = random(1,9,1);
@@ -2491,7 +2491,7 @@ $ans1 = $int/0.1;
 $ans2 = $int/0.01;
 $ans3 = $int/0.001;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2539,7 +2539,7 @@ $ans3 = $int/0.001;
       </exercise>
       <exercise>
         <webwork seed="125">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int = random(1,9,1)*10+random(1,9,1)+random(0,9,1)/10+random(1,9,1)/100;
@@ -2547,7 +2547,7 @@ $ans1 = $int/0.1;
 $ans2 = $int/0.01;
 $ans3 = $int/0.001;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate without using a calculator.
@@ -2595,7 +2595,7 @@ $ans3 = $int/0.001;
       </exercise>
       <exercise>
         <webwork seed="126">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int00 = random(2,9,1);
@@ -2614,7 +2614,7 @@ $int31 = $int01*1000;
 $product3 = $int30*$int31;
 $move3 = 3;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate the following without using a calculator:
@@ -2700,7 +2700,7 @@ $move3 = 3;
       </exercise>
       <exercise>
         <webwork seed="127">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%9d";
@@ -2729,7 +2729,7 @@ $int30 = $int00*10**$numZeroes30;
 $int31 = $int01*10**$numZeroes31;
 $product3 = $int30*$int31;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate the following without using a calculator:
@@ -2822,7 +2822,7 @@ $product3 = $int30*$int31;
       </exercise>
       <exercise>
         <webwork seed="128">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 #Context()-&gt;{format}{number} = "%9d";
@@ -2842,7 +2842,7 @@ $int31 = $int01/1000;
 $product3 = $int30*$int31;
 $move3 = 3;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate the following without using a calculator:
@@ -2930,7 +2930,7 @@ $move3 = 3;
       </exercise>
       <exercise>
         <webwork seed="129">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 #Context()-&gt;{format}{number} = "%9d";
@@ -2950,7 +2950,7 @@ $power31 = random(1,3,1);
 $int31 = $int01/10**$power31;
 $product3 = $int30*$int31;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate the following without using a calculator:
@@ -3045,7 +3045,7 @@ $product3 = $int30*$int31;
       </exercise>
       <exercise>
         <webwork seed="130">
-            <setup>
+ 
 <pg-code>
 sub moveOutput {
 my ($new,$old) = @_;
@@ -3089,7 +3089,7 @@ $int31 = splice(@num2,random(0,$#num2,1),1);
 $product3 = $int30*$int31;
 } until ( ($product1!=$product2) &amp;&amp; ($product1!=$product3) &amp;&amp; ($product2!=$product3) );
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Calculate the following without using a calculator:
@@ -3176,7 +3176,7 @@ $product3 = $int30*$int31;
       <exercise>
         <webwork seed="131">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $num00 = random(1,9,1)*10+random(1,9,1);
@@ -3211,7 +3211,7 @@ if ($place1==1) {$times = "once";}
 elsif ($place1==2) {$times = "twice";}
 else {$times = "$place1".' times';}
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 It's given that <m><var name="$num00"/>\cdot<var name="$num01"/>=<var name="$product0"/></m>.
@@ -3304,7 +3304,7 @@ else {$times = "$place1".' times';}
       </exercise>
       <exercise>
         <webwork seed="132">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int1 = random(1,9,1)*10+random(1,9,1);
@@ -3320,7 +3320,7 @@ $dec1 = $int1/$factor1;
 $dec2 = $int2/$factor2;
 $product2 = $dec1*$dec2;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 It's give that <m><var name="$int1"/>\cdot<var name="$int2"/>=<var name="$product1"/></m>.
@@ -3376,7 +3376,7 @@ $product2 = $dec1*$dec2;
       </exercise>
       <exercise>
         <webwork seed="133">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int1 = random(1,9,1)*10+random(1,9,1);
@@ -3393,7 +3393,7 @@ $dec2 = $int2/$factor2;
 $product2 = -$dec1*$dec2;
 $absProduct2 = -$product2;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 It's give that <m><var name="$int1"/>\cdot<var name="$int2"/>=<var name="$product1"/></m>.
@@ -3464,7 +3464,7 @@ $absProduct2 = -$product2;
       </exercise>
       <exercise>
         <webwork seed="134">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $int1 = random(1,9,1)*10+random(1,9,1);
@@ -3480,7 +3480,7 @@ $dec1 = $int1/$factor1;
 $dec2 = $int2/$factor2;
 $product2 = $dec1*$dec2;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 It's give that <m><var name="$int1"/>\cdot<var name="$int2"/>=<var name="$product1"/></m>.
@@ -3553,7 +3553,7 @@ $product2 = $dec1*$dec2;
       <exercise>
         <webwork seed="135">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $num00 = random(1,9,1)*10+random(1,9,1);
@@ -3584,7 +3584,7 @@ $product1 = Compute("$product1");
 $product2 = Compute("$product2");
 $product3 = Compute("$product3");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 It's given that <m><var name="$num00"/>\cdot<var name="$num01"/>=<var name="$product0"/></m>.
@@ -3679,7 +3679,7 @@ $product3 = Compute("$product3");
       <exercise>
         <webwork seed="136">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $num00 = random(1,9,1)*100+random(0,9,1)*10+random(1,9,1);
@@ -3716,7 +3716,7 @@ $product1 = Compute($product1);
 $product2 = Compute($product2);
 $product3 = Compute($product3);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 It's given that <m><var name="$num00"/>\cdot<var name="$num01"/>=<var name="$product0"/></m>.
@@ -3811,7 +3811,7 @@ $product3 = Compute($product3);
       <exercise>
         <webwork seed="137">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 %moves = (
@@ -3849,7 +3849,7 @@ $product1 = Compute($product1);
 $product2 = Compute($product2);
 $product3 = Compute($product3);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 It's given that <m><var name="$num00"/>\cdot<var name="$num01"/>=<var name="$product0"/></m>.
@@ -3946,7 +3946,7 @@ $product3 = Compute($product3);
       </exercise>
       <exercise>
         <webwork seed="138">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $a = random(2,5,1);
@@ -3955,7 +3955,7 @@ while ($b==$a) {$b = random(2,5,1);}
 $ans1 = Compute(($a)**2);
 $ans2 = Compute(($b)**3);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Evaluate the following expressions that have integer exponents:
@@ -4004,7 +4004,7 @@ $ans2 = Compute(($b)**3);
       </exercise>
       <exercise>
         <webwork seed="139">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $a=random(10,20,1);
@@ -4014,7 +4014,7 @@ $ans1 = 1;
 $ans2 = 0;
 $ans3 = $c;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Evaluate the following expressions that have integer exponents:
@@ -4075,7 +4075,7 @@ $ans3 = $c;
       </exercise>
       <exercise>
         <webwork seed="140">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $a=random(2,9,1);
@@ -4089,7 +4089,7 @@ $frac1 = "\frac{$questions[1][0]}{$questions[1][1]}";
 $ans0 = Compute("$questions[0][2]");
 $ans1 = Compute("$questions[1][2]");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Evaluate the following expressions.
@@ -4182,7 +4182,7 @@ $ans1 = Compute("$questions[1][2]");
       </exercise>
       <exercise>
         <webwork seed="141">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%u";
@@ -4215,7 +4215,7 @@ $zeroText1 = ($a1Exp==1) ? "zero" : "zeroes";
 $itOrThem = ($a1Exp==1) ? "it" : "them";
 $zeroText2 = ($b2Exp==1) ? "zero" : "zeroes";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Do the following division problems without using a calculator.
@@ -4303,7 +4303,7 @@ $zeroText2 = ($b2Exp==1) ? "zero" : "zeroes";
       </exercise>
       <exercise>
         <webwork seed="142">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%u";
@@ -4334,7 +4334,7 @@ $sumExp1 = $a1Exp+$b1Exp;
 $sumExp2 = $a2Exp+$b2Exp;
 $abTen = 10**$sumExp2;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Do the following multiplication problems without using a calculator.
@@ -4413,7 +4413,7 @@ $abTen = 10**$sumExp2;
         <webwork seed="143">
             <pg-macros><macro-file>contextCurrency.pl</macro-file>
             <macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $a = random(10,30,1);
@@ -4431,7 +4431,7 @@ $cC = Currency($c);
 $ansC = Currency($ans);
 $Pronoun = ucfirst($pronoun);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> is gambling.
@@ -4457,7 +4457,7 @@ $Pronoun = ucfirst($pronoun);
       <exercise>
         <webwork seed="144">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $a = random(10,50,1);
@@ -4469,7 +4469,7 @@ $pronoun = 'he' if ($sex eq 'male');
 $pronoun = 'she' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> is working to pass a local measure,
@@ -4498,7 +4498,7 @@ $name = RandomName(sex=&gt;$sex);
       <exercise>
         <webwork seed="145">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 @months = ( );
@@ -4523,7 +4523,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> collects Pokemon cards.
@@ -4646,7 +4646,7 @@ $name = RandomName(sex=&gt;$sex);
       </exercise>
       <exercise>
         <webwork seed="146">
-            <setup>
+ 
 <pg-code>
 $refreshCachedImages = 1;
 Context("LimitedFraction");
@@ -4726,7 +4726,7 @@ $p3 = $p[3];
 $p4 = $p[4];
 $s1 = $p1+$p2+$p3;
 </pg-code>
-            </setup>
+ 
             <statement>
               <sidebyside widths="40%">
                 <image pg-name="$gr">
@@ -4771,7 +4771,7 @@ $s1 = $p1+$p2+$p3;
       <exercise>
         <webwork seed="147">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 sub isStringInArray {
 my ($item,@array) = @_;
@@ -4878,7 +4878,7 @@ $mi2M = $min2*100;
 $mS = $m1M+$m2M;
 $miS = $mi1M+$mi2M;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The following bar graph shows the distance different runners ran in a relay race.
@@ -4938,7 +4938,7 @@ $miS = $mi1M+$mi2M;
       </exercise>
       <exercise>
         <webwork seed="148">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numPoints = 5;
@@ -5005,7 +5005,7 @@ $miP = $dLP;$mP = $d1P;
 $mP = $dLP;$miP = $d1P;
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 This line graph shows a club's membership change over a few months.
@@ -5043,7 +5043,7 @@ $mP = $dLP;$miP = $d1P;
       </exercise>
       <exercise>
         <webwork seed="149">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $a = random(2,9,1);
@@ -5056,7 +5056,7 @@ $money0 = $problems[0][0]; $decimal0 = $problems[0][1];
 $money1 = $problems[1][0]; $decimal1 = $problems[1][1];
 $money2 = $problems[2][0]; $decimal2 = $problems[2][1];
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 If <m>1</m> dollar is represented by the integer <m>1</m>,
@@ -5104,7 +5104,7 @@ $money2 = $problems[2][0]; $decimal2 = $problems[2][1];
       </exercise>
       <exercise>
         <webwork seed="150">
-            <setup>
+ 
 <pg-code>
 $refreshCachedImages = 1;
 Context("Numeric");
@@ -5140,7 +5140,7 @@ $ansP = NumberWithUnits("$perimeter cm");
 $ansA = NumberWithUnits("$area cm^2");
 $baseWithUnit = NumberWithUnits("$base cm");
 </pg-code>
-            </setup>
+ 
             <statement>
               <sidebyside widths="40%">
                 <image pg-name="$p">
@@ -5193,14 +5193,14 @@ $baseWithUnit = NumberWithUnits("$base cm");
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/MultiplicationWordProblem10.pg"  /> -->
         <webwork seed="164">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numStudents = random(15,30,1);
 $each = random(10,20,1);
 $product = $numStudents*$each;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 In a class, the teacher handed out <m><var name="$each"/></m> marbles to each of his <m><var name="$numStudents"/></m> students.
@@ -5235,7 +5235,7 @@ $product = $numStudents*$each;
         <webwork seed="165">
             <pg-macros><macro-file>contextCurrency.pl</macro-file>
             <macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $num = random(30,50,1);
@@ -5251,7 +5251,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> is saving money to purchase <m><var name="$num"/></m> Lego figures.
@@ -5288,7 +5288,7 @@ $name = RandomName(sex=&gt;$sex);
         <webwork seed="166">
             <pg-macros><macro-file>contextCurrency.pl</macro-file>
             <macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numSmurf = random(10,20,1);
@@ -5313,7 +5313,7 @@ $name = RandomName(sex=&gt;$sex);
 $Pronoun = 'He' if ($sex eq 'male');
 $Pronoun = 'She' if ($sex eq 'female');
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> is saving money to buy action figures.
@@ -5367,7 +5367,7 @@ $Pronoun = 'She' if ($sex eq 'female');
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/MultiplicationWordProblem40.pg"  /> -->
         <webwork seed="167">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $weeks = random(9,15,1);
@@ -5395,7 +5395,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> loves sports.
@@ -5433,7 +5433,7 @@ $name = RandomName(sex=&gt;$sex);
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/MultiplicationWordProblem50.pg"  /> -->
         <webwork seed="168">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $pages1 = random(30,50,1);
@@ -5443,7 +5443,7 @@ $total = ($pages1+$more)*$days;
 $name1 = RandomName();
 do {$name2 = RandomName();} until ($name1 ne $name2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name1"/> and <var name="$name2"/> are participating in a summer reading program.
@@ -5482,7 +5482,7 @@ do {$name2 = RandomName();} until ($name1 ne $name2);
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/MultiplicationWordProblem60.pg"  /> -->
         <webwork seed="169">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $pages1 = random(30,50,1);
@@ -5492,7 +5492,7 @@ $totalMore = $more*$days;
 $name1 = RandomName();
 do {$name2 = RandomName();} until ($name1 ne $name2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name1"/> and <var name="$name2"/> are participating in a summer reading program.
@@ -5523,7 +5523,7 @@ do {$name2 = RandomName();} until ($name1 ne $name2);
       </exercise>
       <exercise>
         <webwork seed="169">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numPerMinute = random(2,9,1);
@@ -5531,7 +5531,7 @@ $numPerHour = $numPerMinute*60;
 $numPerDay = $numPerHour*24;
 $numPerWeek = $numPerDay*7;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A queen termite produces <m><var name="$numPerMinute"/></m> eggs every minute.
@@ -5571,7 +5571,7 @@ $numPerWeek = $numPerDay*7;
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/MultiplicationWordProblem80.pg"  /> -->
         <webwork seed="170">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numPerGame = random(5,20,1);
@@ -5586,7 +5586,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> plays in <var name="$possessive"/> school's basketball team.
@@ -5635,7 +5635,7 @@ $name = RandomName(sex=&gt;$sex);
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/MultiplicationWordProblem90.pg"  /> -->
         <webwork seed="171">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numGamesPerMonth = random(2,5,1);
@@ -5654,7 +5654,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A city holds a walking competition <var name="$numGamesOutput"/> per month.
@@ -5702,14 +5702,14 @@ $name = RandomName(sex=&gt;$sex);
       </exercise>
       <exercise>
         <webwork seed="151">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numStudents = random(15,30,1);
 $each = random(10,20,1);
 $product = $numStudents*$each;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 In a class, the teacher will hand out a total of <m><var name="$product"/></m> marbles to all his <m><var name="$numStudents"/></m> students evenly.
@@ -5747,14 +5747,14 @@ $product = $numStudents*$each;
       </exercise>
       <exercise>
         <webwork seed="152">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numStudents = random(15,30,1);
 $each = random(10,20,1);
 $product = $numStudents*$each;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 For an activity in a class,
@@ -5796,7 +5796,7 @@ $product = $numStudents*$each;
         <webwork seed="153">
             <pg-macros><macro-file>contextCurrency.pl</macro-file>
             <macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $weeklySpending = random(5,15,1);
@@ -5812,7 +5812,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> saved <m><var name="$totalU"/></m>,
@@ -5855,7 +5855,7 @@ $name = RandomName(sex=&gt;$sex);
       <exercise>
         <webwork seed="154">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $weekly = random(2,7,1);
@@ -5869,7 +5869,7 @@ $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 $Pronoun = "He";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> just bought a total of <m><var name="$total"/></m> movies.
@@ -5912,7 +5912,7 @@ $Pronoun = "He";
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem50.pg"  /> -->
         <webwork seed="155">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $speed= random(30,70,1);
@@ -5928,7 +5928,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> drove a total of <m><var name="$totalU"/></m> in <m><var name="$hoursU"/></m>.
@@ -5971,7 +5971,7 @@ $name = RandomName(sex=&gt;$sex);
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem52.pg"  /> -->
         <webwork seed="156">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $speed= random(30,70,1);
@@ -5987,7 +5987,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> drove <m><var name="$totalU"/></m> at a constant speed of <m><var name="$speedU"/></m>.
@@ -6025,7 +6025,7 @@ $name = RandomName(sex=&gt;$sex);
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem60.pg"  /> -->
         <webwork seed="157">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $rate= random(30,50,1);
@@ -6035,7 +6035,7 @@ $rateU = NumberWithUnits("$rate L/min");
 $minutesU = NumberWithUnits("$minutes min");
 $totalU = NumberWithUnits("$total L");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A tank can drain <m><var name="$totalU"/></m> (liters) of water in <m><var name="$minutesU"/></m> minutes.
@@ -6078,7 +6078,7 @@ $totalU = NumberWithUnits("$total L");
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem62.pg"  /> -->
         <webwork seed="158">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $rate= random(30,50,1);
@@ -6088,7 +6088,7 @@ $rateU = NumberWithUnits("$rate L/min");
 $minutesU = NumberWithUnits("$minutes min");
 $totalU = NumberWithUnits("$total L");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A tank drains <m><var name="$rate"/></m> liters of water per minute.
@@ -6128,7 +6128,7 @@ $totalU = NumberWithUnits("$total L");
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem70.pg"  /> -->
         <webwork seed="159">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numPerMinute = random(2,9,1);
@@ -6136,7 +6136,7 @@ $numPerHour = $numPerMinute*60;
 $numPerDay = $numPerHour*24;
 $numPerWeek = $numPerDay*7;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A queen termite produces <m><var name="$numPerWeek"/></m> eggs every week.
@@ -6170,7 +6170,7 @@ $numPerWeek = $numPerDay*7;
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem80.pg"  /> -->
         <webwork seed="160">
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numPerGame = random(5,20,1);
@@ -6185,7 +6185,7 @@ $possessive = 'his' if ($sex eq 'male');
 $possessive = 'her' if ($sex eq 'female');
 $name = RandomName(sex=&gt;$sex);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> is a star player in <var name="$possessive"/> basketball team.
@@ -6235,14 +6235,14 @@ $name = RandomName(sex=&gt;$sex);
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem90.pg"  /> -->
         <webwork seed="161">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $rate= random(110,200,1);
 $days = random(30,50,1);
 $total = $rate*$days;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A team is climbing a mountain,
@@ -6280,14 +6280,14 @@ $total = $rate*$days;
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem100.pg"  /> -->
         <webwork seed="162">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $rate= random(30,50,1);
 $days = random(20,60,1);
 $total = $rate*$days;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 An archeology team is studying a buried city.
@@ -6325,14 +6325,14 @@ $total = $rate*$days;
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/DivisionWordProblem110.pg"  /> -->
         <webwork seed="163">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $each = random(5,20,1);
 $pieces = random(300,600,1);
 $total = $each*$pieces;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 One piece of paper is approximately <m><var name="$each"/></m> millimeters in thickness.
@@ -6369,7 +6369,7 @@ $total = $each*$pieces;
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/RemainderWordProblem10.pg"  /> -->
         <webwork seed="200">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numStudents = random(15,30,1);
@@ -6385,7 +6385,7 @@ $symbol = "=";
 }
 $s2 = $each*$numStudents;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 In a class, the teacher will hand out <m><var name="$total"/></m> marbles to all his <m><var name="$numStudents"/></m> students evenly.
@@ -6453,7 +6453,7 @@ $s2 = $each*$numStudents;
       </exercise>
       <exercise>
         <webwork seed="200">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $numPiles = random(2,5,1);
@@ -6471,7 +6471,7 @@ $symbol = "=";
 }
 $s2 = $eachStudent*$numStudents;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A teacher is doing an activity in a class with <m><var name="$numStudents"/></m> students.
@@ -6544,7 +6544,7 @@ $s2 = $eachStudent*$numStudents;
         <webwork seed="201">
             <pg-macros><macro-file>contextCurrency.pl</macro-file>
             <macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $weeklySpending = random(5,15,1);
@@ -6573,7 +6573,7 @@ $symbol = "=";
 $s2 = $weeklySpending*$weeks;
 $s2U = Currency($s2);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> saved <m><var name="$totalU"/></m>,
@@ -6645,7 +6645,7 @@ $s2U = Currency($s2);
         <webwork seed="201">
             <pg-macros><macro-file>contextCurrency.pl</macro-file>
             <macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $each = random(5,15,1);
@@ -6670,7 +6670,7 @@ $symbol = "\approx";
 $symbol = "=";
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 <var name="$name"/> saved <m><var name="$totalU"/></m>,
@@ -6706,7 +6706,7 @@ $symbol = "=";
       <exercise>
 <!-- <webwork source="Contrib/PCC/BasicMath/MultiplicationDivision/RemainderWordProblem30.pg"  /> -->
         <webwork seed="202">
-            <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 $buses = random(11,19,1);
@@ -6722,7 +6722,7 @@ $symbol = "\approx";
 $symbol = "=";
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A school is planning for a field trip for <m><var name="$total"/></m> students and staff.

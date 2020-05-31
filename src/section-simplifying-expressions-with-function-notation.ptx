@@ -113,7 +113,7 @@
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are(t=&gt;'Real');
@@ -125,7 +125,7 @@ Formula("3.34t^2+26.2t+6980") =&gt; "This is N(t), not N(-t).",
 Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
 ));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               The NASDAQ Composite Index measures how well a portion of the stock market is doing.
@@ -246,11 +246,11 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $answer = Formula("x+5+sqrt(x+13)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               If <m>q(x)=x+\sqrt{x+8}</m>, find and simplify a formula for <m>q(x+5)</m>.
@@ -334,7 +334,7 @@ $answer = Formula("x+5+sqrt(x+13)");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -354,7 +354,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -379,7 +379,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -399,7 +399,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -424,7 +424,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -442,7 +442,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -466,7 +466,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -484,7 +484,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -508,7 +508,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -528,7 +528,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -553,7 +553,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -573,7 +573,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -598,7 +598,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -625,7 +625,7 @@ Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -650,7 +650,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -677,7 +677,7 @@ Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -702,7 +702,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -717,7 +717,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
@@ -740,7 +740,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -755,7 +755,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
@@ -778,7 +778,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -793,7 +793,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
@@ -816,7 +816,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -831,7 +831,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
@@ -854,7 +854,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -876,7 +876,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -901,7 +901,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -923,7 +923,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -948,7 +948,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -969,7 +969,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -994,7 +994,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1015,7 +1015,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -1040,7 +1040,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1056,7 +1056,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$a"/><var name="$f"/>(<var name="$x"/>)</m>,
@@ -1079,7 +1079,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1095,7 +1095,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$a"/><var name="$f"/>(<var name="$x"/>)</m>,
@@ -1118,7 +1118,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1141,7 +1141,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -1167,7 +1167,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1190,7 +1190,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -1216,7 +1216,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1232,7 +1232,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
@@ -1255,7 +1255,7 @@ $answer = Formula("$answer");
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 $x = RandomVariableName(type=&gt;'variable');
 $f = RandomVariableName(type=&gt;'function');
@@ -1271,7 +1271,7 @@ Context("LimitedPolynomial-Strict");
 Context()-&gt;variables-&gt;are($x=&gt;'Real');
 $answer = Formula("$answer");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
@@ -1293,7 +1293,7 @@ $answer = Formula("$answer");
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -1338,7 +1338,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -1362,7 +1362,7 @@ return $OK;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -1407,7 +1407,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -1431,7 +1431,7 @@ return $OK;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -1466,7 +1466,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(x)+<var name="$a"/></m>,
@@ -1487,7 +1487,7 @@ return $OK;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -1522,7 +1522,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(x)+<var name="$a"/></m>,
@@ -1543,7 +1543,7 @@ return $OK;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -1583,7 +1583,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -1607,7 +1607,7 @@ return $OK;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -1647,7 +1647,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -1673,7 +1673,7 @@ return $OK;
   <!--     <exercise>
         <webwork>
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context()->operators->set(
 '+' => {class => 'bizarro::BOP::add', isCommand => 1},
@@ -1712,7 +1712,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f" />(<var name="$inner" />)</m>,
@@ -1738,7 +1738,7 @@ return $OK;
       <exercise>
         <webwork>
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -1777,7 +1777,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
@@ -1802,7 +1802,7 @@ return $OK;
       <!-- <exercise>
         <webwork>
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context()->operators->set(
 '+' => {class => 'bizarro::BOP::add', isCommand => 1},
@@ -1842,7 +1842,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f" />(<var name="$inner" />)</m>,
@@ -1867,7 +1867,7 @@ return $OK;
       <!-- <exercise>
         <webwork>
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context()->operators->set(
 '+' => {class => 'bizarro::BOP::add', isCommand => 1},
@@ -1907,7 +1907,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Simplify <m><var name="$f" />(<var name="$inner" />)</m>,
@@ -1951,7 +1951,7 @@ return $OK;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -1981,7 +1981,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Suppose <m>T(t)</m> represents the temperature outside,
@@ -2003,7 +2003,7 @@ return $OK;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
@@ -2033,7 +2033,7 @@ Value::Error("Your answer is correct, but please simplify it further") unless $O
 return $OK;
 });
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Suppose <m>G(t)</m> represents how many gigabytes of data has been downloaded <m>t</m> minutes after you started a download.

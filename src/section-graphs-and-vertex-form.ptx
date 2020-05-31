@@ -274,7 +274,7 @@ clip=false]
 <!-- <p>Now you can try reading the vertex of each function.</p> -->
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("Point");
 $vertex[0] = Point("(-4,10)");
@@ -282,7 +282,7 @@ $vertex[1] = Point("(1,2)");
 $vertex[2] = Point("(10,-5)");
 $vertex[3] = Point("(-7,-13)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Find the vertex of each quadratic function.
@@ -491,7 +491,7 @@ $vertex[3] = Point("(-7,-13)");
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("Interval");
 $domain = Interval("(-inf,inf)");
@@ -500,7 +500,7 @@ $range[1] = Interval("[20,inf)");
 $range[2] = Interval("(-inf,0]");
 $range[3] = Interval("[-4,inf)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Identify the domain and range of each quadratic function.
@@ -814,7 +814,7 @@ minor ytick={-9,-8,...,5}]
 <!-- <p>Now you can try identifying the horizontal intercepts from each factored form.</p> -->
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("Point");
 $xints[0] = List(Point(-2,0),Point(4,0));
@@ -822,7 +822,7 @@ $xints[1] = List(Point(7,0),Point(5,0));
 $xints[2] = List(Point(-1,0),Point(-4,0));
 $xints[3] = List(Point(8,0),Point(-3,0));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Write the horizontal intercepts of each function.
@@ -959,7 +959,7 @@ $xints[3] = List(Point(8,0),Point(-3,0));
     <exercisegroup cols="2">
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=&gt;'function');
@@ -1022,7 +1022,7 @@ Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,reduceConstantFunctions=&gt;0)
 $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -1136,7 +1136,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=&gt;'function');
@@ -1199,7 +1199,7 @@ Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,reduceConstantFunctions=&gt;0)
 $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -1313,7 +1313,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=&gt;'function');
@@ -1376,7 +1376,7 @@ Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,reduceConstantFunctions=&gt;0)
 $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -1490,7 +1490,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=&gt;'function');
@@ -1554,7 +1554,7 @@ Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,reduceConstantFunctions=&gt;0)
 $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -1668,7 +1668,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=&gt;'function');
@@ -1732,7 +1732,7 @@ Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,reduceConstantFunctions=&gt;0)
 $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -1846,7 +1846,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=&gt;'function');
@@ -1911,7 +1911,7 @@ Context()-&gt;flags-&gt;set(reduceConstants=&gt;0,reduceConstantFunctions=&gt;0)
 $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -2025,7 +2025,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
       </exercise>
     <!--   <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()->noreduce('(-x)+y', '(-x)-y');
 $f = RandomVariableName(type=>'function');
@@ -2090,7 +2090,7 @@ Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
 $rs[$i] = $formula->substitute(x=>$x[$i]);
 }
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f" />(x)=<var name="$formula" /></m>.
@@ -2389,7 +2389,7 @@ minor ytick = {-5,0,...,95},
 </introduction>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=>'function');
 $bound = 10;
@@ -2432,7 +2432,7 @@ elsif ($a > 0 and $inequality eq '\leq' or $a &lt; 0 and $inequality eq '\geq') 
 elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') {$ineqsolution = Union("(-inf,$s1]U[$s2,inf)");}
 } until (abs($h) &lt; $bound and abs($k) &lt; $bound and abs($c) &lt; $bound and abs($p) &lt; $bound and abs($fofp) &lt; $bound and abs($q) &lt; $bound and abs($s1) &lt; $bound and abs($s2) &lt; $bound and $fofp != 0);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Let <m><var name="$f" />(x)=<var name="$formula"/></m>. Use technology to find the following.</p>
 <instruction>Any decimal answers should be correct to four significant digits.</instruction>
@@ -2442,7 +2442,7 @@ elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') 
 </exercise>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=>'function');
 $bound = 10;
@@ -2485,7 +2485,7 @@ elsif ($a > 0 and $inequality eq '\leq' or $a &lt; 0 and $inequality eq '\geq') 
 elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') {$ineqsolution = Union("(-inf,$s1]U[$s2,inf)");}
 } until (abs($h) &lt; $bound and abs($k) &lt; $bound and abs($c) &lt; $bound and abs($p) &lt; $bound and abs($fofp) &lt; $bound and abs($q) &lt; $bound and abs($s1) &lt; $bound and abs($s2) &lt; $bound and $fofp != 0);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Let <m><var name="$f" />(x)=<var name="$formula"/></m>. Use technology to find the following.</p>
 <instruction>Any decimal answers should be correct to four significant digits.</instruction>
@@ -2495,7 +2495,7 @@ elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') 
 </exercise>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=>'function');
 $bound = 20;
@@ -2538,7 +2538,7 @@ elsif ($a > 0 and $inequality eq '\leq' or $a &lt; 0 and $inequality eq '\geq') 
 elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') {$ineqsolution = Union("(-inf,$s1]U[$s2,inf)");}
 } until (abs($h) &lt; $bound and abs($k) &lt; $bound and abs($c) &lt; $bound and abs($p) &lt; $bound and abs($fofp) &lt; $bound and abs($q) &lt; $bound and abs($s1) &lt; $bound and abs($s2) &lt; $bound and $fofp != 0);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Let <m><var name="$f" />(x)=<var name="$formula"/></m>. Use technology to find the following.</p>
 <instruction>Any decimal answers should be correct to four significant digits.</instruction>
@@ -2548,7 +2548,7 @@ elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') 
 </exercise>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=>'function');
 $bound = 20;
@@ -2591,7 +2591,7 @@ elsif ($a > 0 and $inequality eq '\leq' or $a &lt; 0 and $inequality eq '\geq') 
 elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') {$ineqsolution = Union("(-inf,$s1]U[$s2,inf)");}
 } until (abs($h) &lt; $bound and abs($k) &lt; $bound and abs($c) &lt; $bound and abs($p) &lt; $bound and abs($fofp) &lt; $bound and abs($q) &lt; $bound and abs($s1) &lt; $bound and abs($s2) &lt; $bound and $fofp != 0);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Let <m><var name="$f" />(x)=<var name="$formula"/></m>. Use technology to find the following.</p>
 <instruction>Any decimal answers should be correct to four significant digits.</instruction>
@@ -2601,7 +2601,7 @@ elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') 
 </exercise>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=>'function');
 $bound = 20;
@@ -2644,7 +2644,7 @@ elsif ($a > 0 and $inequality eq '\leq' or $a &lt; 0 and $inequality eq '\geq') 
 elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') {$ineqsolution = Union("(-inf,$s1]U[$s2,inf)");}
 } until (abs($h) &lt; $bound and abs($k) &lt; $bound and abs($c) &lt; $bound and abs($p) &lt; $bound and abs($fofp) &lt; $bound and abs($q) &lt; $bound and abs($s1) &lt; $bound and abs($s2) &lt; $bound and $fofp != 0);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Let <m><var name="$f" />(x)=<var name="$formula"/></m>. Use technology to find the following.</p>
 <instruction>Any decimal answers should be correct to four significant digits.</instruction>
@@ -2654,7 +2654,7 @@ elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') 
 </exercise>
 <exercise>
 <webwork>
-<setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=>'function');
 $bound = 20;
@@ -2697,7 +2697,7 @@ elsif ($a > 0 and $inequality eq '\leq' or $a &lt; 0 and $inequality eq '\geq') 
 elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') {$ineqsolution = Union("(-inf,$s1]U[$s2,inf)");}
 } until (abs($h) &lt; $bound and abs($k) &lt; $bound and abs($c) &lt; $bound and abs($p) &lt; $bound and abs($fofp) &lt; $bound and abs($q) &lt; $bound and abs($s1) &lt; $bound and abs($s2) &lt; $bound and $fofp != 0);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Let <m><var name="$f" />(x)=<var name="$formula"/></m>. Use technology to find the following.</p>
 <instruction>Any decimal answers should be correct to four significant digits.</instruction>
@@ -2715,7 +2715,7 @@ elsif ($a > 0 and $inequality eq '\geq' or $a &lt; 0 and $inequality eq '\leq') 
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -2764,7 +2764,7 @@ $gr->lb( new Label($hx+$marksep[0]/8, $hy, "h(t)",'red','left','middle'));
 $gr->stamps( closed_circle(0,$c,'red') );
 $gr->lb( new Label($marksep[0]/8, $c, "(0,$c)",'red','left','middle'));
 </pg-code>
-</setup>
+ 
 <statement>
 <p>An object was launched from the top of a hill with an upward vertical velocity of <m><var name="$b"/></m> feet per second. The height of the object can be modeled by the function <m>h(t)=<var name="$func"/></m>, where <m>t</m> represents the number of seconds after the launch. Assume the object landed on the ground at sea level. Find the answer using graphing technology.</p>
 <p>The object's height was <var name="$heightU" width="10" /> feet when it was launched.</p>
@@ -2783,7 +2783,7 @@ $gr->lb( new Label($marksep[0]/8, $c, "(0,$c)",'red','left','middle'));
 <! Fill in a table using technology -->
 <!-- <exercise>
 <webwork >
-<setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()->variables->add(t => 'Real');
@@ -2801,7 +2801,7 @@ $h1 = $func->eval(t=>0.1);
 $h2 = $func->eval(t=>0.2);
 $h3 = $func->eval(t=>0.3);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>An object was launched from the top of a hill with an upward vertical velocity of <m><var name="$b"/></m> feet per second. The height of the object can be modeled by the function <m>h(t)=<var name="$func"/></m>, where <m>t</m> represents the number of seconds after the launch. Assume the object landed on the ground at sea level. Find the answer using graphing technology.</p>
 <p>Use a table to list the object's height within the first second after it was launched, at an increment of <m>0.1</m> second. Fill in the blanks. Round your answers to two decimal places when needed.</p>
@@ -2864,7 +2864,7 @@ $h3 = $func->eval(t=>0.3);
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -2914,7 +2914,7 @@ $gr->lb( new Label($hx-$marksep[0]/8, $hy, "h(t)",'red','right','middle'));
 $gr->stamps( closed_circle($t1,$h1,'red') );
 $gr->lb( new Label($t1+$marksep[0]/8, $h1, "($t1,$h1)",'red','left','middle'));
 </pg-code>
-</setup>
+ 
 <statement>
 <p>An object was launched from the top of a hill with an upward vertical velocity of <m><var name="$b"/></m> feet per second. The height of the object can be modeled by the function <m>h(t)=<var name="$func"/></m>, where <m>t</m> represents the number of seconds after the launch. Assume the object landed on the ground at sea level. Use technology to find the answer.</p>
 <p>The object was <var name="$h1" width="10" /> feet in the air <m><var name="$t1"/></m> seconds after it was launched.</p>
@@ -2936,7 +2936,7 @@ $gr->lb( new Label($t1+$marksep[0]/8, $h1, "($t1,$h1)",'red','left','middle'));
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -2984,7 +2984,7 @@ $gr->lb( new Label($hx-$marksep[0]/8, $hy, "h(t)",'red','right','middle'));
 $gr->stamps( closed_circle($xVertex,$yVertex,'red') );
 $gr->lb( new Label($xVertex, $yVertex+$marksep[1]/4, "($xVertex,$yVertex)",'red','center','bottom'));
 </pg-code>
-</setup> -->
+  -->
 <!-- <statement>
 <p>An object was launched from the top of a hill with an upward vertical velocity of <m><var name="$b"/></m> feet per second. The height of the object can be modeled by the function <m>h(t)=<var name="$func"/></m>, where <m>t</m> represents the number of seconds after the launch. Assume the object landed on the ground at sea level. Find the answer using technology.</p>
 <p><var name="$xVertex" width="10" /> seconds after its launch, the object reached its maximum height of <var name="$yVertex" width="10" /> feet.</p>
@@ -3007,7 +3007,7 @@ $gr->lb( new Label($xVertex, $yVertex+$marksep[1]/4, "($xVertex,$yVertex)",'red'
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -3055,7 +3055,7 @@ $gr->lb( new Label($hx-$marksep[0]/8, $hy, "h(t)",'red','right','middle'));
 $gr->stamps( closed_circle($xInt2,0,'red') );
 $gr->lb( new Label($xInt2, $marksep[1]/4, "($xInt2,0)",'red','right','bottom'));
 </pg-code>
-</setup>
+ 
 <statement>
 <p>An object was launched from the top of a hill with an upward vertical velocity of <m><var name="$b"/></m> feet per second. The height of the object can be modeled by the function <m>h(t)=<var name="$func"/></m>, where <m>t</m> represents the number of seconds after the launch. Assume the object landed on the ground at sea level. Find the answer using technology.</p>
 <p><var name="$xInt2" width="10" /> seconds after its launch, the object fell to the ground at sea level.</p>
@@ -3077,7 +3077,7 @@ $gr->lb( new Label($xInt2, $marksep[1]/4, "($xInt2,0)",'red','right','bottom'));
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -3136,7 +3136,7 @@ $gr->stamps( closed_circle($t2,$h1,'red') );
 $gr->lb( new Label($t2, $h1+$marksep[1]/4, "($t2Show,$h1)",'red','center','bottom'));
 $ans = List($t1,$t2);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>An object was launched from the top of a hill with an upward vertical velocity of <m><var name="$b"/></m> feet per second. The height of the object can be modeled by the function <m>h(t)=<var name="$func"/></m>, where <m>t</m> represents the number of seconds after the launch. Assume the object landed on the ground at sea level. Find the answer using technology. Round your answers to two decimal places. If there is more than one answer, use a comma to separate them.</p>
 <p>The object was <m><var name="$h1"/></m> feet high at the following number of seconds after it was launched: <var name="$ans" width="10" />.</p>
@@ -3158,7 +3158,7 @@ $ans = List($t1,$t2);
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -3206,7 +3206,7 @@ $gr->lb( new Label($hx-$marksep[0]/8, $hy, "d(t)",'red','right','middle'));
 $gr->stamps( closed_circle($t1,$d1,'red') );
 $gr->lb( new Label($t1-$marksep[0]/8, $d1+$marksep[1]/8, "($t1,$d1)",'red','right','bottom'));
 </pg-code>
-</setup>
+ 
 <statement>
 <p>In a race, a car drove through the starting line at the speed of <m><var name="$v0"/></m> meters per second. It was accelerating at <m><var name="$acceleration"/></m> meters per second squared. Its distance from the starting position can be modeled by the function <m>d(t)=<var name="$func"/></m>. Find the answer using technology.</p>
 <p>After <var name="$t1" width="10" /> seconds, the car was <m><var name="$d1"/></m> meters away from the starting position.</p>
@@ -3227,7 +3227,7 @@ $gr->lb( new Label($t1-$marksep[0]/8, $d1+$marksep[1]/8, "($t1,$d1)",'red','righ
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -3275,7 +3275,7 @@ $gr->lb( new Label($hx-$marksep[0]/8, $hy, "d(t)",'red','right','middle'));
 $gr->stamps( closed_circle($t1,$d1,'red') );
 $gr->lb( new Label($t1-$marksep[0]/8, $d1+$marksep[1]/8, "($t1,$d1)",'red','right','bottom'));
 </pg-code>
-</setup>
+ 
 <statement>
 <p>In a race, a car drove through the starting line at the speed of <m><var name="$v0"/></m> meters per second. It was accelerating at <m><var name="$acceleration"/></m> meters per second squared. Its distance from the starting position can be modeled by the function <m>d(t)=<var name="$func"/></m>. Find the answer using technology.</p>
 <p>After <var name="$t1" width="10" /> seconds, the car was <m><var name="$d1"/></m> meters away from the starting position.</p>
@@ -3297,7 +3297,7 @@ $gr->lb( new Label($t1-$marksep[0]/8, $d1+$marksep[1]/8, "($t1,$d1)",'red','righ
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -3350,7 +3350,7 @@ $gr->stamps( closed_circle($xVertex,$yVertex,'red') );
 $gr->lb( new Label($xVertex, $yVertex+$marksep[1]/4, "($xVertex,$yVertex)",'red','center','bottom'));
 $ans = List($length,$width);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>A farmer purchased <m><var name="$perimeter"/></m> meters of fencing, and will build a rectangular pen with it. To enclose the largest possible area, what should the pen's length and width be? Model the pen's area with a function, and then find its maximum value.</p>
 <p>Use a comma to separate your answers.</p>
@@ -3377,7 +3377,7 @@ $ans = List($length,$width);
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $refreshCachedImages=1;
 Context("Numeric");
@@ -3430,7 +3430,7 @@ $gr->stamps( closed_circle($xVertex,$yVertex,'red') );
 $gr->lb( new Label($xVertex, $yVertex+$marksep[1]/4, "($xVertex,$yVertex)",'red','center','bottom'));
 $ans = List($length,$width);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>A farmer purchased <m><var name="$perimeter"/></m> meters of fencing, and will build a rectangular pen along a river. This implies the pen has only <m>3</m> fenced sides. To enclose the largest possible area, what should the pen's length and width be? Model the pen's area with a function, and then find its maximum value.</p>
 <instruction>Use a comma to separate your answers.</instruction>
@@ -3508,7 +3508,7 @@ $ans = List($length,$width);
     <exercisegroup cols="2">
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = 1;
@@ -3525,7 +3525,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -3575,7 +3575,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = 1;
@@ -3592,7 +3592,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -3642,7 +3642,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = random(0.1,9.9,0.2);
@@ -3659,7 +3659,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -3709,7 +3709,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = random(0.1,9.9,0.2);
@@ -3726,7 +3726,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -3776,7 +3776,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = non_zero_random(-9,9,1);
@@ -3793,7 +3793,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -3843,7 +3843,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = non_zero_random(-9,9,1);
@@ -3860,7 +3860,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -3910,7 +3910,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = non_zero_random(2,9,1)*random(-1,1,2);
@@ -3928,7 +3928,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -3978,7 +3978,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = non_zero_random(2,9,1)*random(-1,1,2);
@@ -3996,7 +3996,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4046,7 +4046,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = non_zero_random(2,9,1)*random(-1,1,2);
@@ -4064,7 +4064,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4114,7 +4114,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $f = RandomVariableName(type=&gt;'function');
 $a = non_zero_random(2,9,1)*random(-1,1,2);
@@ -4132,7 +4132,7 @@ $posneg = ($a &gt; 0) ? "positive" : "negative";
 $updown = ($a &gt; 0) ? "upward" : "downward";
 $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4185,7 +4185,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 <pg-macros>
 <macro-file>PCCmacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 do {
 $h = non_zero_random(-9,9,1);
@@ -4218,7 +4218,7 @@ return 0;
 $hshift = ($h > 0) ? abs($h)." units right" : abs($h)." units left";
 $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Consider the graph of the equation <m>y=<var name="$formula"/></m>.</p>
 <p>Compared to the graph of <m>y=x^2</m>, the vertex has been shifted <var name="$horizontal" width="5" /> units <var name="$horizontal" form="popup" /> and <var name="$vertical" width="5" /> units <var name="$vertical" form="popup" />.</p>
@@ -4233,7 +4233,7 @@ $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 <pg-macros>
 <macro-file>PCCmacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 do {
 $h = non_zero_random(-9,9,1);
@@ -4266,7 +4266,7 @@ return 0;
 $hshift = ($h > 0) ? abs($h)." units right" : abs($h)." units left";
 $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Consider the graph of the equation <m>y=<var name="$formula"/></m>.</p>
 <p>Compared to the graph of <m>y=x^2</m>, the vertex has been shifted <var name="$horizontal" width="5" /> units <var name="$horizontal" form="popup" /> and <var name="$vertical" width="5" /> units <var name="$vertical" form="popup" />.</p>
@@ -4281,7 +4281,7 @@ $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 <pg-macros>
 <macro-file>PCCmacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 do {
 $h = non_zero_random(-99,99,0.1);
@@ -4314,7 +4314,7 @@ return 0;
 $hshift = ($h > 0) ? abs($h)." units right" : abs($h)." units left";
 $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Consider the graph of the equation <m>y=<var name="$formula"/></m>.</p>
 <p>Compared to the graph of <m>y=x^2</m>, the vertex has been shifted <var name="$horizontal" width="5" /> units <var name="$horizontal" form="popup" /> and <var name="$vertical" width="5" /> units <var name="$vertical" form="popup" />.</p>
@@ -4329,7 +4329,7 @@ $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 <pg-macros>
 <macro-file>PCCmacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 do {
 $h = non_zero_random(-99,99,0.1);
@@ -4362,7 +4362,7 @@ return 0;
 $hshift = ($h > 0) ? abs($h)." units right" : abs($h)." units left";
 $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Consider the graph of the equation <m>y=<var name="$formula"/></m>.</p>
 <p>Compared to the graph of <m>y=x^2</m>, the vertex has been shifted <var name="$horizontal" width="5" /> units <var name="$horizontal" form="popup" /> and <var name="$vertical" width="5" /> units <var name="$vertical" form="popup" />.</p>
@@ -4377,7 +4377,7 @@ $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 <pg-macros>
 <macro-file>PCCmacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("Fraction");
 do {
@@ -4420,7 +4420,7 @@ return 0;
 $hshift = ($h > 0) ? abs($h)." units right" : abs($h)." units left";
 $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Consider the graph of the equation <m>y=<var name="$formula"/></m>.</p>
 <p>Compared to the graph of <m>y=x^2</m>, the vertex has been shifted <var name="$horizontal" width="5" /> units <var name="$horizontal" form="popup" /> and <var name="$vertical" width="5" /> units <var name="$vertical" form="popup" />.</p>
@@ -4435,7 +4435,7 @@ $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 <pg-macros>
 <macro-file>PCCmacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("Fraction");
 do {
@@ -4478,7 +4478,7 @@ return 0;
 $hshift = ($h > 0) ? abs($h)." units right" : abs($h)." units left";
 $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Consider the graph of the equation <m>y=<var name="$formula"/></m>.</p>
 <p>Compared to the graph of <m>y=x^2</m>, the vertex has been shifted <var name="$horizontal" width="5" /> units <var name="$horizontal" form="popup" /> and <var name="$vertical" width="5" /> units <var name="$vertical" form="popup" />.</p>
@@ -4508,7 +4508,7 @@ $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
       <title>Factored Form and Intercepts</title>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -4524,7 +4524,7 @@ $yint = Point(0,$c);
 $xint = ($r == $s) ? List(Point($r,0)) : List(Point($r,0),Point($s,0));
 $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4569,7 +4569,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -4585,7 +4585,7 @@ $yint = Point(0,$c);
 $xint = ($r == $s) ? List(Point($r,0)) : List(Point($r,0),Point($s,0));
 $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4630,7 +4630,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -4646,7 +4646,7 @@ $yint = Point(0,$c);
 $xint = ($r == $s) ? List(Point($r,0)) : List(Point($r,0),Point($s,0));
 $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4691,7 +4691,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -4707,7 +4707,7 @@ $yint = Point(0,$c);
 $xint = ($r == $s) ? List(Point($r,0)) : List(Point($r,0),Point($s,0));
 $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4752,7 +4752,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -4768,7 +4768,7 @@ $yint = Point(0,$c);
 $xint = ($r == $s) ? List(Point($r,0)) : List(Point($r,0),Point($s,0));
 $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4813,7 +4813,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -4829,7 +4829,7 @@ $yint = Point(0,$c);
 $xint = ($r == $s) ? List(Point($r,0)) : List(Point($r,0),Point($s,0));
 $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4874,7 +4874,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -4890,7 +4890,7 @@ $yint = Point(0,$c);
 $xint = ($r == $s) ? List(Point($r,0)) : List(Point($r,0),Point($s,0));
 $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4935,7 +4935,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -4951,7 +4951,7 @@ $yint = Point(0,$c);
 $xint = ($r == $s) ? List(Point($r,0)) : List(Point($r,0),Point($s,0));
 $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -4996,7 +4996,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -5023,7 +5023,7 @@ Context("Fraction");
 $r1 = Fraction($q,$p);
 $r2 = Fraction($s,$r);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
@@ -5073,7 +5073,7 @@ $r2 = Fraction($s,$r);
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -5100,7 +5100,7 @@ Context("Fraction");
 $r1 = Fraction($q,$p);
 $r2 = Fraction($s,$r);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.

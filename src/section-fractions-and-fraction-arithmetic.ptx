@@ -117,7 +117,7 @@ xlabel={},
       <exercise>
         <title>A Fraction on a Number Line</title>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $numberline=init_graph(-1.5,-0.15,1.5,0.06,size=&gt;[240,34]);
 $numberline-&gt;moveTo(-1.5,0);
@@ -131,7 +131,7 @@ $numberline-&gt;stamps(closed_circle(5/8,0,'blue'));
 Context("LimitedFraction");
 $ans=Fraction(5,8);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 In the given number line, what fraction is marked?
@@ -389,12 +389,12 @@ x=0.8cm,
     </sidebyside>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFraction");
 @f=(Fraction(1,3),Fraction(4,15),Fraction(7,9));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Reduce these fractions into lowest terms.</p>
@@ -454,12 +454,12 @@ Context("LimitedFraction");
     <newpage/>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedRadical");
 $p=Formula("84/100");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Sayid scored <m>\frac{21}{25}</m> on a recent exam.
@@ -604,12 +604,12 @@ $p=Formula("84/100");
     <exercise>
       <webwork>
           <title>Fraction Multiplication Practice</title>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFraction");
 @f=(Fraction(10,21),Fraction(20,1),Fraction(-28,15),Fraction(-14,9));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Simplify these fraction products.</p>
@@ -765,12 +765,12 @@ Context("LimitedFraction");
     <exercise>
       <webwork>
           <title>Fraction Division Practice</title>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFraction");
 @f=(Fraction(7,30),Fraction(12,25),Fraction(-28,3),Fraction(-1400,99));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Simplify these fraction division expressions.</p>
@@ -869,12 +869,12 @@ Context("LimitedFraction");
     <exercise>
       <webwork>
           <title>Fraction Addition/Subtraction Practice</title>
-          <setup>
+ 
 <pg-code>
 Context("LimitedFraction");
 @f=(Fraction(11,3),Fraction(4,3));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Add or subtract these fractions.</p>
@@ -1183,13 +1183,13 @@ Context("LimitedFraction");
     <exercise>
       <webwork>
           <title>Using Some Flour</title>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
 $flour=NumberWithUnits("13/24",'cup');
 $ev=$flour-&gt;cmp(correct_ans_latex_string =&gt; "\frac{13}{24}\text{ cup}");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               A chef had <m>\frac{2}{3}</m> cups of flour and needed to use
@@ -1303,7 +1303,7 @@ $ev=$flour-&gt;cmp(correct_ans_latex_string =&gt; "\frac{13}{24}\text{ cup}");
       <title>Review and Warmup</title>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Fraction");
 $a=Fraction(random(-33,-13,4),4);
@@ -1326,7 +1326,7 @@ $j++;
 }
 $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'A');
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Which letter is <var name="$a"/> on the number line?
@@ -1342,7 +1342,7 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'A');
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Fraction");
 $a=Fraction(random(15,31,4),4);
@@ -1365,7 +1365,7 @@ $j++;
 }
 $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Which letter is <var name="$a"/> on the number line?
@@ -2050,7 +2050,7 @@ $popup=PopUp(['?', 'A', 'B', 'C', 'D'],'D');
 <!-- Kara's challenge problem -->
         <webwork>
             <pg-macros><macro-file>contextRationalFunction.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;are(a=&gt;'Real');
@@ -2064,7 +2064,7 @@ Context("RationalFunction-Strict");
 Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $answer = Formula("$numerator/a");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Given that <m>a\neq0</m>,
@@ -2090,7 +2090,7 @@ $answer = Formula("$numerator/a");
 <!-- Kara's challenge problem -->
         <webwork>
             <pg-macros><macro-file>contextRationalFunction.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;are(a=&gt;'Real');
@@ -2105,7 +2105,7 @@ Context("RationalFunction-Strict");
 Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $answer = Formula("$num/(2a)");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Given that <m>a\neq0</m>,
@@ -2133,7 +2133,7 @@ $answer = Formula("$num/(2a)");
 <!-- Kara's challenge problem -->
         <webwork>
             <pg-macros><macro-file>contextRationalFunction.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;are(a=&gt;'Real');
@@ -2148,7 +2148,7 @@ Context("RationalFunction-Strict");
 Context()-&gt;variables-&gt;are(a=&gt;'Real');
 $answer = Formula("$numerator/(5a)");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Given that <m>a\neq0</m>,

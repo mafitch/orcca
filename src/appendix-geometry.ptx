@@ -232,7 +232,7 @@
     </p>
     <exercise>
       <webwork seed="2">
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $refreshCachedImages = 1;
@@ -277,7 +277,7 @@ $area = $base*$height;
 $ansP = NumberWithUnits("$perimeter $unit");
 $ansA = NumberWithUnits("$area $unit^2");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Find the perimeter and area of the parallelogram.
@@ -460,7 +460,7 @@ $ansA = NumberWithUnits("$area $unit^2");
     </p>
     <exercise>
       <webwork seed="2">
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $refreshCachedImages = 1;
@@ -500,7 +500,7 @@ $alt = "a trapezoid with a bottom base of $base1U, a top base of $base2U, and a 
 $area = ($base1+$base2)*$height/2;
 $ansA = NumberWithUnits("$area $unit^2");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Find the area of the trapezoid.
@@ -1044,7 +1044,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $baseF = random(4,6,0.1);
@@ -1060,7 +1060,7 @@ $ansA = NumberWithUnits("$area in^2");
 $ansPE = NumberWithUnits("$perimeter/12 ft");
 $ansAE = NumberWithUnits("$area/144 ft^2");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Find the perimeter and area of a rectangular table top with a length of <m><var name="$baseFU"/></m> and a width of <m><var name="$heightIU"/></m>.
@@ -1110,7 +1110,7 @@ $ansAE = NumberWithUnits("$area/144 ft^2");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Numeric");
 $refreshCachedImages = 1;
@@ -1155,7 +1155,7 @@ $area = $base*$height;
 $ansP = NumberWithUnits("$perimeter $unit");
 $ansA = NumberWithUnits("$area $unit^2");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Find the perimeter and area of the parallelogram.
@@ -1203,7 +1203,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 $baseM = random(2,4,0.1);
@@ -1216,7 +1216,7 @@ $area = $baseM*$heightM/2;
 $ansA = NumberWithUnits("$area m^2");
 $ansAE = NumberWithUnits("$area*10000 cm^2");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Find the area of a triangular flag with a base of <m><var name="$baseMU"/></m> and a height of <m><var name="$heightCMU"/></m>.
@@ -1256,7 +1256,7 @@ $ansAE = NumberWithUnits("$area*10000 cm^2");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Numeric");
 $refreshCachedImages = 1;
@@ -1296,7 +1296,7 @@ $alt = "a trapezoid with a bottom base of $base1U, a top base of $base2U, and a 
 $area = ($base1+$base2)*$height/2;
 $ansA = NumberWithUnits("$area $unit^2");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Find the area of the traepzoid.
@@ -1358,7 +1358,7 @@ $ansA = NumberWithUnits("$area $unit^2");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Numeric");
 $base1F = random(1,2,0.1);
@@ -1373,7 +1373,7 @@ $volumeI = $base1I*$base2I*$heightI;
 $volumeIU = NumberWithUnits("$volumeI in^3");
 $volumeFU = NumberWithUnits("$volumeI/12**3 ft^3");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             A shoe box's base is <m><var name="$base1FU"/></m> by <m><var name="$base2IU"/></m>,
@@ -1421,7 +1421,7 @@ $volumeFU = NumberWithUnits("$volumeI/12**3 ft^3");
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;flags-&gt;set(
@@ -1441,7 +1441,7 @@ $volumeM = pi*$radiusM**2*$heightM;
 $volumeCMU = NumberWithUnits("$volumeCM cm^3");
 $volumeMU = NumberWithUnits("$volumeCM/10000 m^3");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             There is a cylindrical tube used to hold scrolls.

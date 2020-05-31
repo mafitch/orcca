@@ -122,7 +122,7 @@
     <webwork>
         <pg-macros><macro-file>contextCurrency.pl</macro-file>
         <macro-file>contextPercent.pl</macro-file></pg-macros>
-        <setup>
+ 
 <pg-code>
 Context("Currency");
 $a=Currency(7.20);
@@ -130,7 +130,7 @@ $c=Currency(24);
 Context("Percent");
 $b=Compute("30%");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             <ol label="a.">
@@ -441,13 +441,13 @@ bar width=1cm,
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Currency");
 Context()-&gt;flags-&gt;set(tolerance=&gt;3);
 $sales=Currency(7857.14);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Alexis sells cars for a living,
@@ -577,12 +577,12 @@ x tick label style={rotate=45,anchor=east},
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Currency");
 $cost=Currency(4.80);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Last month, a full tank of gas for a car you drive cost you <m>\$40.00</m>.

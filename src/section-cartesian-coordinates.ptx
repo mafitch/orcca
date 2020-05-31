@@ -176,14 +176,14 @@ clip=false]
       </p>
     </introduction>
     <webwork>
-        <setup>
+ 
 <pg-code>
 Context("Point");
 $bar=Point("(3,-3)");
 $gas=Point("(-2,-4)");
 $carls=Point("(0,0)");
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             <ol>
@@ -375,7 +375,7 @@ ytick={-4,4}]
       <exercise>
 <!-- seed set to prevent crowding on points -->
         <webwork seed="1697">
-            <setup>
+ 
 <pg-code>
 @px=map{($_==0)?8:$_-8}(NchooseK(16,4));
 @py=map{($_==0)?8:$_-8}(NchooseK(16,4));
@@ -404,7 +404,7 @@ elsif ($px[$i]&gt;0 and $py[$i]&lt;0) {$gr-&gt;lb(new Label($px[$i]+0.3,$py[$i]-
 Context("Point");
 @ans=map{Compute("($px[$_],$py[$_])")}(0..3);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Locate each point in the graph:
@@ -432,7 +432,7 @@ Context("Point");
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 @px=map{($_==0)?8:$_-8}(NchooseK(16,4));
 @py=map{($_==0)?8:$_-8}(NchooseK(16,4));
@@ -461,7 +461,7 @@ elsif ($px[$i]&gt;0 and $py[$i]&lt;0) {$gr-&gt;lb(new Label($px[$i]+0.3,$py[$i]-
 Context("Point");
 @ans=map{Compute("($px[$_],$py[$_])")}(0..3);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Locate each point in the graph:
@@ -804,7 +804,7 @@ coordinates{(0,-10) (0,0) (10,0) (10,-10)};
       <title>Cartesian Plots in Context</title>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 @x=(2008..2015);
 @y=(5,14,19,35,51,52,68,90);
@@ -849,7 +849,7 @@ $gr-&gt;lb(new Label(2019,2,"year",'black','center','bottom','large'));
 $gr-&gt;lb(new Label(2008.2,95,"population",'black','left','middle','large'));
 for my$i(@x){$gr-&gt;stamps(closed_circle($i,$f{$i},'blue'));};
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 This graph gives the minimum estimates of the wolf population in Washington from 2008 through 2015. (Source:
@@ -881,7 +881,7 @@ for my$i(@x){$gr-&gt;stamps(closed_circle($i,$f{$i},'blue'));};
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextPercent.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 @x=(1960,1970,1980,1990,2000,2010);
 @y=(9.7,9.6,14.1,19.8,31.1,39.9,);
@@ -926,7 +926,7 @@ $gr-&gt;lb(new Label(2019,1,"year",'black','right','bottom','large'));
 $gr-&gt;lb(new Label(1962,48,'million people','black','left','middle','large'));
 for my$i(@x){$gr-&gt;stamps(closed_circle($i,$f{$i},'blue','large'));};
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Here is a graph of the foreign-born US population

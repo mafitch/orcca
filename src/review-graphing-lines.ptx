@@ -953,7 +953,7 @@ minor ytick={-9,-8,...,9}]
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 @px=map{($_==0)?8:$_-8}(NchooseK(16,4));
 @py=map{($_==0)?8:$_-8}(NchooseK(16,4));
@@ -982,7 +982,7 @@ elsif ($px[$i]&gt;0 and $py[$i]&lt;0) {$gr-&gt;lb(new Label($px[$i]+0.3,$py[$i]-
 Context("Point");
 @ans=map{Compute("($px[$_],$py[$_])")}(0..3);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Locate each point in the graph:
@@ -1016,7 +1016,7 @@ Context("Point");
       </exercise>
       <exercise>
         <webwork seed="10">
-            <setup>
+ 
 <pg-code>
 @x=(0..3);
 $m = random(2,5,1);
@@ -1027,7 +1027,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Write an equation in the form
@@ -1124,7 +1124,7 @@ $eq=Formula("y=$f")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork seed="11">
-            <setup>
+ 
 <pg-code>
 @x=(0..3);
 $m = random(-5,-2,1);
@@ -1136,7 +1136,7 @@ Context("Numeric")-&gt;variables-&gt;add(y=&gt;'Real');
 parser::Assignment-&gt;Allow;
 $eq=Formula("y=$f")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Write an equation in the form

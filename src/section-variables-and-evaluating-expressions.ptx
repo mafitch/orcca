@@ -85,7 +85,7 @@
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;variables-&gt;are();
 for my $i (1..26) {
@@ -103,7 +103,7 @@ Context()-&gt;strings-&gt;add('square feet'=&gt;{alias=&gt;'ft^2'}, 'feet square
 $a=OneOf('a','A');
 $t=OneOf('t','T');
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Identify a variable you might use to represent each quantity.
@@ -272,13 +272,13 @@ $t=OneOf('t','T');
         </p>
       </introduction>
       <webwork>
-      <setup>
+ 
 <pg-code>
 Context("Numeric");
 $celsius[0] = NumberWithUnits(10,'degC');
 $celsius[1] = NumberWithUnits(-260/9,'degC');
 </pg-code>
-      </setup>
+ 
       <statement>
         <p>
           Use the expression <m>\frac{5}{9}(F - 32)</m> to evaluate some Celsius temperatures.
@@ -393,12 +393,12 @@ $celsius[1] = NumberWithUnits(-260/9,'degC');
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;flags-&gt;set(tolType=&gt;'absolute',tolerance=&gt;'1');
 $rate=Real(53/100*(220-56));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               The target heart rate for moderate exercise is <m>50\%</m> to <m>70\%</m> of maximum heart rate.
@@ -433,7 +433,7 @@ $rate=Real(53/100*(220-56));
       <title>Rising Rents</title>
       <webwork>
           <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 $r=10.173;
 $b=974.78;
@@ -444,7 +444,7 @@ Context()-&gt;flags-&gt;set(trimTrailingZeros=&gt;1);
 @rent=map{Currency($r*$_+$b)}(0,60);
 for my $i (0,1) {$rentev[$i]=$rent[$i]-&gt;cmp(cmp_class =&gt;"an amount of money");};
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               An
@@ -573,12 +573,12 @@ for my $i (0,1) {$rentev[$i]=$rent[$i]-&gt;cmp(cmp_class =&gt;"an amount of mone
     <exercise>
       <title>Tent Height</title>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $height1 = NumberWithUnits("2 ft");
 $height2 = NumberWithUnits("5 ft");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               While camping, the height
@@ -664,7 +664,7 @@ $height2 = NumberWithUnits("5 ft");
 <pg-macros>
 <macro-file>contextCurrency.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 $L=200000;
 $r=0.06;
@@ -676,7 +676,7 @@ Context()->flags->set(trimTrailingZeros=>1);
 $payment=Currency($r*$L*(1+$r/12)**($n)/(12*((1+$r/12)**($n)-1)));
 $paymentev[$i]=$payment->cmp(cmp_class =>"an amount of money");
 </pg-code>
-</setup>
+ 
 <statement>
 <p>If we borrow <m>L</m> dollars for a home mortgage loan at an annual interest rate <m>r</m>, and intend to pay off the loan after <m>n</m> months, then the amount we should pay each month <m>M</m>, in dollars, is given by the formula<me>M=\frac{rL\left(1+\frac{r}{12}\right)^{n}}{12\left(\left(1+\frac{r}{12}\right)^{n}-1\right)}</me></p>
 <p>If we borrow <m>\$200{,}000</m> at an interest rate of <m>6\%</m> with the intent to pay off the loan in <m>30</m> years, what should our monthly payment be? (Using a calculator is appropriate here.)</p>

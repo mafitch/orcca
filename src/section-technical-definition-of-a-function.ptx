@@ -209,7 +209,7 @@
 <!--TODO: the following question displays the correct answer as {{...}} with an extra brace pair. Investigate. -->
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;lists-&gt;set(List =&gt; {open =&gt; "{", close =&gt; "}"});
 Context()-&gt;parens-&gt;set("{" =&gt; {type =&gt; "List", close =&gt; "}"});
@@ -231,7 +231,7 @@ $evaluator = $answer-&gt;cmp(requireParenMatch=&gt;1)-&gt;withPostFilter(AnswerH
 List(Point(-5,2),Point(-2,-3),Point(4,3)) =&gt; "You need to enclose the set in braces.",
 ));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               The graph below is of <m>y=f(x)</m>.
@@ -346,13 +346,13 @@ List(Point(-5,2),Point(-2,-3),Point(4,3)) =&gt; "You need to enclose the set in 
     <exercise>
       <title>Does This Table Make a Function?</title>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $a = PopUp(['?','does','does not'],1);
 $b = PopUp(['?','does','does not'],2);
 $c = PopUp(['?','does','does not'],1);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Which of these tables make <m>y</m> a function of <m>x</m>?
@@ -886,12 +886,12 @@ $c = PopUp(['?','does','does not'],1);
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $yes=PopUp(['?','does','does not'],1);
 $no=PopUp(['?','does','does not'],2);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Do each of these equations make <m>y</m> a function of <m>x</m>?

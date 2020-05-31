@@ -65,7 +65,7 @@
     </definition>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 @eq=(
 '2.7x+3.4y=-82',
@@ -85,7 +85,7 @@ PopUp($forms,3),
 PopUp($forms,1),
 );
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               For each of the following equations,
@@ -537,7 +537,7 @@ ytick={1,2,3}]
     <newpage/>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("Point");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -546,7 +546,7 @@ $y=(1000/99)/4.3;
 $yi=Compute("(0,$y)");
 $m=-$y/(500/99);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Consider the line with equation <m>2x+4.3y=\frac{1000}{99}</m>.
@@ -825,7 +825,7 @@ coordinates{
       <title>Review and Warmup</title>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $B = non_zero_random(2,5,1)*list_random(-1,1);
 $A = $B*non_zero_random(-9,9,1);
@@ -849,7 +849,7 @@ $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
 $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve the linear equation for <m>y</m>.
@@ -876,7 +876,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $B = non_zero_random(2,5,1)*list_random(-1,1);
 $A = $B*non_zero_random(-9,9,1);
@@ -900,7 +900,7 @@ $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
 $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve the linear equation for <m>y</m>.
@@ -927,7 +927,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $B = -1;
 $A = $B*non_zero_random(-9,9,1);
@@ -951,7 +951,7 @@ $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
 $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve the linear equation for <m>y</m>.
@@ -978,7 +978,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $B = -1;
 $A = $B*non_zero_random(-9,9,1);
@@ -1002,7 +1002,7 @@ $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
 $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve the linear equation for <m>y</m>.
@@ -1029,7 +1029,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $B = non_zero_random(2,9,1)*list_random(-1,1);
 $A = non_zero_random(2,9,1)*list_random(-1,1);
@@ -1053,7 +1053,7 @@ $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
 $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve the linear equation for <m>y</m>.
@@ -1080,7 +1080,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 $B = non_zero_random(2,9,1)*list_random(-1,1);
 $A = non_zero_random(2,9,1)*list_random(-1,1);
@@ -1104,7 +1104,7 @@ $rightsteps[1] = $rightsteps[0];
 $rightsteps[2] = $rightsteps[1]/Formula("$B");
 $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve the linear equation for <m>y</m>.
@@ -1173,7 +1173,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
       <title>Converting to Standard Form</title>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -1223,7 +1223,7 @@ $ansHash-&gt;{ans_message} = "This is an equation for the line, but it is not in
 return $ansHash;
 });
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Rewrite <m><var name="$left0"/>=<var name="$right0"/></m> in standard form.
@@ -1253,7 +1253,7 @@ return $ansHash;
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -1303,7 +1303,7 @@ $ansHash-&gt;{ans_message} = "This is an equation for the line, but it is not in
 return $ansHash;
 });
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Rewrite <m><var name="$left0"/>=<var name="$right0"/></m> in standard form.
@@ -1333,7 +1333,7 @@ return $ansHash;
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -1381,7 +1381,7 @@ $ansHash-&gt;{ans_message} = "This is an equation for the line, but it is not in
 return $ansHash;
 });
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Rewrite <m><var name="$left0"/>=<var name="$right0"/></m> in standard form.
@@ -1414,7 +1414,7 @@ return $ansHash;
       </exercise>
       <exercise>
         <webwork>
-        <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -1457,7 +1457,7 @@ $ansHash-&gt;{ans_message} = "This is an equation for the line, but it is not in
 return $ansHash;
 });
 </pg-code>
-        </setup>
+ 
         <statement>
           <p>
             Rewrite <m>y=-\frac{<var name="$a"/>}{<var name="$b"/>}x+<var name="$c"/></m> in standard form.
@@ -1960,7 +1960,7 @@ minor ytick={-21,-18,...,21}
       <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
-            <setup>
+ 
 <pg-code>
 $little = random(2,10,2);
 $medium = $little+1;
@@ -1969,7 +1969,7 @@ do {$big = random($medium2,15,1);} until ($big % $little != 0);
 $steepest = Formula("$big/$little");
 $shallowest = Formula("$little/$big");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Fill in the variables <m>A</m>, <m>B</m>,

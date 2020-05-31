@@ -153,11 +153,11 @@
     </p>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Perform the following operations:
@@ -306,13 +306,13 @@ Context("LimitedNumeric");
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextScientificNotation.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("ScientificNotation");
 $debt= Compute("1.96 x 10^13");
 $pop = Compute("7.418 x 10^9");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Write each of the following in scientific notation.
@@ -369,14 +369,14 @@ $pop = Compute("7.418 x 10^9");
     </exercise>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%.4f#";
 $diam = Compute("12700000");
 $avog = Compute("12100000000000");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Convert each of the following from scientific notation to decimal notation
@@ -557,13 +557,13 @@ $avog = Compute("12100000000000");
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextScientificNotation.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("ScientificNotation");
 $rice= Compute("2.9 x 10^-2");
 $gate= Compute("1.4 x 10^-8");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Write each of the following in scientific notation.
@@ -619,14 +619,14 @@ $gate= Compute("1.4 x 10^-8");
     </exercise>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("LimitedNumeric");
 Context()-&gt;{format}{number} = "%.4f#";
 $down = Compute("0.00753");
 $poppy = Compute("0.0000003");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Convert each of the following from scientific notation to decimal notation
@@ -682,12 +682,12 @@ $poppy = Compute("0.0000003");
     </exercise>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $scientific = PopUp(['?','in scientific notation','not in scientific notation'],1);
 $not = PopUp(['?','in scientific notation','not in scientific notation'],2);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Decide if the numbers are written in scientific notation or not.

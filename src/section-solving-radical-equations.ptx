@@ -629,7 +629,7 @@
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 Context()->flags->remove("NumberCheck");
@@ -676,7 +676,7 @@ $gr->stamps( closed_circle($x, 0, 'red') );
 $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
 <! todo: change this code to not subtract the right side onto the left before graphing. -->
 <!-- </pg-code>
-</setup> -->
+  -->
 <!--  <statement>
 <p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
 <instruction>Round your answers to two decimal places if needed.</instruction>
@@ -699,7 +699,7 @@ $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
 <pg-macros>
 <macro-file>PCCgraphMacros.pl</macro-file>
 </pg-macros>
-<setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 Context()->flags->remove("NumberCheck");
@@ -745,7 +745,7 @@ $xShow = int($x*100)/100;
 $gr->stamps( closed_circle($x, 0, 'red') );
 $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
 </pg-code>
-</setup>
+ 
 <statement>
 <p>Use technology to solve the equation <m><var name="$left" />=<var name="$right" /></m>.</p>
 <instruction>Round your answers to two decimal places if needed.</instruction>
@@ -810,7 +810,7 @@ $gr->lb( new Label($x, $marksep[1]/8, "($xShow,0)",'red','right','bottom'));
       <exercise> -->
 <!-- Kara's challenge problem -->
         <!-- <webwork>
-            <setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 $sqrtx = list_random(2,3,5,6,7,8);
@@ -818,7 +818,7 @@ $x = $sqrtx**2;
 $xans = Formula("1/$x");
 $answer = Formula("{1/$x}");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve for <m>x</m>.
@@ -862,7 +862,7 @@ $answer = Formula("{1/$x}");
       <!-- <exercise> -->
 <!-- Kara's challenge problem, second iteration -->
         <!-- <webwork>
-            <setup>
+ 
 <pg-code>
 Context("FiniteSolutionSets");
 $sqrtx = list_random(2,3,5,6,7,8);
@@ -870,7 +870,7 @@ $x = $sqrtx**2;
 $xans = Formula("1/$x");
 $answer = Formula("{1/$x}");
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Solve for <m>x</m>.

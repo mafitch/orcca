@@ -84,13 +84,13 @@
         </p>
       </introduction>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $b=50;
 Context("Point");
 $yi=Point("(0,50)");
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               What was the value of <m>b</m> in the plot of Yara's savings?
@@ -141,7 +141,7 @@ $yi=Point("(0,50)");
     </definition>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;noreduce('(-x)+y','(-x)-y');
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -156,7 +156,7 @@ $f[6]=Formula("3");
 Context("Point");
 @yi=map{Compute("(0,$_)")}(@b);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               What are the slope and <m>y</m>-intercept for each of the following line equations?
@@ -439,7 +439,7 @@ minor ytick={-3,-2,...,11}]
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 @x=(3,6,8,11);
 @y=(-2,-8,-12,-18);
@@ -470,7 +470,7 @@ if $ans-&gt;{ans_message} eq "The left side of an assignment must be a variable 
 return $ans;
 });
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Decide whether data in the table has a linear relationship.
@@ -873,7 +873,7 @@ minor ytick={-10,-9,...,20}]
     </p>
     <exercise>
       <webwork>
-      <setup>
+ 
 <pg-code>
 for my $i(0,1){
 $gr[$i]=init_graph(-2,-2,8,10,axes=&gt;[0,0],grid=&gt;[10,12],size=&gt;[240,240]);
@@ -917,7 +917,7 @@ if $ans-&gt;{ans_message} eq "The left side of an assignment must be a variable 
 return $ans;
 });
 </pg-code>
-      </setup>
+ 
       <statement>
         <p>
           Use the graph to write an equation of the line in slope-intercept form.
@@ -960,7 +960,7 @@ return $ans;
     </exercise>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 %x=(OIT=&gt;9000,OSU=&gt;10107,PSU=&gt;8034,UO=&gt;10289,WOU=&gt;9368,EOU=&gt;7764,SOU=&gt;8145);
 %y=(OIT=&gt;50100,OSU=&gt;46400,PSU=&gt;42800,UO=&gt;41600,WOU=&gt;38500,EOU=&gt;37800,SOU=&gt;37300);
@@ -1008,7 +1008,7 @@ if $ans-&gt;{ans_message} eq "The left side of an assignment must be a variable 
 return $ans;
 });
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               There are seven public four-year colleges in Oregon.
@@ -1176,7 +1176,7 @@ return $ans;
 </example> -->
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+'=&gt;{class=&gt;'bizarro::BOP::add',isCommand=&gt;1},
@@ -1203,7 +1203,7 @@ if $ans-&gt;{ans_message} eq "The left side of an assignment must be a variable 
 return $ans;
 });
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Find the slope-intercept form of the equation of the line that passes through the points <m>(-3,150)</m> and <m>(0,30)</m>.
@@ -1239,7 +1239,7 @@ return $ans;
     </exercise>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context()-&gt;operators-&gt;set(
 '+'=&gt;{class=&gt;'bizarro::BOP::add',isCommand=&gt;1},
@@ -1267,7 +1267,7 @@ if $ans-&gt;{ans_message} eq "The left side of an assignment must be a variable 
 return $ans;
 });
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Find the slope-intercept form of the equation of the line that passes through the points
@@ -1392,12 +1392,12 @@ return $ans;
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $p = 1950;
 $t = 40;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               In a certain wildlife reservation in Africa,

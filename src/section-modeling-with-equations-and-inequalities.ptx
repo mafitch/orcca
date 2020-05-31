@@ -279,14 +279,14 @@
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;variables-&gt;are(x=&gt;'Real');
 $equation = ImplicitPlane("x+0.19x=150");
 $evaluator = $equation-&gt;cmp(correct_ans_latex_string=&gt;'x+0.19x=150');
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Kirima offered to pay the bill and tip at a restaurant where she and her freinds had dinner.
@@ -350,14 +350,14 @@ $evaluator = $equation-&gt;cmp(correct_ans_latex_string=&gt;'x+0.19x=150');
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;variables-&gt;are(x=&gt;'Real');
 $equation = ImplicitPlane("x-0.2x=51");
 $evaluator = $equation-&gt;cmp(correct_ans_latex_string=&gt;'x-0.2x=51');
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               A shirt is on sale at <m>20\%</m> off.
@@ -460,7 +460,7 @@ $evaluator = $equation-&gt;cmp(correct_ans_latex_string=&gt;'x-0.2x=51');
     </example>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;flags-&gt;set(reduceConstants=&gt;0);
@@ -475,7 +475,7 @@ $triangle-&gt;lineTo(1,1,'black',1);
 $triangle-&gt;lb( new Label(6,1,'10','black','center','top','large'));
 $triangle-&gt;lb( new Label(1,13,'h','black','right','middle','large'));
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               One sail on a sail boat is approximately shaped like a triangle.
@@ -754,7 +754,7 @@ $triangle-&gt;lb( new Label(1,13,'h','black','right','middle','large'));
       <exercise>
 <!-- randomize? -->
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;variables-&gt;are();
 for my $i (1..26) {
@@ -772,7 +772,7 @@ Context()-&gt;strings-&gt;add('square feet'=&gt;{alias=&gt;'ft^2'}, 'feet square
 $a=OneOf('a','A');
 $t=OneOf('t','T');
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Identify a variable you might use to represent each quantity.
@@ -841,7 +841,7 @@ $t=OneOf('t','T');
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context()-&gt;variables-&gt;are();
 for my $i (1..26) {
@@ -859,7 +859,7 @@ Context()-&gt;strings-&gt;add('square feet'=&gt;{alias=&gt;'ft^2'}, 'feet square
 $a=OneOf('a','A');
 $t=OneOf('t','T');
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Identify a variable you might use to represent each quantity.
@@ -1148,7 +1148,7 @@ $t=OneOf('t','T');
         <!-- <webwork>
             <pg-macros><macro-file>contextPercent.pl</macro-file>
             <macro-file>contextCurrency.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Percent");
 $p = Percent(random(0.01,0.03,0.005));
@@ -1160,7 +1160,7 @@ $original = random(9,11,0.25);
 $current = Currency(sprintf("%.2f",$original*(1+$p->value)*(1+$q->value)));
 $original = Currency($current/(1+$p)/(1+$q));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Last year, Joan received a <m><var name="$p"/></m> raise.

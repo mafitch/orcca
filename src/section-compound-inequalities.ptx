@@ -1702,7 +1702,7 @@ xlabel={t}]
 <title>Solving a Compound Inequality Graphically</title>
 <exercise> --> <!-- linear -->
 <!-- <webwork>
-<setup>
+ 
 <pg-code>
 $numerator = random(1,5,1);
 $denominator = random(1,5,1);
@@ -1733,7 +1733,7 @@ $gr->arrowTo($xvalues[1],$m*($xvalues[1]-$h)+$k,'blue',1);
 $gr->moveTo($h,$k);
 $gr->arrowTo($xvalues[2],$m*($xvalues[2]-$h)+$k,'blue',1);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>A graph of <m>f</m> is given. Use the graph alone to solve the compound inequalities.</p>
 <sidebyside widths="40%">
@@ -1746,7 +1746,7 @@ $gr->arrowTo($xvalues[2],$m*($xvalues[2]-$h)+$k,'blue',1);
 </exercise>
 <exercise> --> <!-- linear -->
 <!--  <webwork>
-<setup>
+ 
 <pg-code>
 $numerator = random(1,5,1);
 $denominator = random(1,5,1);
@@ -1777,7 +1777,7 @@ $gr->arrowTo($xvalues[1],$m*($xvalues[1]-$h)+$k,'blue',1);
 $gr->moveTo($h,$k);
 $gr->arrowTo($xvalues[2],$m*($xvalues[2]-$h)+$k,'blue',1);
 </pg-code>
-</setup>
+ 
 <statement>
 <p>A graph of <m>f</m> is given. Use the graph alone to solve the compound inequalities.</p>
 <sidebyside widths="40%">
@@ -1790,7 +1790,7 @@ $gr->arrowTo($xvalues[2],$m*($xvalues[2]-$h)+$k,'blue',1);
 </exercise>
 <exercise> --> <!-- quadratic -->
 <!-- <webwork>
-<setup>
+ 
 <pg-code>
 $h = random(-4,4,1);
 $k = random(-4,4,1);
@@ -1821,7 +1821,7 @@ $gr->arrowTo($xvalues[2],$c*($xvalues[2]-$h)**2+$k,'blue',1);
 $ans[0] = ($c > 0) ? Union("(-inf,$x[0])U($x[1],inf)") : Interval("($x[0],$x[1])");
 $ans[1] = ($c > 0) ? Interval("[$x[0],$x[1]]") : Union("(-inf,$x[0]]U[$x[1],inf)");
 </pg-code>
-</setup>
+ 
 <statement>
 <p>A graph of <m>f</m> is given. Use the graph alone to solve the compound inequalities.</p>
 <sidebyside widths="40%">
@@ -1834,7 +1834,7 @@ $ans[1] = ($c > 0) ? Interval("[$x[0],$x[1]]") : Union("(-inf,$x[0]]U[$x[1],inf)
 </exercise>
 <exercise>  --><!-- quadratic -->
 <!--  <webwork>
-<setup>
+ 
 <pg-code>
 $h = random(-4,4,1);
 $k = random(-4,4,1);
@@ -1865,7 +1865,7 @@ $gr->arrowTo($xvalues[2],$c*($xvalues[2]-$h)**2+$k,'blue',1);
 $ans[0] = ($c > 0) ? Union("(-inf,$x[0])U($x[1],inf)") : Interval("($x[0],$x[1])");
 $ans[1] = ($c > 0) ? Interval("[$x[0],$x[1]]") : Union("(-inf,$x[0]]U[$x[1],inf)"); -->
 <!--  </pg-code>
-</setup>
+ 
 <statement>
 <p>A graph of <m>f</m> is given. Use the graph alone to solve the compound inequalities.</p>
 <sidebyside widths="40%">
@@ -1878,7 +1878,7 @@ $ans[1] = ($c > 0) ? Interval("[$x[0],$x[1]]") : Union("(-inf,$x[0]]U[$x[1],inf)
 </exercise>
 <exercise>  --><!-- cubic -->
 <!--  <webwork>
-<setup>
+ 
 <pg-code>
 Context('Numeric');
 $s = random(-3,3,1);
@@ -1914,7 +1914,7 @@ $gr->arrowTo($stop,$f->eval(x=>$stop),'blue',1);
 $ans[0] = ($c > 0) ? Union("($r,$s)U($t,inf)") : Union("(-inf,$r)U($s,$t)");
 $ans[1] = ($c > 0) ? Union("(-inf,$r]U[$s,$t]") : Union("[$r,$s]U[$t,inf)");
 </pg-code>
-</setup> -->
+  -->
 <!-- <statement>
 <p>A graph of <m>f</m> is given. Use the graph alone to solve the compound inequalities.</p>
 <sidebyside widths="40%">
@@ -1927,7 +1927,7 @@ $ans[1] = ($c > 0) ? Union("(-inf,$r]U[$s,$t]") : Union("[$r,$s]U[$t,inf)");
 </exercise>
 <exercise> --> <!-- cubic -->
 <!-- <webwork>
-<setup>
+ 
 <pg-code>
 Context('Numeric');
 $s = random(-3,3,1);
@@ -1963,7 +1963,7 @@ $gr->arrowTo($stop,$f->eval(x=>$stop),'blue',1);
 $ans[0] = ($c > 0) ? Union("($r,$s)U($t,inf)") : Union("(-inf,$r)U($s,$t)");
 $ans[1] = ($c > 0) ? Union("(-inf,$r]U[$s,$t]") : Union("[$r,$s]U[$t,inf)");
 </pg-code>
-</setup> -->
+  -->
 <!--  <statement>
 <p>A graph of <m>f</m> is given. Use the graph alone to solve the compound inequalities.</p>
 <sidebyside widths="40%">

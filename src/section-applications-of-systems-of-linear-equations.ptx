@@ -309,7 +309,7 @@
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextTypeset.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;variables-&gt;are(m=&gt;"Real",e=&gt;"Real");
@@ -358,7 +358,7 @@ return $return;
 }
 );
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               A test has <m>35</m> problems,
@@ -643,7 +643,7 @@ return $return;
       <webwork>
         <pg-macros><macro-file>contextNumeric.pl</macro-file>
             <macro-file>contextLimitedNumeric.pl</macro-file></pg-macros>
-            <setup>
+ 
             <pg-code>
                 Context("Numeric");
                 $worthMulti=random(2,5,1);
@@ -661,7 +661,7 @@ return $return;
                 $s3 = $worthMulti-$worthShort;
 
             </pg-code>
-            </setup>
+ 
             <statement><p>A test has <var name="$totalProblems"/> problems, which are worth a total of <var name="$totalPoints"/> points. There are two types of problems in the test. Each multiple-choice problem is worth <var name="$worthMulti"/> points, and each short-answer problem is worth <var name="$worthShort"/> points.</p>
 
             <p>Write and solve a system equation to answer the following questions.</p>
@@ -1019,13 +1019,13 @@ return $return;
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=138;
 $answer2=42;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Translate to a system of equations and then solve: Two angles are supplementary.
@@ -1231,13 +1231,13 @@ $answer2=42;
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=26;
 $answer2=8;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Translate to a system of equations and then solve: A rectangular pool has a perimeter of 68 yards and its length is two yards longer than three times its width.
@@ -1401,12 +1401,12 @@ $answer2=8;
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer=1;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Translate to a system of equations and then solve: Charlie left his mother's house traveling at an average speed of 36 miles per hour.
@@ -1636,13 +1636,13 @@ $answer=1;
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=7;
 $answer2=1;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Translate to a system of equations and then solve: Jorge paddled his canoe <m>24</m> miles upstream for <m>4</m> hours.
@@ -1842,13 +1842,13 @@ $answer2=1;
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=408;
 $answer2=24;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Translate to a system of equations and then solve: A commercial jet can fly <m>1728</m> miles with a tailwind for <m>4</m> hours,
@@ -2040,13 +2040,13 @@ $answer2=24;
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=3;
 $answer2=2;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Translate to a system of equations and then solve: Greta wants to make <m>5</m> pounds of a nut mix using peanuts and cashews.
@@ -2303,13 +2303,13 @@ $answer2=2;
     <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-          <setup>
+ 
 <pg-code>
 Context("Numeric");
 $answer1=100;
 $answer2=150;
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Translate to a system of equations and then solve: Anatole needs to make <m>250</m><quantity>
@@ -2656,7 +2656,7 @@ $answer2=150;
     <exercise>
       <webwork>
         <pg-macros><macro-file>contextCurrency.pl</macro-file></pg-macros>
-        <setup>
+ 
         <pg-code>
             Context("Currency");
             Context()-&gt;currency-&gt;addSymbol("dollars","dollar");
@@ -2687,7 +2687,7 @@ $answer2=150;
             $pronoun = 'she' if ($sex eq 'female');
             $name = RandomName(sex=&gt;$sex);
         </pg-code>
-        </setup>
+ 
         <statement><p><var name="$name"/> invested a total of <m><var name="$cInit"/></m> in two accounts. After a year, one account lost <var name="$p1"/>%, while the other account gained <var name="$p2"/>%. In total, <var name="$name"/> lost <m><var name="$cTotalInt"/></m>. How much money did <var name="$pronoun"/> invest in each account?</p>
 
         <p>Write and solve a system of equations to answer the following questions.</p>
@@ -2751,7 +2751,7 @@ $answer2=150;
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextTypeset.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("ImplicitPlane");
 Context()-&gt;variables-&gt;are(p=&gt;"Real",n=&gt;"Real");
@@ -2799,7 +2799,7 @@ return $return;
 }
 );
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 A jar of pennies and nickels has 400 coins.
@@ -2870,13 +2870,13 @@ return $return;
       <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
-            <setup>
+ 
                 <pg-code>
                 Context("Numeric");
                 $answer1=62;
                 $answer2=28;
                 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 Two angles are complementary.

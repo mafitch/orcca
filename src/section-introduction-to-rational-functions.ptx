@@ -204,12 +204,12 @@ xlabel={$t$, time in hours},ylabel={concentration (mg per liter)}]
     </definition>
     <exercise>
       <webwork>
-          <setup>
+ 
 <pg-code>
 $yes=PopUp(['?','is', 'is not'],1);
 $no=PopUp(['?','is', 'is not'],2);
 </pg-code>
-          </setup>
+ 
           <statement>
             <p>
               Identify which of the following are rational functions and which are not.
@@ -1158,7 +1158,7 @@ xlabel={$x$, pairs of shoes},ylabel={$y$, average cost}]
       <exercise>
         <webwork>
             <pg-macros><macro-file>PCCgraphMacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;add(t =&gt; 'Real');
@@ -1202,7 +1202,7 @@ $gr-&gt;lb( new Label($hx-$marksep[0]/8, $hy, "f(t)",'red','right','middle'));
 $gr-&gt;stamps( closed_circle($t1,$f1,'red') );
 $gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1)",'red','right','bottom'));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 In a forest,
@@ -1236,7 +1236,7 @@ $gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1)",'red','r
       <exercise>
         <webwork>
             <pg-macros><macro-file>PCCgraphMacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;add(t =&gt; 'Real');
@@ -1286,7 +1286,7 @@ $gr-&gt;lb( new Label($hx-$marksep[0]/8, $hy, "f(t)",'red','right','middle'));
 $gr-&gt;stamps( closed_circle($t1,$f1,'red') );
 $gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1)",'red','right','bottom'));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 In a forest,
@@ -1320,7 +1320,7 @@ $gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1)",'red','
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;add(t =&gt; 'Real');
@@ -1345,7 +1345,7 @@ $t4 = 100000;
 $f4 = $func-&gt;eval(t=&gt;$t4);
 $f4R = int($f4+0.5);
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 In a forest,
@@ -1394,7 +1394,7 @@ $f4R = int($f4+0.5);
       <exercise>
         <webwork>
             <pg-macros><macro-file>PCCgraphMacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;add(t =&gt; 'Real');
@@ -1438,7 +1438,7 @@ $gr-&gt;lb( new Label($hx-$marksep[0]/8, $hy, "C(t)",'red','right','middle'));
 $gr-&gt;stamps( closed_circle($t1,$f1,'red') );
 $gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1R)",'red','right','bottom'));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The concentration of a drug in a patient's blood stream,
@@ -1472,7 +1472,7 @@ $gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1,$f1R)",'red','
       <exercise>
         <webwork>
             <pg-macros><macro-file>PCCgraphMacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;add(t =&gt; 'Real');
@@ -1533,7 +1533,7 @@ $gr-&gt;stamps( closed_circle($t2,$f1,'red') );
 $gr-&gt;lb( new Label($t1-$marksep[0]/8, $f1+$marksep[1]/8, "($t1R,$f1R)",'red','center','bottom'));
 $gr-&gt;lb( new Label($t2-$marksep[0]/8, $f1+$marksep[1]/8, "($t2R,$f1R)",'red','center','bottom'));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The concentration of a drug in a patient's blood stream,
@@ -1572,7 +1572,7 @@ $gr-&gt;lb( new Label($t2-$marksep[0]/8, $f1+$marksep[1]/8, "($t2R,$f1R)",'red',
       <exercise>
         <webwork>
             <pg-macros><macro-file>PCCgraphMacros.pl</macro-file></pg-macros>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;add(t =&gt; 'Real');
@@ -1617,7 +1617,7 @@ $gr-&gt;lb( new Label($hx-$marksep[0]/8, $hy, "C(t)",'red','right','middle'));
 $gr-&gt;stamps( closed_circle($tMax,$fMax,'red') );
 $gr-&gt;lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)",'red','center','bottom'));
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The concentration of a drug in a patient's blood stream,
@@ -1652,7 +1652,7 @@ $gr-&gt;lb( new Label($tMax-$marksep[0]/8, $fMax+$marksep[1]/8, "($tMaxR,$fMaxR)
       </exercise>
       <exercise>
         <webwork>
-            <setup>
+ 
 <pg-code>
 Context("Numeric");
 Context()-&gt;variables-&gt;add(t =&gt; 'Real');
@@ -1673,7 +1673,7 @@ $f3 = $func-&gt;eval(t=&gt;$t3);
 $f3R = int($f3*100+0.5)/100;
 $horizontal = 0;
 </pg-code>
-            </setup>
+ 
             <statement>
               <p>
                 The concentration of a drug in a patient's blood stream,
