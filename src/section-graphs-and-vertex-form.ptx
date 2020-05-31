@@ -6,51 +6,51 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-graphs-and-vertex-form" permid="zeL">
+<section xml:id="section-graphs-and-vertex-form">
   <title>Graphs and Vertex Form</title>
-  <introduction permid="Bit">
-    <p permid="TAF">
+  <introduction>
+    <p>
       In this section,
       we will explore quadratic functions and, in particular,
       their vertex and factored forms.
     </p>
-    <example permid="Vbk">
+    <example>
       <statement>
-        <p permid="Fxa">
+        <p>
           Maia has a remote-controlled airplane and she is going to do a stunt dive where the plane dives toward the ground and back up along a parabolic path.
           The altitude or height of the plane is given by the function <m>H</m> where <m>H(t)=0.7t^2-23t+200</m>,
           for <m>0 \le t \le 30</m>.
           The height is measured in feet and the time,
           <m>t</m>, is measured in seconds since the stunt began.
-          <ol label="a." permid="WuY">
-            <li permid="ZZy">
-              <p permid="fHG">
+          <ol label="a.">
+            <li>
+              <p>
                 Determine the starting height of the plane as the dive begins.
               </p>
             </li>
-            <li permid="GgH">
-              <p permid="LOP">
+            <li>
+              <p>
                 Determine the height of the plane after <m>5</m> seconds.
               </p>
             </li>
-            <li permid="mnQ">
-              <p permid="rVY">
+            <li>
+              <p>
                 Will the plane hit the ground, and if so, at what time?
               </p>
             </li>
-            <li permid="SuZ">
-              <p permid="Ydh">
+            <li>
+              <p>
                 If the plane does not hit the ground,
                 what is the closest it gets to the ground, and at what time?
               </p>
             </li>
-            <li permid="yCi">
-              <p permid="Ekq">
+            <li>
+              <p>
                 At what time(s) will the plane have an altitude of <m>50</m> feet?
               </p>
             </li>
-            <li permid="eJr">
-              <p permid="krz">
+            <li>
+              <p>
                 State the domain and the range of the function
                 (in context).
               </p>
@@ -58,37 +58,37 @@
           </ol>
         </p>
       </statement>
-      <solution permid="hpC">
-        <p permid="tEh">
+      <solution>
+        <p>
           We have graphed the function (see <xref ref="graph_RC_airplane" />) and we will find the key information and put it in context.
         </p>
         
-        <p permid="ZLq">
-          <ol label="a." permid="yXH">
-            <li permid="KQA">
-              <p permid="QyI">
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 The starting altitude can be read from the vertical intercept,
                 which is <m>(0,200)</m>.
                 When the stunt begins, the plane has a altitude of <m>200</m> feet.
               </p>
             </li>
-            <li permid="qXJ">
-              <p permid="wFR">
+            <li>
+              <p>
                 When <m>x=5</m>, the <m>y</m>-value is <m>102.5</m>.
                 So <m>H(5)=102.5</m>.
                 This means that after <m>5</m> seconds,
                 the plane is <m>102.5</m> feet above the ground.
               </p>
             </li>
-            <li permid="XeS"><p><sidebyside widths="45% 32%" margins="8%" valign="bottom">
-              <p permid="cNa">
+            <li><p><sidebyside widths="45% 32%" margins="8%" valign="bottom">
+              <p>
                 From the graph we can see that the parabola does not touch or cross the <m>x</m>-axis,
                 which represents the ground.
                 This means the plane does not hit the ground and there are no real solutions to the equation <m>H(t)=0</m>.
               </p>
-              <figure xml:id="graph_RC_airplane" permid="FSz">
+              <figure xml:id="graph_RC_airplane">
           <caption>Graph of <m>H(t)=0.7t^2-23t+200</m></caption>
-          <image width="60%" permid="wrJ">
+          <image width="60%">
             <description>a graph of the quadratic function with all of the key features labeled that are described in the explanation of the example</description>
 <latex-image>
 \begin{tikzpicture}
@@ -119,23 +119,23 @@ clip=false]
         </figure>
       </sidebyside></p>
             </li>
-            <li permid="Dmb">
-              <p permid="IUj">
+            <li>
+              <p>
                 The lowest point is the vertex,
                 which is approximately <m>(16.43, 11.07)</m>.
                 The minimum altitude of the plane is about <m>11</m> feet,
                 which occurs after about <m>16.4</m> seconds.
               </p>
             </li>
-            <li permid="jtk">
-              <p permid="pbs">
+            <li>
+              <p>
                 We graph the horizontal line <m>y=50</m> and look for the points of intersection.
                 The plane will be <m>50</m> feet above the ground about <m>9</m> seconds after the plane begins the stunt,
                 and again at about <m>24</m> seconds.
               </p>
             </li>
-            <li permid="PAt">
-              <p permid="ViB">
+            <li>
+              <p>
                 The domain for this function is given in the problem statement because only part of the parabola represents the path of the plane.
                 The domain is <m>[0,30]</m>.
                 For the range we look at the possible altitudes of the plane and see that it is <m>[11.07\ldots,200]</m>.
@@ -147,32 +147,32 @@ clip=false]
       </solution>
     </example>
   </introduction>
-  <subsection permid="flU">
+  <subsection>
     <title>The Vertex Form of a Parabola</title>
-    <p permid="YUs">
+    <p>
       We have learned the standard form of a quadratic function's formula,
       which is <m>f(x)=ax^2+bx+c</m>.
       In this subsection,
       we will learn another form called the <term>vertex form</term>.
     </p>
-    <p permid="FbB">
+    <p>
       Consider the graphs of <m>f(x)=x^2-6x+7</m> and <m>g(x)=(x-3)^2-2</m> on the same axes,
       shown in <xref ref="figure-graphs-of-identical-functions" />.
     </p>
-    <sidebyside widths="37% 37%" margins="10%" permid="LHy">
-      <p permid="KgT">
+    <sidebyside widths="37% 37%" margins="10%">
+      <p>
         We see only one parabola because these are two different forms of the same function.
         Indeed, if we convert <m>g(x)</m> into standard form:
-        <md permid="Ovn">
+        <md>
           <mrow>g(x)\amp=(x-3)^2-2</mrow>
           <mrow>g(x)\amp=x^2-6x+9-2</mrow>
           <mrow>g(x)\amp=x^2-6x+7</mrow>
         </md>
         it is clear that <m>f</m> and <m>g</m> are the same function.
       </p>
-      <figure xml:id="figure-graphs-of-identical-functions" permid="qoc">
+      <figure xml:id="figure-graphs-of-identical-functions">
         <caption>Graph of <m>f(x)=x^2-6x+7</m> and <m>g(x)=(x-3)^2-2</m></caption>
-        <image width="47%" permid="cyS">
+        <image width="47%">
           <description>the graphs of the two parabolas overlap each other completely</description>
 <latex-image>
 \begin{tikzpicture}
@@ -187,7 +187,7 @@ clip=false]
         </image>
       </figure>
     </sidebyside>
-    <p permid="liK">
+    <p>
       The formula given for <m>g</m> is written in vertex form,
       which is very useful because it allows us to read the vertex without doing any calculations.
       The vertex of the parabola is <m>(3,-2)</m>.
@@ -196,14 +196,14 @@ clip=false]
       and the <m>y</m>-value is the constant
       <em>added</em> at the end.
     </p>
-    <p permid="RpT">
+    <p>
       Here are the graphs of three more functions with formulas in vertex form.
       Compare each function with the vertex of its graph.
     </p>
-    <sidebyside widths="32% 32% 32%" margins="0%" permid="rOH">
-      <figure xml:id="figure-vertex-in-first-quadrant" permid="Wvl">
+    <sidebyside widths="32% 32% 32%" margins="0%">
+      <figure xml:id="figure-vertex-in-first-quadrant">
         <caption><m>r(x)=(x-2)^2+1</m></caption>
-        <image permid="IGb">
+        <image>
           <description>the graph of a parabola that opens upward and has a vertex at (2,1)</description>
 <latex-image>
 \begin{tikzpicture}
@@ -216,9 +216,9 @@ clip=false]
 </latex-image>
         </image>
       </figure>
-      <figure xml:id="figure-vertex-in-second-quadrant" permid="CCu">
+      <figure xml:id="figure-vertex-in-second-quadrant">
         <caption><m>s(x)=-\frac{1}{4}(x+1)^2+3</m></caption>
-        <image permid="oNk">
+        <image>
           <description>the graph of a wide parabola that opens downward and has a vertex at (-1,3)</description>
 <latex-image>
 \begin{tikzpicture}
@@ -231,9 +231,9 @@ clip=false]
 </latex-image>
         </image>
       </figure>
-      <figure xml:id="figure-vertex-in-third-quadrant" permid="iJD">
+      <figure xml:id="figure-vertex-in-third-quadrant">
         <caption><m>t(x)=4(x+3)^2-3.5</m></caption>
-        <image permid="UUt">
+        <image>
           <description>the graph of a narrow parabola that opens upward and has a vertex at (-3,-3.5)</description>
 <latex-image>
 \begin{tikzpicture}
@@ -247,13 +247,13 @@ clip=false]
         </image>
       </figure>
     </sidebyside>
-    <p permid="xxc">
+    <p>
       Notice that the <m>x</m>-coordinate of the vertex has the opposite sign as the value in the function formula.
       On the other hand,
       the <m>y</m>-coordinate of the vertex has the same sign as the value in the function formula.
       Let's look at an example to understand why.
       We will evaluate <m>r(2)</m>.
-      <m permid="uCw">
+      <m>
         r(\substitute{2})=(\substitute{2}-2)^2+1=1</m>.
       The <m>x</m>-value is the solution to <m>(x-2)=0</m>,
       which is positive <m>2</m>.
@@ -261,18 +261,18 @@ clip=false]
       Note that these coordinates create the vertex at <m>(2,1)</m>.
       Now we can define the vertex form of a quadratic function.
     </p>
-    <fact xml:id="fact-vertex-form" permid="fAp">
+    <fact xml:id="fact-vertex-form">
       <idx><h>vertex form of a quadratic function</h></idx>
       <idx><h>quadratic function</h><h>vertex form</h></idx>
       <title>Vertex Form of a Quadratic Function</title>
       <statement>
-        <p permid="xSB">
+        <p>
           A quadratic function with the vertex at the point <m>(h,k)</m> is given by <m>f(x)=a(x-h)^2+k</m>.
         </p>
       </statement>
     </fact>
 <!-- <p>Now you can try reading the vertex of each function.</p> -->
-    <exercise permid="XVQ">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -284,64 +284,64 @@ $vertex[3] = Point("(-7,-13)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="zHO">
+            <p>
               Find the vertex of each quadratic function.
-              <ol label="a." cols="2" permid="iJq">
-                <li permid="vHC">
-                  <p permid="BpK">
+              <ol label="a." cols="2">
+                <li>
+                  <p>
                     <m>r(x)=-2(x+4)^2+10</m>
                   </p>
-                  <p permid="hwT">
+                  <p>
                     <var name="$vertex[0]" width="10"/>
                   </p>
                 </li>
-                <li permid="bOL">
-                  <p permid="NEc">
+                <li>
+                  <p>
                     <m>s(x)=5(x-1)^2+2</m>
                   </p>
-                  <p permid="tLl">
+                  <p>
                     <var name="$vertex[1]" width="10"/>
                   </p>
                 </li>
-                <li permid="HVU">
-                  <p permid="ZSu">
+                <li>
+                  <p>
                     <m>t(x)=(x-10)^2-5</m>
                   </p>
-                  <p permid="FZD">
+                  <p>
                     <var name="$vertex[2]" width="10"/>
                   </p>
                 </li>
-                <li permid="odd">
-                  <p permid="mgM">
+                <li>
+                  <p>
                     <m>u(x)=3(x+7)^2-13</m>
                   </p>
-                  <p permid="SnV">
+                  <p>
                     <var name="$vertex[3]" width="10"/>
                   </p>
                 </li>
               </ol>
             </p>
           </statement>
-          <solution permid="ZLd">
-            <p permid="lZI">
-              <ol label="a." permid="feQ">
-                <li permid="Ukm">
-                  <p permid="yve">
+          <solution>
+            <p>
+              <ol label="a.">
+                <li>
+                  <p>
                     The vertex of <m>r(x)=-2(x\highlight{{}+4})^2\lighthigh{{}+10}</m> is <m>(\highlight{-4},\lighthigh{10})</m>.
                   </p>
                 </li>
-                <li permid="Arv">
-                  <p permid="eCn">
+                <li>
+                  <p>
                     The vertex of <m>s(x)=5(x\highlight{{}-1})^2\lighthigh{{}+2}</m> is <m>(\highlight{1},\lighthigh{2})</m>.
                   </p>
                 </li>
-                <li permid="gyE">
-                  <p permid="KJw">
+                <li>
+                  <p>
                     The vertex of <m>t(x)=(x\highlight{{}-10})^2\lighthigh{{}-5}</m> is <m>(\highlight{10},\lighthigh{-5})</m>.
                   </p>
                 </li>
-                <li permid="MFN">
-                  <p permid="qQF">
+                <li>
+                  <p>
                     The vertex of <m>u(x)=3(x\highlight{{}+7})^2\lighthigh{{}-13}</m> is <m>(\highlight{-7},\lighthigh{-13})</m>.
                   </p>
                 </li>
@@ -350,61 +350,61 @@ $vertex[3] = Point("(-7,-13)");
           </solution>
       </webwork>
     </exercise>
-    <p permid="dEl">
+    <p>
       Now let's do the reverse.
       When given the vertex and the value of <m>a</m>,
       we can write the function in vertex form.
     </p>
 <!-- TODO: This one could be interactive. -->
 <!-- Some difficulties with that. bizarro arithemtic would need to be used if you'd want to enforce vertex form and not count other forms as correct. Also, require entering the "f(x)=" part? If not, print that or leave it missing? -->
-    <example permid="ztg">
+    <example>
       <statement>
-        <p permid="lEj">
+        <p>
           Write a formula for the quadratic function <m>f</m> with the given vertex and value of <m>a</m>.
-          <ol label="a." cols="2" permid="CCh">
-            <li permid="sMW">
-              <p permid="WXO">
+          <ol label="a." cols="2">
+            <li>
+              <p>
                 Vertex <m>(-2,8)</m>, <m>a=1</m>
               </p>
             </li>
-            <li permid="YUf">
-              <p permid="DeX">
+            <li>
+              <p>
                 Vertex <m>(4,-9)</m>, <m>a=-4</m>
               </p>
             </li>
-            <li permid="Fbo">
-              <p permid="jmg">
+            <li>
+              <p>
                 Vertex <m>(-3,-1)</m>, <m>a=2</m>
               </p>
             </li>
-            <li permid="lix">
-              <p permid="Ptp">
+            <li>
+              <p>
                 Vertex <m>(5,12)</m>, <m>a=-3</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="NwL">
-        <p permid="SgR">
-          <ol label="a." cols="2" permid="LlZ">
-            <li permid="RpG">
-              <p permid="vAy">
+      <solution>
+        <p>
+          <ol label="a." cols="2">
+            <li>
+              <p>
                 The vertex form is <m>f(x)=(x+2)^2+8</m>.
               </p>
             </li>
-            <li permid="xwP">
-              <p permid="bHH">
+            <li>
+              <p>
                 The vertex form is <m>f(x)=-4(x-4)^2-9</m>.
               </p>
             </li>
-            <li permid="dDY">
-              <p permid="HOQ">
+            <li>
+              <p>
                 The vertex form is <m>f(x)=2(x+3)^2-1</m>.
               </p>
             </li>
-            <li permid="JLh">
-              <p permid="nVZ">
+            <li>
+              <p>
                 The vertex form is <m>f(x)=-3(x-5)^2+12</m>.
               </p>
             </li>
@@ -413,16 +413,16 @@ $vertex[3] = Point("(-7,-13)");
       </solution>
     </example>
   </subsection>
-  <subsection permid="Ltd">
+  <subsection>
     <title>The Domain and Range of a Quadratic Function</title>
-    <sidebyside widths="42% 30%" margins="5%" valign="middle" permid="kki">
+    <sidebyside widths="42% 30%" margins="5%" valign="middle">
       <stack>
-        <p permid="OQM">
+        <p>
           Once we read the vertex we can also state the domain and range.
           All quadratic functions have a domain of
           <m>(-\infty,\infty)</m> because we can put any value into a quadratic function and get a valid output.
         </p>
-        <p permid="uXV">
+        <p>
           The range, however,
           depends on the <m>y</m>-value of the vertex and whether the parabola opens upward or downward.
           When we have a quadratic function in vertex form we can read the range from the formula.
@@ -430,9 +430,9 @@ $vertex[3] = Point("(-7,-13)");
           where <m>f(x)=2(x-3)^2-5</m>, as an example.
         </p>
       </stack>
-      <figure xml:id="figure-domain-and-range-from-vertex-form" permid="bfe">
+      <figure xml:id="figure-domain-and-range-from-vertex-form">
         <caption>The graph of <m>f(x)=2(x-3)^2-5</m></caption>
-        <image width="47%" permid="BbC">
+        <image width="47%">
           <description>the graph of a parabola that opens upward with a vertex of (3,-5)</description>
 <latex-image>
 \begin{tikzpicture}
@@ -446,7 +446,7 @@ $vertex[3] = Point("(-7,-13)");
         </image>
       </figure>
     </sidebyside>
-    <p permid="JLu">
+    <p>
       The domain is <m>(-\infty,\infty)</m>.
       The graph of <m>f</m> opens upward
       (which we know because <m>a=2\gt0</m>)
@@ -454,18 +454,18 @@ $vertex[3] = Point("(-7,-13)");
       The <m>y</m>-value of <m>-5</m> is the minimum.
       Therefore, the range is <m>[-5,\infty)</m>.
     </p>
-    <example permid="EcZ">
+    <example>
       <statement>
-        <p permid="RLs">
+        <p>
           Identify the domain and range of <m>g</m>,
           where <m>g(x)=-3(x+1)^2+6</m>.
         </p>
       </statement>
-      <solution permid="tDU">
-        <sidebyside widths="30% 37%" margins="8%" permid="Qrr">
-          <figure xml:id="figure-domain-and-range-from-vertex-form-2" permid="evj">
+      <solution>
+        <sidebyside widths="30% 37%" margins="8%">
+          <figure xml:id="figure-domain-and-range-from-vertex-form-2">
             <caption>The graph of <m>g(x)=-3(x+1)^2+6</m></caption>
-            <image width="47%" permid="hiL">
+            <image width="47%">
               <description>the graph of a parabola that opens downward with a vertex of (-1,6)</description>
 <latex-image>
 \begin{tikzpicture}
@@ -478,7 +478,7 @@ $vertex[3] = Point("(-7,-13)");
 </latex-image>
             </image>
           </figure>
-          <p permid="yoa">
+          <p>
             The domain is <m>(-\infty,\infty)</m>.
             The graph of <m>g</m> opens downward
             (which we know because <m>a=-3\lt0</m>)
@@ -489,7 +489,7 @@ $vertex[3] = Point("(-7,-13)");
         </sidebyside>
       </solution>
     </example>
-    <exercise permid="wyA">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -502,67 +502,67 @@ $range[3] = Interval("[-4,inf)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="fOX">
+            <p>
               Identify the domain and range of each quadratic function.
-              <ol label="a." cols="2" permid="OQz">
-                <li permid="pSq">
-                  <p permid="Udi">
+              <ol label="a." cols="2">
+                <li>
+                  <p>
                     <m>w(x)=-3(x+10)^2-11</m>
                   </p>
-                  <p permid="Akr">
+                  <p>
                     The domain is <var name="$domain" width="8"/> and the range is <var name="$range[0]" width="8"/>.
                   </p>
                 </li>
-                <li permid="VZz">
-                  <p permid="grA">
+                <li>
+                  <p>
                     <m>u(x)=4(x-7)^2+20</m>
                   </p>
-                  <p permid="MyJ">
+                  <p>
                     The domain is <var name="$domain" width="8"/> and the range is <var name="$range[1]" width="8"/>.
                   </p>
                 </li>
-                <li permid="CgI">
-                  <p permid="sFS">
+                <li>
+                  <p>
                     <m>y(x)=-(x-1)^2</m>
                   </p>
-                  <p permid="YNb">
+                  <p>
                     The domain is <var name="$domain" width="8"/> and the range is <var name="$range[2]" width="8"/>.
                   </p>
                 </li>
-                <li permid="inR">
-                  <p permid="EUk">
+                <li>
+                  <p>
                     <m>z(x)=3(x+9)^2-4</m>
                   </p>
-                  <p permid="lbt">
+                  <p>
                     The domain is <var name="$domain" width="8"/> and the range is <var name="$range[3]" width="8"/>.
                   </p>
                 </li>
               </ol>
             </p>
           </statement>
-          <solution permid="FSm">
-            <p permid="KCs">
-              <ol label="a." permid="rti">
-                <li permid="Ova">
-                  <p permid="RiC">
+          <solution>
+            <p>
+              <ol label="a.">
+                <li>
+                  <p>
                     The domain of <m>w</m> is <m>(-\infty,\infty)</m>.
                     The parabola opens downward so the range is <m>(-\infty,-11]</m>.
                   </p>
                 </li>
-                <li permid="uCj">
-                  <p permid="xpL">
+                <li>
+                  <p>
                     The domain of <m>u</m> is <m>(-\infty,\infty)</m>.
                     The parabola opens upward so the range is <m>[20,\infty)</m>.
                   </p>
                 </li>
-                <li permid="aJs">
-                  <p permid="dwU">
+                <li>
+                  <p>
                     The domain of <m>y</m> is <m>(-\infty,\infty)</m>.
                     The parabola opens downward so the range is <m>(-\infty,0]</m>.
                   </p>
                 </li>
-                <li permid="GQB">
-                  <p permid="JEd">
+                <li>
+                  <p>
                     The domain of <m>z</m> is <m>(-\infty,\infty)</m>.
                     The parabola opens upward so the range is <m>[-4,\infty)</m>.
                   </p>
@@ -724,7 +724,7 @@ minor ytick={-9,-8,...,5}]
 </figure>
 <p>Both parabolas open downward and have the same shape. The graph of <m>j</m> is the same as the graph of <m>h</m>, but it has been shifted to the left by <m>3</m> units and up by <m>4</m> units making its vertex <m>(-3,4)</m>.</p>
 </sidebyside>
-<p>To summarize this, when a quadratic function is written in <xref ref="fact-vertex-form" text="title">vertex form</xref>, the <m>h</m>-value is the horizontal shift and the <m>k</m>-value is the vertical shift.</p>
+<p>To summarize this, when a quadratic function is written in <xref ref="fact-vertex-form" text="title" />, the <m>h</m>-value is the horizontal shift and the <m>k</m>-value is the vertical shift.</p>
 <!- <p>Now you can try identifying the horizontal and vertical shifts in each function.</p> -->
 <!-- TODO: This one could be interactive. -->
 <!-- Not really sure what the input forms would look like for that. -->
@@ -737,9 +737,9 @@ minor ytick={-9,-8,...,5}]
 </solution>
 </example>
 </subsection> -->
-  <subsection permid="rAm">
+  <subsection>
     <title>The Factored Form of a Parabola</title>
-    <p permid="pSD">
+    <p>
       There is another form of a quadratic function's formula,
       called <term>factored form</term>,
       which we will explore next.
@@ -748,20 +748,20 @@ minor ytick={-9,-8,...,5}]
       We will graph <m>y=q(x)</m> and <m>y=s(x)</m> on the same axes,
       as shown in <xref ref="figure-graphs-of-same-functions" />.
     </p>
-    <sidebyside widths="37% 37%" margins="10%" permid="IMS">
-      <p permid="Hmn">
+    <sidebyside widths="37% 37%" margins="10%">
+      <p>
         These graphs coincide because the functions are actually the same.
         We can tell by multiplying out the formula for <m>g</m> to get back to the formula for <m>f</m>.
-        <md permid="aJF">
+        <md>
           <mrow>g(x)\amp=-(x-4)(x+1)</mrow>
           <mrow>g(x)\amp=-(x^2-3x-4)</mrow>
           <mrow>g(x)\amp=-x^2+3x+4</mrow>
         </md>
         Now we can see that <m>f</m> and <m>g</m> are really the same function.
       </p>
-      <figure xml:id="figure-graphs-of-same-functions" permid="ntw">
+      <figure xml:id="figure-graphs-of-same-functions">
         <caption>Graph of <m>q</m> and <m>s</m></caption>
-        <image width="47%" permid="NpU">
+        <image width="47%">
           <description>the graph of two identical parabolas that open downward and overlap each other completely</description>
 <latex-image>
 \begin{tikzpicture}
@@ -777,42 +777,42 @@ minor ytick={-9,-8,...,5}]
         </image>
       </figure>
     </sidebyside>
-    <p permid="VZM">
+    <p>
       Factored form is very useful because we can read the <m>x</m>-intercepts directly from the function,
       which in this case are <m>(4,0)</m> and <m>(-1,0)</m>.
       We find these by looking for the values that make the factors equal to <m>0</m>,
       so the <m>x</m>-values have the opposite signs as are shown in the formula.
       To demonstrate this,
       we will find the <m>x</m>-intercepts by solving <m>g(x)=0</m>.
-      <md permid="GQO">
+      <md>
         <mrow>g(x)\amp=-(x-4)(x+1)</mrow>
         <mrow>\substitute{0}\amp=-(x-4)(x+1)</mrow>
       </md>
-      <md permid="mXX">
+      <md>
         <mrow>x-4\amp=0\amp\text{or}\amp\amp x+1\amp=0</mrow>
         <mrow>x\amp=4\amp\text{or}\amp\amp x\amp=-1</mrow>
       </md>
       This shows us that the <m>x</m>-intercepts are <m>(4,0)</m> and <m>(-1,0)</m>.
     </p>
-    <p permid="CgV">
+    <p>
       The <m>x</m>-values of the <m>x</m>-intercepts are also called
       <term>zeros</term> or <term>roots</term>.
           <idx><h>zeros of a function</h></idx>
           <idx><h>roots of a function</h></idx>
       The zeros or roots of the function <m>g</m> are <m>-1</m> and <m>4</m>.
     </p>
-    <fact xml:id="fact-factored-form" permid="cFJ">
+    <fact xml:id="fact-factored-form">
       <title>Factored Form of a Quadratic Function</title>
       <idx><h>factored form of a quadratic function</h></idx>
       <idx><h>quadratic function</h><h>factored form</h></idx>
       <statement>
-        <p permid="dZK">
+        <p>
           A quadratic function with horizontal intercepts at <m>(r,0)</m> and <m>(s,0)</m> has the formula <m>f(x)=a(x-r)(x-s)</m>.
         </p>
       </statement>
     </fact>
 <!-- <p>Now you can try identifying the horizontal intercepts from each factored form.</p> -->
-    <exercise permid="oUb">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -824,64 +824,64 @@ $xints[3] = List(Point(8,0),Point(-3,0));
 </pg-code>
           </setup>
           <statement>
-            <p permid="LWg">
+            <p>
               Write the horizontal intercepts of each function.
-              <ol label="a." cols="2" permid="uXI">
-                <li permid="mXK">
-                  <p permid="pLm">
+              <ol label="a." cols="2">
+                <li>
+                  <p>
                     <m>t(x)=-(x+2)(x-4)</m>
                   </p>
-                  <p permid="VSv">
+                  <p>
                     <var name="$xints[0]" width="12"/>
                   </p>
                 </li>
-                <li permid="TeT">
-                  <p permid="BZE">
+                <li>
+                  <p>
                     <m>u(x)=6(x-7)(x-5)</m>
                   </p>
-                  <p permid="igN">
+                  <p>
                     <var name="$xints[1]" width="12"/>
                   </p>
                 </li>
-                <li permid="zmc">
-                  <p permid="OnW">
+                <li>
+                  <p>
                     <m>v(x)=-2(x+1)(x+4)</m>
                   </p>
-                  <p permid="uvf">
+                  <p>
                     <var name="$xints[2]" width="12"/>
                   </p>
                 </li>
-                <li permid="ftl">
-                  <p permid="aCo">
+                <li>
+                  <p>
                     <m>w(x)=10(x-8)(x+3)</m>
                   </p>
-                  <p permid="GJx">
+                  <p>
                     <var name="$xints[3]" width="12"/>
                   </p>
                 </li>
               </ol>
             </p>
           </statement>
-          <solution permid="lZv">
-            <p permid="qJB">
-              <ol label="a." permid="XAr">
-                <li permid="LAu">
-                  <p permid="mQG">
+          <solution>
+            <p>
+              <ol label="a.">
+                <li>
+                  <p>
                     The horizontal intercepts of <m>t</m> are <m>(-2,0)</m> and <m>(4,0)</m>.
                   </p>
                 </li>
-                <li permid="rHD">
-                  <p permid="SXP">
+                <li>
+                  <p>
                     The horizontal intercepts of <m>u</m> are <m>(7,0)</m> and <m>(5,0)</m>.
                   </p>
                 </li>
-                <li permid="XOM">
-                  <p permid="zeY">
+                <li>
+                  <p>
                     The horizontal intercepts of <m>v</m> are <m>(-1,0)</m> and <m>(-4,0)</m>.
                   </p>
                 </li>
-                <li permid="DVV">
-                  <p permid="fmh">
+                <li>
+                  <p>
                     The horizontal intercepts of <m>w</m> are <m>(8,0)</m> and <m>(-3,0)</m>.
                   </p>
                 </li>
@@ -890,24 +890,24 @@ $xints[3] = List(Point(8,0),Point(-3,0));
           </solution>
       </webwork>
     </exercise>
-    <p permid="ioe">
+    <p>
       Let's summarize the three forms of a quadratic function's formula:
-      <dl permid="tSp">
-        <li permid="nmf">
+      <dl>
+        <li>
           <title>Standard Form</title>
-          <p permid="Ltq">
+          <p>
             <m>f(x)=ax^2+bx+c</m>, with <m>y</m>-intercept <m>(0,c)</m>.
           </p>
         </li>
-        <li permid="Tto">
+        <li>
           <title>Vertex Form</title>
-          <p permid="rAz">
+          <p>
             <m>f(x)=a(x-h)^2+k</m>, with vertex <m>(h,k)</m>.
           </p>
         </li>
-        <li permid="zAx">
+        <li>
           <title>Factored Form</title>
-          <p permid="XHI">
+          <p>
             <m>f(x)=a(x-r)(x-s)</m>,
             with <m>x</m>-intercepts <m>(m,0)</m> and <m>(n,0)</m>.
           </p>
@@ -916,7 +916,7 @@ $xints[3] = List(Point(8,0),Point(-3,0));
           <idx><h>quadratic function</h><h>forms</h></idx>
     </p>
   </subsection>
-  <exercises permid="XHv">
+  <exercises>
 <!-- <exercisegroup cols="3">
 <title>Review and Warmup</title>
 <exercise>
@@ -956,8 +956,8 @@ $xints[3] = List(Point(8,0),Point(-3,0));
 <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation30.pg" />
 </exercise>
 </exercisegroup> -->
-    <exercisegroup cols="2" permid="DOE">
-      <exercise permid="CJl">
+    <exercisegroup cols="2">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1024,12 +1024,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 </pg-code>
             </setup>
             <statement>
-              <p permid="sdp">
+              <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
                 Evaluate the function for several values of <m>x</m> to make a table of values <m><var name="$f"/></m>.
               </p>
-              <sidebyside permid="UMP">
-                <tabular halign="center" permid="qCx">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1065,8 +1065,8 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 </tabular>
               </sidebyside>
             </statement>
-            <solution permid="SgE">
-              <p permid="WQK">
+            <solution>
+              <p>
                 This solution will use the <m>x</m>-values <m><var name="$x[0]"/></m>,
                 <m><var name="$x[1]"/></m>,
                 <m><var name="$x[2]"/></m>,
@@ -1077,12 +1077,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 they might make calculations easier.
                 It's important to include some negative numbers.
               </p>
-              <p permid="CXT">
+              <p>
                 One at a time,
                 we substitute these <m>x</m>-values into the formula <m><var name="$f"/>(x)=<var name="$formula"/></m> and compute.
               </p>
-              <p permid="jfc">
-                <md permid="Tfg">
+              <p>
+                <md>
                   <mrow><var name="$rs[0]"/>\amp=<var name="$y[0]"/></mrow>
                   <mrow><var name="$rs[1]"/>\amp=<var name="$y[1]"/></mrow>
                   <mrow><var name="$rs[2]"/>\amp=<var name="$y[2]"/></mrow>
@@ -1092,11 +1092,11 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                   <mrow><var name="$rs[6]"/>\amp=<var name="$y[6]"/></mrow>
                 </md>
               </p>
-              <p permid="Pml">
+              <p>
                 So the table may be completed as:
               </p>
-              <sidebyside permid="ATY">
-                <tabular halign="center" permid="WJG">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1134,7 +1134,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="iQu">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1201,12 +1201,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 </pg-code>
             </setup>
             <statement>
-              <p permid="Yky">
+              <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
                 Evaluate the function for several values of <m>x</m> to make a table of values <m><var name="$f"/></m>.
               </p>
-              <sidebyside permid="hbh">
-                <tabular halign="center" permid="CQP">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1242,8 +1242,8 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 </tabular>
               </sidebyside>
             </statement>
-            <solution permid="ynN">
-              <p permid="vtu">
+            <solution>
+              <p>
                 This solution will use the <m>x</m>-values <m><var name="$x[0]"/></m>,
                 <m><var name="$x[1]"/></m>,
                 <m><var name="$x[2]"/></m>,
@@ -1254,12 +1254,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 they might make calculations easier.
                 It's important to include some negative numbers.
               </p>
-              <p permid="bAD">
+              <p>
                 One at a time,
                 we substitute these <m>x</m>-values into the formula <m><var name="$f"/>(x)=<var name="$formula"/></m> and compute.
               </p>
-              <p permid="HHM">
-                <md permid="zmp">
+              <p>
+                <md>
                   <mrow><var name="$rs[0]"/>\amp=<var name="$y[0]"/></mrow>
                   <mrow><var name="$rs[1]"/>\amp=<var name="$y[1]"/></mrow>
                   <mrow><var name="$rs[2]"/>\amp=<var name="$y[2]"/></mrow>
@@ -1269,11 +1269,11 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                   <mrow><var name="$rs[6]"/>\amp=<var name="$y[6]"/></mrow>
                 </md>
               </p>
-              <p permid="nOV">
+              <p>
                 So the table may be completed as:
               </p>
-              <sidebyside permid="Niq">
-                <tabular halign="center" permid="iXY">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1311,7 +1311,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="OXD">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1378,12 +1378,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 </pg-code>
             </setup>
             <statement>
-              <p permid="ErH">
+              <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
                 Evaluate the function for several values of <m>x</m> to make a table of values <m><var name="$f"/></m>.
               </p>
-              <sidebyside permid="tpz">
-                <tabular halign="center" permid="Pfh">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1419,8 +1419,8 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 </tabular>
               </sidebyside>
             </statement>
-            <solution permid="euW">
-              <p permid="TWe">
+            <solution>
+              <p>
                 This solution will use the <m>x</m>-values <m><var name="$x[0]"/></m>,
                 <m><var name="$x[1]"/></m>,
                 <m><var name="$x[2]"/></m>,
@@ -1431,12 +1431,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 they might make calculations easier.
                 It's important to include some negative numbers.
               </p>
-              <p permid="Adn">
+              <p>
                 One at a time,
                 we substitute these <m>x</m>-values into the formula <m><var name="$f"/>(x)=<var name="$formula"/></m> and compute.
               </p>
-              <p permid="gkw">
-                <md permid="fty">
+              <p>
+                <md>
                   <mrow><var name="$rs[0]"/>\amp=<var name="$y[0]"/></mrow>
                   <mrow><var name="$rs[1]"/>\amp=<var name="$y[1]"/></mrow>
                   <mrow><var name="$rs[2]"/>\amp=<var name="$y[2]"/></mrow>
@@ -1446,11 +1446,11 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                   <mrow><var name="$rs[6]"/>\amp=<var name="$y[6]"/></mrow>
                 </md>
               </p>
-              <p permid="MrF">
+              <p>
                 So the table may be completed as:
               </p>
-              <sidebyside permid="ZwI">
-                <tabular halign="center" permid="vmq">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1488,7 +1488,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="veM">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1556,12 +1556,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 </pg-code>
             </setup>
             <statement>
-              <p permid="kyQ">
+              <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
                 Evaluate the function for several values of <m>x</m> to make a table of values <m><var name="$f"/></m>.
               </p>
-              <sidebyside permid="FDR">
-                <tabular halign="center" permid="btz">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1597,8 +1597,8 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 </tabular>
               </sidebyside>
             </statement>
-            <solution permid="KCf">
-              <p permid="syO">
+            <solution>
+              <p>
                 This solution will use the <m>x</m>-values <m><var name="$x[0]"/></m>,
                 <m><var name="$x[1]"/></m>,
                 <m><var name="$x[2]"/></m>,
@@ -1609,12 +1609,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 they might make calculations easier.
                 It's important to include some negative numbers.
               </p>
-              <p permid="YFX">
+              <p>
                 One at a time,
                 we substitute these <m>x</m>-values into the formula <m><var name="$f"/>(x)=<var name="$formula"/></m> and compute.
               </p>
-              <p permid="ENg">
-                <md permid="LAH">
+              <p>
+                <md>
                   <mrow><var name="$rs[0]"/>\amp=<var name="$y[0]"/></mrow>
                   <mrow><var name="$rs[1]"/>\amp=<var name="$y[1]"/></mrow>
                   <mrow><var name="$rs[2]"/>\amp=<var name="$y[2]"/></mrow>
@@ -1624,11 +1624,11 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                   <mrow><var name="$rs[6]"/>\amp=<var name="$y[6]"/></mrow>
                 </md>
               </p>
-              <p permid="kUp">
+              <p>
                 So the table may be completed as:
               </p>
-              <sidebyside permid="lLa">
-                <tabular halign="center" permid="HAI">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1666,7 +1666,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="blV">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1734,12 +1734,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 </pg-code>
             </setup>
             <statement>
-              <p permid="QFZ">
+              <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
                 Evaluate the function for several values of <m>x</m> to make a table of values <m><var name="$f"/></m>.
               </p>
-              <sidebyside permid="RSj">
-                <tabular halign="center" permid="nHR">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1775,8 +1775,8 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 </tabular>
               </sidebyside>
             </statement>
-            <solution permid="qJo">
-              <p permid="Rby">
+            <solution>
+              <p>
                 This solution will use the <m>x</m>-values <m><var name="$x[0]"/></m>,
                 <m><var name="$x[1]"/></m>,
                 <m><var name="$x[2]"/></m>,
@@ -1787,12 +1787,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 they might make calculations easier.
                 It's important to include some negative numbers.
               </p>
-              <p permid="xiH">
+              <p>
                 One at a time,
                 we substitute these <m>x</m>-values into the formula <m><var name="$f"/>(x)=<var name="$formula"/></m> and compute.
               </p>
-              <p permid="dpQ">
-                <md permid="rHQ">
+              <p>
+                <md>
                   <mrow><var name="$rs[0]"/>\amp=<var name="$y[0]"/></mrow>
                   <mrow><var name="$rs[1]"/>\amp=<var name="$y[1]"/></mrow>
                   <mrow><var name="$rs[2]"/>\amp=<var name="$y[2]"/></mrow>
@@ -1802,11 +1802,11 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                   <mrow><var name="$rs[6]"/>\amp=<var name="$y[6]"/></mrow>
                 </md>
               </p>
-              <p permid="JwZ">
+              <p>
                 So the table may be completed as:
               </p>
-              <sidebyside permid="xZs">
-                <tabular halign="center" permid="TPa">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1844,7 +1844,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Hte">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1913,12 +1913,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
 </pg-code>
             </setup>
             <statement>
-              <p permid="wNi">
+              <p>
                 Let <m><var name="$f"/>(x)=<var name="$formula"/></m>.
                 Evaluate the function for several values of <m>x</m> to make a table of values <m><var name="$f"/></m>.
               </p>
-              <sidebyside permid="egB">
-                <tabular halign="center" permid="zWj">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -1954,8 +1954,8 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 </tabular>
               </sidebyside>
             </statement>
-            <solution permid="WQx">
-              <p permid="pEi">
+            <solution>
+              <p>
                 This solution will use the <m>x</m>-values <m><var name="$x[0]"/></m>,
                 <m><var name="$x[1]"/></m>,
                 <m><var name="$x[2]"/></m>,
@@ -1966,12 +1966,12 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                 they might make calculations easier.
                 It's important to include some negative numbers.
               </p>
-              <p permid="VLr">
+              <p>
                 One at a time,
                 we substitute these <m>x</m>-values into the formula <m><var name="$f"/>(x)=<var name="$formula"/></m> and compute.
               </p>
-              <p permid="BSA">
-                <md permid="XOZ">
+              <p>
+                <md>
                   <mrow><var name="$rs[0]"/>\amp=<var name="$y[0]"/></mrow>
                   <mrow><var name="$rs[1]"/>\amp=<var name="$y[1]"/></mrow>
                   <mrow><var name="$rs[2]"/>\amp=<var name="$y[2]"/></mrow>
@@ -1981,11 +1981,11 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
                   <mrow><var name="$rs[6]"/>\amp=<var name="$y[6]"/></mrow>
                 </md>
               </p>
-              <p permid="hZJ">
+              <p>
                 So the table may be completed as:
               </p>
-              <sidebyside permid="KnK">
-                <tabular halign="center" permid="gds">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f"/>(x)</m></cell>
@@ -2023,7 +2023,7 @@ $rs[$i] = $formula-&gt;substitute(x=&gt;$x[$i]);
             </solution>
         </webwork>
       </exercise>
-    <!--   <exercise permid="nAn">
+    <!--   <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -2092,12 +2092,12 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
 </pg-code>
             </setup>
             <statement>
-              <p permid="cUr">
+              <p>
                 Let <m><var name="$f" />(x)=<var name="$formula" /></m>.
                 Evaluate the function for several values of <m>x</m> to make a table of values <m><var name="$f" /></m>.
               </p>
-              <sidebyside permid="quT">
-                <tabular halign="center" permid="MkB">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f" />(x)</m></cell>
@@ -2133,8 +2133,8 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
                 </tabular>
               </sidebyside>
             </statement>
-            <solution permid="CXG">
-              <p permid="OgS">
+            <solution>
+              <p>
                 This solution will use the <m>x</m>-values <m><var name="$x[0]" /></m>,
                 <m><var name="$x[1]" /></m>,
                 <m><var name="$x[2]" /></m>,
@@ -2145,12 +2145,12 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
                 they might make calculations easier.
                 It's important to include some negative numbers.
               </p>
-              <p permid="uob">
+              <p>
                 One at a time,
                 we substitute these <m>x</m>-values into the formula <m><var name="$f" />(x)=<var name="$formula" /></m> and compute.
               </p>
-              <p permid="avk">
-                <md permid="DWi">
+              <p>
+                <md>
                   <mrow><var name="$rs[0]" />\amp=<var name="$y[0]" /></mrow>
                   <mrow><var name="$rs[1]" />\amp=<var name="$y[1]" /></mrow>
                   <mrow><var name="$rs[2]" />\amp=<var name="$y[2]" /></mrow>
@@ -2160,11 +2160,11 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
                   <mrow><var name="$rs[6]" />\amp=<var name="$y[6]" /></mrow>
                 </md>
               </p>
-              <p permid="GCt">
+              <p>
                 So the table may be completed as:
               </p>
-              <sidebyside permid="WCc">
-                <tabular halign="center" permid="srK">
+              <sidebyside>
+                <tabular halign="center">
                   <row bottom="medium">
                     <cell><m>x</m></cell>
                     <cell><m><var name="$f" />(x)</m></cell>
@@ -2203,17 +2203,17 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
         </webwork>
       </exercise> -->
     </exercisegroup>
-    <exercisegroup cols="3" permid="jVN">
+    <exercisegroup cols="3">
       <title>Graphs</title>
-      <exercise permid="QMQ">
+      <exercise>
         <statement>
-          <p permid="JbA">
+          <p>
             Use point plotting to make a graph of <m>f</m> where <m>f(x)=x^2+3x-2</m>.
           </p>
         </statement>
-        <answer permid="jeP">
-          <sidebyside widths="47%" permid="THw">
-            <image permid="txd">
+        <answer>
+          <sidebyside widths="47%">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}
@@ -2225,15 +2225,15 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="wTZ">
+      <exercise>
         <statement>
-          <p permid="piJ">
+          <p>
             Use point plotting to make a graph of <m>f</m> where <m>f(x)=x^2-2x-1</m>.
           </p>
         </statement>
-        <answer permid="PlY">
-          <sidebyside widths="47%" permid="zOF">
-            <image permid="ZEm">
+        <answer>
+          <sidebyside widths="47%">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}
@@ -2245,15 +2245,15 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="dbi">
+      <exercise>
         <statement>
-          <p permid="VpS">
+          <p>
             Use point plotting to make a graph of <m>f</m> where <m>f(x)=-x^2+3x+2</m>.
           </p>
         </statement>
-        <answer permid="vth">
-          <sidebyside widths="47%" permid="fVO">
-            <image permid="FLv">
+        <answer>
+          <sidebyside widths="47%">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}
@@ -2265,15 +2265,15 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="Jir">
+      <exercise>
         <statement>
-          <p permid="Bxb">
+          <p>
             Use point plotting to make a graph of <m>f</m> where <m>f(x)=-x^2+x+2</m>.
           </p>
         </statement>
-        <answer permid="bAq">
-          <sidebyside widths="47%" permid="McX">
-            <image permid="lSE">
+        <answer>
+          <sidebyside widths="47%">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}
@@ -2285,15 +2285,15 @@ $rs[$i] = $formula->substitute(x=>$x[$i]);
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="ppA">
+      <exercise>
         <statement>
-          <p permid="hEk">
+          <p>
             Use point plotting to make a graph of <m>f</m> where <m>f(x)=3x^2-6x-5</m>.
           </p>
         </statement>
-        <answer permid="HHz">
-          <sidebyside widths="47%" permid="skg">
-            <image permid="RZN">
+        <answer>
+          <sidebyside widths="47%">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[ymin=-9,
@@ -2309,15 +2309,15 @@ minor ytick = {-8,-7,...,8},
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="VwJ">
+      <exercise>
         <statement>
-          <p permid="NLt">
+          <p>
             Use point plotting to make a graph of <m>f</m> where <m>f(x)=-3x^2-8x+3</m>.
           </p>
         </statement>
-        <answer permid="nOI">
-          <sidebyside widths="47%" permid="Yrp">
-            <image permid="ygW">
+        <answer>
+          <sidebyside widths="47%">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[ymin=-9,
@@ -2333,15 +2333,15 @@ minor ytick = {-8,-7,...,8},
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="BDS">
+      <exercise>
         <statement>
-          <p permid="tSC">
+          <p>
             Use point plotting to make a graph of <m>f</m> where <m>f(x)=-3x^2+4x+49</m>.
           </p>
         </statement>
-        <answer permid="TVR">
-          <sidebyside widths="47%" permid="Eyy">
-            <image permid="eof">
+        <answer>
+          <sidebyside widths="47%">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[ymin=-10,
@@ -2357,15 +2357,15 @@ minor ytick = {-9,-8,...,59},
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="hLb">
+      <exercise>
         <statement>
-          <p permid="ZZL">
+          <p>
             Use point plotting to make a graph of <m>f</m> where <m>f(x)=2x^2-2x+41</m>.
           </p>
         </statement>
-        <answer permid="Ada">
-          <sidebyside widths="47%" permid="kFH">
-            <image permid="Kvo">
+        <answer>
+          <sidebyside widths="47%">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[ymin=-10,
@@ -3452,61 +3452,61 @@ $ans = List($length,$width);
 </webwork>
 </exercise>
 </exercisegroup> -->
-    <exercisegroup cols="2" permid="QcW">
+    <exercisegroup cols="2">
       <title>Quadratic Functions in Vertex Form</title>
-      <exercise permid="NSk">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/ParabolaVertex/ParabolaVertex3.pg"/>
       </exercise>
-      <exercise permid="tZt">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/ParabolaVertex/ParabolaVertex3.pg"/>
       </exercise>
-      <exercise permid="agC">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/ParabolaVertex/ParabolaVertex3.pg"/>
       </exercise>
-      <exercise permid="GnL">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/ParabolaVertex/ParabolaVertex3.pg"/>
       </exercise>
-      <exercise permid="muU">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/ParabolaVertex/ParabolaVertex4.pg"/>
       </exercise>
-      <exercise permid="SCd">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/ParabolaVertex/ParabolaVertex4.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="wkf">
-      <exercise permid="yJm">
+    <exercisegroup cols="2">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm15.pg"/>
       </exercise>
-      <exercise permid="eQv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm15.pg"/>
       </exercise>
-      <exercise permid="KXE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm15.pg"/>
       </exercise>
-      <exercise permid="reN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm15.pg"/>
       </exercise>
-      <exercise permid="XlW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm15.pg"/>
       </exercise>
-      <exercise permid="Dtf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm15.pg"/>
       </exercise>
-      <exercise permid="jAo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm10.pg"/>
       </exercise>
-      <exercise permid="PHx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm10.pg"/>
       </exercise>
-      <exercise permid="vOG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm10.pg"/>
       </exercise>
-      <exercise permid="bVP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticVertexForm10.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="cro">
-      <exercise permid="IcY">
+    <exercisegroup cols="2">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -3527,39 +3527,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="GgU">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="beR">
-                  <li permid="kde">
-                    <p permid="DOR">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="jWa">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="Qkn">
-                    <p permid="Qdj">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="wks">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="gkj">
-              <p permid="mJC">
-                <ol label="a." permid="DHA">
-                  <li permid="wrw">
-                    <p permid="crB">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="cyF">
-                    <p permid="IyK">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -3573,7 +3573,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="okh">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -3594,39 +3594,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="mod">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="Hma">
-                  <li permid="IFO">
-                    <p permid="oFT">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="UNc">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="oMX">
-                    <p permid="AUl">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="hbu">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="Mrs">
-              <p permid="SQL">
-                <ol label="a." permid="jOJ">
-                  <li permid="UUg">
-                    <p permid="NiD">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="Bbp">
-                    <p permid="tpM">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -3640,7 +3640,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Urq">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -3661,39 +3661,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="Svm">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="ntj">
-                  <li permid="hiy">
-                    <p permid="ZwV">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="FEe">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="NpH">
-                    <p permid="lLn">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="RSw">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="syB">
-              <p permid="yXU">
-                <ol label="a." permid="PVS">
-                  <li permid="twQ">
-                    <p permid="xZF">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="ZDZ">
-                    <p permid="egO">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -3707,7 +3707,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Ayz">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -3728,39 +3728,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="yCv">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="TAs">
-                  <li permid="FLi">
-                    <p permid="KnX">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="qvg">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="lSr">
-                    <p permid="WCp">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="CJy">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="YFK">
-              <p permid="ffd">
-                <ol label="a." permid="wdb">
-                  <li permid="RZA">
-                    <p permid="iQH">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="ygJ">
-                    <p permid="OXQ">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -3774,7 +3774,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="gFI">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -3795,39 +3795,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="eJE">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="zHB">
-                  <li permid="enS">
-                    <p permid="veZ">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="bmi">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="Kvb">
-                    <p permid="Htr">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="nAA">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="EMT">
-              <p permid="Lmm">
-                <ol label="a." permid="ckk">
-                  <li permid="qCk">
-                    <p permid="THJ">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="WJt">
-                    <p permid="zOS">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -3841,7 +3841,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="MMR">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -3862,39 +3862,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="KQN">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="fOK">
-                  <li permid="CQC">
-                    <p permid="fWb">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="Mdk">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="iXL">
-                    <p permid="skt">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="YrC">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="kUc">
-              <p permid="rtv">
-                <ol label="a." permid="Irt">
-                  <li permid="PeU">
-                    <p permid="EyL">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="vmd">
-                    <p permid="kFU">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -3908,7 +3908,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="sUa">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -3930,39 +3930,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="qXW">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="LVT">
-                  <li permid="btm">
-                    <p permid="QNd">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="wUm">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="HAv">
-                    <p permid="dbv">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="JiE">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="Rbl">
-              <p permid="XAE">
-                <ol label="a." permid="oyC">
-                  <li permid="nHE">
-                    <p permid="ppN">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="TON">
-                    <p permid="VwW">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -3976,7 +3976,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Zbj">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -3998,39 +3998,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="Xff">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="sdc">
-                  <li permid="zVW">
-                    <p permid="BEf">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="hLo">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="gdf">
-                    <p permid="NSx">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="tZG">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="xiu">
-              <p permid="DHN">
-                <ol label="a." permid="UFL">
-                  <li permid="Mko">
-                    <p permid="agP">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="srx">
-                    <p permid="GnY">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -4044,7 +4044,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Fis">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4066,39 +4066,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="Dmo">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="Ykl">
-                  <li permid="YyG">
-                    <p permid="mvh">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="SCq">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="EFP">
-                    <p permid="yJz">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="eQI">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="dpD">
-              <p permid="jOW">
-                <ol label="a." permid="AMU">
-                  <li permid="kMY">
-                    <p permid="KXR">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="QUh">
-                    <p permid="rfa">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -4112,7 +4112,7 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="lpB">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4134,39 +4134,39 @@ $greatless = ($a &gt; 0) ? "greater" : "less";
 </pg-code>
             </setup>
             <statement>
-              <p permid="jtx">
+              <p>
                 Let <m><var name="$f"/></m> be defined by <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="Eru">
-                  <li permid="xbq">
-                    <p permid="Xmj">
+                <ol label="a.">
+                  <li>
+                    <p>
                       What is the domain of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="Dts">
+                    <p>
                       <var name="$domain" width="10"/>
                     </p>
                   </li>
-                  <li permid="diz">
-                    <p permid="jAB">
+                  <li>
+                    <p>
                       What is the range of <m><var name="$f"/></m>?
                     </p>
-                    <p permid="PHK">
+                    <p>
                       <var name="$range" width="10"/>
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-            <solution permid="JwM">
-              <p permid="PWf">
-                <ol label="a." permid="gUd">
-                  <li permid="JpI">
-                    <p permid="vOT">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       The function is quadratic, so the domain is <m><var name="$domain"/></m>.
                       There are no invalid inputs for this function.
                     </p>
                   </li>
-                  <li permid="pwR">
-                    <p permid="bWc">
+                  <li>
+                    <p>
                       Since the formula is in vertex form,
                       we can see that the graph of <m><var name="$f"/></m> has a vertex at <m><var name="$vertex"/></m>.
                       Since the leading coefficient is <m><var name="$a"/></m>,
@@ -4489,24 +4489,24 @@ $vshift = ($k > 0) ? abs($k)." units up" : abs($h)." units down";
 </webwork>
 </exercise> -->
     </exercisegroup>
-    <exercisegroup cols="2" permid="Iyx">
+    <exercisegroup cols="2">
       <title>Three Forms of Quadratic Functions</title>
-      <exercise permid="RwK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticFunctionForms10.pg"/>
       </exercise>
-      <exercise permid="xDT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticFunctionForms10.pg"/>
       </exercise>
-      <exercise permid="dLc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticFunctionForms10.pg"/>
       </exercise>
-      <exercise permid="JSl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticFunctions/QuadraticFunctionForms10.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="oFG">
+    <exercisegroup cols="2">
       <title>Factored Form and Intercepts</title>
-      <exercise permid="pZu">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4526,16 +4526,16 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
             </setup>
             <statement>
-              <p permid="PAG">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="kyD">
-                  <li permid="VEa">
-                    <p permid="Idl">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="BLj">
-                    <p permid="oku">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -4545,18 +4545,18 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
                 </ol>
               </p>
             </statement>
-            <solution permid="pDV">
-              <p permid="wdo">
-                <ol label="a." permid="Nbm">
-                  <li permid="hSs">
-                    <p permid="UrD">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="NZB">
-                    <p permid="AyM">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       We can see that subbing in <m>x=<var name="$r"/></m> or <m>x=<var name="$s"/></m> would result in the output being <m>0</m>.
                       So the <m>x</m>-intercepts are <m>(<var name="$r"/>, 0)</m> and <m>(<var name="$s"/>, 0)</m>.
@@ -4567,7 +4567,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="WgD">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4587,16 +4587,16 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
             </setup>
             <statement>
-              <p permid="vHP">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="QFM">
-                  <li permid="ugK">
-                    <p permid="gFV">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="anT">
-                    <p permid="MNe">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -4606,18 +4606,18 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
                 </ol>
               </p>
             </statement>
-            <solution permid="VLe">
-              <p permid="ckx">
-                <ol label="a." permid="tiv">
-                  <li permid="Gvc">
-                    <p permid="sUn">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="mCl">
-                    <p permid="Zbw">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       We can see that subbing in <m>x=<var name="$r"/></m> or <m>x=<var name="$s"/></m> would result in the output being <m>0</m>.
                       So the <m>x</m>-intercepts are <m>(<var name="$r"/>, 0)</m> and <m>(<var name="$s"/>, 0)</m>.
@@ -4628,7 +4628,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="CnM">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4648,16 +4648,16 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
             </setup>
             <statement>
-              <p permid="bOY">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="wMV">
-                  <li permid="SJu">
-                    <p permid="FiF">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="yQD">
-                    <p permid="lpO">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -4667,18 +4667,18 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
                 </ol>
               </p>
             </statement>
-            <solution permid="BSn">
-              <p permid="IrG">
-                <ol label="a." permid="ZpE">
-                  <li permid="eXM">
-                    <p permid="RwX">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="LeV">
-                    <p permid="xEg">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       We can see that subbing in <m>x=<var name="$r"/></m> or <m>x=<var name="$s"/></m> would result in the output being <m>0</m>.
                       So the <m>x</m>-intercepts are <m>(<var name="$r"/>, 0)</m> and <m>(<var name="$s"/>, 0)</m>.
@@ -4689,7 +4689,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="iuV">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4709,16 +4709,16 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
             </setup>
             <statement>
-              <p permid="HWh">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="cUe">
-                  <li permid="rme">
-                    <p permid="dLp">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="Xtn">
-                    <p permid="JSy">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -4728,18 +4728,18 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
                 </ol>
               </p>
             </statement>
-            <solution permid="hZw">
-              <p permid="oyP">
-                <ol label="a." permid="FwN">
-                  <li permid="DAw">
-                    <p permid="pZH">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="jHF">
-                    <p permid="WgQ">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       We can see that subbing in <m>x=<var name="$r"/></m> or <m>x=<var name="$s"/></m> would result in the output being <m>0</m>.
                       So the <m>x</m>-intercepts are <m>(<var name="$r"/>, 0)</m> and <m>(<var name="$s"/>, 0)</m>.
@@ -4750,7 +4750,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="OCe">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4770,16 +4770,16 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
             </setup>
             <statement>
-              <p permid="odq">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="Jbn">
-                  <li permid="vVX">
-                    <p permid="CnZ">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="cdg">
-                    <p permid="ivi">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -4789,18 +4789,18 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
                 </ol>
               </p>
             </statement>
-            <solution permid="OgF">
-              <p permid="UFY">
-                <ol label="a." permid="lDW">
-                  <li permid="Ikp">
-                    <p permid="OCr">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="ory">
-                    <p permid="uJA">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       We can see that subbing in <m>x=<var name="$r"/></m> or <m>x=<var name="$s"/></m> would result in the output being <m>0</m>.
                       So the <m>x</m>-intercepts are <m>(<var name="$r"/>, 0)</m> and <m>(<var name="$s"/>, 0)</m>.
@@ -4811,7 +4811,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="uJn">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4831,16 +4831,16 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
             </setup>
             <statement>
-              <p permid="Ukz">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="piw">
-                  <li permid="UyH">
-                    <p permid="aQJ">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="AFQ">
-                    <p permid="GXS">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -4850,18 +4850,18 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
                 </ol>
               </p>
             </statement>
-            <solution permid="unO">
-              <p permid="ANh">
-                <ol label="a." permid="RLf">
-                  <li permid="gMZ">
-                    <p permid="nfb">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="MUi">
-                    <p permid="Tmk">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       We can see that subbing in <m>x=<var name="$r"/></m> or <m>x=<var name="$s"/></m> would result in the output being <m>0</m>.
                       So the <m>x</m>-intercepts are <m>(<var name="$r"/>, 0)</m> and <m>(<var name="$s"/>, 0)</m>.
@@ -4872,7 +4872,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="aQw">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4892,16 +4892,16 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
             </setup>
             <statement>
-              <p permid="ArI">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="VpF">
-                  <li permid="tbr">
-                    <p permid="ztt">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="ZiA">
-                    <p permid="fAC">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -4911,18 +4911,18 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
                 </ol>
               </p>
             </statement>
-            <solution permid="auX">
-              <p permid="gUq">
-                <ol label="a." permid="xSo">
-                  <li permid="FpJ">
-                    <p permid="LHL">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="lwS">
-                    <p permid="rOU">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       We can see that subbing in <m>x=<var name="$r"/></m> or <m>x=<var name="$s"/></m> would result in the output being <m>0</m>.
                       So the <m>x</m>-intercepts are <m>(<var name="$r"/>, 0)</m> and <m>(<var name="$s"/>, 0)</m>.
@@ -4933,7 +4933,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="GXF">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -4953,16 +4953,16 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
 </pg-code>
             </setup>
             <statement>
-              <p permid="gyR">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="BwO">
-                  <li permid="REb">
-                    <p permid="XWd">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="xLk">
-                    <p permid="Edm">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -4972,18 +4972,18 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
                 </ol>
               </p>
             </statement>
-            <solution permid="GCg">
-              <p permid="Nbz">
-                <ol label="a." permid="dZx">
-                  <li permid="dSt">
-                    <p permid="kkv">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="JZC">
-                    <p permid="QrE">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       We can see that subbing in <m>x=<var name="$r"/></m> or <m>x=<var name="$s"/></m> would result in the output being <m>0</m>.
                       So the <m>x</m>-intercepts are <m>(<var name="$r"/>, 0)</m> and <m>(<var name="$s"/>, 0)</m>.
@@ -4994,7 +4994,7 @@ $fof0 = $formula-&gt;substitute(x=&gt;Formula("0"));
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="neO">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -5025,16 +5025,16 @@ $r2 = Fraction($s,$r);
 </pg-code>
             </setup>
             <statement>
-              <p permid="MGa">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="hDX">
-                  <li permid="qgL">
-                    <p permid="wyN">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="WnU">
-                    <p permid="cFW">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -5044,21 +5044,21 @@ $r2 = Fraction($s,$r);
                 </ol>
               </p>
             </statement>
-            <solution permid="mJp">
-              <p permid="tiI">
-                <ol label="a." permid="KgG">
-                  <li permid="Cvd">
-                    <p permid="INf">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="iCm">
-                    <p permid="oUo">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       For the output to be <m>0</m>, either
-                      <md permid="kdr">
+                      <md>
                         <mrow><var name="$left"/>\amp=0\amp\amp\text{or}\amp<var name="$right"/>\amp=0</mrow>
                         <mrow><var name="$p"/>x\amp=<var name="$q"/>\amp\amp\text{or}\amp<var name="$r"/>x\amp=<var name="$s"/></mrow>
                         <mrow>x\amp=<var name="$r1"/>\amp\amp\text{or}\amp x\amp=<var name="$r2"/></mrow>
@@ -5071,7 +5071,7 @@ $r2 = Fraction($s,$r);
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="TlX">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -5102,16 +5102,16 @@ $r2 = Fraction($s,$r);
 </pg-code>
             </setup>
             <statement>
-              <p permid="sNj">
+              <p>
                 The formula for a quadratic function <m><var name="$f"/></m> is <m><var name="$f"/>(x)=<var name="$formula"/></m>.
-                <ol label="a." permid="NLg">
-                  <li permid="OJv">
-                    <p permid="Vbx">
+                <ol label="a.">
+                  <li>
+                    <p>
                       The <m>y</m>-intercept is <var name="$yint" width="20"/>.
                     </p>
                   </li>
-                  <li permid="uQE">
-                    <p permid="BiG">
+                  <li>
+                    <p>
                       The <m>x</m>-intercept(s) is/are <var name="$xint" width="20"/>.
                     </p>
                     <instruction>
@@ -5121,21 +5121,21 @@ $r2 = Fraction($s,$r);
                 </ol>
               </p>
             </statement>
-            <solution permid="SQy">
-              <p permid="ZpR">
-                <ol label="a." permid="qnP">
-                  <li permid="aXN">
-                    <p permid="hpP">
+            <solution>
+              <p>
+                <ol label="a.">
+                  <li>
+                    <p>
                       To find the <m>y</m>-intercept,
                       compute <m><var name="$f"/>(0)=<var name="$fof0"/>=<var name="$c"/></m>.
                       So the <m>y</m>-intercept is <m><var name="$yint"/></m>.
                     </p>
                   </li>
-                  <li permid="HeW">
-                    <p permid="NwY">
+                  <li>
+                    <p>
                       The quadratic function is given in factored form.
                       For the output to be <m>0</m>, either
-                      <md permid="QkA">
+                      <md>
                         <mrow><var name="$left"/>\amp=0\amp\amp\text{or}\amp<var name="$right"/>\amp=0</mrow>
                         <mrow><var name="$p"/>x\amp=<var name="$q"/>\amp\amp\text{or}\amp<var name="$r"/>x\amp=<var name="$s"/></mrow>
                         <mrow>x\amp=<var name="$r1"/>\amp\amp\text{or}\amp x\amp=<var name="$r2"/></mrow>

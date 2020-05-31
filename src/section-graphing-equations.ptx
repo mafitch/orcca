@@ -6,13 +6,13 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-graphing-equations" permid="toZ">
+<section xml:id="section-graphing-equations">
   <title>Graphing Equations</title>
-  <p permid="HlA">
+  <p>
     We have graphed <em>points</em> in a coordinate system,
     and now we will graph <em>lines</em> and <em>curves</em>.
   </p>
-  <p permid="nsJ">
+  <p>
     A <term>graph</term><idx><h>graph</h><h>of an equation</h></idx> of an equation is a picture of that equation's solution set.
     For example,
     the graph of <m>y=-2x+3</m> is shown in <xref ref="figure-graph-line-full" />.
@@ -20,10 +20,10 @@
     <xref ref="table-check-points-for-line" />
     shows a few points that make the equation true.
   </p>
-  <sidebyside widths="38% 56%" margins="0%" permid="GXf">
-    <table xml:id="table-check-points-for-line" permid="vHc">
+  <sidebyside widths="38% 56%" margins="0%">
+    <table xml:id="table-check-points-for-line">
       <title/>
-      <tabular permid="aIS">
+      <tabular>
         <col halign="center"/>
         <col halign="center"/>
         <row>
@@ -56,7 +56,7 @@
         </row>
       </tabular>
     </table>
-    <p permid="Llz">
+    <p>
       <xref ref="table-check-points-for-line" />
       tells us that the points <m>(-1,5)</m>,
       <m>(0,3)</m>, <m>(1,1)</m>, <m>(2,-1)</m>, <m>(3,-3)</m>,
@@ -69,12 +69,12 @@
       that together the points look like a straight line.
     </p>
   </sidebyside>
-  <figure permid="LVt">
+  <figure>
     <caption>Graphs of the Equation <m>y=-2x+3</m></caption>
-    <sidebyside widths="32% 32% 32%" margins="0%" permid="neo">
-      <figure xml:id="figure-graph-line-sparse" permid="rsI">
+    <sidebyside widths="32% 32% 32%" margins="0%">
+      <figure xml:id="figure-graph-line-sparse">
         <caption>A few points<ellipsis/></caption>
-        <image permid="YjL">
+        <image>
           <description>a Cartesian graph of the points listed in the text that are solutions to the equation y=-2x+3;</description>
 <latex-image>
 \begin{tikzpicture}
@@ -91,9 +91,9 @@
 </latex-image>
         </image>
       </figure>
-      <figure xml:id="figure-graph-line-more" permid="XzR">
+      <figure xml:id="figure-graph-line-more">
         <caption>More points<ellipsis/></caption>
-        <image permid="EqU">
+        <image>
           <description>a second Cartesian graph showing all of the points listed in the first graph and additional solutions to y=-2x+3 between those points</description>
 <latex-image>
 \begin{tikzpicture}
@@ -105,9 +105,9 @@
 </latex-image>
         </image>
       </figure>
-      <figure xml:id="figure-graph-line-full" permid="DHa">
+      <figure xml:id="figure-graph-line-full">
         <caption>So many points it looks like a straight line</caption>
-        <image permid="kyd">
+        <image>
           <description>a third Cartesian graph showing so many points that are solutions of the line y=-2x+3 that they overlap and form a solid line</description>
 <latex-image>
 \begin{tikzpicture}
@@ -121,14 +121,14 @@
       </figure>
     </sidebyside>
   </figure>
-  <remark permid="uIN">
-    <p permid="yXh">
+  <remark>
+    <p>
       The graph of an equation shades all the points <m>(x,y)</m> that make the equation true once the <m>x</m>- and <m>y</m>-values are substituted in.
       Typically, there are <em>so many</em> points shaded,
       that the final graph appears to be a continuous line or curve that you could draw with one stroke of a pen.
     </p>
   </remark>
-  <exercise permid="wya">
+  <exercise>
     <webwork>
         <setup>
 <pg-code>
@@ -139,12 +139,12 @@ $truefalse=PopUp(['?','true','false'],'true');
 </pg-code>
         </setup>
         <statement>
-          <p permid="wcB">
+          <p>
             The point <m>(4,-5)</m> is on the graph in <xref ref="figure-graph-line-full" />.
             What happens when you substitute these values into the equation <m>y=-2x+3</m>?
           </p>
-          <sidebyside permid="Tlx">
-            <tabular permid="GQb">
+          <sidebyside>
+            <tabular>
               <col halign="right"/>
               <col halign="center"/>
               <col halign="left"/>
@@ -160,13 +160,13 @@ $truefalse=PopUp(['?','true','false'],'true');
               </row>
             </tabular>
           </sidebyside>
-          <p permid="cjK">
+          <p>
             This equation is <var name="$truefalse" form="popup"/>.
           </p>
         </statement>
     </webwork>
   </exercise>
-  <exercise permid="cFj">
+  <exercise>
     <webwork>
         <setup>
 <pg-code>
@@ -181,15 +181,15 @@ $f=Compute("-(3/5)x+1");
 </pg-code>
         </setup>
         <statement>
-          <p permid="IqT">
+          <p>
             Decide whether <m>(5,-2)</m> and
             <m>(-10,-7)</m> are on the graph of the equation <m>y=-\frac{3}{5}x+1\text{.}</m>
           </p>
-          <p permid="oyc">
+          <p>
             At <m>(5,-2)</m>:
           </p>
-          <sidebyside permid="zsG">
-            <tabular permid="mXk">
+          <sidebyside>
+            <tabular>
               <col halign="right"/>
               <col halign="center"/>
               <col halign="left"/>
@@ -205,14 +205,14 @@ $f=Compute("-(3/5)x+1");
               </row>
             </tabular>
           </sidebyside>
-          <p permid="UFl">
+          <p>
             This equation is <var name="$truefalse[0]" form="popup"/> and <m>(5,-2)</m> is <var name="$shaded[0]" form="popup"/> the graph of <m>y=-\frac{3}{5}x+1</m>.
           </p>
-          <p permid="AMu">
+          <p>
             At <m>(-10,-7)</m>:
           </p>
-          <sidebyside permid="fzP">
-            <tabular permid="Tet">
+          <sidebyside>
+            <tabular>
               <col halign="right"/>
               <col halign="center"/>
               <col halign="left"/>
@@ -228,18 +228,18 @@ $f=Compute("-(3/5)x+1");
               </row>
             </tabular>
           </sidebyside>
-          <p permid="gTD">
+          <p>
             This equation is <var name="$truefalse[1]" form="popup"/> and
             <m>(-10,-7)</m> is <var name="$shaded[1]" form="popup"/> the graph of <m>y=-\frac{3}{5}x+1</m>.
           </p>
         </statement>
-        <solution permid="BhT">
-          <p permid="bzQ">
+        <solution>
+          <p>
             If the point <m>(5,-2)</m> is on
             <m>y=-\frac{3}{5}x+1\text{,}</m> once we substitute <m>x=5</m> and <m>y=-2</m> into the line's equation,
             the equation should be true.
             Let's try:
-            <md permid="scC">
+            <md>
               <mrow>y\amp=-\frac{3}{5}x+1</mrow>
               <mrow>-2\amp\stackrel{?}{=}-\frac{3}{5}(5)+1</mrow>
               <mrow>-2\amp\stackrel{\checkmark}{=} -3+1</mrow>
@@ -247,7 +247,7 @@ $f=Compute("-(3/5)x+1");
             Because this last equation is true,
             we can definitively say that <m>(5,-2)</m> is on the graph of <m>y=-\frac{3}{5}x+1\text{.}</m>
           </p>
-          <p permid="HGZ">
+          <p>
             However, if we substitute <m>x=-10</m> and <m>y=-7</m> into the equation,
             it leads to <m>-7=7</m>, which is false.
             This definitively tells us that <m>(-10,-7)</m> is not on the graph.
@@ -255,7 +255,7 @@ $f=Compute("-(3/5)x+1");
         </solution>
     </webwork>
   </exercise>
-  <p permid="TzS">
+  <p>
     So to make our own graph of an equation with two variables <m>x</m> and <m>y</m>,
     we can choose some reasonable <m>x</m>-values,
     then calculate the corresponding <m>y</m>-values,
@@ -263,17 +263,17 @@ $f=Compute("-(3/5)x+1");
     For many (not-so-complicated) algebraic equations,
     connecting those points with a smooth curve will produce an excellent graph.
   </p>
-  <example permid="Wgd">
-    <p permid="BRN">
+  <example>
+    <p>
       Let's plot a graph for the equation <m>y=-2x+5</m>.
       We use a table to organize our work:
     </p>
-    <figure permid="Ogf">
+    <figure>
       <caption>Making a table for <m>y=-2x+5</m></caption>
-      <sidebyside widths="37% 37%" margins="10%" permid="LGY">
-        <table permid="bOl">
+      <sidebyside widths="37% 37%" margins="10%">
+        <table>
           <title>Set up the table</title>
-          <tabular valign="top" bottom="minor" permid="zlC">
+          <tabular valign="top" bottom="minor">
             <col halign="right" right="minor"/>
             <col halign="right" right="minor"/>
             <col halign="center"/>
@@ -309,9 +309,9 @@ $f=Compute("-(3/5)x+1");
             </row>
           </tabular>
         </table>
-        <table permid="HVu">
+        <table>
           <title>Complete the table</title>
-          <tabular valign="top" bottom="minor" permid="fsL">
+          <tabular valign="top" bottom="minor">
             <col halign="right" right="minor"/>
             <col halign="right" right="minor"/>
             <col halign="center"/>
@@ -349,19 +349,19 @@ $f=Compute("-(3/5)x+1");
         </table>
       </sidebyside>
     </figure>
-    <p permid="hYW">
+    <p>
       We use points from the table to graph the equation.
       First, plot each point carefully.
       Then, connect the points with a smooth curve.
       Here, the curve is a straight line.
       Lastly, we can communicate that the graph extends further by sketching arrows on both ends of the line.
     </p>
-    <figure permid="uno">
+    <figure>
       <caption>Graphing the Equation <m>y=-2x+5</m></caption>
-      <sidebyside widths="37% 37%" margins="10%" permid="rOh">
-        <figure permid="jOj">
+      <sidebyside widths="37% 37%" margins="10%">
+        <figure>
           <caption>Use points from the table</caption>
-          <image permid="QFm">
+          <image>
             <description>a Cartesian grid with points (-2,9),(-1,7),(0,5),(1,3),(2,1)</description>
 <latex-image>
 \begin{tikzpicture}
@@ -381,9 +381,9 @@ minor ytick=,]
 </latex-image>
           </image>
         </figure>
-        <figure permid="aux">
+        <figure>
           <caption>Connect the points in whatever pattern is apparent</caption>
-          <image permid="wMv">
+          <image>
             <description>a Cartesian grid with points (-2,9),(-1,7),(0,5),(1,3),(2,1) connected with a solid line</description>
 <latex-image>
 \begin{tikzpicture}
@@ -407,8 +407,8 @@ minor ytick=,]
       </sidebyside>
     </figure>
   </example>
-  <remark permid="aPW">
-    <p permid="feq">
+  <remark>
+    <p>
       Note that our choice of <m>x</m>-values is arbitrary.
       As long as we determine the coordinates of enough points to indicate the behavior of the graph,
       we may choose whichever <m>x</m>-values we like.
@@ -418,9 +418,9 @@ minor ytick=,]
       as in the next examples.
     </p>
   </remark>
-  <example xml:id="example-gas-mileage" permid="Cnm">
+  <example xml:id="example-gas-mileage">
     <statement>
-      <p permid="GBG">
+      <p>
         The gas tank in Sofia's car holds
         <quantity>
           <mag>14</mag><unit base="gallon"/>
@@ -437,8 +437,8 @@ minor ytick=,]
         Make a suitable table of values and graph this equation.
       </p>
     </statement>
-    <solution permid="IMs">
-      <p permid="nOi">
+    <solution>
+      <p>
         Choosing <m>x</m>-values from <m>-2</m> to <m>2</m>,
         as in our previous example, wouldn't make sense here.
         Sofia cannot drive a negative number of miles,
@@ -446,10 +446,10 @@ minor ytick=,]
         So in this context,
         choose <m>x</m>-values that reflect the number of miles Sofia might drive in a day.
       </p>
-      <sidebyside widths="37% 37%" margins="10%" permid="XVq">
-        <table permid="ocD">
+      <sidebyside widths="37% 37%" margins="10%">
+        <table>
           <title>Make the table</title>
-          <tabular valign="top" bottom="minor" permid="LzU">
+          <tabular valign="top" bottom="minor">
             <col halign="right" right="minor"/>
             <col halign="center" right="minor"/>
             <col halign="center"/>
@@ -485,9 +485,9 @@ minor ytick=,]
             </row>
           </tabular>
         </table>
-        <figure permid="TVr">
+        <figure>
           <caption>Make the graph</caption>
-          <image permid="cTE">
+          <image>
             <description>a Cartesian graph of the points listed in the table; the points are connected by a solid line with an arrow to the right</description>
 <latex-image>
 \begin{tikzpicture}
@@ -517,7 +517,7 @@ axis line style={-&gt;}]
       </sidebyside>
     </solution>
   </example>
-  <p permid="zHb">
+  <p>
     In the graph from <xref ref="example-gas-mileage" />,
     notice how both axes indicate units that help describe the meaning of each variable.
     Whenever a graph has real-world context,
@@ -525,14 +525,14 @@ axis line style={-&gt;}]
     (like <m>x</m>)
     and units.
   </p>
-  <example permid="iuv">
+  <example>
     <statement>
-      <p permid="mIP">
+      <p>
         Plot a graph for the equation <m>y=\frac{4}{3}x-4</m>.
       </p>
     </statement>
-    <solution permid="oTB">
-      <p permid="AcA">
+    <solution>
+      <p>
         This equation doesn't have any context to help us choose <m>x</m>-values for a table.
         We could use <m>x</m>-values like <m>-2</m>, <m>-1</m>,
         and so on.
@@ -544,7 +544,7 @@ axis line style={-&gt;}]
         Since we know that everyone can make mistakes with that kind of arithmetic,
         maybe we can avoid it with a more wise selection of <m>x</m>-values.
       </p>
-      <p permid="gjJ">
+      <p>
         If we use only multiples of <m>3</m> for the <m>x</m>-values,
         then multiplying by <m>\frac{4}{3}</m> will leave us with an integer,
         which will be easy to subtract <m>4</m> from.
@@ -552,12 +552,12 @@ axis line style={-&gt;}]
         <m>-3</m>, <m>0</m>, <m>3</m>,
         and <m>6</m> for <m>x</m>.
       </p>
-      <figure permid="syb">
+      <figure>
         <caption>Making a table for <m>y=\frac{4}{3}x-4</m></caption>
-        <sidebyside widths="37% 37%" margins="10%" permid="Ecz">
-          <table permid="UjM">
+        <sidebyside widths="37% 37%" margins="10%">
+          <table>
             <title>Set up the table</title>
-            <tabular valign="top" bottom="minor" permid="rHd">
+            <tabular valign="top" bottom="minor">
               <col halign="right" right="minor"/>
               <col halign="right" right="minor"/>
               <col halign="center"/>
@@ -593,9 +593,9 @@ axis line style={-&gt;}]
               </row>
             </tabular>
           </table>
-          <table permid="AqV">
+          <table>
             <title>Complete the table</title>
-            <tabular valign="top" bottom="minor" permid="XOm">
+            <tabular valign="top" bottom="minor">
               <col halign="right" right="minor"/>
               <col halign="right" right="minor"/>
               <col halign="center"/>
@@ -633,19 +633,19 @@ axis line style={-&gt;}]
           </table>
         </sidebyside>
       </figure>
-      <p permid="MqS">
+      <p>
         We use points from the table to graph the equation.
         First, plot each point carefully.
         Then, connect the points with a smooth curve.
         Here, the curve is a straight line.
         Lastly, we can communicate that the graph extends further by sketching arrows on both ends of the line.
       </p>
-      <figure permid="YFk">
+      <figure>
         <caption>Graphing the Equation <m>y=\frac{4}{3}x-4</m></caption>
-        <sidebyside widths="37% 37%" margins="10%" permid="kjI">
-          <figure permid="PVs">
+        <sidebyside widths="37% 37%" margins="10%">
+          <figure>
             <caption>Use points from the table</caption>
-            <image permid="JaN">
+            <image>
               <description>a Cartesian grid with points (-6,-12),(-3,-8),(0,-4),(3,0),(6,4)</description>
 <latex-image>
 \begin{tikzpicture}
@@ -664,9 +664,9 @@ minor ytick={-15,-14,...,10}]
 </latex-image>
             </image>
           </figure>
-          <figure permid="EMt">
+          <figure>
             <caption>Connect the points in whatever pattern is apparent</caption>
-            <image permid="phW">
+            <image>
               <description>a Cartesian grid with points (-6,-12),(-3,-8),(0,-4),(3,0),(6,4) connected with a solid line</description>
 <latex-image>
 \begin{tikzpicture}
@@ -690,19 +690,19 @@ minor ytick={-15,-14,...,10}]
       </figure>
     </solution>
   </example>
-  <p permid="fOk">
+  <p>
     Not all equations make a straight line once they are plotted.
   </p>
-  <example permid="OBE">
+  <example>
     <statement>
-      <p permid="SPY">
+      <p>
         Build a table and graph the equation
         <m>y=x^2\text{.}</m> Use <m>x</m>-values from <m>-3</m> to <m>3</m>.
       </p>
     </statement>
-    <solution permid="VaK">
-      <sidebyside widths="37% 37%" margins="10%" permid="QqR">
-        <tabular valign="top" bottom="minor" permid="DVv">
+    <solution>
+      <sidebyside widths="37% 37%" margins="10%">
+        <tabular valign="top" bottom="minor">
           <col halign="right" right="minor"/>
           <col halign="right" right="minor"/>
           <col halign="center"/>
@@ -747,7 +747,7 @@ minor ytick={-15,-14,...,10}]
             <cell><m>(3,9)</m></cell>
           </row>
         </tabular>
-        <image permid="Vpf">
+        <image>
           <description>a Cartesian grid with points (-3,9),(-2,4),(-1,1),(0,0),(1,1),(2,4),(3,9); the points are connected with a smooth curve with arrows on both ends</description>
 <latex-image>
 \begin{tikzpicture}
@@ -768,7 +768,7 @@ minor ytick={-2,-1,...,10},]
 </latex-image>
         </image>
       </sidebyside>
-      <p permid="kTC">
+      <p>
         In this example, the points do not fall on a straight line.
         Many algebraic equations have graphs that are non-linear,
         where the points do not fall on a straight line.
@@ -779,102 +779,102 @@ minor ytick={-2,-1,...,10},]
       </p>
     </solution>
   </example>
-  <exercises permid="Zwi">
+  <exercises>
 <!--TODO: add review and warmup, if appropriate ones exist-->
 <!--         <exercisegroup cols="2">
 <title>Review and Warmup</title>
 </exercisegroup>
 -->
-    <exercisegroup cols="3" permid="FDr">
+    <exercisegroup cols="3">
       <title>Testing Points as Solutions</title>
-      <exercise permid="egb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot40.pg"/>
       </exercise>
-      <exercise permid="Knk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot40.pg"/>
       </exercise>
-      <exercise permid="qut">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot50.pg"/>
       </exercise>
-      <exercise permid="WBC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot50.pg"/>
       </exercise>
-      <exercise permid="CIL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot140.pg"/>
       </exercise>
-      <exercise permid="iPU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot140.pg"/>
       </exercise>
-      <!-- <exercise permid="OXd">
+      <!-- <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot150.pg" />
       </exercise>
-      <exercise permid="vem">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/PointOnLineOrNot150.pg" />
       </exercise> -->
     </exercisegroup>
     
-    <exercisegroup cols="2" permid="lKA">
+    <exercisegroup cols="2">
       <title>Tables for Equations</title>
-      <exercise permid="blv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg"/>
       </exercise>
-      <exercise permid="HsE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine40.pg"/>
       </exercise>
-      <exercise permid="nzN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine50.pg"/>
       </exercise>
-      <exercise permid="TGW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine50.pg"/>
       </exercise>
-      <exercise permid="zOf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine60.pg"/>
       </exercise>
-      <exercise permid="fVo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine60.pg"/>
       </exercise>
-      <exercise permid="Mcx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg"/>
       </exercise>
-      <exercise permid="sjG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine110.pg"/>
       </exercise>
-      <exercise permid="YqP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine120.pg"/>
       </exercise>
-      <exercise permid="ExY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/TableForLine120.pg"/>
       </exercise>
-      <exercise permid="kFh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable10.pg"/>
       </exercise>
-      <exercise permid="QMq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable10.pg"/>
       </exercise>
-      <exercise permid="wTz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable20.pg"/>
       </exercise>
-      <exercise permid="daI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable20.pg"/>
       </exercise>
-      <exercise permid="JhR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable50.pg"/>
       </exercise>
-      <exercise permid="ppa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable50.pg"/>
       </exercise>
-      <exercise permid="Vwj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable60.pg"/>
       </exercise>
-      <exercise permid="BDs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EquationsAndInequalitiesInTwoVariables/XYTable60.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup permid="RRJ">
+    <exercisegroup>
       <title>Cartesian Plots in Context</title>
-      <exercise permid="Gnl">
+      <exercise>
         <statement>
-          <p permid="NaM">
+          <p>
             A certain water heater will cost you <m>\$900</m> to buy and have installed.
             This water heater claims that its operating expense
             (money spent on electricity or gas)
@@ -885,15 +885,15 @@ minor ytick={-2,-1,...,10},]
             Make a table of at least five values and plot a graph of this equation.
           </p>
         </statement>
-        <answer permid="hpc">
-          <p permid="RaL">
+        <answer>
+          <p>
             We'll include <m>x=0</m> representing the total expense right after buying and installing the equipment.
             Then we'll use some <m>x</m>-values several months and years into the future.
           </p>
-          <sidebyside margins="0%" permid="hKB">
-            <table permid="gye">
+          <sidebyside margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="kcE">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -929,9 +929,9 @@ minor ytick={-2,-1,...,10},]
                 </row>
               </tabular>
             </table>
-            <figure permid="xhU">
+            <figure>
               <caption>The graph</caption>
-              <image permid="Bwo">
+              <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=30,
@@ -959,9 +959,9 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="muu">
+      <exercise>
         <statement>
-          <p permid="thV">
+          <p>
             You bought a new Toyota Corolla for
             <m>\$18{,}600</m> with a zero interest loan over a five-year period.
             That means you'll have to pay <m>\$310</m> each month for the next five years
@@ -974,16 +974,16 @@ axis line style={-&gt;}]
             Make sure to include a data point representing when you will have paid off the loan.
           </p>
         </statement>
-        <answer permid="Nwl">
-          <p permid="dpd">
+        <answer>
+          <p>
             We'll include <m>x=0</m> representing the loan balance at the time of purchase.
             Then we'll use <m>x</m>-values for each year during the life of the loan,
             all the way up to <m>x=60</m> when the loan is paid off.
           </p>
-          <sidebyside margins="0%" permid="NRK">
-            <table permid="MFn">
+          <sidebyside margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="QjN">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1024,9 +1024,9 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <figure permid="Jwm">
+            <figure>
               <caption>The graph</caption>
-              <image permid="hDx">
+              <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=72,
@@ -1056,9 +1056,9 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="SBD">
+      <exercise>
         <statement>
-          <p permid="Zpe">
+          <p>
             The pressure inside a full propane tank will rise and fall if the ambient temperature rises and falls.
             The equation <m>P=0.1963(T+459.67)</m> models this relationship,
             where the temperature <m>T</m> is measured in
@@ -1073,11 +1073,11 @@ axis line style={-&gt;}]
             Make sure to use <m>T</m>-values that make sense in context.
           </p>
         </statement>
-        <answer permid="tDu">
-          <sidebyside margins="0%" permid="tYT">
-            <table permid="sMw">
+        <answer>
+          <sidebyside margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="wqW">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1113,9 +1113,9 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <figure permid="pDv">
+            <figure>
               <caption>The graph</caption>
-              <image permid="NKG">
+              <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=120,
@@ -1143,9 +1143,9 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="yIM">
+      <exercise>
         <statement>
-          <p permid="Fwn">
+          <p>
             A beloved coworker is retiring and you want to give her a gift of week-long vacation rental at the coast that costs <m>\$1400</m> for the week.
             You might end up paying for it yourself,
             but you ask around to see if the other <m>29</m> office coworkers want to split the cost evenly.
@@ -1156,11 +1156,11 @@ axis line style={-&gt;}]
             Make sure to use <m>x</m>-values that make sense in context.
           </p>
         </statement>
-        <answer permid="ZKD">
-          <sidebyside margins="0%" permid="agc">
-            <table permid="YTF">
+        <answer>
+          <sidebyside margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="cyf">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1196,9 +1196,9 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <figure permid="VKE">
+            <figure>
               <caption>The graph</caption>
-              <image permid="tRP">
+              <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=40,
@@ -1227,19 +1227,19 @@ axis line style={-&gt;}]
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="xYS">
+    <exercisegroup cols="2">
       <title>Graphs of Equations</title>
-      <exercise permid="AxZ">
+      <exercise>
         <statement>
-          <p permid="lDw">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=2x+3</m>.
           </p>
         </statement>
-        <answer permid="FRM">
-          <sidebyside widths="47% 47%" margins="0%" permid="ePV">
-            <table permid="FaO">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="IFo">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1275,7 +1275,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="ZYY">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1290,17 +1290,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="gFi">
+      <exercise>
         <statement>
-          <p permid="RKF">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=3x+5</m>.
           </p>
         </statement>
-        <answer permid="lYV">
-          <sidebyside widths="47% 47%" margins="0%" permid="KXe">
-            <table permid="lhX">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="oMx">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1336,7 +1336,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="Ggh">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1351,17 +1351,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="MMr">
+      <exercise>
         <statement>
-          <p permid="xRO">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=-4x+1</m>.
           </p>
         </statement>
-        <answer permid="Sge">
-          <sidebyside widths="47% 47%" margins="0%" permid="ren">
-            <table permid="Rpg">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="UTG">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1397,7 +1397,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="mnq">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1412,17 +1412,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="sTA">
+      <exercise>
         <statement>
-          <p permid="dYX">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=-x-4</m>.
           </p>
         </statement>
-        <answer permid="ynn">
-          <sidebyside widths="47% 47%" margins="0%" permid="Xlw">
-            <table permid="xwp">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="BaP">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1458,7 +1458,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="Suz">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1473,17 +1473,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="ZaJ">
+      <exercise>
         <statement>
-          <p permid="Kgg">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=\frac{5}{2}x</m>.
           </p>
         </statement>
-        <answer permid="euw">
-          <sidebyside widths="47% 47%" margins="0%" permid="DsF">
-            <table permid="dDy">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="hhY">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1519,7 +1519,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="yBI">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1534,17 +1534,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="FhS">
+      <exercise>
         <statement>
-          <p permid="qnp">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=\frac{4}{3}x</m>.
           </p>
         </statement>
-        <answer permid="KBF">
-          <sidebyside widths="47% 47%" margins="0%" permid="jzO">
-            <table permid="JKH">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="Nph">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1570,7 +1570,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="eIR">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1585,17 +1585,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="lpb">
+      <exercise>
         <statement>
-          <p permid="Wuy">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=-\frac{2}{5}x-3</m>.
           </p>
         </statement>
-        <answer permid="qIO">
-          <sidebyside widths="47% 47%" margins="0%" permid="PGX">
-            <table permid="pRQ">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="twq">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1621,7 +1621,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="KQa">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1636,17 +1636,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="Rwk">
+      <exercise>
         <statement>
-          <p permid="CBH">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=-\frac{3}{4}x+2</m>.
           </p>
         </statement>
-        <answer permid="WPX">
-          <sidebyside widths="47% 47%" margins="0%" permid="vOg">
-            <table permid="VYZ">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="ZDz">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1672,7 +1672,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="qXj">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1687,17 +1687,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="xDt">
+      <exercise>
         <statement>
-          <p permid="iIQ">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=x^2+1</m>.
           </p>
         </statement>
-        <answer permid="CXg">
-          <sidebyside widths="47% 47%" margins="0%" permid="bVp">
-            <table permid="Cgi">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="FKI">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1733,7 +1733,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="Xes">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1748,18 +1748,18 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="dKC">
+      <exercise>
         <statement>
-          <p permid="OPZ">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=(x-2)^2</m>.
             Use <m>x</m>-values from <m>0</m> to <m>4</m>.
           </p>
         </statement>
-        <answer permid="jep">
-          <sidebyside widths="47% 47%" margins="0%" permid="Icy">
-            <table permid="inr">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="lRR">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1795,7 +1795,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="DlB">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1810,17 +1810,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="JRL">
+      <exercise>
         <statement>
-          <p permid="uXi">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=-3x^2</m>.
           </p>
         </statement>
-        <answer permid="Ply">
-          <sidebyside widths="47% 47%" margins="0%" permid="ojH">
-            <table permid="OuA">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="RZa">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1856,7 +1856,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="jsK">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1871,17 +1871,17 @@ axis line style={-&gt;}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="pYU">
+      <exercise>
         <statement>
-          <p permid="ber">
+          <p>
             Create a table of ordered pairs and then make a plot of the equation <m>y=-x^2-2x-3</m>.
           </p>
         </statement>
-        <answer permid="vsH">
-          <sidebyside widths="47% 47%" margins="0%" permid="UqQ">
-            <table permid="uBJ">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
+            <table>
               <title>A possible table</title>
-              <tabular valign="top" bottom="minor" permid="ygj">
+              <tabular valign="top" bottom="minor">
                 <col halign="right" right="minor"/>
                 <col halign="center" right="minor"/>
                 <col halign="center"/>
@@ -1917,7 +1917,7 @@ axis line style={-&gt;}]
                 </row>
               </tabular>
             </table>
-            <image permid="PzT">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}

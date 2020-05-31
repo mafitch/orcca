@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-factoring-by-grouping" permid="puE">
+<section xml:id="section-factoring-by-grouping">
   <title>Factoring by Grouping</title>
-  <introduction permid="kpm">
-    <p permid="FXq">
+  <introduction>
+    <p>
       This section covers a technique for factoring polynomials like <m>x^3+3x^2+2x+6</m>,
       which factors as <m>\left(x^2+2\right)(x+3)</m>.
       If there are four terms,
@@ -20,12 +20,12 @@
       and <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient" />.
     </p>
   </introduction>
-  <subsection permid="VBN">
+  <subsection>
     <title>Factoring out Common Polynomials</title>
-    <p permid="WVB">
+    <p>
       Recall that to factor <m>3x+6</m>,
       we factor out the common factor <m>3</m>:
-      <md permid="bFu">
+      <md>
         <mrow>3x+6\amp=\attention{3}x+\attention{3}\cdot2</mrow>
         <mrow>\amp=3(x+2)</mrow>
       </md>
@@ -33,40 +33,40 @@
       <q><m>3</m></q>
       here could have been something more abstract,
       and it still would be valid to factor it out:
-      <md permid="HMD">
+      <md>
         <mrow>xA+2A\amp=x\attention{A}+2\attention{A}\amp x\apple+2\apple\amp=x\attention{\apple}+2\attention{\apple}</mrow>
         <mrow>\amp=A(x+2)\amp\amp=\apple(x+2)</mrow>
       </md>
       In fact, even
       <q>larger</q>
       things can be factored out, as in this example:
-      <md permid="nTM">
+      <md>
         <mrow>x(a+b)+2(a+b)\amp=x\attention{\overbrace{(a+b)}}+2\attention{\overbrace{(a+b)}}</mrow>
         <mrow>\amp=\highlight{(a+b)}(x+2)</mrow>
       </md>
     </p>
-    <p permid="DcK">
+    <p>
       In this last example, we factored out the binomial factor <m>(a+b)</m>.
       Factoring out binomials is the essence of this section,
       so let's see that a few more times:
-      <md permid="UaV">
+      <md>
         <mrow>x(x+2)+3(x+2)\amp=x\attention{\overbrace{(x+2)}}+3\attention{\overbrace{(x+2)}}</mrow>
         <mrow>\amp=\highlight{(x+2)}(x+3)</mrow>
       </md>
-      <md permid="Aie">
+      <md>
         <mrow>z^2(2y+5)+3(2y+5)\amp=z^2\attention{\overbrace{(2y+5)}}+3\attention{\overbrace{(2y+5)}}</mrow>
         <mrow>\amp=\highlight{(2y+5)}(z^2+3)</mrow>
       </md>
       Even with an expression like <m>Q^2(Q-3)+Q-3</m>,
       if we re-write it in the right way using a <m>1</m> and some parentheses,
       then it too can be factored:
-      <md permid="gpn">
+      <md>
         <mrow>Q^2(Q-3)+Q-3\amp=Q^2(Q-3)+1(Q-3)</mrow>
         <mrow>\amp=Q^2\attention{\overbrace{(Q-3)}}+1\attention{\overbrace{(Q-3)}}</mrow>
         <mrow>\amp=\highlight{(Q-3)}(Q^2+1)</mrow>
       </md>
     </p>
-    <p permid="jjT">
+    <p>
       The truth is you are unlikely to come upon an expression like
       <m>x(x+2)+3(x+2)</m>, as in these examples.
       Why wouldn't someone have multiplied that out already?
@@ -76,22 +76,22 @@
       <term>factoring by grouping</term>.
     </p>
   </subsection>
-  <subsection permid="BIW">
+  <subsection>
     <title>Factoring by Grouping</title>
     <idx><h>factoring</h><h>by grouping</h></idx>
-    <p permid="Prc">
+    <p>
       Factoring by grouping is a factoring technique that <em>sometimes</em>
       works on polynomials with four terms.
       Here is an example.
     </p>
-    <example permid="Trb">
-      <p permid="Bnx">
+    <example>
+      <p>
         Suppose we must factor <m>x^3-3x^2+5x-15</m>.
         Note that there are four terms,
         and they are written in descending order of the powers of <m>x</m>.
         <q>Grouping</q>
         means to group the first two terms and the last two terms together:
-        <md permid="Mww">
+        <md>
           <mrow>x^3-3x^2+5x-15\amp=\left(x^3-3x^2\right)+(5x-15)</mrow>
           <intertext>Now, each of these two groups has its own greatest common factor we can factor out:</intertext>
           <mrow>\amp=x^2(x-3)+5(x-3)</mrow>
@@ -108,7 +108,7 @@
         you should always make checks like this.
       </p>
     </example>
-    <exercise permid="rTL">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
           <setup>
@@ -118,18 +118,18 @@ $answer = Formula("(x+4)(x^2+2)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="mez">
+            <p>
               Factor <m>x^3+4x^2+2x+8</m>.
             </p>
-            <p permid="SlI">
+            <p>
               <var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="Qwv">
-            <p permid="IRW">
+          <solution>
+            <p>
               We will break the polynomial into two groups:
               <m>x^3+4x^2</m> and <m>2x+8</m>.
-              <md permid="sDF">
+              <md>
                 <mrow>x^3+4x^2+2x+8\amp=\left(x^3+4x^2\right)+(2x+8)</mrow>
                 <intertext>and now each group has its own greatest common factor to factor out:</intertext>
                 <mrow>\amp=x^2\highlight{(x+4)}+2\highlight{(x+4)}</mrow>
@@ -140,8 +140,8 @@ $answer = Formula("(x+4)(x^2+2)");
           </solution>
       </webwork>
     </exercise>
-    <example permid="zyk">
-      <p permid="huG">
+    <example>
+      <p>
         Factor <m>t^3-5t^2-3t+15</m>.
         This example has a complication with negative signs.
         If we try to break up this polynomial into two groups as
@@ -152,9 +152,9 @@ $answer = Formula("(x+4)(x^2+2)");
         The original polynomial <em>added</em>
         <m>15</m>, so we are off course.
       </p>
-      <p permid="NBP">
+      <p>
         One way to handle this is to treat subtraction as addition of a negative:
-        <md permid="YKO">
+        <md>
           <mrow>t^3-5t^2-3t+15\amp=t^3-5t^2+(-3t)+15</mrow>
           <mrow>\amp=\left(t^3-5t^2\right)+\left(-3t+15\right)</mrow>
           <intertext>Now we can proceed to factor out common factors from each group. Since the second group leads with a negative coefficient, we'll factor out <m>-3</m>. This will result in the
@@ -169,7 +169,7 @@ $answer = Formula("(x+4)(x^2+2)");
         it should result in the original  <m>t^3-5t^2-3t+15</m>.
       </p>
     </example>
-    <exercise permid="YaU">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
           <setup>
@@ -180,18 +180,18 @@ $answer = Formula("(2q-3)(3q^2-2)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="ysR">
+            <p>
               Factor <m>6q^3-9q^2-4q+6</m>.
             </p>
-            <p permid="eAa">
+            <p>
               <var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="wDE">
-            <p permid="oZf">
+          <solution>
+            <p>
               We will break the polynomial into two groups:
               <m>6q^3-9q^2</m> and <m>-4q+6</m>.
-              <md permid="ERX">
+              <md>
                 <mrow>6q^3-9q^2-4q+6\amp=\left(6q^3-9q^2\right)+(-4q+6)</mrow>
                 <intertext>and now each group has its own greatest common factor to factor out:</intertext>
                 <mrow>\amp=3q^2\highlight{(2q-3)}-2\highlight{(2q-3)}</mrow>
@@ -202,13 +202,13 @@ $answer = Formula("(2q-3)(3q^2-2)");
           </solution>
       </webwork>
     </exercise>
-    <example permid="fFt">
-      <p permid="tIY">
+    <example>
+      <p>
         Factor <m>x^3-3x^2+x-3</m>.
         To succeed with this example, we will need to
         <q>factor out</q>
         a trivial number <m>1</m> that isn't apparent until we make it so.
-        <md permid="kZg">
+        <md>
           <mrow>x^3-3x^2+x-3\amp=\left(x^3-3x^2\right)+(x-3)</mrow>
           <mrow>\amp=x^2\highlight{(x-3)}+1\highlight{(x-3)}</mrow>
           <mrow>\amp=x^2\attention{\overbrace{(x-3)}}+1\attention{\overbrace{(x-3)}}</mrow>
@@ -219,7 +219,7 @@ $answer = Formula("(2q-3)(3q^2-2)");
         As always, we should check that this is correct by multiplying it out.
       </p>
     </example>
-    <exercise permid="Eid">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
           <setup>
@@ -230,18 +230,18 @@ $answer = Formula("(2t^2+3)(3t^4+1)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="KHj">
+            <p>
               Factor <m>6t^6+9t^4+2t^2+3</m>.
             </p>
-            <p permid="qOs">
+            <p>
               <var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="cKN">
-            <p permid="Vgo">
+          <solution>
+            <p>
               We will break the polynomial into two groups:
               <m>6t^6+9t^4</m> and <m>2t^2+3</m>.
-              <md permid="Rgp">
+              <md>
                 <mrow>6t^6+9t^4+2t^2+3\amp=\left(6t^6+9t^4\right)+\left(2t^2+3\right)</mrow>
                 <intertext>the first group has its own greatest common factor to factor out, and with the second group we can write a <m>1</m>:</intertext>
                 <mrow>\amp=3t^4\highlight{\left(2t^2+3\right)}+1\highlight{\left(2t^2+3\right)}</mrow>
@@ -252,24 +252,24 @@ $answer = Formula("(2t^2+3)(3t^4+1)");
           </solution>
       </webwork>
     </exercise>
-    <example permid="LMC">
-      <p permid="ZQh">
+    <example>
+      <p>
         Factor <m>xy^2-10y^2-2x+20</m>.
         The technique can work when there are multiple variables too.
-        <md permid="xny">
+        <md>
           <mrow>xy^2-10y^2-2x+20\amp=\left(xy^2-10y^2\right)+(-2x+20)</mrow>
           <mrow>\amp=y^2\highlight{\attention{\overbrace{(x-10)}}}-2\highlight{\attention{\overbrace{(x-10)}}}</mrow>
           <mrow>\amp=\highlight{(x-10)}\left(y^2-2\right)</mrow>
         </md>.
       </p>
     </example>
-    <p permid="vyl">
+    <p>
       Unfortunately,
       this technique is not guaranteed to work on every polynomial with four terms.
       In fact, <em>most</em> randomly selected four-term polynomials will not factor using this method and those selected here should be considered
       <q>nice.</q>
       Here is an example that will not factor with grouping:
-      <md permid="duH">
+      <md>
         <mrow>x^3+6x^2+11x+6\amp= \left(x^3+6x^2\right)+(11x+6)</mrow>
         <mrow>\amp= x^2\underbrace{\left(x+6\right)}_{\mathord{?}}+1\underbrace{(11x+6)}_{\mathord{?}}</mrow>
       </md>
@@ -284,121 +284,121 @@ $answer = Formula("(2t^2+3)(3t^4+1)");
       So the fact that grouping fails to factor the polynomial doesn't tell us whether or not it is prime.
     </p>
   </subsection>
-  <exercises permid="hQf">
-    <exercisegroup cols="3" permid="NXo">
+  <exercises>
+    <exercisegroup cols="3">
       <title>Review and Warmup</title>
-      <exercise permid="GsP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring38.pg"/>
       </exercise>
-      <exercise permid="mzY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring38.pg"/>
       </exercise>
-      <exercise permid="SHh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring41.pg"/>
       </exercise>
-      <exercise permid="yOq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring41.pg"/>
       </exercise>
-      <exercise permid="eVz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring56.pg"/>
       </exercise>
-      <exercise permid="LcI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring56.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="uex">
+    <exercisegroup cols="2">
       <title>Factoring out Common Polynomials</title>
-      <exercise permid="rjR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring105.pg"/>
       </exercise>
-      <exercise permid="Xra">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring105.pg"/>
       </exercise>
-      <exercise permid="Dyj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring110.pg"/>
       </exercise>
-      <exercise permid="jFs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring110.pg"/>
       </exercise>
-      <exercise permid="PMB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring115.pg"/>
       </exercise>
-      <exercise permid="vTK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring115.pg"/>
       </exercise>
-      <exercise permid="caT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring120.pg"/>
       </exercise>
-      <exercise permid="Iic">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring120.pg"/>
       </exercise>
-      <exercise width="wide" permid="opl">
+      <exercise width="wide">
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring155.pg"/>
       </exercise>
-      <exercise width="wide" permid="Uwu">
+      <exercise width="wide">
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring155.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="alG">
+    <exercisegroup cols="2">
       <title>Factoring by Grouping</title>
-      <exercise permid="ADD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring125.pg"/>
       </exercise>
-      <exercise permid="gKM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring125.pg"/>
       </exercise>
-      <exercise permid="MRV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring125.pg"/>
       </exercise>
-      <exercise permid="sZe">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring125.pg"/>
       </exercise>
-      <exercise permid="Zgn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring130.pg"/>
       </exercise>
-      <exercise permid="Fnw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring130.pg"/>
       </exercise>
-      <exercise permid="luF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring130.pg"/>
       </exercise>
-      <exercise permid="RBO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring130.pg"/>
       </exercise>
-      <exercise permid="xIX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring135.pg"/>
       </exercise>
-      <exercise permid="dQg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring135.pg"/>
       </exercise>
-      <exercise permid="JXp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring135.pg"/>
       </exercise>
-      <exercise permid="qey">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring135.pg"/>
       </exercise>
-      <exercise permid="WlH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring140.pg"/>
       </exercise>
-      <exercise permid="CsQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring140.pg"/>
       </exercise>
-      <exercise permid="izZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring140.pg"/>
       </exercise>
-      <exercise permid="OHi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring140.pg"/>
       </exercise>
-      <exercise permid="uOr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring150.pg"/>
       </exercise>
-      <exercise permid="aVA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring150.pg"/>
       </exercise>
-      <exercise permid="HcJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring150.pg"/>
       </exercise>
-      <exercise permid="njS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring150.pg"/>
       </exercise>
     </exercisegroup>

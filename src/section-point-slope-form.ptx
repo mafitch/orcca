@@ -6,62 +6,62 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-point-slope-form" permid="zYW">
+<section xml:id="section-point-slope-form">
   <title>Point-Slope Form</title>
-  <introduction permid="ijN">
-    <p permid="Rey">
+  <introduction>
+    <p>
       In <xref ref="section-slope-intercept-form" />,
       we learned that a linear equation can be written in slope-intercept form,
       <m>y=mx+b\text{.}</m> This section covers an alternative that can often be more useful depending on the application:
       <term>point-slope form</term>.
     </p>
   </introduction>
-  <subsection permid="ggf">
+  <subsection>
     <title>Point-Slope Motivation and Definition</title>
-    <p permid="iMD">
+    <p>
       Starting in 1990, the population of the United States has been growing by about <m>2.865</m> million per year.
       Also, back in 1990, the population was <m>253</m> million.
       Since the rate of growth has been roughly constant,
       a linear model is appropriate.
       Let's try to write an equation to model this.
     </p>
-    <p permid="OTM">
-      We consider using <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>,
+    <p>
+      We consider using <xref ref="equation-slope-intercept-form" text="title" />,
       but we would need to know the <m>y</m>-intercept,
       and nothing in the background tells us that.
       We'd need to know the population of the United States in the year 0, before there even was a United States.
     </p>
-    <p permid="vaV">
+    <p>
       We could do some side work to calculate the <m>y</m>-intercept,
       but let's try something else.
       Here are some things we know:
-      <ol permid="CMy">
-        <li permid="iTH">
-          <p permid="hOo">
+      <ol>
+        <li>
+          <p>
             The slope equation is <m>m=\frac{y_2-y_1}{x_2-x_1}</m>.
           </p>
         </li>
-        <li permid="PaQ">
-          <p permid="NVx">
+        <li>
+          <p>
             The slope is <m>m=2.865</m>
             (million per year).
           </p>
         </li>
-        <li permid="vhZ">
-          <p permid="ucG">
+        <li>
+          <p>
             One point on the line is <m>(1990,253)</m>,
             because in 1990, the population was <m>253</m> million.
           </p>
         </li>
       </ol>
     </p>
-    <p permid="bie">
+    <p>
       If we use the generic <m>(x,y)</m> to represent a point
       <em>somewhere</em> on this line,
       then the rate of change between
       <m>(1990,253)</m> and <m>(x,y)</m> has to be <m>2.865</m>.
       So
-      <me permid="Yny">
+      <me>
         \frac{y-253}{x-1990}=2.865
       </me>.
       There is good reason<fn>
@@ -69,13 +69,13 @@
       <em>depends</em> on <m>x</m>
       (whatever year it is).
       </fn> to want to isolate <m>y</m> in this equation:
-      <md permid="tVC">
+      <md>
         <mrow>\frac{y-253}{x-1990}\amp=2.865</mrow>
         <mrow>y-253\amp=2.865\multiplyright{(x-1990)}\amp\amp\text{(could distribute, but not going to)}</mrow>
         <mrow>y\amp=2.865(x-1990)\addright{253}</mrow>
       </md>
     </p>
-    <p permid="Hpn">
+    <p>
       This is a good place to stop.
       We have isolated <m>y</m>,
       and three <em>meaningful</em> numbers appear in the population:
@@ -84,14 +84,14 @@
       This is a specific example of <term>point-slope form</term>.
       Before we look deeper at point-slope form,
       let's continue reducing the line equation into slope-intercept form.
-      <md permid="acL">
+      <md>
         <mrow>y\amp=2.865(x-1990)+253</mrow>
         <mrow>y\amp=2.865x - 5701.35 + 253</mrow>
         <mrow>y\amp=2.865x - 5448.35</mrow>
       </md>
     </p>
-    <p permid="nww">
-      One concern with <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>
+    <p>
+      One concern with <xref ref="equation-slope-intercept-form" text="title" />
       is that it uses the <m>y</m>-intercept,
       which might be somewhat meaningless in the context of an application.
       For example,
@@ -102,22 +102,22 @@
       It doesn't make sense to talk about the United States population before there even was a United States.
       And it doesn't make sense to use this model for years earlier than 1990 because the background information says clearly that the rate of change we have applies to years 1990 and later.
     </p>
-    <p permid="TDF">
+    <p>
       For all these reasons, we prefer the equation when it was in the form
-      <me permid="EuH">
+      <me>
         y=2.865(x-1990)\addright{253}
       </me>
     </p>
-    <definition xml:id="definition-point-slope-form" permid="nYZ">
+    <definition xml:id="definition-point-slope-form">
       <title>Point-Slope Form</title>
       <idx><h>point-slope form</h></idx>
       <idx><h>form</h><h>point-slope</h></idx>
       <statement>
-        <p permid="WTK">
+        <p>
           When <m>x</m> and <m>y</m> have a linear relationship where <m>m</m> is the slope and
           <m>(x_0,y_0)</m> is some specific point that the line passes through,
           one equation for this relationship is
-          <men xml:id="equation-point-slope-form" permid="hHk">
+          <men xml:id="equation-point-slope-form">
             y=m\left(x-x_0\right)+y_0
           </men>
           and this equation is called the
@@ -125,9 +125,9 @@
           It is called this because the slope and one point on the line are immediately discernible from the numbers in the equation.
         </p>
         <sidebyside width="47%">
-        <figure permid="DaT">
+        <figure>
           <caption/>
-          <image width="47%" permid="PDG">
+          <image width="47%">
             <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -146,18 +146,18 @@ grid=none]
       </sidebyside>
       </statement>
     </definition>
-    <remark permid="Anr">
+    <remark>
       <title>Alternative Point-Slope Form</title>
-      <p permid="YIX">
+      <p>
         It is also common to define point-slope form as
-        <men xml:id="equation-point-slope-form-variant" permid="NOt">
+        <men xml:id="equation-point-slope-form-variant">
           y-y_0=m\left(x-x_0\right)
         </men>
         by subtracting <m>y_0</m> from each side.
         Some exercises may appear using this form.
       </p>
     </remark>
-    <exercise xml:id="exercise-point-slope" permid="YQb">
+    <exercise xml:id="exercise-point-slope">
       <webwork>
           <setup>
 <pg-code>
@@ -188,54 +188,54 @@ $gr-&gt;arrowTo($stop,3*($stop-3)+2,'blue',1);
 </pg-code>
           </setup>
           <statement>
-            <p permid="xlH">
+            <p>
               Consider the line in this graph:
             </p>
-            <sidebyside widths="47%" permid="guA">
-              <image permid="vKP" pg-name="$gr"/>
+            <sidebyside widths="47%">
+              <image pg-name="$gr"/>
             </sidebyside>
-            <p permid="dsQ">
-              <ol label="a." permid="WFp">
-                <li permid="bpi">
-                  <p permid="ajP">
+            <p>
+              <ol label="a.">
+                <li>
+                  <p>
                     Identify a point visible on this line that has integer coordinates.
                   </p>
-                  <p permid="GqY">
+                  <p>
                     <var name="$point" width="10"/>
                   </p>
                 </li>
-                <li permid="Hwr">
-                  <p permid="myh">
+                <li>
+                  <p>
                     What is the slope of the line?
                   </p>
-                  <p permid="SFq">
+                  <p>
                     <var name="$slope" width="10"/>
                   </p>
                 </li>
-                <li permid="nDA">
-                  <p permid="yMz">
+                <li>
+                  <p>
                     Use point-slope form to write an equation for this line,
                     making use of a point with integer coordinates.
                   </p>
-                  <p permid="eTI">
+                  <p>
                     <var name="$eq" width="20"/>
                   </p>
                 </li>
               </ol>
             </p>
           </statement>
-          <solution permid="GMx">
-            <p permid="RzX">
-              <ol label="a." permid="RVw">
-                <li permid="TKJ">
-                  <p permid="LaR">
+          <solution>
+            <p>
+              <ol label="a.">
+                <li>
+                  <p>
                     The visible points with integer coordinates are <m>(2,-1)</m>,
                     <m>(3,2)</m>,
                     <m>(4,5)</m>, and <m>(5,8)</m>.
                   </p>
                 </li>
-                <li permid="zRS">
-                  <p permid="ria">
+                <li>
+                  <p>
                     Several slope triangles are visible where the
                     <q>run</q>
                     is <m>1</m> and the
@@ -244,8 +244,8 @@ $gr-&gt;arrowTo($stop,3*($stop-3)+2,'blue',1);
                     So the slope is <m>\frac{3}{1}=3</m>.
                   </p>
                 </li>
-                <li permid="fZb">
-                  <p permid="Xpj">
+                <li>
+                  <p>
                     Using <m>(3,2)</m>, the point-slope equation is
                     <m>y=3(x-3)+2</m>. (You could use other points, like <m>(2,-1)</m>,
                     and get a different-looking equation like
@@ -257,17 +257,17 @@ $gr-&gt;arrowTo($stop,3*($stop-3)+2,'blue',1);
           </solution>
       </webwork>
     </exercise>
-    <p permid="zKO">
-      In <xref ref="exercise-point-slope">Checkpoint</xref>,
+    <p>
+      In <xref ref="exercise-point-slope"/>,
       the solution explains that each of the following are acceptable equations for the same line:
-      <md permid="GjU">
+      <md>
         <mrow>y\amp=3(x-3)+2\amp y\amp=3(x-2)-1</mrow>
       </md>
       The first uses <m>(3,2)</m> as a point on the line,
       and the second uses <m>(2,-1)</m>.
       Are those two equations really equivalent?
-      Let's distribute and simplify each of them to get <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>.
-      <md permid="mrd">
+      Let's distribute and simplify each of them to get <xref ref="equation-slope-intercept-form" text="title" />.
+      <md>
         <mrow>y\amp=3(x-3)+2\amp y\amp=3(x-2)-1</mrow>
         <mrow>y\amp=3x-9+2\amp y\amp=3x-6-1</mrow>
         <mrow>y\amp=3x-7\amp y\amp=3x-7</mrow>
@@ -276,12 +276,12 @@ $gr-&gt;arrowTo($stop,3*($stop-3)+2,'blue',1);
       It didn't matter which point we used to write a point-slope equation.
       We get different-looking equations that still represent the same line.
     </p>
-    <p permid="fRX">
+    <p>
       Point-slope form is preferable when we know a line's slope and a point on it,
       but we don't know the <m>y</m>-intercept.
     </p>
-    <example permid="Ugi">
-      <p permid="jic">
+    <example>
+      <p>
         A spa chain has been losing customers at a roughly constant rate since the year 2010.
         In 2013, it had <m>2{,}975</m> customers;
         in 2016, it had <m>2{,}585</m> customers.
@@ -289,12 +289,12 @@ $gr-&gt;arrowTo($stop,3*($stop-3)+2,'blue',1);
         <m>1{,}800\text{.}</m> If this trend continues,
         when will the company close?
       </p>
-      <p permid="Ppl">
+      <p>
         The given information tells us two points on the line:
-        <m>(2013,2975)</m> and <m>(2016,2585)\text{.}</m> The <xref ref="equation-slope-formula" text="title">slope formula</xref> will give us the slope.
+        <m>(2013,2975)</m> and <m>(2016,2585)\text{.}</m> The <xref ref="equation-slope-formula" text="title" /> will give us the slope.
         After labeling those two points as
         <m>(\overset{x_1}{2013},\overset{y_1}{2975})</m> and <m>(\overset{x_2}{2016},\overset{y_2}{2585})</m>, we have:
-        <md permid="Sym">
+        <md>
           <mrow>\text{slope}\amp=\frac{y_2-y_1}{x_2-x_1}</mrow>
           <mrow>\amp=\frac{2585-2975}{2016-2013}</mrow>
           <mrow>\amp=\frac{-390}{3}</mrow>
@@ -303,31 +303,31 @@ $gr-&gt;arrowTo($stop,3*($stop-3)+2,'blue',1);
         And considering units,
         this means they are losing <m>130</m> customers per year.
       </p>
-      <p permid="vwu">
+      <p>
         Let's note that we could try to make an equation for this line in slope-intercept form,
         but then we would need to calculate the <m>y</m>-intercept,
         which in context would correspond to the number of customers in year <m>0</m>.
         We could do it,
         but we'd be working with numbers that have no real-world meaning in this context.
       </p>
-      <p permid="bDD">
+      <p>
         For point-slope form, since we calculated the slope,
         we know at least this much:
-        <me permid="kBQ">
+        <me>
           y=-130(x-x_0)+y_0\text{.}
         </me>
         Now we can pick one of those two given points,
         say <m>(2013,2975)\text{,}</m> and get the equation
-        <me permid="QIZ">
+        <me>
           y=-130(x-2013)+2975\text{.}
         </me>
         Note that all three numbers in this equation have meaning in the context of the spa chain.
       </p>
-      <p permid="HKM">
+      <p>
         We're ready to answer the question about when the chain might go out of business.
         Substitute <m>y</m> in the equation with <m>1800</m> and solve for
         <m>x\text{,}</m> and we will get the answer we seek.
-        <md permid="yFv">
+        <md>
           <mrow>y\amp=-130(x-2013)+2975</mrow>
           <mrow>\substitute{1800}\amp=-130(x-2013)+2975</mrow>
           <mrow>1800\subtractright{2975}\amp=-130(x-2013)</mrow>
@@ -340,16 +340,16 @@ $gr-&gt;arrowTo($stop,3*($stop-3)+2,'blue',1);
         And so we find that at this rate,
         the company is headed toward a collapse in 2022.
       </p>
-      <sidebyside widths="37% 37%" margins="10%" permid="MBJ">
-        <p permid="nRV">
+      <sidebyside widths="37% 37%" margins="10%">
+        <p>
           Shown is a graph that represents the scenario.
           Note that to make a graph of <m>y=-130(x-2013)+2975</m>,
           we must first find the point
           <m>(2013,2975)</m> and from there use the slope of <m>-130</m> to draw the line.
         </p>
-        <figure permid="TZe">
+        <figure>
           <caption>A Graph of <m>y=-130(x-2013)+2975</m></caption>
-          <image permid="FeB">
+          <image>
             <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -372,7 +372,7 @@ minor ytick=]
         </figure>
       </sidebyside>
     </example>
-    <exercise permid="EXk">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -395,25 +395,25 @@ $eq=Formula("y=0.8775(x-50)+50");
 </pg-code>
           </setup>
           <statement>
-            <p permid="JzZ">
+            <p>
               If we go state by state and compare the Republican candidate's 2012 vote share (<m>x</m>) to the Republican candidate's 2016 vote share (<m>y</m>),
               we get the following graph where a trendline has been superimposed.
             </p>
-            <sidebyside widths="40%" permid="sIS">
-              <image permid="bRY" pg-name="$gr"/>
+            <sidebyside widths="40%">
+              <image pg-name="$gr"/>
             </sidebyside>
-            <p permid="pHi">
+            <p>
               Find a point-slope equation for this line.
               (Note that a slope-intercept equation would use the <m>y</m>-intercept coordinate <m>b</m>,
               and that would not be meaningful in context,
               since no state had anywhere near zero percent Republican vote.)
             </p>
-            <p permid="VOr">
+            <p>
               <var name="$eq" width="20"/>
             </p>
           </statement>
-          <solution permid="mTG">
-            <p permid="xHg">
+          <solution>
+            <p>
               We need to calculate slope first.
               And for that, we need to identify two points on the line.
               Conveniently,
@@ -421,14 +421,14 @@ $eq=Formula("y=0.8775(x-50)+50");
               We have to take a second point somewhere,
               and <m>(75,72)</m> seems like a reasonable roughly accurate choice.
               The slope equation gives us that
-              <me permid="wQi">
+              <me>
                 m=\frac{72-50}{75-50}=\frac{22}{25}=0.88\text{.}
               </me>
             </p>
-            <p permid="dOp">
+            <p>
               Using <m>(50,50)</m> as the point,
               the point-slope equation would then be
-              <me permid="cXr">
+              <me>
                 y=0.88(x-50)+50\text{.}
               </me>
             </p>
@@ -436,43 +436,43 @@ $eq=Formula("y=0.8775(x-50)+50");
       </webwork>
     </exercise>
   </subsection>
-  <subsection permid="Mno">
+  <subsection>
     <title>Using Two Points to Build a Linear Equation</title>
-    <p permid="LZg">
+    <p>
       Since two points can determine a line's location,
       we can calculate a line's equation using just the coordinates from any two points it passes through.
     </p>
-    <example xml:id="example-two-points-to-build-point-slope-form" permid="let">
+    <example xml:id="example-two-points-to-build-point-slope-form">
       <statement>
-        <p permid="Agn">
+        <p>
           A line passes through <m>(-6,0)</m> and
           <m>(9,-10)\text{.}</m> Find this line's equation in both point-slope and slope-intercept form.
         </p>
       </statement>
-      <solution permid="OqW">
-        <p permid="JVy">
-          We will use the <xref ref="equation-slope-formula" text="title">slope formula</xref> to find the slope first.
+      <solution>
+        <p>
+          We will use the <xref ref="equation-slope-formula" text="title" /> to find the slope first.
           After labeling those two points as <m>(\overset{x_1}{-6},\overset{y_1}{0}) \text{ and } (\overset{x_2}{9},\overset{y_2}{-10})\text{,}</m> we have:
-          <md permid="eME">
+          <md>
             <mrow>\text{slope}\amp=\frac{y_2-y_1}{x_2-x_1}</mrow>
             <mrow>\amp=\frac{-10-0}{9-(-6)}</mrow>
             <mrow>\amp=\frac{-10}{15}</mrow>
             <mrow>\amp=-\frac{2}{3}</mrow>
           </md>
         </p>
-        <sidebyside widths="47% 47%" margins="0%" permid="xsL">
-          <p permid="qcH">
+        <sidebyside widths="47% 47%" margins="0%">
+          <p>
             The point-slope equation is <m>y=-\frac{2}{3}(x-x_0)+y_0\text{.}</m> Next,
             we will use <m>(9,-10)</m> and substitute <m>x_0</m> with <m>9</m> and <m>y_0</m> with <m>-10\text{,}</m> and we have:
-            <md permid="KTN">
+            <md>
               <mrow>y\amp=-\frac{2}{3}(x-x_0)+y_0</mrow>
               <mrow>y\amp=-\frac{2}{3}(x-9)+(-10)</mrow>
               <mrow>y\amp=-\frac{2}{3}(x-9)-10</mrow>
             </md>
           </p>
-          <p permid="WjQ">
+          <p>
             Next, we will change the point-slope equation into slope-intercept form:
-            <md permid="raW">
+            <md>
               <mrow>y\amp=-\frac{2}{3}(x-9)-10</mrow>
               <mrow>y\amp=-\frac{2}{3}x+6-10</mrow>
               <mrow>y\amp=-\frac{2}{3}x-4</mrow>
@@ -481,10 +481,10 @@ $eq=Formula("y=0.8775(x-50)+50");
         </sidebyside>
       </solution>
     </example>
-    <remark permid="RlC">
-      <p permid="EQg">
-        Note that many other resources use the <xref ref="equation-point-slope-form-variant" text="title">alternate point-slope form</xref> to write their equations.
-        Those equations will always be equivalent to those created using our <xref ref="definition-point-slope-form" text="title">point-slope form</xref>.
+    <remark>
+      <p>
+        Note that many other resources use the <xref ref="equation-point-slope-form-variant" text="title" /> to write their equations.
+        Those equations will always be equivalent to those created using our <xref ref="definition-point-slope-form" text="title" />.
         In <xref ref="example-two-points-to-build-point-slope-form" />,
         we found the point-slope form <m>y=-\frac{2}{3}(x-9)-10</m>.
         The
@@ -495,7 +495,7 @@ $eq=Formula("y=0.8775(x-50)+50");
         you should still get <m>y=-\frac{2}{3}x-4</m>, as we did earlier.
       </p>
     </remark>
-    <exercise permid="dzU">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -541,38 +541,38 @@ return 1;
 </pg-code>
           </setup>
           <statement>
-            <p permid="BVA">
+            <p>
               A line passes through <m>(13,-108)</m> and
               <m>(-42,23)\text{.}</m> Find equations for this line using both point-slope and slope-intercept form.
             </p>
-            <p permid="icJ">
+            <p>
               A point-slope equation: <var name="$ps[0]" width="20" evaluator="$evps"/>
             </p>
-            <p permid="OjS">
+            <p>
               A slope-intercept equation: <var name="$si" width="20" evaluator="$evsi"/>
             </p>
           </statement>
-          <solution permid="TaP">
-            <p permid="CqZ">
+          <solution>
+            <p>
               First, use the slope formula to find the slope of this line:
-              <md permid="Xif">
+              <md>
                 <mrow>m=\frac{y_2-y_1}{x_2-x_1}\amp=\frac{23-(-108)}{-42-13}</mrow>
                 <mrow>\amp=\frac{131}{-55}</mrow>
                 <mrow>\amp=-\frac{131}{55}</mrow>
               </md>.
             </p>
-            <p permid="iyi">
+            <p>
               The generic point-slope equation is <m>y=m(x-x_0)+y_0</m>.
               We have found the slope, <m>m</m>,
               and we may use <m>(13,-108)</m> for <m>(x_0,y_0)</m>.
               So an equation in point-slope form is <m><var name="$ps[0]"/></m>.
             </p>
-            <p permid="OFr">
+            <p>
               To find a slope-intercept form equation,
               we can take the generic <m>y=mx+b</m> and substitute in the value of <m>m</m> we found.
               Also, we know that <m>(x,y)=(13,-108)</m> should make the equation true.
               So we have
-              <md permid="Dpo">
+              <md>
                 <mrow>y\amp=mx+b</mrow>
                 <mrow>-108\amp=-\frac{131}{55}(13)+b\amp\text{Now we may solve for }b\text{.}</mrow>
                 <mrow>-108\multiplyright{55}\amp=\left(-\frac{131}{55}(13)+b\right)\multiplyright{55}</mrow>
@@ -589,11 +589,11 @@ return 1;
       </webwork>
     </exercise>
   </subsection>
-  <subsection permid="sux">
+  <subsection>
     <title>More on Point-Slope Form</title>
-    <p permid="sgp">
-      We can tell a lot about a linear equation now that we have learned both <xref ref="equation-slope-intercept-form" text="title">slope-intercept form</xref>
-      and <xref ref="equation-point-slope-form" text="title">point-slope form</xref>.
+    <p>
+      We can tell a lot about a linear equation now that we have learned both <xref ref="equation-slope-intercept-form" text="title" />
+      and <xref ref="equation-point-slope-form" text="title" />.
       For example,
       we can know that <m>y=4x+2</m> is in slope-intercept form because it looks like <m>y=mx+b</m>.
       It will graph as a line with slope <m>4</m> and vertical intercept <m>(0,2)</m>.
@@ -601,60 +601,60 @@ return 1;
       <m>y=-5(x-3)+2</m> is in point-slope form because it looks like <m>y=m(x-x_0)+y_0</m>.
       It will graph as a line that has slope <m>-5</m> and will pass through the point <m>(3,2)</m>.
     </p>
-    <example permid="JHd">
+    <example>
       <statement>
-        <p permid="gnw">
+        <p>
           For the equations below,
           state whether they are in slope-intercept form or point-slope form.
           Then identify the slope of the line and at least one point that the line will pass through.
-          <ol label="a." cols="2" permid="KqX">
-            <li permid="Mgk">
-              <p permid="Dws">
+          <ol label="a." cols="2">
+            <li>
+              <p>
                 <m>y=-3x+2</m>
               </p>
             </li>
-            <li permid="snt">
-              <p permid="jDB">
+            <li>
+              <p>
                 <m>y=9(x+1)-6</m>
               </p>
             </li>
-            <li permid="YuC">
-              <p permid="PKK">
+            <li>
+              <p>
                 <m>y=5-x</m>
               </p>
             </li>
-            <li permid="EBL">
-              <p permid="vRT">
+            <li>
+              <p>
                 <m>y=-\frac{12}{5}(x-9)+1</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="uyf">
-        <p permid="uMA">
-          <ol label="a." permid="ycF">
-            <li permid="kIU">
-              <p permid="bZc">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 The equation <m>y=-3x+2</m> is in slope-intercept form.
                 The slope is <m>-3</m> and the vertical intercept is <m>(0,2)</m>.
               </p>
             </li>
-            <li permid="QQd">
-              <p permid="Igl">
+            <li>
+              <p>
                 The equation <m>y=9(x+1)-6</m> is in point-slope form.
                 The slope is <m>9</m> and the line passes through the point <m>(-1,-6)</m>.
               </p>
             </li>
-            <li permid="wXm">
-              <p permid="onu">
+            <li>
+              <p>
                 The equation <m>y=5-x</m> is almost in slope-intercept form.
                 If we rearrange the right hand side to be <m>y=-x+5</m>,
                 we can see that the slope is <m>-1</m> and the vertical intercept is <m>(0,5)</m>.
               </p>
             </li>
-            <li permid="dev">
-              <p permid="UuD">
+            <li>
+              <p>
                 The equation <m>y=-\frac{12}{5}(x-9)+1</m> is in point-slope form.
                 The slope is <m>-\frac{12}{5}</m> and the line passes through the point <m>(9,1)</m>.
               </p>
@@ -663,9 +663,9 @@ return 1;
         </p>
       </solution>
     </example>
-    <remark permid="VVv">
-      <p permid="kXp">
-        Again, we should note that the <xref ref="equation-point-slope-form-variant" text="title">alternate point-slope form</xref>
+    <remark>
+      <p>
+        Again, we should note that the <xref ref="equation-point-slope-form-variant" text="title" />
         can be used to identify equations.
         For example,
         the equation <m>y+10=-\frac{2}{3}(x-9)</m> matches the
@@ -676,28 +676,28 @@ return 1;
         Note that both coordinates are the opposite of what they appear to be in the equation with this form.
       </p>
     </remark>
-    <example permid="pOm">
+    <example>
       <statement>
-        <sidebyside widths="37% 37%" margins="10%" permid="CcE">
-          <p permid="MuF">
+        <sidebyside widths="37% 37%" margins="10%">
+          <p>
             Consider the graph in <xref ref="figure-point-slope-multiple-equations" />.
-            <ol label="a." permid="qyg">
-              <li permid="JlE">
-                <p permid="ABM">
+            <ol label="a.">
+              <li>
+                <p>
                   Find three equations that describe the line shown written in point-slope form.
                   Three integer-valued points are shown for convenience.
                 </p>
               </li>
-              <li permid="psN">
-                <p permid="gIV">
+              <li>
+                <p>
                   Determine the slope-intercept form of the equation of this line.
                 </p>
               </li>
             </ol>
           </p>
-          <figure xml:id="figure-point-slope-multiple-equations" permid="sBO">
+          <figure xml:id="figure-point-slope-multiple-equations">
             <caption/>
-            <image permid="llK">
+            <image>
               <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -719,16 +719,16 @@ minor ytick=]
           </figure>
         </sidebyside>
       </statement>
-      <solution permid="aFo">
-        <p permid="aTJ">
-          <ol label="a." permid="ejO">
-            <li permid="VzW">
-              <p permid="MQe">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 To write <em>any</em> of the equations representing this line in point-slope form,
-                we must first find the slope of the line and we can use the <xref ref="equation-slope-formula" text="title">slope formula</xref> to do so.
+                we must first find the slope of the line and we can use the <xref ref="equation-slope-formula" text="title" /> to do so.
                 We will arbitrarily choose <m>(0,30)</m> and <m>(-5,42)</m> as the two points.
                 Inputting these points into the slope formula yields:
-                <md permid="jwx">
+                <md>
                   <mrow>m\amp=\frac{y_2-y_1}{x_2-x_1}</mrow>
                   <mrow>\amp=\frac{\substitute{42}-\substitute{30}}{\substitute{-5}-\substitute{0}}</mrow>
                   <mrow>\amp=\frac{12}{-5}</mrow>
@@ -736,34 +736,34 @@ minor ytick=]
                 </md>
                 Thus, the slope of the line is <m>-\frac{12}{5}</m>.
               </p>
-              <p permid="sXn">
+              <p>
                 Next, we need to write an equation in point-slope form based on each point shown.
                 Using the point <m>(0,30)</m>, we have:
-                <me permid="JeA">
+                <me>
                   y=-\frac{12}{5}(x-0)+30
                 </me>
                 (This simplifies to <m>y=-\frac{12}{5}x+30</m>.)
               </p>
-              <p permid="Zew">
+              <p>
                 The next point is <m>(20,-18)</m>.
                 Using this point, we can write an equation for this line as:
-                <me permid="plJ">
+                <me>
                   y=-\frac{12}{5}(x-20)-18
                 </me>
               </p>
-              <p permid="FlF">
+              <p>
                 Finally, we can also use the point <m>(-5,42)</m> to write an equation for this line:
-                <me permid="VsS">
+                <me>
                   y=-\frac{12}{5}(x-(-5))+42
                 </me>
                 which can also be written as:
-                <me permid="BAb">
+                <me>
                   y=-\frac{12}{5}(x+5)+42
                 </me>
               </p>
             </li>
-            <li permid="BHf">
-              <p permid="lsO">
+            <li>
+              <p>
                 As <m>(0,30)</m> is the vertical intercept,
                 we can write the equation of this line in slope-intercept form as <m>y=-\frac{12}{5}x+30</m>.
                 It's important to note that each of the equations that were written in point-slope form simplify to this,
@@ -779,132 +779,132 @@ graph with point (482,19) and (486,23) find the ptslope form.
 Make a graph from point slope form without converting to slope intercept (and make it a terrible intercept)
 Make a graph and interpreting it given an application -->
   </subsection>
-  <exercises permid="YBG">
-    <exercisegroup cols="2" permid="EIP">
+  <exercises>
+    <exercisegroup cols="2">
       <title>Review and Warmup</title>
-      <exercise permid="pzR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EvaluateExpressions/evaluate50.pg"/>
       </exercise>
-      <exercise permid="VHa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/EvaluateExpressions/evaluate50.pg"/>
       </exercise>
-      <exercise permid="BOj">
+      <exercise>
         <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Slope.pg"/>
       </exercise>
-      <exercise permid="hVs">
+      <exercise>
         <webwork source="Library/Mizzou/College_Algebra/Real_Numbers/Simplifying_Expressions/Algebraic_Expns_Slope.pg"/>
       </exercise>
     </exercisegroup>
 
-    <exercisegroup cols="2" permid="kPY">
+    <exercisegroup cols="2">
       <title>Point-Slope Form</title>
 <!-- seeds set to guarantee distinct versions -->
-      <exercise permid="OcB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasicsORCCA10.pg" seed="70"/>
       </exercise>
-      <exercise permid="ujK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasicsORCCA10.pg" seed="73"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2">
-      <exercise permid="aqT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasicsORCCA20.pg" seed="74"/>
       </exercise>
-      <exercise permid="Gyc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasicsORCCA20.pg" seed="75"/>
       </exercise>
-      <exercise permid="mFl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasicsORCCA30.pg"/>
       </exercise>
-      <exercise permid="SMu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeBasicsORCCA30.pg"/>
       </exercise>
-      <exercise permid="yTD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquationORCCA10.pg"/>
       </exercise>
-      <exercise permid="faM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquationORCCA10.pg"/>
       </exercise>
-      <exercise permid="LhV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquationORCCA20.pg"/>
       </exercise>
-      <exercise permid="rpe">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquationORCCA20.pg"/>
       </exercise>
-      <exercise permid="Xwn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquationORCCA30.pg"/>
       </exercise>
-      <exercise permid="DDw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/TwoPointsFindPointSlopeEquationORCCA30.pg"/>
       </exercise>
-      <exercise permid="jKF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA10.pg"/>
       </exercise>
-      <exercise permid="PRO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA10.pg"/>
       </exercise>
-      <exercise permid="vYX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA20.pg"/>
       </exercise>
-      <exercise permid="cgg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA20.pg"/>
       </exercise>
-      <exercise permid="Inp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA30.pg"/>
       </exercise>
-      <exercise permid="ouy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA30.pg"/>
       </exercise>
-      <exercise permid="UBH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA40.pg"/>
       </exercise>
-      <exercise permid="AIQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA40.pg"/>
       </exercise>
-      <exercise permid="gPZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA50.pg"/>
       </exercise>
-      <exercise permid="MXi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA50.pg"/>
       </exercise>
-      <exercise permid="ter">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA60.pg"/>
       </exercise>
-      <exercise permid="ZlA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/FindLineEquationORCCA60.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="QXh">
+    <exercisegroup cols="2">
       <title>Point-Slope and Slope-Intercept</title>
-      <exercise permid="FsJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeToSlopeInterceptORCCA10.pg"/>
       </exercise>
-      <exercise permid="lzS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeToSlopeInterceptORCCA10.pg"/>
       </exercise>
-      <exercise permid="RHb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeToSlopeInterceptORCCA20.pg"/>
       </exercise>
-      <exercise permid="xOk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeToSlopeInterceptORCCA20.pg"/>
       </exercise>
-      <exercise permid="dVt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeToSlopeInterceptORCCA30.pg"/>
       </exercise>
-      <exercise permid="KcC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeToSlopeInterceptORCCA30.pg"/>
       </exercise>
-      <exercise permid="qjL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeToSlopeInterceptORCCA40.pg"/>
       </exercise>
-      <exercise permid="WqU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PointSlopeForm/PointSlopeToSlopeInterceptORCCA40.pg"/>
       </exercise>
     </exercisegroup>
 
-    <exercisegroup cols="3" permid="xeq">
+    <exercisegroup cols="3">
       <title>Point-Slope Form and Graphs</title>
-      <exercise permid="Ygh">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1000,139 +1000,139 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="urb">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="Cyd">
-                <image permid="HZh" pg-name="$gr"/>
-              </sidebyside>
-              <p permid="ayk">
-                <var name="$answer" evaluator="$evaluator" width="20"/>
-              </p>
-            </statement>
-            <solution permid="zhY">
-              <p permid="HaS">
-                The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
-                so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
-              </p>
-            </solution>
-        </webwork>
-      </exercise>
-      <exercise permid="Enq">
-        <webwork>
-            <setup>
-<pg-code>
-Context("Fraction");
-Context()-&gt;flags-&gt;set(tolType=&gt;absolute);
-Context()-&gt;operators-&gt;set(
-'+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
-'-' =&gt; {class =&gt; 'bizarro::BOP::subtract', isCommand =&gt; 1},
-);
-$xmin = -2;
-$xmax = 12;
-$ymin = -2;
-$ymax = 12;
-Context()-&gt;variables-&gt;set(x=&gt;{limits=&gt;[$xmin,$xmax]});
-do {
-$run = non_zero_random(2,6,1);
-$rise = non_zero_random(-6,6,1);
-$m = Fraction($rise,$run);
-$h = random(1,$xmax-2,1);
-$k = random(1,$ymax-2,1);
-$f = Formula("$m*(x-$h)+$k");
-$y0 = Fraction($f-&gt;eval(x=&gt;0));
-$hback = $h-$run;
-$kback = $k-$rise;
-$hforw = $h+$run;
-$kforw = $k+$rise;
-} until (
-($y0-&gt;value)[1] != 1
-and (
-($hback &gt; $xmin+1 and $ymin+1 &lt; $kback and $kback &lt; $ymax-1)
-or
-($hforw &lt; $xmax-1 and $ymin+1 &lt; $kforw and $kforw &lt; $ymax-1)
-)
-);
-$top = Real(($ymax-$k)/$m+$h);
-$bottom = Real(($ymin-$k)/$m+$h);
-$left = $xmin;
-$right = $xmax;
-($start,$stop) = (num_sort($top,$bottom,$left,$right))[1,2];
-$gr = init_graph($xmin,$ymin,$xmax,$ymax,
-size=&gt;[240,240]);
-$gr-&gt;lb('reset');
-$gr-&gt;v_grid("gray",-1,1..$xmax-1);
-$gr-&gt;h_grid("gray",-1,1..$ymax-1);
-#xticks
-for my $i (5,10) {
-$gr-&gt;lb( new Label($i,0,$i,'black','center','top','large'));
-$gr-&gt;lb( new Label($xmax,0,'x','black','right','top','large'));
-}
-#yticks
-for my $i (5,10) {
-$gr-&gt;lb( new Label(0,$i,$i,'black','right','middle','large'));
-$gr-&gt;lb( new Label(0,$ymax,'y ','black','center','right','large'));
-}
-$gr-&gt;moveTo(0,0);
-$gr-&gt;arrowTo($xmin,0,'black',1);
-$gr-&gt;moveTo(0,0);
-$gr-&gt;arrowTo($xmax-($xmax-$xmin)/240,0,'black',1);
-$gr-&gt;moveTo(0,0);
-$gr-&gt;arrowTo(0,$ymin+($ymax-$ymin)/240,'black',1);
-$gr-&gt;moveTo(0,0);
-$gr-&gt;arrowTo(0,$ymax,'black',1);
-$gr-&gt;moveTo($h,$k);
-$gr-&gt;arrowTo(
-Real($start+1/($m**2+1)),
-Real($f-&gt;eval(x=&gt;$start+1/($m**2+1))),
-'blue',1);
-$gr-&gt;moveTo($h,$k);
-$gr-&gt;arrowTo(
-Real($stop-1/($m**2+1)),
-Real($f-&gt;eval(x=&gt;$stop-1/($m**2+1))),
-'blue',1);
-$gr-&gt;stamps( closed_circle($h,$k,'blue') );
-parser::Assignment-&gt;Allow;
-Context()-&gt;variables-&gt;add(y=&gt;'Real');
-$answer = Formula("y = $f");
-$evaluator = $answer -&gt; cmp(
-checker=&gt;sub{
-my ( $correct, $student, $ansHash ) = @_;
-return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
-$student = $ansHash-&gt;{student_formula};
-$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
-$student = Formula("$student"); $correct = Formula("$correct");
-return 0 unless ($correct == $student);
-Context()-&gt;flags-&gt;set(bizarroAdd=&gt;1,bizarroSub=&gt;1);
-delete $correct-&gt;{test_values};
-delete $student-&gt;{test_values};
-my $OK = (($correct == $student) or ($student == $correct));
-Context()-&gt;flags-&gt;set(bizarroAdd=&gt;0,bizarroSub=&gt;0);
-Value::Error("Your answer is an eqation for the line, but it is not in point-slope form using the indicated point.") unless $OK;
-return $OK;
-});
-</pg-code>
-            </setup>
-            <statement>
-              <p permid="GFt">
-                Determine the point-slope form of the linear equation from its graph.
-              </p>
-              <sidebyside widths="40%" permid="iFm">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="mMC">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="fph">
-              <p permid="nib">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="kuz">
+      <exercise>
+        <webwork>
+            <setup>
+<pg-code>
+Context("Fraction");
+Context()-&gt;flags-&gt;set(tolType=&gt;absolute);
+Context()-&gt;operators-&gt;set(
+'+' =&gt; {class =&gt; 'bizarro::BOP::add', isCommand =&gt; 1},
+'-' =&gt; {class =&gt; 'bizarro::BOP::subtract', isCommand =&gt; 1},
+);
+$xmin = -2;
+$xmax = 12;
+$ymin = -2;
+$ymax = 12;
+Context()-&gt;variables-&gt;set(x=&gt;{limits=&gt;[$xmin,$xmax]});
+do {
+$run = non_zero_random(2,6,1);
+$rise = non_zero_random(-6,6,1);
+$m = Fraction($rise,$run);
+$h = random(1,$xmax-2,1);
+$k = random(1,$ymax-2,1);
+$f = Formula("$m*(x-$h)+$k");
+$y0 = Fraction($f-&gt;eval(x=&gt;0));
+$hback = $h-$run;
+$kback = $k-$rise;
+$hforw = $h+$run;
+$kforw = $k+$rise;
+} until (
+($y0-&gt;value)[1] != 1
+and (
+($hback &gt; $xmin+1 and $ymin+1 &lt; $kback and $kback &lt; $ymax-1)
+or
+($hforw &lt; $xmax-1 and $ymin+1 &lt; $kforw and $kforw &lt; $ymax-1)
+)
+);
+$top = Real(($ymax-$k)/$m+$h);
+$bottom = Real(($ymin-$k)/$m+$h);
+$left = $xmin;
+$right = $xmax;
+($start,$stop) = (num_sort($top,$bottom,$left,$right))[1,2];
+$gr = init_graph($xmin,$ymin,$xmax,$ymax,
+size=&gt;[240,240]);
+$gr-&gt;lb('reset');
+$gr-&gt;v_grid("gray",-1,1..$xmax-1);
+$gr-&gt;h_grid("gray",-1,1..$ymax-1);
+#xticks
+for my $i (5,10) {
+$gr-&gt;lb( new Label($i,0,$i,'black','center','top','large'));
+$gr-&gt;lb( new Label($xmax,0,'x','black','right','top','large'));
+}
+#yticks
+for my $i (5,10) {
+$gr-&gt;lb( new Label(0,$i,$i,'black','right','middle','large'));
+$gr-&gt;lb( new Label(0,$ymax,'y ','black','center','right','large'));
+}
+$gr-&gt;moveTo(0,0);
+$gr-&gt;arrowTo($xmin,0,'black',1);
+$gr-&gt;moveTo(0,0);
+$gr-&gt;arrowTo($xmax-($xmax-$xmin)/240,0,'black',1);
+$gr-&gt;moveTo(0,0);
+$gr-&gt;arrowTo(0,$ymin+($ymax-$ymin)/240,'black',1);
+$gr-&gt;moveTo(0,0);
+$gr-&gt;arrowTo(0,$ymax,'black',1);
+$gr-&gt;moveTo($h,$k);
+$gr-&gt;arrowTo(
+Real($start+1/($m**2+1)),
+Real($f-&gt;eval(x=&gt;$start+1/($m**2+1))),
+'blue',1);
+$gr-&gt;moveTo($h,$k);
+$gr-&gt;arrowTo(
+Real($stop-1/($m**2+1)),
+Real($f-&gt;eval(x=&gt;$stop-1/($m**2+1))),
+'blue',1);
+$gr-&gt;stamps( closed_circle($h,$k,'blue') );
+parser::Assignment-&gt;Allow;
+Context()-&gt;variables-&gt;add(y=&gt;'Real');
+$answer = Formula("y = $f");
+$evaluator = $answer -&gt; cmp(
+checker=&gt;sub{
+my ( $correct, $student, $ansHash ) = @_;
+return 0 if $ansHash-&gt;{isPreview} || $correct != $student;
+$student = $ansHash-&gt;{student_formula};
+$correct = $correct-&gt;{original_formula} if defined $correct-&gt;{original_formula};
+$student = Formula("$student"); $correct = Formula("$correct");
+return 0 unless ($correct == $student);
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;1,bizarroSub=&gt;1);
+delete $correct-&gt;{test_values};
+delete $student-&gt;{test_values};
+my $OK = (($correct == $student) or ($student == $correct));
+Context()-&gt;flags-&gt;set(bizarroAdd=&gt;0,bizarroSub=&gt;0);
+Value::Error("Your answer is an eqation for the line, but it is not in point-slope form using the indicated point.") unless $OK;
+return $OK;
+});
+</pg-code>
+            </setup>
+            <statement>
+              <p>
+                Determine the point-slope form of the linear equation from its graph.
+              </p>
+              <sidebyside widths="40%">
+                <image pg-name="$gr"/>
+              </sidebyside>
+              <p>
+                <var name="$answer" evaluator="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
+                so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
+              </p>
+            </solution>
+        </webwork>
+      </exercise>
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1229,18 +1229,18 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="STL">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="OMv">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="zaU">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="Lwq">
-              <p permid="Tpk">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
@@ -1250,7 +1250,7 @@ return $OK;
     </exercisegroup>
     <newpage/>
     <exercisegroup cols="3">
-      <exercise permid="QBI">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1347,25 +1347,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="fid">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="uTE">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="Lpm">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="rDz">
-              <p permid="zwt">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="wIR">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1462,25 +1462,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="rwv">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="baN">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="XDE">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="XKI">
-              <p permid="fDC">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="cQa">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1577,25 +1577,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="DKN">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="HhW">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="jRW">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="DRR">
-              <p permid="LKL">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="IXj">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1692,25 +1692,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="PZf">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="npf">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="wgo">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="jZa">
-              <p permid="rRU">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="pes">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1807,25 +1807,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="cnx">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="Two">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="IuG">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="Qgj">
-              <p permid="XZd">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="VlB">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1937,25 +1937,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="oBP">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="zDx">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="UIY">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="wns">
-              <p permid="Egm">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="BsK">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -2067,25 +2067,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="AQh">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="fKG">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="gXq">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="cuB">
-              <p permid="knv">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="hzT">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -2197,25 +2197,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="Nez">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="LRP">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="tlI">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="IBK">
-              <p permid="QuE">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="NHc">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -2327,18 +2327,18 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="ZsR">
+              <p>
                 Determine the point-slope form of the linear equation from its graph.
               </p>
-              <sidebyside widths="40%" permid="rYY">
+              <sidebyside widths="40%">
                 <image pg-name="$gr"/>
               </sidebyside>
-              <p permid="FAa">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
-            <solution permid="oIT">
-              <p permid="wBN">
+            <solution>
+              <p>
                 The slope is <m><var name="$m"/></m> and the point <m>(<var name="$h"/>,<var name="$k"/>)</m> is on the graph of this line,
                 so its equation can be written in point-slope form as <m><var name="$answer"/></m>.
               </p>
@@ -2346,20 +2346,20 @@ return $OK;
         </webwork>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="dlz">
-      <exercise permid="tOl">
+    <exercisegroup cols="2">
+      <exercise>
         <statement>
-          <p permid="lHj">
+          <p>
             Graph the linear equation <m>y=-\frac{8}{3}(x-4)-5</m> by identifying the slope and one point on this line.
           </p>
         </statement>
-        <answer permid="UQc">
-          <p permid="cIW">
+        <answer>
+          <p>
             The slope is <m>-\frac{8}{3}</m> and the point <m>(4,-5)</m> is on the graph of this line.
           </p>
-          <figure permid="IQf">
+          <figure>
             <caption>A graph of a line.</caption>
-            <image permid="RsT">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -2373,19 +2373,19 @@ return $OK;
           </figure>
         </answer>
       </exercise>
-      <exercise permid="ZVu">
+      <exercise>
         <statement>
-          <p permid="ROs">
+          <p>
             Graph the linear equation <m>y=\frac{5}{7}(x+3)+2</m> by identifying the slope and one point on this line.
           </p>
         </statement>
-        <answer permid="AXl">
-          <p permid="oXo">
+        <answer>
+          <p>
             The slope is <m>\frac{5}{7}</m> and the point <m>(-3,2)</m> is on the graph of this line.
           </p>
-          <figure permid="Vex">
+          <figure>
             <caption>A graph of a line.</caption>
-            <image permid="ogq">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -2399,19 +2399,19 @@ return $OK;
           </figure>
         </answer>
       </exercise>
-      <exercise permid="GcD">
+      <exercise>
         <statement>
-          <p permid="xVB">
+          <p>
             Graph the linear equation <m>y=\frac{3}{4}(x+2)+1</m> by identifying the slope and one point on this line.
           </p>
         </statement>
-        <answer permid="heu">
-          <p permid="BlG">
+        <answer>
+          <p>
             The slope is <m>\frac{3}{4}</m> and the point <m>(-2,1)</m> is on the graph of this line.
           </p>
-          <figure permid="hsP">
+          <figure>
             <caption>A graph of a line.</caption>
-            <image permid="Unz">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -2425,19 +2425,19 @@ return $OK;
           </figure>
         </answer>
       </exercise>
-      <exercise permid="mjM">
+      <exercise>
         <statement>
-          <p permid="ecK">
+          <p>
             Graph the linear equation <m>y=-\frac{5}{2}(x-1)-5</m> by identifying the slope and one point on this line.
           </p>
         </statement>
-        <answer permid="NlD">
-          <p permid="NzY">
+        <answer>
+          <p>
             The slope is <m>-\frac{5}{2}</m> and the point <m>(1,-3)</m> is on the graph of this line.
           </p>
-          <figure permid="tHh">
+          <figure>
             <caption>A graph of a line.</caption>
-            <image permid="AuI">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -2451,19 +2451,19 @@ return $OK;
           </figure>
         </answer>
       </exercise>
-      <exercise permid="SqV">
+      <exercise>
         <statement>
-          <p permid="KjT">
+          <p>
             Graph the linear equation <m>y=-3(x-9)+4</m> by identifying the slope and one point on this line.
           </p>
         </statement>
-        <answer permid="tsM">
-          <p permid="ZOq">
+        <answer>
+          <p>
             The slope is <m>-3</m> and the point <m>(9,4)</m> is on the graph of this line.
           </p>
-          <figure permid="FVz">
+          <figure>
             <caption>A graph of a line.</caption>
-            <image permid="gBR">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-50,xmax=50,
@@ -2483,20 +2483,20 @@ minor ytick={},
           </figure>
         </answer>
       </exercise>
-      <exercise permid="yye">
+      <exercise>
         <statement>
-          <p permid="qrc">
+          <p>
             Graph the linear equation <m>y=7(x+3)-10</m> by identifying the slope and one point on this line.
           </p>
         </statement>
-        <answer permid="ZzV">
-          <p permid="mcI">
+        <answer>
+          <p>
             The slope is <m>7</m> and the point
             <m>(-3,-10)</m> is on the graph of this line.
           </p>
-          <figure permid="SjR">
+          <figure>
             <caption>A graph of a line.</caption>
-            <image permid="MJa">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-50,xmax=50,
@@ -2516,20 +2516,20 @@ minor ytick={},
           </figure>
         </answer>
       </exercise>
-      <exercise permid="eFn">
+      <exercise>
         <statement>
-          <p permid="Wyl">
+          <p>
             Graph the linear equation <m>y=8(x+12)-20</m> by identifying the slope and one point on this line.
           </p>
         </statement>
-        <answer permid="FHe">
-          <p permid="yra">
+        <answer>
+          <p>
             The slope is <m>8</m> and the point
             <m>(-12,-20)</m> is on the graph of this line.
           </p>
-          <figure permid="eyj">
+          <figure>
             <caption>A graph of a line.</caption>
-            <image permid="sQj">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-100,xmax=100,
@@ -2549,20 +2549,20 @@ minor ytick={},
           </figure>
         </answer>
       </exercise>
-      <exercise permid="KMw">
+      <exercise>
         <statement>
-          <p permid="CFu">
+          <p>
             Graph the linear equation <m>y=-5(x-20)-70</m> by identifying the slope and one point on this line.
           </p>
         </statement>
-        <answer permid="lOn">
-          <p permid="KFs">
+        <answer>
+          <p>
             The slope is <m>-5</m> and the point
             <m>(20,-70)</m> is on the graph of this line.
           </p>
-          <figure permid="qMB">
+          <figure>
             <caption>A graph of a line.</caption>
-            <image permid="YXs">
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-100,xmax=100,
@@ -2583,31 +2583,31 @@ minor ytick={},
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup permid="JsI">
+    <exercisegroup>
       <title>Applications</title>
 <!-- ordering intentional -->
-      <exercise permid="qTF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearEquationApplications/FindPSEquationApplication50.pg"/>
       </exercise>
-      <exercise permid="XaO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearEquationApplications/FindPSEquationApplication60.pg"/>
       </exercise>
-      <exercise permid="DhX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearEquationApplications/FindPSEquationApplication70.pg"/>
       </exercise>
-      <exercise permid="jpg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearEquationApplications/FindPSEquationApplication80.pg"/>
       </exercise>
-      <exercise permid="Pwp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearEquationApplications/FindPSEquationApplication20.pg"/>
       </exercise>
-      <exercise permid="vDy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearEquationApplications/FindPSEquationApplication10.pg"/>
       </exercise>
-      <exercise permid="bKH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearEquationApplications/FindPSEquationApplication40.pg"/>
       </exercise>
-      <!-- <exercise permid="HRQ">
+      <!-- <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearEquationApplications/FindPSEquationApplication30.pg" />
       </exercise> -->
     </exercisegroup>

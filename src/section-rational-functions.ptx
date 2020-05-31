@@ -6,21 +6,21 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-rational-functions" permid="WrH">
+<section xml:id="section-rational-functions">
   <title>Rational Functions</title>
-  <introduction permid="KrK">
-    <p permid="zxg">
+  <introduction>
+    <p>
       In this section, we will learn about rational functions,
       which are ratios of two polynomial functions.
       Creating this ratio inherently requires division and we'll explore the effect this has on the domain of the function.
     </p>
   </introduction>
-  <definition xml:id="definition-rational-function" permid="RWj">
+  <definition xml:id="definition-rational-function">
     <title>Rational Function</title>
     <statement>
-      <p permid="Uvq">
+      <p>
         A <term>rational function</term> <m>f</m> is a function in the form
-        <me permid="Bmt">
+        <me>
           f(x)=\frac{P(x)}{Q(x)}
         </me>
         where <m>P</m> and <m>Q</m> are
@@ -30,28 +30,28 @@
       </p>
     </statement>
   </definition>
-  <example permid="yds">
-    <p permid="ACz">
+  <example>
+    <p>
       The following functions are examples of rational functions.
     </p>
-    <sidebyside valign="bottom" permid="ekB">
-      <p permid="gJI">
-        <me permid="htC">
+    <sidebyside valign="bottom">
+      <p>
+        <me>
           f(x)=\frac{3x-5}{4x^2+7x-1}
         </me>
       </p>
-      <p permid="MQR">
-        <me permid="NAL">
+      <p>
+        <me>
           g(x)=\frac{2}{x+5}
         </me>
       </p>
-      <p permid="sYa">
-        <me permid="tHU">
+      <p>
+        <me>
           h(x)=\frac{5x^2-8x+9}{3x^3+2x^2-4x+10}
         </me>
       </p>
     </sidebyside>
-    <p permid="Zfj">
+    <p>
       Notice that each of these functions is the result of dividing a polynomial expression,
       which can include a constant,
       by another polynomial expression
@@ -60,7 +60,7 @@
     </p>
   </example>
 <!--TODO: This isn't rendering properly-->
-  <exercise permid="qyT">
+  <exercise>
     <webwork>
         <setup>
 <pg-code>
@@ -69,66 +69,66 @@ $no=PopUp(['?','is', 'is not'],2);
 </pg-code>
         </setup>
         <statement>
-          <p permid="EgZ">
+          <p>
             Identify which of the following are rational functions and which are not.
-            <ol label="a." permid="zSF">
-              <li permid="fZO">
-                <p permid="ptA">
+            <ol label="a.">
+              <li>
+                <p>
                   <m>f</m> defined by <m>f(x)=\frac{25x^2+3}{25x^2+3}</m> <var name="$yes" form="popup"/> a rational function.
                 </p>
               </li>
-              <li permid="MgX">
-                <p permid="VAJ">
+              <li>
+                <p>
                   <m>Q</m> defined by <m>Q(x)=\frac{5x^2+3\sqrt{x}}{2x}</m> <var name="$no" form="popup"/> a rational function.
                 </p>
               </li>
-              <li permid="sog">
-                <p permid="BHS">
+              <li>
+                <p>
                   <m>g</m> defined by <m>g(t)=\frac{t\sqrt{5} -t^3}{2t+1}</m> <var name="$yes" form="popup"/> a rational function.
                 </p>
               </li>
-              <li permid="Yvp">
-                <p permid="hPb">
+              <li>
+                <p>
                   <m>P</m> defined by <m>P(x)=\frac{5x+3}{\abs{2x+1}}</m> <var name="$no" form="popup"/> a rational function.
                 </p>
               </li>
-              <li permid="ECy">
-                <p permid="NWk">
+              <li>
+                <p>
                   <m>h</m> defined by <m>h(x)=\frac{3^x+1}{x^2+1}</m> <var name="$no" form="popup"/> a rational function.
                 </p>
               </li>
             </ol>
           </p>
         </statement>
-        <solution permid="Hxe">
-          <p permid="yNm">
-            <ol label="a." permid="TLw">
-              <li permid="kJH">
-                <p permid="udt">
+        <solution>
+          <p>
+            <ol label="a.">
+              <li>
+                <p>
                   <m>f</m> defined by <m>f(x)=\frac{25x^2+3}{25x^2+3}</m> is a rational function as its formula is a polynomial divided by another polynomial.
                 </p>
               </li>
-              <li permid="QQQ">
-                <p permid="akC">
+              <li>
+                <p>
                   <m>Q</m> defined by <m>Q(x)=\frac{5x^2+3\sqrt{x}}{2x}</m> is not a rational function because the numerator contains
                   <m>\sqrt{x}</m> and is therefore not a polynomial.
                 </p>
               </li>
-              <li permid="wXZ">
-                <p permid="GrL">
+              <li>
+                <p>
                   <m>g</m> defined by <m>g(t)=\frac{t\sqrt{5} -t^3}{2t+1}</m> is a rational function as its formula is a polynomial divided by another polynomial.
                   Note that <m>\sqrt{5}</m> is simply a real number coefficient,
                   which is allowed in polynomial expressions.
                 </p>
               </li>
-              <li permid="dfi">
-                <p permid="myU">
+              <li>
+                <p>
                   <m>P</m> defined by <m>P(x)=\frac{5x+3}{\abs{2x+1}}</m> is not a rational function because the denominator contains the absolute value of an expression with variables in it,
                   which is not a polynomial expression.
                 </p>
               </li>
-              <li permid="Jmr">
-                <p permid="SGd">
+              <li>
+                <p>
                   <m>h</m> defined by <m>h(x)=\frac{3^x+1}{x^2+1}</m> is not a rational function because the numerator contains <m>3^x</m>,
                   which has a variable in the exponent and thus cannot be a polynomial expression.
                 </p>
@@ -138,9 +138,9 @@ $no=PopUp(['?','is', 'is not'],2);
         </solution>
     </webwork>
   </exercise>
-  <subsection permid="CyQ">
+  <subsection>
     <title>Finding the Domain of a Rational Function</title>
-    <p permid="koi">
+    <p>
       Recall that the domain of a function is the collection of all <em>valid</em>
       input values for that function.
       Since a rational function is the quotient of two polynomials,
@@ -148,18 +148,18 @@ $no=PopUp(['?','is', 'is not'],2);
       which will make the rational expression undefined.
       This will occur whenever the polynomial in the denominator is equal to zero.
     </p>
-    <p permid="Qvr">
+    <p>
       Thus, the domain of a rational function will be restricted to all real numbers except for any values of the variable which will make the denominator equal to zero.
       Hence, to find the domain of a rational function we need only set the denominator equal to zero and then solve the resulting equation.
       That will tell us which values of the variable to eliminate from the set of real numbers,
       to give us the domain.
     </p>
-    <example xml:id="example-introduction-to-rational-functions" permid="wof">
-      <p permid="Fms">
+    <example xml:id="example-introduction-to-rational-functions">
+      <p>
         Let <m>f</m> be a function where <m>f(x)=\frac{1}{x-2}</m>.
         Find the function's domain.
       </p>
-      <p permid="ltB">
+      <p>
         By setting the denominator, <m>x-2</m>,
         equal to zero and solving that equation,
         we obtain a solution of <m>x=2</m>.
@@ -169,18 +169,18 @@ $no=PopUp(['?','is', 'is not'],2);
         In set-builder notation, the domain is <m>\left\{x \mid x\ne2\right\}</m>.
       </p>
     </example>
-    <example permid="cvo">
-      <p permid="RAK">
+    <example>
+      <p>
         Algebraically find the domain of <m>g(x)=\frac{3x^2}{x^2-2x-24}</m>.
       </p>
-      <p permid="xHT">
+      <p>
         To find a rational function's domain,
         we set the denominator equal to <m>0</m> and solve:
-        <md permid="mdv">
+        <md>
           <mrow>x^2-2x-24\amp=0</mrow>
           <mrow>(x-6)(x+4)\amp=0</mrow>
         </md>
-        <md permid="SkE">
+        <md>
           <mrow>x-6\amp=0\amp\text{or}\amp\amp x+4\amp=0</mrow>
           <mrow>x\amp=6\amp\text{or}\amp\amp x\amp=-4</mrow>
         </md>
@@ -190,59 +190,59 @@ $no=PopUp(['?','is', 'is not'],2);
       </p>
     </example>
   </subsection>
-  <subsection permid="iFZ">
+  <subsection>
     <title>Simplifying Rational Expressions</title>
-    <p permid="wCA">
+    <p>
       Consider the two rational functions below.
       At first glance, which function <em>looks</em> simpler?
     </p>
-    <sidebyside widths="47% 47%" permid="FHR">
-      <p permid="aUw">
-        <me permid="ZPd">
+    <sidebyside widths="47% 47%">
+      <p>
+        <me>
           f(x)=\frac{8x^3-12x^2+8x-12}{2x^3-3x^2+10x-15}
         </me>
       </p>
-      <p permid="HbF">
-        <me permid="FWm">
+      <p>
+        <me>
           g(x)=\frac{4(x^2+1)}{x^2+5}, \text{ for }x\neq \frac{3}{2}
         </me>
       </p>
     </sidebyside>
-    <p permid="cJJ">
+    <p>
       It can be argued that the function <m>g</m> is simpler,
       at least with regard to the ease with which we can determine its domain,
       quickly evaluate it,
       and also determine where its function value is zero.
       All of these things are considerably more difficult with the function <m>f</m>.
     </p>
-    <p permid="IQS">
+    <p>
       These two functions are actually the <em>same</em> function.
       Using factoring and the same process of canceling that's used with numerical ratios,
       we will learn how to simplify the function <m>f</m> into the function <m>g</m>. (The full process for simplifying
       <m>f(x)=\frac{8x^3-12x^2+8x-12}{2x^3-3x^2+10x-15}</m> will be shown in <xref ref="example-simplify-rational-function" />.)
     </p>
-    <p permid="oYb">
+    <p>
       To see a simple example of the process for simplifying a rational function or expression,
       let's look at simplifying <m>\frac{14}{21}</m> and
       <m>\frac{(x+2)(x+7)}{(x+3)(x+7)}</m> by canceling common factors:
     </p>
-    <sidebyside widths="47% 47%" permid="lPa">
-      <p permid="niO">
-        <md permid="yrN">
+    <sidebyside widths="47% 47%">
+      <p>
+        <md>
           <mrow>\frac{14}{21}\amp=\frac{2\cdot \cancelhighlight{7}}{3\cdot \cancelhighlight{7}}</mrow>
           <mrow>\amp=\frac{2}{3}</mrow>
         </md>
       </p>
-      <p permid="TpX">
-        <md permid="eyW">
+      <p>
+        <md>
           <mrow>\frac{(x+2)(x+7)}{(x+3)(x+7)}\amp=\frac{(x+2)\cancelhighlight{(x+7)}}{(x+3)\cancelhighlight{(x+7)}}</mrow>
           <mrow>\amp=\frac{x+2}{x+3}, \text{ for }x\neq -7</mrow>
         </md>
       </p>
     </sidebyside>
-    <remark permid="ttz">
+    <remark>
       <title>Adding Domain Restrictions</title>
-      <p permid="OGe">
+      <p>
         The statement
         <q>for <m>x\neq -7</m></q>
         was added when the factor of <m>x+7</m> was canceled from both the numerator and denominator.
@@ -250,38 +250,38 @@ $no=PopUp(['?','is', 'is not'],2);
         so the simplified version must also be undefined for <m>x=-7</m>.
       </p>
     </remark>
-    <remark permid="ZAI">
-      <p permid="uNn">
+    <remark>
+      <p>
         It may be tempting to want to try to simplify <m>\frac{x+2}{x+3}</m> into
         <m>\frac{2}{3}</m> by canceling each <m>x</m> that appears.
         These <m>x</m>'s are <em>terms</em> that are added though,
         and canceling (a process of dividing) is only possible with <em>factors</em>.
       </p>
     </remark>
-    <p permid="Vfk">
+    <p>
       The process of canceling factors will be key to simplifying rational expressions and functions.
       If the expression or function is not given in factored form,
       then this will be our first step.
       We'll now look at a few more examples.
     </p>
-    <example xml:id="example-simplify-rational-function-simple" permid="ICx">
+    <example xml:id="example-simplify-rational-function-simple">
       <statement>
-        <p permid="dPc">
+        <p>
           Simplify the rational function
           <m>Q(x)=\frac{3x-12}{x^2+x-20}</m> and state the domain of this function.
         </p>
       </statement>
-      <solution permid="WGc">
-        <p permid="eUv">
+      <solution>
+        <p>
           To start, we'll factor the numerator and denominator.
           We'll then cancel any factors common to both the numerator and denominator.
-          <md permid="KGf">
+          <md>
             <mrow>Q(x)\amp=\frac{3x-12}{x^2+x-20}</mrow>
             <mrow>Q(x)\amp=\frac{3\cancelhighlight{(x-4)}}{(x+5)\cancelhighlight{(x-4)}}</mrow>
             <mrow>Q(x)\amp=\frac{3}{x+5}, \text{ for }x\neq 4</mrow>
           </md>
         </p>
-        <p permid="LbE">
+        <p>
           The domain of this function will incorporate the <em>explicit</em>
           domain restriction <m>x\neq 4</m> that was stated when the factor of <m>x-4</m> was canceled from both the numerator and denominator.
           We will also exclude <m>-5</m> from the domain as this value would make the denominator zero.
@@ -289,8 +289,8 @@ $no=PopUp(['?','is', 'is not'],2);
         </p>
       </solution>
     </example>
-    <warning permid="nEn">
-      <p permid="ooh">
+    <warning>
+      <p>
         When simplifying the function <m>Q</m> in <xref ref="example-simplify-rational-function-simple" />,
         we cannot simply write <m>Q(x)=\frac{3}{x+5}</m>.
         The reason is that this would result in our simplified version of the function <m>Q</m> having a different domain than the original <m>Q</m>.
@@ -299,23 +299,23 @@ $no=PopUp(['?','is', 'is not'],2);
         and this still needs to be true for the simplified form of <m>Q</m>.
       </p>
     </warning>
-    <example permid="oJG">
+    <example>
       <statement>
-        <p permid="JWl">
+        <p>
           Simplify the rational function
           <m>R(y)=\frac{-y-2y^2}{2y^3-y^2-y}</m> and state the domain of this function.
         </p>
       </statement>
-      <solution permid="CNl">
-        <p permid="riN">
-          <md permid="qNo">
+      <solution>
+        <p>
+          <md>
             <mrow>R(y)\amp=\frac{-y-2y^2}{2y^3-y^2-y}</mrow>
             <mrow>R(y)\amp=\frac{-2y^2-y}{y(2y^2-y-1)}</mrow>
             <mrow>R(y)\amp=\frac{-\cancelhighlight{y}\cancelhighlight{(2y+1)}}{\cancelhighlight{y}\cancelhighlight{(2y+1)}(y-1)}</mrow>
             <mrow>\amp=-\frac{1}{y-1}, \text{ for }y\neq 0, y\neq -\frac{1}{2}</mrow>
           </md>
         </p>
-        <p permid="XpW">
+        <p>
           The domain of this function will incorporate the explicit restrictions
           <m>y\neq 0, y\neq -\frac{1}{2}</m> that were stated when the factors of <m>y</m> and <m>2y+1</m> were canceled from both the numerator and denominator.
           Since the factor <m>y-1</m> is still in the denominator,
@@ -325,20 +325,20 @@ $no=PopUp(['?','is', 'is not'],2);
         </p>
       </solution>
     </example>
-    <example permid="UQP">
+    <example>
       <statement>
-        <p permid="qdu">
+        <p>
           Simplify the expression <m>\frac{9y+2y^2-5}{y^2-25}</m>.
         </p>
       </statement>
-      <solution permid="iUu">
-        <p permid="Dxf">
+      <solution>
+        <p>
           To start, we need to recognize that
           <m>9y+2y^2-5</m> is not written in standard form
           (where terms are written from highest degree to lowest degree).
           Before attempting to factor this expression,
           we'll re-write it as <m>2y^2+9y-5</m>.
-          <md permid="WUx">
+          <md>
             <mrow>\frac{9y+2y^2-5}{y^2-25}\amp=\frac{2y^2+9y-5}{y^2-25}</mrow>
             <mrow>\amp=\frac{(2y-1)\cancelhighlight{(y+5)}}{\cancelhighlight{(y+5)}(y-5)}</mrow>
             <mrow>\amp=\frac{2y-1}{y-5}, \text{ for } y\neq -5</mrow>
@@ -346,18 +346,18 @@ $no=PopUp(['?','is', 'is not'],2);
         </p>
       </solution>
     </example>
-    <example permid="AXY">
+    <example>
       <statement>
-        <p permid="WkD">
+        <p>
           Simplify the expression <m>\frac{-48z+24z^2-3z^3}{4-z}</m>.
         </p>
       </statement>
-      <solution permid="PbD">
-        <p permid="jEo">
+      <solution>
+        <p>
           To begin simplifying this expression,
           we will rewrite each polynomial in descending order.
           Then we'll factor out the GCF, including the constant <m>-1</m> from both the numerator and denominator because their leading terms are negative.
-          <md permid="DbG">
+          <md>
             <mrow>\frac{-48z+24z^2-3z^3}{4-z}\amp=\frac{-3z^3+24z^2-48z}{-z+4}</mrow>
             <mrow>\amp=\frac{-3z(z^2-8z+16)}{-(z-4)}</mrow>
             <mrow>\amp=\frac{-3z(z-4)^2}{-(z-4)}</mrow>
@@ -368,15 +368,15 @@ $no=PopUp(['?','is', 'is not'],2);
         </p>
       </solution>
     </example>
-    <example xml:id="example-simplify-rational-function" permid="hfh">
+    <example xml:id="example-simplify-rational-function">
       <statement>
-        <p permid="CrM">
+        <p>
           Simplify the rational function
           <m>f(x)=\frac{8x^3-12x^2+8x-12}{2x^3-3x^2+10x-15}</m> and state the domain of this function.
         </p>
       </statement>
-      <solution permid="viM">
-        <p permid="PLx">
+      <solution>
+        <p>
           To simplify this rational function,
           we'll first note that both the numerator and denominator have four terms.
           To factor them we'll need to use factoring by grouping.
@@ -384,7 +384,7 @@ $no=PopUp(['?','is', 'is not'],2);
           very few other approaches would be possible.)
           Once we've used factoring by grouping,
           we'll cancel any factors common to both the numerator and denominator and state the associated restrictions.
-          <md permid="jiP">
+          <md>
             <mrow>f(x)\amp=\frac{8x^3-12x^2+8x-12}{2x^3-3x^2+10x-15}</mrow>
             <mrow>\amp=\frac{4(2x^3-3x^2+2x-3)}{2x^3-3x^2+10x-15}</mrow>
             <mrow>\amp=\frac{4(x^2(2x-3)+(2x-3))}{x^2(2x-3)+5(2x-3)}</mrow>
@@ -392,7 +392,7 @@ $no=PopUp(['?','is', 'is not'],2);
             <mrow>\amp=\frac{4(x^2+1)}{x^2+5}, \text{ for }x\neq \frac{3}{2}</mrow>
           </md>
         </p>
-        <p permid="vSG">
+        <p>
           In determining the domain of this function,
           we'll need to account for any implicit and explicit restrictions.
           When the factor <m>2x-3</m> was canceled,
@@ -404,9 +404,9 @@ $no=PopUp(['?','is', 'is not'],2);
         </p>
       </solution>
     </example>
-    <example permid="Nmq">
+    <example>
       <statement>
-        <p permid="iyV">
+        <p>
           Simplify the expression <m>\frac{3y-x}{x^2-xy-6y^2}</m>.
           (In this example, there are two variables.
           It is still possible that in examples like this,
@@ -415,15 +415,15 @@ $no=PopUp(['?','is', 'is not'],2);
           this textbook ignores domain restrictions with examples containing more than one variable like this one.)
         </p>
       </statement>
-      <solution permid="bpV">
-        <p permid="bZP">
-          <md permid="PpY">
+      <solution>
+        <p>
+          <md>
             <mrow>\frac{3y-x}{x^2-xy-6y^2}\amp=\frac{-1\cancelhighlight{(x-3y)}}{\cancelhighlight{(x-3y)}(x+2y)}</mrow>
             <mrow>\amp=\frac{-1}{x+2y}</mrow>
             <mrow>\amp=-\frac{1}{x+2y}</mrow>
           </md>
         </p>
-        <p permid="IgY">
+        <p>
           Note that the expressions <m>3y-x</m> and <m>x-3y</m> are opposites,
           since they differ by a factor of <m>-1</m>.
           Binomials that are opposites can be easily identified as being of the form <m>a-b</m> and <m>b-a</m>.
@@ -445,17 +445,17 @@ $no=PopUp(['?','is', 'is not'],2);
 </solution>
 </example> -->
   </subsection>
-  <exercises permid="ONi">
-    <exercisegroup cols="2" permid="uUr">
-      <introduction permid="zEk">
-        <p permid="fEp">
+  <exercises>
+    <exercisegroup cols="2">
+      <introduction>
+        <p>
           Rational Functions Exercises
         </p>
       </introduction>
-      <exercise permid="fLt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionDefinition10.pg"/>
       </exercise>
-      <exercise permid="LSC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionDefinition10.pg"/>
       </exercise>
 <!--The topic of asymptotes is currently beyond the MTH 95 CCOGs -->
@@ -471,191 +471,191 @@ $no=PopUp(['?','is', 'is not'],2);
 <exercise>
 <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionAsymptote40.pg" />
 </exercise> -->
-      <exercise permid="rZL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionDomain10.pg"/>
       </exercise>
-      <exercise permid="YgU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionDomain10.pg"/>
       </exercise>
-      <exercise permid="Eod">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionDomain20.pg"/>
       </exercise>
-      <exercise permid="kvm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionDomain20.pg"/>
       </exercise>
-      <exercise permid="QCv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionDomain30.pg"/>
       </exercise>
-      <exercise permid="wJE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/rationalFunctionDomain30.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="bbA">
-      <introduction permid="cQN">
-        <p permid="LLy">
+    <exercisegroup cols="2">
+      <introduction>
+        <p>
           Simplifying Rational Expressions with One Variable
         </p>
       </introduction>
 <!--TODO: look for more "easy" examples, like (2(x+4))/(3(x+4)), and others where the factoring is more obvious ((x+1)(x+2))/((x+2)(x+3)) -->
-      <exercise permid="IXW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions10.pg"/>
       </exercise>
-      <exercise permid="pff">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions10.pg"/>
       </exercise>
-      <exercise permid="Vmo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions20.pg"/>
       </exercise>
-      <exercise permid="Btx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions20.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="HiJ">
-      <exercise permid="hAG">
+    <exercisegroup cols="2">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions30.pg"/>
       </exercise>
-      <exercise permid="NHP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions30.pg"/>
       </exercise>
-      <exercise permid="tOY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions40.pg"/>
       </exercise>
-      <exercise permid="ZWh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions40.pg"/>
       </exercise>
-      <exercise permid="Gdq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions50.pg"/>
       </exercise>
-      <exercise permid="mkz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions50.pg"/>
       </exercise>
-      <exercise permid="SrI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions60.pg"/>
       </exercise>
-      <exercise permid="yyR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions60.pg"/>
       </exercise>
-      <exercise permid="eGa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions70.pg"/>
       </exercise>
-      <exercise permid="KNj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions70.pg"/>
       </exercise>
-      <exercise permid="qUs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions80.pg"/>
       </exercise>
-      <exercise permid="XbB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions80.pg"/>
       </exercise>
-      <exercise permid="jpT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions100.pg"/>
       </exercise>
-      <exercise permid="Pxc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions100.pg"/>
       </exercise>
-      <exercise permid="vEl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions110.pg"/>
       </exercise>
-      <exercise permid="bLu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions110.pg"/>
       </exercise>
-      <exercise permid="HSD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions120.pg"/>
       </exercise>
-      <exercise permid="nZM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions120.pg"/>
       </exercise>
-      <exercise permid="UgV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions130.pg"/>
       </exercise>
-      <exercise permid="Aoe">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions130.pg"/>
       </exercise>
-      <exercise permid="gvn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions140.pg"/>
       </exercise>
-      <exercise permid="MCw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions140.pg"/>
       </exercise>
-      <exercise permid="sJF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions150.pg"/>
       </exercise>
-      <exercise permid="YQO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions150.pg"/>
       </exercise>
-      <exercise permid="EXX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions160.pg"/>
       </exercise>
-      <exercise permid="lfg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions160.pg"/>
       </exercise>
-      <exercise permid="Rmp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions170.pg"/>
       </exercise>
-      <exercise permid="xty">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions170.pg"/>
       </exercise>
-      <exercise permid="dAH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions180.pg"/>
       </exercise>
-      <exercise permid="JHQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions180.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="npS">
-      <introduction permid="pOZ">
-        <p permid="rSH">
+    <exercisegroup cols="2">
+      <introduction>
+        <p>
           Simplifying Rational Expressions with More Than One Variable
         </p>
       </introduction>
-      <exercise permid="VWi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions81.pg"/>
       </exercise>
-      <exercise permid="Cdr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions81.pg"/>
       </exercise>
-      <exercise permid="ikA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions90.pg"/>
       </exercise>
-      <exercise permid="OrJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions90.pg"/>
       </exercise>
-      <exercise permid="uyS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions141.pg"/>
       </exercise>
-      <exercise permid="aGb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions141.pg"/>
       </exercise>
-      <exercise permid="GNk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions151.pg"/>
       </exercise>
-      <exercise permid="mUt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalExpressionAlgebraSkills/simplifyRationalExpressions151.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="Txb">
-      <exercise permid="ziL">
+    <exercisegroup cols="2">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/reduceRationalFunction10.pg"/>
       </exercise>
-      <exercise permid="fpU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/reduceRationalFunction10.pg"/>
       </exercise>
-      <exercise permid="Lxd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/reduceRationalFunction20.pg"/>
       </exercise>
-      <exercise permid="rEm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/reduceRationalFunction20.pg"/>
       </exercise>
-      <exercise permid="XLv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/reduceRationalFunction30.pg"/>
       </exercise>
-      <exercise permid="DSE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/reduceRationalFunction30.pg"/>
       </exercise>
-      <exercise permid="jZN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/reduceRationalFunction40.pg"/>
       </exercise>
-      <exercise permid="QgW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RationalFunctions/reduceRationalFunction40.pg"/>
       </exercise>
     </exercisegroup>

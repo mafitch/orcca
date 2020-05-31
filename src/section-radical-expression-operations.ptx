@@ -6,28 +6,28 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-radical-expression-operations" permid="Rtg">
+<section xml:id="section-radical-expression-operations">
   <title>Radical Expression Operations</title>
 <!-- todo: note that this file no longer appears in ORCCA. -->
-  <introduction permid="qkl">
-    <p permid="Xbo">
+  <introduction>
+    <p>
       In <xref ref="section-square-root-properties" />,
       we learned square root properties.
       In this section,
       we will extend those concepts into radicals with higher roots and learn how to handle radical expressions with variables.
     </p>
   </introduction>
-  <subsection permid="xAp">
+  <subsection>
     <title>Simplifying Radical Expressions</title>
-    <p permid="vDY">
+    <p>
       In <xref ref="section-square-root-properties" />,
       we learned how to simplify radical expressions like <m>\sqrt{12}=2\sqrt{3}</m>.
       In this subsection,
       we will use the same concept to simplify radical expressions like <m>\sqrt[3]{16x^3}</m>.
     </p>
-    <p permid="bLh">
+    <p>
       Recall that we learned this property for square roots:
-      <me permid="EXK">
+      <me>
         \sqrt{x^2}=x\quad\text{where }x\ge0
       </me>
       The condition <m>x\ge0</m> must be true because this property doesn't hold if <m>x\lt0</m>.
@@ -35,25 +35,25 @@
       <m>\sqrt{(-1)^2}=\sqrt{1}=1</m>,
       where <m>\sqrt{(-1)^2}\ne-1</m>.
       Therefore, we will use a different way to write this property so that it will be true for all values of <m>x</m>:
-      <me permid="leT">
+      <me>
         \sqrt{x^2}=\abs{x}
       </me>
       This new formula will take care of negative numbers,
       like in <m>\sqrt{(-1)^2}=\abs{-1}=1</m>.
     </p>
-    <p permid="HSq">
+    <p>
       Recall that we have also learned that
-      <me permid="Rmc">
+      <me>
         \sqrt[n]{x}=x^{\frac{1}{n}}
       </me>
       and it's easy to see
-      <md permid="xtl">
+      <md>
         <mrow>\sqrt{x^2}\amp=(x^2)^{\frac{1}{2}}</mrow>
         <mrow>\amp=x^{2\cdot\frac{1}{2}}</mrow>
         <mrow>\amp=\abs{x}</mrow>
       </md>
       Similarly, we can show the following:
-      <md permid="dAu">
+      <md>
         <mrow>\sqrt{x^2}\amp=\abs{x}</mrow>
         <mrow>\sqrt[4]{x^4}\amp=\abs{x}</mrow>
         <mrow>\sqrt[6]{x^6}\amp=\abs{x}</mrow>
@@ -68,25 +68,25 @@
       even negative values, that <m>\sqrt[3]{x^3}=x</m>.
       The same is true for other odd-number-degree roots.
     </p>
-    <p permid="nZz">
+    <p>
       In summary, we have:
-      <md permid="JHD">
+      <md>
         <mrow>\sqrt[m]{x^m}\amp=x\amp\text{where }m\text{ is odd}</mrow>
         <mrow>\sqrt[n]{x^n}\amp=\abs{x}\amp\text{where }n\text{ is even}</mrow>
       </md>
     </p>
-    <p permid="UgI">
+    <p>
       Let's look at a few examples on simplifying radicals.
     </p>
-    <example permid="AJq">
+    <example>
       <statement>
-        <p permid="hAt">
+        <p>
           Simplify <m>\sqrt{y^2+2y+1}</m>.
         </p>
       </statement>
-      <solution permid="Wru">
-        <p permid="LSp">
-          <md permid="pOM">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt{y^2+2y+1}\amp=\sqrt{(y+1)^2}</mrow>
             <mrow>\amp=\abs{y+1}</mrow>
           </md>
@@ -94,15 +94,15 @@
         </p>
       </solution>
     </example>
-    <example permid="gQz">
+    <example>
       <statement>
-        <p permid="NHC">
+        <p>
           Simplify <m>\sqrt{z^4}</m>.
         </p>
       </statement>
-      <solution permid="CyD">
-        <p permid="rZy">
-          <md permid="VVV">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt{z^4}\amp=\sqrt{\left(z^2\right)^2}</mrow>
             <mrow>\amp=\abs{z^2}</mrow>
             <mrow>\amp=z^2</mrow>
@@ -110,7 +110,7 @@
         </p>
       </solution>
     </example>
-    <p permid="AnR">
+    <p>
       In the last example, we had an additional step to simplify,
       rather than leave our answer as <m>\sqrt{z^4}=\abs{z^2}</m>.
       Since <m>z^2</m> is always positive or zero,
@@ -118,16 +118,16 @@
       This is always something to consider when simplifying these expressions.
     </p>
 <!-- <p>In general, we have<me>\sqrt{x^{2m}}=\abs{x^m}\quad\text{for example: }\sqrt{x^{12}}=x^6</me>Note that <m>\abs{x^6}</m> is not necessary, because <m>x^6</m> is never negative. Similarly, we have:<md> <mrow>\sqrt[3]{x^{3m}}\amp=x^m\amp\text{for example: }\sqrt[3]{x^{12}}=x^4</mrow> <mrow>\sqrt[4]{x^{4m}}\amp=\abs{x^m}\amp\text{for example: }\sqrt[4]{x^{12}}=\abs{x^3}</mrow> <mrow>\ldots</mrow> </md></p> -->
-    <example permid="MXI">
+    <example>
       <statement>
-        <p permid="tOL">
+        <p>
           Simplify <m>\sqrt{72m^3n^5}</m>.
           Assume all variables are positive.
         </p>
       </statement>
-      <solution permid="iFM">
-        <p permid="YgH">
-          <md permid="Cde">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt{72m^3n^5}\amp=\sqrt{36\cdot 2\cdot m^2\cdot m\cdot n^4\cdot n}</mrow>
             <mrow>\amp=\sqrt{6^2\cdot 2\cdot m^2\cdot m\cdot \left(n^2\right)^2\cdot n}</mrow>
             <mrow>\amp=6mn^2\sqrt{2mn}</mrow>
@@ -137,16 +137,16 @@
         </p>
       </solution>
     </example>
-    <example permid="teR">
+    <example>
       <statement>
-        <p permid="ZVU">
+        <p>
           Simplify <m>\sqrt[3]{16z^4}</m>.
           Assume all variables are positive.
         </p>
       </statement>
-      <solution permid="OMV">
-        <p permid="EnQ">
-          <md permid="ikn">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt[3]{16z^4}\amp=\sqrt[3]{8\cdot 2\cdot z^3\cdot z}</mrow>
             <mrow>\amp=\sqrt[3]{2^3\cdot 2\cdot z^3\cdot z}</mrow>
             <mrow>\amp=2z\sqrt[3]{2z}</mrow>
@@ -156,15 +156,15 @@
       </solution>
     </example>
 <!--  <remark><p>Note that the "dot" (multiplication symbol) in <m>2z\cdot\sqrt[3]{2z}</m> is necessary. Otherwise it's difficult to tell between <m>2z\cdot\sqrt[3]{2z}</m> and <m>2z^3\cdot\sqrt{2z}</m>.</p></remark> -->
-    <example permid="Zma">
+    <example>
       <statement>
-        <p permid="Gdd">
+        <p>
           Simplify <m>\sqrt[3]{54x^3y^5}</m>.
         </p>
       </statement>
-      <solution permid="uUe">
-        <p permid="kuZ">
-          <md permid="Orw">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt[3]{54x^3y^5}\amp=\sqrt[3]{27\cdot 2\cdot x^3\cdot y^3\cdot y^2}</mrow>
             <mrow>\amp=\sqrt[3]{3^3\cdot 2\cdot x^3\cdot y^3\cdot y^2}</mrow>
             <mrow>\amp=3xy\sqrt[3]{2y^2}</mrow>
@@ -173,36 +173,36 @@
       </solution>
     </example>
   </subsection>
-  <subsection permid="dHy">
+  <subsection>
     <title>Radical Operations</title>
-    <p permid="gva">
+    <p>
       In <xref ref="section-square-root-properties" />,
       we learned how to add/subtract/multiply/divide square root expressions.
       We will now extend those concepts and simplify more complicated radical expressions.
     </p>
-    <p permid="MCj">
+    <p>
       In <xref ref="section-square-root-properties" />,
       we learned the properties:
-      <md permid="uyF">
+      <md>
         <mrow>\sqrt{x\cdot y}\amp=\sqrt{x}\cdot\sqrt{y}</mrow>
         <mrow>\sqrt{\frac{x}{y}}\amp=\frac{\sqrt{x}}{\sqrt{y}}, \text{ where }y\ne0</mrow>
       </md>
       Those properties also work for other radicals:
-      <md permid="aFO">
+      <md>
         <mrow>\sqrt[n]{x\cdot y}\amp=\sqrt[n]{x}\cdot\sqrt[n]{y}</mrow>
         <mrow>\sqrt[n]{\frac{x}{y}}\amp=\frac{\sqrt[n]{x}}{\sqrt[n]{y}}, \text{ where }y\ne0</mrow>
       </md>
       The next few examples will use those properties.
     </p>
-    <example permid="Ftj">
+    <example>
       <statement>
-        <p permid="mkm">
+        <p>
           Do multiplication: <m>\sqrt[3]{4x^2y}\cdot 2\cdot \sqrt[3]{4xy^2}</m>
         </p>
       </statement>
-      <solution permid="bbn">
-        <p permid="QCi">
-          <md permid="GMX">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt[3]{4x^2y}\cdot 2\cdot \sqrt[3]{4xy^2}\amp=2\cdot\sqrt[3]{4x^2y\cdot 4xy^2}</mrow>
             <mrow>\amp=2\cdot \sqrt[3]{8\cdot 2\cdot x^3\cdot y^3}</mrow>
             <mrow>\amp=2\cdot \sqrt[3]{2^3\cdot 2\cdot x^3\cdot y^3}</mrow>
@@ -212,15 +212,15 @@
         </p>
       </solution>
     </example>
-    <example permid="lAs">
+    <example>
       <statement>
-        <p permid="Srv">
+        <p>
           Do multiplication: <m>\sqrt{2p^2-p-1}\cdot\sqrt{p^2-1}</m>
         </p>
       </statement>
-      <solution permid="Hiw">
-        <p permid="wJr">
-          <md permid="mUg">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt{2p^2-p-1}\cdot\sqrt{p^2-1}\amp=\sqrt{(2p+1)(p-1)}\cdot\sqrt{(p+1)(p-1)}</mrow>
             <mrow>\amp=\sqrt{(2p+1)(p-1)(p+1)(p-1)}</mrow>
             <mrow>\amp=\sqrt{(2p+1)(p-1)^2(p+1)}</mrow>
@@ -229,24 +229,24 @@
         </p>
       </solution>
     </example>
-    <example permid="RHB">
+    <example>
       <statement>
-        <p permid="yyE">
+        <p>
           Do division:
           <m>\frac{\sqrt[4]{32m^6n^{10}}}{\sqrt[4]{162m^{10}n}}</m>.
           Assume all variables are positive.
         </p>
       </statement>
-      <solution permid="npF">
-        <p permid="cQA">
-          <md permid="Tbp">
+      <solution>
+        <p>
+          <md>
             <mrow>\frac{\sqrt[4]{32m^6n^{10}}}{\sqrt[4]{162m^{10}n}}\amp=\sqrt[4]{\frac{32m^6n^{10}}{162m^{10}n}}</mrow>
             <mrow>\amp=\sqrt[4]{\frac{16n^9}{81m^4}}</mrow>
             <mrow>\amp=\sqrt[4]{\frac{2^4n^8n}{3^4m^4}}</mrow>
             <mrow>\amp=\frac{2n^2\sqrt[4]{n}}{3m}</mrow>
           </md>
         </p>
-        <p permid="IXJ">
+        <p>
           Notice that in this process we simplified <m>\sqrt[4]{n^8}</m> to <m>n^2</m>.
           This can be explained in a couple of different ways.
           First, we can rewrite <m>\sqrt[4]{n^8}</m> as
@@ -258,20 +258,20 @@
         </p>
       </solution>
     </example>
-    <p permid="sJs">
+    <p>
       When we add/subtract radical expressions,
       remember we can only combine like terms.
     </p>
-    <example permid="xOK">
+    <example>
       <statement>
-        <p permid="eFN">
+        <p>
           Simplify <m>\sqrt{8t}+\sqrt[3]{8t}+\sqrt{18t}</m>.
           Assume all variables are positive.
         </p>
       </statement>
-      <solution permid="TwO">
-        <p permid="peS">
-          <md permid="ziy">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt{8t}+\sqrt[3]{16t}+\sqrt{18t}\amp=\sqrt{4\cdot 2t}+\sqrt[3]{8\cdot 2t}+\sqrt{9\cdot 2t}</mrow>
             <mrow>\amp=2\sqrt{2t}+2\cdot\sqrt[3]{2t}+3\sqrt{2t}</mrow>
             <mrow>\amp=5\sqrt{2t}+2\sqrt[3]{2t}</mrow>
@@ -280,16 +280,16 @@
         </p>
       </solution>
     </example>
-    <example permid="dVT">
+    <example>
       <statement>
-        <p permid="KMW">
+        <p>
           Simplify <m>\sqrt[3]{375n^{12}x^9}-\sqrt[3]{192n^{12}x^9}</m>.
           Assume all variables are positive.
         </p>
       </statement>
-      <solution permid="zDX">
-        <p permid="Vmb">
-          <md permid="fpH">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt[3]{375n^{12}x^9}-\sqrt[3]{192n^{12}x^9}\amp=\sqrt[3]{125\cdot 3 n^{12}x^9}-\sqrt[3]{64\cdot 3n^{12}x^9}</mrow>
             <mrow>\amp=\sqrt[3]{5^3\cdot 3 \left(n^4\right)^3\left(x^3\right)^3}-\sqrt[3]{4^3\cdot 3\left(n^4\right)^3\left(x^3\right)^3}</mrow>
             <mrow>\amp=5n^4x^3\sqrt[3]{3}-4n^4x^3\sqrt[3]{3}</mrow>
@@ -298,19 +298,19 @@
         </p>
       </solution>
     </example>
-    <p permid="YQB">
+    <p>
       When we add/subtract fractions,
       don't forget to find common denominators first.
     </p>
-    <example permid="Kdc">
+    <example>
       <statement>
-        <p permid="qUf">
+        <p>
           Simplify <m>\sqrt{\frac{3}{4}}+\sqrt{12}</m>.
         </p>
       </statement>
-      <solution permid="fLg">
-        <p permid="Btk">
-          <md permid="LwQ">
+      <solution>
+        <p>
+          <md>
             <mrow>\sqrt{\frac{3}{4}}+\sqrt{12}\amp=\frac{\sqrt{3}}{\sqrt{4}}+\sqrt{4\cdot3}</mrow>
             <mrow>\amp=\frac{\sqrt{3}}{2}+2\sqrt{3}</mrow>
             <mrow>\amp=\frac{\sqrt{3}}{2}+\frac{2\sqrt{3}}{1}</mrow>
@@ -324,26 +324,26 @@
     </example>
 <!-- <p>It's important to review radical operations covered in <xref ref="subsection-more-complicated-square-root-operations" />.</p> -->
   </subsection>
-  <exercises permid="JOH">
-    <exercisegroup permid="pVQ">
-      <introduction permid="irr">
-        <p permid="Dix">
+  <exercises>
+    <exercisegroup>
+      <introduction>
+        <p>
           Simplifying Radicals
         </p>
       </introduction>
-      <exercise permid="OyA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals02.pg"/>
       </exercise>
-      <exercise permid="uFJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals04.pg"/>
       </exercise>
-      <exercise permid="aMS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals06.pg"/>
       </exercise>
-      <exercise permid="GUb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals07.pg"/>
       </exercise>
-      <exercise permid="nbk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals09.pg"/>
       </exercise>
       <exercise>
@@ -412,52 +412,52 @@
         <answer><p><m>2r^4x^4\sqrt[4]{5r^3x}</m></p>
         </answer>
       </exercise>
-      <!-- <exercise permid="zpC">
+      <!-- <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals150.pg" />
       </exercise>
 
-      <exercise permid="fwL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals160.pg" />
       </exercise>
-      <exercise permid="LDU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals170.pg" />
       </exercise>
-      <exercise permid="rLd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals180.pg" />
       </exercise>
-      <exercise permid="XSm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals185.pg" />
       </exercise>
-      <exercise permid="DZv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals190.pg" />
       </exercise>
-      <exercise permid="kgE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals200.pg" />
       </exercise>
-      <exercise permid="QnN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals210.pg" />
       </exercise>
-      <exercise permid="wuW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals220.pg" />
       </exercise> -->
     </exercisegroup>
     <newpage/>
-    <exercisegroup permid="WcZ">
-      <title permid="cCf">
-        <p permid="jpG">
+    <exercisegroup>
+      <title>
+        <p>
           Multiplying Radicals 
         </p>
       </title>
-      <exercise permid="IJo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals10.pg"/>
       </exercise>
-      <exercise permid="oQx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals20.pg"/>
       </exercise>
-      <exercise permid="UXG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals30.pg"/>
       </exercise>
-      <exercise permid="BeP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals40.pg"/>
       </exercise>
     </exercisegroup>
@@ -518,16 +518,16 @@
         <answer><p><m>2rz\sqrt[4]{27z^2}</m></p>
         </answer>
       </exercise>
-      <exercise permid="ers">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty10.pg"/>
       </exercise>
-      <exercise permid="KyB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty20.pg"/>
       </exercise>
-      <exercise permid="qFK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty30.pg"/>
       </exercise>
-      <exercise permid="WMT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty40.pg"/>
       </exercise>
       <!-- <exercise>
@@ -596,7 +596,7 @@
         <answer><p><m>\frac{m^5}{z^4}</m></p>
         </answer>
       </exercise>
-      <exercise permid="bwM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty41.pg"/>
       </exercise>
       <exercise>
@@ -606,64 +606,64 @@
         </answer>
       </exercise>
 
-      <!-- 19<exercise permid="hlY">
+      <!-- 19<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals44.pg" />
         </exercise>
-      20<exercise permid="Nth">
+      20<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals45.pg" />
       </exercise>
-      21<exercise permid="tAq">
+      21<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals50.pg" />
       </exercise>
-      22<exercise permid="ZHz">
+      22<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals55.pg" />
       </exercise>
-      23<exercise permid="FOI">
+      23<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals60.pg" />
       </exercise>
-      24<exercise permid="lVR">
+      24<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals65.pg" />
       </exercise>
-      25<exercise permid="Sda">
+      25<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals70.pg" />
       </exercise>
-      26<exercise permid="ykj">
+      26<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/MultiplyRadicals80.pg" /> -->
       <!-- </exercise>
-      27<exercise permid="ers">
+      27<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty10.pg" />
       </exercise>
-      28<exercise permid="KyB">
+      28<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty20.pg" />
       </exercise>
-      29<exercise permid="qFK">
+      29<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty30.pg" />
       </exercise>
-      30<exercise permid="WMT">
+      30<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty40.pg" />
       </exercise>
-      31<exercise permid="CUc">
+      31<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty50.pg" />
       </exercise>
-      32<exercise permid="jbl">
+      32<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty60.pg" />
       </exercise>
-      33<exercise permid="Piu">
+      33<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty11.pg" />
       </exercise>
-      34<exercise permid="vpD">
+      34<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty12.pg" />
       </exercise>
-      35<exercise permid="bwM">
+      35<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty41.pg" />
       </exercise> -->
-      <!-- <exercise permid="HDV">
+      <!-- <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalDivisionProperty43.pg" />
       </exercise> -->
     </exercisegroup>
-    <exercisegroup permid="Cki">
-      <introduction permid="nLe">
-        <p permid="PwP">
+    <exercisegroup>
+      <introduction>
+        <p>
           Mixed Operations of Radicals
         </p>
       </introduction>
@@ -704,38 +704,38 @@
     </exercisegroup>
 
 
-      <!-- 38<exercise permid="zZw">
+      <!-- 38<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals13.pg" />
       </exercise>
-      39<exercise permid="ggF">
+      39<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals14.pg" />
       </exercise>
-      40<exercise permid="MnO">
+      40<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals15.pg" />
       </exercise> -->
       <exercisegroup>
-      <exercise permid="TSn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals10.pg"/>
       </exercise>
-      <exercise permid="suX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals20.pg"/>
       </exercise>
-      <exercise permid="YCg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals30.pg"/>
       </exercise>
-      <exercise permid="EJp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals40.pg"/>
       </exercise>
-      <exercise permid="kQy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals50.pg"/>
       </exercise>
-      <exercise permid="QXH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals60.pg"/>
       </exercise>
-      <exercise permid="xeQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals70.pg"/>
       </exercise>
-      <exercise permid="dlZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals90.pg"/>
       </exercise>
     </exercisegroup>
@@ -823,77 +823,77 @@
         </answer>
       </exercise>
     </exercisegroup>
-      <!-- 48<exercise permid="Jti">
+      <!-- 48<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals51.pg" />
       </exercise>
-      49<exercise permid="pAr">
+      49<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals52.pg" />
       </exercise>
-      50<exercise permid="VHA">
+      50<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals55.pg" />
       </exercise>
-      51<exercise permid="BOJ">
+      51<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals56.pg" />
       </exercise>
-      52<exercise permid="hVS">
+      52<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals57.pg" />
       </exercise>
-      53<exercise permid="Odb">
+      53<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals58.pg" />
       </exercise>
-      54<exercise permid="ukk">
+      54<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals91.pg" />
       </exercise>
-      55<exercise permid="art">
+      55<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals92.pg" />
       </exercise>
-      56<exercise permid="GyC">
+      56<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals93.pg" />
       </exercise>
-      57<exercise permid="mFL">
+      57<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals94.pg" />
       </exercise>
-      58<exercise permid="SMU">
+      58<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals95.pg" />
       </exercise>
-      59<exercise permid="yUd">
+      59<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals96.pg" />
       </exercise>
-      60<exercise permid="fbm">
+      60<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals97.pg" />
       </exercise>
-      61<exercise permid="Liv">
+      61<exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals98.pg" />
       </exercise> -->
       <exercisegroup>
-      <exercise permid="rpE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals100.pg"/>
       </exercise>
-      <exercise permid="XwN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals120.pg"/>
       </exercise>
-      <exercise permid="DDW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals130.pg"/>
       </exercise>
-      <exercise permid="jLf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals137.pg"/>
       </exercise>
-      <exercise permid="PSo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals138.pg"/>
       </exercise>
-      <exercise permid="vZx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals139.pg"/>
       </exercise>
-      <exercise permid="cgG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/SimplifyRadicals140.pg"/>
       </exercise>
-      <exercise permid="InP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/FOILradical1.pg"/>
       </exercise>
-      <exercise permid="ouY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/FOILradical2.pg"/>
       </exercise>
-      <exercise permid="UCh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/FOILradical3.pg"/>
       </exercise>
     </exercisegroup>

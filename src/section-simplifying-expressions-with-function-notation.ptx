@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-simplifying-expressions-with-function-notation" permid="KNW">
+<section xml:id="section-simplifying-expressions-with-function-notation">
   <title>Simplifying Expressions with Function Notation</title>
-  <introduction permid="nFa">
-    <p permid="nTv">
+  <introduction>
+    <p>
       In this section,
       we will discuss algebra simplification that will appear in many facets of education.
       Simplification is a skill, like cooking noodles or painting a wall.
@@ -22,9 +22,9 @@
       you'll have experience to prevent yourself from overcooking the noodles or ruining your paintbrush.
     </p>
   </introduction>
-  <subsection permid="qVf">
+  <subsection>
     <title>Negative Signs in and out of Function Notation</title>
-    <p permid="SzM">
+    <p>
       Let's start by reminding ourselves about the meaning of function notation.
       When we write <m>f(x)</m>,
       we have a process <m>f</m> that is doing something to an input value <m>x</m>.
@@ -32,27 +32,27 @@
       What if we use something for input that is not quite as simple as
       <q><m>x</m></q>?
     </p>
-    <example xml:id="example-f-of-minus-x" permid="qzG">
+    <example xml:id="example-f-of-minus-x">
       <statement>
-        <p permid="Dct">
+        <p>
           Find and simplify a formula for <m>f(-x)</m>,
           where <m>f(x)=x^2+3x-4</m>.
         </p>
       </statement>
-      <solution permid="TMj">
-        <p permid="Fnf">
+      <solution>
+        <p>
           Those parentheses encase
           <q><m>-x</m>,</q>
           so we are meant to treat
           <q><m>-x</m></q>
           as the input.
           The rule that we have been given for <m>f</m> is
-          <me permid="rcw">
+          <me>
             f(x)=x^2+3x-4
           </me>.
           But the <m>x</m>'s that are in this formula are just place-holders.
           What <m>f</m> does to a number can just as easily be communicated with
-          <me permid="XjF">
+          <me>
             f(\phantom{x})=(\phantom{x})^2+3(\phantom{x})-4
           </me>.
           So now that we are meant to treat
@@ -61,7 +61,7 @@
           <q><m>-x</m></q>
           into those slots,
           after which we can do more familiar algebraic simplification:
-          <md permid="DqO">
+          <md>
             <mrow>f(\phantom{-x})\amp=(\phantom{-x})^2+3(\phantom{-x})-4</mrow>
             <mrow>f(\substitute{-x})\amp=(\substitute{-x})^2+3(\substitute{-x})-4</mrow>
             <mrow>\amp=x^2-3x-4</mrow>
@@ -69,29 +69,29 @@
         </p>
       </solution>
     </example>
-    <p permid="yGV">
+    <p>
       The previous example contrasts nicely with this one:
     </p>
-    <example xml:id="example-minus-f-of-x" permid="WGP">
+    <example xml:id="example-minus-f-of-x">
       <statement>
-        <p permid="jjC">
+        <p>
           Find and simplify a formula for <m>-f(x)</m>,
           where <m>f(x)=x^2+3x-4</m>.
         </p>
       </statement>
-      <solution permid="zTs">
-        <p permid="luo">
+      <solution>
+        <p>
           Here, the parentheses only encase
           <q><m>x</m>.</q>
           The negative sign is on the outside.
           So the way to see this expression is that first <m>f</m> will do what it does to <m>x</m>,
           and then that result will be negated:
-          <md permid="jxX">
+          <md>
             <mrow>-f(x)\amp=-(\substitute{x^2+3x-4})</mrow>
             <mrow>\amp=-x^2-3x+4</mrow>
           </md>
         </p>
-        <p permid="RBx">
+        <p>
           Note that the answer to this exercise,
           which was to simplify <m>-f(x)</m>,
           is different from the answer to <xref ref="example-f-of-minus-x" />,
@@ -100,7 +100,7 @@
         </p>
       </solution>
     </example>
-    <p permid="eOe">
+    <p>
       In <xref ref="example-f-of-minus-x" />
       and <xref ref="example-minus-f-of-x" />,
       we are working with the expressions <m>f(-x)</m> and <m>-f(x)</m>,
@@ -110,7 +110,7 @@
       If it seems strange to be doing these things,
       perhaps this applied example will help.
     </p>
-    <exercise permid="CNY">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
           <setup>
@@ -127,12 +127,12 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
 </pg-code>
           </setup>
           <statement>
-            <p permid="AhN">
+            <p>
               The NASDAQ Composite Index measures how well a portion of the stock market is doing.
               Suppose <m>N(t)</m> is the value of the index <m>t</m> days after January<nbsp/>1, 2018.
               A formula for <m>N</m> is <m>N(t)=<var name="$N"/></m>.
             </p>
-            <p permid="goW">
+            <p>
               What if you wanted a new function, <m>B</m>,
               that gives the value of the NASDAQ index <m>t</m> days
               <em>before</em> January<nbsp/>1, 2018?
@@ -142,13 +142,13 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
               and now the expression <m>N(-t)</m> means something.
               Find a simplified formula for <m>N(-t)</m>.
             </p>
-            <p permid="Mwf">
+            <p>
               <m>N(-t)=</m><var name="$answer" evaluator="$evaluator" width="20"/>
             </p>
           </statement>
-          <solution permid="EDl">
-            <p permid="xIG">
-              <md permid="PFg">
+          <solution>
+            <p>
+              <md>
                 <mrow>N(\phantom{-t})\amp=3.34(\phantom{-t})^2+26.2(\phantom{-t})+6980</mrow>
                 <mrow>N(\substitute{-t})\amp=3.34(\substitute{-t})^2+26.2(\substitute{-t})+6980</mrow>
                 <mrow>\amp=3.34t^2-26.2t+6980</mrow>
@@ -158,23 +158,23 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
       </webwork>
     </exercise>
   </subsection>
-  <subsection permid="Xco">
+  <subsection>
     <title>Other Nontrivial Simplifications</title>
-    <example xml:id="example-h-of-5x" permid="iVh">
+    <example xml:id="example-h-of-5x">
       <statement>
-        <p permid="PqL">
+        <p>
           Find and simplify a formula for <m>h(5x)</m>,
           where <m>h(x)=\frac{x}{x-2}</m>.
         </p>
       </statement>
-      <solution permid="gaB">
-        <p permid="dPP">
+      <solution>
+        <p>
           The parentheses encase
           <q><m>5x</m>,</q>
           so we are meant to treat
           <q><m>5x</m></q>
           as the input.
-          <md permid="vMp">
+          <md>
             <mrow>h(\phantom{(5x)})\amp=\frac{\substitute{(\phantom{(5x)})}}{\substitute{(\phantom{5x})}-2}</mrow>
             <mrow>h(\substitute{5x})\amp=\frac{\substitute{5x}}{\substitute{5x}-2}</mrow>
             <mrow>\amp=\frac{5x}{5x-2}</mrow>
@@ -183,15 +183,15 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
 <!-- <p>Note that the factor of <m>5x</m> in the numerator could not cancel, as <m>5x</m> is not a <em>factor</em> of the denominator. This type of simplification is discussed more fully in <xref ref="section-multiplication-and-division-of-rational-expressions" />.</p> -->
       </solution>
     </example>
-    <example permid="Pcq">
+    <example>
       <statement>
-        <p permid="vxU">
+        <p>
           Find and simplify a formula for
           <m>\frac{1}{3}g(3x)</m>, where <m>g(x)=2x^2+8</m>.
         </p>
       </statement>
-      <solution permid="MhK">
-        <p permid="JWY">
+      <solution>
+        <p>
           Do the <m>\frac{1}{3}</m> and the <m>3</m> cancel each other?
           No.
           The <m>3</m> is part of the input,
@@ -203,14 +203,14 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
           we don't have the chance to cancel the <m>3</m> with the <m>\frac{1}{3}</m>.
           Let's see what actually happens:
         </p>
-        <p permid="qeh">
+        <p>
           Those parentheses encase
           <q><m>3x</m>,</q>
           so we are meant to treat
           <q><m>3x</m></q>
           as the input.
           We will keep the <m>\frac{1}{3}</m> where it is until it is possible to simplify:
-          <md permid="bTy">
+          <md>
             <mrow>\frac{1}{3}g(\phantom{3x})\amp=\frac{1}{3}\left(2(\phantom{3x})^2+8\right)</mrow>
             <mrow>\frac{1}{3}g(\substitute{3x})\amp=\frac{1}{3}\left(2(\substitute{3x})^2+8\right)</mrow>
             <mrow>\amp=\frac{1}{3}\left(2\left(9x^2\right)+8\right)</mrow>
@@ -220,14 +220,14 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
         </p>
       </solution>
     </example>
-    <example xml:id="example-f-of-x-minus-four" permid="vjz">
+    <example xml:id="example-f-of-x-minus-four">
       <statement>
-        <p permid="bFd">
+        <p>
           If <m>k(x)=x^2-3x</m>, find and simplify a formula for <m>k(x-4)</m>.
         </p>
       </statement>
-      <solution permid="soT">
-        <p permid="Wlq">
+      <solution>
+        <p>
           This type of exercise is often challenging for algebra students.
           But let's focus on those parentheses one more time.
           They encase
@@ -235,7 +235,7 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
           so we are meant to treat
           <q><m>x-4</m></q>
           as the input.
-          <md permid="IaH">
+          <md>
             <mrow>k(\phantom{x-4})\amp=(\phantom{x-4})^2-3(\phantom{x-4})</mrow>
             <mrow>k(\substitute{x-4})\amp=(\substitute{x-4})^2-3(\substitute{x-4})</mrow>
             <mrow>\amp=x^2-8x+16-3x+12</mrow>
@@ -244,7 +244,7 @@ Formula("-3.34t^2-26.2t-6980") =&gt; "This is -N(t), not N(-t).",
         </p>
       </solution>
     </example>
-    <exercise permid="HxR">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -252,17 +252,17 @@ $answer = Formula("x+5+sqrt(x+13)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="sDo">
+            <p>
               If <m>q(x)=x+\sqrt{x+8}</m>, find and simplify a formula for <m>q(x+5)</m>.
             </p>
-            <p permid="YKx">
+            <p>
               <m>q(x+5)=</m><var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="kKu">
-            <p permid="Csz">
+          <solution>
+            <p>
               Starting with the generic formula for <m>q</m>:
-              <md permid="ohQ">
+              <md>
                 <mrow>q(\phantom{x+5})\amp=(\phantom{x+5})+\sqrt{(\phantom{x+5})+8}</mrow>
                 <mrow>q(\substitute{x+5})\amp=\substitute{x+5}+\sqrt{\substitute{x+5}+8}</mrow>
                 <mrow>\amp=x+5+\sqrt{x+13}</mrow>
@@ -271,20 +271,20 @@ $answer = Formula("x+5+sqrt(x+13)");
           </solution>
       </webwork>
     </exercise>
-    <example permid="bqI">
+    <example>
       <statement>
-        <p permid="HMm">
+        <p>
           If <m>f(x)=\frac{1}{x}</m>, find and simplify a formula for <m>f(x+3)+2</m>.
         </p>
       </statement>
-      <solution permid="Ywc">
-        <p permid="izI">
+      <solution>
+        <p>
           Do not be tempted to add the <m>3</m> and the <m>2</m>.
           The <m>3</m> is added to input <em>before</em>
           the function <m>f</m> does its work.
           The <m>2</m> is added to the result
           <em>after</em> <m>f</m> has done its work.
-          <md permid="UoZ">
+          <md>
             <mrow>f(\phantom{x+3})+2\amp=\frac{1}{\substitute{(\phantom{x+3})}}+2</mrow>
             <mrow>f(\substitute{x+3})+2\amp=\frac{1}{\substitute{x+3}}+2</mrow>
           </md>
@@ -293,45 +293,45 @@ $answer = Formula("x+5+sqrt(x+13)");
         </p>
       </solution>
     </example>
-    <p permid="KVn">
+    <p>
       The tasks we have practiced in this section are the kind of tasks that will make it easier to understand interesting and useful material in college algebra and calculus.
     </p>
   </subsection>
-  <exercises permid="Djx">
-    <exercisegroup cols="2" permid="jqG">
+  <exercises>
+    <exercisegroup cols="2">
       <title>Review and Warmup</title>
-      <exercise permid="HTq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/AlgebraicProperties/DistributiveProperty10.pg"/>
       </exercise>
-      <exercise permid="oaz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/AlgebraicProperties/DistributiveProperty10.pg"/>
       </exercise>
-      <exercise permid="UhI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/AlgebraicProperties/DistributiveProperty20.pg"/>
       </exercise>
-      <exercise permid="AoR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/AlgebraicProperties/DistributiveProperty20.pg"/>
       </exercise>
-      <exercise permid="gwa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication191.pg"/>
       </exercise>
-      <exercise permid="MDj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication191.pg"/>
       </exercise>
-      <exercise permid="sKs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication195.pg"/>
       </exercise>
-      <exercise permid="YRB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication195.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="PxP">
-      <introduction permid="EYK">
-        <p permid="UaE">
+    <exercisegroup cols="2">
+      <introduction>
+        <p>
           Find simplified formulas for these expressions.
         </p>
       </introduction>
-      <exercise permid="lfT">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -356,17 +356,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="ERG">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="kYP">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="QRD">
-              <p permid="OGR">
-                <md permid="Awi">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$b"/> + <var name="$mxpma"/></mrow>
@@ -376,7 +376,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Rnc">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -401,17 +401,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="RfY">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="xnh">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="wYM">
-              <p permid="uOa">
-                <md permid="gDr">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$b"/> + <var name="$mxpma"/></mrow>
@@ -421,7 +421,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="xul">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -444,17 +444,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="duq">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="JBz">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="dfV">
-              <p permid="aVj">
-                <md permid="MKA">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
@@ -463,7 +463,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="dBu">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -486,17 +486,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="pII">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="VPR">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="Jne">
-              <p permid="Hcs">
-                <md permid="sRJ">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
@@ -505,7 +505,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="JID">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -530,17 +530,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="BXa">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="iej">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="pun">
-              <p permid="njB">
-                <md permid="YYS">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$b"/> + <var name="$mxpma"/></mrow>
@@ -550,7 +550,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="pPM">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -575,17 +575,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="Ols">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="usB">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="VBw">
-              <p permid="TqK">
-                <md permid="Fgb">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$b"/> + <var name="$mxpma"/></mrow>
@@ -595,7 +595,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="VWV">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -627,17 +627,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="azK">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="GGT">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="BIF">
-              <p permid="zxT">
-                <md permid="lnk">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$b"/> + <var name="$mxpma"/></mrow>
@@ -647,7 +647,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Cee">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -679,17 +679,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="mOc">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="SVl">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="hPO">
-              <p permid="fFc">
-                <md permid="Rut">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$b"/> + <var name="$mxpma"/></mrow>
@@ -699,7 +699,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="iln">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -719,17 +719,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="zcu">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="fjD">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="NWX">
-              <p permid="LMl">
-                <md permid="xBC">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(<var name="$x"/>)+<var name="$a"/>\amp= <var name="$fofx"/>+<var name="$a"/></mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
@@ -737,7 +737,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Osw">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -757,17 +757,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="LqM">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="rxV">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="ueg">
-              <p permid="rTu">
-                <md permid="dIL">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(<var name="$x"/>)+<var name="$a"/>\amp= <var name="$fofx"/>+<var name="$a"/></mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
@@ -775,7 +775,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="uzF">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -795,17 +795,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="XFe">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="DMn">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="alp">
-              <p permid="YaD">
-                <md permid="JPU">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(<var name="$x"/>)+<var name="$a"/>\amp= <var name="$fofx"/>+<var name="$a"/></mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
@@ -813,7 +813,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="aGO">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -833,17 +833,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="jTw">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="QaF">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="Gsy">
-              <p permid="EhM">
-                <md permid="pXd">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(<var name="$x"/>)+<var name="$a"/>\amp= <var name="$fofx"/>+<var name="$a"/></mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
@@ -851,7 +851,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="GNX">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -878,17 +878,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="whO">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="coX">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="mzH">
-              <p permid="koV">
-                <md permid="Wem">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$g"/>(<var name="$a2x2"/>) + <var name="$max"/> + <var name="$b"/></mrow>
@@ -898,7 +898,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="mVg">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -925,17 +925,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="Iwg">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="oDp">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="SGQ">
-              <p permid="Qwe">
-                <md permid="Clv">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$g"/>(<var name="$a2x2"/>) + <var name="$max"/> + <var name="$b"/></mrow>
@@ -945,7 +945,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Tcp">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -971,17 +971,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="UKy">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="ARH">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="yNZ">
-              <p permid="wDn">
-                <md permid="isE">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$g"/>(<var name="$a2x2"/>) + <var name="$max"/> + <var name="$b"/></mrow>
@@ -991,7 +991,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="zjy">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -1017,17 +1017,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="gYQ">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="NfZ">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="eVi">
-              <p permid="cKw">
-                <md permid="OzN">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$g"/>(<var name="$a2x2"/>) + <var name="$max"/> + <var name="$b"/></mrow>
@@ -1037,7 +1037,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="fqH">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -1058,17 +1058,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="tni">
+              <p>
                 Simplify <m><var name="$a"/><var name="$f"/>(<var name="$x"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="Zur">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="Lcr">
-              <p permid="IRF">
-                <md permid="uGW">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$a"/><var name="$f"/>(<var name="$x"/>)\amp= <var name="$a"/>\left(<var name="$fofx"/>\right)</mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
@@ -1076,7 +1076,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="LxQ">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -1097,17 +1097,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="FBA">
+              <p>
                 Simplify <m><var name="$a"/><var name="$f"/>(<var name="$x"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="lIJ">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="rjA">
-              <p permid="oYO">
-                <md permid="aOf">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$a"/><var name="$f"/>(<var name="$x"/>)\amp= <var name="$a"/>\left(<var name="$fofx"/>\right)</mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
@@ -1115,7 +1115,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="rEZ">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -1143,17 +1143,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="RPS">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="xXb">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="XqJ">
-              <p permid="VfX">
-                <md permid="GVo">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$g"/>(<var name="$xpa2"/>) + <var name="$mxpa"/> + <var name="$b"/></mrow>
@@ -1164,7 +1164,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="XMi">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -1192,17 +1192,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="eek">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="Klt">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="DxS">
-              <p permid="Bng">
-                <md permid="ncx">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$g"/>(<var name="$xpa2"/>) + <var name="$mxpa"/> + <var name="$b"/></mrow>
@@ -1213,7 +1213,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="DTr">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -1234,17 +1234,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="qsC">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="WzL">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="jFb">
-              <p permid="hup">
-                <md permid="TjG">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(<var name="$x"/>)+<var name="$a"/>\amp= <var name="$fofx"/>+<var name="$a"/></mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
@@ -1252,7 +1252,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="kaA">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextLimitedPolynomial.pl</macro-file></pg-macros>
             <setup>
@@ -1273,17 +1273,17 @@ $answer = Formula("$answer");
 </pg-code>
             </setup>
             <statement>
-              <p permid="CGU">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$x"/>)+<var name="$a"/></m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="iOd">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <solution permid="PMk">
-              <p permid="NBy">
-                <md permid="zqP">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(<var name="$x"/>)+<var name="$a"/>\amp= <var name="$fofx"/>+<var name="$a"/></mrow>
                   <mrow>\amp=<var name="$answer"/></mrow>
                 </md>
@@ -1291,7 +1291,7 @@ $answer = Formula("$answer");
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="QhJ">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1340,17 +1340,17 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="OVm">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="vcv">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30"/>
               </p>
             </statement>
-            <solution permid="vTt">
-              <p permid="tIH">
-                <md permid="fxY">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=\sqrt{<var name="$b"/> + <var name="$mxpma"/>}</mrow>
@@ -1360,7 +1360,7 @@ return $OK;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="woS">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1409,17 +1409,17 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="bjE">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="HqN">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30"/>
               </p>
             </statement>
-            <solution permid="caC">
-              <p permid="ZPQ">
-                <md permid="LFh">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=\sqrt{<var name="$b"/> + <var name="$mxpma"/>}</mrow>
@@ -1429,7 +1429,7 @@ return $OK;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="cwb">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1468,24 +1468,24 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="nxW">
+              <p>
                 Simplify <m><var name="$f"/>(x)+<var name="$a"/></m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="TFf">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30"/>
               </p>
             </statement>
-            <solution permid="IhL">
-              <p permid="FWZ">
-                <md permid="rMq">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(<var name="$inner"/>)+<var name="$a"/>\amp=<var name="$answer"/></mrow>
                 </md>
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="IDk">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1524,24 +1524,24 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="zMo">
+              <p>
                 Simplify <m><var name="$f"/>(x)+<var name="$a"/></m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="fTx">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30"/>
               </p>
             </statement>
-            <solution permid="ooU">
-              <p permid="mei">
-                <md permid="XTz">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(<var name="$inner"/>)+<var name="$a"/>\amp=<var name="$answer"/></mrow>
                 </md>
               </p>
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="oKt">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1585,17 +1585,17 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="MaG">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="shP">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30"/>
               </p>
             </statement>
-            <solution permid="Uwd">
-              <p permid="Slr">
-                <md permid="EaI">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$mxpma"/> + \sqrt{<var name="$b"/> + <var name="$mxpma"/>}</mrow>
@@ -1605,7 +1605,7 @@ return $OK;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="URC">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1649,17 +1649,17 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="YoY">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="Ewh">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30"/>
               </p>
             </statement>
-            <solution permid="ADm">
-              <p permid="ysA">
-                <md permid="khR">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=<var name="$mxpma"/> + \sqrt{<var name="$b"/> + <var name="$mxpma"/>}</mrow>
@@ -1670,7 +1670,7 @@ return $OK;
         </webwork>
       </exercise>
 <!--TODO: This problem needs a factor of 2 cancelled, but students don't have the algebraic skills at this point to do so...-->
-  <!--     <exercise permid="AYL">
+  <!--     <exercise>
         <webwork>
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
             <setup>
@@ -1714,17 +1714,17 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="kDq">
+              <p>
                 Simplify <m><var name="$f" />(<var name="$inner" />)</m>,
                 where <m><var name="$f" />(<var name="$x" />)=<var name="$fofx" /></m>.
               </p>
-              <p permid="QKz">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30" />
               </p>
             </statement>
-            <solution permid="gKv">
-              <p permid="ezJ">
-                <md permid="Qpa">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f" />(\phantom{<var name="$x" />})\amp= <var name="$emptyf" /></mrow>
                   <mrow><var name="$f" />(<var name="$inner" />)\amp=<var name="$subbed" /></mrow>
                   <mrow>\amp=\frac{<var name="$c" />}{<var name="$mxpma" /> + <var name="$b" />}</mrow>
@@ -1735,7 +1735,7 @@ return $OK;
         </webwork>
       </exercise> -->
 <!--TODO: This problem needs a factor of 2 cancelled, but students don't have the algebraic skills at this point to do so...-->
-      <exercise permid="hfU">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
             <setup>
@@ -1779,17 +1779,17 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="wRI">
+              <p>
                 Simplify <m><var name="$f"/>(<var name="$inner"/>)</m>,
                 where <m><var name="$f"/>(<var name="$x"/>)=<var name="$fofx"/></m>.
               </p>
-              <p permid="cYR">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30"/>
               </p>
             </statement>
-            <solution permid="MRE">
-              <p permid="KGS">
-                <md permid="wwj">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f"/>(\phantom{<var name="$x"/>})\amp= <var name="$emptyf"/></mrow>
                   <mrow><var name="$f"/>(<var name="$inner"/>)\amp=<var name="$subbed"/></mrow>
                   <mrow>\amp=\frac{<var name="$c"/>}{<var name="$mxpma"/> + <var name="$b"/>}</mrow>
@@ -1799,7 +1799,7 @@ return $OK;
             </solution>
         </webwork>
       </exercise>
-      <!-- <exercise permid="Nnd">
+      <!-- <exercise>
         <webwork>
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
             <setup>
@@ -1844,17 +1844,17 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="Jga">
+              <p>
                 Simplify <m><var name="$f" />(<var name="$inner" />)</m>,
                 where <m><var name="$f" />(<var name="$x" />)=<var name="$fofx" /></m>.
               </p>
-              <p permid="pnj">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30" />
               </p>
             </statement>
-            <solution permid="sYN">
-              <p permid="qOb">
-                <md permid="cDs">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f" />(\phantom{<var name="$x" />})\amp= <var name="$emptyf" /></mrow>
                   <mrow><var name="$f" />(<var name="$inner" />)\amp=<var name="$subbed" /></mrow>
                   <mrow>\amp=\frac{<var name="$cax" />}{<var name="$m" />\left(<var name="$a2x2" />\right) + <var name="$b" />}</mrow>
@@ -1864,7 +1864,7 @@ return $OK;
             </solution>
         </webwork>
       </exercise> -->
-      <!-- <exercise permid="tum">
+      <!-- <exercise>
         <webwork>
             <pg-macros><macro-file>PCCmacros.pl</macro-file></pg-macros>
             <setup>
@@ -1909,17 +1909,17 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="Vus">
+              <p>
                 Simplify <m><var name="$f" />(<var name="$inner" />)</m>,
                 where <m><var name="$f" />(<var name="$x" />)=<var name="$fofx" /></m>.
               </p>
-              <p permid="BBB">
+              <p>
                 <var name="$answer" evaluator="$evaluator" width="30" />
               </p>
             </statement>
-            <solution permid="ZfW">
-              <p permid="WVk">
-                <md permid="IKB">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$f" />(\phantom{<var name="$x" />})\amp= <var name="$emptyf" /></mrow>
                   <mrow><var name="$f" />(<var name="$inner" />)\amp=<var name="$subbed" /></mrow>
                   <mrow>\amp=\frac{<var name="$cax" />}{<var name="$m" />\left(<var name="$a2x2" />\right) + <var name="$b" />}</mrow>
@@ -1930,26 +1930,26 @@ return $OK;
         </webwork>
       </exercise> -->
     </exercisegroup>
-    <exercisegroup cols="2" permid="vEY">
-      <exercise permid="ZBv">
+    <exercisegroup cols="2">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionComposition65.pg"/>
       </exercise>
-      <exercise permid="FIE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionComposition65.pg"/>
       </exercise>
-      <exercise permid="lPN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionComposition66.pg"/>
       </exercise>
-      <exercise permid="RWW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionComposition66.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup permid="bMh">
+    <exercisegroup>
       <title>Applications</title>
-      <exercise permid="yef">
+      <exercise>
         <webwork source="Library/LoyolaChicago/Precalc/Chap2Sec4/Q38.pg"/>
       </exercise>
-      <exercise permid="elo">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -1983,25 +1983,25 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="hIK">
+              <p>
                 Suppose <m>T(t)</m> represents the temperature outside,
                 in Fahrenheit, at <m>t</m> hours past noon,
                 and a formula for <m>T</m> is <m>T(t)=<var name="$T"/></m>.
               </p>
-              <p permid="NPT">
+              <p>
                 If we introduce <m>F(t)</m> as the temperature outside,
                 in Fahrenheit,
                 at <m>t</m> hours past <var name="$shift"/>:00pm,
                 then <m>F(t)=T(t+<var name="$shift"/>)</m>.
                 Find a simplified formula for <m>T(t+<var name="$shift"/>)</m>.
               </p>
-              <p permid="tXc">
+              <p>
                 <m>T(t+<var name="$shift"/>) = </m><var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>
         </webwork>
       </exercise>
-      <exercise permid="Ksx">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -2035,15 +2035,15 @@ return $OK;
 </pg-code>
             </setup>
             <statement>
-              <p permid="ael">
+              <p>
                 Suppose <m>G(t)</m> represents how many gigabytes of data has been downloaded <m>t</m> minutes after you started a download.
               </p>
-              <p permid="Glu">
+              <p>
                 If we introduce <m>M(t)</m> as how many megabytes of data has been downloaded <m>t</m> minutes after you started a download,
                 then <m>M(t)=1024G(t)</m>.
                 Find a simplified formula for <m>1024G(t)</m>.
               </p>
-              <p permid="msD">
+              <p>
                 <m>1024G(t) = </m><var name="$answer" evaluator="$evaluator" width="20"/>
               </p>
             </statement>

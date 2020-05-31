@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-radical-expressions-and-rational-exponents" permid="rDZ">
+<section xml:id="section-radical-expressions-and-rational-exponents">
   <title>Radical Expressions and Rational Exponents</title>
-  <introduction permid="IQF">
-    <p permid="ggS">
+  <introduction>
+    <p>
       Recall that in <xref ref="remark-calculator-rational-exponent-rule" />,
       we learned to calculate the cube root of a number, say <m>\sqrt[3]{8}</m>,
       we can type <c>8^(1/3)</c> into a calculator.
@@ -17,54 +17,54 @@
       In this section, we will learn why this is true,
       and how to simplify expressions with rational exponents.
     </p>
-    <p permid="Mob">
+    <p>
       Many learners will find a review of exponent rules to be helpful before continuing with the current section.
       <xref ref="section-introduction-to-exponent-rules" />
       covers an introduction to exponent rules,
       and there is more in <xref ref="section-exponent-rules" />.
-      The basic rules are summarized in <xref ref="list-exponent-rules">List</xref>.
+      The basic rules are summarized in <xref ref="list-exponent-rules"/>.
       These rules are still true and we can use them throughout this section whenever they might help.
     </p>
   </introduction>
-  <subsection permid="XLi">
+  <subsection>
     <title>Radical Expressions and Rational Exponents</title>
-    <p permid="svk">
+    <p>
       Compare the following calculations:
-      <md permid="arG">
+      <md>
         <mrow>\sqrt{9}\cdot\sqrt{9}\amp=3\cdot3\amp9^{\sfrac{1}{2}}\cdot9^{\sfrac{1}{2}}\amp=9^{\sfrac{1}{2}+\sfrac{1}{2}}</mrow>
         <mrow>\amp=9\amp\amp=9^{1}</mrow>
         <mrow>\amp\amp\amp=9</mrow>
       </md>
       If we rewrite the above calculations with exponents, we have:
-      <md permid="GyP">
+      <md>
         <mrow>\left(\sqrt{9}\right)^2\amp=9\amp\left(9^{\sfrac{1}{2}}\right)^2\amp=9</mrow>
       </md>
       Since <m>\sqrt{9}</m> and <m>9^{\sfrac{1}{2}}</m> are both positive,
       and squaring either of them generates the same number,
       we conclude that
-      <me permid="pAE">
+      <me>
         \sqrt{9}=9^{\sfrac{1}{2}}
       </me>
       We can verify this result by entering <c>9^(1/2)</c> into a calculator,
       and we get <c>3</c>.
       In general for any non-negative real number <m>a</m>, we have:
-      <me permid="VHN">
+      <me>
         \sqrt{a}=a^{\sfrac{1}{2}}
       </me>
     </p>
-    <p permid="YCt">
+    <p>
       Similarly, when <m>a</m> is non-negative we can prove:
-      <md permid="mFY">
+      <md>
         <mrow>\sqrt[3]{a}\amp=a^{\sfrac{1}{3}}\amp\sqrt[4]{a}\amp=a^{\sfrac{1}{4}}\amp\sqrt[5]{a}\amp=a^{\sfrac{1}{5}}\amp\cdots</mrow>
       </md>
       Let's summarize this information with a new exponent rule.
     </p>
-    <fact xml:id="fact-rational-exponent-rule-i" permid="rSu">
+    <fact xml:id="fact-rational-exponent-rule-i">
       <title>Radicals and Rational Exponents Rule</title>
-      <p permid="HEi">
+      <p>
         If <m>n</m> is any natural number,
         and <m>a</m> is any non-negative real number or function with non-negative outputs, then
-        <me permid="BOW">
+        <me>
           a^{\sfrac{1}{n}}=\sqrt[n]{a}
         </me>.
         Additionally, if <m>n</m> is an
@@ -73,9 +73,9 @@
         we still have <m>a^{\sfrac{1}{n}}=\sqrt[n]{a}</m>.
       </p>
     </fact>
-    <warning permid="ZOQ">
+    <warning>
       <title>Exponents on Negative Bases</title>
-      <p permid="lWe">
+      <p>
         Some computers and calculators follow different conventions when there is an exponent on a negative base.
         To see an example of this, visit
         <url href="http://www.wolframalpha.com/">
@@ -85,26 +85,26 @@
         and you will get different results. <c>cuberoot(-8)</c> will come out as <m>-2</m>,
         but <c>(-8)^(1/3)</c> will come out as a certain non-real complex number.
         Most likely, the calculator you are using <em>does</em>
-        behave as in <xref ref="fact-rational-exponent-rule-i">Fact</xref>,
+        behave as in <xref ref="fact-rational-exponent-rule-i"/>,
         but you should confirm this.
       </p>
     </warning>
-    <p permid="EJC">
+    <p>
       With this relationship,
       we can re-write radical expressions as expressions with rational exponents.
     </p>
-    <example permid="Hbs">
-      <p permid="Sdn">
+    <example>
+      <p>
         Evaluate <m>\sqrt[4]{9}</m> with a calculator.
         Round your answer to two decimal places.
       </p>
-      <p permid="ykw">
+      <p>
         Since <m>\sqrt[4]{9}=9^{\sfrac{1}{4}}</m>,
         we press the following buttons on a calculator to get the value: <c>9^(1/4)</c>.
         So, we see that <m>\sqrt[4]{9}\approx1.73</m>.
       </p>
     </example>
-    <p permid="kQL">
+    <p>
       For many examples that follow,
       we will not need a calculator.
       We will, however,
@@ -207,9 +207,9 @@
 </tabular>
 </table>
 <p>Likewise, the table can be reversed to show radicals.</p> -->
-    <table xml:id="table-small-roots" permid="Kdp">
+    <table xml:id="table-small-roots">
       <title>Small Roots of Appropriate Natural Numbers</title>
-      <tabular halign="center" permid="qky">
+      <tabular halign="center">
         <row bottom="medium">
           <cell>Square Roots</cell>
           <cell>Cube Roots</cell>
@@ -304,84 +304,84 @@
       </tabular>
     </table>
 <!-- todo: include a discussion on taking odd roots of negative numbers again? -->
-    <example permid="niB">
-      <p permid="erF">
+    <example>
+      <p>
         Convert the radical expression
         <m>\sqrt[3]{5}</m> into an expression with a rational exponent and simplify it if possible.
       </p>
-      <p permid="KyO">
+      <p>
         <m>\sqrt[3]{5}=5^{\sfrac{1}{3}}</m>.
         No simplification is possible since the cube root of <m>5</m> is not a perfect cube radicand appearing in <xref ref="table-small-roots" />.
       </p>
     </example>
-    <example permid="TpK">
+    <example>
       <statement>
-        <p permid="qFX">
-          Write the expressions in radical form using <xref ref="fact-rational-exponent-rule-i">Fact</xref> and simplify the results.
-          <ol label="a." cols="4" permid="KFS">
-            <li permid="vwU">
+        <p>
+          Write the expressions in radical form using <xref ref="fact-rational-exponent-rule-i"/> and simplify the results.
+          <ol label="a." cols="4">
+            <li>
               <m>4^{\sfrac{1}{2}}</m>
             </li>
-            <li permid="bEd">
+            <li>
               <m>(-9)^{\sfrac{1}{2}}</m>
             </li>
-            <li permid="HLm">
+            <li>
               <m>-16^{\sfrac{1}{4}}</m>
             </li>
-            <li permid="nSv">
+            <li>
               <m>64^{-\sfrac{1}{3}}</m>
             </li>
-            <li permid="TZE">
+            <li>
               <m>(-27)^{\sfrac{1}{3}}</m>
             </li>
-            <li permid="AgN">
+            <li>
               <m>3^{\sfrac{1}{2}}\cdot3^{\sfrac{1}{2}}</m>
             </li>
-            <li permid="gnW">
+            <li>
               <m>12^0</m>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="oXO">
-        <p permid="Bfc">
-          <ol label="a." cols="2" permid="FVZ">
-            <li permid="Mvf">
-              <p permid="kCq">
+      <solution>
+        <p>
+          <ol label="a." cols="2">
+            <li>
+              <p>
                 <m>\begin{aligned}[t] 4^{\sfrac{1}{2}}\amp=\sqrt{4}\\ \amp=2 \end{aligned}</m>
               </p>
             </li>
-            <li permid="sCo">
-              <p permid="QJz">
+            <li>
+              <p>
                 <m>\begin{aligned}[t] (-9)^{\sfrac{1}{2}}\amp=\sqrt{-9} \end{aligned}</m>This value is non-real.
               </p>
             </li>
-            <li permid="YJx">
-              <p permid="wQI">
+            <li>
+              <p>
                 Without parentheses around <m>-16</m>,
                 the negative sign in this problem should be left out of the radical.
               </p>
-              <p permid="cXR">
+              <p>
                 <m>\begin{aligned}[t] -16^{\sfrac{1}{4}}\amp=-\sqrt[4]{16}\\ \amp=-2 \end{aligned}</m>
               </p>
             </li>
-            <li permid="EQG">
-              <p permid="Jfa">
+            <li>
+              <p>
                 <m>\begin{aligned}[t] 64^{-\sfrac{1}{3}}\amp=\frac{1}{64^{\sfrac{1}{3}}}\\ \amp=\frac{1}{\sqrt[3]{64}}\\ \amp=\frac{1}{4} \end{aligned}</m>
               </p>
             </li>
-            <li permid="kXP">
-              <p permid="pmj">
+            <li>
+              <p>
                 <m>\begin{aligned}[t] (-27)^{\sfrac{1}{3}}\amp=\sqrt[3]{-27}\\ \amp=-3 \end{aligned}</m>
               </p>
             </li>
-            <li permid="ReY">
-              <p permid="Vts">
+            <li>
+              <p>
                 <m>\begin{aligned}[t] 3^{\sfrac{1}{2}}\cdot3^{\sfrac{1}{2}}\amp=\sqrt{3}\cdot\sqrt{3}\\ \amp=\sqrt{3\cdot 3}\\ \amp=\sqrt{9}\\ \amp=3 \end{aligned}</m>
               </p>
             </li>
-            <li permid="xmh">
-              <p permid="BAB">
+            <li>
+              <p>
                 <m>\begin{aligned}[t] 12^0\amp=1 \end{aligned}</m>
               </p>
             </li>
@@ -389,83 +389,83 @@
         </p>
       </solution>
     </example>
-    <p permid="QXU">
-      <xref ref="fact-rational-exponent-rule-i">Fact</xref>
+    <p>
+      <xref ref="fact-rational-exponent-rule-i"/>
       applies to variables in expressions just as much as it does to numbers.
     </p>
-    <remark permid="EgM">
-      <p permid="TSA">
+    <remark>
+      <p>
         In general, it is easier to do algebra with rational exponents on variables than with radicals of variables.
-        You should use <xref ref="fact-rational-exponent-rule-i">Fact</xref>
+        You should use <xref ref="fact-rational-exponent-rule-i"/>
         to convert from rational exponents to radicals on variables
         <em>only as a last step</em> in simplifying.
       </p>
     </remark>
-    <example permid="zwT">
+    <example>
       <statement>
-        <p permid="WNg">
+        <p>
           Write the expressions as simplified as they can be using radicals.
-          <ol label="a." cols="4" permid="qNb">
-            <li permid="dtq">
-              <p permid="hHK">
+          <ol label="a." cols="4">
+            <li>
+              <p>
                 <m>2x^{-\sfrac{1}{2}}</m>
               </p>
             </li>
-            <li permid="JAz">
-              <p permid="NOT">
+            <li>
+              <p>
                 <m>(5x)^{\sfrac{1}{3}}</m>
               </p>
             </li>
-            <li permid="pHI">
-              <p permid="tWc">
+            <li>
+              <p>
                 <m>\left(-27x^{12}\right)^{\sfrac{1}{3}}</m>
               </p>
             </li>
-            <li permid="VOR">
-              <p permid="adl">
+            <li>
+              <p>
                 <m>\left(\frac{16x}{81y^8}\right)^{\sfrac{1}{4}}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="VeX">
-        <p permid="hml">
-          <ol label="a." permid="mdi">
-            <li permid="BWa">
-              <p permid="Gku">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 Note that in this example the exponent is only applied to the <m>x</m>.
                 Making this type of observation should be our first step for each of these exercises.
-                <md permid="SNh">
+                <md>
                   <mrow>2x^{-\sfrac{1}{2}}\amp=\frac{2}{x^{\sfrac{1}{2}}} \amp\amp\text{by the }<xref ref="item-exponent-rules-negative-exponent-definition" text="title"/></mrow>
                   <mrow>\amp=\frac{2}{\sqrt{x}} \amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-i" text="title"/></mrow>
                 </md>
               </p>
             </li>
-            <li permid="idj">
-              <p permid="mrD">
+            <li>
+              <p>
                 In this exercise,
                 the exponent applies to both the <m>5</m> and <m>x</m>.
-                <md permid="yUq">
+                <md>
                   <mrow>(5x)^{\sfrac{1}{3}}\amp=\sqrt[3]{5x} \amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-i" text="title"/></mrow>
                 </md>
                 We could choose to simplify our answer in a different way.
                 Note that neither one is technically preferred over the other except that perhaps the first way is simpler.
-                <md permid="fbz">
+                <md>
                   <mrow>(5x)^{\sfrac{1}{3}}\amp=5^{\sfrac{1}{3}}x^{\sfrac{1}{3}} \amp\amp\text{by the } <xref ref="item-exponent-rules-product-to-a-power" text="title"/></mrow>
                   <mrow>\amp=\sqrt[3]{5}\sqrt[3]{x} \amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-i" text="title"/></mrow>
                 </md>
               </p>
             </li>
-            <li permid="Oks">
-              <p permid="SyM">
+            <li>
+              <p>
                 As in the previous exercise,
                 we have a choice as to how to simplify this expression.
                 Here we should note that we <em>do</em>
                 know what the cube root of <m>-27</m> is,
                 so we will take the path to splitting up the expression,
                 using the <xref ref="item-exponent-rules-product-to-a-power" text="title"/>, before applying the root.
-                <md permid="LiI">
+                <md>
                   <mrow>\left(-27x^{12}\right)^{\sfrac{1}{3}}\amp=(-27)^{\sfrac{1}{3}}\cdot \left(x^{12}\right)^{\sfrac{1}{3}}\amp\amp\text{by the } <xref ref="item-exponent-rules-product-to-a-power" text="title"/></mrow>
                   <mrow>\amp=(-27)^{\sfrac{1}{3}}\cdot \left(x^{12\cdot\sfrac{1}{3}}\right) \amp\amp\text{by the } <xref ref="item-exponent-rules-power-to-a-power" text="title"/></mrow>
                   <mrow>\amp=\sqrt[3]{-27}\cdot x^4 \amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-i" text="title"/></mrow>
@@ -473,12 +473,12 @@
                 </md>
               </p>
             </li>
-            <li permid="urB">
-              <p permid="yFV">
+            <li>
+              <p>
                 We'll use the exponent rule for a fraction raised to a power.
               </p>
-              <p permid="eNe">
-                <md permid="rpR">
+              <p>
+                <md>
                   <mrow>\left(\frac{16x}{81y^8}\right)^{\sfrac{1}{4}}\amp=\frac{\left(16x\right)^{\sfrac{1}{4}}}{\left(81y^8\right)^{\sfrac{1}{4}}} \amp\amp\text{by the } <xref ref="item-exponent-rules-quotient-to-a-power" text="title"/></mrow>
                   <mrow>\amp=\frac{16^{\sfrac{1}{4}}\cdot x^{\sfrac{1}{4}}}{81^{\sfrac{1}{4}} \cdot \left(y^8\right)^{\sfrac{1}{4}}} \amp\amp\text{by the } <xref ref="item-exponent-rules-product-to-a-power" text="title"/></mrow>
                   <mrow>\amp=\frac{16^{\sfrac{1}{4}}\cdot x^{\sfrac{1}{4}}}{81^{\sfrac{1}{4}}\cdot y^2}</mrow>
@@ -491,18 +491,18 @@
         </p>
       </solution>
     </example>
-    <p permid="xfd">
-      <xref ref="fact-rational-exponent-rule-i">Fact</xref>
+    <p>
+      <xref ref="fact-rational-exponent-rule-i"/>
       describes what can be done when there is a fractional exponent and the numerator is a <m>1</m>.
       The numerator doesn't have to be a <m>1</m> though and we need guidance for that situation.
     </p>
-    <fact xml:id="fact-rational-exponent-rule-ii" permid="XZD">
+    <fact xml:id="fact-rational-exponent-rule-ii">
       <title>Radicals and Rational Exponents Rule</title>
-      <p permid="nLr">
+      <p>
         If <m>m</m> and <m>n</m> are natural numbers such that
         <m>\frac{m}{n}</m> is a reduced fraction,
         and <m>a</m> is any non-negative real number or function that takes non-negative values, then
-        <me permid="hWf">
+        <me>
           a^{\sfrac{m}{n}}=\sqrt[n]{a^m}=\left(\sqrt[n]{a}\right)^m
         </me>.
         Additionally, if <m>n</m> is an
@@ -511,45 +511,45 @@
         we still have <m>a^{\sfrac{m}{n}}=\sqrt[n]{a^m}=\left(\sqrt[n]{a}\right)^m</m>.
       </p>
     </fact>
-    <remark xml:id="remark-two-representations-of-rational-exponents" permid="knV">
-      <p permid="zZJ">
-        By <xref ref="fact-rational-exponent-rule-ii">Fact</xref>,
+    <remark xml:id="remark-two-representations-of-rational-exponents">
+      <p>
+        By <xref ref="fact-rational-exponent-rule-ii"/>,
         there are two ways to express <m>a^{\sfrac{m}{n}}</m> as a radical, both
-        <md permid="Xxa">
+        <md>
           <mrow>a^{\sfrac{m}{n}}\amp=\sqrt[n]{a^m}\amp\amp\text{and}\amp a^{\sfrac{m}{n}}\amp=\left(\sqrt[n]{a}\right)^m</mrow>
         </md>
         There are different times to use each formula.
         In general, use <m>a^{\sfrac{m}{n}}=\sqrt[n]{a^m}</m> for variables and <m>a^{\sfrac{m}{n}}=\left(\sqrt[n]{a}\right)^m</m> for numbers.
       </p>
     </remark>
-    <example permid="fEc">
+    <example>
       <statement>
-        <p permid="CUp">
-          <ol label="a." permid="WUk">
-            <li permid="ayK">
-              <p permid="KUn">
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 Consider the expression <m>27^{\sfrac{4}{3}}</m>.
-                Use both versions of <xref ref="fact-rational-exponent-rule-ii">Fact</xref>
+                Use both versions of <xref ref="fact-rational-exponent-rule-ii"/>
                 to explain part of <xref ref="remark-two-representations-of-rational-exponents" />.
               </p>
             </li>
-            <li permid="GFT">
-              <p permid="rbw">
+            <li>
+              <p>
                 Consider the expression <m>x^{\sfrac{4}{3}}</m>.
-                Use both versions of <xref ref="fact-rational-exponent-rule-ii">Fact</xref>
+                Use both versions of <xref ref="fact-rational-exponent-rule-ii"/>
                 to explain the other part of <xref ref="remark-two-representations-of-rational-exponents" />.
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="Bmg">
-        <p permid="Ntu">
-          <ol label="a." permid="Skr">
-            <li permid="mNc">
-              <p permid="XiF">
-                The expression <m>27^{\sfrac{4}{3}}</m> can be evaluated in the following two ways by <xref ref="fact-rational-exponent-rule-ii">Fact</xref>.
-                <md permid="DEj">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
+                The expression <m>27^{\sfrac{4}{3}}</m> can be evaluated in the following two ways by <xref ref="fact-rational-exponent-rule-ii"/>.
+                <md>
                   <mrow>27^{\sfrac{4}{3}}\amp=\sqrt[3]{27^4}\amp\amp\text{by the first part of the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp=\sqrt[3]{531441}</mrow>
                   <mrow>\amp=81</mrow>
@@ -562,10 +562,10 @@
                 This is why we made the general recommendation in <xref ref="remark-two-representations-of-rational-exponents" />.
               </p>
             </li>
-            <li permid="SUl">
-              <p permid="DpO">
-                The expression <m>x^{\sfrac{4}{3}}</m> can be evaluated in the following two ways by <xref ref="fact-rational-exponent-rule-ii">Fact</xref>.
-                <md permid="jLs">
+            <li>
+              <p>
+                The expression <m>x^{\sfrac{4}{3}}</m> can be evaluated in the following two ways by <xref ref="fact-rational-exponent-rule-ii"/>.
+                <md>
                   <mrow>x^{\sfrac{4}{3}}\amp=\sqrt[3]{x^4}\amp\amp\text{by the first part of } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp\amp\text{or}</mrow>
                   <mrow>x^{\sfrac{4}{3}}\amp=\left(\sqrt[3]{x}\right)^4\amp\amp\text{by the second part of the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
@@ -579,49 +579,49 @@
         </p>
       </solution>
     </example>
-    <example permid="LLl">
+    <example>
       <statement>
-        <p permid="jby">
-          Simplify the expressions using <xref ref="fact-rational-exponent-rule-ii">Fact</xref>.
-          <ol label="a." cols="4" permid="Dbt">
-            <li permid="zbu">
-              <p permid="jwX">
+        <p>
+          Simplify the expressions using <xref ref="fact-rational-exponent-rule-ii"/>.
+          <ol label="a." cols="4">
+            <li>
+              <p>
                 <m>8^{\sfrac{2}{3}}</m>
               </p>
             </li>
-            <li permid="fiD">
-              <p permid="PEg">
+            <li>
+              <p>
                 <m>16^{-\sfrac{3}{2}}</m>
               </p>
             </li>
-            <li permid="LpM">
-              <p permid="vLp">
+            <li>
+              <p>
                 <m>-16^{\sfrac{3}{4}}</m>
               </p>
             </li>
-            <li permid="rwV">
-              <p permid="bSy">
+            <li>
+              <p>
                 <m>\left(-\frac{27}{64}\right)^{\sfrac{2}{3}}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="htp">
-        <p permid="tAD">
-          <ol label="a." permid="yrA">
-            <li permid="XEe">
-              <p permid="HZH">
-                <md permid="PSB">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
+                <md>
                   <mrow>8^{\sfrac{2}{3}}\amp=\left(\sqrt[3]{8}\right)^2\amp\amp\text{by the second part of the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp=2^2</mrow>
                   <mrow>\amp=4</mrow>
                 </md>
               </p>
             </li>
-            <li permid="DLn">
-              <p permid="ogQ">
-                <md permid="vZK">
+            <li>
+              <p>
+                <md>
                   <mrow>16^{-\sfrac{3}{2}}\amp=\frac{1}{16^{\sfrac{3}{2}}}\amp\amp\text{by the } <xref ref="item-exponent-rules-negative-exponent-definition" text="title"/></mrow>
                   <mrow>\amp=\frac{1}{\left(\sqrt{16}\right)^3}\amp\amp\text{by the second part of the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp=\frac{1}{4^3}</mrow>
@@ -629,24 +629,24 @@
                 </md>
               </p>
             </li>
-            <li permid="jSw">
-              <p permid="UnZ">
-                <md permid="cgT">
+            <li>
+              <p>
+                <md>
                   <mrow>-16^{\sfrac{3}{4}}\amp=-\left(\sqrt[4]{16}\right)^3 \amp\amp\text{by the second part of the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp=-2^3</mrow>
                   <mrow>\amp=-8</mrow>
                 </md>
               </p>
             </li>
-            <li permid="PZF">
-              <p permid="Avi">
+            <li>
+              <p>
                 In this problem,
                 the negative can be associated with either the numerator or the denominator,
                 but not both.
                 We choose the numerator.
               </p>
-              <p permid="gCr">
-                <md permid="Ioc">
+              <p>
+                <md>
                   <mrow>\left(-\frac{27}{64}\right)^{\sfrac{2}{3}}\amp=\left(\sqrt[3]{-\frac{27}{64}}\right)^2  \amp\amp\text{by the second part of the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp=\left(\frac{\sqrt[3]{-27}}{\sqrt[3]{64}}\right)^2</mrow>
                   <mrow>\amp=\left(\frac{-3}{4}\right)^2</mrow>
@@ -679,87 +679,87 @@
 </sidebyside> -->
 <!-- todo: make a geogebra interactive with y=x^(a/3) where a is even and then a separate graph where a is odd. Slider/play button. -->
   </subsection>
-  <subsection permid="DSr">
+  <subsection>
     <title>More Expressions with Rational Exponents</title>
-    <p permid="dmm">
+    <p>
       To recap, here is a
       <q>complete</q>
       list of exponent rules.
     </p>
-    <list xml:id="list-exponent-rules-complete" permid="cJw">
+    <list xml:id="list-exponent-rules-complete">
       <title>Complete List of Exponent Rules</title>
-      <dl permid="PpL">
-        <li permid="OUm">
+      <dl>
+        <li>
           <title>Product Rule</title>
-          <p permid="MJA">
+          <p>
             <m>a^{n} \cdot a^{m} = a^{n+m}</m>
           </p>
         </li>
-        <li permid="vbv">
+        <li>
           <title>Power to a Power Rule</title>
-          <p permid="sQJ">
+          <p>
             <m>(a^{n})^{m} = a^{n\cdot m}</m>
           </p>
         </li>
-        <li permid="biE">
+        <li>
           <title>Product to a Power Rule</title>
-          <p permid="YXS">
+          <p>
             <m>(ab)^{n} = a^{n} \cdot b^{n}</m>
           </p>
         </li>
-        <li permid="HpN">
+        <li>
           <title>Quotient Rule</title>
-          <p permid="Ffb">
+          <p>
             <m>\dfrac{a^{n}}{a^{m}} = a^{n-m}</m>,
             as long as <m>a \neq 0</m>
           </p>
         </li>
-        <li permid="nwW">
+        <li>
           <title>Quotient to a Power Rule</title>
-          <p permid="lmk">
+          <p>
             <m>\left( \dfrac{a}{b} \right)^{n} = \dfrac{a^{n}}{b^{n}}</m>,
             as long as <m>b \neq 0</m>
           </p>
         </li>
-        <li permid="TEf">
+        <li>
           <title>Zero Exponent Rule</title>
-          <p permid="Rtt">
+          <p>
             <m>a^{0} = 1</m> for <m>a\neq0</m>
           </p>
         </li>
-        <li permid="zLo">
+        <li>
           <title>Negative Exponent Rule</title>
-          <p permid="xAC">
+          <p>
             <m>a^{-n} = \frac{1}{a^n}</m>
           </p>
         </li>
-        <li permid="fSx">
+        <li>
           <title>Negative Exponent Reciprocal Rule</title>
-          <p permid="dHL">
+          <p>
             <m>\frac{1}{a^{-n}} = a^n</m>
           </p>
         </li>
-        <li permid="LZG">
+        <li>
           <title>Negative Exponent on Fraction Rule</title>
-          <p permid="JOU">
+          <p>
             <m>\left(\frac{x}{y}\right)^{-n}=\left(\frac{y}{x}\right)^{n}</m>
           </p>
         </li>
-        <li permid="sgP">
+        <li>
           <title>Radical and Rational Exponent Rule</title>
-          <p permid="pWd">
+          <p>
             <m>x^{\sfrac{1}{n}}=\sqrt[n]{x}</m>
           </p>
         </li>
-        <li permid="YnY">
+        <li>
           <title>Radical and Rational Exponent Rule</title>
-          <p permid="Wdm">
+          <p>
             <m>x^{\sfrac{m}{n}}=\left(\sqrt[n]{x}\right)^m</m>, usually for numbers
           </p>
         </li>
-        <li permid="Evh">
+        <li>
           <title>Radical and Rational Exponent Rule</title>
-          <p permid="Ckv">
+          <p>
             <m>x^{\sfrac{m}{n}}=\sqrt[n]{x^m}</m>, usually for variables
           </p>
         </li>
@@ -774,87 +774,87 @@
 </solution>
 </example> -->
 <!--  <p>Learners of these simplifications often find it challenging, so we now include a plethora of examples of varying difficulty.</p> -->
-    <example permid="Qve">
+    <example>
       <statement>
-        <p permid="PiH">
-          Use exponent properties in <xref ref="list-exponent-rules-complete">List</xref> to simplify the expressions,
+        <p>
+          Use exponent properties in <xref ref="list-exponent-rules-complete"/> to simplify the expressions,
           and write all final versions using radicals.
-          <ol label="a." cols="4" permid="jiC">
-            <li permid="wgO">
-              <p permid="irE">
+          <ol label="a." cols="4">
+            <li>
+              <p>
                 <m>2w^{\sfrac{7}{8}}</m>
               </p>
             </li>
-            <li permid="cnX">
-              <p permid="OyN">
+            <li>
+              <p>
                 <m>\frac{1}{2}y^{-\sfrac{1}{2}}</m>
               </p>
             </li>
-            <li permid="Ivg">
-              <p permid="uFW">
+            <li>
+              <p>
                 <m>\left(27b\right)^{\sfrac{2}{3}}</m>
               </p>
             </li>
-            <li permid="oCp">
-              <p permid="aNf">
+            <li>
+              <p>
                 <m>\left(-8p^6\right)^{\sfrac{5}{3}}</m>
               </p>
             </li>
-            <li permid="UJy">
-              <p permid="GUo">
+            <li>
+              <p>
                 <m>\sqrt{x^3}\cdot\sqrt[4]{x}</m>
               </p>
             </li>
-            <li permid="AQH">
-              <p permid="nbx">
+            <li>
+              <p>
                 <m>h^{\sfrac{1}{3}}+h^{\sfrac{1}{3}}+h^{\sfrac{1}{3}}</m>
               </p>
             </li>
-            <li permid="gXQ">
-              <p permid="TiG">
+            <li>
+              <p>
                 <m>\frac{\sqrt{z}}{\sqrt[3]{z}}</m>
               </p>
             </li>
-            <li permid="NeZ">
-              <p permid="zpP">
+            <li>
+              <p>
                 <m>\sqrt{\sqrt[4]{q}}</m>
               </p>
             </li>
-            <li permid="tmi">
-              <p permid="fwY">
+            <li>
+              <p>
                 <m>3\left(c^{\sfrac{1}{2}}+d^{\sfrac{1}{2}}\right)^2</m>
               </p>
             </li>
-            <li permid="Ztr">
-              <p permid="LEh">
+            <li>
+              <p>
                 <m>3\left(4k^{\sfrac{2}{3}}\right)^{-\sfrac{1}{2}}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="NAy">
-        <p permid="ZHM">
-          <ol label="a." permid="eyJ">
-            <li permid="FAA">
-              <p permid="rLq">
-                <md permid="ovl">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
+                <md>
                   <mrow>2w^{\sfrac{7}{8}}\amp=2\sqrt[8]{w^7}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                 </md>
               </p>
             </li>
-            <li permid="lHJ">
-              <p permid="XSz">
-                <md permid="UCu">
+            <li>
+              <p>
+                <md>
                   <mrow>\frac{1}{2}y^{-\sfrac{1}{2}}\amp=\frac{1}{2}\frac{1}{y^{\sfrac{1}{2}}}\amp\amp\text{by the } <xref ref="item-exponent-rules-negative-exponent-definition" text="title"/></mrow>
                   <mrow>\amp=\frac{1}{2}\frac{1}{\sqrt{y}}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp=\frac{1}{2\sqrt{y}}</mrow>
                 </md>
               </p>
             </li>
-            <li permid="ROS">
-              <p permid="DZI">
-                <md permid="AJD">
+            <li>
+              <p>
+                <md>
                   <mrow>\left(27b\right)^{\sfrac{2}{3}}\amp=\left(27\right)^{\sfrac{2}{3}}\cdot\left(b\right)^{\sfrac{2}{3}}\amp\amp\text{by the } <xref ref="item-exponent-rules-product-to-a-power" text="title"/></mrow>
                   <mrow>\amp=\left(\sqrt[3]{27}\right)^2\cdot\sqrt[3]{b^2}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp=3^2\cdot\sqrt[3]{b^2}</mrow>
@@ -862,9 +862,9 @@
                 </md>
               </p>
             </li>
-            <li permid="xWb">
-              <p permid="kgR">
-                <md permid="gQM">
+            <li>
+              <p>
+                <md>
                   <mrow>\left(-8p^6\right)^{\sfrac{5}{3}}\amp=\left(-8\right)^{\sfrac{5}{3}}\cdot\left(p^6\right)^{\sfrac{5}{3}}\amp\amp\text{by the } <xref ref="item-exponent-rules-product-to-a-power" text="title"/></mrow>
                   <mrow>\amp=\left(-8\right)^{\sfrac{5}{3}}\cdot p^{6\cdot\sfrac{5}{3}}\amp\amp\text{by the } <xref ref="item-exponent-rules-power-to-a-power" text="title"/></mrow>
                   <mrow>\amp=\left(\sqrt[3]{-8}\right)^5\cdot p^{10}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
@@ -873,9 +873,9 @@
                 </md>
               </p>
             </li>
-            <li permid="edk">
-              <p permid="Qoa">
-                <md permid="MXV">
+            <li>
+              <p>
+                <md>
                   <mrow>\sqrt{x^3}\cdot\sqrt[4]{x}\amp=x^{\sfrac{3}{2}}\cdot x^{\sfrac{1}{4}}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-ii" text="title"/></mrow>
                   <mrow>\amp=x^{\sfrac{3}{2}+\sfrac{1}{4}}\amp\amp\text{by the } <xref ref="item-exponent-rules-product" text="title"/></mrow>
                   <mrow>\amp=x^{\sfrac{6}{4}+\sfrac{1}{4}}</mrow>
@@ -884,17 +884,17 @@
                 </md>
               </p>
             </li>
-            <li permid="Kkt">
-              <p permid="wvj">
-                <md permid="tfe">
+            <li>
+              <p>
+                <md>
                   <mrow>h^{\sfrac{1}{3}}+h^{\sfrac{1}{3}}+h^{\sfrac{1}{3}}\amp=3h^{\sfrac{1}{3}}</mrow>
                   <mrow>\amp=3\sqrt[3]{h}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-i" text="title"/></mrow>
                 </md>
               </p>
             </li>
-            <li permid="qrC">
-              <p permid="cCs">
-                <md permid="Zmn">
+            <li>
+              <p>
+                <md>
                   <mrow>\frac{\sqrt{z}}{\sqrt[3]{z}}\amp=\frac{z^{\sfrac{1}{2}}}{z^{\sfrac{1}{3}}}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-i" text="title"/></mrow>
                   <mrow>\amp=z^{\sfrac{1}{2}-\sfrac{1}{3}}\amp\amp\text{by the } <xref ref="item-exponent-rules-quotient" text="title"/></mrow>
                   <mrow>\amp=z^{\sfrac{3}{6}-\sfrac{2}{6}}</mrow>
@@ -903,9 +903,9 @@
                 </md>
               </p>
             </li>
-            <li permid="WyL">
-              <p permid="IJB">
-                <md permid="Ftw">
+            <li>
+              <p>
+                <md>
                   <mrow>\sqrt{\sqrt[4]{q}}\amp=\sqrt{q^{\sfrac{1}{4}}}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-i" text="title"/></mrow>
                   <mrow>\amp=\left(q^{\sfrac{1}{4}}\right)^{\sfrac{1}{2}}\amp\amp\text{by the } <xref ref="fact-rational-exponent-rule-i" text="title"/></mrow>
                   <mrow>\amp=q^{\sfrac{1}{4}\cdot\sfrac{1}{2}}\amp\amp\text{by the } <xref ref="item-exponent-rules-power-to-a-power" text="title"/></mrow>
@@ -914,9 +914,9 @@
                 </md>
               </p>
             </li>
-            <li permid="CFU">
-              <p permid="oQK">
-                <md alignment="alignat" permid="lAF">
+            <li>
+              <p>
+                <md alignment="alignat">
                   <mrow>3\left(c^{\sfrac{1}{2}}+d^{\sfrac{1}{2}}\right)^2\amp=3\left(c^{\sfrac{1}{2}}+d^{\sfrac{1}{2}}\right)\left(c^{\sfrac{1}{2}}+d^{\sfrac{1}{2}}\right)</mrow>
                   <mrow>\amp=3\left(\left(c^{\sfrac{1}{2}}\right)^2+2c^{\sfrac{1}{2}}\cdot d^{\sfrac{1}{2}}+\left(d^{\sfrac{1}{2}}\right)^2\right)</mrow>
                   <mrow>\amp=3\left(c^{\sfrac{1}{2}\cdot 2}+2c^{\sfrac{1}{2}}\cdot d^{\sfrac{1}{2}}+d^{\sfrac{1}{2}\cdot 2}\right)</mrow>
@@ -927,9 +927,9 @@
                 </md>
               </p>
             </li>
-            <li permid="iNd">
-              <p permid="UXT">
-                <md permid="RHO">
+            <li>
+              <p>
+                <md>
                   <mrow>3\left(4k^{\sfrac{2}{3}}\right)^{-\sfrac{1}{2}}\amp=\frac{3}{\left(4k^{\sfrac{2}{3}}\right)^{\sfrac{1}{2}}}\amp\amp\text{by the } <xref ref="item-exponent-rules-negative-exponent-definition" text="title"/></mrow>
                   <mrow>\amp=\frac{3}{4^{\sfrac{1}{2}}\left(k^{\sfrac{2}{3}}\right)^{\sfrac{1}{2}}}\amp\amp\text{by the } <xref ref="item-exponent-rules-product-to-a-power" text="title"/></mrow>
                   <mrow>\amp=\frac{3}{4^{\sfrac{1}{2}}k^{\sfrac{2}{3}\cdot\sfrac{1}{2}}}\amp\amp\text{by the } <xref ref="item-exponent-rules-power-to-a-power" text="title"/></mrow>
@@ -943,7 +943,7 @@
         </p>
       </solution>
     </example>
-    <p permid="Jtv">
+    <p>
       We will end with a short application on rational exponents.
       <url href="https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion">Kepler's Laws of Orbital Motion</url><fn>
       <url href="https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion">en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion</url>
@@ -951,10 +951,10 @@
       In particular, his third law has a rational exponent,
       which we will now explore.
     </p>
-    <example permid="wCn">
+    <example>
       <title>Kepler and the Satellite</title>
       <statement>
-        <p permid="vpQ">
+        <p>
           Kepler's third law of motion says that for objects with a roughly circular orbit that the time
           (in hours)
           that it takes to make one full revolution around the planet,
@@ -963,7 +963,7 @@
           (in kilometers)
           from the center of the planet to the satellite, <m>r</m>.
           For the Earth, it looks like this:
-          <me permid="Odo">
+          <me>
             T=\frac{2\pi}{\sqrt{G\cdot M_E}}r^{\sfrac{3}{2}}
           </me>
           In this case, both <m>G</m> and <m>M_E</m> are constants.
@@ -980,11 +980,11 @@
             <unit base="gram" prefix="kilo"/>
           </quantity>.
           Inputting these values into this formula yields a simplified version that looks like this:
-          <me permid="ukx">
+          <me>
             T\approx2.76\times 10^{-6}r^{\sfrac{3}{2}}
           </me>
         </p>
-        <p permid="bwZ">
+        <p>
           Most satellites orbit in what is called
           <url href="https://en.wikipedia.org/wiki/Low_Earth_orbit">low Earth orbit</url><fn>
           <url href="https://en.wikipedia.org/wiki/Low_Earth_orbit">en.wikipedia.org/wiki/Low_Earth_orbit</url>
@@ -1002,18 +1002,18 @@
           Find the period of the international space station.
         </p>
       </statement>
-      <solution permid="tHH">
-        <p permid="FOV">
+      <solution>
+        <p>
           The formula has already been identified,
           but the input takes just a little thought.
           The formula uses <m>r</m> as the distance from the center of the Earth to the satellite,
           so to find <m>r</m> we need to combine the radius of the Earth and the distance to the satellite above the surface of the Earth. <!-- todo: perhaps include a graphic? or at least a drawing of the scenario? -->
-          <md permid="xOX">
+          <md>
             <mrow>r\amp=340+6380</mrow>
             <mrow>\amp=6720</mrow>
           </md>
           Now we can input this value into the formula and evaluate.
-          <md permid="dWg">
+          <md>
             <mrow>T\amp\approx2.76\cdot 10^{-6}r^{\sfrac{3}{2}}</mrow>
             <mrow>\amp\approx2.76\cdot 10^{-6}(\substitute{6720})^{\sfrac{3}{2}}</mrow>
             <mrow>\amp\approx2.76\cdot 10^{-6}\left(\sqrt{6720}\right)^3</mrow>
@@ -1045,134 +1045,134 @@
 </solution>
 </example> -->
   </subsection>
-  <exercises permid="jZA">
-    <exercisegroup cols="2" permid="QgJ">
+  <exercises>
+    <exercisegroup cols="2">
       <title>Review and Warmup</title>
-      <exercise permid="UQC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg"/>
       </exercise>
-      <exercise permid="AXL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/IntegerAndSquareRoot/identifySquareNumbers20.pg"/>
       </exercise>
-      <exercise permid="heU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg"/>
       </exercise>
-      <exercise permid="Nmd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/IntegerAndSquareRoot/identifySquareNumbers30.pg"/>
       </exercise>
-      <exercise permid="ttm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg"/>
       </exercise>
-      <exercise permid="ZAv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/IntegerAndSquareRoot/identifySquareNumbers40.pg"/>
       </exercise>
-      <exercise permid="FHE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg"/>
       </exercise>
-      <exercise permid="lON">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentsMultiplication0.pg"/>
       </exercise>
-      <exercise permid="RVW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentsMultiplication20.pg"/>
       </exercise>
-      <exercise permid="ydf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentsMultiplication20.pg"/>
       </exercise>
-      <exercise permid="eko">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentDivision55.pg"/>
       </exercise>
-      <exercise permid="Krx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentDivision55.pg"/>
       </exercise>
-      <exercise permid="qyG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentsMultiplication45.pg"/>
       </exercise>
-      <exercise permid="WFP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentsMultiplication45.pg"/>
       </exercise>
-      <exercise permid="CMY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentDivision70.pg"/>
       </exercise>
-      <exercise permid="iUh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/exponentDivision70.pg"/>
       </exercise>
-      <exercise permid="Pbq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/negExp45.pg"/>
       </exercise>
-      <exercise permid="viz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/negExp45.pg"/>
       </exercise>
-      <exercise permid="bpI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/negExp50.pg"/>
       </exercise>
-      <exercise permid="HwR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Exponents/negExp50.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="wnS">
+    <exercisegroup cols="2">
       <title>Calculations</title>
-      <exercise permid="nEa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent10.pg"/>
       </exercise>
-      <exercise permid="TLj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent10.pg"/>
       </exercise>
-      <exercise permid="zSs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent20.pg"/>
       </exercise>
-      <exercise permid="fZB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent20.pg"/>
       </exercise>
-      <exercise permid="MgK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent25.pg"/>
       </exercise>
-      <exercise permid="snT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent25.pg"/>
       </exercise>
-      <exercise permid="Yvc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent26.pg"/>
       </exercise>
-      <exercise permid="ECl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent26.pg"/>
       </exercise>
-      <exercise permid="kJu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent30.pg"/>
       </exercise>
-      <exercise permid="QQD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent30.pg"/>
       </exercise>
-      <exercise permid="wXM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent40.pg"/>
       </exercise>
-      <exercise permid="deV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateFractionalExponent40.pg"/>
       </exercise>
-      <exercise permid="Jme">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots10.pg"/>
       </exercise>
-      <exercise permid="ptn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots10.pg"/>
       </exercise>
-      <exercise permid="VAw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots20.pg"/>
       </exercise>
-      <exercise permid="BHF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots20.pg"/>
       </exercise>
-      <exercise permid="hOO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots30.pg"/>
       </exercise>
-      <exercise permid="NVX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots30.pg"/>
       </exercise>
-      <exercise permid="udg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots40.pg"/>
       </exercise>
-      <exercise permid="akp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots40.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="cvb">
+    <exercisegroup cols="2">
       <title>Convert Radicals to Fractional Exponents</title>
 <!-- these exercises all have nth powers and nth roots canceling, -->
 <!-- but there is the issue with even n and the introduction of absolute value -->
@@ -1192,28 +1192,28 @@
 <exercise>
 <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents9.pg" />
 </exercise> -->
-      <exercise permid="Gry">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents11.pg"/>
       </exercise>
-      <exercise permid="myH">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents11.pg"/>
       </exercise>
-      <exercise permid="SFQ">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents12.pg"/>
       </exercise>
-      <exercise permid="yMZ">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents12.pg"/>
       </exercise>
-      <exercise permid="eUi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalToRationalExponent10.pg"/>
       </exercise>
-      <exercise permid="Lbr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalToRationalExponent10.pg"/>
       </exercise>
-      <exercise permid="riA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalToRationalExponent20.pg"/>
       </exercise>
-      <exercise permid="XpJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalToRationalExponent20.pg"/>
       </exercise>
 <!-- these exercises all have nth powers and nth roots canceling, -->
@@ -1229,87 +1229,87 @@
 <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalToRationalExponent32.pg" />
 </exercise> -->
     </exercisegroup>
-    <exercisegroup cols="2" permid="ICk">
+    <exercisegroup cols="2">
       <title>Convert Fractional Exponents to Radicals</title>
-      <exercise permid="DwS">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents7.pg"/>
       </exercise>
-      <exercise permid="jEb">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents7.pg"/>
       </exercise>
-      <exercise permid="PLk">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents8.pg"/>
       </exercise>
-      <exercise permid="vSt">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents8.pg"/>
       </exercise>
-      <exercise permid="bZC">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents10.pg"/>
       </exercise>
-      <exercise permid="IgL">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents10.pg"/>
       </exercise>
-      <exercise permid="onU">
+      <exercise>
         <webwork source="Library/FortLewis/Algebra/6-2-Fractional-exponents/MCH1-6-2-14-Fractional-exponents.pg"/>
       </exercise>
-      <exercise permid="Uvd">
+      <exercise>
         <webwork source="Library/FortLewis/Algebra/6-2-Fractional-exponents/MCH1-6-2-14-Fractional-exponents.pg"/>
       </exercise>
-      <exercise permid="ACm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/FractionalExponentToRadical20.pg"/>
       </exercise>
-      <exercise permid="gJv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/FractionalExponentToRadical20.pg"/>
       </exercise>
-      <exercise permid="MQE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/FractionalExponentToRadical30.pg"/>
       </exercise>
-      <exercise permid="sXN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/FractionalExponentToRadical30.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="oJt">
+    <exercisegroup cols="2">
       <title>Simplifying Expressions with Rational Exponents</title>
-      <exercise permid="ZeW">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents13.pg"/>
       </exercise>
-      <exercise permid="Fmf">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents13.pg"/>
       </exercise>
-      <exercise permid="lto">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents14.pg"/>
       </exercise>
-      <exercise permid="RAx">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents14.pg"/>
       </exercise>
-      <exercise permid="xHG">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents16.pg"/>
       </exercise>
-      <exercise permid="dOP">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents16.pg"/>
       </exercise>
-      <exercise permid="JVY">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents17.pg"/>
       </exercise>
-      <exercise permid="qdh">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents17.pg"/>
       </exercise>
-      <exercise permid="Wkq">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents20.pg"/>
       </exercise>
-      <exercise permid="Crz">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents20.pg"/>
       </exercise>
-      <exercise permid="iyI">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents22.pg"/>
       </exercise>
-      <exercise permid="OFR">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents22.pg"/>
       </exercise>
-      <exercise permid="uNa">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents24.pg"/>
       </exercise>
-      <exercise permid="aUj">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalsRationalExponents/RadicalsRationalExponents24.pg"/>
       </exercise>
 <!-- these exercises all have nth powers and nth roots canceling, -->

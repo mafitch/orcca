@@ -6,23 +6,23 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-solving-systems-of-linear-equations-by-graphing" permid="NKP">
+<section xml:id="section-solving-systems-of-linear-equations-by-graphing">
   <title>Solving Systems of Linear Equations by Graphing</title>
-  <introduction permid="ccP">
-    <p permid="fVK">
+  <introduction>
+    <p>
       We have learned how to graph a line given its equation.
       In this section, we will learn what a <em>system</em>
       of <em>two</em> linear equations is,
       and how to use graphing to solve such a system.
     </p>
   </introduction>
-  <subsection permid="tRY">
+  <subsection>
     <title>Solving Systems of Equations by Graphing</title>
     <idx><h>solving</h><h>system of linear equations</h><h>graphing</h></idx>
-    <example xml:id="example-solving-systems-by-graphing-intro" permid="pwA">
-      <sidebyside widths="37% 37%" margins="10%" permid="GuL">
+    <example xml:id="example-solving-systems-by-graphing-intro">
+      <sidebyside widths="37% 37%" margins="10%">
         <stack>
-          <p permid="Iyt">
+          <p>
             Fabiana and David are running at constant speeds in parallel lanes on a track.
             David starts out ahead of Fabiana,
             but Fabiana is running faster.
@@ -30,7 +30,7 @@
             Let's start by looking at the graph of each runner's distance over time,
             in <xref ref="figure-solving-systems-by-graphing-intro" />.
           </p>
-          <p permid="oFC">
+          <p>
             Each of the two lines has an equation,
             as discussed in <xref ref="chapter-graphing-lines" />.
             The line representing David appears to have <m>y</m>-intercept <m>(0,4)</m> and slope <m>\frac{4}{3}</m>,
@@ -39,9 +39,9 @@
             so its equation is <m>y=2t</m>.
           </p>
         </stack>
-        <figure xml:id="figure-solving-systems-by-graphing-intro" permid="Nim">
+        <figure xml:id="figure-solving-systems-by-graphing-intro">
           <caption>David and Fabiana's distances.</caption>
-          <image permid="vtd">
+          <image>
             <description>a coordinate plane with a line for David and a line for Fabiana; the horizontal scale is 1 second and the vertical scale is 2 meters; David's line has a y-intercept of (0,4) and Fabiana's line has a y-intercept of (0,0); the lines cross at the point (6,12)</description>
 <latex-image>
 \begin{tikzpicture}
@@ -65,31 +65,31 @@ minor ytick={2,4,...,14},
           </image>
         </figure>
       </sidebyside>
-      <p permid="UML">
+      <p>
         When these two equations are together as a package,
         we have what is called a <term>system of linear equations</term>:
             <idx><h>system of linear equations</h></idx>
-        <me permid="lpx">
+        <me>
           \left\{ \begin{alignedat}{4} y \amp {}={} \tfrac{4}{3}t \amp {}+{} \amp 4 \\ y \amp {}={} 2t \end{alignedat} \right.
         </me>
         The large left brace indicates that this is a collection of two distinct equations,
         not one equation that was somehow algebraically manipulated into an equivalent equation.
       </p>
-      <p permid="ATU">
+      <p>
         As we can see in <xref ref="figure-solving-systems-by-graphing-intro" />,
         the graphs of the two equations cross at the point <m>(6,12)</m>.
         It's important to check to see if this is correct,
         because when making a hand-drawn graph,
         it would be easy to be off by a little bit.
         To check, we can substitute the values of <m>x</m> and <m>y</m> from the point <m>(6,12)</m> into each equation:
-        <md permid="NwH">
+        <md>
           <mrow>y \amp= \frac{4}{3}t+4\amp y \amp= 2t</mrow>
           <mrow>(\substitute{12})\amp\stackrel{?}{=}\frac{4}{3}(\substitute{6})+4 \amp (\substitute{12})\amp\stackrel{?}{=} 2(\substitute{6})</mrow>
           <mrow>12\amp\stackrel{\checkmark}{=}12\amp 12\amp\stackrel{\checkmark}{=}12</mrow>
         </md>
         So we have checked that <m>(6,12)</m> is indeed the solution for the system.
       </p>
-      <p permid="hbd">
+      <p>
         We refer to the point <m>(6,12)</m> as the
         <term>solution</term><idx><h>solution</h><h>to a system of linear equations</h></idx> to this system of linear equations.
         To denote the <term>solution set</term>,
@@ -100,15 +100,15 @@ minor ytick={2,4,...,14},
       </p>
     </example>
     
-    <example permid="VDJ">
+    <example>
       <statement>
-        <p permid="tpv">
+        <p>
           Determine the solution to the system of equations graphed in <xref ref="figure-solve-using-graph" />.
         </p>
         <sidebyside width="35%">
-        <figure xml:id="figure-solve-using-graph" permid="ZwE">
+        <figure xml:id="figure-solve-using-graph">
           <caption>Graph of a System of Equations</caption>
-          <image width="47%" permid="bAm">
+          <image width="47%">
             <description>A Cartesian plot with two intersecting lines; One line has a y-intercept of -2 and a slope of -1/4; the other line has a y-intercept of 5 and a slope of 2</description>
 <latex-image>
 \begin{tikzpicture}
@@ -122,16 +122,16 @@ minor ytick={2,4,...,14},
         </figure>
       </sidebyside>
       </statement>
-      <solution permid="IjY">
-        <p permid="FZm">
+      <solution>
+        <p>
           The two lines intersect where <m>x=-3</m> and <m>y=-1</m>,
           so the solution is the point <m>(-3,-1)</m>.
           We write the solution set as <m>\{(-3,-1)\}</m>.
         </p>
       </solution>
     </example>
-    <remark permid="anC">
-      <p permid="THs">
+    <remark>
+      <p>
         In <xref ref="example-solving-systems-by-graphing-intro" />,
         we stated that the solution was the point <m>(6,12)</m>.
         It makes sense to write this as an ordered pair when we're given a graph.
@@ -146,7 +146,7 @@ minor ytick={2,4,...,14},
     </remark>
     <p>Try a similar exercise.</p>
     <newpage/>
-    <exercise permid="rlN">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -174,18 +174,18 @@ Context("Point");
 </pg-code>
           </setup>
           <statement>
-            <p permid="skc">
+            <p>
               Determine the solution to the system of equations graphed below.
             </p>
-            <sidebyside widths="32%" permid="mBU">
-              <image permid="HHv" pg-name="$gr"/>
+            <sidebyside widths="32%">
+              <image pg-name="$gr"/>
             </sidebyside>
-            <p permid="Yrl">
+            <p>
               The solution is the point <var name="'(3,2)'" width="20"/>.
             </p>
           </statement>
-          <solution permid="gMI">
-            <p permid="mgv">
+          <solution>
+            <p>
               The two lines intersect where <m>x=3</m> and <m>y=2</m>,
               so the solution is the point <m>(3,2)</m>.
               We write the solution set as <m>\{(3,2)\}</m>.
@@ -197,20 +197,20 @@ Context("Point");
       </webwork>
     </exercise>
     
-    <p permid="sTW">
+    <p>
       Now let's look at an example where <em>we</em>
       need to make a graph to find the solution.
     </p>
-    <example permid="BKS">
-      <p permid="FDN">
+    <example>
+      <p>
         Solve the following system of equations by graphing:
-        <me permid="RwG">
+        <me>
           \left\{ \begin{alignedat}{4} y \amp {}={} \amp \tfrac{1}{2}x \amp {}+{} \amp 4 \\ y \amp {}={} \amp {-x} \amp {}-{} \amp 5 \end{alignedat} \right.
         </me>
       </p>
-      <sidebyside widths="45% 30%" margins="10%" permid="SJd">
+      <sidebyside widths="45% 30%" margins="10%">
         <stack>
-          <p permid="lKW">
+          <p>
             Notice that each of these equations is written in slope-intercept form.
             The first equation, <m>y=\frac{1}{2}x+4</m>,
             is a linear equation with a slope of
@@ -219,15 +219,15 @@ Context("Point");
             is a linear equation with a slope of <m>-1</m> and a <m>y</m>-intercept of <m>(0,-5)</m>.
             We'll use this information to graph both lines.
           </p>
-          <p permid="RSf">
+          <p>
             The two lines intersect where <m>x=-6</m> and <m>y=1</m>,
             so the solution of the system of equations is the point <m>(-6,1)</m>.
             We write the solution set as <m>\{(-6,1)\}</m>.
           </p>
         </stack>
-        <figure permid="xZo">
+        <figure>
           <caption><m>y=\frac{1}{2}x+4</m> and <m>y=-x-5</m>.</caption>
-          <image permid="jOF">
+          <image>
             <description>A Cartesian grid with two intersecting lines; one line has a y-intercept of 4 and a slope of 1/2; the other line has a y-intercept of -5 and a slope of -1</description>
 <latex-image>
 \begin{tikzpicture}
@@ -243,17 +243,17 @@ Context("Point");
         </figure>
       </sidebyside>
     </example>
-    <example permid="hSb">
+    <example>
       <statement>
-        <p permid="egx">
+        <p>
           Solve the following system of equations by graphing:
-          <me permid="xDP">
+          <me>
             \left\{ \begin{alignedat}{3} x \amp {}-{} \amp 3y \amp {}={} \amp {-12} \\ 2x \amp {}+{} \amp 3y \amp {}={} \amp 3 \end{alignedat} \right.
           </me>
         </p>
       </statement>
-      <solution permid="orh">
-        <p permid="SnE">
+      <solution>
+        <p>
           Since both line equations are given in standard form,
           we'll graph each one by finding the intercepts.
           Recall that to find the <m>x</m>-intercept of each equation,
@@ -261,10 +261,10 @@ Context("Point");
           Similarly, to find the <m>y</m>-intercept of each equation,
           replace <m>x</m> with <m>0</m> and solve for <m>y</m>.
         </p>
-        <sidebyside widths="47% 47%" margins="0%" permid="yQm">
-          <p permid="yuN">
+        <sidebyside widths="47% 47%" margins="0%">
+          <p>
             For our first linear equation, we have:
-            <md permid="tDQ">
+            <md>
               <mrow>x-3(\substitute{0}) \amp= -12 \amp \substitute{0}-3y \amp=-12</mrow>
               <mrow>x \amp= -12 \amp -3y \amp= -12</mrow>
               <mrow>\amp\amp y\amp= 4</mrow>
@@ -273,16 +273,16 @@ Context("Point");
             Let's find a checkpoint for this line by choosing <m>x=-9</m>.
             Notice that this <m>x</m> value falls between the <m>x</m>-coordinates of the two intercepts we've already found.
             Next, we plug that value in for <m>x</m> and solve for <m>y</m>:
-            <md permid="ZKZ">
+            <md>
               <mrow>(\substitute{-9})-3y\amp=-12</mrow>
               <mrow>-3y\amp=-3</mrow>
               <mrow>y\amp=1</mrow>
             </md>
             So the checkpoint is <m>(-9,1)</m>.
           </p>
-          <p permid="eBW">
+          <p>
             For our second linear equation, we have:
-            <md permid="FSi">
+            <md>
               <mrow>2x+3(\substitute{0}) \amp= 3\amp 2(\substitute{0})+3y \amp= 3</mrow>
               <mrow>2x \amp= 3\amp 3y \amp= 3</mrow>
               <mrow>x \amp= \frac{3}{2}\amp y\amp= 1</mrow>
@@ -295,7 +295,7 @@ Context("Point");
             it's best to pick a value on one side of an intercept,
             just not too far away.
             Next, we plug that value in for <m>x</m> and solve for <m>y</m>:
-            <md permid="lZr">
+            <md>
               <mrow>2(\substitute{6})+3y\amp=3</mrow>
               <mrow>12+3y\amp=3</mrow>
               <mrow>3y\amp=-9</mrow>
@@ -304,14 +304,14 @@ Context("Point");
             So the checkpoint is <m>(6,-3)</m>.
           </p>
         </sidebyside>
-        <p permid="KJf">
+        <p>
           Now we can graph each line by plotting the intercepts and checkpoint,
           and connecting these points:
         </p>
         <sidebyside width="32%">
-        <figure permid="WXx">
+        <figure>
           <caption>Graphs of <m>x-3y=-12</m> and <m>2x+3y=3</m></caption>
-          <image width="47%" permid="nOE">
+          <image width="47%">
             <description>a Cartesian plot with two intersecting lines; one line has a y-intercept of 4 and an x-intercept of -12; the other line has a y-intercept of 1 and an x-intercept of 3/2</description>
 <latex-image>
 \begin{tikzpicture}
@@ -334,12 +334,12 @@ minor ytick={-7,-6,...,7},
           </image>
         </figure>
       </sidebyside>
-        <p permid="qQo">
+        <p>
           It appears that the solution of the system of equations is the point of intersection of those two lines,
           which is <m>(-3,3)</m>.
           Again, it's important to check to verify that this solution is correct.
           To check, we can substitute the values of <m>x</m> and <m>y</m> from the point <m>(-3,3)</m> into each equation:
-          <md permid="SgA">
+          <md>
             <mrow>x-3y \amp=-12\amp 2x+3y \amp= 3</mrow>
             <mrow>\substitute{-3}-3(\substitute{3}) \amp\stackrel{?}{=}-12 \amp 2(\substitute{-3})+3(\substitute{3}) \amp\stackrel{?}{=} 3</mrow>
             <mrow>-3-9 \amp\stackrel{\checkmark}{=}-12 \amp -6+9 \amp\stackrel{\checkmark}{=} 3</mrow>
@@ -349,9 +349,9 @@ minor ytick={-7,-6,...,7},
         </p>
       </solution>
     </example>
-    <example permid="NZk">
+    <example>
       <statement>
-        <p permid="KnG">
+        <p>
           A college has a north campus and a south campus.
           The north campus has <m>18{,}000</m> students,
           and the south campus has <m>4{,}000</m> students.
@@ -362,15 +362,15 @@ minor ytick={-7,-6,...,7},
           Write and solve a system of equations modeling this problem.
         </p>
       </statement>
-      <solution permid="Uyq">
-        <p permid="DeG">
+      <solution>
+        <p>
           Since all the given student counts are in the thousands,
           we make the decision to measure student population in thousands.
           So for instance,
           the north campus starts with a student population of <m>18</m>
           (thousand students).
         </p>
-        <p permid="jlP">
+        <p>
           The north campus lost <m>4</m> thousand students in <m>5</m> years.
           So it is losing students at a rate of <m>\frac{4\text{ thousand}}{5\text{ year}}</m>,
           or <m>\frac{4}{5}\,\frac{\text{thousand}}{\text{year}}</m>.
@@ -379,24 +379,24 @@ minor ytick={-7,-6,...,7},
           So we have a linear model with starting value <m>18</m> thousand students,
           and a slope of <m>-\frac{4}{5}</m> thousand students per year.
           In other words,
-          <me permid="dKY">
+          <me>
             y=-\frac{4}{5}t+18
           </me>,
           where <m>y</m> stands for the number of students in thousands,
           and <m>t</m> stands for the number of years into the future.
         </p>
-        <p permid="PsY">
+        <p>
           Similarly, the number of students at the south campus can be modeled by <m>y=\frac{3}{5}t+4</m>.
           Now we have a system of equations:
-          <md permid="ynJ">
+          <md>
             <mrow>\left\{ \begin{alignedat}{4} y \amp {}={} \amp {-\frac{4}{5}}t \amp {}+{} \amp 18 \\ y \amp {}={} \amp \frac{3}{5}t \amp {}+{} \amp 4 \end{alignedat} \right.</mrow>
           </md>
           We will graph both lines using their slopes and <m>y</m>-intercepts.
         </p>
         <sidebyside widths="32% 32%" margins="10%" valign="bottom"> 
-        <figure permid="bHq">
+        <figure>
           <caption>Number of Students at the South Campus and North Campus</caption>
-          <image width="50%" permid="TVN">
+          <image width="50%">
             <description>a coordinate plot with two intersecting lines; the North campus line has a y-intercept of 18 and a slope of -4/5; the South campus line has a y-intercept of 4 and a slope of 3/5</description>
 <latex-image>
 \begin{tikzpicture}
@@ -419,7 +419,7 @@ minor ytick={2,4,...,20},
 </latex-image>
           </image>
         </figure>
-        <p permid="vAh">
+        <p>
           According to the graph, the lines intersect at <m>(10,10)</m>.
           So if the trends continue,
           both campuses will have <m>10{,}000</m> students <m>10</m> years from now.
@@ -428,37 +428,37 @@ minor ytick={2,4,...,20},
         </sidebyside>
       </solution>
     </example>
-    <example permid="ugt">
+    <example>
       <statement>
-        <p permid="quP">
+        <p>
           Solve the following system of equations by graphing:
-          <me permid="JSh">
+          <me>
             \left\{ \begin{alignedat}{3} y \amp {}={} \amp 3(x-2) \amp {}+{} \amp 1 \\ y \amp {}={} \amp -\tfrac{1}{2}(x+1) \amp {}-{} \amp 1 \end{alignedat} \right.
           </me>
         </p>
       </statement>
-      <solution permid="AFz">
-        <p permid="HOz">
-          Since both line equations are given in <xref ref="definition-point-slope-form" text="title">point-slope form</xref>,
+      <solution>
+        <p>
+          Since both line equations are given in <xref ref="definition-point-slope-form" text="title" />,
           we can start by graphing the point indicated in each equation and use the slope to determine the rest of the line.
         </p>
-        <sidebyside widths="47% 47%" margins="0%" permid="eXv">
-          <p permid="nVI">
+        <sidebyside widths="47% 47%" margins="0%">
+          <p>
             For our first equation, <m>y=3(x-2)+1</m>,
             the point indicated in the equation is <m>(2,1)</m> and the slope is <m>3</m>.
           </p>
-          <p permid="UcR">
+          <p>
             For our second equation, <m>y=-\frac{1}{2}(x+1)-1</m>,
             the point indicated in the equation is <m>(-1,-1)</m> and the slope is <m>-\frac{1}{2}</m>.
           </p>
         </sidebyside>
-        <p permid="Aka">
+        <p>
           Now we can graph each line by plotting the points and using their slopes.
         </p>
         <sidebyside width="32%">
-        <figure permid="ETT">
+        <figure>
           <caption>Graphs of <m>y=3(x-2)+1</m> and <m>y=-\frac{1}{2}(x+1)-1</m></caption>
-          <image width="47%" permid="AcW">
+          <image width="47%">
             <description>a Cartesian plot with two intersecting lines; one line passes through the point (2,1) with a slope of 3; the other line passes through the point (-1,-1) with a slope of -1/2.</description>
 <latex-image>
 \begin{tikzpicture}
@@ -481,22 +481,22 @@ minor ytick={-7,-6,...,7},
           </image>
         </figure>
       </sidebyside>
-        <p permid="grj">
+        <p>
           It appears that the solution of the system of equations is the point of intersection of those two lines,
           which is <m>(1,-2)</m>.
           To check, we can substitute the values of <m>x</m> and <m>y</m> from the point <m>(1,-2)</m> into each equation:
         </p>
-        <sidebyside widths="37% 37%" margins="10%" permid="LeE">
-          <p permid="Mys">
-            <md permid="euS">
+        <sidebyside widths="37% 37%" margins="10%">
+          <p>
+            <md>
               <mrow>y\amp=3(x-2)+1</mrow>
               <mrow>\substitute{-2}\amp\stackrel{?}{=}3(\substitute{1}-2)+1</mrow>
               <mrow>-2\amp\stackrel{?}{=}3(-1)+1</mrow>
               <mrow>-2\amp\stackrel{\checkmark}{=}-3+1</mrow>
             </md>
           </p>
-          <p permid="sFB">
-            <md permid="KCb">
+          <p>
+            <md>
               <mrow>y\amp=-\frac{1}{2}(x+1)-1</mrow>
               <mrow>\substitute{-2}\amp\stackrel{?}{=}-\frac{1}{2}(\substitute{1}+1)-1</mrow>
               <mrow>-2\amp\stackrel{?}{=}-\frac{1}{2}(2)-1</mrow>
@@ -504,16 +504,16 @@ minor ytick={-7,-6,...,7},
             </md>
           </p>
         </sidebyside>
-        <p permid="YMK">
+        <p>
           So we have checked that <m>(2,-1)</m> is indeed the solution for the system.
           We write the solution set as <m>\{(2,-1)\}</m>.
         </p>
       </solution>
     </example>
   </subsection>
-  <subsection permid="ZZh">
+  <subsection>
     <title>Special Systems of Equations</title>
-    <p permid="Zbf">
+    <p>
       Recall that when we solved linear equations in one variable,
       we had two special cases.
       In one special case there was no solution and in the other case,
@@ -521,16 +521,16 @@ minor ytick={-7,-6,...,7},
       When solving systems of equations in two variables,
       we have two similar special cases.
     </p>
-    <example xml:id="example-solving-systems-by-graphing-parallel-lines" permid="XsW">
+    <example xml:id="example-solving-systems-by-graphing-parallel-lines">
       <title>Parallel Lines</title>
-      <p permid="WBY">
+      <p>
         Let's look at the graphs of two lines with the same slope,
         <m>y=2x-4</m> and <m>y=2x+1</m>:
       </p>
       <sidebyside widths="32% 45%" margins="10%">
-      <figure permid="iQq">
+      <figure>
         <caption>Graphs of <m>y=2x-4</m> and <m>y=2x+1</m></caption>
-        <image width="50%" permid="gkf">
+        <image width="50%">
           <description>a coordinate grid with two parallel lines; one line has a y-intercept of -4 and the other has a y-intercept of 1; they both have a slope of 2</description>
 <latex-image>
 \begin{tikzpicture}
@@ -544,7 +544,7 @@ minor ytick={-7,-6,...,7},
 </latex-image>
         </image>
       </figure>
-      <p permid="CJh">
+      <p>
         For this system of equations, what is the solution?
         Since the two lines have the same slope they are
         <term>parallel lines</term>
@@ -555,7 +555,7 @@ minor ytick={-7,-6,...,7},
       </p>
     </sidebyside>   
     </example>
-    <p permid="Fio">
+    <p>
       The symbol <m>\emptyset</m> is a special symbol that represents the <term>empty set</term>,
       a <em>set</em> that has no numbers in it.
           <idx><h>empty set</h></idx>
@@ -564,29 +564,29 @@ minor ytick={-7,-6,...,7},
       The symbols for the empty set and the number zero may look similar depending on how you write the number zero.
       Try to keep the concepts separate.
     </p>
-    <example xml:id="example-solving-systems-by-graphing-equivalent-equations" permid="DAf">
+    <example xml:id="example-solving-systems-by-graphing-equivalent-equations">
       <title>Coinciding Lines</title>
-      <p permid="OXz">
+      <p>
         Next we'll look at the other special case.
         Let's start with this system of equations:
-        <me permid="pZq">
+        <me>
           \left\{ \begin{alignedat}{4} y \amp {}={} \amp 2x-4 \\ 6x-3y \amp {}={} \amp 12 \end{alignedat} \right.
         </me>
       </p>
-      <p permid="veI">
+      <p>
         To solve this system of equations,
         we want to graph each line.
         The first equation is in slope-intercept form and can be graphed easily using its slope of <m>2</m> and its <m>y</m>-intercept of <m>(0,-4)</m>.
       </p>
-      <p permid="blR">
+      <p>
         The second equation, <m>6x-3y=12</m>,
         can either be graphed by solving for <m>y</m> and using the slope-intercept form or by finding the intercepts.
         If we use the intercept method,
         we'll find that this line has an <m>x</m>-intercept of <m>(2,0)</m> and a <m>y</m>-intercept of <m>(0,-4)</m>.
         When we graph both lines we get <xref ref="figure-coinciding-lines" />.
       </p>
-      <sidebyside widths="45% 32%" margins="10%" valign="bottom" permid="vVG">
-        <p permid="Hta">
+      <sidebyside widths="45% 32%" margins="10%" valign="bottom">
+        <p>
           Now we can see these are actually the <em>same</em> line,
           or <term>coinciding lines</term>.
           To determine the solution to this system,
@@ -598,9 +598,9 @@ minor ytick={-7,-6,...,7},
           all we can do is say that any ordered pair <m>(x,y)</m> satisfying the line equation is a solution.
           In set-builder notation, we would write <m>\{(x,y)\mid y=2x-4\}</m>.
         </p>
-        <figure xml:id="figure-coinciding-lines" permid="nAj">
+        <figure xml:id="figure-coinciding-lines">
           <caption>Graphs of <m>y=2x-4</m> and <m>6x-3y=12</m></caption>
-          <image width="50%" permid="Mro">
+          <image width="50%">
             <description>a coordinate plot of two lines that are coinciding; they both have a y-intercept of (0,-4) and a slope of 2</description>
 <latex-image>
 \begin{tikzpicture}
@@ -616,11 +616,11 @@ minor ytick={-7,-6,...,7},
         </figure>
       </sidebyside>
     </example>
-    <remark permid="jHo">
-      <p permid="zOB">
+    <remark>
+      <p>
         In <xref ref="example-solving-systems-by-graphing-equivalent-equations" />,
         what would have happened if we had decided to convert the second line equation into slope-intercept form?
-        <md permid="qJk">
+        <md>
           <mrow>6x-3y\amp=12</mrow>
           <mrow>6x-3y\subtractright{6x}\amp=12\subtractright{6x}</mrow>
           <mrow>-3y\amp=-6x+12</mrow>
@@ -633,8 +633,8 @@ minor ytick={-7,-6,...,7},
         we'll have an infinite number of solutions.
       </p>
     </remark>
-    <warning permid="ITS">
-      <p permid="crk">
+    <warning>
+      <p>
         Notice that for a system of equations with infinite solutions like <xref ref="example-solving-systems-by-graphing-equivalent-equations" />,
         we didn't say that <em>every</em> point was a solution.
         Rather, every point that falls on that line is a solution.
@@ -644,26 +644,26 @@ minor ytick={-7,-6,...,7},
         <q>all ordered pairs.</q>
       </p>
     </warning>
-    <list xml:id="list-summary-of-types-of-systems" permid="POx">
+    <list xml:id="list-summary-of-types-of-systems">
       <title>A summary of the three types of systems of equations and their solution sets</title>
-      <dl permid="pbb">
-        <li permid="Vik">
+      <dl>
+        <li>
           <title>Intersecting Lines:</title>
-          <p permid="NDL">
+          <p>
             If two linear equations have different slopes,
             the system has one solution.
           </p>
         </li>
-        <li permid="Bpt">
+        <li>
           <title>Parallel Lines:</title>
-          <p permid="tKU">
+          <p>
             If the linear equations have the same slope with different <m>y</m>-intercepts,
             the system has no solution.
           </p>
         </li>
-        <li permid="hwC">
+        <li>
           <title>Coinciding Lines:</title>
-          <p permid="ZSd">
+          <p>
             If two linear equations have the same slope and the same <m>y</m>-intercept
             (in other words, they are equivalent equations),
             the system has infinitely many solutions.
@@ -673,44 +673,44 @@ minor ytick={-7,-6,...,7},
       </dl>
     </list>
   </subsection>
-  <exercises permid="Ggq">
-    <exercisegroup cols="2" permid="mnz">
+  <exercises>
+    <exercisegroup cols="2">
       <title>Warmup and Review</title>
-      <exercise permid="XeB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg"/>
       </exercise>
-      <exercise permid="DlK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept10.pg"/>
       </exercise>
-      <exercise permid="jsT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg"/>
       </exercise>
-      <exercise permid="PAc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept40.pg"/>
       </exercise>
-      <exercise permid="vHl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg"/>
       </exercise>
-      <exercise permid="bOu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept50.pg"/>
       </exercise>
-      <exercise permid="HVD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept60.pg"/>
       </exercise>
-      <exercise permid="ocM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SlopeAndY-InterceptCalculations/FindSlopeYIntercept60.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="SuI">
-      <exercise permid="sMF">
+    <exercisegroup cols="2">
+      <exercise>
         <statement>
-          <p permid="Eyu">
+          <p>
             Graph the equation <m>y=-3x</m>.
           </p>
         </statement>
-        <answer permid="MTR">
-          <sidebyside permid="UjV">
-            <image permid="syx">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -725,15 +725,15 @@ minor ytick={-7,-6,...,7},
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="YTO">
+      <exercise>
         <statement>
-          <p permid="kFD">
+          <p>
             Graph the equation <m>y=\frac{1}{4}x</m>.
           </p>
         </statement>
-        <answer permid="tba">
-          <sidebyside permid="Are">
-            <image permid="YFG">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -748,15 +748,15 @@ minor ytick={-7,-6,...,7},
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="FaX">
+      <exercise>
         <statement>
-          <p permid="QMM">
+          <p>
             Graph the equation <m>y=\frac{2}{3}x+4</m>.
           </p>
         </statement>
-        <answer permid="Zij">
-          <sidebyside permid="gyn">
-            <image permid="EMP">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -771,15 +771,15 @@ minor ytick={-7,-6,...,7},
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="lig">
+      <exercise>
         <statement>
-          <p permid="wTV">
+          <p>
             Graph the equation <m>y=-2x+5</m>.
           </p>
         </statement>
-        <answer permid="Fps">
-          <sidebyside permid="MFw">
-            <image permid="kTY">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -795,8 +795,8 @@ minor ytick={-7,-6,...,7},
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="yBR">
-      <exercise permid="Rpp">
+    <exercisegroup cols="2">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -824,19 +824,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="dbe">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="Wgz">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="Jin">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="lwB">
-              <p permid="lbc">
-                <md permid="WQt">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -847,7 +847,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="xwy">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -875,19 +875,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="ppw">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="CnI">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="VwF">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="RDK">
-              <p permid="Ril">
-                <md permid="CXC">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -898,7 +898,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="dDH">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -926,19 +926,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="BDO">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="iuR">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="hKX">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="xKT">
-              <p permid="xpu">
-                <md permid="jeL">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -949,7 +949,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="JKQ">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -977,19 +977,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="NSg">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="OCa">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="tZp">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="dSc">
-              <p permid="dwD">
-                <md permid="PlU">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -1001,46 +1001,46 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
         </webwork>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="eJa">
+    <exercisegroup cols="2">
       <title>Checking Solutions for System of Equations</title>
-      <exercise permid="pRZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem10.pg"/>
       </exercise>
-      <exercise permid="VZi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem10.pg"/>
       </exercise>
-      <exercise permid="Cgr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem20.pg"/>
       </exercise>
-      <exercise permid="inA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem20.pg"/>
       </exercise>
-      <exercise permid="OuJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem30.pg"/>
       </exercise>
-      <exercise permid="uBS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SolutionOfSystem30.pg"/>
       </exercise>
     </exercisegroup>
     <newpage/>
-    <exercisegroup cols="3" permid="KQj">
+    <exercisegroup cols="3">
       <title>Using a Graph to Solve a System</title>
-      <introduction permid="twz">
-        <p permid="McT">
+      <introduction>
+        <p>
           Use a graph to solve the system of equations.
         </p>
       </introduction>
-      <exercise permid="ZDI">
+      <exercise>
         <statement>
-          <p permid="agy">
-            <me permid="uJj">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=-\frac{7}{2}x-8\\ y\amp=5x+9 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="JZl">
-          <sidebyside permid="aJb">
-            <image permid="Rbh">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
@@ -1058,24 +1058,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="JDM">
+          <p>
             The two lines intersect where <m>x=-2</m> and <m>y=-1</m>,
             so the solution is the point <m>(-2,-1)</m>.
             We write the solution set as <m>\{(-2,-1)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="FKR">
+      <exercise>
         <statement>
-          <p permid="GnH">
-            <me permid="aQs">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=\frac{2}{3}x+5\\ y\amp=-2x-11 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="qgu">
-          <sidebyside permid="GQk">
-            <image permid="xiq">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
@@ -1093,24 +1093,24 @@ minor ytick={-11,-10,...,7},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="pKV">
+          <p>
             The two lines intersect where <m>x=-6</m> and <m>y=1</m>,
             so the solution is the point <m>(-6,1)</m>.
             We write the solution set as <m>\{(-6,1)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="lSa">
+      <exercise>
         <statement>
-          <p permid="muQ">
-            <me permid="GXB">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=12x+7\\ 3x+y\amp=-8 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="WnD">
-          <sidebyside permid="mXt">
-            <image permid="dpz">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
@@ -1128,24 +1128,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="VSe">
+          <p>
             The two lines intersect where <m>x=-1</m> and <m>y=-5</m>,
             so the solution is the point <m>(-1,-5)</m>.
             We write the solution set as <m>\{(-1,-5)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="RZj">
+      <exercise>
         <statement>
-          <p permid="SBZ">
-            <me permid="neK">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=-3x+5\\ 4x+y\amp=8 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="iBV">
-          <sidebyside permid="TeC">
-            <image permid="JwI">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
@@ -1163,24 +1163,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="BZn">
+          <p>
             The two lines intersect where <m>x=3</m> and <m>y=-4</m>,
             so the solution is the point <m>(3,-4)</m>.
             We write the solution set as <m>\{(3,-4)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="ygs">
+      <exercise>
         <statement>
-          <p permid="yJi">
-            <me permid="TlT">
+          <p>
+            <me>
               \left\{\begin{aligned} x+y\amp=0\\ 3x-y\amp=8 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="OJe">
-          <sidebyside permid="zlL">
-            <image permid="pDR">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
@@ -1198,24 +1198,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="igw">
+          <p>
             The two lines intersect where <m>x=2</m> and <m>y=-2</m>,
             so the solution is the point <m>(2,-2)</m>.
             We write the solution set as <m>\{(2,-2)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="enB">
+      <exercise>
         <statement>
-          <p permid="eQr">
-            <me permid="ztc">
+          <p>
+            <me>
               \left\{\begin{aligned} 4x-2y\amp=4\\ x+2y\amp=6 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="uQn">
-          <sidebyside permid="fsU">
-            <image permid="VLa">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1227,24 +1227,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="OnF">
+          <p>
             The two lines intersect where <m>x=2</m> and <m>y=2</m>,
             so the solution is the point <m>(2,2)</m>.
             We write the solution set as <m>\{(2,2)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="KuK">
+      <exercise>
         <statement>
-          <p permid="KXA">
-            <me permid="fAl">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=4x-5\\ y\amp=-1 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="aXw">
-          <sidebyside permid="LAd">
-            <image permid="BSj">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1256,24 +1256,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="uuO">
+          <p>
             The two lines intersect where <m>x=1</m> and <m>y=-1</m>,
             so the solution is the point <m>(1,-1)</m>.
             We write the solution set as <m>\{(1,-1)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="qBT">
+      <exercise>
         <statement>
-          <p permid="reJ">
-            <me permid="LHu">
+          <p>
+            <me>
               \left\{\begin{aligned} 3x-4y\amp=12\\ y\amp=3 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="HeF">
-          <sidebyside permid="rHm">
-            <image permid="hZs">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
@@ -1291,24 +1291,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="aBX">
+          <p>
             The two lines intersect where <m>x=8</m> and <m>y=3</m>,
             so the solution is the point <m>(8,3)</m>.
             We write the solution set as <m>\{(8,3)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="WJc">
+      <exercise>
         <statement>
-          <p permid="XlS">
-            <me permid="rOD">
+          <p>
+            <me>
               \left\{\begin{aligned} x+y\amp=-1\\ x\amp=2 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="nlO">
-          <sidebyside permid="XOv">
-            <image permid="OgB">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1320,24 +1320,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="GJg">
+          <p>
             The two lines intersect where <m>x=2</m> and <m>y=-3</m>,
             so the solution is the point <m>(2,-3)</m>.
             We write the solution set as <m>\{(2,-3)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="CQl">
+      <exercise>
         <statement>
-          <p permid="Dtb">
-            <me permid="XVM">
+          <p>
+            <me>
               \left\{\begin{aligned} x-2y\amp=-4\\ x\amp=-4 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="TsX">
-          <sidebyside permid="DVE">
-            <image permid="unK">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1349,24 +1349,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="mQp">
+          <p>
             The two lines intersect where <m>x=-4</m> and <m>y=0</m>,
             so the solution is the point <m>(-4,0)</m>.
             We write the solution set as <m>\{(-4,0)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="iXu">
+      <exercise>
         <statement>
-          <p permid="jAk">
-            <me permid="EcV">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=2(x+3)-5\\ y\amp=-\frac{4}{3}(x-4)-1 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="zAg">
-          <sidebyside permid="kcN">
-            <image permid="auT">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1380,24 +1380,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="SXy">
+          <p>
             The two lines intersect where <m>x=1</m> and <m>y=3</m>,
             so the solution is the point <m>(1,3)</m>.
             We write the solution set as <m>\{(1,3)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="PeD">
+      <exercise>
         <statement>
-          <p permid="PHt">
-            <me permid="kke">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=-\frac{2}{3}(x-6)-2\\ y\amp=-\frac{1}{2}(x-1)+2 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="fHp">
-          <sidebyside permid="QjW">
-            <image permid="GCc">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1411,24 +1411,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="zeH">
+          <p>
             The two lines intersect where <m>x=-3</m> and <m>y=4</m>,
             so the solution is the point <m>(-3,4)</m>.
             We write the solution set as <m>\{(-3,4)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="vlM">
+      <exercise>
         <statement>
-          <p permid="vOC">
-            <me permid="Qrn">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=-\frac{1}{2}(x-6)+4\\ y\amp=4(x+1)-6 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="LOy">
-          <sidebyside permid="wrf">
-            <image permid="mJl">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1442,24 +1442,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="flQ">
+          <p>
             The two lines intersect where <m>x=2</m> and <m>y=6</m>,
             so the solution is the point <m>(2,6)</m>.
             We write the solution set as <m>\{(2,6)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="bsV">
+      <exercise>
         <statement>
-          <p permid="bVL">
-            <me permid="wyw">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=\frac{5}{6}(x-6)+4\\ y\amp=2(x+1)+4 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="rVH">
-          <sidebyside permid="cyo">
-            <image permid="SQu">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1473,24 +1473,24 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="LsZ">
+          <p>
             The two lines intersect where <m>x=-6</m> and <m>y=-6</m>,
             so the solution is the point <m>(-6,-6)</m>.
             We write the solution set as <m>\{(-6,-6)\}</m>.
           </p>
         </answer>
       </exercise>
-      <exercise permid="HAe">
+      <exercise>
         <statement>
-          <p permid="IcU">
-            <me permid="cFF">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=-\frac{4}{5}x+8\\ 4x+5y\amp=-35 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="YcQ">
-          <sidebyside permid="IFx">
-            <image permid="yXD">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
@@ -1507,23 +1507,23 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="rAi">
+          <p>
             The two lines are parallel and do not intersect.
             So the system has no solution.
           </p>
         </answer>
       </exercise>
-      <exercise permid="nHn">
+      <exercise>
         <statement>
-          <p permid="okd">
-            <me permid="IMO">
+          <p>
+            <me>
               \left\{\begin{aligned} 2x-7y\amp=28\\ y\amp=\frac{2}{7}x-3 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="EjZ">
-          <sidebyside permid="oMG">
-            <image permid="feM">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1534,23 +1534,23 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="XHr">
+          <p>
             The two lines are parallel and do not intersect.
             So the system has no solution.
           </p>
         </answer>
       </exercise>
-      <exercise permid="TOw">
+      <exercise>
         <statement>
-          <p permid="Urm">
-            <me permid="oTX">
+          <p>
+            <me>
               \left\{\begin{aligned} -10x+15y\amp=60\\ 6x-9y\amp=36 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="kri">
-          <sidebyside permid="UTP">
-            <image permid="LlV">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1561,23 +1561,23 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="DOA">
+          <p>
             The two lines are parallel and do not intersect.
             So the system has no solution.
           </p>
         </answer>
       </exercise>
-      <exercise permid="zVF">
+      <exercise>
         <statement>
-          <p permid="Ayv">
-            <me permid="Vbg">
+          <p>
+            <me>
               \left\{\begin{aligned} 6x-8y\amp=32\\ 9x-12y\amp=12 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="Qyr">
-          <sidebyside permid="BaY">
-            <image permid="rte">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1588,23 +1588,23 @@ minor ytick={-9,-8,...,9},
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="jVJ">
+          <p>
             The two lines are parallel and do not intersect.
             So the system has no solution.
           </p>
         </answer>
       </exercise>
-      <exercise permid="gcO">
+      <exercise>
         <statement>
-          <p permid="gFE">
-            <me permid="Bip">
+          <p>
+            <me>
               \left\{\begin{aligned} y\amp=-\frac{3}{5}x+7\\ 9x+15y\amp=105 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="wFA">
-          <sidebyside permid="hih">
-            <image permid="XAn">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[xmin=-10,xmax=10,
@@ -1620,7 +1620,7 @@ minor ytick={-9,-8,...,9},]
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="QcS">
+          <p>
             The
             <q>two</q>
             lines are actually the same line.
@@ -1630,17 +1630,17 @@ minor ytick={-9,-8,...,9},]
           </p>
         </answer>
       </exercise>
-      <exercise permid="MjX">
+      <exercise>
         <statement>
-          <p permid="MMN">
-            <me permid="hpy">
+          <p>
+            <me>
               \left\{\begin{aligned} 9y-12x\amp=18\\ y\amp=\frac{4}{3}x+2 \end{aligned}\right.
             </me>
           </p>
         </statement>
-        <answer permid="cMJ">
-          <sidebyside permid="Npq">
-            <image permid="DHw">
+        <answer>
+          <sidebyside>
+            <image>
 <latex-image>
 \begin{tikzpicture}
 \begin{axis}[]
@@ -1651,7 +1651,7 @@ minor ytick={-9,-8,...,9},]
 </latex-image>
             </image>
           </sidebyside>
-          <p permid="wkb">
+          <p>
             The
             <q>two</q>
             lines are actually the same line.
@@ -1662,30 +1662,30 @@ minor ytick={-9,-8,...,9},]
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="qXs">
+    <exercisegroup cols="2">
       <title>Determining the Number of Solutions in a System of Equations</title>
-      <exercise permid="srg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem10.pg"/>
       </exercise>
-      <exercise permid="Yyp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem10.pg"/>
       </exercise>
-      <exercise permid="EFy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem20.pg"/>
       </exercise>
-      <exercise permid="kMH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem20.pg"/>
       </exercise>
-      <exercise permid="QTQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem30.pg"/>
       </exercise>
-      <exercise permid="xaZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem30.pg"/>
       </exercise>
-      <exercise permid="dii">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem40.pg"/>
       </exercise>
-      <exercise permid="Jpr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/NumberOfSolutionsOfSystem40.pg"/>
       </exercise>
     </exercisegroup>

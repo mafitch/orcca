@@ -6,29 +6,29 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-isolating-a-linear-variable" permid="AHd">
+<section xml:id="section-isolating-a-linear-variable">
   <title>Isolating a Linear Variable</title>
-  <introduction permid="Opj">
-    <p permid="fXo">
+  <introduction>
+    <p>
       In this section,
       we will learn how to solve linear equations and inequalities with more than one variable.
     </p>
   </introduction>
-  <subsection permid="gOm">
+  <subsection>
     <title>Solving for a Variable</title>
-    <p permid="DuF">
+    <p>
       The formula of calculating a rectangle's area is <m>A=\ell w</m>,
       where <m>\ell</m> stands for the rectangle's length,
       and <m>w</m> stands for width.
       When a rectangle's length and width are given,
       we can easily calculate its area.
     </p>
-    <p permid="jBO">
+    <p>
       What if a rectangle's area and length are given,
       and we need to calculate its width?
     </p>
-    <sidebyside widths="47% 47%" margins="0%" permid="iia">
-      <p permid="TIW">
+    <sidebyside widths="47% 47%" margins="0%">
+      <p>
         If a rectangle's area is given as
         <quantity>
           <mag>12</mag><unit base="meter" exp="2"/>
@@ -36,7 +36,7 @@
         <quantity>
           <mag>4</mag><unit base="meter"/>
         </quantity>, we could find its width this way:
-        <md permid="xFt">
+        <md>
           <mrow>A\amp=\ell w</mrow>
           <mrow>12\amp=4w</mrow>
           <mrow>\divideunder{12}{4}\amp=\divideunder{4w}{4}</mrow>
@@ -44,12 +44,12 @@
           <mrow>w\amp=3</mrow>
         </md>
       </p>
-      <p permid="zQf">
+      <p>
         If we need to do this many times,
         we would love to have an easier way,
         without solving an equation each time.
         We will solve for <m>w</m> in the formula <m>A=\ell w</m>:
-        <md permid="dMC">
+        <md>
           <mrow>A\amp=\ell w</mrow>
           <mrow>\divideunder{A}{\ell}\amp=\divideunder{\ell w}{\ell}</mrow>
           <mrow>\frac{A}{\ell}\amp=w</mrow>
@@ -57,17 +57,17 @@
         </md>
       </p>
     </sidebyside>
-    <p permid="PIX">
+    <p>
       Now if we want to find the width when <m>\ell=4</m> is given,
       we can simply replace <m>\ell</m> with <m>4</m> and simplify.
     </p>
-    <p permid="vQg">
+    <p>
       We solved for <m>w</m> in the formula <m>A=\ell w</m> once,
       and we could use the new formula
       <m>w=\frac{A}{\ell}</m> again and again saving us a lot of time down the road. <!--This is why we need to learn how to solve for a variable in an equation. -->Let's look at a few examples.
     </p>
-    <remark permid="VTI">
-      <p permid="HuE">
+    <remark>
+      <p>
         Note that in solving for <m>A</m>,
         we divided each side of the equation by <m>\ell</m>.
         The operations that we apply,
@@ -84,19 +84,19 @@
         the operations throughout this section.
       </p>
     </remark>
-    <example xml:id="example-solve-for-variable-profit-revenue-cost" permid="RjP">
-      <p permid="yaS">
+    <example xml:id="example-solve-for-variable-profit-revenue-cost">
+      <p>
         Solve for <m>R</m> in <m>P=R-C</m>.
         (This is the relationship between profit, revenue, and cost.)
       </p>
-      <p permid="eib">
+      <p>
         To solve for <m>R</m>, we first want to note that <m>C</m> is
         <em>subtracted</em> from <m>R</m>.
         To
         <q>undo</q>
         this, we will need to <em>add</em>
         <m>C</m> to each side of the equation:
-        <md permid="JTL">
+        <md>
           <mrow>P\amp=\attention{R}-C</mrow>
           <mrow>P\addright{C}\amp=\attention{R}-C\addright{C}</mrow>
           <mrow>P+C\amp=\attention{R}</mrow>
@@ -104,17 +104,17 @@
         </md>
       </p>
     </example>
-    <example xml:id="example-solve-for-variable-slope-intercept" permid="xqY">
-      <p permid="Kpk">
+    <example xml:id="example-solve-for-variable-slope-intercept">
+      <p>
         Solve for <m>x</m> in <m>y=mx+b</m>.
         (This is a line's equation in slope-intercept form.)
       </p>
-      <p permid="qwt">
+      <p>
         In the equation <m>y=mx+b</m>,
         we see that <m>x</m> is multiplied by <m>m</m> and then <m>b</m> is added to that.
         Our first step will be to isolate <m>mx</m>,
         which we'll do by subtracting <m>b</m> from each side of the equation:
-        <md permid="qaU">
+        <md>
           <mrow>y\amp=m\attention{x}+b</mrow>
           <mrow>y\subtractright{b}\amp=m\attention{x}+b\subtractright{b}</mrow>
           <mrow>y-b\amp=m\attention{x}</mrow>
@@ -124,34 +124,34 @@
         To
         <q>undo</q>
         this, we'll need to divide each side of the equation by <m>m</m>:
-        <md permid="Wid">
+        <md>
           <mrow>\divideunder{y-b}{m}\amp=\divideunder{m\attention{x}}{m}</mrow>
           <mrow>\frac{y-b}{m}\amp=\attention{x}</mrow>
           <mrow>x\amp=\frac{y-b}{m}</mrow>
         </md>
       </p>
     </example>
-    <warning permid="Qew">
-      <p permid="RTJ">
+    <warning>
+      <p>
         It's important to note in <xref ref="example-solve-for-variable-slope-intercept" />
         that each <em>side</em> was divided by <m>m</m>.
         We can't simply divide <m>y</m> by <m>m</m>,
         as the equation would no longer be equivalent.
       </p>
     </warning>
-    <example permid="dyh">
-      <p permid="WDC">
+    <example>
+      <p>
         Solve for <m>b</m> in <m>A=\frac{1}{2}bh</m>.
         (This is the area formula for a triangle.)
       </p>
-      <p permid="CKL">
+      <p>
         To solve for <m>b</m>, we need to determine what operations need to be
         <q>undone.</q>
         The expression <m>\frac{1}{2}bh</m> has multiplication between
         <m>\frac{1}{2}</m> and <m>b</m> and <m>h</m>.
         As a first step,
         we will multiply each side of the equation by <m>2</m> in order to eliminate the denominator of <m>2</m>:
-        <md permid="Cpm">
+        <md>
           <mrow>A\amp=\frac{1}{2}\attention{b}h</mrow>
           <mrow>\multiplyleft{2}A\amp=\multiplyleft{2}\frac{1}{2}\attention{b}h</mrow>
           <mrow>2A\amp=\attention{b}h</mrow>
@@ -159,23 +159,23 @@
         As a last step, we will
         <q>undo</q>
         the multiplication between <m>b</m> and <m>h</m> by dividing each side by <m>h</m>:
-        <md permid="iwv">
+        <md>
           <mrow>\divideunder{2A}{h}\amp=\divideunder{\attention{b}h}{h}</mrow>
           <mrow>\frac{2A}{h}\amp=\attention{b}</mrow>
           <mrow>b\amp=\frac{2A}{h}</mrow>
         </md>
       </p>
     </example>
-    <example xml:id="example-solve-for-variable-standard-form" permid="JFq">
-      <p permid="iRU">
+    <example xml:id="example-solve-for-variable-standard-form">
+      <p>
         Solve for <m>y</m> in <m>2x+5y=10</m>.
         (This is a linear equation in standard form.)
       </p>
-      <p permid="OZd">
+      <p>
         To solve for <m>y</m>,
         we will first have to solve for <m>5y</m> by subtracting <m>2x</m> from each side of the equation.
         After that, we'll be able to divide each side by <m>5</m> to finish solving for <m>y</m>:
-        <md permid="ODE">
+        <md>
           <mrow>2x+5\attention{y}\amp=10</mrow>
           <mrow>2x+5\attention{y}\subtractright{2x}\amp=10\subtractright{2x}</mrow>
           <mrow>5\attention{y}\amp=10-2x</mrow>
@@ -184,20 +184,20 @@
         </md>
       </p>
     </example>
-    <remark permid="CaR">
-      <p permid="nBN">
+    <remark>
+      <p>
         As we will learn in later sections,
         the result in <xref ref="example-solve-for-variable-standard-form" />
         can also be written as <m>y=\frac{10}{5}-\frac{2x}{5}</m>,
         which can then be written as <m>y=2-\frac{2}{5}x</m>.
       </p>
     </remark>
-    <example xml:id="example-solve-for-variable-celsius-fahrenheit" permid="pMz">
-      <p permid="vgm">
+    <example xml:id="example-solve-for-variable-celsius-fahrenheit">
+      <p>
         Solve for <m>F</m> in <m>C=\frac{5}{9}(F-32)</m>.
         (This represents the relationship between temperature in degrees Celsius and degrees Fahrenheit.)
       </p>
-      <p permid="bnv">
+      <p>
         To solve for <m>F</m>,
         we first need to see that it is contained inside a set of parentheses.
         To get the expression <m>F-32</m> on its own,
@@ -208,14 +208,14 @@
         this multiplication is by dividing each side by <m>\frac{5}{9}</m>.
         As we learned in <xref ref="section-linear-equations-and-inequalities-with-fractions" /> though,
         a better approach is to instead multiply each side by the reciprocal of <m>\frac{9}{5}</m>:
-        <md permid="uKN">
+        <md>
           <mrow>C\amp=\frac{5}{9}(\attention{F}-32)</mrow>
           <mrow>\multiplyleft{\frac{9}{5}}C\amp=\multiplyleft{\frac{9}{5}}\frac{5}{9}(\attention{F}-32)</mrow>
           <mrow>\frac{9}{5}C\amp=\attention{F}-32</mrow>
         </md>
         Now that we have <m>F-32</m>,
         we simply need to add <m>32</m> to each side to finish solving for <m>F</m>:
-        <md permid="aRW">
+        <md>
           <mrow>\frac{9}{5}C\addright{32}\amp=\attention{F}-32\addright{32}</mrow>
           <mrow>\frac{9}{5}C+32\amp=\attention{F}</mrow>
           <mrow>F\amp=\frac{9}{5}C+32</mrow>
@@ -223,148 +223,148 @@
       </p>
     </example>
   </subsection>
-  <exercises permid="MVv">
-    <exercisegroup cols="3" permid="tcE">
+  <exercises>
+    <exercisegroup cols="3">
       <title>Review and Warmup</title>
-      <exercise permid="lyf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/solveLinearEqnOneStepMultiDiv140.pg"/>
       </exercise>
-      <exercise permid="RFo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/solveLinearEqnOneStepMultiDiv140.pg"/>
       </exercise>
-      <exercise permid="xMx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/solveLinearEqnOneStepMultiDiv165.pg"/>
       </exercise>
-      <exercise permid="dTG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/solveLinearEqnOneStepMultiDiv165.pg"/>
       </exercise>
-      <exercise permid="KaP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps120.pg"/>
       </exercise>
-      <exercise permid="qhY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/solveLinearEqnMultiSteps120.pg"/>
       </exercise>
-      <exercise permid="Wph">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses40.pg"/>
       </exercise>
-      <exercise permid="Cwq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/SolveLinearEquationParentheses40.pg"/>
       </exercise>
     </exercisegroup>
     <newpage/>
-    <exercisegroup cols="2" permid="ZjN">
+    <exercisegroup cols="2">
       <title>Solving for a Variable</title>
-      <exercise permid="iDz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation10.pg"/>
       </exercise>
-      <exercise permid="OKI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation10.pg"/>
       </exercise>
-      <exercise permid="uRR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation20.pg"/>
       </exercise>
-      <exercise permid="aZa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation20.pg"/>
       </exercise>
-      <exercise permid="Hgj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation30.pg"/>
       </exercise>
-      <exercise permid="nns">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation30.pg"/>
       </exercise>
-      <exercise permid="TuB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation40.pg"/>
       </exercise>
-      <exercise permid="zBK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation40.pg"/>
       </exercise>
-      <exercise permid="fIT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation50.pg"/>
       </exercise>
-      <exercise permid="LQc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation50.pg"/>
       </exercise>
-      <exercise permid="rXl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation60.pg"/>
       </exercise>
-      <exercise permid="Yeu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation60.pg"/>
       </exercise>
-      <exercise permid="ElD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation70.pg"/>
       </exercise>
-      <exercise permid="ksM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation70.pg"/>
       </exercise>
-      <exercise permid="QzV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation80.pg"/>
       </exercise>
-      <exercise permid="wHe">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation80.pg"/>
       </exercise>
-      <exercise permid="cOn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation90.pg"/>
       </exercise>
-      <exercise permid="IVw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation90.pg"/>
       </exercise>
-      <exercise permid="pcF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation100.pg"/>
       </exercise>
-      <exercise permid="VjO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation100.pg"/>
       </exercise>
-      <exercise permid="BqX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation120.pg"/>
       </exercise>
-      <exercise permid="hyg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation130.pg"/>
       </exercise>
-      <exercise permid="NFp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation140.pg"/>
       </exercise>
-      <exercise permid="tMy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation140.pg"/>
       </exercise>
-      <exercise permid="ZTH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation110.pg"/>
       </exercise>
-      <exercise permid="GaQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation150.pg"/>
       </exercise>
-      <exercise permid="mhZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation160.pg"/>
       </exercise>
-      <exercise permid="Spi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation160.pg"/>
       </exercise>
-      <exercise permid="ywr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation170.pg"/>
       </exercise>
-      <exercise permid="eDA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation170.pg"/>
       </exercise>
-      <exercise permid="KKJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation180.pg"/>
       </exercise>
-      <exercise permid="qRS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation180.pg"/>
       </exercise>
-      <exercise permid="WZb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation190.pg"/>
       </exercise>
-      <exercise permid="Dgk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation190.pg"/>
       </exercise>
-      <exercise permid="jnt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation200.pg"/>
       </exercise>
-      <exercise permid="PuC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/LiteralEquation210.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="3" permid="FqW">
-      <exercise permid="vBL">
+    <exercisegroup cols="3">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -392,19 +392,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="Mex">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="bXp">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="slG">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="uws">
-              <p permid="wlF">
-                <md permid="GZf">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -415,7 +415,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="bIU">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -443,19 +443,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="YsP">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="Iey">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="EzY">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="aDB">
-              <p permid="csO">
-                <md permid="ngo">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -466,7 +466,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="HQd">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -494,19 +494,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="kHh">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="olH">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="QOq">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="GKK">
-              <p permid="IzX">
-                <md permid="Tnx">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -517,7 +517,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="nXm">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -545,19 +545,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="wVz">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="UsQ">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="dcI">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="mRT">
-              <p permid="oHg">
-                <md permid="zuG">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -568,7 +568,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="Uev">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -596,19 +596,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="JjR">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="AzZ">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="pra">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="SZc">
-              <p permid="UOp">
-                <md permid="fBP">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -619,7 +619,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="AlE">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -647,19 +647,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="Vyj">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="gHi">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="BFs">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="zgl">
-              <p permid="AVy">
-                <md permid="LIY">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -670,7 +670,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="gsN">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -698,19 +698,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="hMB">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="MOr">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="NTK">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="fnu">
-              <p permid="hcH">
-                <md permid="rQh">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -721,7 +721,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="MzW">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -749,19 +749,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="uaT">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="sVA">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="aic">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="LuD">
-              <p permid="NjQ">
-                <md permid="XXq">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -772,7 +772,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="sHf">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -800,19 +800,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="Gpl">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="ZcJ">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="mwu">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="rBM">
-              <p permid="tqZ">
-                <md permid="Eez">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -823,7 +823,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="YOo">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -851,19 +851,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="SDD">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="FjS">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="yKM">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="XIV">
-              <p permid="Zyi">
-                <md permid="klI">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -874,7 +874,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="EVx">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -902,19 +902,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="eRV">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="lrb">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="KZe">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="DQe">
-              <p permid="FFr">
-                <md permid="QsR">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -925,7 +925,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="lcG">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -953,19 +953,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="rgn">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="Ryk">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="Xnw">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="jXn">
-              <p permid="lMA">
-                <md permid="wAa">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>

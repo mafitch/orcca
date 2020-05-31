@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-factoring-trinomials-with-a-nontrivial-leading-coefficient" permid="emf">
+<section xml:id="section-factoring-trinomials-with-a-nontrivial-leading-coefficient">
   <title>Factoring Trinomials with a Nontrivial Leading Coefficient</title>
-  <introduction permid="kZG">
-    <p permid="Xkw">
+  <introduction>
+    <p>
       In <xref ref="section-factoring-trinomials-with-leading-coefficient-one" />,
       we learned how to factor <m>ax^2+bx+c</m> when <m>a=1</m>.
       In this section, we will examine the situation when <m>a\neq1</m>.
@@ -17,47 +17,47 @@
       but there are a few important differences that will make or break your success in factoring these.
     </p>
   </introduction>
-  <subsection permid="Kto">
+  <subsection>
     <title>The AC Method</title>
     <idx><h>factoring</h><h>by the AC method</h></idx>
-    <p permid="vNg">
+    <p>
       <term>The AC Method</term> is a technique for factoring trinomials like <m>4x^2+5x-6</m>,
       where there is no greatest common factor,
       and the leading coefficient is not <m>1</m>.
     </p>
-    <p permid="bUp">
+    <p>
       Please note at this point that if we try the method in the previous section and ask ourselves the question
       <q>what two numbers multiply to be <m>-6</m> and add to be <m>5</m>?,</q>
       we might come to the <em>erroneous</em>
       conclusion that <m>4x^2+5x-6</m> factors as <m>(x+6)(x-1)</m>.
       If we expand <m>(x+6)(x-1)</m>, we get
-      <me permid="UpQ">
+      <me>
         (x+6)(x-1)=x^2+5x-6
       </me>
       This expression is <em>almost</em> correct,
       except for the missing leading coefficient, <m>4</m>.
       Dealing with this missing coefficient requires starting over with the AC method.
       If you are only interested in the steps for using the technique,
-      skip ahead to <xref ref="algorithm-the-ac-method">Process</xref>.
+      skip ahead to <xref ref="algorithm-the-ac-method"/>.
     </p>
-    <p permid="Iby">
+    <p>
       The example below explains <em>why</em> the AC Method works.
       Understanding all of the details might take a few rereads,
       and coming back to this example after mastering the algorithm may be the best course of action.
     </p>
-    <example permid="Ddk">
+    <example>
       <statement>
-        <p permid="mtu">
+        <p>
           Expand the expression <m>(px+q)(rx+s)</m> and analyze the result to gain an insight into
           <em>why</em> the AC method works.
           Then use this information to factor <m>4x^2+5x-6</m>.
         </p>
       </statement>
-      <solution permid="RgP">
-        <p permid="fUo">
+      <solution>
+        <p>
           Factoring is the opposite process from multiplying polynomials together.
           We can gain some insight into how to factor complicated polynomials by taking a closer look at what happens when two generic polynomials are multiplied together:
-          <mdn permid="JQL">
+          <mdn>
             <mrow number="no">(px+q)(rx+s)\amp=(px)(rx)+(px)s+q(rx)+q(s)</mrow>
             <mrow number="no">\amp=(pr)x^2+psx+qrx+qs</mrow>
             <mrow xml:id="equation-ac-method">\amp=(pr)x^2+(ps+qr)x+qs</mrow>
@@ -65,26 +65,26 @@
           When you encounter a trinomial like
           <m>4x^2+5x-6</m> and you wish to factor it,
           the leading coefficient, <m>4</m>,
-          is the <m>(pr)</m> from <xref ref="equation-ac-method">Equation</xref>.
+          is the <m>(pr)</m> from <xref ref="equation-ac-method"/>.
           Similarly, the <m>-6</m> is the <m>qs</m>,
           and the <m>5</m> is the <m>(qr+ps)</m>.
         </p>
-        <p permid="Mbx">
-          Now, if you multiply the leading coefficient and constant term from <xref ref="equation-ac-method">Equation</xref>,
+        <p>
+          Now, if you multiply the leading coefficient and constant term from <xref ref="equation-ac-method"/>,
           you have <m>(pr)(qs)</m>, which equals <m>pqrs</m>.
           Notice that if we factor this number in just the right way,
           <m>(qr)(ps)</m>,
-          then we have two factors that add to the middle coefficient from <xref ref="equation-ac-method">Equation</xref>,
+          then we have two factors that add to the middle coefficient from <xref ref="equation-ac-method"/>,
           <m>(qr+ps)</m>.
         </p>
-        <p permid="siG">
+        <p>
           Can we do all this with the example <m>4x^2+5x-6</m>?
           Multiplying <m>4</m> and <m>-6</m> makes <m>-24</m>.
           Is there some way to factor <m>-24</m> into two factors which add to <m>5</m>?
           We make a table of factor pairs for <m>-24</m> to see:
         </p>
-        <sidebyside widths="47% 47%" permid="vyL">
-          <tabular permid="pXU">
+        <sidebyside widths="47% 47%">
+          <tabular>
             <col right="minor"/>
             <col/>
             <row bottom="minor">
@@ -108,7 +108,7 @@
               <cell>(no need to go this far)</cell>
             </row>
           </tabular>
-          <tabular permid="Wfd">
+          <tabular>
             <col right="minor"/>
             <col/>
             <row bottom="minor">
@@ -133,15 +133,15 @@
             </row>
           </tabular>
         </sidebyside>
-        <p permid="YpP">
+        <p>
           So that <m>5</m> in <m>4x^2+5x-6</m>,
-          which is equal to the abstract <m>(qr+ps)</m> from <xref ref="equation-ac-method">Equation</xref>,
+          which is equal to the abstract <m>(qr+ps)</m> from <xref ref="equation-ac-method"/>,
           breaks down as <m>-3+8</m>.
           We can take <m>-3</m> to be the <m>qr</m> and <m>8</m> to be the <m>ps</m>.
           Once we intentionally break up the <m>5</m> this way, factoring by grouping
           (see <xref ref="section-factoring-by-grouping" />)
           can take over and is guaranteed to give us a factorization.
-          <md permid="MLr">
+          <md>
             <mrow>4x^2\overbrace{{}+5x}-6\amp=4x^2\overbrace{-3x+8x}-6</mrow>
             <intertext>Now that there are four terms, group them and factor out each group's greatest common factor.</intertext>
             <mrow>\phantom{4x^2+5x-6}\amp=\left(4x^2-3x\right)+\left(8x-6\right)</mrow>
@@ -155,34 +155,34 @@
         </p>
       </solution>
     </example>
-<!-- <p><term>The AC Method</term> is a technique for factoring trinomials like <m>2x^2+11x+12</m>, where there is no greatest common factor, and the leading coefficient is not <m>1</m>. If you are only interested in the steps for using the technique, skip ahead to <xref ref="algorithm-the-ac-method">Algorithm</xref>. Between here and there is a discussion that explains <em>why</em> the AC Method works.</p>
-<p>Factoring is the opposite process from multiplying polynomials together. We can gain some insight into how to factor complicated polynomials by taking a closer look at what happens when two generic polynomials are multiplied together:<mdn> <mrow number="no">(px+q)(rx+s)\amp=(px+q)(rx)+(px+q)s</mrow> <mrow number="no">\amp=(px)(rx)+q(rx)+(px)s+qs</mrow> <mrow number="no">\amp=(pr)x^2+qrx+psx+qs</mrow> <mrow xml:id="equation-ac-method">\amp=(pr)x^2+(qr+ps)x+qs</mrow> </mdn>When you encounter a trinomial like <m>2x^2+11x+12</m> and you wish to factor it, the leading coefficient <m>2</m> is the <m>(pr)</m> from <xref ref="equation-ac-method">Equation</xref>. Similarly, the <m>12</m> is the <m>qs</m>, and the <m>11</m> is the <m>(qr+ps)</m>.</p>
-<p>Now, if you multiply the leading coefficient and constant term from <xref ref="equation-ac-method">Equation</xref>, you have <m>(pr)(qs)</m>, which equals <m>pqrs</m>. Notice that if we factor this number in just the right way, <m>(qr)(ps)</m>, then we have two factors that add to the middle coefficient from <xref ref="equation-ac-method">Equation</xref>, <m>(qr+ps)</m>.</p>
+<!-- <p><term>The AC Method</term> is a technique for factoring trinomials like <m>2x^2+11x+12</m>, where there is no greatest common factor, and the leading coefficient is not <m>1</m>. If you are only interested in the steps for using the technique, skip ahead to <xref ref="algorithm-the-ac-method"/>. Between here and there is a discussion that explains <em>why</em> the AC Method works.</p>
+<p>Factoring is the opposite process from multiplying polynomials together. We can gain some insight into how to factor complicated polynomials by taking a closer look at what happens when two generic polynomials are multiplied together:<mdn> <mrow number="no">(px+q)(rx+s)\amp=(px+q)(rx)+(px+q)s</mrow> <mrow number="no">\amp=(px)(rx)+q(rx)+(px)s+qs</mrow> <mrow number="no">\amp=(pr)x^2+qrx+psx+qs</mrow> <mrow xml:id="equation-ac-method">\amp=(pr)x^2+(qr+ps)x+qs</mrow> </mdn>When you encounter a trinomial like <m>2x^2+11x+12</m> and you wish to factor it, the leading coefficient <m>2</m> is the <m>(pr)</m> from <xref ref="equation-ac-method"/>. Similarly, the <m>12</m> is the <m>qs</m>, and the <m>11</m> is the <m>(qr+ps)</m>.</p>
+<p>Now, if you multiply the leading coefficient and constant term from <xref ref="equation-ac-method"/>, <m>(qr+ps)</m>.</p>
 <p>Can we do all this with the example <m>2x^2+11x+12</m>? Multiplying <m>2</m> and <m>12</m> makes <m>24</m>. Is there some way to factor <m>24</m> into two factors which add to <m>11</m>? We make a table of factor pairs for <m>24</m> to see:</p> -->
-    <paragraphs permid="COP">
+    <paragraphs>
       <title>The AC Method</title>
-      <p permid="PFX">
+      <p>
         Here is a summary of the algorithm:
       </p>
-      <algorithm xml:id="algorithm-the-ac-method" permid="qOS">
+      <algorithm xml:id="algorithm-the-ac-method">
         <title>The AC Method</title>
-        <p permid="Gml">
+        <p>
           To factor <m>ax^2+bx+c</m>:
-          <ol permid="GHK">
-            <li permid="SWc">
-              <p permid="Zvi">
+          <ol>
+            <li>
+              <p>
                 Multiply <m>a\cdot c</m>.
               </p>
             </li>
-            <li permid="zdl">
-              <p permid="FCr">
+            <li>
+              <p>
                 Make a table of factor pairs for <m>ac</m>.
                 Look for a pair that adds to <m>b</m>.
                 If you cannot find one, the polynomial is prime.
               </p>
             </li>
-            <li permid="fku">
-              <p permid="lJA">
+            <li>
+              <p>
                 If you did find a factor pair summing to <m>b</m>,
                 replace <m>b</m> with an explicit sum,
                 using the pair of factors found in step 2, and distribute <m>x</m>.
@@ -194,24 +194,24 @@
           </ol>
         </p>
       </algorithm>
-      <example permid="WWb">
-        <p permid="SAD">
+      <example>
+        <p>
           Factor <m>10x^2+23x+6</m>.
-          <ol permid="mOT">
-            <li permid="LrD">
-              <p permid="RQJ">
+          <ol>
+            <li>
+              <p>
                 <m>10\cdot6=60</m>
               </p>
             </li>
-            <li permid="ryM">
-              <p permid="xXS">
+            <li>
+              <p>
                 Use a list of factor pairs for <m>60</m> to find that <m>3</m> and <m>20</m> are a pair that sums to <m>23</m>.
               </p>
             </li>
-            <li permid="XFV">
-              <p permid="efb">
+            <li>
+              <p>
                 Intentionally break up the <m>23</m> as <m>3+20</m>:
-                <md permid="sSA">
+                <md>
                   <mrow>\amp10x^2\overbrace{{}+23x}+6</mrow>
                   <mrow>\amp=10x^2\overbrace{{}+3x+20x}+6</mrow>
                   <mrow>\amp=\left(10x^2+3x\right)+(20x+6)</mrow>
@@ -224,32 +224,32 @@
         </p>
       </example>
     </paragraphs>
-    <example xml:id="example-factor-ac-2-5-3" permid="jkt">
+    <example xml:id="example-factor-ac-2-5-3">
       <statement>
-        <p permid="yHM">
+        <p>
           Factor <m>2x^2-5x-3</m>.
         </p>
       </statement>
-      <solution permid="xnY">
-        <p permid="EwY">
+      <solution>
+        <p>
           Always start the factoring process by examining if there is a greatest common factor.
           Here there is not one.
           Next, note that this is a trinomial with a leading coefficient that is not <m>1</m>.
           So the AC Method may be of help.
-          <ol permid="ifa">
-            <li permid="DNe">
-              <p permid="Kmk">
+          <ol>
+            <li>
+              <p>
                 Multiply <m>2\cdot(-3)=-6</m>.
               </p>
             </li>
-            <li permid="jUn">
-              <p permid="qtt">
+            <li>
+              <p>
                 Examine factor pairs that multiply to <m>-6</m>,
                 looking for a pair that sums to <m>-5</m>:
               </p>
  <!--TODO: This empty p is a hack because the following sbs is not supported in a list item, but this makes it work. Find a permanent solution.--> <p/>
-              <sidebyside widths="47% 47%" permid="bFU">
-                <tabular permid="Cmm">
+              <sidebyside widths="47% 47%">
+                <tabular>
                   <col right="minor"/>
                   <col/>
                   <row bottom="minor">
@@ -265,7 +265,7 @@
                     <cell>(no need to go this far)</cell>
                   </row>
                 </tabular>
-                <tabular permid="itv">
+                <tabular>
                   <col right="minor"/>
                   <col/>
                   <row bottom="minor">
@@ -283,10 +283,10 @@
                 </tabular>
               </sidebyside>
             </li>
-            <li permid="Qbw">
-              <p permid="WAC">
+            <li>
+              <p>
                 Intentionally break up the <m>-5</m> as <m>1+(-6)</m>:
-                <md permid="YZJ">
+                <md>
                   <mrow>2x^2\overbrace{{}-5x}-3\amp=2x^2\overbrace{{}+x-6x}-3</mrow>
                   <mrow>\amp=\left(2x^2+x\right)+(-6x-3)</mrow>
                   <mrow>\amp=x\highlight{(2x+1)}-3\highlight{(2x+1)}</mrow>
@@ -296,19 +296,19 @@
             </li>
           </ol>
         </p>
-        <p permid="kEh">
+        <p>
           So we believe that <m>2x^2-5x-3</m> factors as <m>(2x+1)(x-3)</m>,
           and we should check by multiplying out the factored form:
         </p>
-        <sidebyside widths="47% 47%" margins="0%" permid="HNd">
-          <p permid="QLq">
-            <md permid="FgS">
+        <sidebyside widths="47% 47%" margins="0%">
+          <p>
+            <md>
               <mrow>(2x+1)(x-3)\amp=2x\cdot x+2x\cdot (-3)+1\cdot x+1\cdot (-3)</mrow>
               <mrow>\amp=2x^2-6x+x-3</mrow>
               <mrow>\amp\stackrel{\checkmark}{=}2x^2-5x-3</mrow>
             </md>
           </p>
-          <tabular bottom="minor" halign="center" permid="OAE">
+          <tabular bottom="minor" halign="center">
             <row>
               <cell bottom="none"/>
               <cell><m>2x</m></cell>
@@ -326,37 +326,37 @@
             </row>
           </tabular>
         </sidebyside>
-        <p permid="wSz">
+        <p>
           Our factorization passes the tests.
         </p>
       </solution>
     </example>
-    <example xml:id="example-factor-ac-6-5-6" permid="PrC">
+    <example xml:id="example-factor-ac-6-5-6">
       <statement>
-        <p permid="eOV">
+        <p>
           Factor <m>6p^2+5pq-6q^2</m>.
           Note that this example has two variables,
           but that does not really change our approach.
         </p>
       </statement>
-      <solution permid="dvh">
-        <p permid="cZI">
+      <solution>
+        <p>
           There is no greatest common factor.
           Since this is a trinomial, we try the AC Method.
-          <ol permid="Omj">
-            <li permid="wiF">
-              <p permid="CHL">
+          <ol>
+            <li>
+              <p>
                 Multiply <m>6\cdot(-6)=-36</m>.
               </p>
             </li>
-            <li permid="cpO">
-              <p permid="iOU">
+            <li>
+              <p>
                 Examine factor pairs that multiply to <m>-36</m>,
                 looking for a pair that sums to <m>5</m>:
               </p>
  <!--TODO: This empty p is a hack because the following sbs is not supported in a list item, but this makes it work. Find a permanent solution.--> <p/>
-              <sidebyside widths="47% 47%" permid="nUm">
-                <tabular permid="uHN">
+              <sidebyside widths="47% 47%">
+                <tabular>
                   <col right="minor"/>
                   <col/>
                   <row bottom="minor">
@@ -384,7 +384,7 @@
                     <cell><m>0</m></cell>
                   </row>
                 </tabular>
-                <tabular permid="aOW">
+                <tabular>
                   <col right="minor"/>
                   <col/>
                   <row bottom="minor">
@@ -410,10 +410,10 @@
                 </tabular>
               </sidebyside>
             </li>
-            <li permid="IwX">
-              <p permid="OWd">
+            <li>
+              <p>
                 Intentionally break up the <m>5</m> as <m>-4+9</m>:
-                <md permid="lob">
+                <md>
                   <mrow>6p^2\overbrace{{}+5pq}-6q^2\amp=6p^2\overbrace{{}-4pq+9pq}-6q^2</mrow>
                   <mrow>\amp=\left(6p^2-4pq\right)+\left(9pq-6q^2\right)</mrow>
                   <mrow>\amp=2p\highlight{(3p-2q)}+3q\highlight{(3p-2q)}</mrow>
@@ -423,19 +423,19 @@
             </li>
           </ol>
         </p>
-        <p permid="JgR">
+        <p>
           So we believe that <m>6p^2+5pq-6q^2</m> factors as <m>(3p-2q)(2p+3q)</m>,
           and we should check by multiplying out the factored form:
         </p>
-        <sidebyside widths="47% 47%" margins="0%" permid="Ubv">
-          <p permid="poa">
-            <md permid="Rvk">
+        <sidebyside widths="47% 47%" margins="0%">
+          <p>
+            <md>
               <mrow>(3p-2q)(2p+3q)\amp=3p\cdot 2p+3p\cdot 3q-2q\cdot 2p-2q\cdot 3q</mrow>
               <mrow>\amp=6p^2+9pq-4pq-6q^2</mrow>
               <mrow>\amp\stackrel{\checkmark}{=}6p^2+5pq-6q^2</mrow>
             </md>
           </p>
-          <tabular bottom="minor" halign="center" permid="GWf">
+          <tabular bottom="minor" halign="center">
             <row>
               <cell bottom="none"/>
               <cell><m>3p</m></cell>
@@ -453,52 +453,52 @@
             </row>
           </tabular>
         </sidebyside>
-        <p permid="Vvj">
+        <p>
           Our factorization passes the tests.
         </p>
       </solution>
     </example>
   </subsection>
-  <subsection permid="qAx">
+  <subsection>
     <title>Factoring in Stages</title>
-    <p permid="oiH">
+    <p>
       Sometimes factoring a polynomial will take two or more
       <q>stages.</q>
       For instance you may need to begin factoring a polynomial by factoring out its greatest common factor,
       and <em>then</em> apply a second stage where you use a technique from this section.
       The process of factoring a polynomial is not complete until each of the factors cannot be factored further.
     </p>
-    <example permid="AiE">
+    <example>
       <statement>
-        <p permid="KWe">
+        <p>
           Factor <m>18n^2-21n-60</m>.
         </p>
       </statement>
-      <solution permid="JCq">
-        <p permid="BCs">
+      <solution>
+        <p>
           Notice that <m>3</m> is a common factor in this trinomial.
           We should factor it out first:
-          <me permid="AwZ">
+          <me>
             18n^2-21n-60=3\left(6n^2-7n-20\right)
           </me>
           Now we are left with two factors,
           one of which is <m>6n^2-7n-20</m>,
           which might factor further.
           Using the AC Method:
-          <ol permid="uts">
-            <li permid="oEg">
-              <p permid="vdm">
+          <ol>
+            <li>
+              <p>
                 <m>6\cdot-20=-120</m>
               </p>
             </li>
-            <li permid="ULp">
-              <p permid="bkv">
+            <li>
+              <p>
                 Examine factor pairs that multiply to <m>-120</m>,
                 looking for a pair that sums to <m>-7</m>:
               </p>
  <!--TODO: This empty p is a hack because the following sbs is not supported in a list item, but this makes it work. Find a permanent solution.--> <p/>
-              <sidebyside widths="47% 47%" permid="MwW">
-                <tabular permid="ndo">
+              <sidebyside widths="47% 47%">
+                <tabular>
                   <col right="minor"/>
                   <col/>
                   <row bottom="minor">
@@ -538,7 +538,7 @@
                     <cell>(no need to go this far)</cell>
                   </row>
                 </tabular>
-                <tabular permid="Tkx">
+                <tabular>
                   <col right="minor"/>
                   <col/>
                   <row bottom="minor">
@@ -580,10 +580,10 @@
                 </tabular>
               </sidebyside>
             </li>
-            <li permid="ASy">
-              <p permid="HrE">
+            <li>
+              <p>
                 Intentionally break up the <m>-7</m> as <m>8+(-15)</m>:
-                <md permid="xCt">
+                <md>
                   <mrow>18n^2-21n-60  \amp=3\left(6n^2\overbrace{{}-7n}-20\right)</mrow>
                   <mrow>\amp=3\left(6n^2\overbrace{{}+8n-15n}-20\right)</mrow>
                   <mrow>\amp=3\left((6n^2+8n)+(-15n-20)\right)</mrow>
@@ -594,45 +594,45 @@
             </li>
           </ol>
         </p>
-        <p permid="hJB">
+        <p>
           So we believe that <m>18n^2-21n-60</m> factors as <m>3(3n+4)(2n-5)</m>,
           and you should check by multiplying out the factored form.
         </p>
       </solution>
     </example>
-    <example permid="gpN">
+    <example>
       <statement>
-        <p permid="rdn">
+        <p>
           Factor <m>-16x^3y-12x^2y+18xy</m>.
         </p>
       </statement>
-      <solution permid="pJz">
-        <p permid="NQK">
+      <solution>
+        <p>
           Notice that <m>2xy</m> is a common factor in this trinomial.
           Also the leading coefficient is negative,
           and as discussed in <xref ref="section-factoring-out-the-common-factor" />,
           it is wise to factor out the negative as well.
           So we find:
-          <me permid="gEi">
+          <me>
             -16x^3y-12x^2y+18xy=-2xy\left(8x^2+6x-9\right)
           </me>
           Now we are left with one factor being <m>8x^2+6x-9</m>,
           which might factor further.
           Using the AC Method:
-          <ol permid="aAB">
-            <li permid="gZH">
-              <p permid="nyN">
+          <ol>
+            <li>
+              <p>
                 <m>8\cdot-9=-72</m>
               </p>
             </li>
-            <li permid="NgQ">
-              <p permid="TFW">
+            <li>
+              <p>
                 Examine factor pairs that multiply to <m>-72</m>,
                 looking for a pair that sums to <m>6</m>:
               </p>
  <!--TODO: This empty p is a hack because the following sbs is not supported in a list item, but this makes it work. Find a permanent solution.--> <p/>
-              <sidebyside widths="47% 47%" permid="sEf">
-                <tabular permid="zrG">
+              <sidebyside widths="47% 47%">
+                <tabular>
                   <col right="minor"/>
                   <col/>
                   <row bottom="minor">
@@ -664,7 +664,7 @@
                     <cell><m>-1</m></cell>
                   </row>
                 </tabular>
-                <tabular permid="fyP">
+                <tabular>
                   <col right="minor"/>
                   <col/>
                   <row bottom="minor">
@@ -698,10 +698,10 @@
                 </tabular>
               </sidebyside>
             </li>
-            <li permid="tnZ">
-              <p permid="zNf">
+            <li>
+              <p>
                 Intentionally break up the <m>6</m> as <m>-6+12</m>:
-                <md permid="dJC">
+                <md>
                   <mrow>-16x^3y-12x^2y+18xy\amp=-2xy\left(8x^2\overbrace{{}+6x}-9\right)</mrow>
                   <mrow>\amp=-2xy\left(8x^2\overbrace{{}-6x+12x}-9\right)</mrow>
                   <mrow>\amp=-2xy\left((8x^2-6x)+(12x-9)\right)</mrow>
@@ -712,283 +712,283 @@
             </li>
           </ol>
         </p>
-        <p permid="tXT">
+        <p>
           So we believe that <m>-16x^3y-12x^2y+18xy</m> factors as <m>-2xy(4x-3)(2x+3)</m>,
           and you should check by multiplying out the factored form.
         </p>
       </solution>
     </example>
   </subsection>
-  <exercises permid="WHG">
-    <exercisegroup cols="3" permid="iVY">
+  <exercises>
+    <exercisegroup cols="3">
       <title>Review and Warmup</title>
-      <exercise permid="brz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication60.pg"/>
       </exercise>
-      <exercise permid="HyI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication60.pg"/>
       </exercise>
-      <exercise permid="nFR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication65.pg"/>
       </exercise>
-      <exercise permid="TNa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication65.pg"/>
       </exercise>
-      <exercise permid="zUj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication75.pg"/>
       </exercise>
-      <exercise permid="gbs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication75.pg"/>
       </exercise>
-      <exercise permid="MiB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication85.pg"/>
       </exercise>
-      <exercise permid="spK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication85.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="3" permid="Pdh">
+    <exercisegroup cols="3">
       <title>Factoring Trinomials with a Nontrivial Leading Coefficient</title>
-      <exercise permid="YwT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring185.pg"/>
       </exercise>
-      <exercise permid="EEc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring185.pg"/>
       </exercise>
-      <exercise permid="kLl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring190.pg"/>
       </exercise>
-      <exercise permid="QSu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring190.pg"/>
       </exercise>
-      <exercise permid="wZD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring195.pg"/>
       </exercise>
-      <exercise permid="dgM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring195.pg"/>
       </exercise>
-      <exercise permid="JnV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring200.pg"/>
       </exercise>
-      <exercise permid="pve">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring200.pg"/>
       </exercise>
-      <exercise permid="VCn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring205.pg"/>
       </exercise>
-      <exercise permid="BJw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring205.pg"/>
       </exercise>
-      <exercise permid="hQF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring210.pg"/>
       </exercise>
-      <exercise permid="NXO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring210.pg"/>
       </exercise>
-      <exercise permid="ueX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring215.pg"/>
       </exercise>
-      <exercise permid="amg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring215.pg"/>
       </exercise>
-      <exercise permid="Gtp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring220.pg"/>
       </exercise>
-      <exercise permid="mAy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring220.pg"/>
       </exercise>
-      <exercise permid="SHH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring225.pg"/>
       </exercise>
-      <exercise permid="yOQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring225.pg"/>
       </exercise>
-      <exercise permid="eVZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring230.pg"/>
       </exercise>
-      <exercise permid="Ldi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring230.pg"/>
       </exercise>
 <!-- one variable, GCF -->
-      <exercise permid="rkr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring280.pg"/>
       </exercise>
-      <exercise permid="XrA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring280.pg"/>
       </exercise>
-      <exercise permid="DyJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring285.pg"/>
       </exercise>
-      <exercise permid="jFS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring285.pg"/>
       </exercise>
-      <exercise permid="PNb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring290.pg"/>
       </exercise>
-      <exercise permid="vUk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring290.pg"/>
       </exercise>
-      <exercise permid="cbt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring295.pg"/>
       </exercise>
-      <exercise permid="IiC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring295.pg"/>
       </exercise>
-      <exercise permid="opL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring300.pg"/>
       </exercise>
-      <exercise permid="UwU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring300.pg"/>
       </exercise>
-      <exercise permid="AEd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring305.pg"/>
       </exercise>
-      <exercise permid="gLm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring305.pg"/>
       </exercise>
 <!-- two variable, no GCF -->
-      <exercise permid="MSv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring186.pg"/>
       </exercise>
-      <exercise permid="sZE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring186.pg"/>
       </exercise>
-      <exercise permid="ZgN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring191.pg"/>
       </exercise>
-      <exercise permid="FnW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring191.pg"/>
       </exercise>
-      <exercise permid="lvf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring196.pg"/>
       </exercise>
-      <exercise permid="RCo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring196.pg"/>
       </exercise>
-      <exercise permid="xJx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring235.pg"/>
       </exercise>
-      <exercise permid="dQG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring235.pg"/>
       </exercise>
-      <exercise permid="JXP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring240.pg"/>
       </exercise>
-      <exercise permid="qeY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring240.pg"/>
       </exercise>
-      <exercise permid="Wmh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring245.pg"/>
       </exercise>
-      <exercise permid="Ctq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring245.pg"/>
       </exercise>
-      <exercise permid="iAz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring250.pg"/>
       </exercise>
-      <exercise permid="OHI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring250.pg"/>
       </exercise>
-      <exercise permid="uOR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring255.pg"/>
       </exercise>
-      <exercise permid="aWa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring255.pg"/>
       </exercise>
-      <exercise permid="Hdj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring260.pg"/>
       </exercise>
-      <exercise permid="nks">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring260.pg"/>
       </exercise>
-      <exercise permid="TrB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring265.pg"/>
       </exercise>
-      <exercise permid="zyK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring265.pg"/>
       </exercise>
-      <exercise permid="fFT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring270.pg"/>
       </exercise>
-      <exercise permid="LNc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring270.pg"/>
       </exercise>
-      <exercise permid="rUl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring275.pg"/>
       </exercise>
-      <exercise permid="Ybu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring275.pg"/>
       </exercise>
 <!-- two variable, GCF -->
-      <exercise permid="EiD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring281.pg"/>
       </exercise>
-      <exercise permid="kpM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring281.pg"/>
       </exercise>
-      <exercise permid="QwV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring286.pg"/>
       </exercise>
-      <exercise permid="wEe">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring286.pg"/>
       </exercise>
-      <exercise permid="cLn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring306.pg"/>
       </exercise>
-      <exercise permid="ISw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring306.pg"/>
       </exercise>
-      <exercise permid="oZF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring310.pg"/>
       </exercise>
-      <exercise permid="VgO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring310.pg"/>
       </exercise>
-      <exercise permid="BnX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring315.pg"/>
       </exercise>
-      <exercise permid="hvg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring315.pg"/>
       </exercise>
-      <exercise permid="NCp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring320.pg"/>
       </exercise>
-      <exercise permid="tJy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring320.pg"/>
       </exercise>
-      <exercise permid="ZQH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring325.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2">
-      <exercise permid="FXQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring325.pg"/>
       </exercise>
-      <exercise width="wide" permid="meZ">
+      <exercise width="wide">
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring330.pg"/>
       </exercise>
-      <exercise width="wide" permid="Smi">
+      <exercise width="wide">
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring330.pg"/>
       </exercise>
 <!-- something more -->
-      <exercise width="wide" permid="ytr">
+      <exercise width="wide">
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring330.pg"/>
       </exercise>
-      <exercise width="wide" permid="eAA">
+      <exercise width="wide">
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring330.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2">
-    <exercise permid="YLo">
+    <exercise>
       <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring335.pg"/>
     </exercise>
-    <exercise permid="ESx">
+    <exercise>
       <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring335.pg"/>
     </exercise>
   </exercisegroup>
-    <exercisegroup permid="vkq">
+    <exercisegroup>
       <title>Challenge</title>
-      <exercise permid="KHJ">
+      <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
             <setup>
@@ -1016,21 +1016,21 @@ $expression = Formula("3x^2+bx+$c")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="DrF">
+              <p>
                 What integers can go in the place of <m>b</m> so that the quadratic expression <m><var name="$expression"/></m> is factorable?
               </p>
               <instruction>
                 Enter the solutions as a comma-separated list.
               </instruction>
-              <p permid="jyO">
+              <p>
                 <var name="$answer" width="30"/>
               </p>
             </statement>
-            <hint permid="BXR">
+            <hint>
               There are <var name="$n"/> answers.
             </hint>
-            <solution permid="VQI">
-              <p permid="afc">
+            <solution>
+              <p>
                 Recall the
                 <q>AC</q>
                 method.

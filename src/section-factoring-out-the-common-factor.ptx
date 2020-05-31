@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-factoring-out-the-common-factor" permid="JBQ">
+<section xml:id="section-factoring-out-the-common-factor">
   <title>Factoring out the Common Factor</title>
-  <introduction permid="vMG">
-    <p permid="owC">
+  <introduction>
+    <p>
       In <xref ref="chapter-exponents-and-polynomials" />,
       we learned how to multiply polynomials,
       such as when you start with
@@ -22,9 +22,9 @@
       for example starting with <m>x^2+2x</m> and obtaining <m>x(x+2)</m>.
     </p>
   </introduction>
-  <subsection permid="pIZ">
+  <subsection>
     <title>Motivation for Factoring</title>
-    <p permid="MZm">
+    <p>
       When you write <m>x^2+2x</m>,
       you have an algebraic expression built with two terms<mdash/>two parts that are
       <em>added</em> together.
@@ -36,20 +36,20 @@
       having your expression written as parts that are <em>multiplied</em>
       together makes it easy to simplify the expression.
     </p>
-    <p permid="tgv">
+    <p>
       You've seen this with fractions.
       To simplify <m>\frac{15}{35}</m>,
       breaking down the numerator and denominator into factors is useful:
       <m>\frac{3\cdot5}{7\cdot5}</m>.
       Now you can see that the factors of <m>5</m> cancel. <!-- But if you had started with the numerator and denominator broken into additive parts like <m>\frac{7+8}{22+13}</m>, that's just not helpful to simplify the fraction. -->
     </p>
-    <p permid="ZnE">
+    <p>
       There are a few other reasons to appreciate the value of factoring that will float to the surface in this chapter and beyond.
     </p>
   </subsection>
-  <subsection permid="VQi">
+  <subsection>
     <title>Identifying the Greatest Common Factor</title>
-    <p permid="FuN">
+    <p>
       The most basic technique for factoring involves recognizing the
       <term>greatest common factor</term>
           <idx><h>G.C.F.</h></idx>
@@ -59,7 +59,7 @@
       For example,
       the greatest common factor between <m>6</m> and <m>8</m> is <m>2</m> since <m>2</m> is a factor of both <m>6</m> and <m>8</m> and no larger number would divide both <m>6</m> and <m>8</m> evenly.
     </p>
-    <p permid="lBW">
+    <p>
       Similarly, the greatest common factor between <m>4x</m> and <m>3x^2</m> is <m>x</m>.
       If you write <m>4x</m> as a product of its factors,
       you have <m>2\cdot 2 \cdot x</m>.
@@ -68,12 +68,12 @@
       The only factor they have in common is <m>x</m>,
       so that is the greatest common factor.
     </p>
-    <example permid="SAd">
+    <example>
       <title>Finding the Greatest Common Factor</title>
-      <p permid="BQn">
+      <p>
         What is the common factor between <m>6x^2</m> and <m>70x</m>?
         Break down each of these into its prime factors:
-        <md permid="Hka">
+        <md>
           <mrow>6x^2 \amp =2\cdot3\cdot x\cdot x \amp 70x \amp =2\cdot5\cdot7\cdot x</mrow>
           <intertext>Identify the common factors:</intertext>
           <mrow>6x^2 \amp =\attention{2}\cdot3\cdot \attention{x}\cdot x \amp 70x \amp =\attention{2}\cdot5\cdot7\cdot \attention{x}</mrow>
@@ -82,10 +82,10 @@
         the greatest common factor is <m>2x</m>.
       </p>
     </example>
-    <p permid="RJf">
+    <p>
       Let's try a few more examples.
     </p>
-    <exercise permid="yHm">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -93,30 +93,30 @@ Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
 </pg-code>
           </setup>
           <statement>
-            <p permid="UDL">
-              <ol label="a." permid="sSa">
-                <li permid="YZj">
-                  <p permid="kii">
+            <p>
+              <ol label="a.">
+                <li>
+                  <p>
                     The greatest common factor between <m>6x</m> and <m>8x</m> is <var name="'2x'" width="10"/>.
                   </p>
                 </li>
-                <li permid="Fgs">
-                  <p permid="Qpr">
+                <li>
+                  <p>
                     The greatest common factor between <m>14x^2</m> and <m>10x</m> is <var name="'2x'" width="10"/>.
                   </p>
                 </li>
-                <li permid="lnB">
-                  <p permid="wwA">
+                <li>
+                  <p>
                     The greatest common factor between <m>6y^2</m> and <m>7y^2</m> is <var name="'y^2'" width="10"/>.
                   </p>
                 </li>
-                <li permid="RuK">
-                  <p permid="cDJ">
+                <li>
+                  <p>
                     The greatest common factor between <m>12xy^2</m> and <m>9xy</m> is <var name="'3xy'" width="10"/>.
                   </p>
                 </li>
-                <li permid="xBT">
-                  <p permid="IKS">
+                <li>
+                  <p>
                     The greatest common factor between <m>6x^3</m>,
                     <m>2x^2</m>, and <m>8x</m> is <var name="'2x'" width="10"/>.
                   </p>
@@ -124,72 +124,72 @@ Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
               </ol>
             </p>
           </statement>
-          <solution permid="bTP">
-            <p permid="xgu">
-              <ol label="a." permid="oih">
-                <li permid="dJc">
-                  <p permid="oSb">
+          <solution>
+            <p>
+              <ol label="a.">
+                <li>
+                  <p>
                     Since the prime factorization of <m>6x</m> is <m>\attention{2}\cdot3\cdot \attention{x}</m> <ellipsis/>
                   </p>
-                  <p permid="UZk">
+                  <p>
                     <ellipsis/> and <m>8x</m> completely factors
                     (meaning into prime factors)
                     as <m>\attention{2}\cdot2\cdot2\cdot \attention{x}</m>,
                     <ellipsis/>
                   </p>
-                  <p permid="Bgt">
+                  <p>
                     <ellipsis/> the greatest common factor is <m>2x</m>.
                   </p>
                 </li>
-                <li permid="JQl">
-                  <p permid="hnC">
+                <li>
+                  <p>
                     Since the prime factorization of <m>14x^2</m> is <m>\attention{2}\cdot7\cdot \attention{x}\cdot x</m> <ellipsis/>
                   </p>
-                  <p permid="NuL">
+                  <p>
                     <ellipsis/> and <m>10x</m> completely factors as <m>\attention{2}\cdot5\cdot \attention{x}</m>,
                     <ellipsis/>
                   </p>
-                  <p permid="tBU">
+                  <p>
                     <ellipsis/> the greatest common factor is <m>2x</m>.
                   </p>
                 </li>
-                <li permid="pXu">
-                  <p permid="ZJd">
+                <li>
+                  <p>
                     Since the prime factorization of <m>6y^2</m> is <m>2\cdot3\cdot \attention{y}\cdot \attention{y}</m> <ellipsis/>
                   </p>
-                  <p permid="FQm">
+                  <p>
                     <ellipsis/> and <m>7y^2</m> completely factors as <m>7\cdot\attention{y}\cdot\attention{y}</m>,
                     <ellipsis/>
                   </p>
-                  <p permid="lXv">
+                  <p>
                     <ellipsis/> the greatest common factor is <m>y^2</m>.
                   </p>
                 </li>
-                <li permid="WeD">
-                  <p permid="SeE">
+                <li>
+                  <p>
                     Since <m>12xy^2</m> completely factors as <m>2\cdot2\cdot\attention{3}\cdot \attention{x}\cdot \attention{y}\cdot y</m> <ellipsis/>
                   </p>
-                  <p permid="ylN">
+                  <p>
                     <ellipsis/> and the prime factorization of <m>9xy</m> is <m>\attention{3}\cdot3\cdot \attention{x}\cdot \attention{y}</m>,
                     <ellipsis/>
                   </p>
-                  <p permid="esW">
+                  <p>
                     <ellipsis/> the greatest common factor is <m>3xy</m>.
                   </p>
                 </li>
-                <li permid="ClM">
-                  <p permid="KAf">
+                <li>
+                  <p>
                     Since <m>6x^3</m> completely factors as <m>\attention{2}\cdot3\cdot \attention{x}\cdot x\cdot x</m> <ellipsis/>
                   </p>
-                  <p permid="qHo">
+                  <p>
                     <ellipsis/>, <m>2x^2</m> completely factors as <m>\attention{2}\cdot\attention{x}\cdot x</m>,
                     <ellipsis/>
                   </p>
-                  <p permid="WOx">
+                  <p>
                     <ellipsis/> and <m>8x</m> completely factors as <m>\attention{2}\cdot2\cdot2\cdot\attention{x}</m>,
                     <ellipsis/>
                   </p>
-                  <p permid="CVG">
+                  <p>
                     <ellipsis/> the greatest common factor is <m>2x</m>.
                   </p>
                 </li>
@@ -199,9 +199,9 @@ Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
       </webwork>
     </exercise>
   </subsection>
-  <subsection permid="BXr">
+  <subsection>
     <title>Factoring Out the Greatest Common Factor</title>
-    <p permid="xQo">
+    <p>
       We have learned the distributive property: <m>a(b+c)=ab+ac</m>.
       Perhaps you have thought of this as a way to
       <q>distribute</q>
@@ -213,27 +213,27 @@ Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
       In that example, we factored out <m>a</m>,
       which is the common factor between <m>ab</m> and <m>ac</m>.
     </p>
-    <p permid="dXx">
+    <p>
       The following steps use the distributive property to factor out the greatest common factor between two or more terms.
     </p>
-    <paragraphs permid="aAb">
+    <paragraphs>
       <title>Factoring Out the Greatest Common Factor by Filling in the Blank</title>
-      <algorithm xml:id="algorithm-factor-gcf" permid="NQk">
+      <algorithm xml:id="algorithm-factor-gcf">
         <statement>
-          <p permid="pBV">
-            <ol permid="Upq">
-              <li permid="isV">
-                <p permid="jcP">
+          <p>
+            <ol>
+              <li>
+                <p>
                   Identify the greatest common factor of all terms.
                 </p>
               </li>
-              <li permid="OAe">
-                <p permid="PjY">
+              <li>
+                <p>
                   Write the greatest common factor outside a pair of parentheses with the appropriate addition or subtraction signs inside.
                 </p>
               </li>
-              <li permid="uHn">
-                <p permid="vrh">
+              <li>
+                <p>
                   For each term from the original expression,
                   what would you multiply the greatest common factor by to result in that term?
                   Write your answer in the parentheses.
@@ -243,22 +243,22 @@ Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
           </p>
         </statement>
       </algorithm>
-      <example permid="tXt">
-        <p permid="hXw">
+      <example>
+        <p>
           To factor <m>12x^2+15x</m>:
-          <ol permid="gDI">
-            <li permid="aOw">
-              <p permid="byq">
+          <ol>
+            <li>
+              <p>
                 The greatest common factor between <m>12x^2</m> and <m>15x</m> is <m>3x</m>.
               </p>
             </li>
-            <li permid="GVF">
-              <p permid="HFz">
+            <li>
+              <p>
                 <m>3x(\phantom{4x}+\phantom{5})</m>
               </p>
             </li>
-            <li permid="ncO">
-              <p permid="nMI">
+            <li>
+              <p>
                 <m>3x(4x+5)</m>
               </p>
             </li>
@@ -266,68 +266,68 @@ Context()-&gt;variables-&gt;are(x=&gt;'Real',y=&gt;'Real');
         </p>
       </example>
     </paragraphs>
-    <p permid="KeG">
+    <p>
       Let's look at a few examples.
     </p>
-    <example xml:id="example-factor-out-common-factor-trailing-9" permid="eOv">
-      <p permid="OeF">
+    <example xml:id="example-factor-out-common-factor-trailing-9">
+      <p>
         Factor the polynomial <m>3x^3+3x^2-9</m>.
       </p>
-      <p permid="ulO">
-        <ol label="a." permid="MKR">
-          <li permid="TjX">
-            <p permid="TTR">
+      <p>
+        <ol label="a.">
+          <li>
+            <p>
               We identify the greatest common factor as <m>3</m>,
               because <m>3</m> is the only common factor between <m>3x^3</m>,
               <m>3x^2</m> and <m>9</m>.
             </p>
           </li>
-          <li permid="zrg">
-            <p permid="Aba">
+          <li>
+            <p>
               We write:
-              <me permid="CAh">
+              <me>
                 3x^3+3x^2-9=3(\phantom{x^2}+\phantom{x^2}-\phantom{3})
               </me>.
             </p>
           </li>
-          <li permid="fyp">
-            <p permid="gij">
+          <li>
+            <p>
               We ask the question
               <q><m>3</m> times what gives <m>3x^3</m>?</q>
               The answer is <m>x^3</m>.
               Now we have:
-              <me permid="iHq">
+              <me>
                 3x^3+3x^2-9=3(x^3+\phantom{x^2}-\phantom{3})
               </me>.
             </p>
-            <p permid="Mps">
+            <p>
               We ask the question
               <q><m>3</m> times what gives <m>3x^2</m>?</q>
               The answer is <m>x^2</m>.
               Now we have:
-              <me permid="OOz">
+              <me>
                 3x^3+3x^2-9=3(x^3+x^2-\phantom{3})
               </me>.
             </p>
-            <p permid="swB">
+            <p>
               We ask the question
               <q><m>3</m> times what gives <m>9</m>?</q>
               The answer is <m>3</m>.
               Now we have:
-              <me permid="uVI">
+              <me>
                 3x^3+3x^2-9=3(x^3+x^2-3)
               </me>.
             </p>
           </li>
         </ol>
       </p>
-      <p permid="asX">
+      <p>
         To check that this is correct,
         multiplying through <m>3(x^3+x^2-3)</m> should give the original expression <m>3x^3+3x^2-9</m>.
         We check this, and it does.
       </p>
     </example>
-    <exercise xml:id="example-factor-out-common-factor-trailing-9x" permid="KVE">
+    <exercise xml:id="example-factor-out-common-factor-trailing-9x">
       <webwork>
           <pg-macros><macro-file>contextLimitedFactor.pl</macro-file></pg-macros>
           <setup>
@@ -338,30 +338,30 @@ $answer=Formula("4x(x^2+3x-3)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="AKU">
+            <p>
               Factor the polynomial <m>4x^3+12x^2-12x</m>.
             </p>
-            <p permid="gSd">
+            <p>
               <var name="$answer" width="20"/>
             </p>
           </statement>
-          <solution permid="IaY">
-            <p permid="dnD">
+          <solution>
+            <p>
               In this exercise, <m>4x</m> is the greatest common factor.
               We find
-              <md permid="nrj">
+              <md>
                 <mrow>4x^3+12x^2-12x\amp=4x(\phantom{x^2}+\phantom{3x}-\phantom{3})</mrow>
                 <mrow>\amp=4x(x^2+\phantom{3x}-\phantom{3})</mrow>
                 <mrow>\amp=4x(x^2+3x-\phantom{3})</mrow>
                 <mrow>\amp=4x(x^2+3x-3)</mrow>
               </md>
             </p>
-            <p permid="JuM">
+            <p>
               Note that you might fail to recognize that <m>4x</m> is the greatest common factor.
               At first you might only find that, say,
               <m>4</m> is a common factor or even <m>2</m>.
               This is OK<mdash/>you can factor out the <m>4</m> first and continue from there:
-              <md permid="Tys">
+              <md>
                 <mrow>4x^3+12x^2-12x\amp=4(\phantom{x^3}+\phantom{3x^2}-\phantom{3})</mrow>
                 <mrow>\amp=4(x^3+\phantom{3x^2}-\phantom{3x})</mrow>
                 <mrow>\amp=4(x^3+3x^2-\phantom{3x})</mrow>
@@ -375,38 +375,38 @@ $answer=Formula("4x(x^2+3x-3)");
       </webwork>
     </exercise>
   </subsection>
-  <subsection permid="ieA">
+  <subsection>
     <title>Visualizing With Rectangles</title>
-    <p permid="qlP">
+    <p>
       In <xref ref="section-multiplying-polynomials" />,
       we learned one way to multiply polynomials using rectangle diagrams.
       Similarly, we can factor a polynomial with a rectangle diagram.
     </p>
-    <paragraphs permid="GHk">
+    <paragraphs>
       <title>Factoring Out the Greatest Common Factor Using Rectangles</title>
-      <algorithm permid="aeC">
+      <algorithm>
         <statement>
-          <p permid="VJe">
-            <ol permid="Awz">
-              <li permid="LFy">
-                <p permid="YDK">
+          <p>
+            <ol>
+              <li>
+                <p>
                   Put the terms into adjacent rectangles.
                   Think of these as labeling the areas of each rectangle.
                 </p>
               </li>
-              <li permid="rMH">
-                <p permid="EKT">
+              <li>
+                <p>
                   Identify the greatest common factor,
                   and mark the height of the overall rectangle with it.
                 </p>
               </li>
-              <li permid="XTQ">
-                <p permid="kSc">
+              <li>
+                <p>
                   Mark the base of each rectangle based on each rectangle's area and height.
                 </p>
               </li>
-              <li permid="EaZ">
-                <p permid="QZl">
+              <li>
+                <p>
                   Since the overall rectangle's area equals its base times its height,
                   the height is one factor, and the sum of the widths is another factor.
                 </p>
@@ -415,14 +415,14 @@ $answer=Formula("4x(x^2+3x-3)");
           </p>
         </statement>
       </algorithm>
-      <example permid="GlL">
-        <p permid="GAg">
+      <example>
+        <p>
           We will factor <m>12x^2+15x</m>,
-          the same polynomial from the example in <xref ref="algorithm-factor-gcf">Process</xref>,
+          the same polynomial from the example in <xref ref="algorithm-factor-gcf"/>,
           so that you may compare the two styles.
         </p>
-        <sidebyside widths="32% 32% 32%" margins="0%" valign="bottom" permid="msU">
-          <tabular bottom="minor" halign="right" permid="sbc">
+        <sidebyside widths="32% 32% 32%" margins="0%" valign="bottom">
+          <tabular bottom="minor" halign="right">
             <row>
               <cell bottom="none"/>
               <cell/>
@@ -434,7 +434,7 @@ $answer=Formula("4x(x^2+3x-3)");
               <cell right="minor"><m>15x</m></cell>
             </row>
           </tabular>
-          <tabular bottom="minor" halign="right" permid="Yil">
+          <tabular bottom="minor" halign="right">
             <row>
               <cell bottom="none"/>
               <cell/>
@@ -446,7 +446,7 @@ $answer=Formula("4x(x^2+3x-3)");
               <cell right="minor"><m>15x</m></cell>
             </row>
           </tabular>
-          <tabular bottom="minor" halign="right" permid="Epu">
+          <tabular bottom="minor" halign="right">
             <row>
               <cell bottom="none"/>
               <cell><m>4x</m></cell>
@@ -459,23 +459,23 @@ $answer=Formula("4x(x^2+3x-3)");
             </row>
           </tabular>
         </sidebyside>
-        <p permid="mHp">
+        <p>
           So <m>12x^2+15x</m> factors as <m>3x(4x+5)</m>.
         </p>
       </example>
     </paragraphs>
   </subsection>
-  <subsection permid="OlJ">
+  <subsection>
     <title>More Examples of Factoring out the Greatest Common Factor</title>
-    <p permid="WsY">
+    <p>
       Previous examples did not cover every nuance with factoring out the greatest common factor.
       Here are a few more factoring examples that attempt to do so.
     </p>
-    <example permid="rcN">
-      <p permid="SOy">
+    <example>
+      <p>
         Factor <m>-35m^5+5m^4-10m^3</m>.
       </p>
-      <p permid="yVH">
+      <p>
         First, we identify the greatest common factor.
         The number <m>5</m> is the greatest common factor of the three coefficients
         (which were <m>-35</m>, <m>5</m>, and <m>-10</m>)
@@ -483,13 +483,13 @@ $answer=Formula("4x(x^2+3x-3)");
         <m>m^4</m>, and <m>m^3</m>.
         Therefore, the greatest common factor is <m>5m^3</m>.
       </p>
-      <p permid="fcQ">
+      <p>
         In this example, the leading term is a negative number.
         When this happens,
         we will make it common practice to take that negative as part of the greatest common factor.
         So we will proceed by factoring out <m>-5m^3</m>.
         Note the sign changes.
-        <md permid="zFB">
+        <md>
           <mrow>-35m^5\highlight{{}+{}}5m^4\highlight{{}-{}}10m^3\amp=-5m^3(\phantom{7m^2}\highlight{{}-{}}\phantom{m}\highlight{{}+{}}\phantom{2})</mrow>
           <mrow>\amp=-5m^3(7m^2-\phantom{m}+\phantom{2})</mrow>
           <mrow>\amp=-5m^3(7m^2-m+\phantom{2})</mrow>
@@ -497,51 +497,51 @@ $answer=Formula("4x(x^2+3x-3)");
         </md>
       </p>
     </example>
-    <example permid="XjW">
-      <p permid="LjZ">
+    <example>
+      <p>
         Factor <m>14-7n^2+28n^4-21n</m>.
       </p>
-      <p permid="rri">
+      <p>
         Notice that the terms are not in a standard order,
         with powers of <m>n</m> decreasing as you read left to right.
         It is usually a best practice to rearrange the terms into the standard order first.
-        <me permid="bcR">
+        <me>
           14-7n^2+28n^4-21n=28n^4-7n^2-21n+14
         </me>.
       </p>
-      <p permid="Xyr">
+      <p>
         The number <m>7</m> divides all of the numerical coefficients.
         Separately, no power of <m>n</m> is part of the greatest common factor because the <m>14</m> term has no <m>n</m> factors.
         So the greatest common factor is just <m>7</m>.
         We proceed by factoring that out:
-        <md permid="fMK">
+        <md>
           <mrow>14-7n^2+28n^4-21n\amp=28n^4-7n^2-21n+14</mrow>
  <!-- <mrow>\amp=7\mathopen{}\left(\phantom{4n^4}-\phantom{n^2}-\phantom{3n}+\phantom{2}\right)\mathclose{}</mrow> <mrow>\amp=7\mathopen{}\left(4n^4-\phantom{n^2}-\phantom{3n}+\phantom{2}\right)\mathclose{}</mrow> <mrow>\amp=7\mathopen{}\left(4n^4-n^2-\phantom{3n}+\phantom{2}\right)\mathclose{}</mrow> <mrow>\amp=7\mathopen{}\left(4n^4-n^2-3n+\phantom{2}\right)\mathclose{}</mrow> -->
           <mrow>\amp=7\mathopen{}\left(4n^4-n^2-3n+2\right)\mathclose{}</mrow>
         </md>
       </p>
     </example>
-    <example permid="Drf">
-      <p permid="DFA">
+    <example>
+      <p>
         Factor <m>24ab^2+16a^2b^3-12a^3b^2</m>.
       </p>
-      <p permid="jMJ">
+      <p>
         There are two variables in this polynomial,
         but that does not change the factoring strategy.
         The greatest numerical factor between the three terms is <m>4</m>.
         The variable <m>a</m> divides all three terms,
         and <m>b^2</m> divides all three terms.
         So we have:
-        <md permid="LTT">
+        <md>
           <mrow>24ab^2+16a^2b^3-12a^3b^2 <!-- \amp=4ab^2\mathopen{}\left(\phantom{6}+\phantom{4ab}-\phantom{3a^2}\right)\mathclose{}</mrow> <mrow>\amp=4ab^2\mathopen{}\left(6+\phantom{4ab}-\phantom{3a^2}\right)\mathclose{}</mrow> <mrow>\amp=4ab^2\mathopen{}\left(6+4ab-\phantom{3a^2}\right)\mathclose{}</mrow> <mrow> --> \amp=4ab^2\mathopen{}\left(6+4ab-3a^2\right)\mathclose{}</mrow>
         </md>
       </p>
     </example>
-    <example permid="jyo">
-      <p permid="PTS">
+    <example>
+      <p>
         Factor <m>4m^2n-3xy</m>.
       </p>
-      <p permid="wbb">
+      <p>
         There are no common factors in those two terms
         (unless you want to count <m>1</m> or <m>-1</m>,
         but we do not count these for the purposes of identifying a greatest common factor).
@@ -551,11 +551,11 @@ $answer=Formula("4x(x^2+3x-3)");
         and leave it as it is.
       </p>
     </example>
-    <example permid="PFx">
-      <p permid="cik">
+    <example>
+      <p>
         Factor <m>-x^3+2x+18</m>.
       </p>
-      <p permid="Ipt">
+      <p>
         There are no common factors in those three terms,
         and it would be correct to state that this polynomial is prime.
         However, since its leading coefficient is negative,
@@ -565,159 +565,159 @@ $answer=Formula("4x(x^2+3x-3)");
       </p>
     </example>
   </subsection>
-  <exercises permid="usS">
-    <exercisegroup cols="3" permid="mOt">
+  <exercises>
+    <exercisegroup cols="3">
       <title>Review and Warmup</title>
-      <exercise permid="fjU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication0.pg"/>
       </exercise>
-      <exercise permid="Lrd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication0.pg"/>
       </exercise>
-      <exercise permid="rym">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication5.pg"/>
       </exercise>
-      <exercise permid="XFv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication5.pg"/>
       </exercise>
-      <exercise permid="DME">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication10.pg"/>
       </exercise>
-      <exercise permid="jTN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication10.pg"/>
       </exercise>
-      <exercise permid="QaW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication15.pg"/>
       </exercise>
-      <exercise permid="wif">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication15.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="4" permid="SVC">
+    <exercisegroup cols="4">
       <title>Identifying Common Factors</title>
-      <exercise permid="cpo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring5.pg"/>
       </exercise>
-      <exercise permid="Iwx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring5.pg"/>
       </exercise>
-      <exercise permid="oDG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring10.pg"/>
       </exercise>
-      <exercise permid="UKP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring10.pg"/>
       </exercise>
-      <exercise permid="ARY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring15.pg"/>
       </exercise>
-      <exercise permid="gZh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring15.pg"/>
       </exercise>
-      <exercise permid="Ngq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring20.pg"/>
       </exercise>
-      <exercise permid="tnz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring20.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="2">
-      <exercise permid="ZuI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring25.pg"/>
       </exercise>
-      <exercise permid="FBR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring25.pg"/>
       </exercise>
-      <exercise permid="lJa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring30.pg"/>
       </exercise>
-      <exercise permid="RQj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring30.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="zcL">
+    <exercisegroup cols="2">
       <title>Factoring out the Common Factor</title>
-      <exercise permid="xXs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring36.pg"/>
       </exercise>
-      <exercise permid="eeB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring36.pg"/>
       </exercise>
-      <exercise permid="KlK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring37.pg"/>
       </exercise>
-      <exercise permid="qsT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring37.pg"/>
       </exercise>
-      <exercise permid="WAc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring38.pg"/>
       </exercise>
-      <exercise permid="CHl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring38.pg"/>
       </exercise>
-      <exercise permid="iOu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring41.pg"/>
       </exercise>
-      <exercise permid="OVD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring41.pg"/>
       </exercise>
-      <exercise permid="vcM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring56.pg"/>
       </exercise>
-      <exercise permid="bjV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring56.pg"/>
       </exercise>
-      <exercise permid="Hre">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring71.pg"/>
       </exercise>
-      <exercise permid="nyn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring71.pg"/>
       </exercise>
-      <exercise permid="TFw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring76.pg"/>
       </exercise>
-      <exercise permid="zMF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring76.pg"/>
       </exercise>
-      <exercise permid="fTO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring77.pg"/>
       </exercise>
-      <exercise permid="MaX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring77.pg"/>
       </exercise>
-      <exercise permid="sig">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring80.pg"/>
       </exercise>
-      <exercise permid="Ypp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring80.pg"/>
       </exercise>
-      <exercise permid="Ewy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring85.pg"/>
       </exercise>
-      <exercise permid="kDH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring85.pg"/>
       </exercise>
-      <exercise permid="QKQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring90.pg"/>
       </exercise>
-      <exercise permid="wRZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring90.pg"/>
       </exercise>
-      <exercise permid="cZi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring95.pg"/>
       </exercise>
-      <exercise permid="Jgr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring95.pg"/>
       </exercise>
-      <exercise permid="pnA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring100.pg"/>
       </exercise>
-      <exercise permid="VuJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring100.pg"/>
       </exercise>
-      <exercise permid="BBS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring145.pg"/>
       </exercise>
-      <exercise permid="hJb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring145.pg"/>
       </exercise>
     </exercisegroup>

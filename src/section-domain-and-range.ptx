@@ -6,23 +6,23 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-domain-and-range" permid="cCj">
+<section xml:id="section-domain-and-range">
   <title>Domain and Range</title>
-  <introduction permid="Tbt">
-    <p permid="Dbx">
+  <introduction>
+    <p>
       A function is a process for turning input values into output values.
       Occasionally a function <m>f</m> will have input values for which the process breaks down.
     </p>
   </introduction>
-  <subsection permid="IJs">
+  <subsection>
     <title>Domain</title>
-    <example xml:id="example-portland-population" permid="tOP">
-      <p permid="JWc">
+    <example xml:id="example-portland-population">
+      <p>
         Let <m>P</m> be the population of Portland as a function of the year.
         According to Google<fn>
         <url href="https://www.google.com/publicdata/explore?ds=kf7tgg1uo9ude_&amp;met_y=population&amp;hl=en&amp;dl=en#!ctype=l&amp;strail=false&amp;bcs=d&amp;nselm=h&amp;met_y=population&amp;scale_y=lin&amp;ind_y=false&amp;rdim=country&amp;idim=place:4159000&amp;ifdim=country&amp;hl=en_US&amp;dl=en&amp;ind=false">https://www.google.com/publicdata/explore?ds=kf7tgg1uo9ude_&amp;met_y=population&amp;hl=en&amp;dl=en#!ctype=l&amp;strail=false &amp;bcs=d&amp;nselm=h&amp;met_y=population&amp;scale_y=lin&amp;ind_y=false&amp;rdim=country&amp;idim=place:4159000&amp;ifdim=country &amp;hl=en_US&amp;dl=en&amp;ind=false</url>
         </fn> we can say that:
-        <md permid="jSA">
+        <md>
           <mrow>P(2016) \amp = 639863 \amp P(1990) \amp= 487849</mrow>
         </md>
         But what if we asked to find <m>P(1600)</m>?
@@ -34,8 +34,8 @@
         We say that <m>P(1600)</m> is <em>undefined</em>.
       </p>
     </example>
-    <example xml:id="example-weight" permid="ZVY">
-      <p permid="qdl">
+    <example xml:id="example-weight">
+      <p>
         If <m>m</m> is a person's mass in
         <quantity>
           <unit prefix="kilo" base="gram"/>
@@ -44,11 +44,11 @@
           <unit base="pound"/>
         </quantity>.
         There is an approximate formula for <m>w</m>:
-        <me permid="LpQ">
+        <me>
           w(m)\approx 2.2m
         </me>
         From this formula we can find:
-        <md permid="PZJ">
+        <md>
           <mrow>w(50) \amp \approx 110 \amp w(80) \amp \approx 176</mrow>
         </md>,
         which tells us that a <m>50</m>-
@@ -67,7 +67,7 @@
           <mag>176</mag><unit base="pound"/>
         </quantity>.
       </p>
-      <p permid="Wku">
+      <p>
         What if we asked for <m>w(-100)</m>?
         In the context of this example,
         we would be asking for the weight of a person whose mass is
@@ -79,19 +79,19 @@
         Note that the <em>context</em> of the example is telling us that <m>w(-100)</m> is undefined even though the formula alone might suggest that <m>w(-100)=-220</m>.
       </p>
     </example>
-    <example xml:id="example-context-free-domain" permid="Gdh">
-      <p permid="CrD">
+    <example xml:id="example-context-free-domain">
+      <p>
         Let <m>g</m> have the formula
-        <me permid="rwZ">
+        <me>
           g(x)=\frac{x}{x-7}
         </me>.
         For most <m>x</m>-values, <m>g(x)</m> is perfectly computable:
-        <md permid="wgS">
+        <md>
           <mrow>g(2) \amp = -\frac{2}{5} \amp g(14) \amp = 2</mrow>
         </md>.
         But if we try to compute <m>g(7)</m>,
         we run into an issue of arithmetic.
-        <md permid="cob">
+        <md>
           <mrow>g(7) \amp = \frac{7}{7-7}</mrow>
           <mrow>\amp = \frac{7}{0}</mrow>
         </md>
@@ -99,51 +99,51 @@
         There is no number that this could equal.
       </p>
     </example>
-    <exercise permid="Srz">
+    <exercise>
       <webwork>
           <statement>
-            <p permid="jiG">
+            <p>
               If <m>f(x)=\dfrac{x+2}{x+8}</m>,
               find an input for <m>f</m> that would cause an undefined output.
             </p>
-            <p permid="PpP">
+            <p>
               The number <var name="'-8'" width="5"/> would cause an undefined output.
             </p>
           </statement>
-          <solution permid="rEd">
-            <p permid="SFU">
+          <solution>
+            <p>
               Trying <m>-8</m> as an input value would not work out;
               it would lead to division by <m>0</m>.
             </p>
           </solution>
       </webwork>
     </exercise>
-    <p permid="xml">
+    <p>
       These examples should motivate the following definition.
     </p>
-    <definition xml:id="definition-domain" permid="NHG">
+    <definition xml:id="definition-domain">
       <idx><h>domain</h></idx>
       <idx><h>function</h><h>domain</h></idx>
       <title>Domain</title>
       <statement>
-        <p permid="xHK">
+        <p>
           The <term>domain</term> of a function <m>f</m> is the collection of all of its valid input values.
         </p>
       </statement>
     </definition>
-    <example permid="mkq">
-      <p permid="iyM">
+    <example>
+      <p>
         Referring to the functions from <xref first="example-portland-population" last="example-context-free-domain">Examples</xref>
-        <ul permid="heY">
-          <li permid="lOR">
-            <p permid="ECp">
+        <ul>
+          <li>
+            <p>
               The domain of <m>P</m> is all years starting from 1851 and later.
               It would also be reasonable to say that the domain is actually all years from 1851 up to the current year,
               since we cannot guarantee that Portland will exist forever.
             </p>
           </li>
-          <li permid="RWa">
-            <p permid="kJy">
+          <li>
+            <p>
               The domain of <m>w</m> is all positive real numbers.
               It is nonsensical to have a person with negative mass or even one with zero mass.
               While there is some lower bound for the smallest mass a person could have,
@@ -152,8 +152,8 @@
               We can say for sure that non-positive numbers should never be used as inputs for <m>w</m>.
             </p>
           </li>
-          <li permid="ydj">
-            <p permid="QQH">
+          <li>
+            <p>
               The domain of <m>g</m> is all real numbers except <m>7</m>.
               This is the only number that causes a breakdown in <m>g</m>'s formula.
             </p>
@@ -162,9 +162,9 @@
       </p>
     </example>
   </subsection>
-  <subsection permid="oQB">
+  <subsection>
     <title>Interval, Set, and Set-Builder Notation</title>
-    <p permid="dtu">
+    <p>
       Communicating the domain of a function can be wordy.
       In mathematics,
       we can communicate the same information using concise notation that is accepted for use almost everywhere.
@@ -174,31 +174,31 @@
       Basic interval notation is covered in <xref ref="section-comparison-symbols-and-notation-for-intervals" />,
       but some of our examples here go beyond what that section covers.
     </p>
-    <figure xml:id="figure-interval-notation" permid="ayO">
+    <figure xml:id="figure-interval-notation">
       <caption>Domains from Earlier Examples</caption>
-      <sbsgroup permid="qUj">
-        <sidebyside widths="24% 24% 24% 24%" halign="center" permid="jpK">
-          <p permid="XZH">
+      <sbsgroup>
+        <sidebyside widths="24% 24% 24% 24%" halign="center">
+          <p>
             Function
           </p>
-          <p permid="EgQ">
+          <p>
             Verbal Domain
           </p>
-          <p permid="knZ">
+          <p>
             Number Line Illustration
           </p>
-          <p permid="Qvi">
+          <p>
             Interval Notation
           </p>
         </sidebyside>
-        <sidebyside widths="24% 24% 24% 24%" halign="center" permid="PwT">
-          <p permid="wCr">
+        <sidebyside widths="24% 24% 24% 24%" halign="center">
+          <p>
             <m>P</m> from <xref ref="example-portland-population" />
           </p>
-          <p permid="cJA">
+          <p>
             all years 1851 and greater
           </p>
-          <image width="100%" permid="AQL">
+          <image width="100%">
             <description>a number line with a mark at 1851; a bracket opens to the right at 1851 and there is an arrow pointing to the right.</description>
 <latex-image>
 <!-- width set for PDF fitting -->
@@ -216,18 +216,18 @@ width=180pt,
 \end{tikzpicture}
 </latex-image>
           </image>
-          <p permid="IQJ">
+          <p>
             <m>[1851,\infty)</m>
           </p>
         </sidebyside>
-        <sidebyside widths="24% 24% 24% 24%" halign="center" permid="vEc">
-          <p permid="oXS">
+        <sidebyside widths="24% 24% 24% 24%" halign="center">
+          <p>
             <m>w</m> from <xref ref="example-weight" />
           </p>
-          <p permid="Vfb">
+          <p>
             all real numbers greater than <m>0</m>
           </p>
-          <image width="100%" permid="gXU">
+          <image width="100%">
             <description>a number line with a mark at 0; there is a parenthesis at 0 that opens to the right and a thick line overlays the number line and points to the right</description>
 <latex-image>
 <!-- width set for PDF fitting -->
@@ -241,18 +241,18 @@ width=180pt,
 \end{tikzpicture}
 </latex-image>
           </image>
-          <p permid="Bmk">
+          <p>
             <m>(0,\infty)</m>
           </p>
         </sidebyside>
-        <sidebyside widths="24% 24% 24% 24%" halign="center" permid="bLl">
-          <p permid="htt">
+        <sidebyside widths="24% 24% 24% 24%" halign="center">
+          <p>
             <m>g</m> from <xref ref="example-context-free-domain" />
           </p>
-          <p permid="NAC">
+          <p>
             all real numbers except <m>7</m>
           </p>
-          <image width="100%" permid="Nfd">
+          <image width="100%">
             <description>a number line with a mark at 7; there is a parenthesis opening to the left at 7 with an arrow pointing to the left; there is a parenthesis opening to the right at 7 with an arrow pointing to the right.</description>
 <latex-image>
 <!-- width set for PDF fitting -->
@@ -266,25 +266,25 @@ width=180pt,
 \end{tikzpicture}
 </latex-image>
           </image>
-          <p permid="tHL">
+          <p>
             <m>(-\infty,7)\cup(7,\infty)</m>
           </p>
         </sidebyside>
       </sbsgroup>
     </figure>
-    <p permid="JAD">
+    <p>
       Again, basic interval notation is covered in <xref ref="section-comparison-symbols-and-notation-for-intervals" />,
       but one thing appears in <xref ref="figure-interval-notation" />
       that is not explained in that earlier section:
       the <m>\cup</m> symbol, which we see in the domain of <m>g</m>.
     </p>
-    <p permid="pHM">
+    <p>
       Occasionally there is a need to consider number line pictures such as <xref ref="figure-interval-union" />,
       where two or more intervals appear.
     </p>
-    <figure xml:id="figure-interval-union" permid="GFX">
+    <figure xml:id="figure-interval-union">
       <caption>A number line with a union of two intervals</caption>
-      <image width="47%" permid="tmm">
+      <image width="47%">
         <description>a number line with marks at -5, 1, 4, and 7; there is a pair of brackets at -5 and 0 with a thick line between them. There is a parenthesis opening to the right at 4 and a bracket opening to the left at 7 with a thick line between them</description>
 <latex-image>
 \begin{tikzpicture}
@@ -297,7 +297,7 @@ width=180pt,
 </latex-image>
       </image>
     </figure>
-    <p permid="VOV">
+    <p>
       This picture is trying to tell you to consider numbers that are between <m>-5</m> and <m>1</m>,
       together with numbers that are between <m>4</m> and <m>7</m>.
       That word
@@ -307,12 +307,12 @@ width=180pt,
       and in math the <term>union symbol</term>,
       <m>\cup</m>, captures this idea.
       So we can write the numbers in this picture as
-      <me permid="XEi">
+      <me>
         [-5,1]\cup(4,7]
       </me>
       (which uses interval notation).
     </p>
-    <p permid="BWe">
+    <p>
       With the domain of <m>g</m> in <xref ref="figure-interval-notation" />,
       the number line picture shows us another
       <q>union</q>
@@ -322,7 +322,7 @@ width=180pt,
       <m>(-\infty,7)</m> and <m>(7,\infty)</m>.
       Their union is represented by <m>(-\infty,7)\cup(7,\infty)</m>.
     </p>
-    <exercise permid="leX">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -331,19 +331,19 @@ $domain=Interval("[0,inf)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="vwY">
+            <p>
               What is the domain of the function <m>\operatorname{sqrt}</m>,
               where <m>\operatorname{sqrt}(x)=\sqrt{x}</m>, using interval notation?
             </p>
             <instruction>
               If needed, use <c>inf</c> for <m>\infty</m> and <c>U</c> for <m>\cup</m>.
             </instruction>
-            <p permid="bEh">
+            <p>
               <var name="$domain" width="20"/>
             </p>
           </statement>
-          <solution permid="XLm">
-            <p permid="yNd">
+          <solution>
+            <p>
               The function <m>\operatorname{sqrt}</m> cannot take a negative number as an input.
               It can however take any positive number as input,
               or the number <m>0</m> as input.
@@ -353,7 +353,7 @@ $domain=Interval("[0,inf)");
           </solution>
       </webwork>
     </exercise>
-    <exercise permid="Rmg">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -362,19 +362,19 @@ $domain=Interval("(-inf,3)U(3,inf)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="HLq">
+            <p>
               What is the domain of the function <m>\ell</m> where
               <m>\ell(x)=\frac{2}{x-3}</m>, using interval notation?
             </p>
             <instruction>
               If needed, use <c>inf</c> for <m>\infty</m> and <c>U</c> for <m>\cup</m>.
             </instruction>
-            <p permid="nSz">
+            <p>
               <var name="$domain" width="20"/>
             </p>
           </statement>
-          <solution permid="DSv">
-            <p permid="eUm">
+          <solution>
+            <p>
               The function <m>\ell</m> cannot take a <m>3</m> as an input.
               It can, however, take any other number as input.
               Representing this on a number line,
@@ -385,7 +385,7 @@ $domain=Interval("(-inf,3)U(3,inf)");
           </solution>
       </webwork>
     </exercise>
-    <p permid="idn">
+    <p>
       Sometimes we will consider collections of only a short list of numbers.
       In those cases, we use <term>set notation</term>
       (first introduced in <xref ref="section-set-notation-and-types-of-numbers" />).
@@ -395,19 +395,19 @@ $domain=Interval("(-inf,3)U(3,inf)");
       <xref ref="figure-set-notation" />
       illustrates set notation in use.
     </p>
-    <figure xml:id="figure-set-notation" permid="mNg">
+    <figure xml:id="figure-set-notation">
       <caption>Set Notation</caption>
-      <sbsgroup permid="Xbs">
-        <sidebyside widths="75% 20%" halign="center" margin="0%" permid="HSu">
-          <p permid="ZOU">
+      <sbsgroup>
+        <sidebyside widths="75% 20%" halign="center" margin="0%">
+          <p>
             Picture of Set
           </p>
-          <p permid="FWd">
+          <p>
             Set Notation
           </p>
         </sidebyside>
-        <sidebyside widths="75% 20%" halign="center" margin="0%" permid="nZD">
-          <image permid="Ztv">
+        <sidebyside widths="75% 20%" halign="center" margin="0%">
+          <image>
             <description>a number line with marks at -2 and 3</description>
 <latex-image>
 \begin{tikzpicture}
@@ -419,12 +419,12 @@ $domain=Interval("(-inf,3)U(3,inf)");
 \end{tikzpicture}
 </latex-image>
           </image>
-          <p permid="mdm">
+          <p>
             <m>\{-2,3\}</m>
           </p>
         </sidebyside>
-        <sidebyside widths="75% 20%" halign="center" margin="0%" permid="UgM">
-          <image permid="FAE">
+        <sidebyside widths="75% 20%" halign="center" margin="0%">
+          <image>
             <description>a number line with marks at -5, 1, 3 and 5</description>
 <latex-image>
 \begin{tikzpicture}
@@ -438,12 +438,12 @@ $domain=Interval("(-inf,3)U(3,inf)");
 \end{tikzpicture}
 </latex-image>
           </image>
-          <p permid="Skv">
+          <p>
             <m>\{-5,1,3,5\}</m>
           </p>
         </sidebyside>
-        <sidebyside widths="75% 20%" halign="center" margin="0%" permid="AnV">
-          <image permid="lHN">
+        <sidebyside widths="75% 20%" halign="center" margin="0%">
+          <image>
             <description>a number line with a mark at -2; there is also a mark at 5; there is a parenthesis at 5 that opens to the right with an arrow pointing to the right</description>
 <latex-image>
 \begin{tikzpicture}
@@ -455,13 +455,13 @@ $domain=Interval("(-inf,3)U(3,inf)");
 \end{tikzpicture}
 </latex-image>
           </image>
-          <p permid="yrE">
+          <p>
             <m>\{-2\}\cup(5,\infty)</m>
           </p>
         </sidebyside>
       </sbsgroup>
     </figure>
-    <exercise permid="xtp">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -470,19 +470,19 @@ $domain=Set("{1,2,5,10,20,50,100}");
 </pg-code>
           </setup>
           <statement>
-            <p permid="TZI">
+            <p>
               A change machine lets you put in an <m>x</m>-dollar bill,
               and gives you <m>f(x)</m> nickels in return equal in value to <m>x</m> dollars.
               Any current,
               legal denomination of US paper money can be fed to the change machine.
               What is the domain of <m>f</m>?
             </p>
-            <p permid="AgR">
+            <p>
               <var name="$domain" width="20"/>
             </p>
           </statement>
-          <solution permid="jZE">
-            <p permid="Lbv">
+          <solution>
+            <p>
               The current,
               legal denominations of US paper money are <m>\$1</m>, <m>\$2</m>,
               <m>\$5</m>,
@@ -492,7 +492,7 @@ $domain=Set("{1,2,5,10,20,50,100}");
           </solution>
       </webwork>
     </exercise>
-    <p permid="Okw">
+    <p>
       While most collections of numbers that we will encounter can be described using a combination of interval notation and set notation,
       there is another commonly used notation that is very useful in algebra:
       <term>set-builder notation</term>,
@@ -501,7 +501,7 @@ $domain=Set("{1,2,5,10,20,50,100}");
       Set-builder notation provides a template for what a number that is under consideration might look like,
       and then it gives you restrictions on how to use that template.
       A very basic example of set-builder notation is
-      <me permid="DLr">
+      <me>
         \{x\mid x\geq3\}
       </me>.
       Verbally, this is
@@ -509,19 +509,19 @@ $domain=Set("{1,2,5,10,20,50,100}");
       <xref ref="figure-setbuilder" />
       gives more examples of set-builder notation in use.
     </p>
-    <figure xml:id="figure-setbuilder" permid="SUp">
+    <figure xml:id="figure-setbuilder">
       <caption>Set-Builder Notation</caption>
-      <sbsgroup permid="DiB">
-        <sidebyside widths="75% 20%" halign="center" margin="0%" permid="gve">
-          <p permid="eyN">
+      <sbsgroup>
+        <sidebyside widths="75% 20%" halign="center" margin="0%">
+          <p>
             Picture of Set
           </p>
-          <p permid="KFW">
+          <p>
             Set Notation
           </p>
         </sidebyside>
-        <sidebyside widths="75% 20%" halign="center" margin="0%" permid="MCn">
-          <image permid="ROW">
+        <sidebyside widths="75% 20%" halign="center" margin="0%">
+          <image>
             <description>a number line with marks at -2 and 3; there is a parenthesis that opens to the right at -2 and a bracket that opens to the left at 3; there is a thick line in between them</description>
 <latex-image>
 \begin{tikzpicture}
@@ -532,12 +532,12 @@ $domain=Set("{1,2,5,10,20,50,100}");
 \end{tikzpicture}
 </latex-image>
           </image>
-          <p permid="qNf">
+          <p>
             <m>\{x\mid -2\lt x \leq3\}</m>
           </p>
         </sidebyside>
-        <sidebyside widths="75% 20%" halign="center" margin="0%" permid="sJw">
-          <image permid="xWf">
+        <sidebyside widths="75% 20%" halign="center" margin="0%">
+          <image>
             <description>a number line with marks at 1 and 3; there is a parenthesis that opens to the left at 1, with an arrow pointing to the left; there is a parenthesis that opens to the right at 3, with an arrow pointing to the right</description>
 <latex-image>
 \begin{tikzpicture}
@@ -549,13 +549,13 @@ $domain=Set("{1,2,5,10,20,50,100}");
 \end{tikzpicture}
 </latex-image>
           </image>
-          <p permid="WUo">
+          <p>
             <m>\{x\mid x\lt1\text{ or }x&gt;3\}</m>
           </p>
         </sidebyside>
       </sbsgroup>
     </figure>
-    <exercise permid="dAy">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -565,7 +565,7 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
 </pg-code>
           </setup>
           <statement>
-            <p permid="goa">
+            <p>
               What is the domain of the function <m>\operatorname{sqrt}</m>,
               where <m>\operatorname{sqrt}(x)=\sqrt{x}</m>,
               using set-builder notation?
@@ -575,12 +575,12 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
               <q>such that</q>
               symbol.
             </instruction>
-            <p permid="Mvj">
+            <p>
               <var name="$domain" width="20"/>
             </p>
           </statement>
-          <solution permid="QgN">
-            <p permid="riE">
+          <solution>
+            <p>
               The function <m>\operatorname{sqrt}</m> cannot take a negative number as an input.
               It can, however, take any positive number as input,
               or the number <m>0</m> as input.
@@ -590,22 +590,22 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
           </solution>
       </webwork>
     </exercise>
-    <example xml:id="example-domain-restriction-rational" permid="yyI">
-      <p permid="OFV">
+    <example xml:id="example-domain-restriction-rational">
+      <p>
         What is the domain of the function <m>A</m>,
         where <m>A(x)=\frac{2x+1}{x^2-2x-8}</m>?
       </p>
-      <p permid="uNe">
+      <p>
         Note that if you plugged in some value for <m>x</m>,
         the only thing that might go wrong is if the denominator equals <m>0</m>.
         So a <em>bad</em> value for <m>x</m> would be when
-        <md permid="Ivk">
+        <md>
           <mrow>x^2 - 2x - 8\amp=0</mrow>
           <mrow>(x + 2)(x - 4)\amp=0</mrow>
         </md>
         Here, we used a basic factoring technique from <xref ref="section-factoring-trinomials-with-leading-coefficient-one" />.
         To continue, either
-        <md permid="oCt">
+        <md>
           <mrow>x + 2\amp=0\amp\text{or}\amp\amp x-4\amp=0</mrow>
           <mrow>x\amp=-2\amp\text{or}\amp\amp x\amp=4</mrow>
         </md>.
@@ -613,8 +613,8 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
         So on a number line, if we wanted to picture the domain of <m>A</m>,
         we would make a sketch like:
       </p>
-      <sidebyside widths="47%" permid="YQF">
-        <image permid="edo">
+      <sidebyside widths="47%">
+        <image>
           <description>A number line with three intervals; the first one has a parenthesis that opens to the left at -2, with an arrow that point to the left; the second one has a pair of parentheses at -2 and 4 with a thick line in between; the third interval has a parenthesis that opens to the right on 4 with an arrow pointing to the right.</description>
 <latex-image>
 \begin{tikzpicture}
@@ -627,21 +627,21 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
 </latex-image>
         </image>
       </sidebyside>
-      <p permid="aUn">
+      <p>
         So the domain is the union of three intervals:
         <m>(-\infty,-2)\cup(-2,4)\cup(4,\infty)</m>.
       </p>
     </example>
-    <example xml:id="example-domain-restriction-radical" permid="eFR">
-      <p permid="Hbw">
+    <example xml:id="example-domain-restriction-radical">
+      <p>
         What is the domain of the function <m>B</m>,
         where <m>B(x)=\sqrt{7-x}+3</m>?
       </p>
-      <p permid="niF">
+      <p>
         Note that if you plugged in some value for <m>x</m>,
         the only thing that might go wrong is if the value in the radical is negative.
         So the <em>good</em> values for <m>x</m> would be when
-        <md permid="UJC">
+        <md>
           <mrow>7 - x\amp\geq0</mrow>
           <mrow>7\geq x</mrow>
           <mrow>x\leq 7</mrow>
@@ -649,8 +649,8 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
         So on a number line, if we wanted to picture the domain of <m>B</m>,
         we would make a sketch like:
       </p>
-      <sidebyside widths="47%" permid="EXO">
-        <image permid="Kkx">
+      <sidebyside widths="47%">
+        <image>
           <description>a number line, with a bracket at 7 that opens to the left, with an arrow pointing to the left</description>
 <latex-image>
 \begin{tikzpicture}
@@ -661,48 +661,48 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
 </latex-image>
         </image>
       </sidebyside>
-      <p permid="TpO">
+      <p>
         So the domain is the interval <m>(-\infty,7]</m>.
       </p>
     </example>
-    <p permid="urF">
+    <p>
       There are three main properties of algebraic functions that cause numbers to be excluded from a domain,
       which are summarized here.
     </p>
-    <list xml:id="list-algebraic-domain-restrictions" permid="KNa">
+    <list xml:id="list-algebraic-domain-restrictions">
       <title>Summary of Algebraic Domain Restrictions</title>
-      <dl permid="Nmh">
-        <li permid="MgO">
+      <dl>
+        <li>
           <title>Denominators</title>
-          <p permid="wXQ">
+          <p>
             Division by zero is undefined.
             So if a function contains an expression in a denominator,
             it will only be defined where that expression is not equal to zero.
           </p>
-          <p permid="deZ">
+          <p>
             <xref ref="example-domain-restriction-rational" /> demonstrates this.
           </p>
         </li>
-        <li permid="snX">
+        <li>
           <title>Square Roots</title>
-          <p permid="Jmi">
+          <p>
             The square root of a negative number is undefined.
             So if a function contains a square root,
             it will only be defined when the expression inside that radical is greater than or equal to zero.
             (This is actually true for any even <m>n</m>th radical.)
           </p>
-          <p permid="ptr">
+          <p>
             <xref ref="example-domain-restriction-radical" /> demonstrates this.
           </p>
         </li>
-        <li permid="Yvg">
+        <li>
           <title>Context</title>
-          <p permid="VAA">
+          <p>
             Some numbers are nonsensical in context.
             If a function has real-world context,
             then this may add additional restrictions on the input values.
           </p>
-          <p permid="BHJ">
+          <p>
             <xref ref="example-weight" /> demonstrates this.
           </p>
         </li>
@@ -710,25 +710,25 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
     </list>
   </subsection>
   
-  <subsection permid="UXK">
+  <subsection>
     <title>Range</title>
-    <p permid="zby">
+    <p>
       The domain of a function is the collection of its valid inputs;
       there is a similar notion for <em>output</em>.
     </p>
-    <definition xml:id="definition-range" permid="JHH">
+    <definition xml:id="definition-range">
       <idx><h>range</h></idx>
       <idx><h>function</h><h>range</h></idx>
       <title>Range</title>
       <statement>
-        <p permid="dOT">
+        <p>
           The <term>range</term> of a function <m>f</m> is the collection of all of its possible output values.
         </p>
       </statement>
     </definition>
-    <example permid="pOQ">
+    <example>
       <statement>
-        <p permid="zwX">
+        <p>
           Let <m>f</m> be the function defined by the formula <m>f(x)=x^2</m>.
           Finding <m>f</m>'s <em>domain</em> is straightforward.
           Any number anywhere can be squared to produce an output,
@@ -736,17 +736,17 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
           What is the <em>range</em> of <m>f</m>?
         </p>
       </statement>
-      <solution permid="ziC">
-        <p permid="XpN">
+      <solution>
+        <p>
           We would like to describe the collection of possible numbers that <m>f</m> can give as output.
           We will use a graphical approach.
           <xref ref="figure-range" /> displays a graph of <m>f</m>,
           and the visualization that reveals <m>f</m>'s range.
         </p>
-        <figure xml:id="figure-range" permid="jEf">
+        <figure xml:id="figure-range">
           <caption><m>y=f(x)</m> where <m>f(x)=x^2</m>. The second graph illustrates how to visualize the range. In the third graph, the range is marked as an interval on the <m>y</m>-axis.</caption>
-          <sidebyside widths="32% 32% 32%" permid="ikr">
-            <image width="47%" permid="qrG">
+          <sidebyside widths="32% 32% 32%">
+            <image width="47%">
               <description>A parabola with vertex at (0,0) that opens upward</description>
 <latex-image>
 \begin{tikzpicture}
@@ -756,7 +756,7 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
 \end{tikzpicture}
 </latex-image>
             </image>
-            <image width="47%" permid="WyP">
+            <image width="47%">
               <description>The same parabola is pictured with arrows pointing from each point toward the y-axis.</description>
 <latex-image>
 \begin{tikzpicture}
@@ -772,7 +772,7 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
 \end{tikzpicture}
 </latex-image>
             </image>
-            <image width="47%" permid="CFY">
+            <image width="47%">
               <description>The same parabola is pictured with the range indicated as an interval on the y-axis; there is a bracket at 0 pointing upward and an arrow that points upward along the y-axis.</description>
 <latex-image>
 \begin{tikzpicture}
@@ -785,7 +785,7 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
             </image>
           </sidebyside>
         </figure>
-        <p permid="DwW">
+        <p>
           Output values are the <m>y</m>-coordinates in a graph.
           If we
           <q>slide the ink</q>
@@ -795,9 +795,9 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
         </p>
       </solution>
     </example>
-    <warning permid="oJx">
+    <warning>
       <title>Finding range from a formula</title>
-      <p permid="RAB">
+      <p>
         Sometimes it is possible to compute a range without the aid of a graph.
         However, doing so can often require techniques covered in calculus.
         Therefore, when you are asked to find the range of a function based on its formula,
@@ -805,16 +805,16 @@ $domain = SetBuilder("{ x | x &gt;= 0 }");
       </p>
     </warning>
 
-    <example permid="VVZ">
+    <example>
       <statement>
-        <p permid="fEg">
+        <p>
           Given the function <m>g</m> graphed in <xref ref="figure-range-bell" />,
           find the domain and range of <m>g</m>.
         </p>
         <sidebyside width="40%">
-        <figure xml:id="figure-range-bell" permid="LLp">
+        <figure xml:id="figure-range-bell">
           <caption><m>y=g(x)</m></caption>
-          <image width="47%" permid="iNh">
+          <image width="47%">
             <description>A bell-shaped graph with a maximum at (0,3) that is above the x-axis; there is an arrow to the left that approaches the x-axis and an arrow to the right that approaches the x-axis</description>
 <latex-image>
 \begin{tikzpicture}
@@ -832,8 +832,8 @@ ytick={0,1,...,3},
         </figure>
       </sidebyside>
       </statement>
-      <solution permid="fpL">
-        <p permid="PLo">
+      <solution>
+        <p>
           To find the domain,
           we can visualize all of the <m>x</m>-values that are valid inputs for this function by
           <q>sliding the ink</q>
@@ -843,7 +843,7 @@ ytick={0,1,...,3},
           Every <m>x</m>-value can be used to get an output for the function,
           so the domain is <m>(-\infty,\infty)</m>.
         </p>
-        <p permid="vSx">
+        <p>
           If we visualize the possible <em>outputs</em> by
           <q>sliding the ink</q>
           sideways onto the <m>y</m>-axis,
@@ -853,10 +853,10 @@ ytick={0,1,...,3},
           but they aren't quite equal to <m>0</m>.
           So the range is <m>(0,3]</m>.
         </p>
-        <sidebyside widths="47% 47%" permid="OrA">
-          <figure xml:id="figure-range-bell-domain" permid="bZG">
+        <sidebyside widths="47% 47%">
+          <figure xml:id="figure-range-bell-domain">
             <caption>Domain of <m>g</m></caption>
-            <image width="47%" permid="OUq">
+            <image width="47%">
               <description>The same bell-shaped graph with the x-axis highlighted and arrows pointing upward to the points on the graph</description>
 <latex-image>
 \begin{tikzpicture}
@@ -880,9 +880,9 @@ ytick={0,1,...,3},
 </latex-image>
             </image>
           </figure>
-          <figure xml:id="figure-range-bell-range" permid="IgP">
+          <figure xml:id="figure-range-bell-range">
             <caption>Range of <m>g</m></caption>
-            <image width="47%" permid="vbz">
+            <image width="47%">
               <description>The same bell-shaped graph with arrows going from points on the graph to the y-values on the y-axis; there is an interval on the y-axis indicating the range</description>
 <latex-image>
 \begin{tikzpicture}
@@ -916,7 +916,7 @@ ytick={0,1,...,3},
         </sidebyside>
       </solution>
     </example>
-    <exercise xml:id="exercise-rational-function-domain" permid="mUk">
+    <exercise xml:id="exercise-rational-function-domain">
       <webwork>
           <setup>
 <pg-code>
@@ -975,7 +975,7 @@ $range = Compute("(-inf,0)U(0,inf)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="sCs">
+            <p>
               Given the function <m>h</m> graphed below,
               find the domain and range of <m>h</m>.
               Note there is an invisible vertical line at <m>x=2</m>,
@@ -986,49 +986,49 @@ $range = Compute("(-inf,0)U(0,inf)");
               Also note that the two arms extend forever to the left and right,
               getting arbitrarily close to the <m>y</m>-axis, but never touching it.
             </p>
-            <sidebyside widths="47%" permid="uyJ">
-              <image permid="biI" pg-name="$graph[0]"/>
+            <sidebyside widths="47%">
+              <image pg-name="$graph[0]"/>
               <description/>
             </sidebyside>
-            <p permid="YJB">
+            <p>
               The domain of <m>h</m> is <var name="$domain" width="20"/> and the range of <m>h</m> is <var name="$range" width="20"/>.
             </p>
           </statement>
-          <solution permid="wnW">
-            <p permid="onY">
+          <solution>
+            <p>
               To find the domain,
               we try to visualize all of the <m>x</m>-values that are valid inputs for this function.
               The arrows pointing left and right on the curve indicate that whatever pattern we see in the graph continues off to the left and right.
               So for <m>x</m>-values far to the right or left,
               we will be able to get an output for <m>h</m>.
             </p>
-            <p permid="Uvh">
+            <p>
               The arrows pointing up and down are supposed to indicate that the curve will get closer and closer to the vertical line <m>x=2</m> after the curve leaves the viewing window we are using.
               So even when <m>x</m> is some number very close to <m>2</m>,
               we will be able to get an output for <m>h</m>.
             </p>
-            <sidebyside widths="47%" permid="aFS">
+            <sidebyside widths="47%">
               <image pg-name="$graph[1]"/>
             </sidebyside>
-            <p permid="ACq">
+            <p>
               The one <m>x</m>-value that doesn't behave is <m>x=2</m>.
               If we tried to use that as an input,
               there is no point on the graph directly above or below that on the <m>x</m>-axis.
               So the domain is <m>(-\infty,2)\cup(2,\infty)</m>.
             </p>
-            <p permid="gJz">
+            <p>
               To find the range,
               we try to visualize all of the <m>y</m>-values that are possible outputs for this function.
               Sliding the ink of the curve left/right onto the <m>y</m>-axis reveals that <m>y=0</m> is the only <m>y</m>-value that we could never obtain as an output.
               So the range is <m>(-\infty,0)\cup(0,\infty)</m>.
             </p>
-            <sidebyside widths="47%" permid="GNb">
+            <sidebyside widths="47%">
               <image pg-name="$graph[2]"/>
             </sidebyside>
           </solution>
       </webwork>
     </exercise>
-    <p permid="fiH">
+    <p>
       The examples of finding domain and range so far have all involved either a verbal description of a function,
       a formula for that function, or a graph of that function.
       Recall that there is a fourth perspective on functions: a table.
@@ -1038,15 +1038,15 @@ $range = Compute("(-inf,0)U(0,inf)");
       then there are a handful of input values listed in the table for which we know outputs.
       For any other input, the output is undefined.
     </p>
-    <example permid="Cdi">
+    <example>
       <statement>
-        <p permid="rSy">
+        <p>
           Consider the function <m>k</m> given in <xref ref="table-range" />.
           What is the domain and range of <m>k</m>?
         </p>
-        <table xml:id="table-range" permid="HpR">
+        <table xml:id="table-range">
           <title/>
-          <tabular permid="nxa">
+          <tabular>
             <row bottom="major">
               <cell><m>x</m></cell>
               <cell><m>k(x)</m></cell>
@@ -1066,8 +1066,8 @@ $range = Compute("(-inf,0)U(0,inf)");
           </tabular>
         </table>
       </statement>
-      <solution permid="LwU">
-        <p permid="MQI">
+      <solution>
+        <p>
           All that we know about <m>k</m> is that <m>k(3)=4</m>,
           <m>k(8)=5</m>, and <m>k(10)=5</m>.
           Without any other information such as a formula for <m>k</m> or a context for <m>k</m> that tells us its verbal description,
@@ -1075,7 +1075,7 @@ $range = Compute("(-inf,0)U(0,inf)");
           these are the only valid input for <m>k</m>.
           Similarly, <m>k</m>'s range is <m>\{4,5\}</m>.
         </p>
-        <p permid="sXR">
+        <p>
           Note that we have used set notation, not interval notation,
           since the answers here were <em>lists</em> of <m>x</m>-values
           (for the domain)
@@ -1086,9 +1086,9 @@ $range = Compute("(-inf,0)U(0,inf)");
           <q>sliding ink</q>
           to determine domain and range still works.
         </p>
-        <figure xml:id="figure-table-range" permid="Zfa">
+        <figure xml:id="figure-table-range">
           <caption/>
-          <image width="47%" permid="TEj">
+          <image width="47%">
             <description>a graph showing the three ordered pairs from the table; each point has an arrow pointing to it's x-value to indicate elements of the domain and an arrow pointing to it's y-value to indicate elements of the range</description>
 <latex-image>
 \begin{tikzpicture}
@@ -1116,307 +1116,307 @@ grid=none,
       </solution>
     </example>
   </subsection>
-  <exercises permid="BeT">
-    <exercisegroup cols="2" permid="hmc">
+  <exercises>
+    <exercisegroup cols="2">
       <title>Review and Warmup</title>
-      <exercise permid="lVV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation10.pg"/>
       </exercise>
-      <exercise permid="Sde">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation30.pg"/>
       </exercise>
-      <exercise permid="ykn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation20.pg"/>
       </exercise>
-      <exercise permid="erw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation40.pg"/>
       </exercise>
     </exercisegroup>
     <newpage/>
-    <exercisegroup cols="3" permid="Ntl">
+    <exercisegroup cols="3">
       <title>Domain and Range From a Graph</title>
-      <exercise permid="jbp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph10.pg"/>
       </exercise>
-      <exercise permid="Piy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph10.pg"/>
       </exercise>
-      <exercise permid="vpH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph20.pg"/>
       </exercise>
-      <exercise permid="bwQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph20.pg"/>
       </exercise>
-      <exercise permid="HDZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph30.pg"/>
       </exercise>
-      <exercise permid="nLi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph30.pg"/>
       </exercise>
-      <exercise permid="TSr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph40.pg"/>
       </exercise>
-      <exercise permid="zZA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph40.pg"/>
       </exercise>
-      <exercise permid="ggJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph50.pg"/>
       </exercise>
-      <exercise permid="MnS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph50.pg"/>
       </exercise>
-      <exercise permid="svb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph60.pg"/>
       </exercise>
-      <exercise permid="YCk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph60.pg"/>
       </exercise>
-     <!--  <exercise permid="EJt">
+     <!--  <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph70.pg"/>
       </exercise>
-      <exercise permid="kQC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeByGraph70.pg"/>
        </exercise> -->
-      <exercise permid="QXL">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/Functions/Functions20.pg"/>
       </exercise>
-      <exercise permid="xeU">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/Functions/Functions20.pg"/>
       </exercise>
-      <exercise permid="dmd">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/Functions/Functions21.pg"/>
       </exercise>
-      <!-- <exercise permid="Jtm">
+      <!-- <exercise>
         <webwork source="Contrib/PCC/Math95/Functions/Functions21.pg" />
       </exercise> -->
       </exercisegroup>
       <exercisegroup cols="3">
-      <exercise permid="pAv">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/Functions/Functions22.pg"/>
       </exercise>
-      <exercise permid="VHE">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/Functions/Functions22.pg"/>
       </exercise>
-      <exercise permid="BON">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalFunctions/RadicalFunctionsGraphically90.pg"/>
       </exercise>
-      <exercise permid="hVW">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalFunctions/RadicalFunctionsGraphically130.pg"/>
       </exercise>
-      <exercise permid="Odf">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalFunctions/RadicalFunctionsGraphically140.pg"/>
       </exercise>
-      <exercise permid="uko">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalFunctions/RadicalFunctionsGraphically150.pg"/>
       </exercise>
-      <exercise permid="arx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph40.pg"/>
       </exercise>
-      <exercise permid="GyG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph40.pg"/>
       </exercise>
-      <exercise permid="mFP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph50.pg"/>
       </exercise>
-      <!-- <exercise permid="SMY">
+      <!-- <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionValuesByGraph50.pg"/>
       </exercise> -->
     </exercisegroup>
-    <exercisegroup cols="3" permid="tAu">
+    <exercisegroup cols="3">
       <title>Domain From a Formula</title>
-      <exercise permid="yUh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions90.pg"/>
       </exercise>
-      <exercise permid="fbq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions90.pg"/>
       </exercise>
-      <exercise permid="Liz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions170.pg"/>
       </exercise>
-      <exercise permid="rpI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions170.pg"/>
       </exercise>
-      <exercise permid="XwR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions180.pg"/>
       </exercise>
-      <exercise permid="DEa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions180.pg"/>
       </exercise>
-      <exercise permid="jLj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions200.pg"/>
       </exercise>
-      <exercise permid="PSs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions200.pg"/>
       </exercise>
-      <exercise permid="vZB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions210.pg"/>
       </exercise>
-      <exercise permid="cgK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions210.pg"/>
       </exercise>
-      <exercise permid="InT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions211.pg"/>
       </exercise>
-      <exercise permid="ovc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions211.pg"/>
       </exercise>
-      <exercise permid="UCl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions212.pg"/>
       </exercise>
-      <exercise permid="AJu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions212.pg"/>
       </exercise>
-      <exercise permid="gQD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions213.pg"/>
       </exercise>
-      <exercise permid="MXM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions213.pg"/>
       </exercise>
-      <exercise permid="teV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions214.pg"/>
       </exercise>
-      <exercise permid="Zme">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions214.pg"/>
       </exercise>
-      <exercise permid="Ftn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions216.pg"/>
       </exercise>
-      <exercise permid="lAw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions216.pg"/>
       </exercise>
-      <exercise permid="RHF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions217.pg"/>
       </exercise>
-      <exercise permid="xOO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions217.pg"/>
       </exercise>
-      <exercise permid="dVX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions225.pg"/>
       </exercise>
-      <exercise permid="Kdg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions225.pg"/>
       </exercise>
-      <exercise permid="qkp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions235.pg"/>
       </exercise>
-      <exercise permid="Wry">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions235.pg"/>
       </exercise>
-      <exercise permid="CyH">
+      <exercise>
         <webwork source="Contrib/PCC/CollegeAlgebra/FunctionBasics/Domain10.pg"/>
       </exercise>
-      <exercise permid="iFQ">
+      <exercise>
         <webwork source="Contrib/PCC/CollegeAlgebra/FunctionBasics/Domain10.pg"/>
       </exercise>
-      <exercise permid="OMZ">
+      <exercise>
         <webwork source="Contrib/PCC/CollegeAlgebra/FunctionBasics/Domain20.pg"/>
       </exercise>
-      <exercise permid="uUi">
+      <exercise>
         <webwork source="Contrib/PCC/CollegeAlgebra/FunctionBasics/Domain20.pg"/>
       </exercise>
-      <exercise permid="bbr">
+      <exercise>
         <webwork source="Contrib/PCC/CollegeAlgebra/FunctionBasics/Domain30.pg"/>
       </exercise>
-      <exercise permid="HiA">
+      <exercise>
         <webwork source="Contrib/PCC/CollegeAlgebra/FunctionBasics/Domain30.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="ZHD">
+    <exercisegroup cols="2">
       <title>Domain and Range Using Context</title>
-      <exercise permid="npJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext10.pg"/>
       </exercise>
-      <exercise permid="TwS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext10.pg"/>
       </exercise>
-      <exercise permid="zEb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext20.pg"/>
       </exercise>
-      <exercise permid="fLk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext20.pg"/>
       </exercise>
-      <exercise permid="LSt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext30.pg"/>
       </exercise>
-      <exercise permid="rZC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext30.pg"/>
       </exercise>
-      <exercise permid="YgL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext40.pg"/>
       </exercise>
-      <exercise permid="EnU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext40.pg"/>
       </exercise>
-      <exercise permid="kvd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext50.pg"/>
       </exercise>
-      <exercise permid="QCm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext50.pg"/>
       </exercise>
-      <exercise permid="wJv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext60.pg"/>
       </exercise>
-      <exercise permid="cQE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext60.pg"/>
       </exercise>
-      <exercise permid="IXN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext70.pg"/>
       </exercise>
-      <exercise permid="peW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/FunctionDomainRangeInContext70.pg"/>
       </exercise>
-      <exercise permid="Vmf">
+      <exercise>
         <statement>
-          <p permid="EQK">
+          <p>
             A student's first name is a function of their student identification number.
-            <ol permid="ttq">
-              <li permid="eks">
+            <ol>
+              <li>
                 Describe the domain for this function in a sentence.
                 Specifics are not needed.
               </li>
-              <li permid="KrB">
+              <li>
                 Describe the range for this function in a sentence.
                 Specifics are not needed.
               </li>
             </ol>
           </p>
         </statement>
-        <answer permid="cvf">
-          <p permid="Fmj">
-            <ol permid="UQG">
-              <li permid="qyK">
+        <answer>
+          <p>
+            <ol>
+              <li>
                 The domain for this function will be the set of all possible student identification numbers at that particular school.
               </li>
-              <li permid="WFT">
+              <li>
                 The range for this function is the set of all first names of students who attend that school.
               </li>
             </ol>
           </p>
         </answer>
       </exercise>
-      <exercise permid="Bto">
+      <exercise>
         <statement>
-          <p permid="kXT">
+          <p>
             The year a car was made is a function of its VIN (Vehicle Identification Number).
-            <ol permid="ZAz">
-              <li permid="CNc">
+            <ol>
+              <li>
                 Describe the domain for this function in a sentence.
                 Specifics are not needed.
               </li>
-              <li permid="iUl">
+              <li>
                 Describe the range for this function in a sentence.
                 Specifics are not needed.
               </li>
             </ol>
           </p>
         </statement>
-        <answer permid="ICo">
-          <p permid="lts">
-            <ol permid="AXP">
-              <li permid="Pbu">
+        <answer>
+          <p>
+            <ol>
+              <li>
                 The domain for this function is be the set of all VIN numbers.
               </li>
-              <li permid="viD">
+              <li>
                 The range for this function is the set of all years since VIN numbers were implemented.
               </li>
             </ol>
@@ -1424,43 +1424,43 @@ grid=none,
         </answer>
       </exercise>
     </exercisegroup>
-    <!-- <exercisegroup permid="FOM">
+    <!-- <exercisegroup>
       <title>Challenge</title>
-      <exercise permid="hAx"> -->
+      <exercise> -->
 <!-- Kara's challenge problem -->
        <!--  <statement>
-          <p permid="Rfc">
+          <p>
             For each part,
             sketch the graph of a function with the given domain and range.
           </p>
-          <ol label="a." permid="FHI">
-            <li permid="bpM">
-              <p permid="hOS">
+          <ol label="a.">
+            <li>
+              <p>
                 The domain is <m>(0, \infty)</m> and the range is <m>(-\infty, 0)</m>.
               </p>
             </li>
-            <li permid="HwV">
-              <p permid="NWb">
+            <li>
+              <p>
                 The domain is <m>(1,2)</m> and the range is <m>(3,4)</m>.
               </p>
             </li>
-            <li permid="nEe">
-              <p permid="udk">
+            <li>
+              <p>
                 The domain is <m>(0,\infty)</m> and the range is <m>[2,3]</m>.
               </p>
             </li>
-            <li permid="TLn">
-              <p permid="akt">
+            <li>
+              <p>
                 The domain is <m>(1,2)</m> and the range is <m>(-\infty, \infty)</m>.
               </p>
             </li>
-            <li permid="zSw">
-              <p permid="GrC">
+            <li>
+              <p>
                 The domain is <m>(-\infty, \infty)</m> and the range is <m>(-1,1)</m>.
               </p>
             </li>
-            <li permid="fZF">
-              <p permid="myL">
+            <li>
+              <p>
                 The domain is <m>(0,\infty)</m> and the range is <m>[0,\infty)</m>.
               </p>
             </li>

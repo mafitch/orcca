@@ -6,15 +6,15 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-introduction-to-radical-functions" permid="MGN">
+<section xml:id="section-introduction-to-radical-functions">
   <title>Introduction to Radical Functions</title>
-  <introduction permid="BMj">
-    <p permid="OoW">
+  <introduction>
+    <p>
       We learned the basics of square roots in <xref ref="section-square-root-properties" />.
       The study of radicals is much broader than our first attempt covered and we need to expand our investigation.
       To do so, we will first look at an example that makes use of a topic covered in <xref ref="section-solving-quadratic-equations-by-using-a-square-root" />.
     </p>
-    <p permid="uwf">
+    <p>
       A #10 washer has a
       <quantity>
         <mag>5.6</mag><unit base="meter" prefix="milli"/>
@@ -30,9 +30,9 @@
       </quantity>.
     </p>
     <sidebyside width="37%">
-    <figure permid="SYP">
+    <figure>
       <caption>A Diagram of a #10 Washer</caption>
-      <image width="65%" permid="Mek">
+      <image width="65%">
         <description/>
 <latex-image>
 \begin{tikzpicture}[x=0.75cm,y=0.75cm]
@@ -69,32 +69,32 @@
       </image>
     </figure>
     </sidebyside>
-    <p permid="aDo">
+    <p>
       The amount of steel, <m>M</m>, in
       <quantity>
         <unit base="gram" prefix="milli"/>
       </quantity>
       that it takes to make the washer with outer diameter <m>d</m> is approximated by the formula
-      <me permid="csB">
+      <me>
         M=7.59d^2-238
       </me>
       Note that if you know the value of <m>M</m> ahead of time,
       this is a quadratic equation.
       We will now solve the equation for <m>d</m> using the square root method.
-      <md permid="ZxV">
+      <md>
         <mrow>M\amp=7.59d^2-238</mrow>
         <mrow>M\addright{238}\amp=7.59d^2</mrow>
         <mrow>\divideunder{M+238}{7.59}\amp=d^2</mrow>
       </md>
-      <md permid="FFe">
+      <md>
         <mrow>d\amp=\sqrt{\frac{M+238}{7.59}}\amp\amp\text{or}\amp d\amp=-\sqrt{\frac{M+238}{7.59}}</mrow>
       </md>
     </p>
-    <sidebyside widths="45% 37%" margins="5%" permid="pxR">
-      <p permid="JFd">
+    <sidebyside widths="45% 37%" margins="5%">
+      <p>
         Since we know that the diameter cannot really be negative,
         our formula for <m>d</m> must be
-        <me permid="IzK">
+        <me>
           d=\sqrt{\frac{M+238}{7.59}}
         </me>
  <!-- todo: fix this me to not be bold for some reason... --> This formula finds the diameter that the washer must be when you input the amount of steel used,
@@ -102,9 +102,9 @@
         <xref ref="figure-steel-washer-diameter" />
         shows a graph of this relationship.
       </p>
-      <figure xml:id="figure-steel-washer-diameter" permid="pMm">
+      <figure xml:id="figure-steel-washer-diameter">
         <caption>A Graph of <m>d=\sqrt{\frac{M+238}{7.59}}</m></caption>
-        <image width="47%" permid="slt">
+        <image width="47%">
           <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -118,8 +118,8 @@
         </image>
       </figure>
     </sidebyside>
-    <sidebyside widths="45% 37%" margins="5%" permid="VFa">
-      <p permid="VTv">
+    <sidebyside widths="45% 37%" margins="5%">
+      <p>
         We also know that <m>M</m> cannot be negative,
         so we will cut the graph to begin at <m>M=0</m>.
         This formula tells us that if we plan on using, for example,
@@ -129,7 +129,7 @@
         of steel
         (about as much as in a large paper clip)
         that we can find the the outer diameter for the washer that will be created:
-        <md permid="lMn">
+        <md>
           <mrow>d\amp=\sqrt{\frac{\substitute{1000}+238}{7.59}}</mrow>
           <mrow>\amp\approx12.8</mrow>
         </md>
@@ -142,9 +142,9 @@
           <mag>1000</mag><unit base="gram" prefix="milli"/>
         </quantity>.
       </p>
-      <figure permid="CaE">
+      <figure>
         <caption>A Revised Graph of <m>d=\sqrt{\frac{M+238}{7.59}}</m></caption>
-        <image width="47%" permid="YsC">
+        <image width="47%">
           <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -169,7 +169,7 @@ minor ytick=]
         </image>
       </figure>
     </sidebyside>
-    <p permid="GKx">
+    <p>
       Note that the vertical intercept of the graph is <m>(0,5.6)</m>,
       which says that a washer that uses no steel at all
       (is that really a washer?)
@@ -186,7 +186,7 @@ minor ytick=]
       Perhaps the implied domain of this function should be
       <m>(0,\infty)</m> to exclude <m>0</m> mass.
     </p>
-    <p permid="mRG">
+    <p>
       Square roots often appear when we consider formulas from geometry like the washer problem,
       and they also show up in topics like in statistics (where
       <m>\sigma=\sqrt{\frac{1}{n}\sum\limits_{i=1}^n (x_i-\mu)^2}</m> finds the standard deviation),
@@ -198,48 +198,48 @@ minor ytick=]
       so it's time to venture into deeper waters.
     </p>
   </introduction>
-  <subsection permid="sNW">
+  <subsection>
     <title>The Square Root Function</title>
-    <example permid="Kwb">
+    <example>
       <statement>
-        <p permid="Pup">
+        <p>
           Gilberto is an artist who etches designs into square copper plates of different sizes.
           Customers can order the size they would like.
-          <ol label="a." permid="jIF">
-            <li xml:id="item-square-root-function-plate" permid="ceg">
-              <p permid="KaC">
+          <ol label="a.">
+            <li xml:id="item-square-root-function-plate">
+              <p>
                 Build a function that calculates the length of a plate's side given its area.
                 Explore the function with a table and graph.
               </p>
             </li>
-            <li permid="Ilp">
-              <p permid="qhL">
+            <li>
+              <p>
                 One customer ordered a plate with an area of <m>6.25</m> square feet.
                 Calculate the length of its side.
               </p>
             </li>
-            <li permid="osy">
-              <p permid="WoU">
-                Find the domain and range of the function from <xref ref="item-square-root-function-plate">Part</xref>.
+            <li>
+              <p>
+                Find the domain and range of the function from <xref ref="item-square-root-function-plate"/>.
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="hTs">
-        <p permid="Yeh">
-          <ol label="a." permid="rne">
-            <li permid="UzH">
-              <p permid="Cwd">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 We know the formula to calculate a square's area is <m>A=l^2</m>,
                 where <m>A</m> stands for a square's area,
                 and <m>l</m> is the length of the square's side.
                 To build a function to calculate <m>l</m>,
                 we solve for <m>l</m> in the formula:
-                <md permid="RTw">
+                <md>
                   <mrow>A\amp=l^2</mrow>
                 </md>
-                <md permid="yaF">
+                <md>
                   <mrow>l\amp=\sqrt{A}\amp\amp\text{or} \amp l\amp=-\sqrt{A}</mrow>
                 </md>
                 The formula is <m>l=\sqrt{A}</m>.
@@ -249,9 +249,9 @@ minor ytick=]
                 We will make a table, plot points,
                 and look at the graph of <m>l=\sqrt{A}</m>.
               </p>
-              <table permid="VxW">
+              <table>
                 <title>Values of <m>f(A)=\sqrt{A}</m></title>
-                <tabular permid="hMo">
+                <tabular>
                   <col halign="center"/>
                   <col halign="center"/>
                   <col halign="center"/>
@@ -288,22 +288,22 @@ minor ytick=]
                 </tabular>
               </table>
               <sidebyside width="37%">
-              <figure permid="iDm">
+              <figure>
                 <caption>Graph of <m>l=\sqrt{A}</m></caption>
-                <image width="47%" permid="EzL">
+                <image width="47%">
                   <description/>
                    <latex-image> \begin{tikzpicture} \begin{axis}[ymin=-1,ymax=4,xmin=-1,xmax=10, ytick={0,1,...,3}, minor ytick={0,1,...,3}, xtick={0,1,...,9}, minor xtick={0,1,...,9}, xlabel={$A$}, ylabel={$l$}] \addplot [primarycurve, variable=\t, -{Kite}, domain=0:sqrt(10)] ({t^2},{t}); \addplot[soliddot, color=secondcolor] coordinates {(6.25,2.5)} node[above left] {$(6.25,2.5)$}; \addplot[soliddot] coordinates {(0,0) (1,1) (4,2) (9,3)}; \end{axis} \end{tikzpicture}  </latex-image>
                 </image>
               </figure>
             </sidebyside>
             </li>
-            <li permid="AGQ">
-              <p permid="OKv">
+            <li>
+              <p>
                 The point <m>(6.25,2.5)</m> implies that a square plate with an area of <m>6.25</m> square feet would have a length of <m>2.5</m> feet on each side.
               </p>
             </li>
-            <li permid="gNZ">
-              <p permid="uRE">
+            <li>
+              <p>
                 According to the graph, the function's domain is
                 <m>[0,\infty)</m> because the graph goes forever to the right from <m>A=0</m>.
                 This should make some sense because you cannot take the square root of a negative number.
@@ -315,9 +315,9 @@ minor ytick=]
         </p>
       </solution>
     </example>
-    <fact xml:id="fact-domain-of-square-root" permid="iYL">
+    <fact xml:id="fact-domain-of-square-root">
       <title>Domain of a Square Root Functions</title>
-      <p permid="sGS">
+      <p>
         To algebraically find the domain of a square root function,
         set the radicand
         (the expression under the radical)
@@ -325,35 +325,35 @@ minor ytick=]
         The solution set to that inequality is the domain of the function.
       </p>
     </fact>
-    <example permid="qDk">
+    <example>
       <statement>
-        <p permid="vBy">
+        <p>
           Algebraically find the domain of the function <m>g</m> where
           <m>g(x)=\sqrt{2x-4}+1</m> and then find the range by making a graph.
         </p>
       </statement>
-      <solution permid="OaB">
-        <p permid="Elq">
-          Using <xref ref="fact-domain-of-square-root">Fact</xref>
+      <solution>
+        <p>
+          Using <xref ref="fact-domain-of-square-root"/>
           to find the function's domain,
           we set the radicand greater than or equal to zero and solve:
-          <md permid="ehO">
+          <md>
             <mrow>2x-4\amp\ge0</mrow>
             <mrow>2x\amp\ge4</mrow>
             <mrow>x\amp\ge2</mrow>
           </md>
           The function's domain is <m>[2,\infty)</m> in interval notation.
         </p>
-        <sidebyside widths="42% 37%" margins="5%" permid="PfU">
-          <p permid="ksz">
+        <sidebyside widths="42% 37%" margins="5%">
+          <p>
             To find the function's range,
             we use point plotting to graph the function and then look at its graph.
             The graph shows that the function's range is <m>[1,\infty)</m>.
             The graph also verifies the function's domain is indeed <m>[2,\infty)</m>.
           </p>
-          <figure permid="QzI">
+          <figure>
             <caption>Graph of <m>g(x)=\sqrt{2x-4}+1</m></caption>
-            <image permid="kGU">
+            <image>
               <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -371,43 +371,43 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         </sidebyside>
       </solution>
     </example>
-    <example permid="WKt">
+    <example>
       <statement>
-        <p permid="bIH">
+        <p>
           Algebraically find the domain and graphically find the range of the function <m>h</m> where <m>h(x)=2-3\sqrt{8-5x}</m>.
         </p>
       </statement>
-      <solution permid="uhK">
-        <p permid="wGR">
+      <solution>
+        <p>
           To find the function's domain,
           we set the radicand to be greater than or equal to zero:
         </p>
-        <sidebyside widths="47% 47%" margins="0%" permid="vnd">
-          <p permid="cOa">
-            <md permid="KoX">
+        <sidebyside widths="47% 47%" margins="0%">
+          <p>
+            <md>
               <mrow>8-5x\amp\ge0</mrow>
               <mrow>-5x\amp\ge-8</mrow>
               <mrow>\divideunder{-5x}{-5}\amp\mathbin{\highlight{\le}}\divideunder{-8}{-5}</mrow>
               <mrow>x\amp\le\frac{8}{5}</mrow>
             </md>
           </p>
-          <p permid="IVj">
+          <p>
             So, the function's domain is <m>\left(-\infty,\frac{8}{5}\right]</m>.
             The <m>2</m> and <m>3</m> in the function do not play a role in the domain,
             although they do alter the range,
             which we will find now by making a graph.
           </p>
         </sidebyside>
-        <sidebyside widths="42% 37%" margins="5%" permid="HBv">
-          <p permid="pcs">
+        <sidebyside widths="42% 37%" margins="5%">
+          <p>
             From the graph, we can see that the range is all numbers below
             (or equal to)
             the <m>y</m>-value <m>2</m>.
             In interval notation, this would be written <m>(-\infty,2]</m>.
           </p>
-          <figure permid="VjB">
+          <figure>
             <caption>Graph of <m>h(x)=2-3\sqrt{8-5x}</m></caption>
-            <image width="47%" permid="QOd">
+            <image width="47%">
               <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -423,26 +423,26 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         </sidebyside>
       </solution>
     </example>
-    <example permid="CRC">
+    <example>
       <statement>
-        <p permid="HPQ">
+        <p>
           When an object is dropped,
           the time it takes to hit the ground,
           <m>t</m>, in seconds, can be modeled by
-          <me permid="oGT">
+          <me>
             t=\sqrt{\frac{d}{16}}
           </me>
           where <m>d</m> stands for the initial height of the object in feet.
           Use algebra to answer the following questions.
-          <ol label="a." permid="PPO">
-            <li permid="MVi">
-              <p permid="aYN">
+          <ol label="a.">
+            <li>
+              <p>
                 In a science experiment, Amaka's class drops a beanbag from the top of a <m>100</m>-foot-tall building.
                 How long will it take for the beanbag to hit the ground?
               </p>
             </li>
-            <li permid="tcr">
-              <p permid="HfW">
+            <li>
+              <p>
                 Her class then goes to a second building,
                 drops the beanbag from the top,
                 and uses a stopwatch to measures the time it takes to hit the ground.
@@ -453,7 +453,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
           </ol>
         </p>
       </statement>
-      <solution permid="aoT">
+      <solution>
 <!-- <p>With graphing technology, and after adjusting the window settings, we can see the graph of <m>t=\sqrt{\frac{d}{16}}</m> and some important points.</p> -->
 <!--   <figure>
 <caption>Graph of <m>t=\sqrt{\frac{d}{16}}</m></caption>
@@ -471,13 +471,13 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 </latex-image>
 </image>
 </figure> -->
-        <p permid="BqK">
-          <ol label="a." permid="Xun">
-            <li permid="ZjA">
-              <p permid="nnf">
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 To find how long it will take for the object to hit the ground,
                 we need to plug in <m>100</m> for the distance that it will fall,<m>d</m> and then solve for <m>t</m>.
-                <md permid="qwg">
+                <md>
                   <mrow>t=\sqrt{\frac{d}{16}}</mrow>
                   <mrow>t\amp=sqrt{\frac{100}{16}}</mrow>
                   <mrow>t\amp=\frac{sqrt{100}}{sqrt{16}}</mrow>
@@ -487,10 +487,10 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
                 This means it will take the beanbag <m>2.5</m> seconds to hit the ground if it's released from the top of a <m>100</m>-foot-tall building.
               </p>
             </li>
-            <li permid="FqJ">
-              <p permid="Tuo">
+            <li>
+              <p>
                 This time we substitute <m>3</m> for <m>t</m> and solve for <m>d</m>:
-                <md permid="WDp">
+                <md>
                   <mrow>t=\sqrt{\frac{d}{16}}</mrow>
                   <mrow>3\amp=\sqrt{\frac{d}{16}}</mrow>
                   <mrow>3^2\amp=\left(\sqrt{\frac{d}{16}}\right)^2</mrow>
@@ -507,28 +507,28 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
       </solution>
     </example>
   </subsection>
-  <subsection permid="YVf">
+  <subsection>
     <title>The Distance Formula</title>
-    <p permid="zfY">
+    <p>
       A square root is used in calculating the distance between two points on a coordinate plane.
       We learned the Pythagorean Theorem in <xref ref="subsection-pythagorean-theorem" />.
       In a coordinate plane,
       we can use the Pythagorean Theorem to calculate the distance between any two points.
     </p>
-    <example permid="nIE">
+    <example>
       <statement>
-        <p permid="nWZ">
+        <p>
           Calculate the distance between <m>(2,3)</m> and <m>(5,7)</m>.
         </p>
       </statement>
-      <solution permid="Gwc">
-        <p permid="hxT">
+      <solution>
+        <p>
           First, we will sketch a graph of those two points.
         </p>
-        <sidebyside widths="37% 42%" margins="5%" permid="Mlo">
-          <figure permid="ZTu">
+        <sidebyside widths="37% 42%" margins="5%">
+          <figure>
             <caption>Calculating the Distance Between <m>(2,3)</m> and <m>(5,7)</m></caption>
-            <image permid="wVm">
+            <image>
               <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -546,10 +546,10 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 </latex-image>
             </image>
           </figure>
-          <p permid="NFc">
+          <p>
             To calculate the distance between <m>(2,3)</m> and <m>(5,7)</m>,
             we sketch a right triangle as in the figure and then use the Pythagorean Theorem:
-            <md permid="CKy">
+            <md>
               <mrow>d^2\amp=(5-2)^2+(7-3)^2</mrow>
               <mrow>d^2\amp=3^2+4^2</mrow>
               <mrow>d^2\amp=9+16</mrow>
@@ -559,7 +559,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
             </md>
           </p>
         </sidebyside>
-        <p permid="tMl">
+        <p>
           In conclusion,
           the distance between <m>(2,3)</m> and <m>(5,7)</m> is <m>5</m>.
           Note that in our calculations,
@@ -567,13 +567,13 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         </p>
       </solution>
     </example>
-    <p permid="fnh">
+    <p>
       With the same method,
       we can derive a formula to calculate the distance between any two points.
     </p>
-    <example permid="TPN">
+    <example>
       <statement>
-        <p permid="Uei">
+        <p>
           With a generic first and second point,
           we will use subscripts to identify the first pair
           <m>(x_1,y_1)</m> and the second pair <m>(x_2,y_2)</m>.
@@ -581,16 +581,16 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
           <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m>.
         </p>
       </statement>
-      <solution permid="mDl">
-        <p permid="GaD">
+      <solution>
+        <p>
           First, we will sketch a graph of those two points.
           We will put the image from last example side by side with the new image,
           so it's clear that we are using the same method.
         </p>
-        <sidebyside widths="37% 37%" margins="10%" permid="ssx">
-          <figure permid="SoV">
+        <sidebyside widths="37% 37%" margins="10%">
+          <figure>
             <caption>Calculating the Distance Between <m>(2,3)</m> and <m>(5,7)</m></caption>
-            <image width="70%" permid="dcv">
+            <image width="70%">
               <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -608,9 +608,9 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 </latex-image>
             </image>
           </figure>
-          <figure permid="ywe">
+          <figure>
             <caption>Calculating the Distance Between <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m></caption>
-            <image width="70%" permid="JjE">
+            <image width="70%">
               <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -629,49 +629,49 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
             </image>
           </figure>
         </sidebyside>
-        <p permid="mhM">
+        <p>
           To calculate the distance between
           <m>\highlight{(x_1,y_1)}</m> and <m>\highlight{(x_2,y_2)}</m>,
           we sketch a right triangle as in the figure and then use Pythagorean Theorem:
-          <md permid="iRH">
+          <md>
             <mrow>d^2\amp=(x_2-x_1)^2+(y_2-y_1)^2</mrow>
             <mrow>d\amp=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</mrow>
           </md>
         </p>
       </solution>
     </example>
-    <fact xml:id="fact-distance-formula" permid="gef">
+    <fact xml:id="fact-distance-formula">
       <title>The Distance Formula</title>
-      <p permid="YOb">
+      <p>
         The distance between two points <m>\highlight{(x_1,y_1)}</m> and
         <m>\highlight{(x_2,y_2)}</m>, is given by the formula:
-        <md permid="OYQ">
+        <md>
           <mrow>d\amp=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</mrow>
         </md>
       </p>
     </fact>
-    <p permid="Luq">
+    <p>
       With this formula,
       we can calculate the distance between two points without sketching a graph.
     </p>
-    <example permid="zWW">
+    <example>
       <statement>
-        <p permid="Alr">
+        <p>
           Find the distance between <m>(-2,4)</m> and <m>(5,-20)</m>.
         </p>
       </statement>
-      <solution permid="SKu">
-        <p permid="eDn">
+      <solution>
+        <p>
           To calculate the distance between <m>(-2,4)</m> and <m>(5,-20)</m>,
           we use the distance formula.
           It's good practice to mark each value with the corresponding variables in the formula.
           Again, <m>(x_1,y_1)</m> stands for the first point's coordinates,
           and <m>(x_2,y_2)</m> stands for the second point's coordinates:
-          <me permid="UOc">
+          <me>
             (\stackrel{x_1}{-2},\stackrel{y_1}{4}), (\stackrel{x_2}{5},\stackrel{y_2}{-20})
           </me>
           We have:
-          <md permid="vfZ">
+          <md>
             <mrow>d\amp=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</mrow>
             <mrow>d\amp=\sqrt{\left(\substitute{5}-\substitute{(-2)}\right)^2+\left(\substitute{(-20)}-\substitute{4}\right)^2}</mrow>
             <mrow>d\amp=\sqrt{\left(7\right)^2+\left(-24\right)^2}</mrow>
@@ -683,37 +683,37 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         </p>
       </solution>
     </example>
-    <warning permid="LfV">
-      <p permid="DfX">
+    <warning>
+      <p>
         Note that it's good practice to add parentheses around negative values when we do substitutions.
         For example,
         when we substitute <m>x</m> with <m>-7</m> in <m>x^2</m>,
         we should write
-        <me permid="AVl">
+        <me>
           x^2=\substitute{(-7)}^2=49\text{ correct }\checkmark
         </me>
         We should <em>not</em> write
-        <me permid="hcu">
+        <me>
           x^2=\substitute{-7}^2=-49\text{ incorrect }
         </me>
       </p>
     </warning>
   </subsection>
-  <subsection permid="Fco">
+  <subsection>
     <title>Cube Root Function</title>
-    <p permid="rBz">
+    <p>
       The square of <m>2</m> is <m>4</m>,
       so the square root of <m>4</m> is <m>2</m>.
     </p>
-    <p permid="XII">
+    <p>
       Similarly, the cube of <m>2</m> is <m>8</m>,
       so the cube root of <m>8</m> is <m>2</m>.
       We write
-      <me permid="NjD">
+      <me>
         \sqrt[3]{8}=2
       </me>
       It's helpful to memorize the first few perfect cube numbers and their cube roots:
-      <md permid="bni">
+      <md>
         <mrow>\amp0^3=0\amp\sqrt[3]{0}=0</mrow>
         <mrow>\amp1^3=1\amp\sqrt[3]{1}=1</mrow>
         <mrow>\amp2^3=8\amp\sqrt[3]{8}=2</mrow>
@@ -723,13 +723,13 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
       </md>
       One major difference between a cube root and a square root is that we can find the cube root of negative numbers.
       For example:
-      <me permid="tqM">
+      <me>
         (-4)^3=-64\text{, so }\sqrt[3]{-64}=-4
       </me>
       However, <m>\sqrt{-64}</m> is non-real and in general we cannot take the square root of a negative number.
     </p>
-    <remark xml:id="remark-calculator-rational-exponent-rule" permid="EGP">
-      <p permid="RjC">
+    <remark xml:id="remark-calculator-rational-exponent-rule">
+      <p>
         Many calculators don't have a cube root button.
         If yours does, it might look like
         <m>\sqrt[n]{\phantom{x}}</m> and you will tell the calculator both to enter a number for the
@@ -738,7 +738,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         Many calculators also allow you to type something like <c>root(3,8)</c> for <m>\sqrt[3]{8}</m>,
         for example.
       </p>
-      <p permid="xqL">
+      <p>
         Another way to calculate the cube root on a calculator is to use the exponent button
         (which is usually marked with the caret symbol, <c>^</c>)
         with a <em>reciprocal</em> power.
@@ -748,10 +748,10 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         For now, just learn how to use a calculator to calculate the cube root of a given number.
       </p>
     </remark>
-    <p permid="DPR">
+    <p>
       We can also estimate the value of a cube root,
       like <m>\sqrt[3]{10}</m>, by knowing the perfect cubes nearby:
-      <md permid="Hur">
+      <md>
         <mrow>\sqrt[3]{8}\amp=2\amp\sqrt[3]{10}\amp=\mathord{?}\amp\sqrt[3]{27}\amp=3</mrow>
       </md>
       Since <m>10</m> is between the perfect cubes <m>8</m> and <m>27</m>,
@@ -759,13 +759,13 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
       and closer to <m>2</m>.
       We can use a calculator to verify <m>\sqrt[3]{10}\approx2.154</m>
     </p>
-    <p permid="jXa">
+    <p>
       Let's build a table and graph the cube root function.
     </p>
-    <sidebyside widths="42% 37%" margins="5%" permid="QVh">
-      <table permid="BFf">
+    <sidebyside widths="42% 37%" margins="5%">
+      <table>
         <title>Values of <m>g(x)=\sqrt[3]{x}</m></title>
-        <tabular permid="NTx">
+        <tabular>
           <col halign="center"/>
           <col halign="center"/>
           <col halign="center"/>
@@ -801,9 +801,9 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
           </row>
         </tabular>
       </table>
-      <figure permid="ihN">
+      <figure>
         <caption>Graph of <m>g(x)=\sqrt[3]{x}</m></caption>
-        <image permid="pqN">
+        <image>
           <description/>
 <latex-image>
 \begin{tikzpicture}
@@ -817,7 +817,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         </image>
       </figure>
     </sidebyside>
-    <p permid="Qej">
+    <p>
       Both the domain and range of the <em>cube</em>
       root function are <m>(-\infty,\infty)</m>.
       Compare this with the domain and range of the
@@ -828,10 +828,10 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
       but we can take the <em>cube</em> root of negative numbers
       (and when we do, we get negative numbers as the output).
     </p>
-    <remark permid="kNY">
-      <p permid="dxU">
+    <remark>
+      <p>
         It is helpful to be able to quickly sketch the graphs of the following types of basic functions:
-        <md permid="nBA">
+        <md>
           <mrow>f(x)\amp=c\amp f(x)\amp=mx+b\amp f(x)\amp=a(x-h)^2+k\amp f(x)\amp=\abs{x}</mrow>
           <mrow>f(x)\amp=\frac{1}{x}\amp f(x)\amp=\frac{1}{x^2}\amp f(x)\amp=\sqrt{x}\amp f(x)\amp=\sqrt[3]{x}</mrow>
         </md>
@@ -839,9 +839,9 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         you have seen all of these shapes in this book.
       </p>
     </remark>
-    <example permid="YzG">
+    <example>
       <statement>
-        <p permid="gsA">
+        <p>
           Nasim makes solid copper spheres for their grounding and healing properties.
           A sphere's radius can be calculated by the formula <m>r(V)=\sqrt[3]{\frac{3V}{4\pi}}</m>,
           where <m>r(V)</m> stands for the sphere's radius for a given volume <m>V</m>.
@@ -850,12 +850,12 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
           Round your answer to two decimal places.
         </p>
       </statement>
-      <solution permid="yRD">
-        <p permid="KKw">
+      <solution>
+        <p>
 <!-- We will solve for <m>r</m> in the formula <m>V(r)=\frac{4}{3}\pi r^3</m>:<md> <mrow>V\amp=\frac{4}{3}\pi r^3</mrow> <mrow>\multiplyleft{3}V\amp=\multiplyleft{3}\frac{4}{3}\pi r^3</mrow> <mrow>3V\amp=4\pi r^3</mrow> <mrow>\frac{3V}{4\pi}\amp=\frac{4\pi r^3}{4\pi}</mrow> <mrow>\frac{3V}{4\pi}\amp=r^3</mrow> <mrow>\sqrt[3]{\frac{3V}{4\pi}}\amp=\sqrt[3]{r^3}</mrow> <mrow>\sqrt[3]{\frac{3V}{4\pi}}\amp=r</mrow> <mrow>r(V)\amp=\sqrt[3]{\frac{3V}{4\pi}}</mrow> </md>Next, --> First,
           to find the radius we will substitute
           <m>\substitute{2}</m> in for <m>V</m>, and we have:
-          <md permid="TIJ">
+          <md>
             <mrow>r(V)\amp=\sqrt[3]{\frac{3V}{4\pi}}</mrow>
             <mrow>r(\substitute{2})\amp=\sqrt[3]{\frac{3(\substitute{2})}{4\pi}}</mrow>
             <mrow>\amp\approx0.78</mrow>
@@ -865,7 +865,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
             <mag>0.78</mag><unit base="inch"/>
           </quantity>.
         </p>
-        <p permid="qRF">
+        <p>
           When we calculate <m>\sqrt[3]{\frac{3(2)}{4\pi}}</m> with a calculator,
           we enter <c>(3*2/(4π))^(1/3)</c>.
           To find the diameter, we multiply the radius by <m>2</m> to get
@@ -922,13 +922,13 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 </tabular>
 </table> -->
   </subsection>
-  <subsection permid="ljx">
+  <subsection>
     <title>Other Roots</title>
-    <p permid="wls">
+    <p>
       Similar to the cube root, there is the fourth root,
       and the fifth root, and so on,
       as in the following examples:
-      <md permid="zPS">
+      <md>
         <mrow>\sqrt[4]{16}=2 \amp\text{ because }2^4=16</mrow>
         <mrow>\sqrt[5]{-32}=-2 \amp\text{ because }(-2)^5=-32</mrow>
         <mrow>\sqrt[6]{64}=2 \amp\text{ because }2^6=64</mrow>
@@ -936,7 +936,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
       To calculate the fifth root of <m>-32</m> with a calculator,
       try typing <c>(-32)^(1/5)</c> or <c>root(5,-32)</c>.
     </p>
-    <definition xml:id="definition-index" permid="xcq">
+    <definition xml:id="definition-index">
       <notation>
         <usage>\sqrt[\highlight{n}]{\phantom{x}}</usage>
         <description>A radical symbol with an
@@ -944,7 +944,7 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         in the crook of the radical.</description>
       </notation>
       <statement>
-        <p permid="jng">
+        <p>
           The <term>index</term>
               <idx><h>index</h></idx>
           of a radical is the number
@@ -957,44 +957,44 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
         </p>
       </statement>
     </definition>
-    <fact xml:id="fact-domain-of-radicals" permid="JqI">
+    <fact xml:id="fact-domain-of-radicals">
       <title>Domain of Radical Functions</title>
-      <p permid="EVk">
+      <p>
         To find the domain of any <em>even</em>
         indexed radical function,
         set the radicand greater than or equal to zero.
         The solution set is the domain of the function.
       </p>
-      <p permid="lct">
+      <p>
         The domain of any <em>odd</em> indexed radical of a polynomial is <m>(-\infty,\infty)</m>.
       </p>
     </fact>
-    <example permid="djz">
+    <example>
       <statement>
-        <p permid="MzJ">
-          <ol label="a." permid="vWX">
-            <li permid="lxS">
-              <p permid="zBx">
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 Algebraically find the domain of the function <m>g</m> where <m>g(x)=7-3\sqrt[4]{10-5x}</m>.
               </p>
             </li>
-            <li permid="RFb">
-              <p permid="fIG">
+            <li>
+              <p>
                 Algebraically find the domain of the function <m>h</m> where <m>h(x)=4\sqrt[5]{2x-5}+1</m>.
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="eYM">
-        <p permid="WYO">
-          <ol label="a." permid="DBw">
-            <li permid="xMk">
-              <p permid="LPP">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 First, note that the index of this function is <m>4</m>.
-                By <xref ref="fact-domain-of-radicals">Fact</xref>,
+                By <xref ref="fact-domain-of-radicals"/>,
                 to find the domain of this function we must set the radicand greater or equal to zero and solve.
-                <md permid="fXb">
+                <md>
                   <mrow>10-5x\amp\ge0</mrow>
                   <mrow>-5x\amp\ge\subtractright{10}</mrow>
                   <mrow>x\amp\mathbin{\highlight{\le}}\divideunder{-10}{-5}</mrow>
@@ -1004,10 +1004,10 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
               </p>
  <!--  <p>To find the function's range, we use technology to graph the function. By the graph, the function's range is <m>(-\infty,7]</m>.</p> <figure> <caption>Graph of <m>y=7-3\sqrt[4]{10-5x}</m></caption> <image width="47%"> <description></description> <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ymin=-3,ymax=9,xmin=-10,xmax=4, ytick={-2,-1,...,8}, xtick={-8,-6,...,2}, minor xtick=, minor ytick=] \addplot[primarycurve, variable=\t, {Kite}-, domain=-1.349:7] ({(10-((7-t)/3)^4)/5},{t}) node[above left, pos=0.6] {$y=7-3\sqrt[4]{10-5x}$}; \addplot[soliddot, color=firstcolor] coordinates{(2,7)}; \end{axis} \end{tikzpicture}]]> </latex-image> </image> </figure> -->
             </li>
-            <li permid="dTt">
-              <p permid="rWY">
+            <li>
+              <p>
                 First, note that the index of the function <m>h</m> for <m>h(x)=4\sqrt[5]{2x-5}+1</m> is <m>5</m>.
-                By <xref ref="fact-domain-of-radicals">Fact</xref>,
+                By <xref ref="fact-domain-of-radicals"/>,
                 the domain is <m>(-\infty,\infty)</m>.
               </p>
   <!--  <p>To find the function's range, we use technology to graph the function. According to the graph, the function's range is also the set of all real numbers.</p> <figure> <caption>Graph of <m>y=4\sqrt[5]{2x-5}+1</m></caption> <image width="47%"> <description></description> <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ymin=-10,ymax=10,xmin=-15,xmax=15, ytick={-8,-6,...,8}, xtick={-12,-9,...,12}, minor xtick=, minor ytick=] \addplot[primarycurve, variable=\t, domain=-7.145:8.615, samples=50] ({(((t-1)/4)^5+5)/2},{t}) node[below right, pos=0.4] {$y=4\sqrt[5]{2x-5}+1$}; \end{axis} \end{tikzpicture}]]> </latex-image> </image> </figure> -->
@@ -1099,70 +1099,70 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 </image>
 </figure> -->
   </subsection>
-  <exercises permid="RqG">
-    <exercisegroup cols="2" permid="xxP">
+  <exercises>
+    <exercisegroup cols="2">
       <title>Review and Warmup</title>
-      <exercise permid="Waz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg"/>
       </exercise>
-      <exercise permid="ChI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot25.pg"/>
       </exercise>
-      <exercise permid="ioR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg"/>
       </exercise>
-      <exercise permid="Owa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot30.pg"/>
       </exercise>
-      <exercise permid="uDj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg"/>
       </exercise>
-      <exercise permid="aKs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateSquareRoot20.pg"/>
       </exercise>
-      <exercise permid="GRB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots10.pg"/>
       </exercise>
-      <exercise permid="mYK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EvaluateOtherRoots20.pg"/>
       </exercise>
-      <exercise permid="TfT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg"/>
       </exercise>
-      <exercise permid="znc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical10.pg"/>
       </exercise>
-      <exercise permid="ful">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical20.pg"/>
       </exercise>
-      <exercise permid="LBu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/EstimateRadical20.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="dEY">
+    <exercisegroup cols="2">
       <title>Domain</title>
-      <exercise permid="rID">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions225.pg"/>
       </exercise>
-      <exercise permid="XPM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions225.pg"/>
       </exercise>
-      <exercise permid="DWV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions235.pg"/>
       </exercise>
-      <exercise permid="kee">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions235.pg"/>
       </exercise>
-      <exercise permid="Qln">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions240.pg"/>
       </exercise>
-      <exercise permid="wsw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions240.pg"/>
       </exercise>
-      <exercise permid="czF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions245.pg"/>
       </exercise>
-      <exercise permid="IGO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions245.pg"/>
       </exercise>
 <!-- <exercise>
@@ -1172,16 +1172,16 @@ ytick={0,1,...,5}, xtick={0,1,...,9}]
 <webwork source="Contrib/PCC/BasicAlgebra/FunctionBasics/Functions217.pg" />
 </exercise> -->
 <!-- todo: ross thinks that all of the exercises below here are MTH111 problems and should be cut. -->
-      <exercise permid="oNX">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalFunctions/RadicalFunctions1.pg"/>
       </exercise>
-      <exercise permid="UVg">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalFunctions/RadicalFunctions1.pg"/>
       </exercise>
-      <exercise permid="Bcp">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalFunctions/RadicalFunctions2.pg"/>
       </exercise>
-      <exercise permid="hjy">
+      <exercise>
         <webwork source="Contrib/PCC/Math95/RadicalFunctions/RadicalFunctions2.pg"/>
       </exercise>
 <!-- <exercise>
@@ -1500,18 +1500,18 @@ $range = Compute("($c,inf)");
 </webwork>
 </exercise> -->
     </exercisegroup>
-    <exercisegroup permid="JMh">
+    <exercisegroup>
       <title>Applications</title>
-      <exercise permid="NqH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg"/>
       </exercise>
-      <exercise permid="txQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication10.pg"/>
       </exercise>
-      <exercise permid="ZEZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication20.pg"/>
       </exercise>
-      <exercise permid="FMi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/RadicalsAndRationalExponents/RadicalFunctionApplication20.pg"/>
       </exercise>
 <!-- <exercise>
@@ -1651,18 +1651,18 @@ $gr->lb( new Label($d1-$marksep[0]/8, $s1+$marksep[1]/8, "($d1R,$s1)",'red','rig
 </webwork>
 </exercise> -->
     </exercisegroup>
-    <exercisegroup cols="2" permid="pTq">
+    <exercisegroup cols="2">
       <title>Distance Formula</title>
-      <exercise permid="lTr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad135.pg"/>
       </exercise>
-      <exercise permid="SaA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad135.pg"/>
       </exercise>
-      <exercise permid="yhJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad140.pg"/>
       </exercise>
-      <exercise permid="eoS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad140.pg"/>
       </exercise>
     </exercisegroup>

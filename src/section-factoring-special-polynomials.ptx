@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-factoring-special-polynomials" permid="kwD">
+<section xml:id="section-factoring-special-polynomials">
   <title>Factoring Special Polynomials</title>
-  <introduction permid="wDR">
-    <p permid="OVQ">
+  <introduction>
+    <p>
       Certain polynomials have patterns that you can train yourself to recognize.
       And when they have these patterns,
       there are formulas you can use to factor them,
@@ -17,19 +17,19 @@
       and <xref ref=" section-factoring-trinomials-with-a-nontrivial-leading-coefficient" />.
     </p>
   </introduction>
-  <subsection permid="QDM">
+  <subsection>
     <title>Difference of Squares</title>
     <idx><h>factoring</h><h>difference of squares</h></idx>
-    <p permid="pnN">
+    <p>
       If <m>b</m> is some positive integer,
       then when you multiply <m>(x-b)(x+b)</m>:
-      <md permid="gDV">
+      <md>
         <mrow>(x-b)(x+b)\amp=x^2-bx+bx-b^2</mrow>
         <mrow>\amp=x^2-b^2</mrow>
       </md>.
       The <m>-bx</m> and the <m>+bx</m> cancel each other out.
       So this is telling us that
-      <me permid="rda">
+      <me>
         x^2-b^2=(x-b)(x+b)
       </me>.
       And so if we ever encounter a polynomial of the form <m>x^2-b^2</m> (a
@@ -39,34 +39,34 @@
       <q><m>b</m></q>
       is, and use that in <m>(x-b)(x+b)</m>.
     </p>
-    <p permid="VuW">
+    <p>
       To use this formula,
       it's important to recognize which numbers are perfect squares,
       as in <xref ref="table-perfect-squares" />.
     </p>
-    <example permid="MSi">
+    <example>
       <statement>
-        <p permid="ULc">
+        <p>
           Factor <m>x^2-16</m>.
         </p>
       </statement>
-      <solution permid="cLa">
-        <p permid="JCd">
+      <solution>
+        <p>
           The
           <q><m>16</m></q>
           being subtracted here is a perfect square.
           It is the same as <m>4^2</m>.
           So we can take <m>b=4</m> and write:
-          <md permid="MLe">
+          <md>
             <mrow>x^2-16\amp=(x-b)(x+b)</mrow>
             <mrow>\amp=(x-4)(x+4)</mrow>
           </md>
         </p>
       </solution>
     </example>
-    <exercise permid="dQt">
-      <introduction permid="RCb">
-        <p permid="vcZ">
+    <exercise>
+      <introduction>
+        <p>
           Try to factor one yourself:
         </p>
       </introduction>
@@ -79,21 +79,21 @@ $answer = Formula("(x-7)(x+7)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="fUb">
+            <p>
               Factor <m>x^2-49</m>.
             </p>
-            <p permid="Mbk">
+            <p>
               <var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="yte">
-            <p permid="pJm">
+          <solution>
+            <p>
               The
               <q><m>49</m></q>
               being subtracted here is a perfect square.
               It is the same as <m>7^2</m>.
               So we can take <m>b=7</m> and write:
-              <md permid="sSn">
+              <md>
                 <mrow>x^2-49\amp=(x-b)(x+b)</mrow>
                 <mrow>\amp=(x-7)(x+7)</mrow>
               </md>
@@ -101,32 +101,32 @@ $answer = Formula("(x-7)(x+7)");
           </solution>
       </webwork>
     </exercise>
-    <p permid="BCf">
+    <p>
       We can do a little better.
       There is nothing special about starting with
       <q><m>x^2</m></q>
       in these examples.
       In full generality:
     </p>
-    <fact xml:id="fact-difference-of-squares" permid="luS">
+    <fact xml:id="fact-difference-of-squares">
       <title>The Difference of Squares Formula</title>
       <statement>
-        <p permid="qtg">
+        <p>
           If <m>A</m> and <m>B</m> are any algebraic expressions, then:
-          <me permid="Xkj">
+          <me>
             A^2 - B^2 = (A-B)(A+B)
           </me>.
         </p>
       </statement>
     </fact>
-    <example permid="sZr">
+    <example>
       <statement>
-        <p permid="ASl">
+        <p>
           Factor <m>1-p^2</m>.
         </p>
       </statement>
-      <solution permid="ISj">
-        <p permid="VQv">
+      <solution>
+        <p>
           The
           <q><m>1</m></q>
           at the beginning of this expression is a perfect square;
@@ -136,21 +136,21 @@ $answer = Formula("(x-7)(x+7)");
           being subtracted here is also perfect square.
           We can take <m>A=1</m> and <m>B=p</m>,
           and use <xref ref="fact-difference-of-squares" text="title"/>:
-          <md permid="YZw">
+          <md>
             <mrow>1-p^2\amp=(A-B)(A+B)</mrow>
             <mrow>\amp=(1-p)(1+p)</mrow>
           </md>
         </p>
       </solution>
     </example>
-    <example permid="ZgA">
+    <example>
       <statement>
-        <p permid="gZu">
+        <p>
           Factor <m>m^2n^2-4</m>.
         </p>
       </statement>
-      <solution permid="oZs">
-        <p permid="BXE">
+      <solution>
+        <p>
           Is the
           <q><m>m^2n^2</m></q>
           at the beginning of this expression a perfect square?
@@ -161,16 +161,16 @@ $answer = Formula("(x-7)(x+7)");
           being subtracted here is also perfect square.
           We can take <m>B=2</m>.
           <xref ref="fact-difference-of-squares" text="title"/> tells us:
-          <md permid="FgF">
+          <md>
             <mrow>m^2n^2-4\amp=(A-B)(A+B)</mrow>
             <mrow>\amp=(mn-2)(mn+2)</mrow>
           </md>
         </p>
       </solution>
     </example>
-    <exercise permid="JXC">
-      <introduction permid="xJk">
-        <p permid="bki">
+    <exercise>
+      <introduction>
+        <p>
           Try to factor one yourself:
         </p>
       </introduction>
@@ -184,15 +184,15 @@ $answer = Formula("(2z-3)(2z+3)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="sit">
+            <p>
               Factor <m>4z^2-9</m>.
             </p>
-            <p permid="YpC">
+            <p>
               <var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="eAn">
-            <p permid="ieN">
+          <solution>
+            <p>
               The
               <q><m>4z^2</m></q>
               at the beginning here is a perfect square.
@@ -202,7 +202,7 @@ $answer = Formula("(2z-3)(2z+3)");
               <q><m>9</m></q>
               being subtracted is also a perfect square,
               so we can take <m>B=3</m>:
-              <md permid="lnO">
+              <md>
                 <mrow>4z^2-9\amp=(A-B)(A+B)</mrow>
                 <mrow>\amp=(2z-3)(2z+3)</mrow>
               </md>
@@ -210,14 +210,14 @@ $answer = Formula("(2z-3)(2z+3)");
           </solution>
       </webwork>
     </exercise>
-    <example permid="FnJ">
+    <example>
       <statement>
-        <p permid="NgD">
+        <p>
           Factor <m>x^6-9</m>.
         </p>
       </statement>
-      <solution permid="VgB">
-        <p permid="OlW">
+      <solution>
+        <p>
           Is the
           <q><m>x^6</m></q>
           at the beginning of this expression is a perfect square?
@@ -229,15 +229,15 @@ $answer = Formula("(2z-3)(2z+3)");
           being subtracted here is also perfect square.
           We can take <m>B=3</m>.
           <xref ref="fact-difference-of-squares" text="title"/> tells us:
-          <md permid="RuX">
+          <md>
             <mrow>x^6-9\amp=(A-B)(A+B)</mrow>
             <mrow>\amp=(x^3-3)(x^3+3)</mrow>
           </md>
         </p>
       </solution>
     </example>
-    <warning permid="DcX">
-      <p permid="IwK">
+    <warning>
+      <p>
         It's a common mistake to write something like <m>x^2+16=(x+4)(x-4)</m>.
         This is not what <xref ref="fact-difference-of-squares" text="title"/> allows you to do,
         and this is in fact incorrect.
@@ -249,43 +249,43 @@ $answer = Formula("(2z-3)(2z+3)");
       </p>
     </warning>
   </subsection>
-  <subsection permid="wKV">
+  <subsection>
     <title>Perfect Square Trinomials</title>
     <idx><h>factoring</h><h>perfect square trinomials</h></idx>
-    <p permid="hJo">
+    <p>
       If we expand <m>(A+B)^2</m>:
-      <md permid="xCg">
+      <md>
         <mrow>(A+B)^2\amp=(A+B)(A+B)</mrow>
         <mrow>\amp=A^2+BA+AB+B^2</mrow>
         <mrow>\amp=A^2+2AB+B^2</mrow>
       </md>.
       The <m>BA</m> and the <m>AB</m> equal each other and double up when added together.
       So this is telling us that
-      <me permid="Drs">
+      <me>
         A^2+2AB+B^2=(A+B)^2
       </me>.
       And so if we ever encounter a polynomial of the form <m>A^2+2AB+B^2</m> (a
       <q>perfect square trinomial</q>
       ) then we have a quick formula for factoring it.
     </p>
-    <p permid="NQx">
+    <p>
       The tricky part is recognizing when a trinomial you have encountered is in this special form.
       Ask yourself:
-      <ol permid="Prp">
-        <li permid="Air">
-          <p permid="sDS">
+      <ol>
+        <li>
+          <p>
             Is the first term a perfect square?
             If so, jot down what <m>A</m> would be.
           </p>
         </li>
-        <li permid="gpA">
-          <p permid="YLb">
+        <li>
+          <p>
             Is the second term a perfect square?
             If so, jot down what <m>B</m> would be.
           </p>
         </li>
-        <li permid="MwJ">
-          <p permid="ESk">
+        <li>
+          <p>
             When you multiply <m>2</m> with what you wrote down for <m>A</m> and <m>B</m>, i.e.
             <m>2AB</m>, do you have the middle term?
             If you have this middle term exactly,
@@ -297,29 +297,29 @@ $answer = Formula("(2z-3)(2z+3)");
         </li>
       </ol>
     </p>
-    <fact xml:id="fact-perfect-square-trinomial" permid="Ctd">
+    <fact xml:id="fact-perfect-square-trinomial">
       <title>The Perfect Square Trinomial Formula</title>
       <statement>
-        <p permid="WAp">
+        <p>
           If <m>A</m> and <m>B</m> are any algebraic expressions, then:
-          <me permid="jyB">
+          <me>
             A^2+2AB+B^2 = (A+B)^2
           </me>
           and
-          <me permid="PFK">
+          <me>
             A^2-2AB+B^2 = (A-B)^2
           </me>
         </p>
       </statement>
     </fact>
-    <example permid="qeL">
+    <example>
       <statement>
-        <p permid="tnM">
+        <p>
           Factor <m>x^2+6x+9</m>.
         </p>
       </statement>
-      <solution permid="BnK">
-        <p permid="utf">
+      <solution>
+        <p>
           The first term, <m>x^2</m>, is clearly a perfect square.
           So we could take <m>A=x</m>.
           The last term, <m>9</m>,
@@ -329,23 +329,23 @@ $answer = Formula("(2z-3)(2z+3)");
           and the result is <m>6x</m>.
           This is the middle term, which is what we hope to see.
         </p>
-        <p permid="aAo">
+        <p>
           So we can use <xref ref="fact-perfect-square-trinomial" text="title"/>:
-          <md permid="dJp">
+          <md>
             <mrow>x^2+6x+9\amp=(A+B)^2</mrow>
             <mrow>\amp=(x+3)^2</mrow>
           </md>
         </p>
       </solution>
     </example>
-    <example permid="WlU">
+    <example>
       <statement>
-        <p permid="ZuV">
+        <p>
           Factor <m>4x^2-20xy+25y^2</m>.
         </p>
       </statement>
-      <solution permid="huT">
-        <p permid="GHx">
+      <solution>
+        <p>
           The first term, <m>4x^2</m>,
           is a perfect square because it equals <m>(2x)^2</m>.
           So we could take <m>A=2x</m>.
@@ -357,18 +357,18 @@ $answer = Formula("(2z-3)(2z+3)");
           This is the <em>negative</em> of the middle term, which we can work with.
           The factored form will be <m>(A-B)^2</m> instead of <m>(A+B)^2</m>.
         </p>
-        <p permid="mOG">
+        <p>
           So we can use <xref ref="fact-perfect-square-trinomial" text="title"/>:
-          <md permid="JQy">
+          <md>
             <mrow>4x^2-20xy+25y^2\amp=(A-B)^2</mrow>
             <mrow>\amp=(2x-5y)^2</mrow>
           </md>
         </p>
       </solution>
     </example>
-    <exercise permid="uOE">
-      <introduction permid="OHv">
-        <p permid="Hrr">
+    <exercise>
+      <introduction>
+        <p>
           Try to factor one yourself:
         </p>
       </introduction>
@@ -382,15 +382,15 @@ $answer = Formula("(4q+7)^2");
 </pg-code>
           </setup>
           <statement>
-            <p permid="EwL">
+            <p>
               Factor <m>16q^2+56q+49</m>.
             </p>
-            <p permid="kDU">
+            <p>
               <var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="KHw">
-            <p permid="SVP">
+          <solution>
+            <p>
               The first term, <m>16q^2</m>,
               is a perfect square because it equals <m>(4q)^2</m>.
               So we could take <m>A=4q</m>.
@@ -401,9 +401,9 @@ $answer = Formula("(4q+7)^2");
               and the result is <m>56q</m>.
               This is the middle term, which is what we hope to see.
             </p>
-            <p permid="zcY">
+            <p>
               So we can use <xref ref="fact-perfect-square-trinomial" text="title"/>:
-              <md permid="pXH">
+              <md>
                 <mrow>16q^2+56q+49\amp=(A+B)^2</mrow>
                 <mrow>\amp=(4q+7)^2</mrow>
               </md>
@@ -411,8 +411,8 @@ $answer = Formula("(4q+7)^2");
           </solution>
       </webwork>
     </exercise>
-    <warning permid="jkg">
-      <p permid="oDT">
+    <warning>
+      <p>
         It is not enough to just see that the first and last terms are perfect squares.
         For example,
         <m>9x^2+10x+25</m> has its first term equal to <m>(3x)^2</m> and its last term equal to <m>5^2</m>.
@@ -422,8 +422,8 @@ $answer = Formula("(4q+7)^2");
         In fact, this polynomial doesn't factor at all.
       </p>
     </warning>
-    <remark permid="iAm">
-      <p permid="iOH">
+    <remark>
+      <p>
         To factor these perfect square trinomials,
         we <em>could</em> use methods from <xref ref="section-factoring-trinomials-with-leading-coefficient-one" />
         and <xref ref="section-factoring-trinomials-with-a-nontrivial-leading-coefficient" />.
@@ -434,52 +434,52 @@ $answer = Formula("(4q+7)^2");
       </p>
     </remark>
   </subsection>
-  <subsection permid="cSe">
+  <subsection>
     <title>Difference/Sum of Cubes Formulas</title>
     <idx><h>factoring</h><h>sum and difference of cubes</h></idx>
-    <p permid="tXG">
+    <p>
       The following calculation may seem to come from nowhere at first,
       but see it through.
       If we multiply <m>(A-B)\left(A^2+AB+B^2\right)</m>:
-      <md permid="WeQ">
+      <md>
         <mrow>(A-B)\left(A^2+AB+B^2\right)\amp=A^3-\highlight{BA^2}+A^2B-\highlight{BAB}+AB^2-B^3</mrow>
         <mrow>\amp=A^3-\highlight{A^2B}+A^2B-\highlight{AB^2}+AB^2-B^3</mrow>
         <mrow>\amp=A^3\overbrace{{}-A^2B+A^2B}\overbrace{{}-AB^2+AB^2}-B^3</mrow>
         <mrow>\amp=A^3-B^3</mrow>
       </md>.
     </p>
-    <p permid="aeP">
+    <p>
       This is telling us that
-      <me permid="vMT">
+      <me>
         A^3-B^3=(A-B)\left(A^2+AB+B^2\right)
       </me>.
       And so if we ever encounter a polynomial of the form <m>A^3-B^3</m> (a
       <q>difference of cubes</q>
       ) then we have a quick formula for factoring it.
     </p>
-    <p permid="GlY">
+    <p>
       A similar formula exists for factoring a <em>sum</em>
       of cubes, <m>A^3+B^3</m>.
       Here are both formulas, followed by some tips on how to memorize them.
     </p>
-    <fact xml:id="fact-difference-of-cubes" permid="nkf">
+    <fact xml:id="fact-difference-of-cubes">
       <title>The Difference/Sum of Cubes Formula</title>
       <statement>
-        <p permid="CHy">
+        <p>
           If <m>A</m> and <m>B</m> are any algebraic expressions, then:
-          <me permid="bUc">
+          <me>
             A^3 - B^3 = (A-B)\left(A^2+AB+B^2\right)
           </me>
           and
-          <me permid="Ibl">
+          <me>
             A^3 + B^3 = (A+B)\left(A^2- AB+B^2\right)
           </me>
         </p>
       </statement>
     </fact>
-    <aside permid="zyx">
+    <aside>
       <title>Differences of cubes <em>are</em> sums of cubes</title>
-      <p permid="zMS">
+      <p>
         Technically a difference of cubes,
         <m>A^3-B^3</m>, is equal to <m>A^3+(-B)^3</m>.
         So you can treat any difference of cubes as a sum of cubes,
@@ -488,27 +488,27 @@ $answer = Formula("(4q+7)^2");
         <em>sum</em> of cubes formula.
       </p>
     </aside>
-    <p permid="mth">
+    <p>
       To memorize this, focus on:
-      <ul permid="vyy">
-        <li permid="bFH">
-          <p permid="kZt">
+      <ul>
+        <li>
+          <p>
             The factorization is a binomial times a trinomial.
           </p>
         </li>
-        <li permid="HMQ">
-          <p permid="RgC">
+        <li>
+          <p>
             The sign you start with appears again in the binomial.
           </p>
         </li>
-        <li permid="nTZ">
-          <p permid="xnL">
+        <li>
+          <p>
             The three terms in the trinomial are all quadratic:
             <m>A^2</m>, <m>AB</m>, and <m>B^2</m>.
           </p>
         </li>
-        <li permid="Ubi">
-          <p permid="duU">
+        <li>
+          <p>
             In the trinomial, it's <em>always</em>
             adding <m>A^2</m> and <m>B^2</m>.
             But the sign on <m>AB</m> is always the <em>opposite</em>
@@ -517,35 +517,35 @@ $answer = Formula("(4q+7)^2");
         </li>
       </ul>
     </p>
-    <p permid="SAq">
+    <p>
       To use these formulas effectively,
       we need to recognize when numbers are perfect cubes.
       Perfect cubes become large fast before you can list too many of them.
       Try to memorize as many of these as you can:
-      <md permid="ClZ">
+      <md>
         <mrow>1^3\amp=1\amp 2^3\amp=8\amp 3^3\amp=27\amp 4^3\amp=64</mrow>
         <mrow>5^3\amp=125\amp 6^3\amp=216\amp 7^3\amp=343\amp 8^3\amp=512</mrow>
         <mrow>9^3\amp=729\amp 10^3\amp=1000\amp 11^3\amp=1331\amp 12^3\amp=1728</mrow>
       </md>
     </p>
-    <p permid="yHz">
+    <p>
       Let's look at a few examples.
     </p>
-    <example permid="aVN">
+    <example>
       <statement>
-        <p permid="FCe">
+        <p>
           Factor <m>x^3-27</m>.
         </p>
       </statement>
-      <solution permid="NCc">
-        <p permid="fkh">
+      <solution>
+        <p>
           We recognize that <m>x^3</m> is a perfect cube and <m>27=3^3</m>,
           so we can use <xref ref="fact-difference-of-cubes" text="title"/> to factor the binomial.
           Note that since we have a <em>difference</em> of cubes,
           the binomial factor from the formula will
           <em>subtract</em> two terms,
           and the middle term from the trinomial will be <m>+AB</m>.
-          <md alignment="alignat" permid="iti">
+          <md alignment="alignat">
             <mrow>x^3-27\amp=(A-B)\big(A^2 \amp\amp +AB\amp\amp+B^2\big)</mrow>
             <mrow>\amp=(x-3)\big(x^2 \amp\amp +(x)(3)\amp\amp+3^2\big)</mrow>
             <mrow>\amp=(x-3)\big(x^2 \amp\amp +3x\amp\amp+9\big)</mrow>
@@ -553,21 +553,21 @@ $answer = Formula("(4q+7)^2");
         </p>
       </solution>
     </example>
-    <example permid="HcW">
+    <example>
       <statement>
-        <p permid="lJn">
+        <p>
           Factor <m>27m^3+64n^3</m>.
         </p>
       </statement>
-      <solution permid="tJl">
-        <p permid="Lrq">
+      <solution>
+        <p>
           We recognize that <m>27m^3=(3m)^3</m> and
           <m>64n^3=(4n)^3</m> are both perfect cubes,
           so we can use <xref ref="fact-difference-of-cubes" text="title"/> to factor the binomial.
           Note that since we have a <em>sum</em> of cubes,
           the binomial factor from the formula will <em>add</em> two terms,
           and the middle term from the trinomial will be <m>-AB</m>.
-          <md alignment="alignat" permid="OAr">
+          <md alignment="alignat">
             <mrow>27m^3+64n^3\amp=(A \amp\amp+B)\amp\amp\big(A^2\amp\amp-AB\amp\amp+B^2\big)</mrow>
             <mrow>\amp=(3m\amp\amp+4n)\amp\amp\big((3m)^2\amp\amp-(3m)(4n)\amp\amp+(4n)^2\big)</mrow>
             <mrow>\amp=(3m\amp\amp+4n)\amp\amp\big(9m^2\amp\amp-12mn\amp\amp+16n^2\big)</mrow>
@@ -575,9 +575,9 @@ $answer = Formula("(4q+7)^2");
         </p>
       </solution>
     </example>
-    <exercise permid="fFG">
-      <introduction permid="Tro">
-        <p permid="nyA">
+    <exercise>
+      <introduction>
+        <p>
           Try to factor one yourself:
         </p>
       </introduction>
@@ -591,21 +591,21 @@ $answer = Formula("(y+10)(y^2-10y+100)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="QLd">
+            <p>
               Factor <m>y^3+1000</m>.
             </p>
-            <p permid="wSm">
+            <p>
               <var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="qOF">
-            <p permid="ryz">
+          <solution>
+            <p>
               We recognize that <m>y^3</m> is a perfect cube and <m>1000=10^3</m>,
               so we can use <xref ref="fact-difference-of-cubes" text="title"/> to factor the binomial.
               Note that since we have a <em>sum</em> of cubes,
               the binomial factor from the formula will <em>add</em> two terms,
               and the middle term from the trinomial will be <m>-AB</m>.
-              <md permid="uHA">
+              <md>
                 <mrow>y^3+1000\amp=(A+B)\left(A^2-AB+B^2\right)</mrow>
                 <mrow>\amp=(y+10)\left(y^2-(y)(10)+10^2\right)</mrow>
                 <mrow>\amp=(y+10)\left(y^2-10y+100\right)</mrow>
@@ -615,9 +615,9 @@ $answer = Formula("(y+10)(y^2-10y+100)");
       </webwork>
     </exercise>
   </subsection>
-  <subsection permid="IZn">
+  <subsection>
     <title>Factoring in Stages</title>
-    <p permid="eOI">
+    <p>
       Sometimes factoring a polynomial will take two or more
       <q>stages.</q>
       For instance you might use one of the special formulas from this section to factor something into two factors,
@@ -626,18 +626,18 @@ $answer = Formula("(y+10)(y^2-10y+100)");
       the intention is that you <em>fully</em> factor it,
       breaking down the pieces into even smaller pieces when that is possible.
     </p>
-    <example permid="LMP">
+    <example>
       <title>Factor out any greatest common factor</title>
       <statement>
-        <p permid="RQw">
+        <p>
           Factor <m>12z^3-27z</m>.
         </p>
       </statement>
-      <solution permid="ZQu">
-        <p permid="XFI">
+      <solution>
+        <p>
           The two terms of this polynomial have greatest common factor <m>3z</m>,
           so the first step in factoring should be to factor this out:
-          <me permid="oiu">
+          <me>
             3z\left(4z^2-9\right)
           </me>.
           Now we have two factors.
@@ -646,26 +646,26 @@ $answer = Formula("(y+10)(y^2-10y+100)");
           And in fact, that is a difference of squares.
           So we can apply <xref ref="fact-difference-of-squares" text="title"/>.
           The full process would be:
-          <md permid="aOJ">
+          <md>
             <mrow>12z^3-27z\amp=3z\left(4z^2-9\right)</mrow>
             <mrow>\amp=3z(2z-3)(2z+3)</mrow>
           </md>
         </p>
       </solution>
     </example>
-    <example permid="rTY">
+    <example>
       <title>Recognize a <em>second</em> special pattern</title>
       <statement>
-        <p permid="xXF">
+        <p>
           Factor <m>p^4-1</m>.
         </p>
       </statement>
-      <solution permid="FXD">
-        <p permid="DMR">
+      <solution>
+        <p>
           Since <m>p^4</m> is the same as <m>\left(p^2\right)^2</m>,
           we have a difference of squares here.
           We can apply <xref ref="fact-difference-of-squares" text="title"/>:
-          <md permid="GVS">
+          <md>
             <mrow>p^4-1\amp=\left(p^2-1\right)\left(p^2+1\right)</mrow>
             <intertext>It doesn't end here. Of the two factors we found, <m>\left(p^2+1\right)</m> cannot be factored further. But the other one, <m>\left(p^2-1\right)</m> is <em>also</em> a difference of squares. So we should apply <xref ref="fact-difference-of-squares" text="title"/> again:</intertext>
             <mrow>\phantom{p^4-1}\amp=(p-1)(p+1)\left(p^2+1\right)</mrow>
@@ -673,9 +673,9 @@ $answer = Formula("(y+10)(y^2-10y+100)");
         </p>
       </solution>
     </example>
-    <exercise permid="QwI">
-      <introduction permid="kpz">
-        <p permid="TFJ">
+    <exercise>
+      <introduction>
+        <p>
           Try to factor one yourself:
         </p>
       </introduction>
@@ -689,18 +689,18 @@ $answer = Formula("3(x-1)(x^2+x+1)");
 </pg-code>
           </setup>
           <statement>
-            <p permid="cZv">
+            <p>
               Factor <m>3x^3-3</m>.
             </p>
-            <p permid="JgE">
+            <p>
               <var name="$answer" width="25"/>
             </p>
           </statement>
-          <solution permid="WVO">
-            <p permid="jUa">
+          <solution>
+            <p>
               The two terms of this polynomial have greatest common factor <m>3</m>,
               so the first step in factoring should be to factor this out:
-              <me permid="UpD">
+              <me>
                 3\left(x^3-1\right)
               </me>.
               Now we have two factors.
@@ -710,7 +710,7 @@ $answer = Formula("3(x-1)(x^2+x+1)");
               (Notice that <m>1^3=1</m>.)
               So we can apply <xref ref="fact-difference-of-cubes" text="title"/>.
               The full process would be:
-              <md permid="ndb">
+              <md>
                 <mrow>3x^3-3\amp=3\left(x^3-1\right)</mrow>
                 <mrow>\amp=3(x-1)(x^2+x+1)</mrow>
               </md>
@@ -718,28 +718,28 @@ $answer = Formula("3(x-1)(x^2+x+1)");
           </solution>
       </webwork>
     </exercise>
-    <p permid="KVR">
+    <p>
       The trinomial from <xref ref="fact-difference-of-cubes" text="title"/> will
       <em>never</em> factor further.
       However, in some cases,
       the binomial from that formula will factor further,
       and you should look for this.
     </p>
-    <example permid="Ybh">
+    <example>
       <statement>
-        <p permid="eeO">
+        <p>
           Factor <m>64p^6-729</m>.
         </p>
       </statement>
-      <solution permid="meM">
-        <p permid="Qbj">
+      <solution>
+        <p>
           We recognize that <m>64p^6</m> is a perfect square because it equals <m>\left(8p^3\right)^2</m>.
           And <m>729</m> is also a perfect square because <m>729=27^2</m>.
           So we can use <xref ref="fact-difference-of-squares" text="title"/> to factor the binomial.
-          <md permid="Tkk">
+          <md>
             <mrow>64p^6-729\amp=\left(A-B\right)\left(A+B\right)</mrow>
             <mrow>\amp=\highlight{\left(8p^3-27\right)}\lighthigh{\left(8p^3+27\right)}</mrow>
-            <intertext>Next, note that in each of the factors we have an <m>8p^3</m> and a <m>27</m>, both of which can be viewed as perfect cubes: <m>8p^3=(2p)^3</m> and a <m>27=3^3</m>. So we will use <em>both</em> the <xref ref="fact-difference-of-cubes" text="title">difference of cubes and the sum of cubes</xref>  formulas.</intertext>
+            <intertext>Next, note that in each of the factors we have an <m>8p^3</m> and a <m>27</m>, both of which can be viewed as perfect cubes: <m>8p^3=(2p)^3</m> and a <m>27=3^3</m>. So we will use <em>both</em> the <xref ref="fact-difference-of-cubes" text="title" />  formulas.</intertext>
             <mrow>\amp=\highlight{(A-B)\left(A^2+AB+B^2\right)}\lighthigh{(A+B)\left(A^2-AB+B^2\right)}</mrow>
             <mrow>\amp=\highlight{(2p-3)\left((2p)^2+(2p)\cdot3+3^2\right)}\lighthigh{(2p+3)\left((2p)^2-(2p)\cdot3+3^2\right)}</mrow>
             <mrow>\amp=\highlight{(2p-3)\left(4p^2+6p+9\right)}\lighthigh{(2p+3)\left(4p^2-6p+9\right)}</mrow>
@@ -747,28 +747,28 @@ $answer = Formula("3(x-1)(x^2+x+1)");
         </p>
       </solution>
     </example>
-    <example permid="Eiq">
+    <example>
       <statement>
-        <p permid="KlX">
+        <p>
           Factor <m>32x^6y^2-48x^5y+18x^4</m>.
         </p>
       </statement>
-      <solution permid="SlV">
-        <p permid="wis">
+      <solution>
+        <p>
           The first step of factoring any polynomial is to factor out the common factor if possible.
           For this trinomial, the common factor is <m>2x^4</m>, so we write
-          <me permid="AwM">
+          <me>
             32x^6y^2-48x^5y+18x^4=2x^4(16x^2y^2-24xy+9)
           </me>.
         </p>
-        <p permid="cpB">
+        <p>
           The square numbers <m>16</m> and <m>9</m> in
           <m>16x^2y^2-24xy+9</m> hint that maybe we could use <xref ref="fact-perfect-square-trinomial" text="title"/>.
           Taking <m>A=4xy</m> and <m>B=3</m>,
           we multiply <m>2AB=2\cdot(4xy)\cdot 3</m>.
           The result is <m>24xy</m>, which is the negative of our middle term.
           So the whole process is:
-          <md permid="zrt">
+          <md>
             <mrow>32x^6y^2-48x^5y+18x^4\amp=2x^4(16x^2y^2-24xy+9)</mrow>
             <mrow>\amp=2x^4(a-b)^2</mrow>
             <mrow>\amp=2x^4(4xy-3)^2</mrow>
@@ -777,346 +777,346 @@ $answer = Formula("3(x-1)(x^2+x+1)");
       </solution>
     </example>
   </subsection>
-  <exercises permid="pgw">
-    <exercisegroup cols="3" permid="VnF">
+  <exercises>
+    <exercisegroup cols="3">
       <title>Review and Warmup</title>
-      <exercise permid="NJg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication195.pg"/>
       </exercise>
-      <exercise permid="tQp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication195.pg"/>
       </exercise>
-      <exercise permid="ZXy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication200.pg"/>
       </exercise>
-      <exercise permid="GeH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication200.pg"/>
       </exercise>
-      <exercise permid="mlQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication215.pg"/>
       </exercise>
-      <exercise permid="SsZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication215.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="3" permid="BuO">
-      <exercise permid="yAi">
+    <exercisegroup cols="3">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication160.pg"/>
       </exercise>
-      <exercise permid="eHr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication160.pg"/>
       </exercise>
-      <exercise permid="KOA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication165.pg"/>
       </exercise>
-      <exercise permid="qVJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication165.pg"/>
       </exercise>
-      <exercise permid="XcS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication180.pg"/>
       </exercise>
-      <exercise permid="Dkb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/PolynomialMultiplication/PolynomialMultiplication180.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="4" permid="hBX">
+    <exercisegroup cols="4">
       <title>Factoring</title>
-      <exercise permid="jrk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring445.pg"/>
       </exercise>
-      <exercise permid="Pyt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring445.pg"/>
       </exercise>
-      <exercise permid="vFC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring450.pg"/>
       </exercise>
-      <exercise permid="bML">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring450.pg"/>
       </exercise>
-      <exercise permid="HTU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring451.pg"/>
       </exercise>
-      <exercise permid="obd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring451.pg"/>
       </exercise>
-      <exercise permid="Uim">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring452.pg"/>
       </exercise>
-      <exercise permid="Apv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring452.pg"/>
       </exercise>
     </exercisegroup>
     <exercisegroup cols="3">
-      <exercise permid="gwE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring455.pg"/>
       </exercise>
-      <exercise permid="MDN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring455.pg"/>
       </exercise>
-      <exercise permid="sKW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring460.pg"/>
       </exercise>
-      <exercise permid="YSf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring460.pg"/>
       </exercise>
-      <exercise permid="EZo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring465.pg"/>
       </exercise>
-      <exercise permid="lgx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring465.pg"/>
       </exercise>
-      <exercise permid="RnG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring470.pg"/>
       </exercise>
-      <exercise permid="xuP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring470.pg"/>
       </exercise>
-      <exercise permid="dBY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring475.pg"/>
       </exercise>
-      <exercise permid="JJh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring475.pg"/>
       </exercise>
-      <exercise permid="pQq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring480.pg"/>
       </exercise>
-      <exercise permid="VXz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring480.pg"/>
       </exercise>
-      <exercise permid="CeI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring485.pg"/>
       </exercise>
-      <exercise permid="ilR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring485.pg"/>
       </exercise>
-      <exercise permid="Ota">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring520.pg"/>
       </exercise>
-      <exercise permid="uAj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring520.pg"/>
       </exercise>
-      <exercise permid="aHs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring525.pg"/>
       </exercise>
-      <exercise permid="GOB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring525.pg"/>
       </exercise>
-      <exercise permid="mVK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring530.pg"/>
       </exercise>
-      <exercise permid="TcT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring530.pg"/>
       </exercise>
-      <exercise permid="zkc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring535.pg"/>
       </exercise>
-      <exercise permid="frl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring535.pg"/>
       </exercise>
-      <exercise permid="Lyu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring536.pg"/>
       </exercise>
-      <exercise permid="rFD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring536.pg"/>
       </exercise>
-      <exercise permid="XMM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring540.pg"/>
       </exercise>
-      <exercise permid="DTV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring540.pg"/>
       </exercise>
-      <exercise permid="kbe">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring545.pg"/>
       </exercise>
-      <exercise permid="Qin">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring545.pg"/>
       </exercise>
-      <exercise permid="wpw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring550.pg"/>
       </exercise>
-      <exercise permid="cwF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring550.pg"/>
       </exercise>
-      <exercise permid="IDO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring555.pg"/>
       </exercise>
-      <exercise permid="oKX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring555.pg"/>
       </exercise>
-      <exercise permid="USg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring590.pg"/>
       </exercise>
-      <exercise permid="AZp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring590.pg"/>
       </exercise>
-      <exercise permid="hgy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring595.pg"/>
       </exercise>
-      <exercise permid="NnH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring595.pg"/>
       </exercise>
-      <exercise permid="tuQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring600.pg"/>
       </exercise>
-      <exercise permid="ZBZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring600.pg"/>
       </exercise>
-      <exercise permid="FJi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring605.pg"/>
       </exercise>
-      <exercise permid="lQr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring605.pg"/>
       </exercise>
-      <exercise permid="RXA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring610.pg"/>
       </exercise>
-      <exercise permid="yeJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring610.pg"/>
       </exercise>
-      <exercise permid="elS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring615.pg"/>
       </exercise>
-      <exercise permid="Ktb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring615.pg"/>
       </exercise>
-      <exercise permid="qAk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring620.pg"/>
       </exercise>
-      <exercise permid="WHt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring620.pg"/>
       </exercise>
-      <exercise permid="COC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring625.pg"/>
       </exercise>
-      <exercise permid="iVL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring625.pg"/>
       </exercise>
 <!-- stages -->
-      <exercise permid="PcU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring490.pg"/>
       </exercise>
-      <exercise permid="vkd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring490.pg"/>
       </exercise>
-      <exercise permid="brm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring495.pg"/>
       </exercise>
-      <exercise permid="Hyv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring495.pg"/>
       </exercise>
-      <exercise permid="nFE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring500.pg"/>
       </exercise>
-      <exercise permid="TMN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring500.pg"/>
       </exercise>
-      <exercise permid="zTW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring501.pg"/>
       </exercise>
-      <exercise permid="gbf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring501.pg"/>
       </exercise>
-      <exercise permid="Mio">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring515.pg"/>
       </exercise>
-      <exercise permid="spx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring515.pg"/>
       </exercise>
-      <exercise permid="YwG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring560.pg"/>
       </exercise>
-      <exercise permid="EDP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring560.pg"/>
       </exercise>
-      <exercise permid="kKY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring561.pg"/>
       </exercise>
-      <exercise permid="QSh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring561.pg"/>
       </exercise>
-      <exercise permid="wZq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring565.pg"/>
       </exercise>
-      <exercise permid="dgz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring565.pg"/>
       </exercise>
-      <exercise permid="JnI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring570.pg"/>
       </exercise>
-      <exercise permid="puR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring570.pg"/>
       </exercise>
-      <exercise permid="VCa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring575.pg"/>
       </exercise>
-      <exercise permid="BJj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring575.pg"/>
       </exercise>
-      <exercise permid="hQs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring580.pg"/>
       </exercise>
-      <exercise permid="NXB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring580.pg"/>
       </exercise>
-      <exercise permid="ueK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring585.pg"/>
       </exercise>
-      <exercise permid="alT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring585.pg"/>
       </exercise>
-      <exercise permid="Gtc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring630.pg"/>
       </exercise>
-      <exercise permid="mAl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring630.pg"/>
       </exercise>
-      <exercise permid="SHu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring635.pg"/>
       </exercise>
-      <exercise permid="yOD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring635.pg"/>
       </exercise>
-      <exercise permid="eVM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring650.pg"/>
       </exercise>
-      <exercise permid="LcV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring650.pg"/>
       </exercise>
-      <exercise permid="rke">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring655.pg"/>
       </exercise>
-      <exercise permid="Xrn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring655.pg"/>
       </exercise>
 <!-- something more -->
-      <exercise permid="Dyw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring505.pg"/>
       </exercise>
-      <exercise permid="jFF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring505.pg"/>
       </exercise>
-      <exercise permid="PMO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring510.pg"/>
       </exercise>
-      <exercise permid="vTX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring510.pg"/>
       </exercise>
-      <exercise permid="cbg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring640.pg"/>
       </exercise>
-      <exercise permid="Iip">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring640.pg"/>
       </exercise>
-      <exercise permid="opy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring645.pg"/>
       </exercise>
-      <exercise permid="UwH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring645.pg"/>
       </exercise>
-      <exercise permid="ADQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring660.pg"/>
       </exercise>
-      <exercise permid="gKZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring660.pg"/>
       </exercise>
     </exercisegroup>

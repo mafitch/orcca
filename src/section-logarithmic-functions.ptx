@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-logarithmic-functions" permid="vQt">
+<section xml:id="section-logarithmic-functions">
   <title>Logarithmic Functions</title>
-  <introduction permid="Itg">
-    <p permid="Hve">
+  <introduction>
+    <p>
       In 2010, a major earthquake struck Haiti,
       destroying or damaging over 285,000 homes<fn>
       <url href="https://earthquake.usgs.gov/learn/today/index.php?month=1&amp;day=12"/>.
@@ -28,7 +28,7 @@
       The Haitian earthquake registered a 7.0 on the Richter Scale,
       whereas the Japanese earthquake registered a 9.0.
     </p>
-    <p permid="nCn">
+    <p>
       The Richter Scale is a base-ten logarithmic scale.
       In other words,
       an earthquake of magnitude 8 is not twice as great as an earthquake of magnitude 4.
@@ -37,9 +37,9 @@
       we will investigate the nature of the Richter Scale and the base-ten function upon which it depends.
     </p>
   </introduction>
-  <subsection permid="bXC">
+  <subsection>
     <title>Converting from Logarithmic to Exponential Form</title>
-    <p permid="Vdk">
+    <p>
       In order to analyze the magnitude of earthquakes or compare the magnitudes of two different earthquakes,
       we need to be able to convert between logarithmic and exponential form.
       For example,
@@ -50,7 +50,7 @@
       <term>Richter Scale</term>.
       How would we solve for<m>x</m>?
     </p>
-    <p permid="Bkt">
+    <p>
       We have not yet learned a method for solving exponential equations.
       None of the algebraic tools discussed so far is sufficient to solve <m>10^x=500</m>.
       We know that <m>10^2=100</m> and <m>10^3=1000</m>,
@@ -58,7 +58,7 @@
       as we learned in <xref ref="section-exponential-functions" />,
       <m>y=10^x</m> is an increasing function.
     </p>
-    <p permid="hrC">
+    <p>
       To find an algebraic solution,
       we must introduce a new function.
       To represent <m>y</m> as a function of <m>x</m>,
@@ -66,7 +66,7 @@
       The base <m>b</m> <term>logarithm</term>
       of a number is the exponent by which we must raise <m>b</m> to get that number.
     </p>
-    <p permid="NyL">
+    <p>
       We read a logarithmic expression as, “The logarithm with base <m>b</m> of <m>x</m> is equal to <m>y</m>” or,
       simplified, “log base <m>b</m> of <m>x</m> is <m>y</m>.” We can also say, “<m>b</m> raised to the power of <m>y</m> is <m>x</m>” because logs are exponents.
       For example,
@@ -74,23 +74,23 @@
       Since <m>2^5=32</m>, we can write <m>\mathrm{log}_{2}32=5</m>.
       We read this as “log base <m>2</m> of <m>32</m> is <m>5</m>.”
     </p>
-    <p permid="tFU">
+    <p>
       We can express the relationship between logarithmic form and its corresponding exponential form as follows:
-      <me permid="Afa">
+      <me>
         \mathrm{log}_{b}\left(x\right)=y\Longleftrightarrow{b}^{y}=x,b&gt;0,b\ne 1
       </me>
     </p>
-    <p permid="ZNd">
+    <p>
       Note that the base <m>b</m> is always positive.
     </p>
-    <p permid="FUm">
-      <sidebyside permid="ewW">
-        <image source="images/CNX_Precalc_Figure_04_03_004.jpg" permid="kWc">
+    <p>
+      <sidebyside>
+        <image source="images/CNX_Precalc_Figure_04_03_004.jpg">
           <description>Visual illustration of log base b of x equals y with arrows depicting how to read it.</description>
         </image>
       </sidebyside>
     </p>
-    <p permid="mbv">
+    <p>
       Because a logarithm is a function,
       it is most correctly written as <m>\mathrm{log}_{b}\left(x\right)</m>,
       using parentheses to denote function evaluation,
@@ -100,57 +100,57 @@
       as <m>\mathrm{log}_{b}x</m>.
       Note that many calculators require parentheses around the <m>x</m>.
     </p>
-    <p permid="SiE">
+    <p>
       We can illustrate the notation of logarithms as follows:
-      <sidebyside permid="KEf">
-        <image source="images/CNX_Precalc_Figure_04_03_003.jpg" permid="Rdl">
+      <sidebyside>
+        <image source="images/CNX_Precalc_Figure_04_03_003.jpg">
           <description>Visual illustration of log base b of c equals a with arrows depicting how to rewrite it as an exponential equation, as b^a=c.</description>
         </image>
       </sidebyside>
     </p>
-    <definition xml:id="definition-logarithmic-function" permid="RcY">
+    <definition xml:id="definition-logarithmic-function">
       <idx><h>logarithmic</h></idx>
       <idx><h>function</h><h>logarithmic</h></idx>
       <title>Logarithmic Function</title>
       <statement>
-        <p permid="zgL">
+        <p>
           A <term>logarithm</term> base <m>b</m> of a positive number <m>x</m> satisfies the following definition.
         </p>
-        <p permid="fnU">
+        <p>
           For <m>x&gt;0,b&gt;0,b\ne 1</m>,
-          <me permid="gmj">
+          <me>
             y=\mathrm{log}_{b}\left(x\right)\text{  is equivalent to   }b^y=x
           </me>
         </p>
-        <p permid="Lvd">
+        <p>
           where,
         </p>
-        <p permid="rCm">
-          <ul permid="XgF">
-            <li permid="YVS">
-              <p permid="zXJ">
+        <p>
+          <ul>
+            <li>
+              <p>
                 we read <m>\mathrm{log}_{b}\left(x\right)</m> as, “the logarithm with base <m>b</m> of <m>x</m>” or the “log base <m>b</m> of <m>x</m>".
               </p>
             </li>
-            <li permid="Fdb">
-              <p permid="geS">
+            <li>
+              <p>
                 the logarithm <m>y</m> is the exponent to which <m>b</m> must be raised to get <m>x</m>.
               </p>
             </li>
           </ul>
         </p>
-        <p permid="XJv">
+        <p>
           Also,
         </p>
-        <p permid="DQE">
-          <ul permid="DnO">
-            <li permid="lkk">
-              <p permid="Mmb">
+        <p>
+          <ul>
+            <li>
+              <p>
                 the domain of the logarithm function with base <m>b</m> is <m>\left(0,\infty \right)</m>.
               </p>
             </li>
-            <li permid="Rrt">
-              <p permid="stk">
+            <li>
+              <p>
                 the range of the logarithm function with base <m>b</m> is <m>\left(-\infty ,\infty \right)</m>.
               </p>
             </li>
@@ -158,71 +158,71 @@
         </p>
       </statement>
     </definition>
-    <p permid="ypN">
+    <p>
       The following diagram may help you identify the base and exponent when converting between exponential and logarithmic forms of an equation:
-      <sidebyside width="70%" permid="qLo">
-        <image source="images/exp_vs_log.png" permid="xku">
+      <sidebyside width="70%">
+        <image source="images/exp_vs_log.png">
           <description>Diagram of exponential equation versus logarithmic equation, pointing out the base and exponent in each.</description>
         </image>
       </sidebyside>
-      <ol label="1." permid="gAr">
-        <li permid="znP">
-          <p permid="YAt">
+      <ol label="1.">
+        <li>
+          <p>
             Examine the equation <m>y=\mathrm{log}_{b}\left(x\right)</m> and identify <m>b</m>,
             <m>y</m>,
             and <m>x</m>.
           </p>
         </li>
-        <li permid="fuY">
-          <p permid="EHC">
+        <li>
+          <p>
             Rewrite <m>\mathrm{log}_{b}\left(x\right)=y</m> as <m>b^y=x</m>.
           </p>
         </li>
       </ol>
     </p>
-    <example permid="xkh">
+    <example>
       <title>Converting from Logarithmic Form to Exponential Form</title>
       <statement>
-        <p permid="hdh">
+        <p>
           Write the following logarithmic equations in exponential form.
         </p>
-        <p permid="Nkq">
-          <ol permid="juX">
-            <li permid="LCh">
-              <p permid="kOL">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>\mathrm{log}_{6}\left(\sqrt{6}\right)=\frac{1}{2}</m>
               </p>
             </li>
-            <li permid="rJq">
-              <p permid="QVU">
+            <li>
+              <p>
                 <m>\mathrm{log}_{3}\left(9\right)=2</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="UHy">
-        <p permid="Emd">
+      <solution>
+        <p>
           First, identify the values of <m>b</m>, <m>y</m>, and,
           <m>x</m>.
           Then, write the equation in the form <m>b^y=x</m>.
         </p>
-        <p permid="ktm">
-          <ol permid="abl">
-            <li permid="XQz">
-              <p permid="xdd">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>\mathrm{log}_{6}\left(\sqrt{6}\right)=\frac{1}{2}</m>
               </p>
-              <p permid="dkm">
+              <p>
                 Here, <m>b=6</m>, <m>y=\frac{1}{2}</m>, and <m>x=\sqrt{6}</m>.
                 Therefore, the equivalent exponential equation is <m>6^{\frac{1}{2}}=\sqrt{6}</m>.
               </p>
             </li>
-            <li permid="DXI">
-              <p permid="Jrv">
+            <li>
+              <p>
                 <m>\mathrm{log}_{3}\left(9\right)=2</m>
               </p>
-              <p permid="pyE">
+              <p>
                 Here, <m>b=3</m>, <m>y=2</m>, and <m>x=9</m>.
                 Therefore, the equation <m>\mathrm{log}_{3}\left(9\right)=2</m> is equivalent to <m>3^2=9</m>.
               </p>
@@ -232,71 +232,71 @@
       </solution>
     </example>
   </subsection>
-  <subsection permid="IeL">
+  <subsection>
     <title>Converting from Exponential to Logarithmic Form</title>
-    <p permid="WSx">
+    <p>
       To convert from exponents to logarithms,
       we follow the same steps in reverse.
       We identify the base <m>b</m>,
       exponent <m>y</m>, and output <m>x</m>.
       Then, we write <m>y=\mathrm{log}_{b}\left(x\right)</m>.
     </p>
-    <example permid="drq">
+    <example>
       <title>Converting from Exponential Form to Logarithmic Form</title>
       <statement>
-        <p permid="trz">
+        <p>
           Write the following exponential equations in logarithmic form.
         </p>
-        <p permid="ZyI">
-          <ol permid="PCg">
-            <li permid="keR">
-              <p permid="VFN">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>2^3=8</m>
               </p>
             </li>
-            <li permid="Qma">
-              <p permid="BMW">
+            <li>
+              <p>
                 <m>5^2=25</m>
               </p>
             </li>
-            <li permid="wtj">
-              <p permid="hUf">
+            <li>
+              <p>
                 <m>10^{-4}=\frac{1}{10{,}000}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="AOH">
-        <p permid="QAv">
+      <solution>
+        <p>
           First, identify the values of <m>b</m>, <m>y</m>, and <m>x</m>.
           Then, write the equation in the form <m>y=\mathrm{log}_{b}\left(x\right)</m>.
         </p>
-        <p permid="wHE">
-          <ol permid="Giu">
-            <li permid="cAs">
-              <p permid="Obo">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>2^3=8</m>
               </p>
-              <p permid="uix">
+              <p>
                 Here, <m>b=2</m>, <m>y=3</m>, and <m>x=8</m>.
                 Therefore, the equation <m>2^3=8</m> is equivalent to<m>\mathrm{log}_{2}\left(8\right)=3</m>.
               </p>
             </li>
-            <li permid="IHB">
-              <p permid="apG">
+            <li>
+              <p>
                 <m>5^2=25</m>
               </p>
-              <p permid="GwP">
+              <p>
                 Here, <m>b=5</m>, <m>y=2</m>, and<m>x=25</m>.
                 Therefore, the equation <m>5^2=25</m> is equivalent to <m>\mathrm{log}_{5}\left(25\right)=2</m>.
               </p>
             </li>
-            <li permid="oOK">
-              <p permid="mDY">
+            <li>
+              <p>
                 <m>10^{-4}=\frac{1}{10{,}000}</m>
               </p>
-              <p permid="SLh">
+              <p>
                 Here, <m>b=10</m>, <m>y=-4</m>,
                 and <m>x=\frac{1}{10{,}000}</m>.
                 Therefore, the equation <m>10^{-4}=\frac{1}{10{,}000}</m> is equivalent to <m>\mathrm{log}_{10}\left(\frac{1}{10{,}000}\right)=-4</m>.
@@ -306,46 +306,46 @@
         </p>
       </solution>
     </example>
-    <exercise permid="Jyz">
+    <exercise>
       <statement>
-        <p permid="EAy">
+        <p>
           Write the following exponential equations in logarithmic form.
         </p>
-        <p permid="kHH">
-          <ol permid="Ati">
-            <li permid="UVT">
-              <p permid="ySq">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>3^2=9</m>
               </p>
             </li>
-            <li permid="Bdc">
-              <p permid="eZz">
+            <li>
+              <p>
                 <m>5^3=125</m>
               </p>
             </li>
-            <li permid="hkl">
-              <p permid="LgI">
+            <li>
+              <p>
                 <m>2^{-1}=\frac{1}{2}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="ebk">
-        <p permid="cON">
-          <ol permid="mpD">
-            <li permid="Nru">
-              <p permid="rnR">
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>\mathrm{log}_{3}\left(9\right)=2</m>
               </p>
             </li>
-            <li permid="tyD">
-              <p permid="Xva">
+            <li>
+              <p>
                 <m>\mathrm{log}_{5}\left(125\right)=3</m>
               </p>
             </li>
-            <li permid="ZFM">
-              <p permid="DCj">
+            <li>
+              <p>
                 <m>\mathrm{log}_{2}\left(\frac{1}{2}\right)=-1</m>
               </p>
             </li>
@@ -354,43 +354,43 @@
       </solution>
     </exercise>
   </subsection>
-  <subsection permid="olU">
+  <subsection>
     <title>Evaluating Logarithms</title>
-    <p permid="CZG">
+    <p>
       Knowing the squares, cubes,
       and roots of numbers allows us to evaluate many logarithms mentally.
       For example, consider <m>\mathrm{log}_{2}8</m>.
       We ask, “To what exponent must <m>2</m> be raised in order to get 8?” Because we already know <m>2^3=8</m>,
       it follows that <m>\mathrm{log}_{2}8=3</m>.
     </p>
-    <p permid="jgP">
+    <p>
       Now consider solving <m>\mathrm{log}_{7}49</m> and <m>\mathrm{log}_{3}27</m> mentally.
     </p>
-    <p permid="PnY">
-      <ul permid="MHA">
-        <li permid="xyC">
-          <p permid="jJs">
+    <p>
+      <ul>
+        <li>
+          <p>
             We ask, “To what exponent must 7 be raised in order to get 49?” We know <m>7^2=49</m>.
             Therefore, <m>\mathrm{log}_{7}49=2</m>.
           </p>
         </li>
-        <li permid="dFL">
-          <p permid="PQB">
+        <li>
+          <p>
             We ask, “To what exponent must 3 be raised in order to get 27?” We know <m>3^3=27</m>.
             Therefore, <m>\mathrm{log}_{3}27=3</m>.
           </p>
         </li>
       </ul>
     </p>
-    <p permid="vvh">
+    <p>
       Even some seemingly more complicated logarithms can be evaluated without a calculator.
       For example,
       let’s evaluate <m>\mathrm{log}_{\frac{2}{3}}\frac{4}{9}</m> mentally.
     </p>
-    <p permid="bCq">
-      <ul permid="sOJ">
-        <li permid="JMU">
-          <p permid="vXK">
+    <p>
+      <ul>
+        <li>
+          <p>
             We ask, “To what exponent must
             <m>\frac{2}{3}</m> be raised in order to get
             <m>\frac{4}{9}</m>?” We know <m>2^2=4</m> and <m>3^2=9</m>,
@@ -400,25 +400,25 @@
         </li>
       </ul>
     </p>
-    <example permid="pFI">
+    <example>
       <title>Solving Logarithms Mentally</title>
       <statement>
-        <p permid="FFR">
+        <p>
           Solve <m>y=\mathrm{log}_{4}\left(64\right)</m> without using a calculator.
         </p>
       </statement>
-      <solution permid="gVQ">
-        <p permid="IVW">
+      <solution>
+        <p>
           First we rewrite the logarithm in exponential form: <m>4^y=64</m>.
           Next, we ask, “To what exponent must 4 be raised in order to get 64?”
         </p>
-        <p permid="pdf">
+        <p>
           Well, we know <m>4^3=64</m>.
           Therefore, <m>\mathrm{log}_{4}\left(64\right)=3</m>, so <m>y=3</m>.
         </p>
       </solution>
     </example>
-    <exercise permid="BUa">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextLimitedFraction.pl</macro-file></pg-macros>
           <setup>
@@ -428,40 +428,40 @@
 		                 </pg-code>
           </setup>
           <statement>
-            <p permid="QOQ">
+            <p>
               Solve <m>y=\mathrm{log}_{121}\left(11\right)</m> without using a calculator.
             </p>
-            <p permid="wVZ">
+            <p>
               <m>y=</m><var name="$answer" width="5"/>
             </p>
           </statement>
-          <solution permid="Kit">
-            <p permid="Vko">
+          <solution>
+            <p>
               Since <m>\sqrt{121}=(121)^{1/2}=11</m>,
               <m>y=\mathrm{log}_{121}\left(11\right)=\frac{1}{2}</m>.
             </p>
           </solution>
       </webwork>
     </exercise>
-    <example permid="VMR">
+    <example>
       <title>Solving the Logarithm of a Reciprocal</title>
       <statement>
-        <p permid="lNa">
+        <p>
           Solve <m>y=\mathrm{log}_{3}\left(\frac{1}{27}\right)</m> without using a calculator.
         </p>
       </statement>
-      <solution permid="NcZ">
-        <p permid="Brx">
+      <solution>
+        <p>
           First we rewrite the logarithm in exponential form:
           <m>3^y=\frac{1}{27}</m>.
           Next, we ask, “To what exponent must 3 be raised in order to get <m>\frac{1}{27}</m>?”
         </p>
-        <p permid="hyG">
+        <p>
           We know <m>3^3=27</m>,
           but what must we do to get the reciprocal <m>\frac{1}{27}</m>?
           Recall from working with exponents that <m>b^{-n}=\frac{1}{{b}^{n}}</m>.
           We use this information to write
-          <md permid="YHK">
+          <md>
             <mrow>3^{-3}\amp=\frac{1}{{3}^{3}}</mrow>
             <mrow>\amp=\frac{1}{27}</mrow>
           </md>
@@ -469,7 +469,7 @@
         </p>
       </solution>
     </example>
-    <exercise permid="ibj">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
           <setup>
@@ -479,15 +479,15 @@
 		                 </pg-code>
           </setup>
           <statement>
-            <p permid="ddi">
+            <p>
               Solve <m>y=\mathrm{log}_{2}\left(\frac{1}{32}\right)</m> without using a calculator.
             </p>
-            <p permid="Jkr">
+            <p>
               <m>y=</m><var name="$answer" width="5"/>
             </p>
           </statement>
-          <solution permid="qpC">
-            <p permid="NFP">
+          <solution>
+            <p>
               <m>\frac{1}{32}=\frac{1}{2^{5}}=2^{-5}</m>.
               So, <m>\mathrm{log}_{2}\left(\frac{1}{32}\right)=-5</m>
             </p>
@@ -495,9 +495,9 @@
       </webwork>
     </exercise>
   </subsection>
-  <subsection permid="Utd">
+  <subsection>
     <title>Using Common Logarithms</title>
-    <p permid="HJz">
+    <p>
       Sometimes we may see a logarithm written without a base.
       In this case, we assume that the base is 10.
       In other words, the expression
@@ -506,70 +506,70 @@
       Common logarithms are used to measure the Richter Scale mentioned at the beginning of the section.
       Scales for measuring the brightness of stars and the pH of acids and bases also use common logarithms.
     </p>
-    <definition xml:id="definition-common-logarithm" permid="Ois">
+    <definition xml:id="definition-common-logarithm">
       <idx><h>common logarithm</h></idx>
       <title>Common Logarithm</title>
       <statement>
-        <p permid="jXN">
+        <p>
           A <term>common logarithm</term> is a logarithm with base <m>10</m>.
           We write <m>\mathrm{log}_{10}\left(x\right)</m> simply as <m>\mathrm{log}\left(x\right)</m>.
           The common logarithm of a positive number <m>x</m> satisfies the following definition.
         </p>
-        <p permid="QeW">
+        <p>
           For <m>x&gt;0</m>,
         </p>
-        <p permid="wmf">
-          <me permid="Mts">
+        <p>
+          <me>
             y=\mathrm{log}\left(x\right)\text{ is equivalent to }10^y=x
           </me>
         </p>
-        <p permid="cto">
+        <p>
           We read <m>\mathrm{log}\left(x\right)</m> as, “the logarithm with base <m>10</m> of <m>x</m>” or “log base <m>10</m> of <m>x</m>.”
         </p>
       </statement>
     </definition>
-    <example permid="upB">
+    <example>
       <title>Converting from Common Logarithmic Form to Exponential Form</title>
       <statement>
-        <p permid="RUj">
+        <p>
           Write the following logarithmic equations in exponential form.
         </p>
-        <p permid="ybs">
-          <ol permid="vJp">
-            <li permid="FMV">
-              <p permid="ceT">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>\mathrm{log}\left(\sqrt{10}\right)=\frac{1}{2}</m>
               </p>
             </li>
-            <li permid="lUe">
-              <p permid="Imc">
+            <li>
+              <p>
                 <m>\mathrm{log}\left(100\right)=2</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="tki">
-        <p permid="tMY">
+      <solution>
+        <p>
           First, identify the values of <m>b</m>, <m>y</m>, and <m>x</m>.
           Then, write the equation in the form <m>b^y=x</m>.
         </p>
-        <p permid="ZUh">
-          <ol permid="SwM">
-            <li permid="Sbn">
-              <p permid="otl">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>\mathrm{log}\left(\sqrt{10}\right)=\frac{1}{2}</m>
               </p>
-              <p permid="UAu">
+              <p>
                 Here, <m>b=10</m>, <m>y=\frac{1}{2}</m>, and <m>x=\sqrt{10}</m>.
                 Therefore, the equation <m>\mathrm{log}\left(\sqrt{10}\right)=\frac{1}{2}</m> is equivalent to <m>10^{\frac{1}{2}}=\sqrt{10}</m>.
               </p>
             </li>
-            <li permid="yiw">
-              <p permid="AHD">
+            <li>
+              <p>
                 <m>\mathrm{log}\left(100\right)=2</m>
               </p>
-              <p permid="gOM">
+              <p>
                 Here, <m>b=10</m>, <m>y=2</m>, and <m>x=100</m>.
                 Therefore, the equation <m>\mathrm{log}\left(100\right)=2</m> is equivalent to <m>10^2=100</m>.
               </p>
@@ -578,17 +578,17 @@
         </p>
       </solution>
     </example>
-    <list permid="SSl">
+    <list>
       <title>How To Solve a Common Logarithmc Equation Mentally</title>
-      <introduction permid="fgD">
-        <p permid="OZD">
+      <introduction>
+        <p>
           Given a common logarithmic equation with the form <m>y=\mathrm{log}\left(x\right)</m>,
           to solve it mentally do the following:
         </p>
       </introduction>
-      <ol label="1." permid="HXH">
-        <li permid="epF">
-          <p permid="MVV">
+      <ol label="1.">
+        <li>
+          <p>
             Rewrite the argument <m>x</m> as a power of <m>10</m>:
             <m>10^y=x</m>. (Note:
             if you're given an expression instead,
@@ -596,29 +596,29 @@
             then set it equal to <m>y</m> to get the equation into log form first.)
           </p>
         </li>
-        <li permid="KwO">
-          <p permid="tde">
+        <li>
+          <p>
             Use previous knowledge of powers of <m>10</m> to identify <m>y</m> by asking, "To what exponent must <m>10</m> be raised in order to get <m>x</m>?"
           </p>
         </li>
       </ol>
     </list>
-    <example permid="awK">
+    <example>
       <title>Finding the Value of a Common Logarithm Mentally</title>
       <statement>
-        <p permid="eiB">
+        <p>
           Solve <m>y=\mathrm{log}\left(1000\right)</m> without using a calculator.
         </p>
       </statement>
-      <solution permid="Zrr">
-        <p permid="Gbq">
+      <solution>
+        <p>
           First we rewrite the logarithm in exponential form: <m>10^y=1000</m>.
           Next, we ask, “To what exponent must <m>10</m> be raised in order to get <m>1000</m>?” We know 		<m>10^3=1000</m>.
           Therefore, <m>y=\mathrm{log}\left(1000\right)=3</m>.
         </p>
       </solution>
     </example>
-    <exercise permid="LnM">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
           <setup>
@@ -628,80 +628,80 @@
 		                 </pg-code>
           </setup>
           <statement>
-            <p permid="prA">
+            <p>
               Solve <m>y=\mathrm{log}\left(1,000,000\right)</m> without using a calculator.
             </p>
-            <p permid="VyJ">
+            <p>
               <m>y=</m><var name="$answer" width="5"/>
             </p>
           </statement>
-          <solution permid="WwL">
-            <p permid="miz">
+          <solution>
+            <p>
               <m>1,000,000=10^6</m>.
               So, <m>\mathrm{log}\left(1,000,000\right)=6</m>.
             </p>
           </solution>
       </webwork>
     </exercise>
-    <list permid="yZu">
+    <list>
       <title>How To Evaluate a Common Logarithmc Expression Using a Calculator</title>
-      <p permid="vgM">
+      <p>
         Given a common logarithmic expression with the form <m>\mathrm{log}\left(x\right)</m>,
         to evaluate it using the calculator do the following:
       </p>
-      <ol label="1." permid="oeQ">
-        <li permid="qDX">
-          <p permid="Zkn">
+      <ol label="1.">
+        <li>
+          <p>
             Press <c>LOG</c>.
           </p>
         </li>
-        <li permid="WLg">
-          <p permid="Frw">
+        <li>
+          <p>
             Enter the value given for <m>x</m> followed by a closing parenthesis ")".
           </p>
         </li>
-        <li permid="CSp">
-          <p permid="lyF">
+        <li>
+          <p>
             Press <c>ENTER</c> or the equals sign button,
             <m>=</m>.
           </p>
         </li>
       </ol>
     </list>
-    <example permid="GDT">
+    <example>
       <title>Finding the Value of a Common Logarithm Using a Calculator</title>
       <statement>
-        <p permid="KpK">
+        <p>
           Evaluate <m>\mathrm{log}\left(321\right)</m>,
           using a calculator, and round to four decimal places.
         </p>
       </statement>
-      <solution permid="FyA">
-        <p permid="SpI">
-          <ul permid="yDV">
-            <li permid="pUd">
-              <p permid="RFO">
+      <solution>
+        <p>
+          <ul>
+            <li>
+              <p>
                 Press <c>[LOG]</c>.
               </p>
             </li>
-            <li permid="Wbm">
-              <p permid="xMX">
+            <li>
+              <p>
                 Enter <m>321</m>, followed by ")".
               </p>
             </li>
-            <li permid="Civ">
-              <p permid="dUg">
+            <li>
+              <p>
                 Press <c>[ENTER]</c> or the equals sign button,
                 <m>=</m>.
               </p>
             </li>
           </ul>
         </p>
-        <p permid="ywR">
+        <p>
           Rounding to four decimal places,
           <m>\mathrm{log}\left(321\right)\approx 2.5065</m>.
         </p>
-        <p permid="eEa">
+        <p>
           Note that <m>10^2=100</m> and <m>10^3=1000</m>.
           Since <m>321</m> is between <m>100</m> and <m>1000</m>,
           we know that <m>\mathrm{log}\left(321\right)</m> must be between
@@ -710,7 +710,7 @@
         </p>
       </solution>
     </example>
-    <exercise permid="ruV">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
           <setup>
@@ -720,68 +720,68 @@
 		                 </pg-code>
           </setup>
           <statement>
-            <p permid="BFS">
+            <p>
               Evaluate <m>\mathrm{log}\left(123\right)</m>,
               using a calculator, and round to four decimal places.
             </p>
-            <p permid="hNb">
+            <p>
               <m>y=</m><var name="$answer" width="5"/>
             </p>
           </statement>
       </webwork>
     </exercise>
-    <example permid="mLc">
+    <example>
       <title>Rewriting and Solving a Real-World Exponential Model</title>
       <statement>
-        <p permid="qwT">
+        <p>
           The amount of energy released from one earthquake was 500 times greater than the amount of energy released from another.
           The equation <m>10^x=500</m> represents this situation,
           where <m>x</m> is the difference in magnitudes on the Richter Scale.
           To the nearest thousandth, what was the difference in magnitudes?
         </p>
       </statement>
-      <solution permid="lFJ">
-        <p permid="KLj">
+      <solution>
+        <p>
           We begin by rewriting the exponential equation in logarithmic form,
           using the definition of the common logarithm.
-          <md permid="EOT">
+          <md>
             <mrow>10^x\amp=500</mrow>
             <mrow>\mathrm{log}\left(500\right)\amp=x</mrow>
           </md>
           Next we evaluate the logarithm using a calculator:
         </p>
-        <p permid="qSs">
-          <ul permid="eLe">
-            <li permid="ipE">
-              <p permid="Kbp">
+        <p>
+          <ul>
+            <li>
+              <p>
                 Press <c>[LOG]</c>.
               </p>
             </li>
-            <li permid="OwN">
-              <p permid="qiy">
+            <li>
+              <p>
                 Enter <m>500</m> followed by
                 <q>)</q>.
               </p>
             </li>
-            <li permid="uDW">
-              <p permid="WpH">
+            <li>
+              <p>
                 Press <c>[ENTER]</c> or the equals sign button,
                 <m>=</m>.
               </p>
             </li>
-            <li permid="aLf">
-              <p permid="CwQ">
+            <li>
+              <p>
                 To the nearest thousandth, <m>\mathrm{log}\left(500\right)\approx 2.699</m>.
               </p>
             </li>
           </ul>
         </p>
-        <p permid="WZB">
+        <p>
           The difference in magnitudes was about <m>2.699</m>.
         </p>
       </solution>
     </example>
-    <exercise permid="XCe">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
           <setup>
@@ -791,27 +791,27 @@
 		                 </pg-code>
           </setup>
           <statement>
-            <p permid="NUk">
+            <p>
               The amount of energy released from one earthquake was <m>8,500</m> times greater than the amount of energy realeased from another.
               The equation <m>10^x=8500</m> represents this situation,
               where <m>x</m> represents the difference in magnitudes on the Richter Scale.
               To the nearest thousandth, what was the difference in magnitudes?
             </p>
-            <p permid="ubt">
+            <p>
               The difference in magnitudes was about <var name="$answer" width="5"/>
             </p>
           </statement>
-          <solution permid="CDU">
-            <p permid="DgK">
+          <solution>
+            <p>
               <m>\mathrm{log}\left(8500\right)\approx 3.929</m>
             </p>
           </solution>
       </webwork>
     </exercise>
   </subsection>
-  <subsection permid="AAm">
+  <subsection>
     <title>Using Natural Logarithms</title>
-    <p permid="nQI">
+    <p>
       The most frequently used base for logarithms is <m>e</m>.
       Base <m>e</m> logarithms are important in calculus and many scientific applications;
       they are called <term>natural logarithms</term>.
@@ -819,7 +819,7 @@
       has its own shorthand notation,
       <m>\mathrm{ln}\left(x\right)</m>.
     </p>
-    <p permid="TXR">
+    <p>
       Most values of <m>\mathrm{ln}\left(x\right)</m> can be found only using a calculator.
       The major exception is that,
       because the logarithm of 1 is always 0 for any base, <m>\mathrm{ln}1=0</m>.
@@ -827,71 +827,71 @@
       we can use the <m>\mathrm{ln}</m> key that can be found on most scientific calculators.
       We can also find the natural logarithm of any power of <m>e</m> using what we've learned so far about the relationsip between logarithm and exponential equations.
     </p>
-    <definition xml:id="definition-natural-logarithm" permid="DJn">
+    <definition xml:id="definition-natural-logarithm">
       <idx><h>natural logarithm</h></idx>
       <title>Natural Logarithm</title>
       <statement>
-        <p permid="IAx">
+        <p>
           A <term>natural logarithm</term> is a logarithm with base <m>e</m>.
           We write <m>\mathrm{log}_{e}\left(x\right)</m> simply as <m>\mathrm{ln}\left(x\right)</m>.
           The natural logarithm of a positive number <m>x</m> satisfies the following definition.
         </p>
-        <p permid="oHG">
+        <p>
           For <m>x&gt;0</m>,
-          <me permid="sAB">
+          <me>
             y=\mathrm{ln}\left(x\right)\text{ is equivalent to }{e}^{y}=x
           </me>
         </p>
-        <p permid="UOP">
+        <p>
           We read <m>\mathrm{ln}\left(x\right)</m> as, “the logarithm with base <m>e</m> of <m>x</m>” or “the natural logarithm of <m>x</m>.”
         </p>
-        <p permid="AVY">
+        <p>
           The natural logarithm <m>y</m> is the exponent to which <m>e</m> must be raised to get <m>x</m>.
         </p>
       </statement>
     </definition>
-    <example permid="jQw">
+    <example>
       <title>Converting from Natural Logarithmic Form to Exponential Form</title>
       <statement>
-        <p permid="WEc">
+        <p>
           Write the following logarithmic equations in exponential form.
         </p>
-        <p permid="CLl">
-          <ol permid="bQy">
-            <li permid="iZy">
-              <p permid="iDZ">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>\mathrm{ln}\left(M\right)=\frac{1}{2}</m>
               </p>
             </li>
-            <li permid="PgH">
-              <p permid="OLi">
+            <li>
+              <p>
                 <m>\mathrm{ln}\left(95\right)=K</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="RMS">
-        <p permid="jnT">
+      <solution>
+        <p>
           First, identify the values of <m>b</m>, <m>y</m>, and <m>x</m>.
           Then, write the equation in the form <m>b^y=x</m>.
         </p>
-        <p permid="Pvc">
-          <ol permid="KSn">
-            <li permid="vnQ">
-              <p permid="uSr">
+        <p>
+          <ol>
+            <li>
+              <p>
                 <m>\mathrm{ln}\left(M\right)=\frac{1}{2}</m>
               </p>
-              <p permid="aZA">
+              <p>
                 Here, <m>b=e</m>, <m>y=\frac{1}{2}</m> and <m>x=M</m>.
                 Therefore, the equation <m>\mathrm{ln}\left(M\right)=\frac{1}{2}</m> is equivalent to <m>e^{\frac{1}{2}}=M</m>.
               </p>
             </li>
-            <li permid="buZ">
-              <p permid="HgJ">
+            <li>
+              <p>
                 <m>\mathrm{ln}\left(95\right)=K</m>
               </p>
-              <p permid="nnS">
+              <p>
                 Here, <m>b=e</m>, <m>y=K</m>, and <m>x=95</m>.
                 Therefore, the equation <m>\mathrm{ln}\left(95\right)=K</m> is equivalent to <m>e^K=95</m>.
               </p>
@@ -900,68 +900,68 @@
         </p>
       </solution>
     </example>
-    <list permid="weO">
+    <list>
       <title>How to Evaluate a Natural Logarithm Using a Calculator</title>
-      <p permid="bnV">
+      <p>
         Given a natural logarithmic expression with the form <m>\mathrm{ln}\left(x\right)</m>,
         to solve it using the calculator do the following:
       </p>
-      <ol label="1." permid="UlZ">
-        <li permid="HCi">
-          <p permid="Tvb">
+      <ol label="1.">
+        <li>
+          <p>
             Press <c>LN</c>.
           </p>
         </li>
-        <li permid="nJr">
-          <p permid="zCk">
+        <li>
+          <p>
             Enter the value given for <m>x</m> followed by a closing parenthesis ")".
           </p>
         </li>
-        <li permid="TQA">
-          <p permid="fJt">
+        <li>
+          <p>
             Press <c>ENTER</c> or the equals sign button,
             <m>=</m>.
           </p>
         </li>
       </ol>
     </list>
-    <example permid="PXF">
+    <example>
       <title>Evaluating a Natural Logarithm Using a Calculator</title>
       <statement>
-        <p permid="iSu">
+        <p>
           Evaluate <m>\mathrm{ln}\left(500\right)</m>,
           using a calculator, and round to four decimal places.
         </p>
       </statement>
-      <solution permid="xUb">
-        <p permid="vCl">
-          <ul permid="qZw">
-            <li permid="GSo">
-              <p permid="LQC">
+      <solution>
+        <p>
+          <ul>
+            <li>
+              <p>
                 Press <c>[LN]</c>.
               </p>
             </li>
-            <li permid="mZx">
-              <p permid="rXL">
+            <li>
+              <p>
                 Enter <m>500</m>, followed by
                 <q>)</q>.
               </p>
             </li>
-            <li permid="TgG">
-              <p permid="YeU">
+            <li>
+              <p>
                 Press <c>ENTER</c> or the equals sign button,
                 <m>=</m>.
               </p>
             </li>
           </ul>
         </p>
-        <p permid="bJu">
+        <p>
           Rounding to four decimal places,
           <m>\mathrm{ln}\left(500\right)\approx 6.2146</m>
         </p>
       </solution>
     </example>
-    <exercise permid="clX">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
           <setup>
@@ -971,467 +971,467 @@
 		                 </pg-code>
           </setup>
           <statement>
-            <p permid="aiC">
+            <p>
               Evaluate <m>\mathrm{ln}\left(0.123\right)</m>,
               using a calculator, and round to four decimal places.
             </p>
-            <p permid="GpL">
+            <p>
               <m>\mathrm{ln}\left(0.123\right)\approx</m> <var name="$answer" width="10"/>
             </p>
           </statement>
       </webwork>
     </exercise>
   </subsection>
-  <exercises permid="gHv">
-    <exercisegroup cols="3" permid="MOE">
-      <introduction permid="dMP">
-        <p permid="TJw">
+  <exercises>
+    <exercisegroup cols="3">
+      <introduction>
+        <p>
           For the following exercises, rewrite each equation in exponential form.
         </p>
       </introduction>
-      <exercise permid="JTY">
+      <exercise>
         <statement>
-          <p permid="mwU">
+          <p>
             <m>{\mathrm{log}}_{5}\left(m\right)=n</m>
           </p>
         </statement>
-        <answer permid="iLd">
-          <p permid="HQD">
+        <answer>
+          <p>
             <m>{5}^{n}=m</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="qbh">
+      <exercise>
         <statement>
-          <p permid="SEd">
+          <p>
             <m>{\mathrm{log}}_{4}\left(q\right)=m</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="Wiq">
+      <exercise>
         <statement>
-          <p permid="yLm">
+          <p>
             <m>{\mathrm{log}}_{a}\left(b\right)=c</m>
           </p>
         </statement>
-        <answer permid="OSm">
-          <p permid="nXM">
+        <answer>
+          <p>
             <m>{a}^{c}=b</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="Cpz">
+      <exercise>
         <statement>
-          <p permid="eSv">
+          <p>
             <m>{\mathrm{log}}_{16}\left(y\right)=x</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="iwI">
+      <exercise>
         <statement>
-          <p permid="KZE">
+          <p>
             <m>{\mathrm{log}}_{x}\left(64\right)=y</m>
           </p>
         </statement>
-        <answer permid="uZv">
-          <p permid="UeV">
+        <answer>
+          <p>
             <m>{x}^{y}=64</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="ODR">
+      <exercise>
         <statement>
-          <p permid="rgN">
+          <p>
             <m>{\mathrm{log}}_{y}\left(x\right)=-11</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="uLa">
+      <exercise>
         <statement>
-          <p permid="XnW">
+          <p>
             <m>{\mathrm{log}}_{15}\left(a\right)=b</m>
           </p>
         </statement>
-        <answer permid="bgE">
-          <p permid="Ame">
+        <answer>
+          <p>
             <m>{15}^{b}=a</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="aSj">
+      <exercise>
         <statement>
-          <p permid="Dvf">
+          <p>
             <m>{\mathrm{log}}_{y}\left(137\right)=x</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="GZs">
+      <exercise>
         <statement>
-          <p permid="jCo">
+          <p>
             <m>{\mathrm{log}}_{13}\left(142\right)=a</m>
           </p>
         </statement>
-        <answer permid="HnN">
-          <p permid="gtn">
+        <answer>
+          <p>
             <m>{13}^{a}=142</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="ngB">
+      <exercise>
         <statement>
-          <p permid="PJx">
+          <p>
             <m>\mathrm{log}\left(v\right)=t</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="TnK">
+      <exercise>
         <statement>
-          <p permid="vQG">
+          <p>
             <m>\mathrm{ln}\left(w\right)=n</m>
           </p>
         </statement>
-        <answer permid="nuW">
-          <p permid="MAw">
+        <answer>
+          <p>
             <m>{e}^{n}=w</m>
           </p>
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="3" permid="sVN">
-      <introduction permid="zuT">
-        <p permid="zQF">
+    <exercisegroup cols="3">
+      <introduction>
+        <p>
           For the following exercises, rewrite each equation in logarithmic form.
         </p>
       </introduction>
-      <exercise permid="fCc">
+      <exercise>
         <statement>
-          <p permid="bXP">
+          <p>
             <m>{4}^{x}=y</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="LJl">
+      <exercise>
         <statement>
-          <p permid="IeY">
+          <p>
             <m>{c}^{d}=k</m>
           </p>
         </statement>
-        <answer permid="TCf">
-          <p permid="sHF">
+        <answer>
+          <p>
             <m>{\mathrm{log}}_{c}\left(k\right)=d</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="rQu">
+      <exercise>
         <statement>
-          <p permid="omh">
+          <p>
             <m>{m}^{-7}=n</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="XXD">
+      <exercise>
         <statement>
-          <p permid="Utq">
+          <p>
             <m>{19}^{x}=y</m>
           </p>
         </statement>
-        <answer permid="zJo">
-          <p permid="YOO">
+        <answer>
+          <p>
             <m>{\mathrm{log}}_{19}y=x</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="EeM">
+      <exercise>
         <statement>
-          <p permid="AAz">
+          <p>
             <m>{x}^{-\frac{10}{13}}=y</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="klV">
+      <exercise>
         <statement>
-          <p permid="gHI">
+          <p>
             <m>{n}^{4}=103</m>
           </p>
         </statement>
-        <answer permid="fQx">
-          <p permid="EVX">
+        <answer>
+          <p>
             <m>{\mathrm{log}}_{n}\left(103\right)=4</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="Qte">
+      <exercise>
         <statement>
-          <p permid="MOR">
+          <p>
             <m>{\left(\frac{7}{5}\right)}^{m}=n</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="wAn">
+      <exercise>
         <statement>
-          <p permid="sWa">
+          <p>
             <m>{y}^{x}=\frac{39}{100}</m>
           </p>
         </statement>
-        <answer permid="LXG">
-          <p permid="ldg">
+        <answer>
+          <p>
             <m>{\mathrm{log}}_{y}\left(\frac{39}{100}\right)=x</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="cHw">
+      <exercise>
         <statement>
-          <p permid="Zdj">
+          <p>
             <m>{10}^{a}=b</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="IOF">
+      <exercise>
         <statement>
-          <p permid="Fks">
+          <p>
             <m>{e}^{k}=h</m>
           </p>
         </statement>
-        <answer permid="seP">
-          <p permid="Rkp">
+        <answer>
+          <p>
             <m>\mathrm{ln}\left(h\right)=k</m>
           </p>
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="ZcW">
-      <introduction permid="oVO">
-        <p permid="fXO">
+    <exercisegroup cols="2">
+      <introduction>
+        <p>
           For the following exercises,
           use the definition of common and natural logarithms to simplify.
         </p>
       </introduction>
-      <exercise permid="VcX">
+      <exercise>
         <statement>
-          <p permid="lrB">
+          <p>
             <m>\mathrm{log}\left({100}^{8}\right)</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="Bkg">
+      <exercise>
         <statement>
-          <p permid="RyK">
+          <p>
             <m>\mathrm{log}\left({10}^{32}\right)</m>
           </p>
         </statement>
-        <answer permid="YlY">
-          <p permid="xry">
+        <answer>
+          <p>
             <m>32</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="hrp">
+      <exercise>
         <statement>
-          <p permid="xFT">
+          <p>
             <m>2\mathrm{log}\left(.0001\right)</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="Nyy">
+      <exercise>
         <statement>
-          <p permid="dNc">
+          <p>
             <m>\mathrm{ln}\left({e}^{1.06}\right)</m>
           </p>
         </statement>
-        <answer permid="Eth">
-          <p permid="dyH">
+        <answer>
+          <p>
             <m>1.06</m>
           </p>
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="4" permid="Fkf">
-      <introduction permid="tFH">
-        <p permid="MeX">
+    <exercisegroup cols="4">
+      <introduction>
+        <p>
           For the following exercises,
           evaluate the logarithmic expression without using a calculator.
         </p>
       </introduction>
-      <exercise permid="ZMQ">
+      <exercise>
         <statement>
-          <p permid="JUl">
+          <p>
             <m>{\mathrm{log}}_{3}\left(\frac{1}{27}\right)</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="FTZ">
+      <exercise>
         <statement>
-          <p permid="qbu">
+          <p>
             <m>{\mathrm{log}}_{6}\left(\sqrt{6}\right)</m>
           </p>
         </statement>
-        <answer permid="kAq">
-          <p permid="JFQ">
+        <answer>
+          <p>
             <m>\frac{1}{2}</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="mbi">
+      <exercise>
         <statement>
-          <p permid="WiD">
+          <p>
             <m>{\mathrm{log}}_{2}\left(\frac{1}{8}\right)+4</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="Sir">
+      <exercise>
         <statement>
-          <p permid="CpM">
+          <p>
             <m>6{\mathrm{log}}_{8}\left(4\right)</m>
           </p>
         </statement>
-        <answer permid="QHz">
-          <p permid="pMZ">
+        <answer>
+          <p>
             <m>4</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="ypA">
+      <exercise>
         <statement>
-          <p permid="iwV">
+          <p>
             <m>\mathrm{log}\left(10\,000\right)</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="ewJ">
+      <exercise>
         <statement>
-          <p permid="OEe">
+          <p>
             <m>\mathrm{log}\left(0.001\right)</m>
           </p>
         </statement>
-        <answer permid="wOI">
-          <p permid="VUi">
+        <answer>
+          <p>
             <m>-\text{3}</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="KDS">
+      <exercise>
         <statement>
-          <p permid="uLn">
+          <p>
             <m>\mathrm{log}\left(1\right)+7</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="qLb">
+      <exercise>
         <statement>
-          <p permid="aSw">
+          <p>
             <m>2\mathrm{log}\left({100}^{-3}\right)</m>
           </p>
         </statement>
-        <answer permid="cVR">
-          <p permid="Cbr">
+        <answer>
+          <p>
             <m>-12</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="WSk">
+      <exercise>
         <statement>
-          <p permid="GZF">
+          <p>
             <m>\mathrm{ln}\left({e}^{\frac{1}{3}}\right)</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="CZt">
+      <exercise>
         <statement>
-          <p permid="ngO">
+          <p>
             <m>\mathrm{ln}\left(1\right)</m>
           </p>
         </statement>
-        <answer permid="Jda">
-          <p permid="iiA">
+        <answer>
+          <p>
             <m>0</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="jgC">
+      <exercise>
         <statement>
-          <p permid="TnX">
+          <p>
             <m>\mathrm{ln}\left({e}^{-0.225}\right)</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="PnL">
+      <exercise>
         <statement>
-          <p permid="zvg">
+          <p>
             <m>25\mathrm{ln}\left({e}^{\frac{2}{5}}\right)</m>
           </p>
         </statement>
-        <answer permid="pkj">
-          <p permid="OpJ">
+        <answer>
+          <p>
             <m>10</m>
           </p>
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="3" permid="lro">
-      <introduction permid="vuU">
-        <p permid="smg">
+    <exercisegroup cols="3">
+      <introduction>
+        <p>
           For the following exercises, evaluate each expression using a calculator.
           Round to the nearest thousandth.
         </p>
       </introduction>
-      <exercise permid="bCd">
+      <exercise>
         <statement>
-          <p permid="fCp">
+          <p>
             <m>\mathrm{log}\left(0.04\right)</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="HJm">
+      <exercise>
         <statement>
-          <p permid="LJy">
+          <p>
             <m>\mathrm{ln}\left(15\right)</m>
           </p>
         </statement>
-        <answer permid="Vrs">
-          <p permid="uwS">
+        <answer>
+          <p>
             <m>2.708</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="nQv">
+      <exercise>
         <statement>
-          <p permid="rQH">
+          <p>
             <m>\mathrm{ln}\left(\frac{4}{5}\right)</m>
           </p>
         </statement>
       </exercise>
-      <exercise permid="TXE">
+      <exercise>
         <statement>
-          <p permid="XXQ">
+          <p>
             <m>\text{log}\left(\sqrt{2}\right)</m>
           </p>
         </statement>
-        <answer permid="ByB">
-          <p permid="aEb">
+        <answer>
+          <p>
             <m>0.151</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="AeN">
+      <exercise>
         <statement>
-          <p permid="EeZ">
+          <p>
             <m>\mathrm{ln}\left(\sqrt{2}\right)</m>
           </p>
         </statement>
       </exercise>
     </exercisegroup>
-    <exercisegroup permid="Ryx">
+    <exercisegroup>
       <title>Extensions</title>
-      <exercise permid="glW">
+      <exercise>
         <statement>
-          <p permid="kmi">
+          <p>
             Is <m>x=0</m> in the domain of the function <m>f\left(x\right)=\mathrm{log}\left(x\right)</m>?
             If so, what is the value of the function when <m>x=0</m>?
             Verify the result.
           </p>
         </statement>
-        <answer permid="hFK">
-          <p permid="GLk">
+        <answer>
+          <p>
             No, the function has no defined value for <m>x=0</m>.
             To verify, suppose <m>x=0</m> is in the domain of the function <m>f\left(x\right)=\mathrm{log}\left(x\right)</m>.
             Then there is some number <m>n</m> such that <m>n=\mathrm{log}\left(0\right)</m>.
@@ -1442,25 +1442,25 @@
           </p>
         </answer>
       </exercise>
-      <exercise permid="Mtf">
+      <exercise>
         <statement>
-          <p permid="Qtr">
+          <p>
             Is <m>f\left(x\right)=0</m> in the range of the function <m>f\left(x\right)=\mathrm{log}\left(x\right)</m>?
             If so, for what value of <m>x</m>?
             Verify the result.
           </p>
         </statement>
       </exercise>
-      <exercise permid="sAo">
+      <exercise>
         <statement>
-          <p permid="wAA">
+          <p>
             Is there a number <m>x</m> such that
             <m>\mathrm{ln}x=2?</m> If so, what is that number?
             Verify the result.
           </p>
         </statement>
-        <answer permid="NMT">
-          <p permid="mSt">
+        <answer>
+          <p>
             Yes.
             Suppose there exists a real number <m>x</m> such that <m>\mathrm{ln}x=2</m>.
             Rewriting as an exponential equation gives
@@ -1472,11 +1472,11 @@
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup permid="xFG">
+    <exercisegroup>
       <title>Real-World Applications</title>
-      <exercise permid="YHx">
+      <exercise>
         <statement>
-          <p permid="cHJ">
+          <p>
             The exposure index <m>EI</m> for a 35 millimeter camera is a measurement of the amount of light that hits the film.
             It is determined by the equation <m>EI={\mathrm{log}}_{2}\left(\frac{{f}^{2}}{t}\right)</m>,
             where <m>f</m> is the “f-stop” setting on the camera,
@@ -1486,24 +1486,24 @@
           </p>
         </statement>
       </exercise>
-      <exercise permid="EOG">
+      <exercise>
         <statement>
-          <p permid="IOS">
+          <p>
             Refer to the previous exercise.
             Suppose the light meter on a camera indicates an <m>EI</m> of <m>-2</m>,
             and the desired exposure time is 16 seconds.
             What should the f-stop setting be?
           </p>
         </statement>
-        <answer permid="tUc">
-          <p permid="SZC">
+        <answer>
+          <p>
             <m>2</m>
           </p>
         </answer>
       </exercise>
-      <exercise permid="kVP">
+      <exercise>
         <statement>
-          <p permid="oWb">
+          <p>
             The intensity levels <m>I</m> of two earthquakes measured on a seismograph can be compared by the formula
             <m>\mathrm{log}\frac{{I}_{1}}{{I}_{2}}={M}_{1}-{M}_{2}</m> where <m>M</m> is the magnitude given by the Richter Scale.
             In August 2009, an earthquake of magnitude <m>6.2</m> hit Honshu, Japan<fn>
@@ -1521,8 +1521,8 @@
       </exercise>
     </exercisegroup>
   </exercises>
-  <conclusion permid="oAp">
-    <p permid="Ytp">
+  <conclusion>
+    <p>
       This section is adapted from
       <pubtitle>"Logarithmic Functions"</pubtitle><fn>
       <url href="https://cnx.org/contents/8xG8nd5x@1.1:31HNEpLH@1/Logarithmic-Functions"/>

@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-substitution" permid="cUN">
+<section xml:id="section-substitution">
   <title>Substitution</title>
-  <introduction permid="TPw">
-    <p permid="Qzr">
+  <introduction>
+    <p>
       In <xref ref="section-solving-systems-of-linear-equations-by-graphing" />,
       we focused on solving systems of equations by graphing.
       In addition to being time consuming,
@@ -19,33 +19,33 @@
       <term>substitution</term>.
     </p>
   </introduction>
-  <subsection permid="JbW">
+  <subsection>
     <title>Solving Systems of Equations Using Substitution</title>
     <idx><h>solving</h><h>system of linear equations</h><h>substitution method</h></idx>
     <idx><h>substitution method for solving a system of linear equations</h></idx>
 <!--Insert article from
 http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provided-the-answer-to-their-question-is-algebra-necessary/
 -->
-    <example xml:id="example-systems-of-equations-substitution-intro" permid="yhs">
+    <example xml:id="example-systems-of-equations-substitution-intro">
       <title>The Interview</title>
-      <p permid="dTc">
+      <p>
         In 2014, the New York Times<fn>
         <url href="https://nyti.ms/2pupebT">(nyti.ms/2pupebT)</url>
         </fn> posted the following about the movie,
         <q>The Interview</q>
         :
       </p>
-      <blockquote permid="zWF">
-        <p permid="REK">
+      <blockquote>
+        <p>
           <q>The Interview</q>
           generated roughly <m>\$15</m> million in online sales and rentals during its first four days of availability, Sony Pictures said on Sunday.
         </p>
-        <p permid="xLT">
+        <p>
           Sony did not say how much of that total represented <m>\$6</m> digital rentals versus <m>\$15</m> sales.
           The studio said there were about two million transactions overall.
         </p>
       </blockquote>
-      <p permid="Kal">
+      <p>
         A few days later, Joey Devilla cleverly pointed out in his blog<fn>
         <url href="http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provided-the-answer-to-their-question-is-algebra-necessary/">http://www.joeydevilla.com/2014/12/31/</url>
         </fn>,
@@ -56,13 +56,13 @@ http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provide
         the solutions we will find will only be approximations too.
         </fn>
       </p>
-      <p permid="qhu">
+      <p>
         First, we will define variables.
         We need two variables, because there are two unknown quantities:
         how many sales there were and how many rentals there were.
         Let <m>r</m> be the number of rental transactions and let <m>s</m> be the number of sales transactions.
       </p>
-      <p permid="WoD">
+      <p>
         If you are unsure how to write an equation from the background information,
         use the units to help you.
         The units of each term in an equation must match because we can only add like quantities.
@@ -70,15 +70,15 @@ http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provide
         The article says that the total number of transactions is <m>2</m> million.
         So our first equation will add the total number of rental and sales transactions and set that equal to <m>2</m> million.
         Our equation is:
-        <me permid="eCW">
+        <me>
           (r\,\text{transactions})+(s\,\text{transactions})=2{,}000{,}000\,\text{transactions}
         </me>
         Without the units:
-        <me permid="KKf">
+        <me>
           r+s=2{,}000{,}000
         </me>
       </p>
-      <p permid="CvM">
+      <p>
         The price of each rental was <m>\$6</m>.
         That means the problem has given us a <em>rate</em>
         of <m>6\,\frac{\text{dollars}}{\text{transaction}}</m> to work with.
@@ -89,17 +89,17 @@ http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provide
         so the revenue from sales was <m>15s</m>.
         The total revenue was <m>\$15</m> million,
         which we can represent with this equation:
-        <me permid="qRo">
+        <me>
           \left(6\,\tfrac{\text{dollars}}{\text{transaction}}\right)(r\,\text{transactions})+\left(15\,\tfrac{\text{dollars}}{\text{transaction}}\right)(s\,\text{transactions})=\$15{,}000{,}000
         </me>
         Without the units:
-        <me permid="WYx">
+        <me>
           6r+15s=15{,}000{,}000
         </me>
       </p>
-      <p permid="iCV">
+      <p>
         Here is our system of equations:
-        <me permid="DfG">
+        <me>
           \left\{ \begin{alignedat}{4} r\amp+{}\amp s\amp={}\amp2{,}000{,}000 \\ 6r\amp+{}\amp 15s\amp={}\amp15{,}000{,}000 \end{alignedat} \right.
         </me>
         To solve the system, we will use the
@@ -113,19 +113,19 @@ http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provide
         This leaves you with <em>one</em>
         equation that only has <em>one</em> variable.
       </p>
-      <p permid="OKe">
+      <p>
         The first equation from the system is an easy one to solve for <m>r</m>:
-        <md permid="UdR">
+        <md>
           <mrow>r+s \amp=2{,}000{,}000</mrow>
  <!-- <mrow>r+s \subtractright{s} \amp=2{,}000{,}000\subtractright{s} </mrow> -->
           <mrow>r \amp=2{,}000{,}000-s</mrow>
         </md>
       </p>
-      <p permid="uRn">
+      <p>
         This tells us that the expression
         <m>2{,}000{,}000-s</m> is equal to <m>r</m>,
         so we can <em>substitute</em> it for <m>r</m> in the second equation:
-        <md permid="Ala">
+        <md>
           <mrow>6r+15s \amp=15{,}000{,}000</mrow>
           <mrow>6(\substitute{2{,}000{,}000-s})+15s \amp=15{,}000{,}000</mrow>
           <intertext>Now we have an equation with only one variable, <m>s</m>, which we will solve for:</intertext>
@@ -138,47 +138,47 @@ http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provide
           <mrow>s \amp= 333{,}333.\overline{3}</mrow>
         </md>
       </p>
-      <p permid="aYw">
+      <p>
         At this point, we know that <m>s=333{,}333.\overline{3}</m>.
         This tells us that out of the <m>2</m> million transactions,
         roughly <m>333{,}333</m> were from online sales.
         Recall that we solved the first equation for <m>r</m>,
         and found <m>r=2{,}000{,}000-s</m>.
-        <md permid="gsj">
+        <md>
           <mrow>r \amp=2{,}000{,}000-s</mrow>
           <mrow>r \amp=2{,}000{,}000-\substitute{333{,}333.\overline{3}}</mrow>
           <mrow>r \amp=1{,}666{,}666.\overline{6}</mrow>
         </md>
       </p>
-      <p permid="HfF">
+      <p>
         To check our answer, we will see if <m>s=333{,}333.\overline{3}</m> and
         <m>r=1{,}666{,}666.\overline{6}</m> make the original equations true:
-        <md permid="Mzs">
+        <md>
           <mrow>r+s \amp=2{,}000{,}000</mrow>
           <mrow>\substitute{1{,}666{,}666.\overline{6}}+\substitute{333{,}333.\overline{3}} \amp\stackrel{?}{=}2{,}000{,}000</mrow>
           <mrow>2{,}000{,}000\amp\stackrel{\checkmark}{=}2{,}000{,}000</mrow>
         </md>
-        <md permid="sGB">
+        <md>
           <mrow>6r+15s \amp=15{,}000{,}000</mrow>
           <mrow>6\left(\substitute{1{,}666{,}666.\overline{6}}\right)+15\left(\substitute{333{,}333.\overline{3}}\right) \amp\stackrel{?}{=}15{,}000{,}000</mrow>
           <mrow>10{,}000{,}000+5{,}000{,}000 \amp\stackrel{\checkmark}{=}15{,}000{,}000</mrow>
         </md>
       </p>
-      <p permid="nmO">
+      <p>
         In summary, there were roughly
         <m>333{,}333</m> copies sold and roughly <m>1{,}666{,}667</m> copies rented.
       </p>
     </example>
-    <remark permid="WKc">
-      <p permid="YdQ">
+    <remark>
+      <p>
         In <xref ref="example-systems-of-equations-substitution-intro" />,
         we <em>chose</em> to solve the equation <m>r+s=2{,}000{,}000</m> for <m>r</m>.
         We could just as easily have instead solved for <m>s</m> and substituted that result into the second equation instead.
         The summary conclusion would have been the same.
       </p>
     </remark>
-    <remark permid="CRl">
-      <p permid="EkZ">
+    <remark>
+      <p>
         In <xref ref="example-systems-of-equations-substitution-intro" />,
         we rounded the solution values because only whole numbers make sense in the context of the problem.
         It was OK to round,
@@ -187,7 +187,7 @@ http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provide
         <m>s=330{,}000</m> and <m>r=1{,}700{,}000</m>,
         as long as we communicate clearly that we rounded and our values are rough.
       </p>
-      <p permid="ksi">
+      <p>
         In other exercises where there is no context and nothing suggests the given numbers are approximations,
         it is not OK to round and all answers should be communicated with their exact values.
       </p>
@@ -196,32 +196,32 @@ http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provide
 Cieply, Michael. <q>â€˜The Interviewâ€™ Brings In $15 Million on Web.</q> The New York Times. https://nyti.ms/2pupebT (accessed 18 April 2017).
 deVilla, Joey. <q>The New York Times unintentionally answered their question, â€œIs Algebra Necessary?</q> The Adventures of Accordian Guy in the Twenty-First Century. http://www.joeydevilla.com/2014/12/31/the-new-york-times-unintentionally-provided-the-answer-to-their-question-is-algebra-necessary/ (accessed 18 April 2017).
 -->
-    <example xml:id="example-solving-system-of-equations-substitution-integers-solution" permid="eoB">
+    <example xml:id="example-solving-system-of-equations-substitution-integers-solution">
       <statement>
-        <p permid="TtX">
+        <p>
           Solve the system of equations using substitution:
-          <md permid="YNK">
+          <md>
             <mrow>\left\{ \begin{alignedat}{4} x\amp+{}\amp 2y \amp={}\amp 8 \\ 3x\amp-{}\amp 2y \amp={}\amp 8 \\ \end{alignedat} \right.</mrow>
           </md>
         </p>
       </statement>
-      <solution permid="gdO">
-        <p permid="VEJ">
+      <solution>
+        <p>
           To use substitution, we need to solve for <em>one</em>
           of the variables in <em>one</em> of our equations.
           Looking at both equations,
           it will be easiest to solve for <m>x</m> in the first equation:
-          <md permid="EUT">
+          <md>
             <mrow>x+2y\amp=8</mrow>
  <!-- <mrow>x+2y\subtractright{2y}\amp=8\subtractright{2y}</mrow> -->
             <mrow>x\amp= 8-2y</mrow>
           </md>
         </p>
-        <p permid="BLS">
+        <p>
           Next, we replace <m>x</m> in the second equation with <m>8-2y</m>,
           giving us a linear equation in only one variable,
           <m>y</m>, that we may solve:
-          <md permid="lcc">
+          <md>
             <mrow>3x-2y\amp=8</mrow>
             <mrow>3(\substitute{8-2y})-2y\amp=8</mrow>
             <mrow>24-6y-2y\amp=8</mrow>
@@ -232,28 +232,28 @@ deVilla, Joey. <q>The New York Times unintentionally answered their question, â€
             <mrow>y\amp=2</mrow>
           </md>
         </p>
-        <p permid="hTb">
+        <p>
           Now that we have the value for <m>y</m>,
           we need to find the value for <m>x</m>.
           We have already solved the first equation for <m>x</m>,
           so that is the easiest equation to use.
-          <md permid="Rjl">
+          <md>
             <mrow>x\amp= 8-2y</mrow>
             <mrow>x\amp= 8-2(\substitute{2})</mrow>
             <mrow>x\amp= 8-4</mrow>
             <mrow>x\amp=4</mrow>
           </md>
         </p>
-        <p permid="Oak">
+        <p>
           To check this solution,
           we replace <m>x</m> with <m>4</m> and <m>y</m> with <m>2</m> in each equation:
-          <md permid="xqu">
+          <md>
             <mrow>x+2y\amp=8\amp3x-2y\amp=8</mrow>
             <mrow>\substitute{4}+2\substitute{(2)}\amp\stackrel{?}{=}8\amp3\substitute{(4)}-2\substitute{(2)}\amp\stackrel{?}{=}8</mrow>
             <mrow>4+4\amp\stackrel{\checkmark}{=}8\amp12-4\amp\stackrel{\checkmark}{=}8</mrow>
           </md>
         </p>
-        <p permid="uht">
+        <p>
           We conclude then that this system of equations is true when <m>x=4</m> and <m>y=2</m>.
           Our solution is the point <m>(4,2)</m> and we write the solution set as <m>\{(4,2)\}</m>.
         </p>
@@ -266,23 +266,23 @@ deVilla, Joey. <q>The New York Times unintentionally answered their question, â€
 Seed prevents unnecessary complications in solution
 <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations15.pg" seed="6"/>
 </exercise> -->
-    <example permid="KvK">
+    <example>
       <statement>
-        <p permid="zBg">
+        <p>
           Solve this system of equations using substitution:
-          <md permid="dxD">
+          <md>
             <mrow>\left\{ \begin{alignedat}{4} 3x\amp-{}\amp 7y \amp={}\amp 5 \\ -5x\amp+{}\amp 2y \amp={}\amp 11 \\ \end{alignedat} \right.</mrow>
           </md>
         </p>
       </statement>
-      <solution permid="MkX">
-        <p permid="aoC">
+      <solution>
+        <p>
           We need to solve for <em>one</em>
           of the variables in <em>one</em> of our equations.
           Looking at both equations,
           it will be easiest to solve for <m>y</m> in the second equation.
           The coefficient of <m>y</m> in that equation is smallest.
-          <md permid="JEM">
+          <md>
             <mrow>-5x+2y\amp=11</mrow>
  <!-- <mrow>-5x+2y\addright{5x}\amp=11\addright{5x}</mrow> -->
             <mrow>2y\amp=11+5x</mrow>
@@ -292,11 +292,11 @@ Seed prevents unnecessary complications in solution
           Note that in this example, there are fractions once we solve for <m>y</m>.
           We should take care with the steps that follow that the fraction arithmetic is correct.
         </p>
-        <p permid="GvL">
+        <p>
           Replace <m>y</m> in the first equation with <m>\frac{11}{2}+\frac{5}{2}x</m>,
           giving us a linear equation in only one variable,
           <m>x</m>, that we may solve:
-          <md permid="pLV">
+          <md>
             <mrow>3x-7y\amp=5</mrow>
             <mrow>3x-7\left(\frac{11}{2}+\frac{5}{2}x\right)\amp=5</mrow>
             <mrow>3x-7\cdot\frac{11}{2}-7\cdot\frac{5}{2}x\amp=5</mrow>
@@ -310,12 +310,12 @@ Seed prevents unnecessary complications in solution
             <mrow>x\amp=-3</mrow>
           </md>
         </p>
-        <p permid="mCU">
+        <p>
           Now that we have the value for <m>x</m>,
           we need to find the value for <m>y</m>.
           We have already solved the second equation for <m>y</m>,
           so that is the easiest equation to use.
-          <md permid="VTe">
+          <md>
             <mrow>y\amp=\frac{11}{2}+\frac{5}{2}x</mrow>
             <mrow>y\amp=\frac{11}{2}+\frac{5}{2}(\substitute{-3})</mrow>
             <mrow>y\amp=\frac{11}{2}-\frac{15}{2}</mrow>
@@ -323,51 +323,51 @@ Seed prevents unnecessary complications in solution
             <mrow>y\amp=-2</mrow>
           </md>
         </p>
-        <p permid="SKd">
+        <p>
           To check this solution,
           we replace <m>x</m> with <m>-3</m> and <m>y</m> with <m>-2</m> in each equation:
-          <md permid="Can">
+          <md>
             <mrow>3x-7y \amp=5  \amp  -5x+2y \amp= 11</mrow>
             <mrow>3(-3)-7(-2) \amp\stackrel{?}{=}5  \amp  -5(-3)+2(-2) \amp\stackrel{?}{=} 11</mrow>
             <mrow>-9+14\amp\stackrel{\checkmark}{=}5\amp 15-4\amp\stackrel{\checkmark}{=}11</mrow>
           </md>
         </p>
-        <p permid="yRm">
+        <p>
           We conclude then that this system of equations is true when <m>x=-3</m> and <m>y=-2</m>.
           Our solution is the point <m>(-3,-2)</m> and we write the solution set as <m>\{(-3,-2)\}</m>.
         </p>
       </solution>
     </example>
-    <example permid="qCT">
+    <example>
       <title>Clearing Fraction Denominators Before Solving</title>
       <statement>
-        <p permid="fIp">
+        <p>
           Solve the system of equations using the substitution method:
-          <md permid="ihw">
+          <md>
             <mrow>\left\{ \begin{aligned} \frac{x}{3} - \frac{1}{2}y \amp= \frac{5}{6} \\ \frac{1}{4}x \amp = \frac{y}{2} + 1 \\ \end{aligned} \right.</mrow>
           </md>
         </p>
       </statement>
-      <solution permid="ssg">
-        <p permid="eYv">
+      <solution>
+        <p>
           When a system of equations has fraction coefficients,
           it can be helpful to take steps that replace the fractions with whole numbers.
           With each equation,
           we may multiply each side by the least common denominator of all the fractions.
         </p>
-        <sidebyside widths="47% 47%" permid="iYu">
-          <p permid="LfE">
+        <sidebyside widths="47% 47%">
+          <p>
             In the first equation, the least common denominator is <m>6</m>, so:
-            <md permid="OoF">
+            <md>
               <mrow>\frac{x}{3}-\frac{1}{2}y\amp=\frac{5}{6}</mrow>
               <mrow>\multiplyleft{6}\left(\frac{x}{3}-\frac{1}{2}y\right)\amp=\multiplyleft{6}\frac{5}{6}</mrow>
               <mrow>6\cdot\frac{x}{3}-6\cdot\frac{1}{2}y\amp=\multiplyleft{6}\frac{5}{6}</mrow>
               <mrow>2x-3y\amp=5</mrow>
             </md>
           </p>
-          <p permid="rmN">
+          <p>
             In the second equation, the least common denominator is <m>4</m>, so:
-            <md permid="uvO">
+            <md>
               <mrow>\frac{1}{4}x\amp=\frac{y}{2}+1</mrow>
               <mrow>\multiplyleft{4}\frac{1}{4}x\amp=\multiplyleft{4}\frac{y}{2}+\multiplyleft{4}1</mrow>
               <mrow>\multiplyleft{4}\frac{1}{4}x\amp=\multiplyleft{4}\frac{y}{2}+\multiplyleft{4}1</mrow>
@@ -375,19 +375,19 @@ Seed prevents unnecessary complications in solution
             </md>
           </p>
         </sidebyside>
-        <p permid="XtW">
+        <p>
           Now we have this system that is equivalent to the original system of equations,
           but there are no fraction coefficients:
-          <md permid="aCX">
+          <md>
             <mrow>\left\{ \begin{aligned} 2x-3y\amp=5 \\ x\amp=2y+4 \\ \end{aligned} \right.</mrow>
           </md>
         </p>
-        <sidebyside widths="47% 47%" margins="0%" permid="PfD">
-          <p permid="DBf">
+        <sidebyside widths="47% 47%" margins="0%">
+          <p>
             The second equation is already solved for <m>x</m>,
             so we will substitute <m>x</m> in the first equation with <m>2y+4</m>,
             and we have:
-            <md permid="GKg">
+            <md>
               <mrow>2x-3y\amp=5</mrow>
               <mrow>2(\substitute{2y+4})-3y\amp=5</mrow>
               <mrow>4y+8-3y\amp=5</mrow>
@@ -395,10 +395,10 @@ Seed prevents unnecessary complications in solution
               <mrow>y\amp=-3</mrow>
             </md>
           </p>
-          <p permid="jIo">
+          <p>
             And we have solved for <m>y</m>.
             To find <m>x</m>, we know <m>x=2y+4</m>, so we have:
-            <md permid="mRp">
+            <md>
               <mrow>x\amp=2y+4</mrow>
               <mrow>x\amp=2(\substitute{-3})+4</mrow>
               <mrow>x\amp=-6+4</mrow>
@@ -406,15 +406,15 @@ Seed prevents unnecessary complications in solution
             </md>
           </p>
         </sidebyside>
-        <p permid="PPx">
+        <p>
           The solution is <m>(-2,-3)</m>.
           Checking this solution is left as an exercise.
         </p>
       </solution>
     </example>
-    <exercise permid="btV">
-      <introduction permid="vmM">
-        <p permid="wGA">
+    <exercise>
+      <introduction>
+        <p>
           Try a similar exercise.
         </p>
       </introduction>
@@ -469,9 +469,9 @@ Seed prevents unnecessary complications in solution
 </solution>
 </example>
 </subsection> -->
-  <subsection permid="pjf">
+  <subsection>
     <title>Solving Special Systems of Equations with Substitution</title>
-    <p permid="yvN">
+    <p>
       Remember the two special cases we encountered when solving by graphing in <xref ref="section-solving-systems-of-linear-equations-by-graphing" />?
       If the two lines represented by a system of equations have the same slope,
       then they might be separate lines that never meet,
@@ -480,30 +480,30 @@ Seed prevents unnecessary complications in solution
       in which case there are infinitely many solutions represented by all the points on that line.
       Let's see what happens when we use the substitution method on each of the special cases.
     </p>
-    <example xml:id="example-solving-system-of-equations-substitution-no-solution" permid="HBe">
+    <example xml:id="example-solving-system-of-equations-substitution-no-solution">
       <title>A System with No Solution</title>
       <idx><h>solving</h><h>system of linear equations</h><h>with no solution</h></idx>
       <statement>
-        <p permid="LPy">
+        <p>
           Solve the system of equations using the substitution method:
-          <md permid="SYy">
+          <md>
             <mrow>\left\{ \begin{aligned} y \amp= 2x-1 \\ 4x - 2y \amp= 3 \\ \end{aligned} \right.</mrow>
           </md>
         </p>
       </statement>
-      <solution permid="Yzp">
-        <p permid="vWG">
+      <solution>
+        <p>
           Since the first equation is already solved for <m>y</m>,
           we will substitute <m>2x-1</m> for <m>y</m> in the second equation,
           and we have:
-          <md permid="zfH">
+          <md>
             <mrow>4x-2y\amp=3</mrow>
             <mrow>4x-2\substitute{(2x-1)}\amp=3</mrow>
             <mrow>4x-4x+2\amp=3</mrow>
             <mrow>2\amp=3</mrow>
           </md>
         </p>
-        <p permid="cdP">
+        <p>
           Even though we were only intending to substitute away <m>y</m>,
           we ended up with an equation where there are no variables at all.
           This will happen whenever the lines have the same slope.
@@ -514,10 +514,10 @@ Seed prevents unnecessary complications in solution
           We write the solution set using the empty set symbol:
           the solution set is <m>\emptyset</m>.
         </p>
-        <p permid="IkY">
+        <p>
           To verify this, re-write the second equation,
           <m>4x-2y=3</m>, in slope-intercept form:
-          <md permid="fmQ">
+          <md>
             <mrow>4x-2y\amp=3</mrow>
  <!-- <mrow>4x-2y\subtractright{4x}\amp=3\subtractright{4x}</mrow> -->
             <mrow>-2y\amp=-4x+3</mrow>
@@ -526,7 +526,7 @@ Seed prevents unnecessary complications in solution
             <mrow>y\amp=2x-\frac{3}{2}</mrow>
           </md>
           So the system is equivalent to:
-          <md permid="LtZ">
+          <md>
             <mrow>\left\{ \begin{aligned} y \amp = 2x-1 \\ y \amp = 2x-\frac{3}{2} \\ \end{aligned} \right.</mrow>
           </md>
           Now it is easier to see that the two lines have the same slope,
@@ -536,29 +536,29 @@ Seed prevents unnecessary complications in solution
         </p>
       </solution>
     </example>
-    <example xml:id="example-solving-system-of-equations-substitution-infinite-solutions" permid="nIn">
+    <example xml:id="example-solving-system-of-equations-substitution-infinite-solutions">
       <title>A System with Infinitely Many Solutions</title>
       <idx><h>solving</h><h>system of linear equations</h><h>with infinitely many solutions</h></idx>
       <statement>
-        <p permid="rWH">
+        <p>
           Solve the system of equations using the substitution method:
-          <md permid="rBi">
+          <md>
             <mrow>\left\{ \begin{aligned} y \amp=2x-1 \\ 4x-2y \amp=2 \\ \end{aligned} \right.</mrow>
           </md>
         </p>
       </statement>
-      <solution permid="EGy">
-        <p permid="osh">
+      <solution>
+        <p>
           Since <m>y=2x-1</m>,
           we will substitute <m>2x-1</m> for <m>y</m> in the second equation and we have:
-          <md permid="XIr">
+          <md>
             <mrow>4x-2y\amp=2</mrow>
             <mrow>4x-2\substitute{(2x-1)}\amp=2</mrow>
             <mrow>4x-4x+2\amp=2</mrow>
             <mrow>2\amp=2</mrow>
           </md>
         </p>
-        <p permid="Uzq">
+        <p>
           Even though we were only intending to substitute away <m>y</m>,
           we ended up with an equation where there are no variables at all.
           This will happen whenever the lines have the same slope.
@@ -569,10 +569,10 @@ Seed prevents unnecessary complications in solution
           So the lines <em>coincide</em>.
           We write the solution set as <m>\{(x,y)\mid y=2x-1\}</m>.
         </p>
-        <p permid="AGz">
+        <p>
           To verify this, re-write the second equation,
           <m>4x-2y=2</m>, in slope-intercept form:
-          <md permid="DPA">
+          <md>
             <mrow>4x-2y\amp=2</mrow>
  <!-- <mrow>4x-2y\subtractright{4x}\amp=2\subtractright{4x}</mrow> -->
             <mrow>-2y\amp=-4x+2</mrow>
@@ -580,7 +580,7 @@ Seed prevents unnecessary complications in solution
             <mrow>y\amp=2x-1</mrow>
           </md>
           The system looks like:
-          <md permid="jWJ">
+          <md>
             <mrow>\left\{ \begin{alignedat}{4} y \amp {}={} \amp 2x-1 \\ y \amp {}={} \amp 2x-1 \\ \end{alignedat} \right.</mrow>
           </md>
           Now it is easier to see that the two equations represent the same line.
@@ -590,24 +590,24 @@ Seed prevents unnecessary complications in solution
       </solution>
     </example>
   </subsection>
-  <exercises permid="Vqo">
-    <exercisegroup cols="4" permid="Bxx">
+  <exercises>
+    <exercisegroup cols="4">
       <title>Review and Warmup</title>
-      <exercise permid="tSY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg"/>
       </exercise>
-      <exercise permid="aah">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction90.pg"/>
       </exercise>
-      <exercise permid="Ghq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg"/>
       </exercise>
-      <exercise permid="moz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SolveLinearEquations/SolveLinearEquationFraction100.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="3" permid="hEG">
-      <exercise permid="SvI">
+    <exercisegroup cols="3">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -635,19 +635,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="cNJ">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="jmP">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="IUS">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="kNH">
-              <p permid="gNI">
-                <md permid="QdS">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -658,7 +658,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="yCR">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -686,19 +686,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="pcb">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="PtY">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="Vjk">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="QUQ">
-              <p permid="MUR">
-                <md permid="wlb">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -709,7 +709,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="eKa">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -737,19 +737,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="Bqt">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="vBh">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="hxC">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="xbZ">
-              <p permid="tca">
-                <md permid="csk">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -760,7 +760,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="KRj">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -788,19 +788,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="NEL">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="bIq">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="tLU">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="dji">
-              <p permid="Zjj">
-                <md permid="Izt">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -811,7 +811,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="qYs">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -839,19 +839,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="ZTd">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="HPz">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="Gam">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="Jqr">
-              <p permid="Fqs">
-                <md permid="oGC">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -862,7 +862,7 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="XfB">
+      <exercise>
         <webwork>
             <setup>
 <pg-code>
@@ -890,19 +890,19 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
 </pg-code>
             </setup>
             <statement>
-              <p permid="mhv">
+              <p>
                 Solve the linear equation for <m>y</m>.
-                <me permid="nWI">
+                <me>
                   <var name="$left"/>=<var name="$right"/>
                 </me>
               </p>
-              <p permid="SoE">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="pxA">
-              <p permid="lxB">
-                <md permid="UNL">
+            <solution>
+              <p>
+                <md>
                   <mrow><var name="$left"/> \amp = <var name="$right"/></mrow>
                   <mrow><var name="$leftsteps[0]"/> \amp = <var name="$rightsteps[0]"/></mrow>
                   <mrow><var name="$leftsteps[1]"/> \amp = <var name="$rightsteps[1]"/></mrow>
@@ -914,156 +914,156 @@ $rightsteps[3] = Formula("$m x + $b")-&gt;reduce;
         </webwork>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="3" permid="NLP">
+    <exercisegroup cols="3">
       <title>Solving System of Equations Using Substitution</title>
-      <exercise permid="DmK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations05.pg"/>
       </exercise>
-      <exercise permid="jtT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations05.pg"/>
       </exercise>
-      <exercise permid="PBc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations10.pg"/>
       </exercise>
-      <exercise permid="vIl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations10.pg"/>
       </exercise>
-      <exercise permid="bPu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations11.pg"/>
       </exercise>
-      <exercise permid="HWD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations11.pg"/>
       </exercise>
-      <exercise permid="odM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations12.pg"/>
       </exercise>
-      <exercise permid="UkV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations12.pg"/>
       </exercise>
-      <exercise permid="Ase">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations13.pg"/>
       </exercise>
-      <exercise permid="gzn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations13.pg"/>
       </exercise>
-      <exercise permid="MGw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations14.pg"/>
       </exercise>
-      <exercise permid="sNF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations14.pg"/>
       </exercise>
-      <exercise permid="YUO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations15.pg"/>
       </exercise>
-      <exercise permid="FbX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations15.pg"/>
       </exercise>
-      <exercise permid="ljg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations16.pg"/>
       </exercise>
-      <exercise permid="Rqp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations16.pg"/>
       </exercise>
-      <exercise permid="xxy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations20.pg"/>
       </exercise>
-      <exercise permid="dEH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations20.pg"/>
       </exercise>
-      <exercise permid="JLQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations25.pg"/>
       </exercise>
-      <exercise permid="pSZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations25.pg"/>
       </exercise>
-      <exercise permid="Wai">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations30.pg"/>
       </exercise>
-      <exercise permid="Chr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations30.pg"/>
       </exercise>
-      <exercise permid="ioA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations35.pg" seed="5"/>
       </exercise>
-      <exercise permid="OvJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations35.pg"/>
       </exercise>
-      <exercise permid="uCS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations40.pg"/>
       </exercise>
-      <exercise permid="aKb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations40.pg"/>
       </exercise>
-      <exercise permid="GRk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations45.pg"/>
       </exercise>
-      <exercise permid="mYt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations45.pg"/>
       </exercise>
-      <exercise permid="TfC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations50.pg"/>
       </exercise>
-      <exercise permid="zmL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations50.pg"/>
       </exercise>
-      <exercise permid="ftU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations55.pg"/>
       </exercise>
-      <exercise permid="LBd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations55.pg"/>
       </exercise>
-      <exercise permid="rIm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations17.pg"/>
       </exercise>
-      <exercise permid="XPv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemOfEquations17.pg"/>
       </exercise>
-      <exercise permid="DWE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations70.pg"/>
       </exercise>
-      <exercise permid="kdN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations70.pg"/>
       </exercise>
-      <exercise permid="QkW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations80.pg"/>
       </exercise>
-      <exercise permid="wsf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/systemsOfEquations80.pg"/>
       </exercise>
-      <exercise permid="czo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation10.pg"/>
       </exercise>
-      <exercise permid="IGx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation10.pg"/>
       </exercise>
-      <exercise permid="oNG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation20.pg"/>
       </exercise>
-      <exercise permid="UUP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation20.pg"/>
       </exercise>
-      <exercise permid="BbY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation30.pg"/>
       </exercise>
-      <exercise permid="hjh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation30.pg"/>
       </exercise>
-      <exercise permid="Nqq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation40.pg"/>
       </exercise>
-      <exercise permid="txz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation40.pg"/>
       </exercise>
-      <exercise permid="ZEI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation50.pg"/>
       </exercise>
-      <exercise permid="FLR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation50.pg"/>
       </exercise>
-      <exercise permid="lTa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation60.pg"/>
       </exercise>
-      <exercise permid="Saj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/SystemsOfLinearEquations/SystemEquation60.pg"/>
       </exercise>
     </exercisegroup>

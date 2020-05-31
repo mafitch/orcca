@@ -6,11 +6,11 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-solving-quadratic-equations-by-factoring" permid="zzt">
+<section xml:id="section-solving-quadratic-equations-by-factoring">
   <title>Solving Quadratic Equations by Factoring</title>
-  <subsection permid="fGC">
+  <subsection>
     <title>Quadratic Equations and the Zero Product Property</title>
-    <p permid="LNY">
+    <p>
       We have learned how to factor trinomials like
       <m>x^2+5x+6</m> into <m>(x+2)(x+3)</m>.
       This skill is needed to solve an equation like <m>x^2+5x+6=0</m>,
@@ -26,11 +26,11 @@
           <idx><h>quadratic</h><h>equation in standard form</h></idx>
           <idx><h>standard form of a quadratic equation</h></idx>
     </p>
-    <p permid="rVh">
+    <p>
       Before we begin exploring the method of solving quadratic equations by factoring,
       we'll identify what types of equations are quadratic and which are not.
     </p>
-    <exercise permid="rdW">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -39,79 +39,79 @@ $no=PopUp(['?','is', 'is not'],2);
 </pg-code>
           </setup>
           <statement>
-            <p permid="jGO">
+            <p>
               Identify which of the items are quadratic equations.
-              <ol label="a" permid="Plh">
-                <li permid="vsq">
-                  <p permid="GBp">
+              <ol label="a">
+                <li>
+                  <p>
                     The equation <m>2x^2+5x=7</m> <var name="$yes" form="popup"/> a quadratic equation.
                   </p>
                 </li>
-                <li permid="bzz">
-                  <p permid="mIy">
+                <li>
+                  <p>
                     The equation <m>5-2x=3</m> <var name="$no" form="popup"/> a quadratic equation.
                   </p>
                 </li>
-                <li permid="HGI">
-                  <p permid="SPH">
+                <li>
+                  <p>
                     The equation <m>15-x^3=3x^2+9x</m> <var name="$no" form="popup"/> a quadratic equation.
                   </p>
                 </li>
-                <li permid="nNR">
-                  <p permid="yWQ">
+                <li>
+                  <p>
                     The equation <m>(x+3)(x-4)=0</m> <var name="$yes" form="popup"/> a quadratic equation.
                   </p>
                 </li>
-                <li permid="TVa">
-                  <p permid="fdZ">
+                <li>
+                  <p>
                     The equation <m>x(x+1)(x-1)=0</m> <var name="$no" form="popup"/> a quadratic equation.
                   </p>
                 </li>
-                <li permid="Acj">
-                  <p permid="Lli">
+                <li>
+                  <p>
                     The expression <m>x^2-5x+6</m> <var name="$no" form="popup"/> a quadratic equation.
                   </p>
                 </li>
-                <li permid="gjs">
-                  <p permid="rsr">
+                <li>
+                  <p>
                     The equation <m>(2x-3)(x+5)=12</m> <var name="$yes" form="popup"/> a quadratic equation.
                   </p>
                 </li>
               </ol>
             </p>
           </statement>
-          <solution permid="cES">
-            <p permid="RKo">
-              <ol label="a" permid="qIx">
-                <li permid="MqB">
-                  <p permid="XzA">
+          <solution>
+            <p>
+              <ol label="a">
+                <li>
+                  <p>
                     The equation <m>2x^2+5x=7</m> <em>is</em> a quadratic equation.
                     To write it in standard form,
                     simply subtract <m>7</m> from both sides.
                   </p>
                 </li>
-                <li permid="sxK">
-                  <p permid="DGJ">
+                <li>
+                  <p>
                     The equation <m>5-2x=3</m> <em>is not</em> quadratic.
                     It is a linear equation.
                   </p>
                 </li>
-                <li permid="YET">
-                  <p permid="jNS">
+                <li>
+                  <p>
                     The equation <m>15+x^3=3x^2+9x</m> <em>is not</em>
                     a quadratic equation because of the <m>x^3</m> term.
                   </p>
                 </li>
-                <li permid="EMc">
-                  <p permid="PVb">
+                <li>
+                  <p>
                     The equation <m>(x+3)(x-4)=0</m>
                     <em>is</em> a quadratic equation.
                     If we expand the left-hand side of the equation,
                     we would get something in standard form.
                   </p>
                 </li>
-                <li permid="kTl">
-                  <p permid="wck">
+                <li>
+                  <p>
                     The equation <m>x(x+1)(x-1)=0</m>
                     <em>is not</em> a quadratic equation.
                     If we expanded the left-hand side of the equation,
@@ -119,15 +119,15 @@ $no=PopUp(['?','is', 'is not'],2);
                     which automatically makes it not quadratic.
                   </p>
                 </li>
-                <li permid="Rau">
-                  <p permid="cjt">
+                <li>
+                  <p>
                     The expression <m>x^2-5x+6</m> <em>is not</em> a quadratic equation;
                     it's not an <em>equation</em> at all.
                     Instead, this is a quadratic <em>expression</em>.
                   </p>
                 </li>
-                <li permid="xhD">
-                  <p permid="IqC">
+                <li>
+                  <p>
                     The equation <m>(2x-3)(x+5)=12</m>
                     <em>is</em> a quadratic equation.
                     Multiplying out the left-hand side,
@@ -140,25 +140,25 @@ $no=PopUp(['?','is', 'is not'],2);
           </solution>
       </webwork>
     </exercise>
-    <p permid="Ycq">
+    <p>
       Now we'll look at an application that demonstrates the need and method for solving a quadratic equation by factoring.
     </p>
-    <sidebyside widths="37% 37%" margins="10%" permid="KWN">
-      <p permid="eWV">
+    <sidebyside widths="37% 37%" margins="10%">
+      <p>
         Nita is in a physics class that launches a tennis ball from a rooftop <m>80</m> feet above the ground.
         They fire it upward, but at an angle,
         at a speed of <m>64</m> feet per second and measure the time it takes for the ball to hit the ground below.
         We can model the height of the tennis ball, <m>h</m>,
         in feet, with the quadratic equation
-        <me permid="Psy">
+        <me>
           h=-16t^2+64t+80
         </me>,
         where <m>t</m> represents the time in seconds after the launch.
         Using the model we can predict when the ball will hit the ground.
       </p>
-      <figure xml:id="figure-ball-thrown-diagram" permid="Lee">
+      <figure xml:id="figure-ball-thrown-diagram">
         <caption>A Diagram of the Ball Thrown from the Roof</caption>
-        <image permid="Kng">
+        <image>
           <description>A drawing of a tall building and a tennis ball being launched upward; the path of the ball is an arc that goes upward and then downward to the ground</description>
 <latex-image>
 \begin{tikzpicture}
@@ -184,15 +184,15 @@ grid=none]
         </image>
       </figure>
     </sidebyside>
-    <p permid="Ejz">
+    <p>
       The ground has a height of <m>0</m>, or <m>h=0</m>.
       We will substitute <m>0</m> for <m>h</m> in the equation and we have
-      <me permid="vzH">
+      <me>
         -16t^2+64t+80=0
       </me>
       We need to solve this quadratic equation for <m>t</m> to find when the ball will hit the ground.
     </p>
-    <p permid="kqI">
+    <p>
       The key strategy for solving a <em>linear</em>
       equation is to separate the variable terms from the constant terms on either side of the equal sign.
       It turns out that this same method
@@ -203,35 +203,35 @@ grid=none]
       If we can factor the polynomial on the left-hand side,
       we will be on the home stretch to solving the whole equation.
     </p>
-    <p permid="QxR">
+    <p>
       We will look for a common factor first,
       and see that we can factor out <m>-16</m>.
       Then we can finish factoring the trinomial:
-      <md permid="gqJ">
+      <md>
         <mrow>-16t^2+64t+80\amp=0</mrow>
         <mrow>-16(t^2-4t-5)\amp=0</mrow>
         <mrow>-16(t+1)(t-5)\amp=0</mrow>
       </md>
     </p>
-    <p permid="wFa">
+    <p>
       In order to finish solving the equation,
       we need to understand the following property.
       This property explains why it was
       <em>incredibly important</em>
       to <m>not</m> move the <m>80</m> in our example over to the other side of the equation before trying to factor.
     </p>
-    <fact xml:id="fact-zero-product-property" permid="ePE">
+    <fact xml:id="fact-zero-product-property">
       <title>Zero Product Property</title>
       <idx><h>zero product property</h></idx>
       <idx><h>properties</h><h>zero product property</h></idx>
       <statement>
-        <p permid="SID">
+        <p>
           If the product of two or more numbers is equal to zero,
           then at least one of the numbers must be zero.
         </p>
       </statement>
     </fact>
-    <p permid="cMj">
+    <p>
       One way to understand this property is to think about the equation <m>a\cdot b=0</m>.
       Maybe <m>b=0</m>,
       because that would certainly cause the equation to be true.
@@ -240,10 +240,10 @@ grid=none]
       and the resulting equation says that <m>a=0</m>.
       So no matter what, either <m>a=0</m> or <m>b=0</m>.
     </p>
-    <p permid="ITs">
+    <p>
       To understand this property more,
       let's look at a few products:
-      <md permid="MxS">
+      <md>
         <mrow>4\cdot7\amp=28\amp4\cdot0\amp=0\amp4\cdot7\cdot3\amp=84</mrow>
         <mrow>0\cdot7\amp=0\amp-4\cdot0\amp=0\amp4\cdot0\cdot3\amp=0</mrow>
       </md>
@@ -252,10 +252,10 @@ grid=none]
       The only way to get a product of <m>0</m> is when one of the factors is <m>0</m>.
       This property is unique to the number <m>0</m> and can be used no matter how many numbers are multiplied together.
     </p>
-    <p permid="paB">
+    <p>
       Now we can see the value of factoring.
       We have three factors in our equation
-      <me permid="bGQ">
+      <me>
         -16(t+1)(t-5)=0
       </me>.
       The first factor is the number <m>-16</m>.
@@ -264,11 +264,11 @@ grid=none]
       Since the product of the three factors is equal to <m>0</m>,
       one of the factors must be zero.
     </p>
-    <p permid="VhK">
+    <p>
       Since <m>-16</m> is not <m>0</m>,
       either <m>t+1</m> or <m>t-5</m> must be <m>0</m>.
       This gives us two equations to solve:
-      <md permid="sFb">
+      <md>
         <mrow>t+1\amp=0\amp\amp\text{or}\amp t-5\amp=0</mrow>
         <mrow>t+1\subtractright{1}\amp=0\subtractright{1}\amp\amp\text{or}\amp t-5\addright{5}\amp=0\addright{5}</mrow>
         <mrow>t\amp=-1\amp\amp\text{or}\amp t\amp=5</mrow>
@@ -277,9 +277,9 @@ grid=none]
       A quadratic expression will have at most two linear factors,
       not including any constants, so it can have up to two solutions.
     </p>
-    <p permid="BoT">
+    <p>
       Let's check each of our two solutions <m>-1</m> and <m>5</m>:
-      <md permid="YMk">
+      <md>
         <mrow>-16t^2+64t+80\amp=0\amp\amp\amp-16t^2+64t+80\amp=0</mrow>
         <mrow>-16(\substitute{-1})^2+64(\substitute{-1})+80\amp\stackrel{?}{=}0\amp\amp\amp-16(\substitute{5})^2+64(\substitute{5})+80\amp\stackrel{?}{=}0</mrow>
         <mrow>-16(1)-64+80\amp\stackrel{?}{=}0\amp\amp\amp-16(25)+320+80\amp\stackrel{?}{=}0</mrow>
@@ -287,7 +287,7 @@ grid=none]
         <mrow>0\amp\stackrel{\checkmark}{=}0\amp\amp\amp0\amp\stackrel{\checkmark}{=}0</mrow>
       </md>
     </p>
-    <p permid="hwc">
+    <p>
       We have verified our solutions.
       While there are two solutions to the equation,
       the solution <m>-1</m> is not relevant to this physics model because it is a negative time,
@@ -298,64 +298,64 @@ grid=none]
       the tennis ball will hit the ground <m>5</m> seconds after it is launched.
     </p>
   </subsection>
-  <subsection permid="LNL">
+  <subsection>
     <title>Further Examples</title>
     <idx><h>solving</h><h>quadratic equations</h><h>factoring</h></idx>
-    <p permid="NDl">
+    <p>
       We'll now look at further examples of solving quadratic equations by factoring.
       The general process is outlined here:
     </p>
-    <algorithm xml:id="algorithm-solving-quadratic-equations-by-factoring" permid="Xlf">
+    <algorithm xml:id="algorithm-solving-quadratic-equations-by-factoring">
       <title>Solving Quadratic Equations by Factoring</title>
       <idx><h>solving</h><h>quadratic equations</h><h>by factoring</h></idx>
-      <p permid="WIC">
-        <dl permid="CWP">
-          <li permid="BRw">
+      <p>
+        <dl>
+          <li>
             <title>Simplify</title>
-            <p permid="oxL">
+            <p>
               Simplify the equation using distribution and by combining like terms.
             </p>
           </li>
-          <li permid="hYF">
+          <li>
             <title>Isolate</title>
-            <p permid="UEU">
+            <p>
               Move all terms onto one side of the equation so that the other side has <m>0</m>.
             </p>
           </li>
-          <li permid="OfO">
+          <li>
             <title>Factor</title>
-            <p permid="AMd">
+            <p>
               Factor the quadratic expression.
             </p>
           </li>
-          <li permid="umX">
+          <li>
             <title>Apply the Zero Product Property</title>
-            <p permid="gTm">
+            <p>
               Apply the <xref ref="fact-zero-product-property" text="title"/>.
             </p>
           </li>
-          <li permid="aug">
+          <li>
             <title>Solve</title>
-            <p permid="Nav">
+            <p>
               Solve the equation(s) that result after the zero product property was applied.
             </p>
           </li>
         </dl>
       </p>
     </algorithm>
-    <example permid="Dso">
+    <example>
       <statement>
-        <p permid="CPL">
+        <p>
           Solve <m>x^2-5x-14=0</m> by factoring.
         </p>
       </statement>
-      <solution permid="aPF">
-        <p permid="xRx">
-          <md permid="ETt">
+      <solution>
+        <p>
+          <md>
             <mrow>x^2-5x-14\amp=0</mrow>
             <mrow>(x-7)(x+2)\amp=0</mrow>
           </md>
-          <md permid="laC">
+          <md>
             <mrow>x-7\amp=0\amp\amp\text{or}\amp x+2\amp=0</mrow>
             <mrow>x-7\addright{7}\amp=0\addright{7}\amp\amp\text{or}\amp x+2\subtractright{2}\amp=0\subtractright{2}</mrow>
             <mrow>x\amp=7\amp\amp\text{or}\amp x\amp=-2</mrow>
@@ -365,21 +365,21 @@ grid=none]
         </p>
       </solution>
     </example>
-    <p permid="tKu">
+    <p>
       If the two factors of a polynomial happen to be the same,
       the equation will only have one solution.
       Let's look at an example of that.
     </p>
-    <example permid="jzx">
+    <example>
       <title>A Quadratic Equation with Only One Solution</title>
       <statement>
-        <p permid="iWU">
+        <p>
           Solve <m>x^2-10x+25=0</m> by factoring.
         </p>
       </statement>
-      <solution permid="GWO">
-        <p permid="dYG">
-          <md permid="RhL">
+      <solution>
+        <p>
+          <md>
             <mrow>x^2-10x+25\amp=0</mrow>
             <mrow>(x-5)(x-5)\amp=0</mrow>
             <mrow>(x-5)^2\amp=0</mrow>
@@ -391,23 +391,23 @@ grid=none]
         </p>
       </solution>
     </example>
-    <example permid="PGG">
+    <example>
       <title>Factor Out a Common Factor</title>
       <statement>
-        <p permid="Ped">
+        <p>
           Solve <m>5x^2+55x+120=0</m> by factoring.
         </p>
       </statement>
-      <solution permid="ndX">
-        <p permid="KfP">
+      <solution>
+        <p>
           Note that the terms are all divisible by <m>5</m>,
           so we can factor that out to start.
-          <md permid="xoU">
+          <md>
             <mrow>5x^2+55x+120\amp=0</mrow>
             <mrow>5(x^2+11x+24)\amp=0</mrow>
             <mrow>5(x+8)(x+3)\amp=0</mrow>
           </md>
-          <md permid="dwd">
+          <md>
             <mrow>x+8\amp=0\amp\amp\text{or}\amp x+3\amp=0</mrow>
             <mrow>x\amp=-8\amp\amp\text{or}\amp x\amp=-3</mrow>
           </md>
@@ -415,26 +415,26 @@ grid=none]
         </p>
       </solution>
     </example>
-    <example permid="vNP">
+    <example>
       <title>Factoring Using the AC Method</title>
       <statement>
-        <p permid="vlm">
+        <p>
           Solve <m>3x^2-7x+2=0</m> by factoring.
         </p>
       </statement>
-      <solution permid="Tlg">
-        <p permid="qmY">
+      <solution>
+        <p>
           Recall that we multiply <m>3\cdot2=6</m> and find a factor pair that multiplies to <m>6</m> and adds to <m>-7</m>.
           The factors are <m>-6</m> and <m>-1</m>.
           We use the two factors to replace the middle term with <m>-6x</m> and <m>-x</m>.
-          <md permid="JDm">
+          <md>
             <mrow>3x^2-7x+2\amp=0</mrow>
             <mrow>3x^2-6x-x+2\amp=0</mrow>
             <mrow>(3x^2-6x)+(-x+2)\amp=0</mrow>
             <mrow>3x(x-2)-1(x-2)\amp=0</mrow>
             <mrow>(3x-1)(x-2)\amp=0</mrow>
           </md>
-          <md permid="pKv">
+          <md>
             <mrow>3x-1\amp=0\amp\amp\text{or}\amp x-2\amp=0</mrow>
             <mrow>3x\amp=1\amp\amp\text{or}\amp x\amp=2</mrow>
             <mrow>x\amp=\frac{1}{3}\amp\amp\text{or}\amp x\amp=2</mrow>
@@ -443,37 +443,37 @@ grid=none]
         </p>
       </solution>
     </example>
-    <p permid="ZRD">
+    <p>
       Try a similar exercise.
     </p>
-    <exercise permid="gER">
+    <exercise>
       <webwork source="Library/PCC/BasicAlgebra/Factoring/factoring210.pg"/>
     </exercise>
-    <p permid="FYM">
+    <p>
       So far the equations have been written in standard form, which is
-      <me permid="HNZ">
+      <me>
         ax^2+bx+c=0
       </me>
       If an equation is not given in standard form then we must rearrange it in order to use the <xref ref="fact-zero-product-property" text="title"/>.
     </p>
-    <example permid="bUY">
+    <example>
       <title>Writing in Standard Form</title>
       <statement>
-        <p permid="bsv">
+        <p>
           Solve <m>x^2-10x=24</m> by factoring.
         </p>
       </statement>
-      <solution permid="zsp">
-        <p permid="Wuh">
+      <solution>
+        <p>
           There is nothing like the <xref ref="fact-zero-product-property" text="title"/> for the number <m>24</m>.
           We must have a <m>0</m> on one side of the equation to solve quadratic equations using factoring.
-          <md permid="VRE">
+          <md>
             <mrow>x^2-10x\amp=24</mrow>
             <mrow>x^2-10x\subtractright{24}\amp=24\subtractright{24}</mrow>
             <mrow>x^2-10x-24\amp=0</mrow>
             <mrow>(x-12)(x+2)\amp=0</mrow>
           </md>
-          <md permid="BYN">
+          <md>
             <mrow>x-12\amp=0\amp\amp\text{or}\amp x+2\amp=0</mrow>
             <mrow>x\amp=12\amp\amp\text{or}\amp x=\amp-2</mrow>
           </md>
@@ -481,25 +481,25 @@ grid=none]
         </p>
       </solution>
     </example>
-    <example permid="Ich">
+    <example>
       <title>Writing in Standard Form</title>
       <statement>
-        <p permid="HzE">
+        <p>
           Solve <m>(x+4)(x-3)=18</m> by factoring.
         </p>
       </statement>
-      <solution permid="fzy">
-        <p permid="CBq">
+      <solution>
+        <p>
           Again, there is nothing like the <xref ref="fact-zero-product-property" text="title"/> for a number like <m>18</m>.
           We must expand the left side and subtract <m>18</m> from both sides.
-          <md permid="ifW">
+          <md>
             <mrow>(x+4)(x-3)\amp=18</mrow>
             <mrow>x^2+x-12\amp=18</mrow>
             <mrow>x^2+x-12\subtractright{18}\amp=18\subtractright{18}</mrow>
             <mrow>x^2+x-30\amp=0</mrow>
             <mrow>(x+6)(x-5)\amp=0</mrow>
           </md>
-          <md permid="Onf">
+          <md>
             <mrow>x+6\amp=0\amp\amp\text{or}\amp x-5\amp=0</mrow>
             <mrow>x\amp=-6\amp\amp\text{or}\amp x\amp=5</mrow>
           </md>
@@ -507,29 +507,29 @@ grid=none]
         </p>
       </solution>
     </example>
-    <example permid="ojq">
+    <example>
       <title>A Quadratic Equation with No Constant Term</title>
       <statement>
-        <p permid="nGN">
+        <p>
           Solve <m>2x^2=5x</m> by factoring.
         </p>
       </statement>
-      <solution permid="LGH">
-        <p permid="iIz">
+      <solution>
+        <p>
           It may be tempting to divide both sides of the equation by <m>x</m>.
           But <m>x</m> is a variable, and for all we know, maybe <m>x=0</m>.
           So it is not safe to divide by <m>x</m>.
           As a general rule,
           never divide an equation by a variable in the solving process.
           Instead, we will put the equation in standard form.
-          <md permid="uuo">
+          <md>
             <mrow>2x^2\amp=5x</mrow>
             <mrow>2x^2\subtractright{5x}\amp=5x\subtractright{5x}</mrow>
             <mrow>2x^2-5x\amp=0</mrow>
             <intertext>We can factor out <m>x</m>.</intertext>
             <mrow>x(2x-5)\amp=0</mrow>
           </md>
-          <md permid="aBx">
+          <md>
             <mrow>x\amp=0\amp\amp\text{or}\amp 2x-5\amp=0</mrow>
             <mrow>x\amp=0\amp\amp\text{or}\amp 2x\amp=5</mrow>
             <mrow>x\amp=0\amp\amp\text{or}\amp x\amp=\frac{5}{2}</mrow>
@@ -540,23 +540,23 @@ grid=none]
         </p>
       </solution>
     </example>
-    <example permid="Uqz">
+    <example>
       <title>Factoring a Special Polynomial</title>
       <statement>
-        <p permid="TNW">
+        <p>
           Solve <m>x^2=9</m> by factoring.
         </p>
       </statement>
-      <solution permid="rNQ">
-        <p permid="OPI">
+      <solution>
+        <p>
           We can put the equation in standard form and use factoring.
           In this case, we find a difference of squares.
-          <md permid="GIG">
+          <md>
             <mrow>x^2\amp=9</mrow>
             <mrow>x^2-9\amp=0</mrow>
             <mrow>(x+3)(x-3)\amp=0</mrow>
           </md>
-          <md permid="mPP">
+          <md>
             <mrow>x+3\amp=0\amp\amp\text{or}\amp x-3\amp=0</mrow>
             <mrow>x\amp=-3\amp\amp\text{or}\amp x\amp=3</mrow>
           </md>
@@ -564,23 +564,23 @@ grid=none]
         </p>
       </solution>
     </example>
-    <example permid="AxI">
+    <example>
       <title>Solving an Equation with a Higher Degree</title>
       <statement>
-        <p permid="zVf">
+        <p>
           Solve <m>2x^3-10x^2-28x=0</m> by factoring.
         </p>
       </statement>
-      <solution permid="XUZ">
-        <p permid="uWR">
+      <solution>
+        <p>
           Although this equation is not quadratic,
           it does factor so we can solve it by factoring.
-          <md permid="SWY">
+          <md>
             <mrow>2x^3-10x^2-28x\amp=0</mrow>
             <mrow>2x(x^2-5x-14)\amp=0</mrow>
             <mrow>2x(x-7)(x+2)\amp=0</mrow>
           </md>
-          <md permid="zeh">
+          <md>
             <mrow>2x\amp=0\amp\amp\text{or}\amp x-7\amp=0\amp\text{or}\amp\amp x+2\amp=0</mrow>
             <mrow>x\amp=0\amp\amp\text{or}\amp x\amp=7\amp\text{or}\amp\amp x\amp=-2</mrow>
           </md>
@@ -589,44 +589,44 @@ grid=none]
       </solution>
     </example>
   </subsection>
-  <subsection xml:id="applications-of-quadratics-and-factoring" permid="rUU">
+  <subsection xml:id="applications-of-quadratics-and-factoring">
     <title>Applications</title>
-    <example permid="sTj">
+    <example>
       <title>Throwing a Ball</title>
-      <p permid="gco">
+      <p>
         A ball is thrown upward and follows a parabolic path modeled by the equation <m>h=-16t^2+80t+6</m>,
         where <m>h</m> represents the height of the ball,
         in feet, <m>t</m> seconds after it has been thrown.
         How long will it take for the ball to reach a height of <m>70</m> feet?
       </p>
-      <p permid="Mjx">
+      <p>
         To solve this problem,
         we start by replacing the <m>h</m> in the equation with <m>70</m>:
-        <me permid="nVi">
+        <me>
           70=-16t^2+80t+6
         </me>
         This gives us a quadratic equation to solve.
         The first step to solve this equation is to get the equation into standard form by subtracting <m>70</m> from both sides to get zero on one side.
         Then, we can factor the other side and apply the zero product property.
-        <md permid="flq">
+        <md>
           <mrow>70\subtractright{70}\amp=-16t^2+80t+6\subtractright{70}</mrow>
           <mrow>0\amp=-16t^2+80t-64</mrow>
           <mrow>0\amp=-16\left(t^2-5t+4\right)</mrow>
           <mrow>0\amp=-16(t-4)(t-1)</mrow>
         </md>
-        <md permid="Lsz">
+        <md>
           <mrow>t\amp=4\amp\text{or}\amp\amp t\amp=1</mrow>
         </md>
       </p>
-      <p permid="sqG">
+      <p>
         Thus, there are two times at which the ball will reach a height of <m>70</m> feet.
         The ball will reach a height of <m>70</m> feet <m>1</m> second after it has been thrown and again <m>4</m> seconds after it has been thrown.
       </p>
     </example>
-    <example permid="Zas">
+    <example>
       <title>Kicking it on Mars</title>
       <statement>
-        <p permid="YxP">
+        <p>
           Some time in the recent past, Filip traveled to Mars for a vacation with his kids, Henrik and Karina,
           who wanted to kick a soccer ball around in the comparatively reduced gravity.
           Karina stood at point <m>K</m> and kicked the ball over her dad standing at point <m>F</m> to Henrik standing at point <m>H</m>.
@@ -635,24 +635,24 @@ grid=none]
           where <m>x</m> is how far to the right the ball is from Filip.
           Note that distances to the left of Filip will be negative.
         </p>
-        <p permid="EEY">
-          <ol label="a." permid="jdY">
-            <li permid="doM">
-              <p permid="thE">
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 Find out how high the ball was above the ground when it passed over Filip's head.
               </p>
             </li>
-            <li permid="JvV">
-              <p permid="ZoN">
+            <li>
+              <p>
                 Find the distance from Karina to Henrik.
               </p>
             </li>
           </ol>
         </p>
         <sidebyside width="35%">
-        <figure permid="kMh">
+        <figure>
           <caption>A Soccer Kick on Mars</caption>
-          <image width="47%" permid="qup">
+          <image width="47%">
             <description>a coordinate plane with a dot for Karina, Filip and Henrik; There is an arc from Karina to Henrik that goes over Filip</description>
 <latex-image>
 \begin{tikzpicture}
@@ -674,15 +674,15 @@ ymax=35]
         </figure>
       </sidebyside>
       </statement>
-      <solution permid="Eci">
-        <p permid="bea">
-          <ol label="a." permid="WPG">
-            <li permid="pDe">
-              <p permid="FvW">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 The ball was neither left nor right of Filip when it went over him,
                 so <m>x=0</m>.
                 Plugging that value into our equation for <m>x</m>,
-                <md permid="rzI">
+                <md>
                   <mrow>h\amp=-0.01\left(0^2-70(0)-1800\right)</mrow>
                   <mrow>\amp=-0.01(-1800)</mrow>
                   <mrow>\amp=18</mrow>
@@ -690,13 +690,13 @@ ymax=35]
                 It seems that the soccer ball was <m>18</m> feet above the ground when it flew over Filip.
               </p>
             </li>
-            <li permid="VKn">
-              <p permid="lDf">
+            <li>
+              <p>
                 The distance from Karina to Henrik is the same as the distance from point <m>K</m> to point <m>H</m>.
                 Also, the distances from <m>K</m> to point <m>F</m> and from point <m>F</m> to point <m>H</m> are associated with the values of <m>x</m> in the given formula that will give a height of zero:
                 <m>h=-0.01\left(x^2-70x-1800\right)</m>.
                 So to find these values, set <m>h=0</m> and solve for <m>x</m>.
-                <md permid="XGR">
+                <md>
                   <mrow>0=-0.01\left(x^2-70x-1800\right)</mrow>
                   <intertext>Note that we can divide by <m>-0.01</m> on both sides of the equation to simplify.</intertext>
                   <mrow>0\amp=x^2-70x-1800</mrow>
@@ -711,15 +711,15 @@ ymax=35]
             </li>
           </ol>
         </p>
-        <sidebyside widths="37% 37%" margins="10%" permid="RvT">
-          <p permid="Hlj">
+        <sidebyside widths="37% 37%" margins="10%">
+          <p>
             It is worth noting that if this same kick,
             with same initial force at the same angle, took place on Earth,
             the ball would have traveled less than <m>30</m> feet from Karina before landing!
           </p>
-          <figure permid="nss">
+          <figure>
             <caption>A Soccer Kick on Mars and the Same Kick on Earth</caption>
-            <image width="47%" permid="WBy">
+            <image width="47%">
               <description>The previous coordinate plane with a scale added so that Filip is standing at the origin; the scale on the x-axis is 20 feet and the scale on the y-axis is 10 feet; there is an arc for the soccer ball on Earth that would travel 30 feet; the arc for the ball kicked on the moon would travel 110 feet</description>
 <latex-image>
 \begin{tikzpicture}
@@ -748,24 +748,24 @@ minor ytick={-10,0,...,40}]
         </sidebyside>
       </solution>
     </example>
-    <p permid="mfV">
+    <p>
       Next, we will look at an example involving right triangles.
       Right triangles have an important property called the
       <term>Pythagorean Theorem</term>.
     </p>
-    <theorem xml:id="theorem-pythagorean-theorem" permid="MMa">
+    <theorem xml:id="theorem-pythagorean-theorem">
       <title>The Pythagorean Theorem</title>
       <idx><h>Pythagorean theorem</h></idx>
-      <p permid="Kuk">
+      <p>
         For any right triangle,
         the lengths of the three sides have the following relationship:
         <m>a^2+b^2=c^2</m>.
         The sides <m>a</m> and <m>b</m> are called <term>legs</term>
         and the longest side <m>c</m> is called the <term>hypotenuse</term>.
       </p>
-      <figure permid="qBt">
+      <figure>
         <caption>In a right triangle, the length of its three sides satisfy the equation <m>a^2+b^2=c^2</m></caption>
-        <image width="25%" permid="CIH">
+        <image width="25%">
           <description>a right triangle with sides labeled a, b, and c; side c is the hypotenuse</description>
 <latex-image>
 \begin{tikzpicture}[x=0.5cm,y=0.5cm]
@@ -776,17 +776,17 @@ minor ytick={-10,0,...,40}]
         </image>
       </figure>
     </theorem>
-    <example permid="FhB">
+    <example>
       <title>Pythagorean Theorem Application</title>
       <statement>
-        <p permid="QTq">
+        <p>
           Justine wants to put a deck in the corner of her backyard in the shape of a right triangle,
           as shown below.
           The hypotenuse will be <m>17</m> feet long.
           The length of one side will be <m>7</m> feet shorter than the length of the other side.
           Find the lengths of the sides of the deck.
-          <sidebyside width="25%" permid="xaz">
-            <image permid="iPQ">
+          <sidebyside width="25%">
+            <image>
               <description>a right triangle with sides labeled x, x-7, and 17; side marked as 17 is the hypotenuse</description>
                <latex-image> \begin{tikzpicture}[x=0.5cm,y=0.5cm] \draw (0,0) -- node[pos=0.5,below]{$x-7$} (-3,0) --node[pos=0.5,left]{$x$} (-3,6) --node[pos=0.5,above,sloped]{$17$} cycle; \draw (-3,0.4) -- (-2.6,0.4) -- (-2.6,0); \end{tikzpicture} </latex-image>
             </image>
@@ -794,39 +794,39 @@ minor ytick={-10,0,...,40}]
         </p>
       </statement>
 <!-- <figure><image source="images/CNX_ElemAlg_Figure_07_06_010_img.jpg" width="60%"><description>A right triangle with the hypotenuse labeled as 17 feet and the legs marked as x and x-7.</description></image></figure></p></statement> -->
-      <solution permid="kjr">
-        <p permid="TzB">
+      <solution>
+        <p>
           Since her deck is a right triangle,
           we know the Pythagorean Theorem must hold.
           So, we can substitute <m>17</m> in for <m>c</m>,
           in the Pythagorean Theorem,
           and <m>x</m> and <m>x-7</m> in for the lengths of the two legs <m>a</m> and <m>b</m>.
           This will give us:
-          <me permid="Ucr">
+          <me>
             (\substitute{x})^2+(\substitute{x-7})^2=(\substitute{17})^2
           </me>
           Simplify both sides:
-          <md permid="DOa">
+          <md>
             <mrow>x^2+(x-7)(x-7)=289</mrow>
             <mrow>x^2+x^2-7x-7x+49=289</mrow>
             <mrow>2x^2-14x+49x=289</mrow>
           </md>
         </p>
-        <p permid="zGK">
+        <p>
           As you can see, this is a quadratic equation.
           So, we will solve this equation by factoring.
           First, we'll need to get it into standard form and then we can use the <xref ref="fact-zero-product-property" text="title"/>.
-          <md permid="jVj">
+          <md>
             <mrow>2x^2-14x-240=0</mrow>
             <mrow>2\left(x^2-7x-120\right)=0</mrow>
             <mrow>2(x-15)(x+8)=0</mrow>
           </md>
-          <md permid="Qcs">
+          <md>
             <mrow>x-15\amp=0\amp\amp\text{or}\amp x+8\amp=0</mrow>
             <mrow>x\amp=15\amp\amp\text{or}\amp x\amp=-8</mrow>
           </md>
         </p>
-        <p permid="fNT">
+        <p>
           Of course, a negative length doesn't make sense,
           so we'll ignore the negative solution.
           Thus, one side should be <m>15</m> feet long and the other side,
@@ -835,10 +835,10 @@ minor ytick={-10,0,...,40}]
         </p>
       </solution>
     </example>
-    <p permid="Sne">
+    <p>
       Try a similar exercise.
     </p>
-    <exercise permid="xDc">
+    <exercise>
       <webwork>
           <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
           <setup>
@@ -849,18 +849,18 @@ $answer2=8;
 </pg-code>
           </setup>
           <statement>
-            <p permid="PNX">
+            <p>
               A meditation garden is in the shape of a right triangle,
               with one leg that is <m>15</m> feet long.
               The length of the hypotenuse is <m>1</m> foot longer than twice the length of the other leg.
               Write and solve a quadratic equation by factoring to find the lengths of the hypotenuse and the other leg.
             </p>
-            <p permid="vVg">
+            <p>
               The length of the hypotenuse is <var name="$answer1" width="5"/> feet and the length of the other leg is <var name="$answer2" width="5"/> feet.
             </p>
           </statement>
-          <solution permid="IMb">
-            <p permid="LVc">
+          <solution>
+            <p>
               It may help to draw a picture,
               like the one in the previous example.
               Since the garden is a right triangle,
@@ -871,31 +871,31 @@ $answer2=8;
               Then, we can substitute <m>2x+1</m> in for <m>c</m>,
               which represents the length of the hypotenuse.
             </p>
-            <p permid="scl">
+            <p>
               Plugging these into the formula will give us:
-              <me permid="AjA">
+              <me>
                 (\substitute{15})^2+(\substitute{x})^2=(\substitute{2x+1})^2
               </me>
               Simplify both sides:
-              <md permid="wjB">
+              <md>
                 <mrow>225+x^2=(2x+1)(2x+1)</mrow>
                 <mrow>225+x^2=4x^2+4x+1</mrow>
               </md>
             </p>
-            <p permid="Yju">
+            <p>
               As you can see, this is a quadratic equation.
               So, we will solve this equation by factoring.
               First, we'll need to get it into standard form and then we can use the <xref ref="fact-zero-product-property" text="title"/>.
-              <md permid="cqK">
+              <md>
                 <mrow>0=3x^2+4x-224=0</mrow>
                 <mrow>0=(3x+28)(x-8)</mrow>
               </md>
-              <md permid="IxT">
+              <md>
                 <mrow>3x+28\amp=0\amp\amp\text{or}\amp x-8\amp=0</mrow>
                 <mrow>x\amp=-\frac{28}{3}\amp\amp\text{or}\amp x\amp=8</mrow>
               </md>
             </p>
-            <p permid="EqD">
+            <p>
               Of course, a negative length doesn't make sense,
               so we'll ignore the negative solution.
               Thus, the length of the other leg is <m>8</m> feet long,
@@ -941,10 +941,10 @@ xlabel={$t$}]
 <p> <ol> <li> <sidebyside widths="47% 47%" margins="0%"> <p>To find the maximum height of the ball, we need to find the highest point on the graph. Using technology, that point is about <m>(2.23,30.25)</m>. So, the maximum occurred about <quantity><mag>2.23</mag><unit base="second" /></quantity> after being kicked and it reached a maximum height of <quantity><mag>30.25</mag><unit base="foot" /></quantity> above the ground.</p> <figure> <caption>A Soccer Kick on Mars Part II Maximum</caption> <image width="47%"> <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ xmin=-1, xmax=6, ymin=-5, ymax=35, grid=both, xtick={1,2,...,5}, ytick={5,10,...,30}, minor xtick=, minor ytick=, xlabel={$t$}] \addplot[domain=0:4.465, color=firstcolor]  {-6.07*x^2+27.1*x} node[pos=0.65, above right] {$y=H(t)$}; \addplot[soliddot, color=fifthcolor] coordinates{(2.23,30.25)} node[above right] {$(2.23,30.25)$}; \end{axis} \end{tikzpicture}]]> </latex-image> </image> </figure> </sidebyside> </li> <li> <sidebyside widths="47% 47%" margins="0%"> <p>To solve for when <m>H(t)=20</m>, we need to look for any points on the graph where the <m>y</m>-value is <m>20</m>. Using technology to graph the function, we can see that the the curve has a <m>y</m>-value of <m>20</m> when <m>t\approx 0.93</m> and <m>t\approx 3.53</m>. This means that at both <quantity><mag>0.93</mag><unit base="second" /></quantity> and <quantity><mag>3.53</mag><unit base="second" /></quantity> after being kicked and the soccer ball was at a height of <quantity><mag>20</mag><unit base="foot" /></quantity>.</p> <figure> <caption>A Soccer Kick on Mars Part II at <quantity><mag>20</mag><unit base="foot" /></quantity></caption> <image width="47%"> <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ xmin=-1, xmax=6, ymin=-5, ymax=35, grid=both, xtick={1,2,...,5}, ytick={5,10,15,25,30}, minor xtick=, minor ytick=, xlabel={$t$}] \addplot[domain=0:4.465, color=firstcolor]  {-6.07*x^2+27.1*x} node[pos=0.55, above right] {$y=H(t)$}; \addplot[secondarycurve, domain=-1:6]  {20} node[pos=0.9, below] {$y=20$}; \addplot[soliddot, color=fifthcolor] coordinates{(0.933,20)} node[below right] {$(0.93,20)$}; \addplot[soliddot, color=fifthcolor] coordinates{(3.532,20)} node[above right] {$(3.35,20)$}; \end{axis} \end{tikzpicture}]]> </latex-image> </image> </figure> </sidebyside> </li> <li> <sidebyside widths="47% 47%" margins="0%"> <p>To solve for when <m>H(t)=0</m>, we need to look for any points on the graph where the <m>y</m>-value is <m>0</m>. Using technology to graph the function, we can see that the the curve has a <m>y</m>-value of <m>0</m> when <m>t=0</m> and <m>t\approx 4.47</m>. This means that at both <quantity><mag>0</mag><unit base="second" /></quantity> and <quantity><mag>4.47</mag><unit base="second" /></quantity> after being kicked and the soccer ball was at a height of <quantity><mag>0</mag><unit base="foot" /></quantity>. More importantly, these two times are indicating the times that the ball is on the ground just before being kicked and just as it lands.</p> <figure> <caption>A Soccer Kick on Mars Part II on the Ground</caption> <image width="47%"> <latex-image> <![CDATA[\begin{tikzpicture} \begin{axis}[ xmin=-1, xmax=6, ymin=-5, ymax=35, grid=both, xtick={1,2,...,5}, ytick={5,10,...,30}, minor xtick=, minor ytick={20}, xlabel={$t$}] \addplot[domain=0:4.465, color=firstcolor]  {-6.07*x^2+27.1*x} node[pos=0.55, above right] {$y=H(t)$}; \addplot[soliddot, color=fifthcolor] coordinates{(0,0)} node[above right] {$(0,0)$}; \addplot[soliddot, color=fifthcolor] coordinates{(4.465,0)} node[above left] {$(4.47,0)$}; \end{axis} \end{tikzpicture}]]> </latex-image> </image> </figure> </sidebyside> </li> </ol> </p>
 </solution>
 </example> -->
-    <example permid="loK">
+    <example>
       <title>An Area Application</title>
       <statement>
-        <p permid="dhI">
+        <p>
           Rajesh has a hot tub and he wants to build a deck of uniform width around it.
           The hot tub is
           <quantity>
@@ -961,16 +961,16 @@ xlabel={$t$}]
           How wide can he make the deck so that it will be covered by the roof?
         </p>
       </statement>
-      <solution permid="QqA">
-        <p permid="kxM">
+      <solution>
+        <p>
           We will define <m>x</m> to represent the width of the deck
           (in feet).
           Here is a diagram to help us understand the scenario.
         </p>
         <sidebyside width="35%">
-        <figure permid="Jaw">
+        <figure>
           <caption>Diagram for the Deck</caption>
-          <image width="47%" permid="OWZ">
+          <image width="47%">
             <description>A diagram with a 7x5 rectangle for the hot tub; there is a larger rectangle around the hot tub for the deck, which extends x feet on each side of the hot tub</description>
 <latex-image>
 \begin{tikzpicture}[x=0.7cm,y=0.7cm]
@@ -987,18 +987,18 @@ xlabel={$t$}]
           </image>
         </figure>
       </sidebyside>
-        <p permid="QEV">
+        <p>
           The overall length is <m>7+2x</m> feet,
           because Rajesh is adding <m>x</m> feet on each side.
           Similarly, the overall width is <m>5+2x</m> feet.
         </p>
-        <p permid="wMe">
+        <p>
           The formula for the area of a rectangle is <m>\text{area}=\text{length}\cdot\text{width}</m>.
           Since the total area of the roof is
           <quantity>
             <mag>99</mag><unit base="foot" exp="2"/>
           </quantity>, we can write and solve the equation:
-          <md permid="oFc">
+          <md>
             <mrow>(7+2x)(5+2x)=99</mrow>
             <mrow>4x^2+24x+35=99</mrow>
             <mrow>4x^2+24x+35\subtractright{99}\amp=99\subtractright{99}</mrow>
@@ -1006,12 +1006,12 @@ xlabel={$t$}]
             <mrow>4(x^2+6x-16)\amp=0</mrow>
             <mrow>4(x+8)(x-2)\amp=0</mrow>
           </md>
-          <md permid="UMl">
+          <md>
             <mrow>x+8\amp=0\amp\amp\text{or}\amp x-2\amp=0</mrow>
             <mrow>x\amp=-8\amp\amp\text{or}\amp x\amp=2</mrow>
           </md>
         </p>
-        <p permid="cTn">
+        <p>
           Since a length cannot be negative,
           we take <m>x=2</m> as the only applicable solution.
           Rajesh should make the deck
@@ -1023,10 +1023,10 @@ xlabel={$t$}]
       </solution>
     </example>
   </subsection>
-  <subsection permid="Ycd">
+  <subsection>
     <title>Graphing a Quadratic Equation</title>
-    <introduction permid="CmV">
-      <p permid="rln">
+    <introduction>
+      <p>
         Yet another application of solving quadratic equations is to graph equations of the form <m>y=ax^2+bx+c</m>.
         In <xref ref="chapter-graphing-lines" />,
         we learned how to find the <m>x</m>- and <m>y</m>-intercepts of a line.
@@ -1037,14 +1037,14 @@ xlabel={$t$}]
         which we will begin to explore in this section.
       </p>
     </introduction>
-    <p permid="yun">
+    <p>
       The graph of a quadratic equation of the form
       <m>y=ax^2+bx+c</m> has the shape of a <term>parabola</term>,
           <idx><h>quadratic</h><h>graph</h></idx>
           <idx><h>parabola</h></idx>
       like the one shown below.
     </p>
-    <p permid="eBw">
+    <p>
       Below is the graph of <m>y=x^2-3x+2</m>.
       This parabola opens upward, but some parabolas will open downward.
       Whether a parabola will open upward or downward depends on the sign of <m>a</m>,
@@ -1054,9 +1054,9 @@ xlabel={$t$}]
       then the parabola will open downward.
     </p>
     <sidebyside width="35%">
-    <figure xml:id="figure-basic-parabola" permid="jlp">
+    <figure xml:id="figure-basic-parabola">
       <caption>The graph of <m>y=x^2-3x+2</m> opens upward</caption>
-      <image permid="vei">
+      <image>
         <description>a u-shaped graph opening upward</description>
 <latex-image>
 \begin{tikzpicture}
@@ -1069,7 +1069,7 @@ xlabel={$t$}]
       </image>
     </figure>
   </sidebyside>
-    <p permid="KIF">
+    <p>
       To find the <m>x</m>- and <m>y</m>-intercepts of the graph of <m>y=ax^2+bx+c</m>,
       we follow the same steps as we do with linear equations.
       That is, to find the <m>y</m>-intercept,
@@ -1079,48 +1079,48 @@ xlabel={$t$}]
       The latter will involve solving a quadratic equation,
       which will call for your newly acquired solving-by-factoring skills.
     </p>
-    <p permid="qPO">
+    <p>
       Another key point that will help us graph our parabola is the minimum point,
       if it's opening upward, or the maximum point, if it's opening downward.
       This key pont is called the <term>vertex</term>
           <idx><h>vertex</h></idx>
       of the parabola.
     </p>
-    <fact xml:id="fact-vertex-1" permid="pYD">
-      <p permid="yPM">
+    <fact xml:id="fact-vertex-1">
+      <p>
         If we let <m>(h,k)</m> denote the coordinates of the vertex of a parabola whose equation is <m>y=ax^2+bx+c</m>,
         then <m>h=-\frac{b}{2a}</m>.
             <idx><h>quadratic</h><h>vertex</h></idx>
         and <m>k=ah^2+bh+c</m>.
       </p>
     </fact>
-    <p permid="WWX">
+    <p>
       Note that the formula for finding <m>k</m> is simply the result of plugging the value you find for <m>h</m> into the equation for the parabola,
       <m>y=ax^2+bx+c</m>.
       This will give you the <m>y</m>-coordinate of the vertex,
       which is denoted by <m>k</m>.
       So, there is no need to memorize that formula.
     </p>
-    <p permid="Deg">
+    <p>
       We can find additional points,
       to get a more accurate sketch of our parabola,
       by plugging additional values in for <m>x</m> and solving for <m>y</m>,
       much the same as we did to graph lines.
     </p>
-    <example permid="dKl">
+    <example>
       <title>Graphing a Parabola</title>
-      <p permid="JoR">
+      <p>
         Graph the equation <m>y=x^2-4x-12</m> by finding the vertex,
         the <m>x</m>- and <m>y</m>-intercepts,
         and any additional points necessary to make a nice parabola.
       </p>
-      <p permid="pwa">
+      <p>
         First, notice that <m>a=1</m>,
         which is more than zero, so we know the parabola will be opening upward.
         Next, we can use the formula,
         given in <xref ref="fact-vertex-1">Fact</xref> to find the vertex,
         where <m>a=1</m> and <m>b=-4</m>:
-        <md permid="ATu">
+        <md>
           <mrow>h=-\frac{b}{2a}</mrow>
           <mrow>h=-\frac{\substitute{-4}}{2(\substitute{1})}</mrow>
           <mrow>h=-\frac{-4}{2}</mrow>
@@ -1128,44 +1128,44 @@ xlabel={$t$}]
           <mrow>h=2</mrow>
         </md>
         Now, we can substitute <m>h=2</m> into the equation to find <m>k</m>:
-        <md permid="haD">
+        <md>
           <mrow>k=(\substitute{2})^2-4(\substitute{2})-12</mrow>
           <mrow>k=4-8-12</mrow>
           <mrow>k=-4-12</mrow>
           <mrow>k=-16</mrow>
         </md>
       </p>
-      <p permid="VDj">
+      <p>
         Thus, the vertex of the parabola is the point <m>(2,-16)</m>.
       </p>
-      <p permid="BKs">
+      <p>
         To find the <m>y</m>-intercept,
         we plug in <m>0</m> for <m>x</m> and solve for <m>y</m>:
-        <md permid="NhM">
+        <md>
           <mrow>y=(\substitute{0})^2-4(\substitute{0})-12</mrow>
           <mrow>y=0+0-12</mrow>
           <mrow>y=-12</mrow>
         </md>
         Hence, the <m>y</m>-intercept of the parabola is the point <m>(0,-12)</m>.
       </p>
-      <p permid="hRB">
+      <p>
         To find the <m>x</m>-intercept(s),
         we plug in <m>0</m> for <m>y</m> and solve for <m>x</m>,
         which we will do by factoring:
-        <md permid="toV">
+        <md>
           <mrow>\substitute{0}=x^2-4x-12</mrow>
           <mrow>0=(x-6)(x+2)</mrow>
         </md>
-        <md permid="Zwe">
+        <md>
           <mrow>x-6\amp=0\amp\amp\text{or}\amp x+2\amp=0</mrow>
           <mrow>x\amp=6\amp\amp\text{or}\amp x\amp=-2</mrow>
         </md>
       </p>
-      <p permid="NYK">
+      <p>
         Therefore, there are two <m>x</m>-intercepts:
         <m>(6,0)</m> and <m>(-2,0)</m>.
       </p>
-      <p permid="ufT">
+      <p>
         So far, we have points with <m>x</m>-coordinates of <m>-2</m>,
         <m>0</m>, <m>2</m>, and <m>6</m>.
         To make a full graph,
@@ -1174,7 +1174,7 @@ xlabel={$t$}]
         It's helpful to organize this work in a table,
         like we did when we graphed lines.
       </p>
-      <tabular valign="top" bottom="minor" permid="daE">
+      <tabular valign="top" bottom="minor">
         <col halign="right" right="minor"/>
         <col halign="right" right="minor"/>
         <col halign="center"/>
@@ -1199,12 +1199,12 @@ xlabel={$t$}]
           <cell><m>(4,-12)</m></cell>
         </row>
       </tabular>
-      <p permid="anc">
+      <p>
         Plotting all the points we found and connecting them with a smooth curve gives us the following graph:
         <sidebyside width="35%">
-        <figure permid="Gul">
+        <figure>
           <caption>The graph of <m>y=x^2-4x-12</m> opens upward</caption>
-          <image permid="blr">
+          <image>
             <description>a u-shaped graph opening upward</description>
              <latex-image> \begin{tikzpicture} \begin{axis}[xmin=-5,xmax=8,ymin=-20,ymax=5, xtick={-4,...,7}, minor xtick={-4,...,7}, ytick={-20,-15,...,5}, minor ytick={-20,-15,...,5}] \addplot+[domain=-2.5:6.5] {x^2-4*x-12}; \addplot[soliddot] coordinates {(-2,0)} node[left]{$(-2,0)$}; \addplot[soliddot] coordinates {(0,-12)} node[left]{$(0,-12)$}; \addplot[soliddot] coordinates {(2,-16)} node[below]{$(2,-16)$}; \addplot[soliddot] coordinates {(1,-15)} node[left]{$(1,-15)$}; \addplot[soliddot] coordinates {(3,-15)} node[right]{$(3,-15)$}; \addplot[soliddot] coordinates {(4,-12)} node[right]{$(4,-12)$}; \addplot[soliddot] coordinates {(6,0)} node[right]{$(6,0)$}; \end{axis} \end{tikzpicture}  </latex-image>
           </image>
@@ -1212,22 +1212,22 @@ xlabel={$t$}]
       </sidebyside>
       </p>
     </example>
-    <example permid="JRu">
+    <example>
       <statement>
-        <p permid="mBu">
+        <p>
           Graph the equation <m>y=-2x^2+8x-6</m> by finding the vertex,
           the <m>x</m>- and <m>y</m>-intercepts,
           and any additional points necessary to make a nice parabola.
         </p>
       </statement>
-      <solution permid="wxJ">
-        <p permid="phF">
+      <solution>
+        <p>
           First, notice that <m>a=-2</m>,
           which is less than zero, so we know the parabola will be opening downward.
           Next, we can use the formula,
           given in <xref ref="fact-vertex-1">Fact</xref> to find the vertex,
           where <m>a=-2</m> and <m>b=8</m>:
-          <md permid="FDn">
+          <md>
             <mrow>h=-\frac{b}{2a}</mrow>
             <mrow>h=-\frac{\substitute{8}}{2(\substitute{-2})}</mrow>
             <mrow>h=-\frac{8}{-4}</mrow>
@@ -1235,45 +1235,45 @@ xlabel={$t$}]
             <mrow>h=2</mrow>
           </md>
           Now, we can substitute <m>h=2</m> into the equation to find <m>k</m>:
-          <md permid="lKw">
+          <md>
             <mrow>k=-2(\substitute{2})^2+8(\substitute{2})-6</mrow>
             <mrow>k=-2(4)+16-6</mrow>
             <mrow>k=8-6</mrow>
             <mrow>k=2</mrow>
           </md>
         </p>
-        <p permid="VoO">
+        <p>
           Thus, the vertex of the parabola is the point <m>(2,2)</m>.
         </p>
-        <p permid="BvX">
+        <p>
           To find the <m>y</m>-intercept,
           we plug in <m>0</m> for <m>x</m> and solve for <m>y</m>:
-          <md permid="RRF">
+          <md>
             <mrow>y=-2(\substitute{0})^2+8(\substitute{0})-6</mrow>
             <mrow>y=0+0-6</mrow>
             <mrow>y=-6</mrow>
           </md>
           Hence, the <m>y</m>-intercept of the parabola is the point <m>(0,-6)</m>.
         </p>
-        <p permid="hDg">
+        <p>
           To find the <m>x</m>-intercept(s),
           we plug in <m>0</m> for <m>y</m> and solve for <m>x</m>,
           which we will do by factoring:
-          <md permid="xYO">
+          <md>
             <mrow>\substitute{0}=-2x^2+8x-6</mrow>
             <mrow>0=-2\left(x^2-4x+3\right)</mrow>
             <mrow>0=-2(x-3)(x-1)</mrow>
           </md>
-          <md permid="efX">
+          <md>
             <mrow>x-3\amp=0\amp\amp\text{or}\amp x-1\amp=0</mrow>
             <mrow>x\amp=3\amp\amp\text{or}\amp x\amp=1</mrow>
           </md>
         </p>
-        <p permid="NKp">
+        <p>
           Therefore, there are two <m>x</m>-intercepts:
           <m>(3,0)</m> and <m>(1,0)</m>.
         </p>
-        <p permid="tRy">
+        <p>
           So far, we have points with <m>x</m>-coordinates of <m>0</m>,
           <m>1</m>, <m>2</m>, and <m>3</m>.
           To make a full graph,
@@ -1282,7 +1282,7 @@ xlabel={$t$}]
           It's helpful to organize this work in a table,
           like we did when we graphed lines.
         </p>
-        <tabular valign="top" bottom="minor" permid="JhN">
+        <tabular valign="top" bottom="minor">
           <col halign="right" right="minor"/>
           <col halign="right" right="minor"/>
           <col halign="center"/>
@@ -1307,12 +1307,12 @@ xlabel={$t$}]
             <cell><m>(5,-16)</m></cell>
           </row>
         </tabular>
-        <p permid="ZYH">
+        <p>
           Plotting all the points we found and connecting them with a smooth curve gives us the following graph:
           <sidebyside width="35%">
-          <figure permid="GfQ">
+          <figure>
             <caption>The graph of <m>y=-2x^2+8x-6</m> opens downward</caption>
-            <image permid="HsA">
+            <image>
               <description>a u-shaped graph opening downward</description>
                <latex-image> \begin{tikzpicture} \begin{axis}[xmin=-4,xmax=7.5,ymin=-20,ymax=5, xtick={-4,...,7}, minor xtick={-3,...,7}, ytick={-20,-15,...,5}, minor ytick={-20,-15,...,5}] \addplot+[domain=-1.2:5.2] {-2*x^2+8*x-6}; \addplot[soliddot] coordinates {(-1,-16)} node[left]{$(-1,-16)$}; \addplot[soliddot] coordinates {(0,-6)} node[left]{$(0,-6)$}; \addplot[soliddot] coordinates {(1,0)} node[left]{$(1,0)$}; \addplot[soliddot] coordinates {(2,2)} node[above]{$(2,2)$}; \addplot[soliddot] coordinates {(3,0)} node[right]{$(3,0)$}; \addplot[soliddot] coordinates {(4,-6)} node[right]{$(4,-6)$}; \addplot[soliddot] coordinates {(5,-16)} node[right]{$(5,-16)$}; \end{axis} \end{tikzpicture}  </latex-image>
             </image>
@@ -1321,42 +1321,42 @@ xlabel={$t$}]
         </p>
       </solution>
     </example>
-    <exercise permid="iue">
+    <exercise>
       <webwork source="Contrib/PCC/BasicAlgebra/GraphingQuadratics/ParabolaIntercepts70.pg"/>
     </exercise>
-    <exercise permid="OBn">
+    <exercise>
       <statement>
-        <p permid="ccp">
+        <p>
           Graph the parabola with the equation
           <m>y=x^2-2x-15</m> by algebraically finding its vertex and intercepts and any other additional points that you may find helpful.
         </p>
       </statement>
-      <solution permid="oTk">
-        <p permid="mmZ">
+      <solution>
+        <p>
           Here is the answer to check.
           The algebra steps, however, are left to the reader.
         </p>
-        <sidebyside widths="37% 37%" margins="10%" permid="WfM">
+        <sidebyside widths="37% 37%" margins="10%">
           <stack>
-            <p permid="Sui">
+            <p>
               The parabola opens upward.
             </p>
-            <p permid="yBr">
+            <p>
               The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(5,0)</m>.
             </p>
-            <p permid="eIA">
+            <p>
               The <m>y</m>-intercept is <m>(0,-15)</m>.
             </p>
-            <p permid="KPJ">
+            <p>
               The vertex is <m>(1,-16)</m>.
             </p>
-            <p permid="qWS">
+            <p>
               An additional point that was found is <m>(2,-15)</m>.
             </p>
           </stack>
-          <figure permid="Xeb">
+          <figure>
             <caption/>
-            <image permid="nzJ">
+            <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1375,217 +1375,217 @@ ytick={-20,-10,0},minor ytick={-20,-15,...,5}]
       </solution>
     </exercise>
   </subsection>
-  <exercises permid="Ejm">
-    <exercisegroup cols="3" permid="kqv">
+  <exercises>
+    <exercisegroup cols="3">
       <title>Warmup and Review</title>
-      <exercise permid="pao">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring41.pg"/>
       </exercise>
-      <exercise permid="Vhx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring41.pg"/>
       </exercise>
-      <exercise permid="BoG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring175.pg"/>
       </exercise>
-      <exercise permid="hvP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring175.pg"/>
       </exercise>
-      <exercise permid="NCY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring195.pg"/>
       </exercise>
-      <exercise permid="tKh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring195.pg"/>
       </exercise>
-      <exercise permid="ZRq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring71.pg"/>
       </exercise>
-      <exercise permid="FYz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring71.pg"/>
       </exercise>
-      <exercise permid="mfI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring470.pg"/>
       </exercise>
-      <exercise permid="SmR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/Factoring/factoring470.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="3" permid="QxE">
+    <exercisegroup cols="3">
       <title>Solve Quadratic Equations by Factoring</title>
-      <exercise permid="yua">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad95.pg"/>
       </exercise>
-      <exercise permid="eBj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad95.pg"/>
       </exercise>
-      <exercise permid="KIs">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad235.pg"/>
       </exercise>
-      <exercise permid="qPB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad235.pg"/>
       </exercise>
-      <exercise permid="WWK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad240.pg"/>
       </exercise>
-      <exercise permid="DdT">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad240.pg"/>
       </exercise>
-      <exercise permid="jlc">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad245.pg"/>
       </exercise>
-      <exercise permid="Psl">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad245.pg"/>
       </exercise>
-      <exercise permid="vzu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad250.pg"/>
       </exercise>
-      <exercise permid="bGD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad250.pg"/>
       </exercise>
-      <exercise permid="HNM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad255.pg"/>
       </exercise>
-      <exercise permid="nUV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad255.pg"/>
       </exercise>
-      <exercise permid="Uce">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad260.pg"/>
       </exercise>
-      <exercise permid="Ajn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad260.pg"/>
       </exercise>
-      <exercise permid="gqw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad265.pg"/>
       </exercise>
-      <exercise permid="MxF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad265.pg"/>
       </exercise>
-      <exercise permid="sEO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad270.pg"/>
       </exercise>
-      <exercise permid="YLX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad270.pg"/>
       </exercise>
-      <exercise permid="ETg">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad275.pg"/>
       </exercise>
-      <exercise permid="lap">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad275.pg"/>
       </exercise>
-      <exercise permid="Rhy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad280.pg"/>
       </exercise>
-      <exercise permid="xoH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad280.pg"/>
       </exercise>
-      <exercise permid="dvQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad290.pg"/>
       </exercise>
-      <exercise permid="JCZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad290.pg"/>
       </exercise>
-      <exercise permid="pKi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad295.pg"/>
       </exercise>
-      <exercise permid="VRr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad295.pg"/>
       </exercise>
-      <exercise permid="BYA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad300.pg"/>
       </exercise>
-      <exercise permid="ifJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad300.pg"/>
       </exercise>
-      <exercise permid="OmS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad305.pg"/>
       </exercise>
-      <exercise permid="uub">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad305.pg"/>
       </exercise>
-      <exercise permid="aBk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad310.pg"/>
       </exercise>
-      <exercise permid="GIt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad310.pg"/>
       </exercise>
-      <exercise permid="mPC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad315.pg"/>
       </exercise>
-      <exercise permid="SWL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad315.pg"/>
       </exercise>
-      <exercise permid="zdU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad320.pg"/>
       </exercise>
-      <exercise permid="fld">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad320.pg"/>
       </exercise>
-      <exercise permid="Lsm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad325.pg"/>
       </exercise>
-      <exercise permid="rzv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad325.pg"/>
       </exercise>
-      <exercise permid="XGE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad330.pg"/>
       </exercise>
-      <exercise permid="DNN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad330.pg"/>
       </exercise>
-      <exercise permid="jUW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad335.pg"/>
       </exercise>
-      <exercise permid="Qcf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad335.pg"/>
       </exercise>
-      <exercise permid="wjo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad340.pg"/>
       </exercise>
-      <exercise permid="cqx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad340.pg"/>
       </exercise>
-      <exercise permid="IxG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad345.pg"/>
       </exercise>
-      <exercise permid="oEP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad345.pg"/>
       </exercise>
-      <exercise permid="ULY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad350.pg"/>
       </exercise>
-      <exercise permid="ATh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad350.pg"/>
       </exercise>
-      <exercise permid="haq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad355.pg"/>
       </exercise>
-      <exercise permid="Nhz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad355.pg"/>
       </exercise>
-      <exercise permid="toI">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad360.pg"/>
       </exercise>
-      <exercise permid="ZvR">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad360.pg"/>
       </exercise>
-      <exercise permid="FDa">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad365.pg"/>
       </exercise>
-      <exercise permid="lKj">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticEquations/solveQuad365.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="wEN">
+    <exercisegroup cols="2">
       <title>Quadratic Equation Application Problems</title>
-      <introduction permid="RRs">
+      <introduction>
         For the following application problems, write and solve a quadratic equation, by factoring, to answer the questions.
       </introduction>
-      <exercise permid="xYB">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticApplications/QuadraticEquationApplication10.pg"/>
       </exercise>
-      <exercise permid="efK">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticApplications/QuadraticEquationApplication10.pg"/>
       </exercise>
-      <exercise permid="KmT">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
             <setup>
@@ -1595,19 +1595,19 @@ $answer=6;
 </pg-code>
             </setup>
             <statement>
-              <p permid="Ijy">
+              <p>
                 A bomb exploded and the path of the debris from the explosion can be modeled by the equation <m>h=96t-16t^2</m>,
                 where <m>h</m> represents the height, in feet,
                 of the debris above the ground <m>t</m> seconds after the explosion.
                 After how many seconds will the debris hit the ground?
               </p>
-              <p permid="oqH">
+              <p>
                 The debris will hit the ground after <var name="$answer" width="10"/> seconds.
               </p>
             </statement>
         </webwork>
       </exercise>
-      <exercise permid="quc">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
             <setup>
@@ -1617,19 +1617,19 @@ $answer=5;
 </pg-code>
             </setup>
             <statement>
-              <p permid="UxQ">
+              <p>
                 A bomb exploded and the path of the debris from the explosion can be modeled by the equation <m>h=80t-16t^2</m>,
                 where <m>h</m> represents the height, in feet,
                 of the debris above the ground <m>t</m> seconds after the explosion.
                 After how many seconds will the debris hit the ground?
               </p>
-              <p permid="AEZ">
+              <p>
                 The debris will hit the ground after <var name="$answer" width="10"/> seconds.
               </p>
             </statement>
         </webwork>
       </exercise>
-      <exercise permid="WBl">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
             <setup>
@@ -1640,22 +1640,22 @@ $answer2=6;
 </pg-code>
             </setup>
             <statement>
-              <p permid="gMi">
+              <p>
                 A pennant is shaped like a right triangle,
                 with a hypothenuse that is <m>10</m> inches long.
                 The length of one side of the pennant is <m>2</m> inches longer than the length of the other leg.
                 Find the lengths of the two legs.
               </p>
-              <p permid="MTr">
+              <p>
                 The length of the longer leg is <var name="$answer1" width="10"/> inches.
               </p>
-              <p permid="taA">
+              <p>
                 The length of the shorter leg is <var name="$answer2" width="10"/> inches.
               </p>
             </statement>
         </webwork>
       </exercise>
-      <exercise permid="CIu">
+      <exercise>
         <webwork>
             <pg-macros><macro-file>contextNumeric.pl</macro-file></pg-macros>
             <setup>
@@ -1667,78 +1667,78 @@ $answer3=17;
 </pg-code>
             </setup>
             <statement>
-              <p permid="ZhJ">
+              <p>
                 A reflecting pool is shaped like a right triangle,
                 with one leg along the wall of a building.
                 The hypotenuse is <m>9</m> feet longer than the side along the building.
                 The third side is <m>7</m> feet longer than the side along the building.
                 Find the lengths of all three sides.
               </p>
-              <p permid="FoS">
+              <p>
                 The length of the shorter leg is <var name="$answer1" width="10"/> feet.
               </p>
-              <p permid="lwb">
+              <p>
                 The length of the longer leg is <var name="$answer2" width="10"/> feet.
               </p>
-              <p permid="RDk">
+              <p>
                 The length of the hypotenuse is <var name="$answer2" width="10"/> feet.
               </p>
             </statement>
         </webwork>
       </exercise>
-      <exercise permid="iPD">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg"/>
       </exercise>
-      <exercise permid="OWM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticApplications/QuadraticEquationApplication40.pg"/>
       </exercise>
-      <exercise permid="vdV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticApplications/QuadraticEquationApplication30.pg"/>
       </exercise>
-      <exercise permid="ble">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticApplications/QuadraticEquationApplication30.pg"/>
       </exercise>
-      <exercise permid="Hsn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg"/>
       </exercise>
-      <exercise permid="nzw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/QuadraticApplications/QuadraticEquationApplication60.pg"/>
       </exercise>
     </exercisegroup>
     
-    <exercisegroup cols="2" permid="cLW">
+    <exercisegroup cols="2">
       <title>Graphing Quadratic Equations</title>
-      <introduction permid="dar">
-        <p permid="Xsw">
+      <introduction>
+        <p>
           Graph each curve by algebraically determining its intercepts, vertex,
           and any other points necessary.
         </p>
       </introduction>
-      <exercise permid="JhA">
+      <exercise>
         <statement>
-          <p permid="xKt">
+          <p>
             <m>y=-x^2-x+20</m>
           </p>
         </statement>
-        <answer permid="Vat">
-          <sidebyside widths="37% 37%" margins="10%" permid="TGF">
+        <answer>
+          <sidebyside widths="37% 37%" margins="10%">
             <stack>
-              <p permid="PzC">
+              <p>
                 The parabola opens downward.
               </p>
-              <p permid="vGL">
+              <p>
                 The <m>x</m>-intercepts are <m>(-5,0)</m> and <m>(4,0)</m>.
               </p>
-              <p permid="bNU">
+              <p>
                 The <m>y</m>-intercept is <m>(0,20)</m>.
               </p>
-              <p permid="HVd">
+              <p>
                 The vertex is <m>(-0.5,20.25)</m>.
               </p>
             </stack>
-            <figure permid="ocm">
+            <figure>
               <caption/>
-              <image permid="TGS">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1756,31 +1756,31 @@ ytick={0,5,10,15,20},minor ytick={-5,-4,...,25}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="poJ">
+      <exercise>
         <statement>
-          <p permid="dRC">
+          <p>
             <m>y=-x^2+4x+21</m>
           </p>
         </statement>
-        <answer permid="BhC">
-          <sidebyside widths="37% 37%" margins="10%" permid="zNO">
+        <answer>
+          <sidebyside widths="37% 37%" margins="10%">
             <stack>
-              <p permid="Ujv">
+              <p>
                 The parabola opens downward.
               </p>
-              <p permid="AqE">
+              <p>
                 The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(7,0)</m>.
               </p>
-              <p permid="gxN">
+              <p>
                 The <m>y</m>-intercept is <m>(0,21)</m>.
               </p>
-              <p permid="MEW">
+              <p>
                 The vertex is <m>(2,25)</m>.
               </p>
             </stack>
-            <figure permid="sMf">
+            <figure>
               <caption/>
-              <image permid="zOb">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1798,31 +1798,31 @@ ytick={-5,0,...,25},minor ytick={-10,-9,...,30}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="VvS">
+      <exercise>
         <statement>
-          <p permid="JYL">
+          <p>
             <m>y=x^2+6x</m>
           </p>
         </statement>
-        <answer permid="hoL">
-          <sidebyside widths="37% 37%" margins="10%" permid="fUX">
+        <answer>
+          <sidebyside widths="37% 37%" margins="10%">
             <stack>
-              <p permid="YTo">
+              <p>
                 The parabola opens upward.
               </p>
-              <p permid="Fax">
+              <p>
                 The <m>x</m>-intercepts are <m>(-6,0)</m> and <m>(0,0)</m>.
               </p>
-              <p permid="lhG">
+              <p>
                 The <m>y</m>-intercept is <m>(0,0)</m>.
               </p>
-              <p permid="RoP">
+              <p>
                 The vertex is <m>(-3,-9)</m>.
               </p>
             </stack>
-            <figure permid="xvY">
+            <figure>
               <caption/>
-              <image permid="fVk">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1840,31 +1840,31 @@ ytick={-5,0,5},minor ytick={-10,-9,...,10}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="BDb">
+      <exercise>
         <statement>
-          <p permid="qfU">
+          <p>
             <m>y=x^2-8x</m>
           </p>
         </statement>
-        <answer permid="NvU">
-          <sidebyside widths="37% 37%" margins="10%" permid="Mcg">
+        <answer>
+          <sidebyside widths="37% 37%" margins="10%">
             <stack>
-              <p permid="dDh">
+              <p>
                 The parabola opens upward.
               </p>
-              <p permid="JKq">
+              <p>
                 The <m>x</m>-intercepts are <m>(0,0)</m> and <m>(8,0)</m>.
               </p>
-              <p permid="pRz">
+              <p>
                 The <m>y</m>-intercept is <m>(0,0)</m>.
               </p>
-              <p permid="VYI">
+              <p>
                 The vertex is <m>(4,-16)</m>.
               </p>
             </stack>
-            <figure permid="CfR">
+            <figure>
               <caption/>
-              <image permid="Mct">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1882,31 +1882,31 @@ ytick={-20,-15,-10,-5,0},minor ytick={-25,-24,...,5}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="hKk">
+      <exercise>
         <statement>
-          <p permid="Wnd">
+          <p>
             <m>y=x^2-8x+16</m>
           </p>
         </statement>
-        <answer permid="tDd">
-          <sidebyside widths="37% 37%" margins="10%" permid="sjp">
+        <answer>
+          <sidebyside widths="37% 37%" margins="10%">
             <stack>
-              <p permid="ina">
+              <p>
                 The parabola opens upward.
               </p>
-              <p permid="Ouj">
+              <p>
                 The <m>x</m>-intercept is <m>(4,0)</m>.
               </p>
-              <p permid="uBs">
+              <p>
                 The <m>y</m>-intercept is <m>(0,16)</m>.
               </p>
-              <p permid="aIB">
+              <p>
                 The vertex is <m>(4,0)</m>.
               </p>
             </stack>
-            <figure permid="GPK">
+            <figure>
               <caption/>
-              <image permid="sjC">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1924,31 +1924,31 @@ ytick={0,5,10,15},minor ytick={-5,-4,...,19}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="NRt">
+      <exercise>
         <statement>
-          <p permid="iBv">
+          <p>
             <m>y=x^2+6x+9</m>
           </p>
         </statement>
-        <answer permid="ZKm">
-          <sidebyside widths="37% 37%" margins="10%" permid="Yqy">
+        <answer>
+          <sidebyside widths="37% 37%" margins="10%">
             <stack>
-              <p permid="mWT">
+              <p>
                 The parabola opens upward.
               </p>
-              <p permid="Tec">
+              <p>
                 The <m>x</m>-intercept is <m>(-3,0)</m>.
               </p>
-              <p permid="zll">
+              <p>
                 The <m>y</m>-intercept is <m>(0,9)</m>.
               </p>
-              <p permid="fsu">
+              <p>
                 The vertex is <m>(-3,0)</m>.
               </p>
             </stack>
-            <figure permid="LzD">
+            <figure>
               <caption/>
-              <image permid="YqL">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -1966,31 +1966,31 @@ ytick={0,5,10,15},minor ytick={-5,-4,...,20}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="tYC">
+      <exercise>
         <statement>
-          <p permid="OIE">
+          <p>
             <m>y=x^2-4</m>
           </p>
         </statement>
-        <answer permid="FRv">
-          <sidebyside widths="47% 47%" margins="0%" permid="ExH">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
             <stack>
-              <p permid="rGM">
+              <p>
                 The parabola opens upward.
               </p>
-              <p permid="XNV">
+              <p>
                 The <m>x</m>-intercepts are <m>(-2,0)</m> and <m>(2,0)</m>.
               </p>
-              <p permid="DVe">
+              <p>
                 The <m>y</m>-intercept is <m>(0,-4)</m>.
               </p>
-              <p permid="kcn">
+              <p>
                 The vertex is <m>(0,-4)</m>.
               </p>
             </stack>
-            <figure permid="Qjw">
+            <figure>
               <caption/>
-              <image permid="ExU">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -2006,31 +2006,31 @@ ytick={0,5,10,15},minor ytick={-5,-4,...,20}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="afL">
+      <exercise>
         <statement>
-          <p permid="uPN">
+          <p>
             <m>y=x^2-9</m>
           </p>
         </statement>
-        <answer permid="lYE">
-          <sidebyside widths="47% 47%" margins="0%" permid="kEQ">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
             <stack>
-              <p permid="wqF">
+              <p>
                 The parabola opens upward.
               </p>
-              <p permid="cxO">
+              <p>
                 The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(3,0)</m>.
               </p>
-              <p permid="IEX">
+              <p>
                 The <m>y</m>-intercept is <m>(0,-9)</m>.
               </p>
-              <p permid="oMg">
+              <p>
                 The vertex is <m>(0,-9)</m>.
               </p>
             </stack>
-            <figure permid="UTp">
+            <figure>
               <caption/>
-              <image permid="kFd">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -2048,31 +2048,31 @@ ytick={-5,0,5},minor ytick={-10,-9,...,10}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="GmU">
+      <exercise>
         <statement>
-          <p permid="aWW">
+          <p>
             <m>y=2x^2-4x-30</m>
           </p>
         </statement>
-        <answer permid="SfN">
-          <sidebyside widths="47% 47%" margins="0%" permid="QLZ">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
             <stack>
-              <p permid="Bay">
+              <p>
                 The parabola opens upward.
               </p>
-              <p permid="hhH">
+              <p>
                 The <m>x</m>-intercepts are <m>(-3,0)</m> and <m>(5,0)</m>.
               </p>
-              <p permid="NoQ">
+              <p>
                 The <m>y</m>-intercept is <m>(0,-30)</m>.
               </p>
-              <p permid="tvZ">
+              <p>
                 The vertex is <m>(1,-32)</m>.
               </p>
             </stack>
-            <figure permid="ZDi">
+            <figure>
               <caption/>
-              <image permid="QMm">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -2090,31 +2090,31 @@ ytick={-35,-20,...,5},minor ytick={-40,-39,...,10}]
           </sidebyside>
         </answer>
       </exercise>
-      <exercise permid="mud">
+      <exercise>
         <statement>
-          <p permid="Hef">
+          <p>
             <m>y=3x^2+21x+36</m>
           </p>
         </statement>
-        <answer permid="ymW">
-          <sidebyside widths="47% 47%" margins="0%" permid="wTi">
+        <answer>
+          <sidebyside widths="47% 47%" margins="0%">
             <stack>
-              <p permid="FKr">
+              <p>
                 The parabola opens upward.
               </p>
-              <p permid="lRA">
+              <p>
                 The <m>x</m>-intercepts are <m>(-4,0)</m> and <m>(-3,0)</m>.
               </p>
-              <p permid="RYJ">
+              <p>
                 The <m>y</m>-intercept is <m>(0,36)</m>.
               </p>
-              <p permid="yfS">
+              <p>
                 The vertex is <m>(-3.5,-0.75)</m>.
               </p>
             </stack>
-            <figure permid="enb">
+            <figure>
               <caption/>
-              <image permid="wTv">
+              <image>
 <latex-image>
 
 \begin{tikzpicture}
@@ -2133,9 +2133,9 @@ ytick={-5,0,...,35},minor ytick={-10,-9,...,40}]
         </answer>
       </exercise>
     </exercisegroup>
-    <exercisegroup permid="ITf">
+    <exercisegroup>
       <title>Challenge</title>
-      <exercise permid="SBm">
+      <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
             <setup>
@@ -2164,18 +2164,18 @@ return ($correct == $student);
 </pg-code>
             </setup>
             <statement>
-              <p permid="nlo">
+              <p>
                 Give an example of a cubic equation that has three solutions:
                 one solution is <m>x = <var name="$a"/></m>,
                 the second solution is <m>x= <var name="$b"/></m>,
                 and the third solution is <m> x = \frac{2}{3} </m>.
               </p>
-              <p permid="Tsx">
+              <p>
                 <var name="$solution" evaluator="$evaluator" width="30"/>
               </p>
             </statement>
-            <solution permid="euf">
-              <p permid="Dlk">
+            <solution>
+              <p>
                 I will first write a cubic equation in factored form:
                 <m> (x-a)(x-b)(x-c) = 0 </m> where
                 <m>a,
@@ -2185,7 +2185,7 @@ return ($correct == $student);
             </solution>
         </webwork>
       </exercise>
-      <exercise permid="yIv">
+      <exercise>
 <!-- Kara's challenge problem -->
         <webwork>
             <setup>
@@ -2201,15 +2201,15 @@ $answer = Formula("{0, 1/$sqrt, -1/$sqrt}");
 </pg-code>
             </setup>
             <statement>
-              <p permid="zzG">
+              <p>
                 Solve for <m>x</m> in the equation <m><var name="$c"/>x^{<var name="$exp"/>}-<var name="$a"/>x^{<var name="$smallexp"/>} = 0 </m>.
               </p>
-              <p permid="fGP">
+              <p>
                 <var name="$answer" width="20"/>
               </p>
             </statement>
-            <solution permid="KBo">
-              <p permid="jst">
+            <solution>
+              <p>
                 To solve <m><var name="$c"/>x^{<var name="$exp"/>}-<var name="$a"/>x^{<var name="$smallexp"/>} = 0 </m>,
                 we can factor out the GCF, <m><var name="$a"/>x^{<var name="$smallexp"/>}</m>.
                 Thus, the equation becomes <m><var name="$a"/>x^{<var name="$smallexp"/>}(<var name="$b"/>x^{2}-1)=0</m>.
@@ -2220,8 +2220,8 @@ $answer = Formula("{0, 1/$sqrt, -1/$sqrt}");
       </exercise>
     </exercisegroup>
   </exercises>
-  <conclusion permid="uIw">
-    <p permid="DzF">
+  <conclusion>
+    <p>
       Some of <xref ref="applications-of-quadratics-and-factoring" /> is adapted from
       <pubtitle>Quadratic Equations</pubtitle><fn>
       <url href="https://cnx.org/contents/8xG8nd5x@1.1:P3r26N1f@1/Quadratic-Equations"/>

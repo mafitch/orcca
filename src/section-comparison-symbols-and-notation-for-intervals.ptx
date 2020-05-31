@@ -6,10 +6,10 @@
 <!-- This file is part of Open Resources for Community College Algebra    -->
 <!-- (ORCCA).                                                             -->
 <!-- *********************************************************************-->
-<section xml:id="section-comparison-symbols-and-notation-for-intervals" permid="VkS">
+<section xml:id="section-comparison-symbols-and-notation-for-intervals">
   <title>Comparison Symbols and Notation for Intervals</title>
-  <introduction permid="Lai">
-    <p permid="zKf">
+  <introduction>
+    <p>
       As you know, <m>8</m> is larger than <m>3</m>;
       that's a specific comparison between two numbers.
       We can also make a comparison between two less specific numbers,
@@ -17,7 +17,7 @@
       That makes a comparison using unspecified amounts.
       This section will go over the mathematical shorthand notation for making these kinds of comparisons.
     </p>
-    <p permid="fRo">
+    <p>
       In Oregon, only people who are <m>18</m> years old or older can vote in statewide elections.<fn>
       Some other states like Washington allow 17-year-olds to vote in primary elections provided they will be 18 by the general election.
       </fn> Does that seem like a statement about the number <m>18</m>?
@@ -27,16 +27,16 @@
       This section will also get into the mathematical notation for large collections of numbers like this.
     </p>
   </introduction>
-  <subsection permid="Bsb">
+  <subsection>
     <title>Comparison Symbols</title>
-    <p permid="JNL">
+    <p>
       In everyday language you can say something like
       <q><m>8</m> is larger than <m>3</m>.</q>
       In mathematical writing, it's not convenient to write that out in English.
       Instead the symbol
       <q><m>\gt</m></q>
       has been adopted, and it's used like this:
-      <me permid="Thx">
+      <me>
         8\gt3
       </me>
       and read out loud as
@@ -46,7 +46,7 @@
       is called the <term>greater-than symbol.</term>
           <idx><h>greater-than symbol</h></idx>
     </p>
-    <exercise permid="MfB">
+    <exercise>
       <webwork>
       <setup>
 <pg-code>
@@ -64,39 +64,39 @@ $overage=OneOf(Compute("age&gt;20"),Compute("a&gt;20"),Compute("x&gt;20"));
 </pg-code>
       </setup>
       <statement>
-        <p permid="sfG">
-          <ol label="a." permid="bYt">
-            <li permid="ZdN">
-              <p permid="KEJ">
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 Use mathematical notation to write
                 <q><m>11.5</m> is greater than <m>4.2</m>.</q>
               </p>
-              <p permid="qLS">
+              <p>
                 <var name="'11.5&gt;4.2'" width="15"/>
               </p>
             </li>
-            <li permid="FkW">
-              <p permid="WTb">
+            <li>
+              <p>
                 Use mathematical notation to write
                 <q>age is greater than <m>20</m>.</q>
               </p>
-              <p permid="Dak">
+              <p>
                 <var name="$overage" width="15"/>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <solution permid="rhr">
-        <p permid="lGA">
-          <ol label="a." permid="PKb">
-            <li permid="lsf">
-              <p permid="jht">
+      <solution>
+        <p>
+          <ol label="a.">
+            <li>
+              <p>
                 <m>11.5\gt4.2</m>
               </p>
             </li>
-            <li permid="Rzo">
-              <p permid="PoC">
+            <li>
+              <p>
                 We can just write the word <c>age</c> to represent age,
                 and write <m>\text{age}\gt20</m>.
                 Or we could use an abbreviation like <m>a</m> for age,
@@ -110,8 +110,8 @@ $overage=OneOf(Compute("age&gt;20"),Compute("a&gt;20"),Compute("x&gt;20"));
       </solution>
       </webwork>
     </exercise>
-    <remark permid="HvI">
-      <p permid="nvN">
+    <remark>
+      <p>
         At some point in history, someone felt that <m>\gt</m> was a good symbol for
         <q>is greater than.</q>
         In
@@ -120,9 +120,9 @@ $overage=OneOf(Compute("age&gt;20"),Compute("a&gt;20"),Compute("x&gt;20"));
         and the small pointed side is with the smaller of the two numbers.
       </p>
     </remark>
-    <aside permid="fYs">
+    <aside>
       <title>Alligator Jaws</title>
-      <p permid="LYx">
+      <p>
         Another visual was of thinking about the greater-than symbol
         <q><m>\gt</m></q>
         (and, as we will see later, the less-than symbol
@@ -132,7 +132,7 @@ $overage=OneOf(Compute("age&gt;20"),Compute("a&gt;20"),Compute("x&gt;20"));
         as a way of remembering which direction to write the symbol.
       </p>
     </aside>
-    <p permid="pUU">
+    <p>
       We have to be careful when negative numbers are part of the comparison though.
       Is <m>-8</m> larger or smaller than <m>-3</m>?
       In some sense <m>-8</m> is larger,
@@ -142,9 +142,9 @@ $overage=OneOf(Compute("age&gt;20"),Compute("a&gt;20"),Compute("x&gt;20"));
       This symbol is meant to tell you which number is farther to the right on a number line.
       And if that's how it goes, then <m>-3\gt-8</m>.
     </p>
-    <figure permid="OxE">
+    <figure>
       <caption>How the <m>\gt</m> symbol works.</caption>
-      <image width="50%" permid="FNM">
+      <image width="50%">
         <description>a number line with marks at -8, -3, and 8; text indicates the numbers to the left are lesser numbers, and numbers to the right are greater numbers; text indicates that -3 &gt; -8 and 8 &gt; -3</description>
 <latex-image>
 \begin{tikzpicture}
@@ -167,7 +167,7 @@ xtick={-8,-3,3,8},
 </latex-image>
       </image>
     </figure>
-    <exercise permid="smK">
+    <exercise>
       <webwork seed="1">
           <setup>
 <pg-code>
@@ -202,34 +202,34 @@ for my$i(1,3){$numberline-&gt;lb(new Label($b[$i],0.4,"$b[$i]",'blue','center','
 </pg-code>
           </setup>
           <statement>
-            <p permid="YmP">
+            <p>
               Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
               For example,
               your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
             </p>
-            <p permid="EtY">
-              <me permid="zoG">
+            <p>
+              <me>
                 <var name="$as"/>
               </me>
             </p>
-            <p permid="kBh">
+            <p>
               <var name="$comparison" width="30"/>
             </p>
           </statement>
-          <solution permid="XoA">
-            <p permid="RNJ">
+          <solution>
+            <p>
               We can order these numbers by placing these numbers on a number line.
             </p>
-            <sidebyside margins="0%" widths="40%" permid="TKa">
-              <image permid="lUV" pg-name="$numberline"/>
+            <sidebyside margins="0%" widths="40%">
+              <image pg-name="$numberline"/>
             </sidebyside>
-            <p permid="xUS">
+            <p>
               And so we see the answer is <m><var name="$comparison"/></m>.
             </p>
           </solution>
       </webwork>
     </exercise>
-    <exercise permid="YtT">
+    <exercise>
       <webwork>
       <setup>
 <pg-code>
@@ -272,75 +272,75 @@ $refreshCachedImages=1;
 </pg-code>
       </setup>
       <statement>
-        <p permid="QIq">
+        <p>
           Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
           For example,
           your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
         </p>
-        <p permid="wPz">
-          <me permid="fvP">
+        <p>
+          <me>
             <var name="$as"/>
           </me>
         </p>
-        <p permid="cWI">
+        <p>
           <var name="$comparison" width="30"/>
         </p>
       </statement>
-      <solution permid="DvJ">
-        <p permid="ecb">
+      <solution>
+        <p>
           We can order these numbers by placing these numbers on a number line.
           Knowing or computing their decimals helps with this.
         </p>
-        <sidebyside margins="0%" widths="40%" permid="zRj">
+        <sidebyside margins="0%" widths="40%">
           <image pg-name="$numberline"/>
         </sidebyside>
-        <p permid="Kjk">
+        <p>
           And so we see the answer is <m><var name="$comparison"/></m>.
         </p>
       </solution>
       </webwork>
     </exercise>
-    <p permid="Wcd">
+    <p>
       The greater-than symbol has a close relative,
       the <term>greater-than-or-equal-to symbol</term>,
       <q><m>\geq</m>.</q>
           <idx><h>greater-than-or-equal-to symbol</h></idx>
       It means just like it sounds: the first number is either greater than, or equal to, the second number.
       These are all true statements:
-      <md permid="Nsl">
+      <md>
         <mrow>8\amp\geq3\amp3\amp\geq-8\amp3\amp\geq3</mrow>
       </md>,
       but one of these three statements is false:
-      <md permid="tzu">
+      <md>
         <mrow>8\amp\gt3\amp3\amp\gt-8\amp3\amp\stackrel{\text{no}}{\gt}3</mrow>
       </md>
     </p>
-    <remark permid="nCR">
-      <p permid="TCW">
+    <remark>
+      <p>
         While it may not be that useful that we can write <m>3\geq3</m>,
         this symbol is quite useful when specific numbers aren't explicitly used on at least one side,
         like in these examples:
-        <md permid="ZGD">
+        <md>
           <mrow>(\text{hourly pay rate})\amp\geq(\text{minimum wage})</mrow>
           <mrow>(\text{age of a voter})\amp\geq18</mrow>
         </md>
       </p>
     </remark>
-    <p permid="Cjm">
+    <p>
       Sometimes you want to emphasize that one number is <em>less than</em>
       another number instead of emphasizing which number is greater.
       To do this, we have symbols that are reversed from <m>\gt</m> and <m>\geq</m>.
       The symbol
       <q><m>\lt</m></q>
       is the <term>less-than symbol</term> and it's used like this:
-      <me permid="LCY">
+      <me>
         3\lt8
       </me>
       and read out loud as
       <q><m>3</m> is less than <m>8</m>.</q>
           <idx><h>less-than symbol</h></idx>
     </p>
-    <p permid="iqv">
+    <p>
       <xref ref="table-comparison-symbols" />
       gives the complete list of all six comparison symbols.
       Note that we've only discussed three in this section so far,
@@ -349,9 +349,9 @@ $refreshCachedImages=1;
       which means
       <q>not equal to.</q>
     </p>
-    <table xml:id="table-comparison-symbols" permid="qEO">
+    <table xml:id="table-comparison-symbols">
       <title>Comparison Symbols</title>
-      <tabular valign="bottom" permid="WLX">
+      <tabular valign="bottom">
         <row bottom="medium">
           <cell>Symbol</cell>
           <cell>Means</cell>
@@ -402,11 +402,11 @@ $refreshCachedImages=1;
       </tabular>
     </table>
   </subsection>
-  <subsection permid="hzk">
+  <subsection>
     <title>Set-Builder and Interval Notation</title>
-    <p permid="uEN">
+    <p>
       If you say
-      <me permid="rKh">
+      <me>
         (\text{age of a voter})\geq18
       </me>
       and have a particular voter in mind,
@@ -418,9 +418,9 @@ $refreshCachedImages=1;
       and then to visualize the possibilities with a number line,
       as in <xref ref="figure-voters-age" />.
     </p>
-    <figure xml:id="figure-voters-age" permid="nao">
+    <figure xml:id="figure-voters-age">
       <caption><m>(\text{age of a voter})\geq18</m></caption>
-      <image width="50%" permid="Phy">
+      <image width="50%">
         <description>a number line, where the number 18 is marked; the portion of the number line to the right of 18 has a thick line overlaying it with an arrow pointing to the right; at 18, there is a left bracket character; text indicates the right area represents possibilities for age</description>
 <latex-image>
 \begin{tikzpicture}
@@ -436,13 +436,13 @@ minor xtick={-5,-4,...,35},
 </latex-image>
       </image>
     </figure>
-    <p permid="aLW">
+    <p>
       The shaded portion of the number line in <xref ref="figure-voters-age" />
       is a mathematical <term>interval</term>.
       For now, that just means a collection of certain numbers.
       In this case, it's all the numbers <m>18</m> and above.
     </p>
-    <p permid="GTf">
+    <p>
       The number line in <xref ref="figure-voters-age" /> is a <em>graphical</em>
       representation of a collection of certain numbers.
       We have two notations, set-builder notation and interval notation,
@@ -450,28 +450,28 @@ minor xtick={-5,-4,...,35},
     </p>
 <!--         <p>It's one thing to say <m>(\text{age of a voter})\geq18</m>, and another thing to discuss <em>all the shaded numbers</em> in the interval in <xref ref="figure-voters-age" />. In mathematics, <me>(\text{age of a voter})\geq18</me> is saying that there is <em>one</em> age under consideration and all we know is that it's <em>18</em> or larger. It's subtle, but this is not the same thing as the <em>collection</em> of <em>all</em> numbers that are <m>18</m> or larger. Mathematics has two common ways to write down these kinds of collections.</p>
 -->
-    <definition xml:id="definition-set-builder-notation" permid="EBc">
+    <definition xml:id="definition-set-builder-notation">
       <title>Set-Builder Notation</title>
       <idx><h>set-builder notation</h></idx>
       <statement>
-        <p permid="WxC">
+        <p>
           Set-builder notation attempts to directly say the condition that numbers in the interval satisfy.
           In general, we write set-builder notation like:
-          <me permid="XRq">
+          <me>
             \left\{x\mid\text{condition on }x\right\}
           </me>
           and read it out loud as
           <q>the set of all <m>x</m> such that <ellipsis/>.</q>
           For example,
-          <me permid="DYz">
+          <me>
             \left\{x\mid x\geq18\right\}
           </me>
           is read out loud as
           <q>the set of all <m>x</m> such that <m>x</m> is greater than or equal to <m>18</m>.</q>
           The breakdown is as follows.
         </p>
-        <sidebyside margins="0%" permid="wWD">
-          <tabular permid="CTg">
+        <sidebyside margins="0%">
+          <tabular>
             <row>
               <cell><m>\highlight{\{}\lowlight{x\mid x\geq18}\highlight{\}}</m></cell>
               <cell>the set of</cell>
@@ -493,11 +493,11 @@ minor xtick={-5,-4,...,35},
       </statement>
     </definition>
 <!--TODO: Maybe. Add a checkpoint that asks a student to write the meaning of, for example, {y|y<4}. Might need to be MC or partial fill in the blank... -->
-    <definition xml:id="definition-interval-notation" permid="kIl">
+    <definition xml:id="definition-interval-notation">
       <title>Interval Notation</title>
       <idx><h>interval notation</h></idx>
       <statement>
-        <p permid="CEL">
+        <p>
           Interval notation represents a collection of numbers by only stating where the collection starts and stops,
           using parentheses and square brackets to show if the end values are included
           (or not).
@@ -507,7 +507,7 @@ minor xtick={-5,-4,...,35},
           so we use the <m>\infty</m> symbol
           (meaning "infinity").
           This particular interval is denoted:
-          <me permid="kfI">
+          <me>
             [18,\infty)
           </me>
           Why use
@@ -521,15 +521,15 @@ minor xtick={-5,-4,...,35},
           And how could it be, since <m>\infty</m> is not even a number?
           </fn>
         </p>
-        <p permid="iLU">
+        <p>
           In general there are four types of infinite intervals.
           Take note of the different uses of round parentheses and square brackets.
         </p>
-        <sbsgroup widths="47% 47%" permid="QPu">
-          <sidebyside margins="0%" permid="ddM">
-            <figure permid="OTd">
+        <sbsgroup widths="47% 47%">
+          <sidebyside margins="0%">
+            <figure>
               <caption>An <term>open, infinite</term> interval denoted by <m>(a,\infty)</m> means all numbers <m>a</m> or larger, <em>not</em> including <m>a</m>.</caption>
-              <image permid="Sce">
+              <image>
                 <description>a number line with a mark at a; the portion of the number line from a to the right has a thick line overlaying it; there is a left parenthesis at a and an arrow on the right pointing right</description>
 <latex-image>
 \begin{tikzpicture}
@@ -545,9 +545,9 @@ after end axis/.code={},
 </latex-image>
               </image>
             </figure>
-            <figure permid="vam">
+            <figure>
               <caption>A <term>closed, infinite</term> interval denoted by <m>[a,\infty)</m> means all numbers <m>a</m> or larger, <em>including</em> <m>a</m>.</caption>
-              <image permid="yjn">
+              <image>
                 <description>a number line with a mark at a; the portion of the number line from a to the right has a thick line overlaying it; there is a left bracket at a and an arrow on the right pointing right</description>
 <latex-image>
 \begin{tikzpicture}
@@ -564,10 +564,10 @@ after end axis/.code={},
               </image>
             </figure>
           </sidebyside>
-          <sidebyside margins="0%" permid="JkV">
-            <figure permid="bhv">
+          <sidebyside margins="0%">
+            <figure>
               <caption>An <term>open, infinite</term> interval denoted by <m>(-\infty,a)</m> means all numbers <m>a</m> or smaller, <em>not</em> including <m>a</m>.</caption>
-              <image permid="eqw">
+              <image>
                 <description>a number line with a mark at a; the portion of the number line from a to the left has a thick line overlaying it; there is a right parenthesis at a and an arrow on the left pointing left</description>
 <latex-image>
 \begin{tikzpicture}
@@ -583,9 +583,9 @@ after end axis/.code={},
 </latex-image>
               </image>
             </figure>
-            <figure permid="HoE">
+            <figure>
               <caption>A <term>closed, infinite</term> interval denoted by <m>(-\infty,a]</m> means all numbers <m>a</m> or smaller, <em>including</em> <m>a</m>.</caption>
-              <image permid="KxF">
+              <image>
                 <description>a number line with a mark at a; the portion of the number line from a to the left has a thick line overlaying it; there is a right bracket at a and an arrow on the left pointing left</description>
 <latex-image>
 \begin{tikzpicture}
@@ -627,7 +627,7 @@ after end axis/.code={},
 </image>
 </figure>
 </remark> -->
-    <exercise permid="hNF">
+    <exercise>
       <title>Interval and Set-Builder Notation from Number Lines</title>
       <webwork>
           <setup>
@@ -687,56 +687,56 @@ else{$in[$i]=Compute("(-inf,$b[$i]]");}
 </pg-code>
           </setup>
           <statement>
-            <p permid="JdR">
+            <p>
               For each interval expressed in the number lines,
               give the interval notation and set-builder notation.
             </p>
             <instruction>
               Type <c>inf</c> or <c>infinity</c> for <m>\infty</m>,  <c>&gt;=</c> for <m>\geq</m>, and <c>&lt;=</c> for <m>\leq</m>.
             </instruction>
-            <p permid="pla">
-              <ol label="a." cols="3" permid="IfC">
-                <li permid="xGx">
-                  <sidebyside margins="0%" widths="40%" permid="pse">
+            <p>
+              <ol label="a." cols="3">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[0]"/>
                   </sidebyside>
-                  <p permid="vvL">
+                  <p>
                     In set-builder notation: <var name="$sb[0]" width="20"/>
                   </p>
-                  <p permid="bCU">
+                  <p>
                     In interval notation: <var name="$in[0]" width="20"/>
                   </p>
                 </li>
-                <li permid="dNG">
-                  <sidebyside margins="0%" widths="40%" permid="Vzn">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[1]"/>
                   </sidebyside>
-                  <p permid="HKd">
+                  <p>
                     In set-builder notation: <var name="$sb[1]" width="20"/>
                   </p>
-                  <p permid="nRm">
+                  <p>
                     In interval notation: <var name="$in[1]" width="20"/>
                   </p>
                 </li>
-                <li permid="JUP">
-                  <sidebyside margins="0%" widths="40%" permid="BGw">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[2]"/>
                   </sidebyside>
-                  <p permid="TYv">
+                  <p>
                     In set-builder notation: <var name="$sb[2]" width="20"/>
                   </p>
-                  <p permid="AfE">
+                  <p>
                     In interval notation: <var name="$in[2]" width="20"/>
                   </p>
                 </li>
               </ol>
             </p>
           </statement>
-          <solution permid="jCS">
-            <p permid="qqt">
-              <ol label="a." permid="vRk">
-                <li permid="qbY">
-                  <p permid="gmN">
+          <solution>
+            <p>
+              <ol label="a.">
+                <li>
+                  <p>
                     Since all numbers less than or equal to <m>2</m> are shaded,
                     the set-builder notation is <m><var name="$sb[0]"/></m>.
                     The shaded interval
@@ -746,8 +746,8 @@ else{$in[$i]=Compute("(-inf,$b[$i]]");}
                     so the interval notation is <m><var name="$in[0]"/></m>.
                   </p>
                 </li>
-                <li permid="Wjh">
-                  <p permid="MtW">
+                <li>
+                  <p>
                     Since all numbers less than to <m>2</m> are shaded,
                     the set-builder notation is <m><var name="$sb[1]"/></m>.
                     The shaded interval
@@ -757,8 +757,8 @@ else{$in[$i]=Compute("(-inf,$b[$i]]");}
                     so the interval notation is <m><var name="$in[1]"/></m>.
                   </p>
                 </li>
-                <li permid="Cqq">
-                  <p permid="sBf">
+                <li>
+                  <p>
                     Since all numbers greater than or equal to <m>2</m> are shaded,
                     the set-builder notation is <m><var name="$sb[2]"/></m>.
                     The shaded interval starts at <m>2</m>
@@ -775,43 +775,43 @@ else{$in[$i]=Compute("(-inf,$b[$i]]");}
       </webwork>
     </exercise>
   </subsection>
-  <exercises permid="NGt">
-    <exercisegroup cols="2" permid="tNC">
+  <exercises>
+    <exercisegroup cols="2">
       <title>Review and Warmup</title>
-      <exercise permid="eEE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/DecimalToFraction30.pg"/>
       </exercise>
-      <exercise permid="KLN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/DecimalToFraction30.pg"/>
       </exercise>
-      <exercise permid="qSW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/DecimalToFraction35.pg"/>
       </exercise>
-      <exercise permid="Xaf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/DecimalToFraction35.pg"/>
       </exercise>
-      <exercise permid="Dho">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/DecimalToFraction40.pg"/>
       </exercise>
-      <exercise permid="jox">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/DecimalToFraction40.pg"/>
       </exercise>
-      <exercise permid="PvG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/FractionToDecimal60.pg"/>
       </exercise>
-      <exercise permid="vCP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/FractionToDecimal60.pg"/>
       </exercise>
-      <exercise permid="bJY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/FractionToDecimal70.pg"/>
       </exercise>
-      <exercise permid="HRh">
+      <exercise>
         <webwork source="Contrib/PCC/BasicMath/FractionPercentDecimal/FractionToDecimal70.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="ZUL">
+    <exercisegroup cols="2">
       <title>Ordering Numbers</title>
-      <exercise permid="nYq">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -841,23 +841,23 @@ $comparison=Compute("$bs");
 </pg-code>
         </setup>
         <statement>
-          <p permid="Vsj">
+          <p>
             Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
             For example,
             your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
           </p>
-          <p permid="Bzs">
-            <me permid="QmR">
+          <p>
+            <me>
               <var name="$as"/>
             </me>
           </p>
-          <p permid="hGB">
+          <p>
             <var name="$comparison" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="Ufz">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -887,23 +887,23 @@ $comparison=Compute("$bs");
 </pg-code>
         </setup>
         <statement>
-          <p permid="NNK">
+          <p>
             Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
             For example,
             your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
           </p>
-          <p permid="tUT">
-            <me permid="wua">
+          <p>
+            <me>
               <var name="$as"/>
             </me>
           </p>
-          <p permid="acc">
+          <p>
             <var name="$comparison" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="AmI">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -933,23 +933,23 @@ $comparison=Compute("$bs");
 </pg-code>
         </setup>
         <statement>
-          <p permid="Gjl">
+          <p>
             Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
             For example,
             your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
           </p>
-          <p permid="mqu">
-            <me permid="cBj">
+          <p>
+            <me>
               <var name="$as"/>
             </me>
           </p>
-          <p permid="SxD">
+          <p>
             <var name="$comparison" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="gtR">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -983,23 +983,23 @@ $comparison=Compute("$bs");
 </pg-code>
         </setup>
         <statement>
-          <p permid="yEM">
+          <p>
             Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
             For example,
             your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
           </p>
-          <p permid="eLV">
-            <me permid="IIs">
+          <p>
+            <me>
               <var name="$as"/>
             </me>
           </p>
-          <p permid="KTe">
+          <p>
             <var name="$comparison" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="MBa">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -1034,23 +1034,23 @@ $comparison=Compute("$bs");
 </pg-code>
         </setup>
         <statement>
-          <p permid="ran">
+          <p>
             Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
             For example,
             your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
           </p>
-          <p permid="Xhw">
-            <me permid="oPB">
+          <p>
+            <me>
               <var name="$as"/>
             </me>
           </p>
-          <p permid="DoF">
+          <p>
             <var name="$comparison" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="sIj">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -1086,23 +1086,23 @@ $comparison=Compute("$bs");
 </pg-code>
         </setup>
         <statement>
-          <p permid="jvO">
+          <p>
             Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
             For example,
             your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
           </p>
-          <p permid="PCX">
-            <me permid="UWK">
+          <p>
+            <me>
               <var name="$as"/>
             </me>
           </p>
-          <p permid="vKg">
+          <p>
             <var name="$comparison" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="YPs">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -1143,23 +1143,23 @@ $comparison=Compute("$bs");
 </pg-code>
         </setup>
         <statement>
-          <p permid="bRp">
+          <p>
             Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
             For example,
             your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
           </p>
-          <p permid="HYy">
-            <me permid="BdT">
+          <p>
+            <me>
               <var name="$as"/>
             </me>
           </p>
-          <p permid="ofH">
+          <p>
             <var name="$comparison" width="30"/>
           </p>
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="EWB">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -1200,17 +1200,17 @@ $comparison=Compute("$bs");
 </pg-code>
         </setup>
         <statement>
-          <p permid="UmQ">
+          <p>
             Use the <m>\gt</m> symbol to arrange the following numbers in order from greatest to least.
             For example,
             your answer might look like <c>4&gt;3&gt;2&gt;1&gt;0</c>.
           </p>
-          <p permid="AtZ">
-            <me permid="hlc">
+          <p>
+            <me>
               <var name="$as"/>
             </me>
           </p>
-          <p permid="gBi">
+          <p>
             <var name="$comparison" width="30"/>
           </p>
         </statement>
@@ -1218,9 +1218,9 @@ $comparison=Compute("$bs");
       </exercise>
     </exercisegroup>
     <newpage/>
-    <exercisegroup cols="2" permid="GbU">
+    <exercisegroup cols="2">
       <title>True/False</title>
-      <exercise permid="ldK">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -1248,37 +1248,37 @@ for my$i(0..11){$TF[$i]=$tf[$j[$i]];};
 </pg-code>
         </setup>
         <statement>
-          <p permid="MIr">
+          <p>
             Decide if each comparison is true or false.</p>
             <p>
-            <ol permid="omL">
-              <li permid="ixz">
-                <p permid="YIo">
+            <ol>
+              <li>
+                <p>
                   <m><var name="$statement[0]"/></m> <var name="$TF[0]" form="popup"/>
                 </p>
               </li>
-              <li permid="OEI">
-                <p permid="EPx">
+              <li>
+                <p>
                   <m><var name="$statement[1]"/></m> <var name="$TF[1]" form="popup"/>
                 </p>
               </li>
-              <li permid="uLR">
-                <p permid="kWG">
+              <li>
+                <p>
                   <m><var name="$statement[2]"/></m> <var name="$TF[2]" form="popup"/>
                 </p>
               </li>
-              <li permid="aTa">
-                <p permid="RdP">
+              <li>
+                <p>
                   <m><var name="$statement[3]"/></m> <var name="$TF[3]" form="popup"/>
                 </p>
               </li>
-              <li permid="Haj">
-                <p permid="xkY">
+              <li>
+                <p>
                   <m><var name="$statement[4]"/></m> <var name="$TF[4]" form="popup"/>
                 </p>
               </li>
-              <li permid="nhs">
-                <p permid="dsh">
+              <li>
+                <p>
                   <m><var name="$statement[5]"/></m> <var name="$TF[5]" form="popup"/>
                 </p>
               </li>
@@ -1287,7 +1287,7 @@ for my$i(0..11){$TF[$i]=$tf[$j[$i]];};
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="RkT">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -1315,37 +1315,37 @@ for my$i(0..11){$TF[$i]=$tf[$j[$i]];};
 </pg-code>
         </setup>
         <statement>
-          <p permid="sPA">
+          <p>
             Decide if each comparison is true or false.</p>
             <p>
-            <ol permid="UtU">
-              <li permid="ToB">
-                <p permid="Jzq">
+            <ol>
+              <li>
+                <p>
                   <m><var name="$statement[0]"/></m> <var name="$TF[0]" form="popup"/>
                 </p>
               </li>
-              <li permid="zvK">
-                <p permid="pGz">
+              <li>
+                <p>
                   <m><var name="$statement[1]"/></m> <var name="$TF[1]" form="popup"/>
                 </p>
               </li>
-              <li permid="fCT">
-                <p permid="VNI">
+              <li>
+                <p>
                   <m><var name="$statement[2]"/></m> <var name="$TF[2]" form="popup"/>
                 </p>
               </li>
-              <li permid="LKc">
-                <p permid="BUR">
+              <li>
+                <p>
                   <m><var name="$statement[3]"/></m> <var name="$TF[3]" form="popup"/>
                 </p>
               </li>
-              <li permid="rRl">
-                <p permid="ica">
+              <li>
+                <p>
                   <m><var name="$statement[4]"/></m> <var name="$TF[4]" form="popup"/>
                 </p>
               </li>
-              <li permid="XYu">
-                <p permid="Ojj">
+              <li>
+                <p>
                   <m><var name="$statement[5]"/></m> <var name="$TF[5]" form="popup"/>
                 </p>
               </li>
@@ -1354,7 +1354,7 @@ for my$i(0..11){$TF[$i]=$tf[$j[$i]];};
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="xsc">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -1385,37 +1385,37 @@ for my$i(0..11){$TF[$i]=$tf[$j[$i]];};
 </pg-code>
         </setup>
         <statement>
-          <p permid="YWJ">
+          <p>
             Decide if each comparison is true or false.</p>
             <p>
-            <ol permid="ABd">
-              <li permid="EfD">
-                <p permid="uqs">
+            <ol>
+              <li>
+                <p>
                   <m><var name="$statement[0]"/></m> <var name="$TF[0]" form="popup"/>
                 </p>
               </li>
-              <li permid="kmM">
-                <p permid="axB">
+              <li>
+                <p>
                   <m><var name="$statement[1]"/></m> <var name="$TF[1]" form="popup"/>
                 </p>
               </li>
-              <li permid="QtV">
-                <p permid="GEK">
+              <li>
+                <p>
                   <m><var name="$statement[2]"/></m> <var name="$TF[2]" form="popup"/>
                 </p>
               </li>
-              <li permid="wBe">
-                <p permid="mLT">
+              <li>
+                <p>
                   <m><var name="$statement[3]"/></m> <var name="$TF[3]" form="popup"/>
                 </p>
               </li>
-              <li permid="cIn">
-                <p permid="STc">
+              <li>
+                <p>
                   <m><var name="$statement[4]"/></m> <var name="$TF[4]" form="popup"/>
                 </p>
               </li>
-              <li permid="IPw">
-                <p permid="zal">
+              <li>
+                <p>
                   <m><var name="$statement[5]"/></m> <var name="$TF[5]" form="popup"/>
                 </p>
               </li>
@@ -1424,7 +1424,7 @@ for my$i(0..11){$TF[$i]=$tf[$j[$i]];};
         </statement>
         </webwork>
       </exercise>
-      <exercise permid="dzl">
+      <exercise>
         <webwork>
         <setup>
 <pg-code>
@@ -1455,37 +1455,37 @@ for my$i(0..11){$TF[$i]=$tf[$j[$i]];};
 </pg-code>
         </setup>
         <statement>
-          <p permid="FdS">
+          <p>
             Decide if each comparison is true or false.</p>
             <p>
-            <ol permid="gIm">
-              <li permid="oWF">
-                <p permid="fhu">
+            <ol>
+              <li>
+                <p>
                   <m><var name="$statement[0]"/></m> <var name="$TF[0]" form="popup"/>
                 </p>
               </li>
-              <li permid="VdO">
-                <p permid="LoD">
+              <li>
+                <p>
                   <m><var name="$statement[1]"/></m> <var name="$TF[1]" form="popup"/>
                 </p>
               </li>
-              <li permid="BkX">
-                <p permid="rvM">
+              <li>
+                <p>
                   <m><var name="$statement[2]"/></m> <var name="$TF[2]" form="popup"/>
                 </p>
               </li>
-              <li permid="hsg">
-                <p permid="XCV">
+              <li>
+                <p>
                   <m><var name="$statement[3]"/></m> <var name="$TF[3]" form="popup"/>
                 </p>
               </li>
-              <li permid="Nzp">
-                <p permid="DKe">
+              <li>
+                <p>
                   <m><var name="$statement[4]"/></m> <var name="$TF[4]" form="popup"/>
                 </p>
               </li>
-              <li permid="tGy">
-                <p permid="jRn">
+              <li>
+                <p>
                   <m><var name="$statement[5]"/></m> <var name="$TF[5]" form="popup"/>
                 </p>
               </li>
@@ -1495,46 +1495,46 @@ for my$i(0..11){$TF[$i]=$tf[$j[$i]];};
         </webwork>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="2" permid="mjd">
+    <exercisegroup cols="2">
       <title>Comparisons</title>
-      <exercise permid="JGu">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareFractionOperations10.pg"/>
       </exercise>
-      <exercise permid="pND">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareFractionOperations10.pg"/>
       </exercise>
-      <exercise permid="VUM">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareFractionOperations20.pg"/>
       </exercise>
-      <exercise permid="CbV">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareFractionOperations20.pg"/>
       </exercise>
-      <exercise permid="ije">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareFractionOperations30.pg"/>
       </exercise>
-      <exercise permid="Oqn">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareFractionOperations30.pg"/>
       </exercise>
-      <exercise permid="uxw">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareNumbers10.pg"/>
       </exercise>
-      <exercise permid="aEF">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareNumbers10.pg"/>
       </exercise>
-      <exercise permid="GLO">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareNumbers20.pg"/>
       </exercise>
-      <exercise permid="mSX">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareNumbers20.pg"/>
       </exercise>
-      <exercise permid="Tag">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareNumbers30.pg"/>
       </exercise>
-      <exercise permid="zhp">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/ComparisonsAndBasicInequalities/CompareNumbers30.pg"/>
       </exercise>
     </exercisegroup>
-    <!-- <exercise permid="yLQ">
+    <!-- <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -1593,45 +1593,45 @@ else{$in[$i]=Compute("(-inf,$b[$i]]");}
 </pg-code>
           </setup>
           <statement>
-            <p permid="llb">
+            <p>
               For each interval expressed in the number lines,
               give the interval notation and set-builder notation.
             </p>
             <instruction>
               Type <c>inf</c> or <c>infinity</c> for <m>\infty</m>,  <c>&gt;=</c> for <m>\geq</m>, and <c>&lt;=</c> for <m>\leq</m>.
             </instruction>
-            <p permid="Rsk">
-              <ol label="a." cols="3" permid="MPv">
-                <li permid="ZNH">
-                  <sidebyside margins="0%" widths="40%" permid="NUO">
+            <p>
+              <ol label="a." cols="3">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[0]"/>
                   </sidebyside>
-                  <p permid="PYw">
+                  <p>
                     In set-builder notation: <var name="$sb[0]" width="20" />
                   </p>
-                  <p permid="wfF">
+                  <p>
                     In interval notation: <var name="$in[0]" width="20" />
                   </p>
                 </li>
-                <li permid="FUQ">
-                  <sidebyside margins="0%" widths="40%" permid="ubX">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[1]"/>
                   </sidebyside>
-                  <p permid="cmO">
+                  <p>
                     In set-builder notation: <var name="$sb[1]" width="20" />
                   </p>
-                  <p permid="ItX">
+                  <p>
                     In interval notation: <var name="$in[1]" width="20" />
                   </p>
                 </li>
-                <li permid="mbZ">
-                  <sidebyside margins="0%" widths="40%" permid="ajg">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[2]"/>
                   </sidebyside>
-                  <p permid="oBg">
+                  <p>
                     In set-builder notation: <var name="$sb[2]" width="20" />
                   </p>
-                  <p permid="UIp">
+                  <p>
                     In interval notation: <var name="$in[2]" width="20" />
                   </p>
                 </li>
@@ -1640,7 +1640,7 @@ else{$in[$i]=Compute("(-inf,$b[$i]]");}
           </statement>
       </webwork>
     </exercise>
-    <exercise permid="eSZ">
+    <exercise>
       <webwork>
           <setup>
 <pg-code>
@@ -1699,45 +1699,45 @@ else{$in[$i]=Compute("(-inf,$b[$i]]");}
 </pg-code>
           </setup>
           <statement>
-            <p permid="xzt">
+            <p>
               For each interval expressed in the number lines,
               give the interval notation and set-builder notation.
             </p>
             <instruction>
               Type <c>inf</c> or <c>infinity</c> for <m>\infty</m>,  <c>&gt;=</c> for <m>\geq</m>, and <c>&lt;=</c> for <m>\leq</m>.
             </instruction>
-            <p permid="dGC">
-              <ol label="a." cols="3" permid="sWE">
-                <li permid="Sji">
-                  <sidebyside margins="0%" widths="40%" permid="Gqp">
+            <p>
+              <ol label="a." cols="3">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[0]"/>
                   </sidebyside>
-                  <p permid="APy">
+                  <p>
                     In set-builder notation: <var name="$sb[0]" width="20" />
                   </p>
-                  <p permid="gWH">
+                  <p>
                     In interval notation: <var name="$in[0]" width="20" />
                   </p>
                 </li>
-                <li permid="yqr">
-                  <sidebyside margins="0%" widths="40%" permid="mxy">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[1]"/>
                   </sidebyside>
-                  <p permid="NdQ">
+                  <p>
                     In set-builder notation: <var name="$sb[1]" width="20" />
                   </p>
-                  <p permid="tkZ">
+                  <p>
                     In interval notation: <var name="$in[1]" width="20" />
                   </p>
                 </li>
-                <li permid="exA">
-                  <sidebyside margins="0%" widths="40%" permid="SEH">
+                <li>
+                  <sidebyside margins="0%" widths="40%">
                     <image pg-name="$nl[2]"/>
                   </sidebyside>
-                  <p permid="Zsi">
+                  <p>
                     In set-builder notation: <var name="$sb[2]" width="20" />
                   </p>
-                  <p permid="Fzr">
+                  <p>
                     In interval notation: <var name="$in[2]" width="20" />
                   </p>
                 </li>
@@ -1747,99 +1747,99 @@ else{$in[$i]=Compute("(-inf,$b[$i]]");}
       </webwork>
     </exercise> -->
     <!-- <newpage/> -->
-    <exercisegroup cols="2" permid="Sqm">
+    <exercisegroup cols="2">
       <title>Set-builder and Interval Notation</title>
-      <exercise permid="foy">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation10.pg"/>
       </exercise>
-      <exercise permid="LvH">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation10.pg"/>
       </exercise>
-      <exercise permid="rCQ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation20.pg"/>
       </exercise>
-      <exercise permid="XJZ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation20.pg"/>
       </exercise>
-      <exercise permid="DRi">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation30.pg"/>
       </exercise>
-      <exercise permid="jYr">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation30.pg"/>
       </exercise>
-      <exercise permid="QfA">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation40.pg"/>
       </exercise>
-      <exercise permid="wmJ">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/GraphToSetAndIntervalNotation40.pg"/>
       </exercise>
     </exercisegroup>
-    <exercisegroup cols="4" permid="yxv">
+    <exercisegroup cols="4">
       <title>Convert to Interval Notation</title>
-      <exercise permid="ctS">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation10.pg"/>
       </exercise>
-      <exercise permid="IBb">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation10.pg"/>
       </exercise>
-      <exercise permid="oIk">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation20.pg"/>
       </exercise>
-      <exercise permid="UPt">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation20.pg"/>
       </exercise>
-      <exercise permid="AWC">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation30.pg"/>
       </exercise>
-      <exercise permid="hdL">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation30.pg"/>
       </exercise>
-      <exercise permid="NkU">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation40.pg"/>
       </exercise>
-      <exercise permid="tsd">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation40.pg"/>
       </exercise>
-      <exercise permid="Zzm">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation50.pg"/>
       </exercise>
-      <exercise permid="FGv">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation50.pg"/>
       </exercise>
-      <exercise permid="lNE">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation60.pg"/>
       </exercise>
-      <exercise permid="RUN">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation60.pg"/>
       </exercise>
-      <exercise permid="ybW">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation70.pg"/>
       </exercise>
-      <exercise permid="ejf">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation70.pg"/>
       </exercise>
-      <exercise permid="Kqo">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation80.pg"/>
       </exercise>
-      <exercise permid="qxx">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation80.pg"/>
       </exercise>
-      <exercise permid="WEG">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation90.pg"/>
       </exercise>
-      <exercise permid="CLP">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation90.pg"/>
       </exercise>
-      <exercise permid="iSY">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation100.pg"/>
       </exercise>
-      <exercise permid="Pah">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation100.pg"/>
       </exercise>
-      <exercise permid="vhq">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation110.pg"/>
       </exercise>
-      <exercise permid="boz">
+      <exercise>
         <webwork source="Contrib/PCC/BasicAlgebra/LinearInequalities/IntervalNotation120.pg"/>
       </exercise>
     </exercisegroup>
