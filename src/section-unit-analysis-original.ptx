@@ -880,53 +880,957 @@ return $ans;
       <title>Unit Conversions</title>
 <!-- Conversions that only need a single conversion from the appendix. -->
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX10.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor = $ORCCAconversions{$unitsin}-&gt;{$unitsout};
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum = ($factor &gt; 1) ? $factor : 1;
+$factorden = ($factor &gt; 1) ? 1 : 1/$factor;
+$factornumU = NumberWithUnits("$factornum $unitsout", {newUnit =&gt; $ORCCAunits});
+$factordenU = NumberWithUnits("$factorden $unitsin", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornumU"/>}{<var name="$factordenU"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornumU"/>}{1\cdot <var name="$factorden"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor = $ORCCAconversions{$unitsin}-&gt;{$unitsout};
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum = ($factor &gt; 1) ? $factor : 1;
+$factorden = ($factor &gt; 1) ? 1 : 1/$factor;
+$factornumU = NumberWithUnits("$factornum $unitsout", {newUnit =&gt; $ORCCAunits});
+$factordenU = NumberWithUnits("$factorden $unitsin", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornumU"/>}{<var name="$factordenU"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornumU"/>}{1\cdot <var name="$factorden"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX10.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor = $ORCCAconversions{$unitsin}-&gt;{$unitsout};
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum = ($factor &gt; 1) ? $factor : 1;
+$factorden = ($factor &gt; 1) ? 1 : 1/$factor;
+$factornumU = NumberWithUnits("$factornum $unitsout", {newUnit =&gt; $ORCCAunits});
+$factordenU = NumberWithUnits("$factorden $unitsin", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornumU"/>}{<var name="$factordenU"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornumU"/>}{1\cdot <var name="$factorden"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX10.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor = $ORCCAconversions{$unitsin}-&gt;{$unitsout};
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum = ($factor &gt; 1) ? $factor : 1;
+$factorden = ($factor &gt; 1) ? 1 : 1/$factor;
+$factornumU = NumberWithUnits("$factornum $unitsout", {newUnit =&gt; $ORCCAunits});
+$factordenU = NumberWithUnits("$factorden $unitsin", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornumU"/>}{<var name="$factordenU"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornumU"/>}{1\cdot <var name="$factorden"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX10.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor = $ORCCAconversions{$unitsin}-&gt;{$unitsout};
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum = ($factor &gt; 1) ? $factor : 1;
+$factorden = ($factor &gt; 1) ? 1 : 1/$factor;
+$factornumU = NumberWithUnits("$factornum $unitsout", {newUnit =&gt; $ORCCAunits});
+$factordenU = NumberWithUnits("$factorden $unitsin", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornumU"/>}{<var name="$factordenU"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornumU"/>}{1\cdot <var name="$factorden"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX10.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor = $ORCCAconversions{$unitsin}-&gt;{$unitsout};
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum = ($factor &gt; 1) ? $factor : 1;
+$factorden = ($factor &gt; 1) ? 1 : 1/$factor;
+$factornumU = NumberWithUnits("$factornum $unitsout", {newUnit =&gt; $ORCCAunits});
+$factordenU = NumberWithUnits("$factorden $unitsin", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornumU"/>}{<var name="$factordenU"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornumU"/>}{1\cdot <var name="$factorden"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX10.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor = $ORCCAconversions{$unitsin}-&gt;{$unitsout};
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum = ($factor &gt; 1) ? $factor : 1;
+$factorden = ($factor &gt; 1) ? 1 : 1/$factor;
+$factornumU = NumberWithUnits("$factornum $unitsout", {newUnit =&gt; $ORCCAunits});
+$factordenU = NumberWithUnits("$factorden $unitsin", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornumU"/>}{<var name="$factordenU"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornumU"/>}{1\cdot <var name="$factorden"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX10.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor = $ORCCAconversions{$unitsin}-&gt;{$unitsout};
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum = ($factor &gt; 1) ? $factor : 1;
+$factorden = ($factor &gt; 1) ? 1 : 1/$factor;
+$factornumU = NumberWithUnits("$factornum $unitsout", {newUnit =&gt; $ORCCAunits});
+$factordenU = NumberWithUnits("$factorden $unitsin", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornumU"/>}{<var name="$factordenU"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornumU"/>}{1\cdot <var name="$factorden"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
 <!-- Conversions that need two conversions from the appendix. -->
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}-&gt;{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}-&gt;{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}-&gt;{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 &gt; 1) ? $factor1 : 1;
+$factorden1 = ($factor1 &gt; 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit =&gt; $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit =&gt; $ORCCAunits});
+$factornum2 = ($factor2 &gt; 1) ? $factor2 : 1;
+$factorden2 = ($factor2 &gt; 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit =&gt; $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornum1U"/>}{<var name="$factorden1U"/>}\cdot\frac{<var name="$factornum2U"/>}{<var name="$factorden2U"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornum1"/> \cdot <var name="$factornum2U"/>}{1\cdot <var name="$factorden1"/> \cdot <var name="$factorden2"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}-&gt;{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}-&gt;{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}-&gt;{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 &gt; 1) ? $factor1 : 1;
+$factorden1 = ($factor1 &gt; 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit =&gt; $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit =&gt; $ORCCAunits});
+$factornum2 = ($factor2 &gt; 1) ? $factor2 : 1;
+$factorden2 = ($factor2 &gt; 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit =&gt; $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornum1U"/>}{<var name="$factorden1U"/>}\cdot\frac{<var name="$factornum2U"/>}{<var name="$factorden2U"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornum1"/> \cdot <var name="$factornum2U"/>}{1\cdot <var name="$factorden1"/> \cdot <var name="$factorden2"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}-&gt;{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}-&gt;{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}-&gt;{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 &gt; 1) ? $factor1 : 1;
+$factorden1 = ($factor1 &gt; 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit =&gt; $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit =&gt; $ORCCAunits});
+$factornum2 = ($factor2 &gt; 1) ? $factor2 : 1;
+$factorden2 = ($factor2 &gt; 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit =&gt; $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornum1U"/>}{<var name="$factorden1U"/>}\cdot\frac{<var name="$factornum2U"/>}{<var name="$factorden2U"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornum1"/> \cdot <var name="$factornum2U"/>}{1\cdot <var name="$factorden1"/> \cdot <var name="$factorden2"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}-&gt;{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}-&gt;{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}-&gt;{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 &gt; 1) ? $factor1 : 1;
+$factorden1 = ($factor1 &gt; 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit =&gt; $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit =&gt; $ORCCAunits});
+$factornum2 = ($factor2 &gt; 1) ? $factor2 : 1;
+$factorden2 = ($factor2 &gt; 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit =&gt; $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornum1U"/>}{<var name="$factorden1U"/>}\cdot\frac{<var name="$factornum2U"/>}{<var name="$factorden2U"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornum1"/> \cdot <var name="$factornum2U"/>}{1\cdot <var name="$factorden1"/> \cdot <var name="$factorden2"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}-&gt;{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}-&gt;{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}-&gt;{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 &gt; 1) ? $factor1 : 1;
+$factorden1 = ($factor1 &gt; 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit =&gt; $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit =&gt; $ORCCAunits});
+$factornum2 = ($factor2 &gt; 1) ? $factor2 : 1;
+$factorden2 = ($factor2 &gt; 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit =&gt; $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornum1U"/>}{<var name="$factorden1U"/>}\cdot\frac{<var name="$factornum2U"/>}{<var name="$factorden2U"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornum1"/> \cdot <var name="$factornum2U"/>}{1\cdot <var name="$factorden1"/> \cdot <var name="$factorden2"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}-&gt;{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}-&gt;{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}-&gt;{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 &gt; 1) ? $factor1 : 1;
+$factorden1 = ($factor1 &gt; 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit =&gt; $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit =&gt; $ORCCAunits});
+$factornum2 = ($factor2 &gt; 1) ? $factor2 : 1;
+$factorden2 = ($factor2 &gt; 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit =&gt; $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornum1U"/>}{<var name="$factorden1U"/>}\cdot\frac{<var name="$factornum2U"/>}{<var name="$factorden2U"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornum1"/> \cdot <var name="$factornum2U"/>}{1\cdot <var name="$factorden1"/> \cdot <var name="$factorden2"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}-&gt;{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}-&gt;{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}-&gt;{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 &gt; 1) ? $factor1 : 1;
+$factorden1 = ($factor1 &gt; 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit =&gt; $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit =&gt; $ORCCAunits});
+$factornum2 = ($factor2 &gt; 1) ? $factor2 : 1;
+$factorden2 = ($factor2 &gt; 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit =&gt; $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornum1U"/>}{<var name="$factorden1U"/>}\cdot\frac{<var name="$factornum2U"/>}{<var name="$factorden2U"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornum1"/> \cdot <var name="$factornum2U"/>}{1\cdot <var name="$factorden1"/> \cdot <var name="$factorden2"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
       <exercise>
-        <webwork source="Contrib/PCC/BasicMath/UnitConversion/UnitConversionPTX20.pg"/>
+        <webwork>
+            <pg-macros><macro-file>ORCCA.pl</macro-file></pg-macros>
+ 
+<pg-code>
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}-&gt;{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}-&gt;{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}-&gt;{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit =&gt; $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit =&gt; $ORCCAunits});
+$evaluator = $get-&gt;cmp-&gt;withPostFilter(sub {
+my $ans = shift;
+if ($ans-&gt;{score}) {
+my $correct = $ans-&gt;{correct_value};
+my $student = $ans-&gt;{student_value};
+my %goodunits = map { $_ =&gt; 1 } (@alternatives);
+if (!exists($goodunits{$student-&gt;{units}})) {
+$ans-&gt;{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans-&gt;score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 &gt; 1) ? $factor1 : 1;
+$factorden1 = ($factor1 &gt; 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit =&gt; $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit =&gt; $ORCCAunits});
+$factornum2 = ($factor2 &gt; 1) ? $factor2 : 1;
+$factorden2 = ($factor2 &gt; 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit =&gt; $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit =&gt; $ORCCAunits});
+</pg-code>
+ 
+            <statement>
+              <p>
+                Convert <m><var name="$given"/></m> to <var name="$word"/>.
+              </p>
+              <p>
+                <var name="$evaluator" width="20"/>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow><var name="$given"/>\amp=\frac{<var name="$given"/>}{1}</mrow>
+                  <mrow>\amp=\frac{<var name="$given"/>}{1}\cdot\frac{<var name="$factornum1U"/>}{<var name="$factorden1U"/>}\cdot\frac{<var name="$factornum2U"/>}{<var name="$factorden2U"/>}</mrow>
+                  <mrow>\amp=\frac{<var name="$a"/>\cdot <var name="$factornum1"/> \cdot <var name="$factornum2U"/>}{1\cdot <var name="$factorden1"/> \cdot <var name="$factorden2"/>}</mrow>
+                  <mrow>\amp=<var name="$get"/></mrow>
+                </md>
+              </p>
+            </solution>
+        </webwork>
       </exercise>
 <!-- Conversions that only need a single conversion from the appendix, but squared or cubed. -->
       <exercise>

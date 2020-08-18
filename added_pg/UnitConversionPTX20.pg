@@ -1,0 +1,115 @@
+#######################################
+###    Generated from PreTeXt source   
+###    on 2020-01-09T14:01:49-09:00    
+###                                    
+###      https://pretextbook.org       
+###                                    
+#######################################
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Level()
+## KEYWORDS()
+## TitleText1()
+## EditionText1()
+## AuthorText1()
+## Section1(not reported)
+## Problem1(1.3.5.20)
+## Author()
+## Institution()
+## Language(en-US)
+
+DOCUMENT();
+
+############################################################
+# Load Macros
+############################################################
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "parserNumberWithUnits.pl",
+  "ORCCA.pl",
+  "PGcourse.pl",
+);
+
+############################################################
+# Header
+############################################################
+COMMENT('Authored in PreTeXt PreTeXt');
+TEXT(beginproblem());
+
+############################################################
+# PG Setup
+############################################################
+Context('Numeric');
+$digits = list_random(2,3);
+$decimals = random(0,$digits-1,1);
+$a = ($digits == 2) ? (random(1,9,1)*10 + random(1,9,1)) / 10**$decimals  :  (random(10,99,1)*10 + random(1,9,1)) / 10**$decimals;
+do {
+$unitsin = list_random(lex_sort(keys %ORCCAconversions));
+$unitsmid = list_random(lex_sort(keys %{$ORCCAconversions{$unitsin}}));
+$unitsout = list_random(lex_sort(keys %{$ORCCAconversions{$unitsmid}}));
+} until ($unitsin ne $unitsout and not defined ($ORCCAconversions{$unitsin}->{$unitsout}));
+my @alternatives = ($unitsout, @{$unitAlternatives{$unitsout}});
+$word = $unitWords{$unitsout};
+$factor1 = $ORCCAconversions{$unitsin}->{$unitsmid};
+$factor2 = $ORCCAconversions{$unitsmid}->{$unitsout};
+$factor = $factor1*$factor2;
+$b = $a*$factor;
+$given = NumberWithUnits("$a $unitsin", {newUnit => $ORCCAunits});
+$get = NumberWithUnits("$b $unitsout", {newUnit => $ORCCAunits});
+$evaluator = $get->cmp->withPostFilter(sub {
+my $ans = shift;
+if ($ans->{score}) {
+my $correct = $ans->{correct_value};
+my $student = $ans->{student_value};
+my %goodunits = map { $_ => 1 } (@alternatives);
+if (!exists($goodunits{$student->{units}})) {
+$ans->{ans_message} = "Your answer is equivalent to the correct answer, but it uses the wrong units";
+$ans->score(0);
+}
+}
+return $ans;
+});
+$factornum1 = ($factor1 > 1) ? $factor1 : 1;
+$factorden1 = ($factor1 > 1) ? 1 : 1/$factor1;
+$factornum1U = NumberWithUnits("$factornum1 $unitsmid", {newUnit => $ORCCAunits});
+$factorden1U = NumberWithUnits("$factorden1 $unitsin", {newUnit => $ORCCAunits});
+$factornum2 = ($factor2 > 1) ? $factor2 : 1;
+$factorden2 = ($factor2 > 1) ? 1 : 1/$factor2;
+$factornum2U = NumberWithUnits("$factornum2 $unitsout", {newUnit => $ORCCAunits});
+$factorden2U = NumberWithUnits("$factorden2 $unitsmid", {newUnit => $ORCCAunits});
+
+############################################################
+# Body
+############################################################
+
+BEGIN_PGML
+Convert [`[$given]`] to [$word].
+
+[_]{$evaluator}{20}
+
+END_PGML
+
+############################################################
+# Solution
+############################################################
+
+BEGIN_PGML_SOLUTION
+
+[```\newcommand{\amp}{&}\begin{aligned}
+[$given]\amp=\frac{[$given]}{1}\\
+\amp=\frac{[$given]}{1}\cdot\frac{[$factornum1U]}{[$factorden1U]}\cdot\frac{[$factornum2U]}{[$factorden2U]}\\
+\amp=\frac{[$a]\cdot [$factornum1] \cdot [$factornum2U]}{1\cdot [$factorden1] \cdot [$factorden2]}\\
+\amp=[$get]
+\end{aligned}```]
+
+END_PGML_SOLUTION
+
+############################################################
+# End Problem
+############################################################
+
+ENDDOCUMENT();
