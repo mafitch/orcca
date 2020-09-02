@@ -3,7 +3,7 @@
 
 
 <!-- Thin layer on MathBook XML -->
-<xsl:import href="c:/bin/mathbook/xsl/mathbook-latex.xsl" />
+<xsl:import href="d:/PreTeXt/mathbook/xsl/pretext-latex.xsl" />
 
 
 <!-- Intend output for rendering by xelatex -->

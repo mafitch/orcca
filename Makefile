@@ -102,7 +102,8 @@ webwork-extraction:
 
 merge:
 	cd $(OUTPUT); \
-	xsltproc --xinclude --stringparam webwork.extraction $(WWOUT)/webwork-extraction.xml $(MBXSL)/pretext-merge.xsl $(MAINFILE) > merge.xml
+#	xsltproc --xinclude --stringparam webwork.extraction $(WWOUT)/webwork-extraction.xml $(MBXSL)/pretext-merge.xsl $(MAINFILE) > merge.xml
+	xsltproc --xinclude --stringparam webwork.extraction $(WWOUT)/webwork-representations.ptx $(MBXSL)/pretext-merge.xsl $(MAINFILE) > merge.xml
 
 pg:
 	install -d $(PGOUT)
@@ -134,7 +135,8 @@ lanepdf:
 	rsync -r --include='*.png' --exclude='*' . $(PDFOUT)/images
 	cp -a $(IMAGESSRC) $(PDFOUT)
 	cd $(PDFOUT); \
-	xsltproc -xinclude --stringparam toc.level 2 --stringparam latex.print 'yes' --stringparam latex.pageref 'no' --stringparam latex.sides 'two' --stringparam latex.geometry 'total={6.5in,8in}'  --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(PRJXSL)/orcca-latex.xsl $(OUTPUT)/merge.xml > orcca.tex; \
+	xsltproc -xinclude -o orcca.tex --stringparam publisher $(PRJXSL)/orcca-pub-print.xsl --stringparam toc.level 2 --stringparam latex.print 'yes' --stringparam latex.pageref 'no' --stringparam latex.sides 'two' --stringparam latex.geometry 'total={6.5in,8in}'  --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(PRJXSL)/orcca-latex.xsl $(OUTPUT)/merge.xml \
+	cp orcca.tex orcca_base.tex \
 	echo 'GLOBAL SPACING'; \
 	echo 'Next line removes \leavevmode when it comes right before an enumerate'; \
 	perl -p0i -e 's/\\leavevmode%\n(\\begin{enumerate})/\1/g' orcca.tex; \
@@ -205,7 +207,7 @@ oldlanepdf:
 	cp -a $(WWOUT)/*9-image-*.png $(PDFOUT)/images
 	cp -a $(IMAGESSRC) $(PDFOUT)
 	cd $(PDFOUT); \
-	xsltproc -xinclude --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(LATEX) $(OUTPUT)/merge.xml; \
+	xsltproc -xinclude -o orcca.tex --stringparam publisher $(PRJXSL)/orcca-pub-print.xsl --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(LATEX) $(OUTPUT)/merge.xml; \
 		perl -pi -e 's/\%\% fontspec package will make Latin Modern \(lmodern\) the default font/\%\% Customized to load Palatino fonts\n\\usepackage[T1]{fontenc}\n\\renewcommand\{\\rmdefault\}\{zpltlf\} \%Roman font for use in math mode\n\\usepackage\[scaled=.85\]\{beramono\}\% used only by \\mathtt\n\\usepackage\[type1\]\{cabin\}\%used only by \\mathsf\n\\usepackage\{amsmath,amssymb,amsthm\}\%load before newpxmath\n\\usepackage\[varg,cmintegrals,bigdelims,varbb\]\{newpxmath\}\n\\usepackage\[scr=rsfso\]\{mathalfa\}\n\\usepackage\{bm\} \%load after all math to give access to bold math\n\% Now load the otf text fonts using fontspec--wont affect math\n\\usepackage\[no-math\]\{fontspec\}\n\\setmainfont\{TeXGyrePagellaX\}\n\\defaultfontfeatures\{Ligatures=TeX,Scale=1,Mapping=tex-text\}\n\% This is a palatino-like font\n\%\\setmainfont\[BoldFont = texgyrepagella-bold.otf, ItalicFont = texgyrepagella-italic.otf, BoldItalicFont = texgyrepagella-bolditalic.otf]\{texgyrepagella-regular.otf\}\n\\linespread\{1.02\}/' orcca.tex; \
 	perl -pi -e 's/\\usepackage\{fontspec\}\n//' orcca.tex; \
 	perl -pi -e 's/title={{Checkpoint/title={{\\includegraphics[height=1pc]{images\/webwork-logo.eps} Checkpoint/g' orcca.tex; \
@@ -232,7 +234,7 @@ pdf:
 	cp -a $(WWOUT)/*.png $(PDFOUT)/images
 	cp -a $(IMAGESSRC) $(PDFOUT)
 	cd $(PDFOUT); \
-	xsltproc -xinclude --stringparam latex.fillin.style box --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(LATEX) $(OUTPUT)/merge.xml; \
+	xsltproc -xinclude -o orcca.tex --stringparam publisher $(PRJXSL)/orcca-pub-print.xsl --stringparam latex.fillin.style box --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no $(LATEX) $(OUTPUT)/merge.xml; \
 	perl -pi -e 's/\\usepackage\{geometry\}//' orcca.tex; \
 	perl -pi -e 's/\\documentclass\[10pt,\]\{book\}/\\documentclass\[paper=letter,DIV=14,BCOR=0.25in,chapterprefix,numbers=noenddot,fontsize=10pt,toc=indentunnumbered\]\{scrbook\}/' orcca.tex; \
 	perl -pi -e 's/\\geometry\{letterpaper,total=\{340pt,9\.0in\}\}//' orcca.tex; \
@@ -470,12 +472,13 @@ html:
 	install -d $(HTMLOUT)/images
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cp -a $(IMAGESSRC) $(HTMLOUT)
-# 	cp -a $(WWOUT)/*.png $(HTMLOUT)/images/
+# 	cp -a $(WWOUT)/*.png $(HTMLOUT)/images
 	cd $(WWOUT); \
-	rsync -r --include='*.png' --exclude='*' . $(HTMLOUT)/images
+#	rsync -r --include='*.png' --exclude='*' . $(HTMLOUT)/images
 	cp $(CSS) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc -xinclude --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no --stringparam exercise.text.hint no --stringparam exercise.text.answer no --stringparam exercise.text.solution no --stringparam html.knowl.exercise.inline no --stringparam html.knowl.example no --stringparam html.css.extra orcca.css $(PRJXSL)/orcca-html.xsl $(OUTPUT)/merge.xml
+	xsltproc -xinclude --stringparam publisher $(PRJXSL)/orcca-pub-print.xsl --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no --stringparam exercise.text.hint no --stringparam exercise.text.answer no --stringparam exercise.text.solution no --stringparam html.knowl.exercise.inline no --stringparam html.knowl.example no --stringparam html.css.extra orcca.css $(PRJXSL)/orcca-html.xsl $(MAINFILE)
+#	xsltproc -xinclude --stringparam publisher $(PRJXSL)/orcca-pub-print.xsl --stringparam exercise.inline.hint no --stringparam exercise.inline.answer no --stringparam exercise.inline.solution yes --stringparam exercise.divisional.hint no --stringparam exercise.divisional.answer no --stringparam exercise.divisional.solution no --stringparam exercise.text.hint no --stringparam exercise.text.answer no --stringparam exercise.text.solution no --stringparam html.knowl.exercise.inline no --stringparam html.knowl.example no --stringparam html.css.extra orcca.css $(PRJXSL)/orcca-html.xsl $(OUTPUT)/merge.xml
 
 # make all the image files in svg format
 laneimages:
